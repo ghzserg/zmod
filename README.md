@@ -79,7 +79,7 @@ MD5 сумма `1e516f2ffd3b82269632c45db0346c92  Adventurer5M-zmod-1.3.0.tgz`
 
 `Конфигурация` -> `Файлы конфигурации` -> `mod_data`
 
-- Пользовательские настройки klipper необходимо вносить в файл `mod_data/user.cfg`
+- Пользовательские настройки klipper необходимо вносить в файл `mod_data/user.cfg`, настройки записанные в это файл могут заменять/дополнять настройки из `printer_base.cfg`
 - Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.cfg`
 - Пользовательские мелодии хранятся в `mod_data/midi/`
 - Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) *нюхлер*
