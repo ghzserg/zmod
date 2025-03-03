@@ -268,6 +268,13 @@ Installed-Time: 1733730416
 Auto-Installed: yes
 Alternatives: 300:/opt/bin/find:/opt/libexec/find-gnu, 300:/opt/bin/xargs:/opt/libexec/xargs-gnu
 
+Package: htop
+Version: 3.3.0-2
+Depends: libc, libssp, librt, libpthread, libncurses
+Status: install user installed
+Architecture: armv7-3.2
+Installed-Time: 1741012937
+
 Package: libssp
 Version: 8.4.0-11
 Status: install ok installed
