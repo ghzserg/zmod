@@ -85,8 +85,8 @@ MD5 сумма `1e516f2ffd3b82269632c45db0346c92  Adventurer5M-zmod-1.3.0.tgz`
 - Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) *нюхлер*
 
 ## Известные особенности:
-- Если принтер выполняет какието действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то экран замирает
-- Если перезапускается klipper, то экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros#new_save_config))
+- Если принтер выполняет какието действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то родной экран замирает
+- Если перезапускается klipper, то родной экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros#new_save_config))
 - После отмены печати, на родном экране надо нажать кнопку Ок (используйте макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#close_dialogs) или [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#fast_close_dialogs))
 - Родной экран при загрузки печати всегда грузит профиль `DEFAULT_MESH` и после окончания печати всегда удаляет профиль `Default`
 
