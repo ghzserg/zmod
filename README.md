@@ -108,7 +108,9 @@ MD5 сумма `3a814f7ee8db908d3e7885347a5a308a  Adventurer5M-zmod-1.4.0.tgz`
 - Beeper основан на реализации [@drmax_gc](https://t.me/drmax_gc). M300. M356 fur Elise. [Ссылка](https://t.me/FF_5M_5M_Pro/1/333800)
 - Включена проверка md5 от Igor Polunovskiy. [Ссылка](https://t.me/FF_5M_5M_Pro/12695/272417)
 
-Мод во многом основывался на [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/)
+Мод во многом основывался на 
+- [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/)
+- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
 ## Установка/Обновление/Удаление мода
 
