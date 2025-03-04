@@ -83,6 +83,7 @@ MD5 сумма `a330b7da1489b84b0dead8dc15737e61  Adventurer5M-zmod-1.4.0.tgz`
 - Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.cfg`
 - Пользовательские мелодии хранятся в `mod_data/midi/`
 - Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) *нюхлер*
+- Код исполняемый при выключении принтера  хранится тут `mod_data/power_off.sh`
 
 ## Известные особенности:
 - Если принтер выполняет какието действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то родной экран замирает
@@ -107,7 +108,9 @@ MD5 сумма `a330b7da1489b84b0dead8dc15737e61  Adventurer5M-zmod-1.4.0.tgz`
 - Beeper основан на реализации [@drmax_gc](https://t.me/drmax_gc). M300. M356 fur Elise. [Ссылка](https://t.me/FF_5M_5M_Pro/1/333800)
 - Включена проверка md5 от Igor Polunovskiy. [Ссылка](https://t.me/FF_5M_5M_Pro/12695/272417)
 
-Мод во многом основывался на [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/)
+Мод во многом основывался на 
+- [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/)
+- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
 ## Установка/Обновление/Удаление мода
 
