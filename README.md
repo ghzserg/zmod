@@ -9,7 +9,7 @@
 
 Последняя версия: **1.4.0**
 
-MD5 сумма `a330b7da1489b84b0dead8dc15737e61  Adventurer5M-zmod-1.4.0.tgz`
+MD5 сумма `9d03ae6b6012af6cb9521d0ae7e7d661  Adventurer5M-zmod-1.4.0.tgz`
 
 Как проверить:
 - перейти в папку где лежит файл Adventurer5MPro-zmod-1.1.0.tgz
