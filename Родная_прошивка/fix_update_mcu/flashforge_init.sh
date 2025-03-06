@@ -11,6 +11,11 @@ fix_mcu()
     sync
     echo "Rm /mnt/flashforge_init.sh"
     rm -f /mnt/flashforge_init.sh
+    sync
+    echo "Umount /mnt"
+    umount /mnt/
+    sync
+    sleep 5
 
     echo 6 > /sys/class/pwm/pwmchip0/export
     echo inversed > /sys/class/pwm/pwmchip0/pwm6/polarity
@@ -29,9 +34,9 @@ fix_mcu()
         echo 400000 > /sys/class/pwm/pwmchip0/pwm6/duty_cycle
         sleep 0.25
     done
+
+    reboot
 }
 
 fix_mcu &> /mnt/fix_mcu.log
 
-sleep 5
-reboot
