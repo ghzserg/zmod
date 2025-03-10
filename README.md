@@ -1,17 +1,12 @@
-### Версия 1.0.4
-- Поддержка [отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+### Версия 1.0.5
+- Добавлен параметр в макрос [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Macros#auto_reboot), позволяющий перезапускать прошивку
+- G28 в макросах вызывается только при необходимости
+- Практически полностью изменен алгоритм работы MD5. Теперь проверка MD5 работает из любого места и не требует нагревания стола или экструдера
+- Доработан макрос [MEM](https://github.com/ghzserg/zmod/wiki/Macros#mem) теперь выводится память Moonraker, Klipper, Экран и как используется SWAP
+- Процесс klipper имеет более высокий приоритет, чем остальные процессы
+- Глобальный параметр [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Macros#print_leveling) теперь работает и в без экрана
+- Макрос [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Macros#bed_level_screws_tune) теперь корректно использует температуру
+- Макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) может тестировать EMMC, USB Flash и оперативную память.
+- Swap теперь можно(но не нужно) разместить на USB Flash 
+- Макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#clear_emmc) - очистка логов и/или GCODE
 - Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
-- Автоматическое включение обдува драйверов, при включении двигателей. Решает проблему снятия шейперов без обдува в стоке.
-- Новый макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) - Записывает SIZE Мб на EMMC и пишет скорость чтения записи.
-- Новый макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#clear_emmc) - Очищает EMMC.
-- Автоматический [рестарт бота при работе по SSH](https://github.com/ghzserg/zmod/wiki/Macros#zssh_on)
-- [Автоматическая очистка](https://github.com/ghzserg/ff5m/blob/main/telegram/docker-compose.yml) видео старше 10 дней в боте.
-- Установка [нужной временной зоны](https://github.com/ghzserg/ff5m/blob/main/telegram/docker-compose.yml) в боте
-- Автоматический переход с очистки KAMP [LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Macros#clear) на _CLEAR2, если объекты не найдены
-- Исправлена работа [SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#skip_zmod)
-- Обновление fluidd/mainsail теперь не требует перезагрузки
-- Смена fluidd на mainsail теперь не требует перезагрузки
-- Zmod сообщает о файлах, если в них используются дуги
-- Исправлен скрипт `addMD5.sh`
-- Исправлено управление охлаждением драйверов для версии без экрана
-- Загрузка карты стола `auto` для версии без экрана при старте принтера
