@@ -1,17 +1,3 @@
-### Версия 0.2.0
-- Обновление fluidd/mainsauil
-- Добавление mc, opkg, gdb
-- Перезагрузка через верхнее меню fluidd
-- Исправление ошибок
-- Сильная переработка макроса [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros#start_print)
-- Макрос [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros#new_save_config) - сохранить изменения/перезагрузить клиппер без зависания родного экрана. Реализация @darksimpson
-- Макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#close_dialogs) - закрыть окна по окончанию печати и при отмене печати. Реализация @darksimpson
-- Макрос [STOP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#stop_zmod) - отключить moonraker
-- Макрос [START_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#start_zmod) - включить moonraker
-- Макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - cохранить параметры ZMOD 
-    - CLOSE_DIALOGS - автоматически закрывать диалоги по окончанию и отмене печати 0-нет, 1-да (0)
-    - NEW_SAVE_CONFIG - использовать альтернативный NEW_SAVE_CONFIG при калибровке PID 0-нет, 1-да (0)
-    - LED - яркость LED при включении (50)
-    - MIDI_ON - играть MIDI при включении ("")
-    - MIDI_START - играть MIDI при запуске печати ("")
-    - MIDI_END - Играть MIDI в конце печати ("")
+### Версия 0.2.1
+- Получение графика шейперов прямо с принтера. Макрос [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Macros#zshaper)
+- Исправление ошибки при работе  без экрана
