@@ -1,15 +1,11 @@
-### Версия 1.1.0
-- Обновлен moonraker
-- Хорошо увеличена скорость загрузки moonraker
-- Спрятаны `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`
-- Для сброса тензодатчиков в режиме без экрана используется реализация Igor Polunovskiy
-- Сброс тензодатчиков, теперь только на прогретом столе
-- Новый глобальный параметр [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0-%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B0-%D1%82%D0%B5%D0%BD%D0%B7%D0%BE%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2).
-- Новый глобальный параметр [CELL_WEIGHT](https://github.com/ghzserg/zmod/wiki/Macros#cell_weight) указывает, при каком весе не надо проводить калибровку тензодатчиков
-- Новый глобальный параметр [CHINA_CLOUD](https://github.com/ghzserg/zmod/wiki/Macros#china_cloud) - позволяет отключить китайские облака
-- Переписано обновление конфига принтера
-- В Pro версии теперь корректно работают вентиляторы обдува. Углы по умолчанию 165/105
-- При калибровке экструдера теперь задается скорость кулера
-- Время и часовой пояс в moonraker теперь соответствует времени klipper
-- На вкладке `Информация о системе` выводится версия родной прошивки.
-- Уменьшена разговорчивость мода
+### Версия 1.1.1
+- Исправлена проблема с порядком, если обратный вызов блокируется в обработчике кнопок [#6440](https://github.com/Klipper3d/klipper/pull/6440) найденное [Alexander K](https://github.com/drA1ex) - теперь [LOAD_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#load_cell_tare) работает как надо.
+- Удалены глобальные параметры: `ALTER_CELL_TARE`, `IGNORE_CELL_TARE`, `CELL_WEIGHT`
+- Увеличен таймаут zsend. Выводятся дополнительные сообщения.
+- G28 теперь паркует сначала Z, потом X и Y
+- Новый макрос [CAMERA_RESTART](https://github.com/ghzserg/zmod/wiki/Macros#camera_restart) - Перезапустить альтернативную реализацию камеры
+- Исправлен код отмены печати без экрана
+- Реализация EXCLUDE_OBJECT_DEFINE от Igor Polunovskiy
+- В случае повторной печати моторы не отключаются и принтер не перезагружается, даже если это указано в глобальных параметрах
+- В макросе [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) выводится износ EMMC карты
+- Исправлено отключение китайских облаков
