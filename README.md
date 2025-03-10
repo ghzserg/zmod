@@ -1,7 +1,10 @@
-### Версия 0.1.1
-- Поддержка работы с отключенным родным дисплеем. Это экономит 20 мегабайт оперативной памяти. Чтобы  включить этот режим, нужно вызвать макрос DISPLAY_OFF. Клипер перезагрузится и будет использовать альтернативные файлы конфигурации. Рекомендуется снять карту  стола  и сохранить в профиль default. После перезагрузки, экран  станет недоступен через 5 минут и загрузится карта  стола из профиля default.
-- Макрос [MEM](https://github.com/ghzserg/zmod/wiki/Macros#mem) - показывает сколько памяти используется и каким приложением.
-- Макрос [DISPLAY_ON](https://github.com/ghzserg/zmod/wiki/Macros#display_on) - вернет экран в стандартный режим работы, принтер перезагрузится
-- Макрос [LED](https://github.com/ghzserg/zmod/wiki/Macros#led) - включит подсветку на 50%
-- Макрос [LED_ON](https://github.com/ghzserg/zmod/wiki/Macros#led_on) - включит подсветку на 100%
-- Макрос [LED_OFF](https://github.com/ghzserg/zmod/wiki/Macros#led_off) - выключить подсветку
+### Версия 0.1.3
+- Добавлено воспроизведение MIDI. Файлы хранятся в mod_data/midi - доступ через вкладку конфигурация. Спасибо [@drmax_gc](https://t.me/drmax_gc)
+- Макрос [PLAY_MIDI](https://github.com/ghzserg/zmod/wiki/Macros#play_midi). Играет мелодию PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
+- Макрос [SOFT_REMOVE](https://github.com/ghzserg/zmod/wiki/Macros#soft_remove). Удаляет только zmod, оставляет audio, md5, root
+- После обновления настройки moonraker сохраняются
+- Настройки пользователя для klipper пернесены в mod_data/user.cfg
+- Настройки пользователя для moonraker перенесены в mod_data/user.moonraker.cfg
+- При выклчюении экрана на нем пишется текст, что экран выключен. Спасибо @drmax_gc
+- Исправлена ошибка калибровки кровати через макрос. Теперь кровать греется.
+- Исправлена ошибка регулировки кровати через макрос. Теперь кровать греется.
