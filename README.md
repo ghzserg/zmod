@@ -1,9 +1,9 @@
-### Версия 0.2.1.1
-- Асинхронный алгоритм воспроизведения MIDI файлов
-- Исправление установки
-- Исправлен SHUTDOWN из главного меню
-- Новый скрипт [addMD5.sh](https://github.com/ghzserg/ff5m/blob/main/addMD5.sh) - контроль md5 для MacOS/Linux - спасибо Alexander
-- Новый параметр [STOP_MOTOR](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - автоматически выключать моторы после печати/отмены печати через 25 секунд.
-- Новый параметр [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - автоматически перезапускать принтер через 1.5 минуты после печати.
-- Новый параметр [PRECLEAR](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - использовать предочистку сопла в START_PRINT
-- Новая музыка: BattleCity, IndianaJones, WeWillRockYou от [@drmax_gc](https://t.me/drmax_gc)
+### Версия 0.2.2
+- Новый макрос [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#fast_close_dialogs) - Вызывает быстрое закрытие диалогов с родного экрана. Используется для закрытия окна по окончанию печати или при отмене печати. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети".* Реализация: @darksimpson
+- Новый макрос [LEVELING_PRINT_FILE](https://github.com/ghzserg/zmod/wiki/Macros#leveling_print_file) - Печать файла с построением карты стола с родного экрана. *Для LEVELING_PRINT_FILE необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
+- Новый макрос [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros#coldpull) Колдпул (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
+- Новые параметры [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data):
+  - [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - при каждой печати строить карту стола средствами родного экрана 0-нет, 1-да (0). *Для работы снятия карты стола с родного экрана необходимо, через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
+  - [USE_KAMP](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0). *Позволяет использовать KAMP при снятии карты стола по сети с родного экрана*
+  - [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - автоматически закрывать диалоги по окончанию и при отмене печати 0-нет, 1-да медленно, 2-да быстро. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"* (0).
+  - [USE_SWAP](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) - Использовать SWAP 0-нет, 1-да (1). *Если у вас не перепаянный процессор, то SWAP использовать обязательно*
