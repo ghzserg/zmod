@@ -1,10 +1,9 @@
-### Версия 0.1.3
-- Добавлено воспроизведение MIDI. Файлы хранятся в mod_data/midi - доступ через вкладку конфигурация. Спасибо [@drmax_gc](https://t.me/drmax_gc)
-- Макрос [PLAY_MIDI](https://github.com/ghzserg/zmod/wiki/Macros#play_midi). Играет мелодию PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
-- Макрос [SOFT_REMOVE](https://github.com/ghzserg/zmod/wiki/Macros#soft_remove). Удаляет только zmod, оставляет audio, md5, root
-- После обновления настройки moonraker сохраняются
-- Настройки пользователя для klipper пернесены в mod_data/user.cfg
-- Настройки пользователя для moonraker перенесены в mod_data/user.moonraker.cfg
-- При выклчюении экрана на нем пишется текст, что экран выключен. Спасибо @drmax_gc
-- Исправлена ошибка калибровки кровати через макрос. Теперь кровать греется.
-- Исправлена ошибка регулировки кровати через макрос. Теперь кровать греется.
+### Версия 0.1.4
+- Добавлено управление камерой из мода. Позволяет t память. И работать с камерой с отключенным экраном. Также можно изменить разрешение камеры. (Реализация подсмотрена у Павла Миронова)
+- Исправлена ошибка установщика, который в прошлой версии мог удалить [heater_bed] из файлов конфигурации
+- Изменены картинки при установке. Реализовано [@drmax_gc](https://t.me/drmax_gc)
+- Макросы разделены по категориям и переведены на русский язык
+- Макрос [DATE_GET](https://github.com/ghzserg/zmod/wiki/Macros#date_get) - посмотреть текущее время
+- Макрос [DATE_SET](https://github.com/ghzserg/zmod/wiki/Macros#date_set) - установить текущее время
+- Макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Macros#camera_on) - Использовать альтернативную реализацию камеры
+- Макрос [CAMERA_OFF](https://github.com/ghzserg/zmod/wiki/Macros#camera_off) - Отключить альтернативную реализацию камеры
