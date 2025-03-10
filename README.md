@@ -1,1 +1,17 @@
-### Версия 1.0.3
+### Версия 1.0.4
+- Поддержка [отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+- Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
+- Автоматическое включение обдува драйверов, при включении двигателей. Решает проблему снятия шейперов без обдува в стоке.
+- Новый макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) - Записывает SIZE Мб на EMMC и пишет скорость чтения записи.
+- Новый макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#clear_emmc) - Очищает EMMC.
+- Автоматический [рестарт бота при работе по SSH](https://github.com/ghzserg/zmod/wiki/Macros#zssh_on)
+- [Автоматическая очистка](https://github.com/ghzserg/ff5m/blob/main/telegram/docker-compose.yml) видео старше 10 дней в боте.
+- Установка [нужной временной зоны](https://github.com/ghzserg/ff5m/blob/main/telegram/docker-compose.yml) в боте
+- Автоматический переход с очистки KAMP [LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Macros#clear) на _CLEAR2, если объекты не найдены
+- Исправлена работа [SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#skip_zmod)
+- Обновление fluidd/mainsail теперь не требует перезагрузки
+- Смена fluidd на mainsail теперь не требует перезагрузки
+- Zmod сообщает о файлах, если в них используются дуги
+- Исправлен скрипт `addMD5.sh`
+- Исправлено управление охлаждением драйверов для версии без экрана
+- Загрузка карты стола `auto` для версии без экрана при старте принтера
