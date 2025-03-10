@@ -1,12 +1,15 @@
-### Версия 1.0.5
-- Добавлен параметр в макрос [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Macros#auto_reboot), позволяющий перезапускать прошивку
-- G28 в макросах вызывается только при необходимости
-- Практически полностью изменен алгоритм работы MD5. Теперь проверка MD5 работает из любого места и не требует нагревания стола или экструдера
-- Доработан макрос [MEM](https://github.com/ghzserg/zmod/wiki/Macros#mem) теперь выводится память Moonraker, Klipper, Экран и как используется SWAP
-- Процесс klipper имеет более высокий приоритет, чем остальные процессы
-- Глобальный параметр [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Macros#print_leveling) теперь работает и в без экрана
-- Макрос [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Macros#bed_level_screws_tune) теперь корректно использует температуру
-- Макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) может тестировать EMMC, USB Flash и оперативную память.
-- Swap теперь можно(но не нужно) разместить на USB Flash 
-- Макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#clear_emmc) - очистка логов и/или GCODE
-- Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
+### Версия 1.1.0
+- Обновлен moonraker
+- Хорошо увеличена скорость загрузки moonraker
+- Спрятаны `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`
+- Для сброса тензодатчиков в режиме без экрана используется реализация Igor Polunovskiy
+- Сброс тензодатчиков, теперь только на прогретом столе
+- Новый глобальный параметр [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0-%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B0-%D1%82%D0%B5%D0%BD%D0%B7%D0%BE%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2).
+- Новый глобальный параметр [CELL_WEIGHT](https://github.com/ghzserg/zmod/wiki/Macros#cell_weight) указывает, при каком весе не надо проводить калибровку тензодатчиков
+- Новый глобальный параметр [CHINA_CLOUD](https://github.com/ghzserg/zmod/wiki/Macros#china_cloud) - позволяет отключить китайские облака
+- Переписано обновление конфига принтера
+- В Pro версии теперь корректно работают вентиляторы обдува. Углы по умолчанию 165/105
+- При калибровке экструдера теперь задается скорость кулера
+- Время и часовой пояс в moonraker теперь соответствует времени klipper
+- На вкладке `Информация о системе` выводится версия родной прошивки.
+- Уменьшена разговорчивость мода
