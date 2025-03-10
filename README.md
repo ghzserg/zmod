@@ -1,19 +1,27 @@
-### Версия 1.3.0
-- Поддержка [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros#display_off)
-- Klipper 12, [в тестовом режиме](https://github.com/ghzserg/zmod/wiki/Macros#update_mcu) (по умолчанию отключен). В нем не работает: нагрев экструдера, температура экструдера, весы.
-- Заменен SSH клиент и SSH сервер `dropbear` на актуальную версию.
-- Заменен `mjpg_streamer` на версию с патчем Александра, снижает потребление памяти в 2-4 раза.
-- Исправлено исключение объектов от Igor Polunovskiy (теперь учитываются поддержки).
-- Построение графиков шейперов с учетом SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](https://github.com/ghzserg/zmod/wiki/Macros#fix_scv).
-- [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/Macros#check_system) - Добавлена проверка прав на файлы и каталоги, проверка ссылок и восстановление.
-- Удален макрос SOFT_REMOVE.
-- Обновлен Moonraker, Fluidd, Mainsail
+### Версия 1.4.0
+- Обновлен Moonraker, Fluidd,Python
+- [Восстановление печати  при потере питания](https://github.com/ghzserg/zmod/wiki/Macros#zrestore)
+- [Построение спектрограммы ремней](https://github.com/ghzserg/zmod/wiki/Macros#belts_shaper_calibration)
+- Контроль загруженной пластины, проверяет что карта  стола примерно соответствует текущей загруженной пластине
+- Реализована работа с [датчиком движения филамента](https://github.com/ghzserg/zmod/wiki/Macros#motion_sensor)
+- GuppyScreen: исключение объектов, вывод ошибок, откат из прошивки, калибровка PID, сброс веса, работа  с FF5M Pro
+- Выполнение макроса на [следующем слое](https://github.com/ghzserg/zmod/wiki/Macros#set_pause_next_layer), или [на конкретном слое](https://github.com/ghzserg/zmod/wiki/Macros#set_pause_at_layer)
+- Логирование всех сообщений с родного экрана в Klipper и ответов на эти сообщения
+- Изменен алгоритм снятия шейперов, графики шейперов строятся с учетом SCV
+- Макрос MUTE - выключение звука до перезагрузки
+- Новый параметр - [время отключения родного экрана](https://github.com/ghzserg/zmod/wiki/Macros#display_off_timeout)
+- Новый файл `mod_data/power_off.sh` - позволяет писать код выполняемый при отключении принтера
+- Включена умная парковка при использовании KAMP
+- Исправлены ошибки удаления мода, отключения мода, полного удаления мода
+- Исправлена работа предочистки
+- Исправлен контроль удара сопла о стол. Работает только во время печати.
+- Исправлено движение головы принтера  кнопками во Fluidd/GuppyScreen
+- Исправлена работа паузы в режиме без экрана
+- Исправлена работа KAMP
 
-### Версия 1.1.2
-- Новый макрос [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/Macros#check_system) - Проверить операционную систему принтера на предмет повреждений файлов.
-- Новый макрос [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Macros#nozzle_control) - Аварийное отключение принтера если зафиксирован отрыв детали или удар сопла о стол.
-- Новый макрос [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/Macros#update_mcu) - Обновить MCU в принтере.
-- Новый глобальный флаг [NICE](https://github.com/ghzserg/zmod/wiki/Macros#nice) - Установить приоритет процесса Klipper, 1 - минимальный приоритет, 40 - максимальный (20).
-- Новый глобальный флаг [FIX_E0011](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0011) - Исправить ошибку E0011, а также `Communication timeout during homing`
-- Очистка файловой системы принтера от удаленных файлов, ускоряет работу EMMC.
-- Куча мелких фиксов
+### Версия 1.3.1
+- Доработка GuppyScreen: COLDPULL, контроль PID, ретракты из прошивки, калибровка шейперов, калибровка ремней, косметические фиксы
+- Контроль сопла работает теперь только при печати
+- BELTS_SHAPER_CALIBRATION
+- Улучшена работа без экрана
+- Улучшена работа медленного закрытия окон и NEW_SAVE_CONFIG
