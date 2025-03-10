@@ -1,0 +1,352 @@
+# This file describes which highlighting scheme is applied to a particular
+# file in mcedit.
+#
+#
+# System-wide files (this and syntax definitions) are located in
+# /opt/share/mc/syntax/ directory.
+#
+# User's files (this and syntax definitions) are located in
+# ~/.local/share/mc/syntax directory.
+#
+# If user's file is missing, system-wide one is used.
+#
+#
+# This file is rescanned on opening of every new editor file.
+#
+# Format of this file is following.
+#
+# Each entry consists of two lines: a "file" specification and the
+# corresponding highlighting definition ("include"). A file specification
+# can have two or three fields, each separated by white-space characters.
+#
+# The first field is a regular expression that is matched against the file
+# name. The second field is a description of the file type and is
+# currently unused. The third (optional) field is a regular expression
+# that is matched against the first line of the file. The first entry
+# that matches wins, that is, all the entries below are ignored.
+#
+# Certain characters must be quoted in these fields. These are space (\s),
+# tabs (\t), backslashes(\\), plus (\+) and asterisk (\*). Braces {} and
+# brackets [] must not be quoted in this file. However, they have a special
+# meaning when used in the actual syntax definitions.
+#
+# You can use the following colors in the syntax highlighting files:
+# black, blue, brightblue, brightcyan, brightgreen, brightmagenta,
+# brightred, brown, cyan, gray, green, lightgray, magenta, red, white,
+# yellow
+#
+
+file [Ss]yntax$ Syntax\sHighlighting\sdefinitions ^#\ssyntax\srules\sversion\s
+include syntax.syntax
+
+file filehighlight\\.ini$ File\sHighlighting\sdefinitions ^#\sfile\shighlight\srules\sversion\s
+include filehighlight.syntax
+
+file ..\*\\.e$ Eiffel\sSource\sFile
+include eiffel.syntax
+
+file ..\*\\.(diff|rej|patch)|COMMIT_EDITMSG$ Diff\sOutput ^(diff|Index:)\s
+include diff.syntax
+
+file ..\*\\.lsm$ LSM\sFile
+include lsm.syntax
+
+file .\*(bash(_completion|rc)|profile|\\.(sh|bash(rc|_(completion|profile|log(in|out)|aliases|exports|history))|profile|zlog(in|out)|zprofile|zsh(env|rc)?))$ Shell\sScript ^#!\s\*/(.\*/|usr/bin/env\s)([a-z]?|ba|pdk)sh
+include sh.syntax
+
+# Since openrc scripts have no extension "by definition", use an empty pattern
+# that doesn't match any file name, and therefore only the shebang is used to detect
+# syntax highlighting rules (see tickets #4246 and #4252 for details).
+file ^$ OpenRC\sRunscript\sFile ^#!\s\*/sbin/openrc-run
+include sh.syntax
+
+file ..\*\\.((?i:ini)|desktop|busname|(auto)?mount|net(dev|work)|link|path|service|slice|socket|swap|target|timer)$ INI-based\sFile
+include ini.syntax
+
+file ..\*\\.((?i:pl|pm|psgi)|t)$ Perl\sProgram ^#!.\*([\s/]perl|/opt/bin/perl)
+include perl.syntax
+
+file ..\*\\.(?i:py)$ Python\sProgram ^#!.\*([\s/]python|/opt/bin/python)
+include python.syntax
+
+file ..\*\\.(pyx|pxd|pxi)$ Cython\sor\sPyrex\sProgram
+include cython.syntax
+
+file ..\*\\.(?i:rb)$ Ruby\sProgram ^#!.\*([\s/]ruby|/opt/bin/ruby)
+include ruby.syntax
+
+file ..\*\\.(man|[0-9n]|[0-9](x|ncurses|ssl|p|pm|menu|form|vga|t|td))$ NROFF\sSource
+include nroff.syntax
+
+file ..\*\\.(?i:html?)$ HTML\sFile
+include html.syntax
+
+file ..\*\\.((?i:xml|xsd|xslt?|dtd)|qpg|qpg\\.in)$ XML\sdocument (\\?xml\sversion|!DOCTYPE\s)
+include xml.syntax
+
+file ..\*\\.cir$ Spice\scircuit
+include spice.syntax
+
+file ..\*\\.(?i:tt)$ Template::Toolkit\sFile
+include tt.syntax
+
+file (.\*[Mm]akefile[\\\.A-Za-z0-9]\*|..\*\\.mk|..\*\\.mak|Kbuild)$ Makefile
+include makefile.syntax
+
+file (CMakeLists.txt|.\*.cmake)$ CMake
+include cmake.syntax
+
+file meson\\.build$ Meson\sBuild\sFile
+include meson.syntax
+
+file ..\*\\.(?i:pas|dpr|inc)$ Pascal\sProgram
+include pascal.syntax
+
+file ..\*\\.(?i:ad[abs])$ Ada\sProgram
+include ada95.syntax
+
+file ..\*\\.(?i:i?tcl)$ Tcl\sProgram ^#!.\*([\s/]tclsh|[\s/]wish|/usr/bin/tclsh|/usr/bin/wish)
+include tcl.syntax
+
+file ..\*\\.(?i:sl)$ S-Lang\sProgram
+include slang.syntax
+
+file ..\*\\.tex$ LaTeX\s2.09\sDocument
+include latex.syntax
+
+file ..\*\\.(?i:texi|texinfo)$ Texinfo\sDocument
+include texinfo.syntax
+
+file ..\*\\.(dot|gv)$ DOT/Graphviz\sgraph
+include dot.syntax
+
+file ..\*\\.c$ C\sProgram
+include c.syntax
+
+file ..\*\\.([hC]|(?i:cxx|cc|cpp|c\\\+\\\+|hxx|hh|hpp|h\\\+\\\+|ino)|[Hh]\\.in)$ C/C\+\+\sProgram
+include cxx.syntax
+
+file ..\*\\.d$ D\sProgram
+include d.syntax
+
+file ..\*\\.(?i:f)$ Fortran\sProgram
+include fortran.syntax
+
+file ..\*\\.go$ GoLang\sProgram
+include go.syntax
+
+file ..\*\\.rs$ Rust\sProgram
+include rust.syntax
+
+file ..\*\\.(?i:f)9[05]$ Freeform\sFortran\sProgram
+include f90.syntax
+
+file ..\*\\.i$ SWIG\sSource
+include swig.syntax
+
+file ..\*\\.(?i:php)[0-9]?$ PHP\sProgram
+include php.syntax
+
+file ..\*\\.ij[xs]$ J\sFile
+include j.syntax
+
+file ..\*\\.(?i:java?|groovy|Jenkinsfile)$ Java\sProgram
+include java.syntax
+
+file ..\*\\.(properties|config)$ Java\sFile
+include properties.syntax
+
+file ..\*\\.(?i:cs)$ C\#\sProgram
+include cs.syntax
+
+file ..\*\\.(?i:m?js)$ JavaScript\sProgram ^#!.\*[\s/](node|nodejs)\\b
+include js.syntax
+
+file ..\*\\.(?i:json)$ JSON\sFile
+include json.syntax
+
+file ..\*\\.(?i:ts)$ TypeScript\sProgram
+include ts.syntax
+
+file ..\*\\.(?i:as)$ ActionScript\sProgram
+include as.syntax
+
+file ..\*\\.(as[achmp]x)$ ASPX\sFile
+include aspx.syntax
+
+file ..\*\\.st$ SmallTalk\sProgram
+include smalltalk.syntax
+
+file ..\*\\.(lisp|lsp|el)$ Lisp\sProgram
+include lisp.syntax
+
+file ..\*\\.(ml[ilpy]?)$ ML\sProgram
+include ml.syntax
+
+file ..\*\\.m$ Matlab\sor\sOctave\sFile
+include octave.syntax
+
+file ..\*\\.(?i:sql)$ SQL\sProgram
+include sql.syntax
+
+file ..\*\\.(?i:hql)$ HiveQL\sProgram
+include hive.syntax
+
+file ..\*\\.(spec|spec\\.in)$ RPM\sSpecfile
+include spec.syntax
+
+file ..\*\\.repo$ YUM\sRepo\sFile
+include yum-repo.syntax
+
+file ..\*\\.awk$ AWK\sFile
+include awk.syntax
+
+file ..\*\\.(?i:[cq]ss)$ CSS\sFile
+include css.syntax
+
+file .\*ChangeLog[\\\.A-Za-z0-9_]\*$ GNU\sChangeLog\sFile
+include changelog.syntax
+
+file (..\*\\.m4$|configure\\.in|configure\\.ac) M4\sMacroprocessor\sSource
+include m4.syntax
+
+file ..\*\\.(bat|cmd)$ DOS\sBatch
+include dos.syntax
+
+file ..\*\\.po[tx]?$ PO\sFile
+include po.syntax
+
+file ..\*\\.(?i:asm|s)$ ASM\sProgram
+include assembler.syntax
+
+file ..\*\\.(?i:pov)$ POV\sScript
+include povray.syntax
+
+file .\*\\.(ebuild|eclass)$ Gentoo\sEbuild
+include ebuild.syntax
+
+file ..\*\\.(?i:lua)$ Lua\sProgram ^#!.\*[\s/]lua
+include lua.syntax
+
+file ..\*\\.(?i:idl)$ CORBA\sIDL
+include idl.syntax
+
+file Don_t_match_me Mail\sfolder ^(From|Return-(P|p)ath:|From:|Date:)\s
+include mail.syntax
+
+file \\.procmailrc$ Procmail\sRC\sFile ^#/usr/bin/procmail
+include procmail.syntax
+
+file sources.list$ sources\slist
+include debian-sources-list.syntax
+
+file control$ Debian\scontrol\sfile
+include debian-control.syntax
+
+file (rules|rocks)$ Debian\srules
+include makefile.syntax
+
+file .\*changelog$ Debian\schangelog\sfile
+include debian-changelog.syntax
+
+file changelog.Debian$ Debian\schangelog\sfile
+include debian-changelog.syntax
+
+file ..\*\\.dsc$ Debian\sdescriptiom\sfile
+include debian-description.syntax
+
+file ..\*\\.(?i:hsc?)$ Haskell\sprogram
+include haskell.syntax
+
+file ..\*\\.(?i:cabal)$ Cabal\sconfig\sfile
+include cabal.syntax
+
+file ..\*\\.(?i:n)$ Nemerle\sProgram
+include nemerle.syntax
+
+file ..\*\\.(?i:(v|sv|vh|svh))$ Verilog/SystemVerilog\sDevice\sDescription
+include verilog.syntax
+
+file ..\*\\.(?i:hdl|vhdl?)$ VHDL\sDevice\sDescription
+include vhdl.syntax
+
+file ..\*\\.erl$ Erlang\sProgram ^(-module\\(|#!.*escript)
+include erlang.syntax
+
+file ..\*\\.hrl$ Erlang\sHeader ^-record\\(
+include erlang.syntax
+
+file .\*named.conf$ Bind9\sconfiguration
+include named.syntax
+
+file ..\*\\.strace$ Strace\sdebug\soutput
+include strace.syntax
+
+file PKGBUILD$ Arch\spackage\sbuild\sscript
+include PKGBUILD.syntax
+
+file \\.install$ Arch\spackage\sinstall\sscript
+include sh.syntax
+
+file ..\*\\.(l|y|yxx|ypp)$ Lex/Flex/Yacc/Bison\ssource
+include yxx.syntax
+
+file ..\*\\.dlink\\.sw$ D-Link\sSwitch\sCommands
+include dlink.syntax
+
+file ..\*\\.(?i:jalt?)$ Jal\ssource
+include jal.syntax
+
+file ..\*\\.(?i:lkr)$ PIC\slinker\sscript\sfile
+include lkr.syntax
+
+file ..\*\\.pp$ Puppet\smanifest\sfile
+include puppet.syntax
+
+file ..\*\\.(glsl|vert|frag|geom)$ GLSL\sProgram
+include glsl.syntax
+
+file ..\*\\.cuh?$ CUDA\sProgram
+include cuda.syntax
+
+file ..\*\\.cl$ OpenCL\sProgram
+include opencl.syntax
+
+file ..\*\\.(?i:ya?ml)$ YAML\sFile
+include yaml.syntax
+
+file .\*\\.osl$ OSL\sProgram
+include osl.syntax
+
+file .\*\\.([rR]|Rd|Rscript)$ R\sProgram
+include r.syntax
+
+file ..\*\\.(?i:md)$ Markdown
+include markdown.syntax
+
+file ..\*\\.proto$ Protobuf\sFile
+include protobuf.syntax
+
+file ..\*\\.(?i:yab)$ Yabasic\s(Yet\sAnother\sBASIC)
+include yabasic.syntax
+
+file ..\*\\.(?i:cbl|cob)$ Cobol\sProgram
+include cobol.syntax
+
+file ..\*\\.kt$ Kotliin\sSource
+include kotlin.syntax
+
+file ..\*\\.swift$ Swift\sProgram
+include swift.syntax
+
+file ..\*\\.action$ Privoxy\sFile
+include privoxy.syntax
+
+file .\*\\.toml$ TOML\sFile
+include toml.syntax
+
+file .\*\\.(mch|ref|imp)$ B\sFile
+include b.syntax
+
+file .\* unknown
+include unknown.syntax

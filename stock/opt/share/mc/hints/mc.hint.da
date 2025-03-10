@@ -1,0 +1,87 @@
+Fif: Brug C-x t til at kopiere filnavne til kommandolinjen.
+
+Fif: Brug C-x p for at kopiere det nuværende stinavn til kommandolinjen.
+
+Fif: Fuldførelse: brug M-Tab (eller Esc+Tab). Skriv det to gange for at få en liste.
+
+Fif: Brug M-p og M-n for at tilgå kommandohistorikken.
+
+Fif: Har du brug for at sætte citationstegn om et tegn? Brug Control-q og tegnet.
+
+Fif: Træt af disse meddelelser? Slå dem fra i Indstillinger/Layout-menuen.
+
+Fif: Valg af mapper: tilføj en skråstreg til slutningen af det matchende mønster.
+
+Fif: Hvis din terminal mangler funktionstaster, så rug ESC+talsekvensen.
+
+Fif: Hjemmesiden for GNU Midnight Commander: https://www.midnight-commander.org
+
+Fif: Send venligst eventuelle fejlrappporter til mc-devel@lists.midnight-commander.org
+
+Fif: Tabulator skifter dit nuværende panel.
+
+Fif: Cool VFS: tryk på enter på en tar-fil for at undersøge dens indhold.
+
+Fif: Vi har også en fin manualside.
+
+Fif: Vil du have navigation i Lynx-stil? Sæt det i konfigurationsdialogen.
+
+Fif: %-makroer virker også på kommandolinjen.
+
+Fif: M-! giver dig mulighed for at udføre programmer og se outputtet i fremviseren.
+
+Fif: Fillistningsformatet kan tilpasses; brug "man mc" for detaljer.
+
+Fif: %D/%T udvidder til de mærkede filer i den modsatte mappe.
+
+Fif: Vil du have en almindelig skal? Tryk på C-o, og vend tilbage til MC med C-o.
+
+Fif: Hvis CDPATH-variablen sættes kan du spare tastetryk i cd-kommandoer.
+
+Fif: Hvis du vil se dine .*-filer, så sig det i konfigurationsdialogen.
+
+Fif: Vil du se dine *~-backupfiler? Sæt det i konfigurationsdialogen.
+
+Fif: Fuldførelse virker på alle inputlinjer i alle dialoger. Tryk blot på M-Tab.
+
+Fif: På langsomme maskiner kan flaget -s hjælpe.
+
+Fif: Find fil: du kan arbejde på de fundne filer med Panelisér-knappen.
+
+Fif: Vil du foretage komplekse søgninger? Brug Ekstern panelisering-kommandoen.
+
+Fif: Brug M-c (hurtig cd), til at skifte mappe halvvejs gennem indtastningen af en kommando.
+
+Fif: Skalkommandoer virker ikke når du er på et ikke-lokalt filsystem.
+
+Fif: Bring tekst tilbage fra de døde med C-y.
+
+Fif: Er der nogen af dine taster som ikke virker? Kig i Indstillinger/Lær taster.
+
+Fif: Brug M-!, til at se på outputtet af en kommando i fremviseren.
+
+Fif: F13 (eller Skift-F3) viser fremviseren i rå tilstand.
+
+Fif: Du kan angive editoren til F4 med skalvariablen EDITOR.
+
+Fif: Du kan angive den eksterne fremviser med skalvariablerne VIEWER eller PAGER.
+
+Fif: Du kan deaktivere alle anmodninger om bekræftelse i Indstillinger/Bekræftelse.
+
+Fif: Hop hurtigt til mapper som ofte bruges med C-\.
+
+Fif: Du kan brug anonym FTP i mc ved at skrive 'cd ftp://maskine.edu'
+
+Fif: FTP er indbygget i Midnight Commander, tjek Fil/FTP-link-menuen.
+
+Fif: M-t ændre hurtigt listningstilstanden.
+
+Fif: Du kan angive brugernavnet når ftps bruges: 'cd ftp://bruger@maskine.edu'
+
+Fif: Du kan gennemse RPM-filer ved at trykke på enter, på en rpm-fil.
+
+Fif: Tilføj en skråstreg, til at markere mapper i den valgte dialogboks.
+
+Fif: Brug at klip og indsæt med musen kan kræve at skift-tasten holdes nede
+
+Fif: Tilknyt taster i hotlisten med ftp-steder som ofte bruges: skriv C-\.

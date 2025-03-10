@@ -1,0 +1,21 @@
+#!/bin/sh
+
+BDEV_PATH=$1
+
+fsck_msdos -p -f $BDEV_PATH
+if [ $? -eq 0 ]; then
+	mount -t vfat $@
+else
+	ntfs-3g.probe --readwrite $BDEV_PATH
+	if [ $? -eq 0 ]; then
+		mount.ntfs-3g $@
+	else
+		fsck.exfat $BDEV_PATH
+		if [ $? -eq 0 ]; then
+			mount.exfat $@
+		else 
+			mount $@
+		fi
+	fi
+fi
+

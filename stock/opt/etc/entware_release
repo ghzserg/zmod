@@ -1,0 +1,20 @@
+PRETTY_NAME="Entware 2024.07"
+NAME="Entware"
+VERSION_ID="2024.07"
+VERSION="2024.07 (sync with OpenWrt)"
+ID=entware
+HOME_URL="https://entware.net/"
+SUPPORT_URL="https://github.com/Entware/Entware/discussions/"
+BUG_REPORT_URL="https://github.com/Entware/Entware/issues/"
+
+Build summary:
+Linux Kernel 3.2.40
+arch=arm
+cpu_type=cortex-a9
+cpu_subtype=unknown
+float=soft
+binutils_version="2.34"
+gcc_version="8.4.0"
+gcc_flags="-O2 -pipe -mtune=cortex-a9 -fno-caller-saves -mfloat-abi=soft"
+libc_type=glibc
+libc_version="2.27"

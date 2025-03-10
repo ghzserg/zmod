@@ -1,0 +1,103 @@
+# en : Paris - France - various DVB-T transmitters
+# fr : Paris - France - differents emetteurs DVB-T de la Tour Eiffel
+# Latest update for the data / derniere mise a jour des donnees : 2017-01-01
+#
+# City                   Multiplex number : R1 R2 R3 R4 R6 R7 R15
+# Paris - Eiffel Tower - Channel number   : 35 25 22 30 32 42 28
+#
+# Note :
+# R8 - Is no longer used since the 05/04/2016 - Channel 58 is no longer used
+# R5 - Is no longer used since the 05/04/2016 - Channel 28 Re-assigned for R15
+#
+
+# R1 - Channel/Canal 35 -  Groupe GR1 A (France 2 HD, France 4 HD, France Ô SD, franceinfo: SD), Groupe GR 1 (France 3-Paris Ile de France), Groupe R1 TFL (BFM Business Paris HD)
+[CHANNEL 35]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 586166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 3/4
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/8
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R2 - Channel/Canal 25 - Groupe NTN (C8, BFM TV, I-Tele, CStar, Gulli)
+[CHANNEL 25]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 506166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 2/3
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R3 - Channel/Canal 22 - Groupe CNH (Canal+, Canal+ Cinema, Canal+ Sport, Planete+, LCI, Paris Premiere, ?, ?, ?, DATASYSTEM R7, ?)
+[CHANNEL 22]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 482166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 2/3
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R4 - Channel/Canal 30 - Groupe Multi4 (M6, W9, Arte, France5, 6ter)
+[CHANNEL 30]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 546166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 2/3
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R6 - Channel/Canal 32 - Groupe SMR6 (TF1, NRJ12, TMC, NT1, LCP-Public Senat)
+[CHANNEL 32]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 562166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 2/3
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R7 - Channel/Canal 42 - Groupe MHD7 (HD1, Cherie 25, L equipe 21, RMC Decouverte, Numero 23)
+[CHANNEL 42]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 642166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 3/4
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO
+
+# R15 - Channel 28 - local channels only on Paris - Eiffel tower transmitter
+# Group Multi-7 (Canal 31, IDF1, France 24, Canal 34)
+[CHANNEL 28]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 530166000
+	BANDWIDTH_HZ = 8000000
+	CODE_RATE_HP = 2/3
+	CODE_RATE_LP = NONE
+	MODULATION = QAM/64
+	TRANSMISSION_MODE = 8K
+	GUARD_INTERVAL = 1/32
+	HIERARCHY = NONE
+	INVERSION = AUTO

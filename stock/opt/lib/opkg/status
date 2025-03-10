@@ -1,0 +1,321 @@
+Package: terminfo
+Version: 6.4-3
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730417
+Auto-Installed: yes
+
+Package: libc
+Version: 2.27-11
+Depends: libgcc
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730414
+Auto-Installed: yes
+
+Package: locales
+Version: 2.27-9
+Depends: libc, libssp, librt, libpthread, grep
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730418
+Auto-Installed: yes
+
+Package: entware-upgrade
+Version: 1.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: all
+Installed-Time: 1733730419
+Auto-Installed: yes
+
+Package: opkg
+Version: 2022.02.24~d038e5b6-2
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730419
+Auto-Installed: yes
+
+Package: libpthread
+Version: 2.27-11
+Depends: libgcc
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730414
+Auto-Installed: yes
+
+Package: zoneinfo-europe
+Version: 2024a-1
+Depends: libc, libssp, librt, libpthread, zoneinfo-core
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730416
+Auto-Installed: yes
+
+Package: glib2
+Version: 2.80.3-1
+Depends: libc, libssp, librt, libpthread, libiconv-full, libintl-full, zlib, libpthread, libffi, libattr, libpcre2
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730505
+Auto-Installed: yes
+
+Package: libthread-db
+Version: 2.27-11
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730518
+Auto-Installed: yes
+
+Package: libssh2
+Version: 1.11.0-1
+Depends: libc, libssp, librt, libpthread, libmbedtls, zlib
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730508
+Auto-Installed: yes
+
+Package: mc
+Version: 4.8.31-1
+Depends: libc, libssp, librt, libpthread, glib2, libslang2, libmount, libe2p, libssh2, libiconv-full
+Status: install user installed
+Architecture: armv7-3.2
+Conffiles:
+ /opt/etc/mc/mc.menu c27296bdf60aa3734fa5d7355a1d7b2c59ca49bdd15d7b16d946bd3b09206dcf
+Installed-Time: 1733730509
+
+Package: grep
+Version: 3.11-1
+Depends: libc, libssp, librt, libpthread, libpcre2
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730417
+Auto-Installed: yes
+Alternatives: 300:/opt/bin/egrep:/opt/libexec/egrep-gnu, 300:/opt/bin/fgrep:/opt/libexec/fgrep-gnu, 300:/opt/bin/grep:/opt/libexec/grep-gnu
+
+Package: zoneinfo-asia
+Version: 2024a-1
+Depends: libc, libssp, librt, libpthread, zoneinfo-core
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730416
+Auto-Installed: yes
+
+Package: libblkid
+Version: 2.40.1-1
+Depends: libc, libssp, librt, libpthread, libuuid
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730506
+Auto-Installed: yes
+
+Package: libmbedtls
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730508
+Auto-Installed: yes
+
+Package: libiconv-full
+Version: 1.17-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730502
+Auto-Installed: yes
+
+Package: libmpfr
+Version: 4.2.1-1
+Depends: libc, libssp, librt, libpthread, libgmp
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730521
+Auto-Installed: yes
+
+Package: libpcre2
+Version: 10.42-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730417
+Auto-Installed: yes
+
+Package: zoneinfo-core
+Version: 2024a-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730415
+Auto-Installed: yes
+
+Package: libstdcpp
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730415
+Auto-Installed: yes
+
+Package: libgcc
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730411
+Auto-Installed: yes
+
+Package: libreadline
+Version: 8.2-1
+Depends: libc, libssp, librt, libpthread, libncursesw
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730520
+Auto-Installed: yes
+
+Package: libslang2
+Version: 2.3.3-2
+Depends: libc, libssp, librt, libpthread, terminfo
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730506
+Auto-Installed: yes
+
+Package: libffi
+Version: 3.4.6-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730503
+Auto-Installed: yes
+
+Package: libuuid
+Version: 2.40.1-1
+Depends: libc, libssp, librt, libpthread, librt
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730506
+Auto-Installed: yes
+
+Package: gdb
+Version: 14.1-1
+Depends: libc, libssp, librt, libpthread, libthread-db, libiconv-full, libintl-full, libreadline, libncurses, zlib, libgmp, libmpfr
+Status: install user installed
+Architecture: armv7-3.2
+Installed-Time: 1733730523
+
+Package: librt
+Version: 2.27-11
+Depends: libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730414
+Auto-Installed: yes
+
+Package: entware-release
+Version: 2024.07-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: all
+Installed-Time: 1733730415
+Auto-Installed: yes
+
+Package: libintl-full
+Version: 0.22.5-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730502
+Auto-Installed: yes
+
+Package: libncurses
+Version: 6.4-3
+Depends: libc, libssp, librt, libpthread, libncursesw
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730520
+Auto-Installed: yes
+
+Package: libmount
+Version: 2.40.1-1
+Depends: libc, libssp, librt, libpthread, libblkid
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730507
+Auto-Installed: yes
+
+Package: zlib
+Version: 1.3.1-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730503
+Auto-Installed: yes
+
+Package: libncursesw
+Version: 6.4-3
+Depends: libc, libssp, librt, libpthread, terminfo
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730519
+Auto-Installed: yes
+
+Package: findutils
+Version: 4.10.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730416
+Auto-Installed: yes
+Alternatives: 300:/opt/bin/find:/opt/libexec/find-gnu, 300:/opt/bin/xargs:/opt/libexec/xargs-gnu
+
+Package: htop
+Version: 3.3.0-2
+Depends: libc, libssp, librt, libpthread, libncurses
+Status: install user installed
+Architecture: armv7-3.2
+Installed-Time: 1741012937
+
+Package: libssp
+Version: 8.4.0-11
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730414
+Auto-Installed: yes
+
+Package: libe2p
+Version: 1.47.0-2
+Depends: libc, libssp, librt, libpthread, libuuid
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730507
+Auto-Installed: yes
+
+Package: libgmp
+Version: 6.3.0-1
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730520
+Auto-Installed: yes
+
+Package: entware-opt
+Version: 227000-3
+Depends: libc, libssp, librt, libpthread, libgcc, libstdcpp, libpthread, librt, entware-release, zoneinfo-asia, zoneinfo-europe, findutils, terminfo, locales, opkg, entware-upgrade
+Conflicts: opt-ndmsv2
+Status: install user installed
+Architecture: all
+Conffiles:
+ /opt/etc/group.1 d0e5f0d86ff4c7027efd7bf0196c95a73e6b4407d6870ed36f969ff75d633d88
+ /opt/etc/passwd.1 e26f51b6cf450fed85cf6179e323e894ea413ccf913c8c9d3a230fd520e4ab19
+ /opt/etc/profile f3273b58a3f62d1a4216c2fab30c36f17b16fc97324119a62cf2ba68f3c75ffb
+ /opt/etc/shells.1 126b0362dce578a66ffe803a04e15dec74a854dd0786dcb004b5789fdde8781d
+Installed-Time: 1733730419
+
+Package: libattr
+Version: 2.5.2-3
+Depends: libc, libssp, librt, libpthread
+Status: install ok installed
+Architecture: armv7-3.2
+Installed-Time: 1733730503
+Auto-Installed: yes
+

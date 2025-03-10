@@ -1,0 +1,38 @@
+#!/bin/sh
+
+PATH=/opt/sbin:/opt/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Start/stop all init scripts in /opt/etc/init.d including symlinks
+# starting them in numerical order and
+# stopping them in reverse numerical order
+
+#logger "Started $0${*:+ $*}."
+unset LD_LIBRARY_PATH
+unset LD_PRELOAD
+
+ACTION=$1
+CALLER=$2
+
+if [ $# -lt 1 ]; then
+    printf "Usage: $0 {start|stop|restart|reconfigure|check|kill}\n" >&2
+    exit 1
+fi
+
+[ $ACTION = stop -o $ACTION = restart -o $ACTION = kill ] && ORDER="-r"
+
+for i in $(/opt/bin/find /opt/etc/init.d/ -perm '-u+x' -name 'S*' | sort $ORDER ) ;
+do
+    case "$i" in
+        S* | *.sh )
+            # Source shell script for speed.
+            trap "" INT QUIT TSTP EXIT
+            #set $1
+            #echo "trying $i" >> /tmp/rc.log
+            . $i $ACTION $CALLER
+            ;;
+        *)
+            # No sh extension, so fork subprocess.
+            $i $ACTION $CALLER
+            ;;
+    esac
+done

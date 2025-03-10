@@ -1,0 +1,102 @@
+#!/bin/sh
+
+#for args in $@
+#do
+#   echo $args
+#done
+#echo "all args is: $@"
+#echo "arg num is: $#"
+
+op=$1
+io=$2
+func=$3
+data=$4
+dlevel=$5
+pull=$6
+
+if  [ $# -lt 2 ];  then
+    print_help
+elif  [ $# -gt 6 ];  then
+    print_help
+fi
+
+
+
+function print_help(){
+    echo "===========================useage=================================================="
+    echo "gpio op io func data dlevel pull   ---set io's function data dlevel pull          ="
+    echo "gpio op io func data               ---set io's func data                          ="
+    echo "gpio op io func                    ---set io's func                               ="
+    echo "gpio op io                         ---get io's status                            ="
+    echo "for example:                                                                      =" 
+    echo "gpio -s PH1  1   1     1     1     ---set PH1's function=1 data=1,dlevel=1 pull=1 ="
+    echo "gpio -s PH1  1   0                 ---set PH1's function=1 data=0                 ="
+    echo "gpio -s PH1  1                     ---set PH1's function=1                        ="
+    echo "gpio -g PH1                        ---get PH1's status                            ="
+    echo "==================================================================================="
+    exit -1
+}
+
+function gotoPinctrlDir(){
+    if  [ ! -d /sys/kernel/debug/sunxi_pinctrl ];  then
+        mount -t debugfs none /sys/kernel/debug
+    fi
+        
+    cd /sys/kernel/debug/sunxi_pinctrl
+}
+
+gotoPinctrlDir
+
+echo $io > sunxi_pin
+
+if  [ $# == 2 ];  then
+    if  [ $op = '-g' ];  then
+        echo "get $io status:"
+        cat sunxi_pin_configure
+        if [ $? -ne 0 ]; then
+            echo "maybe this pin is not in this chip"
+        fi
+    else 
+        echo "get input param error"
+        print_help
+    fi
+elif  [ $# == 3 ];  then
+    if [ $op = '-s' ];  then
+        echo $io $func > function
+        echo "set $io function=$func"
+    else 
+        echo "get input param error"
+        print_help
+    fi
+elif  [ $# == 4 ];  then
+    if [ $op = '-s' ];  then
+        echo $io $func > function
+        echo $io $data > data
+        echo "set $io function=$func"
+        echo "set $io data=$data"
+    else 
+        echo "get input param error"
+        print_help
+    fi
+elif  [ $# == 6 ];  then
+    if [ $op = '-s' ];  then 
+        result=$(uname -r | grep "5.4")
+        if [ -n "$result" ]; then
+            echo "$io $func $data $dlevel $pull" > sunxi_pin_configure
+        else
+            echo $io $func > function
+            echo $io $data > data
+            echo $io $dlevel > dlevel
+            echo $io $pull > pull
+        fi
+        echo "set $io function=$func"
+        echo "set $io data=$data"
+        echo "set $io dlevel=$dlevel"
+        echo "set $io pull=$pull"
+    else 
+        echo "get input param error"
+        print_help
+    fi
+else
+    echo "input param is $# error!!!"
+fi

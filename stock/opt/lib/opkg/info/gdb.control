@@ -1,0 +1,15 @@
+Package: gdb
+Version: 14.1-1
+Depends: libc, libssp, librt, libpthread, libthread-db, libiconv-full, libintl-full, libreadline, libncurses, zlib, libgmp, libmpfr
+Source: feeds/base/devel/gdb
+SourceName: gdb
+License: GPL-3.0+
+Section: devel
+SourceDateEpoch: 1707305462
+URL: https://www.gnu.org/software/gdb/
+CPE-ID: cpe:/a:gnu:gdb
+Architecture: armv7-3.2
+Installed-Size: 6901760
+Description:  GDB, the GNU Project debugger, allows you to see what is going on `inside'
+ another program while it executes -- or what another program was doing at the
+ moment it crashed.

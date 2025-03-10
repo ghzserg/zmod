@@ -1,0 +1,12 @@
+Package: locales
+Version: 2.27-9
+Depends: libc, libssp, librt, libpthread, grep
+Source: feeds/rtndev/locales
+SourceName: locales
+Section: libs
+SourceDateEpoch: 1708601332
+URL: http://gcc.gnu.org/
+Maintainer: Entware team, https://entware.net
+Architecture: armv7-3.2
+Installed-Size: 1669120
+Description:  locales support (independent of system lib)

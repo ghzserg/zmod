@@ -1,0 +1,19 @@
+Package: findutils
+Version: 4.10.0-1
+Depends: libc, libssp, librt, libpthread
+Alternatives: 300:/opt/bin/find:/opt/libexec/find-gnu, 300:/opt/bin/xargs:/opt/libexec/xargs-gnu
+Source: feeds/packages/utils/findutils
+SourceName: findutils
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1720623266
+URL: https://www.gnu.org/software/findutils/
+CPE-ID: cpe:/a:gnu:findutils
+Architecture: armv7-3.2
+Installed-Size: 317440
+Description:  Replace busybox versions of findutils with full GNU versions.
+ This is normally not needed as busybox is smaller and provides
+ sufficient functionality, but some users may want or need
+ the full functionality of the GNU tools.
+ This package installs find and xargs utilities

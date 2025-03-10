@@ -1,0 +1,11 @@
+/opt/etc/init.d/rc.unslung
+/opt/etc/passwd.1
+/opt/etc/skel/.inputrc
+/opt/etc/ld.so.conf
+/opt/root/.inputrc
+/opt/etc/init.d/rc.func
+/opt/etc/profile
+/opt/etc/group.1
+/opt/etc/skel/.profile
+/opt/root/.profile
+/opt/etc/shells.1

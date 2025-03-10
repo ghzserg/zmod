@@ -1,0 +1,12 @@
+#!/bin/sh
+mount -t vfat $@
+if [ $? -ne 0 ]; then
+	mount.ntfs-3g $@
+	if [ $? -ne 0 ]; then
+		mount.exfat $@
+		if [ $? -ne 0 ]; then
+			mount $@
+		fi
+	fi
+fi
+

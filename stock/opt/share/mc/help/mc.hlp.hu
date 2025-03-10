@@ -1,0 +1,1774 @@
+[Contents]
+Tartalomjegyzék
+
+  OPCIÓKDESCRIPTION
+  ÁttekintésOverview
+  Egér kezelésMouse Support
+  BillentyűzetKeys
+    Különleges gombokMiscellaneous Keys
+    Könyvtár panelekDirectory Panels
+    Quick searchQuick search
+    Shell parancssorShell Command Line
+    Általános mozgási lehetőségek billentyűzettelGeneral Movement Keys
+    Beviteli gombokInput Line Keys
+
+  MenüsorMenu Bar
+    Bal és jobboldali menükLeft and Right Menus
+      Fájllista...Listing Format...
+      Rendezés...Sort Order...
+      SzűrésFilter...
+      FrissítReread
+    Fájl menüFile Menu
+      Gyors cdQuick cd
+    Parancsok menüCommand Menu
+      KönyvtárfaDirectory Tree
+      Fájl keresésFind File
+      Parancskimenet panelExternal panelize
+      KönyvjelzőkHotlist
+      TársításokEdit Extension File
+      HáttérmunkákBackground jobs
+      Menü szerkesztésEdit Menu File
+    BeállításokOptions Menu
+      Az MC konfigurálásaConfiguration
+      MegjelenésLayout
+      MegerősítésConfirmation
+      KépernyőbitekDisplay bits
+      Billentyűzet tanításLearn keys
+      Csatolt (látszólagos) fájlrendszerVirtual FS
+      Beállítások mentéseSave Setup
+
+  Az operációs rendszer parancsainak futtatásaExecuting operating system commands
+    A cd belső parancsThe cd internal command
+    Makro helyettesítőMacro Substitution
+    A subshell támogatásThe subshell support
+  Chmod (hozzáférési jogosultság)Chmod
+  Chown (Tulajdonos változtatása)Chown
+  Haladó (bővített) ChownChown\-advanced
+  Fájl műveletekFile Operations
+  Kijelölt fájlok másolása vagy áthelyezéseMask Copy/Rename
+  Belső fájlnézőInternal File Viewer
+  Belső fájlszerkesztőInternal File Editor
+  KiegészítésCompletion
+  Csatolt (látszólagos) fájlrendszerVirtual File System
+    FTP fájlrendszerFTP File System
+    Tar fájlrendszerTar File System
+    Fájl áthelyezése a Shell fájlrendszeren túlraFIle transfer over SHell filesystem
+    Törlés visszaállításaUndelete File System
+    EXTernal File SystemEXTernal File System
+  SzínekColors
+  Speciális BeállításokSpecial Settings
+  Terminál adatbázisokTerminal databases
+
+  FájlokFILES
+  A Midnight Commander frissítéseAVAILABILITY
+  Lásd még...SEE ALSO
+  SzerzőkAUTHORS
+  Hibák bejelentéseBUGS
+  LicenseLicense
+  Lekérdező boxQueryBox
+  Hogyan használjuk a súgótHow to use help
+[DESCRIPTION]
+LEÍRÁS
+
+A Midnight Commander Unix típusú operációs rendszerekhez készített könyvtár böngésző és filekezelő eszköz
+OPTIONS
+
+OPCIÓK
+
+"-a" A kereteket és vonalakat egyszerűsített karakterekkel rajzolja ki
+
+"-b"    Fekete-fehér megjelenítés kérése
+
+"-c"    Engedélyezi a színes megjelenítést; nézd meg a SzínekColors részt további információkért.
+
+"-C opció"
+        Saját parancssori színválaszték beállításához használható. Az opció használatáról a SzínekColors részben olvashatsz.
+
+"-d"    Nem engedélyezi az egér használatát.
+
+"-f"    Megjeleníti a Midnight Commander fájlainak elérési útvonalát, ahogy azt a fordításnál beállítottuk.
+
+"-k"    Törli azon gyorsbillentyűket, amelyek alapértelmezésben a termcap/terminfo adatbázisból töltődnek be. Csak HP terminálokon érdemes használni, ahol a funkció billentyűk nem működnek.
+
+"-l fájl"
+        Fájlba menti a szerverrel lebonyolított ftpfs dialógus adatait.
+
+"-P"    A program befejezésekor a Midnight Commander kiírja az utolsó munkakönyvtárat, ez nem használható közvetlenül, csak olyan különleges shell funkcióval, amely lehetővé teszi az aktuális shell könyvtár helyett a Midnight Commander által utoljára meglátogatott könyvtárra való átváltást (köszönet a funkcióért és a funkcióhoz szükséges kódért Torben Fjerdingstad-nek és Sergey-nek közreműködésükért). Kérlek, ne csinálj szó szerinti másolatot a funkció beállításairól. A fájlok forrása a /opt/lib/mc/mc.sh (bash és zsh felhasználóknak), illetőleg a /opt/lib/mc/mc.csh (tcsh felhasználóknak) fájl. Ilyenkor, amikor a funkció beállításokat változtatod, a profil értékeket nem szükséges megváltoztatnod, csak arról gondoskodj, hogy az MC-t ne fordítsd eltérő beállításokkal.
+
+A bash és zsh funkciók lehetnének rövidebbek is, de a bash környezete nem fogadja el a program C-z háttérbe helyezését. A temp fájlok a saját ~/.mc/tmp könyvtáradban találhatók, mert ez biztonságosabb, mint a közös írható /tmp könyvtár.
+
+"-s"    Bekapcsolja a lassú terminál módot, ebben a módban a program nem használja a sok energiát felemésztő vonal karaktereket és az un. bővített módot kikapcsolja.
+
+"-t"    Ezt csak akkor használd, ha S-Lang-gel és terminfo-val fordítottad a programot: a TERMCAP váltózó értékét használja, és nem a rendszer szintű terminál adatbázist.
+
+"-u"    Nem engedélyezi a konkurrens shell-ek használatát (csak akkor használható, ha a Midnight Commandert a "concurrent shell" támogatással fordították).
+
+"-U"    Engedélyezi a konkurens shell támogatást (csak akkor használható ha a Midnight Commander fordításakor beállították a subshell támogatást, mint választható lehetőséget).
+
+"-v fájl"
+        Belép a belső fájlnézőbe a kiválasztott fájl megtekintéséhez.
+
+"-V"    Megmutatja a program verziószámát.
+
+"-x"    Belép xterm módba. (Két képernyős módban használható, és az egér escape szekvenciái is használhatóak).
+
+-X, --no-x11
+        Do not use X11 to get the state of modifiers Alt, Ctrl, Shift
+
+-g, --oldmouse
+        Force a "normal tracking" mouse mode. Used when running on xterm-capable terminals (tmux/screen).
+
+Ha megadtad, akkor az első útvonal tartalma jelenik meg az aktuális panelen; a második könyvtár útvonal pedig a másik panelen jelenik meg.[Overview]
+Áttekintés
+
+A Midnight Commander képernyőjének négy része van. Csaknem az egész képernyőt a két könyvtár panelre tölti ki. Alapértelmezésben a képernyőn alulról a második sor a parancssor, a legalsó sor pedig a funkció gombok elnevezéseit jeleníti meg. A legfelső sor a MenüsorMenu Bar A menüsor esetleg nem látható, de könnyen megjeleníthető úgy, hogy a felső sorra kattintasz az egérrel, vagy lenyomod az F9-et.
+
+A Midnight Commander lehetővé teszi, hogy egyszerre két panelt láthassunk. Az egyik a panelek közül az aktív "current" panel (a kiválasztó sáv az aktív panelen található). Majdnem minden művelet a jelenlegi panelben történik. Néhány fájlművelet, úgy, mint átnevezés-áthelyezés és másolás alapértelmezésben a kiválasztatlan panelt használja rendeltetési helyként (ne aggódj, végrehajtás előtt erre mindíg rákérdez a megerősítés műveletnél). További információkért nézd meg a Könyvtár panelekDirectory Panels, a Bal és Jobb oldali menükLeft and Right Menus és a Fájl menüFile Menu részt.
+
+Futtathatsz rendszer parancsot is a Midnight Commander-ből, annak egyszerű begépelésével. A megjelenő shell parancssorba mindíg begépelheted a parancsot és az Enter lenyomásakor a Midnight Commander lefuttatja azt; olvasd el a Shell parancssorShell Command Line és a Beviteli gombokInput Line Keys részt, hogy többet is megtudhass a parancssorról.[Mouse Support]
+Egér kezelés
+
+A Midnight Commander eredendően tartalmazza az egér támogatást. Ez aktiválódik, ha xterm(1) terminálon futtatod (akkor is működik, amikor telnet, vagy rlogin kapcsolatban vagy egy másik géppel az xterm-ből), vagy, ha Linux konzolon használod, és a gpm egér szerver fut.
+
+Amikor bal gombbal kattintasz a fájlra, a könyvtár panalben a fájl kiválasztódik; ha a jobb gombbal kattintasz, a fájlt ezzel megjelölöd (vagy megszünteted azt, az azt megelőző állapotnak megfelelően).
+
+A fájlra történő dupla kattintásra az MC megpróbálja futtani azt, ha futtatható fájlról van szó; ha a fájl kiterjesztésétEdit Extension File egy adott programhoz már hozzá rendelted, a fájl kiterjesztéséhez hozzárendelt program lefut.
+
+Továbbá rájuk kattintva láthatóvá teszi a parancs futtatásához megadott funkció billentyű elnevezéseket is.
+
+Ha az egérrel a könyvtár panel legfelső sorára kattintunk, az egy oldalnyit lapozik visszafelé. Ennek megfelelően az alsó sorra kattintva egy oldalnyit ugrasz előre. Ez az eszköze használható a Súgó nézőContents és a KönyvtárfaDirectory Tree esetén is.
+
+Az egérgomb automatikus ismétlésének határértéke alapesetben 400 ezredmásodpercnyi. Ez megváltoztatható az ~/.config/mc/iniSave Setup fájlban a mouse_repeat_rate paraméter értékének megváltoztatásával.
+
+Ha a Commander-t egér támogatással indítottad az eredeti egér tulajdonságok (szöveg kivágás és beillesztés) a Shift gomb lenyomásával érhetők el.[Keys]
+Billentyűzet
+
+Néhány Midnight Commander parancshoz szükséges a Control (~vezérlő) (ezeket CTRL-lal vagy CTL-lel jelöljük) és a Meta (~Váltó) (ezeket ALT-tal vagy néha Compose-zal jelöljük) gombok használata. Ebben a leírásban a következő rövidítéseket használjuk:
+
+C-<kar> ilyenkor lenyomva kell tartanod a Control billentyűt addíg, amíg a megadott karaktert <kar> le nem ütöd. Így például a C-f esetén: tartsd lenyomva a Control billentyűt, amíg az f-et begépeled.
+
+M-<kar> ilyenkor lenyomva kell tartanod a Meta, vagy az Alt billentyűt addíg, amíg a megfelelő karaktert <kar> be nem gépeled. Ha ez nem a Meta, vagy az Alt billentyű, akkor használd az ESC-et, a megfelelő karakter <kar> begépelésekor. A Meta funkció Linux alatt úgy érhető el, hogy megnyomjuk, majd elengedjük az ESC billentyűt. A Meta funkció az ezután megnyomott billentyűre vonatkozik!
+
+beviteli eszköze a GNU Emacs szerkesztő billentyűzet-kombinációihoz hasonlóan működik.
+
+Több részben is beszélünk majd ezekről a gombokról. Az itt következők a legfontosabbak ezek közül.
+
+A Fájl menüFile Menu rész tartalmazza a Fájl menü parancsainak billentyűzet gyorskapcsolóit. Ez a rész tartalmazza még a funkció billentyűket is. Ezen parancsok jobbára valamilyen műveletet végeznek el, általában a kiválasztott fájlon, vagy a kijelölt fájlokon.
+
+A Könyvtár panelekDirectory Panels rész tartamazza azokat a billentyűket, amelyek a későbbi műveletekhez kiválasztják, vagy kijelölik a fájlokat (a művelet általában a Fájl menüben megtalálható).
+
+A Shell ParancssorShell Command Line felsorolja azokat a gombokat, amelyeket használhatsz a begépeléshez és a parancssor szerkesztéshez. Ezek átmásolják a fájlnevet a könyvtár panelből a parancssorba (a túlságosan sok gépelést elkerülendő), vagy hozzáférést enged a parancssor előzményeihez.
+
+Beviteli gombokInput Line Keys a beviteli sorok szerkesztésére szolgálnak. Ezen eszközök a parancssorban és lekérdező dialógus (query dialog) beviteli soraihoz szükségesek.[Miscellaneous Keys]
+Különleges gombok
+
+Itt azon billentyűket találhatod meg, amelyek nem tartoznak bele egyetlen más kategóriába sem:
+
+Enter. Ha található valamilyen szöveg a parancssorban (az egyik sor a panelek aljánál), akkor azt lefuttatja, mint parancsot. Ha nem található szöveg a parancssorban, és a kiválasztás egy könyvtár felett van a Midnight Commander-ben, akkor végrehajtja a chdir(2) (könyvtárváltás) parancsot a kiválasztott könyvtárra és újraolvassa a panel információit; ha a kiválasztás egy futtatható fájlon van, akkor lefuttatja azt. Végül, ha a kiválasztott fájl kiterjesztése szerepel a társításoknálEdit Extension File, akkor a kijelölt parancs fut le.
+
+C-l Frissít minden információt a Midnight Commander.
+
+C-x c Futtatja a ChmodChmod parancsot a fájlon, vagy a kijelölt fájlokon.
+
+C-x o Futtatja a ChownChown parancsot a fájlon, vagy a kijelölt fájlokon.
+
+C-x l Futtatja a link parancsot.
+
+C-x s Futtatja a szimbolikus link parancsot.
+
+C-x i Beállítja a másik panel információ megjelenítési módját.
+
+C-x q Beállítja a másik panelt a quick view-ra (villámnézetre).
+
+C-x ! Futtatja a Parancskimenet panelExternal panelize parancsot.
+
+C-x h Futtatja a könyvtár hozzáadása a KönyvjelzőkhözHotlist parancsot.
+
+M-! Futtatja a Szűrés (Filtered view) parancsot, a Belső fájlnézőnekInternal File Viewer megfelelően.
+
+M-? Futtatja a Fájl keresésFind File parancsot.
+
+M-c Beugrik a Gyors cdQuick cd dialógboxba.
+
+C-o A parancs futtatásakor xterm-en Linux, vagy FreeBSD konzolon, megmutatja az előzö parancs kimeneteit. Linux konzolon történő futtatáskor a Midnight Commander egy beépített programot használ (cons.saver) a képernyő-információk elmentésére és visszaállítására. Tehát az MC képernyőjét bármikor kikapcsolhatjuk, és visszakapcsolhatjuk.
+
+Ha a subshell támogatást is befordították, bármikor begépelheted a C-o gombokat ahhoz, hogy visszatérhess a Midnight Commander saját képernyőjéhez, majd a C-o gombok használatával visszatérhetsz a parancsodhoz. Ha az alkalmazásod felfüggesztett állapotba kerül, ennek a trükknek a használatakor, nem leszel képes futtatni más parancsot a Midnight Commander-ből addíg, amíg a felfüggesztett alkalmazást meg nem szakítod.[Directory Panels]
+Könyvtár panelek
+
+Ez a rész azon billentyűket sorolja fel, amelyek a könyvtár panelekben használhatóak. Ha tudni akarod azt, hogy hogyan tudod megváltoztatni a panelek külső megjelenését, akkor nézd meg a Bal és jobboldali menükLeft and Right Menus részt.
+
+Tab, C-i Váltja az aktuális panelt. Az előzőleg inaktív panel lesz a jelenlegi panel és az előzőleg aktív panel lesz az inaktív panel. A kiválasztó sáv az előzőleg aktívról átugrik az újonnan aktív panelre.
+
+Insert, C-t DEPRECATED! A fájlok kijelölésére az Insert gombot használhatod (a kich1 terminfo kombináció), vagy a C-t (Control-t) kombinációt. A kijelölés megszüntetéséhez csak újra ki kell jelölni a kijelölt fájlt.
+
+Insert  to tag files you may use the Insert key (the kich1 terminfo sequence). To untag files, just retag a tagged file.
+
+M-e     to change charset of panel you may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select "directory up" (..) in active panel. To cancel the charsets in all directories, select "No translation " in the dialog of encodings.
+
+M-g, M-r, M-j A panel legfelső, középső és alsó fájljának kiválasztásához használd sorban a megfelelő billentyű-kombinációt. Linuxban M-h a "history" bekapcsolására szolgál.
+
+M-t Vált a jelenlegi lista megjelenítési módról a következő megjelenítési módra. Ezzel gyorsan át tudsz váltani a hosszú listáról a rendezett listára és a felhasználó által definiált listázási módra.
+
+C-\ (control-backslash) Megjeleníti a KönyvjelzőketHotlist és átvált a kiválasztott könyvtárra.
+
++ (plusz) Ez használható a fájlok csoportjainak kiválasztásához (kijelöléséhez). A Midnight Commander megjelenít egy ablakot a jelölendő csoport pontos kiterjesztésének megadásához. Ha a Shell kifejezések opció engedélyezve van, csak a pontos kiterjesztések használhatók a shell-ben kiterjesztésként (* jelent egy, vagy több karaktert, a ? egyetlen karaktert). Ha a Shell kifejezések-et kikapcsolva tartjuk, a fájlok kijelölésére a normál kifejezések használhatóak (lásd ed (1)).
+
+\ (backslash). Használd a "\" gombot a fájlcsoportok kiválasztásának megszüntetéséhez. Ez a Plusz gomb ellentettje.
+
+crsr up, C-p Az előző panel-bejegyzésre mozgatja a kiválasztó sávot.
+
+crsr down, C-n A következő bejegyzésre lépteti a kiválasztó sávot a panelben.
+
+home, a1, M-< A kiválasztó sávot a panel első bejegyzésére mozgatja.
+
+end, c1, M-> A kiválasztó sávot a panel utolsó bejegyzésére mozgatja.
+
+Page Down, C-v A kiválasztó sávot egy oldallal lejjebb viszi.
+
+Page Up, M-v A kiválasztó sávot egy oldallal feljebb viszi.
+
+M-o Ha a másik panel a lista panel és te a könyvtárodon vagy az aktív panelen, akkor a másik panel tartalma állítódik be a jelenleg aktív könyvtárban (hasonlóan az Emacs C-o gombjához), egyébként a másik panel tartalma állítódik be a jelenlegi könyvtár eredeti könyvtárába. Ha a kurzor könyvtáron áll, akkor az inaktív panelen megnyitja.
+
+C-PageUp, C-PageDown Csak Linux konzolon történő futtatáskor: könyvtárat vált felfelé (..) a jelenleg kiválasztott könyvtárnak megfelelően.
+
+M-y Az előzőleg látogatott könyvtárba lép vissza, ami azonos a panel tetején látható '<' jelre egérrel történő kattintással.
+
+M-u A következő látogatott könyvtárba lép át, azonos a '>' egérrel történő lenyomásával.
+
+M-S-h, M-H Megjeleníti a könyvtár előzményeket, azonos a 'v' egérrel történő lenyomásával.[Quick search]
+Quick search
+
+
+C-s, M-s Elindítja a fájl keresést a könyvtár listában. Amikor a keresés aktív, a billentyűlenyomások hozzáadódnak a keresett szöveghez a parancssorban. Ha a Mini fájlinfó opció engedélyezve van, a kereső szöveg a mini-fájlinfó sorban jelenik meg. Amikor gépelsz, a mini kiválasztó sáv átlép a következő fájlra, amely a begépelt szöveggel egyezik. A backspace, vagy a DEL gombokat használhatod a gépelési hibák javítására. Ha a C-s gombokat használod újra, új keresés kezdhető.[Shell Command Line]
+Shell parancssor
+
+Ez a rész tartalamazza azokat a billentyű-kombinációkat, amiket a túlságosan sok gépelés elkerülésére használhatunk a shell parancsok begépelésénél.
+
+M-Enter A jelenleg kiválasztott parancs nevét átmásolja a parancssorba.
+
+C-Enter Azonos az M-Enter-rel, de ez csak Linux konzolon működik.
+
+M-Tab Fájlnév, parancs, változó, felhasználónév és hostnév KiegészítésCompletion készítés. A hiányosan bebillenyűzött filenevet kiegészíti.
+
+C-x t, C-x C-t A parancssorba másolja az aktív panel kijelölt fájlait (ha nincsennek kijelölt fájlok, a kiválasztott fájlt) (C-xt), vagy a másik paneléit (C-x C-t).
+
+C-x p, C-x C-p Az első billentyű-sorozat az aktív panel elérési útját átmásolja a parancssorba, a második billentyű-sorozat pedig az inaktív panel könyvtárának elérési útját másolja át a parancssorba.
+
+C-q A quote (idézet) parancsot olyan karakterek beillesztésére használhatod, amelyeket egyébként a Midnight Commander használ (ilyen pl. a '+' szimbólum). Például a C-+ elindítja a fájlkijelőlést ahelyett, hogy beíródna a parancssorba. A C-q segítségével viszont be lehet írni.
+
+M-p, M-n Ezeket a gombokat az előzőleg kiadott parancsok (a history) közötti böngészésre használhatod. Az M-p átléptet az előző bejegyzésre, az M-n átléptet a következő bejegyzésre.
+
+M-h Megjeleníti a jelenlegi beviteli sor előzményeit (history).[General Movement Keys]
+Általános mozgási lehetőségek billentyűzettel
+
+A Súgó néző, a Fájl néző és a Könyvtárfa azonos kódokat használ a mozgáshoz. Emiatt ezek pontosan ugyanazokat a billentyűket fogadják el. Ezeken túl néhány olyan van, amely csak az adott eszköz számára fogadható el.
+
+A Midnight Commander többi része is használ néhány billentyűt a mozgáshoz, ezért ebben a részben ezek is használhatók a mozgáshoz.
+
+crsr Up, C-p Egy sort ugrik vissza.
+
+crsr Down, C-n Egy sort ugrik előre.
+
+Prev Page, Page Up, M-v Egy teljes oldalnyit ugrik vissza.
+
+Next Page, Page Down, C-v Egy teljes oldalnyit ugrik előre.
+
+Home, A1 A fájl elejére ugrik.
+
+End, C1 A fájl végére ugrik.
+
+A Súgó néző és a Fájl néző az itt látható további billentyű-kombinációk használatát teszi lehetővé:
+
+b, C-b, C-h, Backspace, Delete Egy teljes oldalnyit ugrik hátra.
+
+Space bar Egy teljes oldalnyit ugrik előre.
+
+u, d Egy fél oldalnyit ugrik vissza, vagy előre.
+
+g, G Az elejére, vagy a végére ugrik.[Input Line Keys]
+Beviteli gombok
+
+A beviteli sorok (ezek azok, amelyeket a Shell parancssorShell Command Line és a programok lekérdező dialógusablakai használnak) a következő billyentyűk használatát engedélyezik:
+
+C-a a kurzor a sor elejére ugrik.
+
+C-e a kurzor a sor végére ugrik.
+
+C-b, a kurzort egy pozícióval balra mozgatja.
+
+C-f, a kurzort egy pozicióval jobbra mozgatja.
+
+M-f egy szónyit ugrik előre.
+
+M-b egy szónyit ugrik vissza.
+
+C-h, backspace törli az előző (balra eső) karaktert.
+
+C-d, Delete törli az adott pontban lévő karaktert (a kurzor alól).
+
+C-@ beállítja a kijelölés helyét.
+
+C-w kimásolja a szöveget a kurzor és a kijelölt rész közül a kill bufferbe és a bemeneti sorokat törli a szövegből.
+
+M-w kimásolja a szöveget a kurzor és a kijelölt rész közül a kill bufferbe.
+
+C-y visszateszi a kill bufferben lévő bejegyzést.
+
+C-k törli a szöveget a kurzortól a sor végéig.
+
+M-p, M-n Ezen billentyűk segítségével közvetlenül böngészhetünk az előzőleg kiadott parancsok közt. Az M-p visszaléptet az előző bejegyzésre, az M-n pedig átléptet a következőre.
+
+M-C-h, M-Backspace egy szót töröl visszafelé.
+
+M-Tab Fájlnév, parancs, változó, felhasználónév és hostname KiegészítéstCompletion csinál.
+
+[Menu Bar]
+Menüsor
+
+A menüsor akkor jelenik meg, ha az F9-es gombot lenyomod, vagy ha a képernyő legfelső sorára kattintasz. A menüsor öt menüt tartalmaz: "Bal", "Fájl", "Parancsok", "Beállítások" és "Jobb".
+
+A Bal és jobboldali menükLeft and Right Menus lehetővé teszik a bal és jobb oldali könyvtár panelek külső megjelenítésének módosítását.
+
+A Fájl menüFile Menu felsorolja a kiválasztott fájlon, vagy a kijelölt fájlokon végrehajtható parancsokat.
+
+A Parancsok menüCommand Menu felsorolja az általános és a jelenleg kiválasztott fájltól, kijelölt fájloktól függetlenül végrehajtható parancsokat.[Left and Right Menus]
+Bal és jobboldali menük
+
+A könyvtárpanelek megjelenése változtatható a "Bal" és "Jobb" menükben.[Listing Format...]
+Fájllista...
+
+A fájllista módozatok a fájlok megjelenítésének beállítására szolgálnak, négy különböző listázási mód használható: Hosszúlista, Rövidlista, Részleteslista és a Felhasználói. A hosszú könyvtár nézet megmutatja a fájlneveket, a méretüket és a módosításuk idejét.
+
+A rövid lista nézet csak a fájl nevét és ezt két oszlopban (ekkor kétszer, vagy többször annyi fájlt láthatsz mint a többi nézetekben). A részletes lista tisztán az "ls -l" parancs kimenetét jeleníti meg. A részletes lista helyenként képernyő széles is lehet.
+
+Ha a "Felhasználói" megjelenítési formátumot választod, akkor te tudod meghatározni azt, hogy mi is jelenjen meg a panelekben.
+
+A felhasználói megjelenítésnek a panel méretét megadó bejegyzéssel kell kezdődnie. Ez lehet "half" (fél), vagy "full" (teljes), ezek határozzák meg azt, hogy a panelek fél, illetve teljes képernyő szélesen jelenjenek-e meg.
+
+A panel méretének magadása után, meghatározhatod azt, hogy a panel két oszlopot tartalmazzon, egy "2"-es hozzáadásával a felhasználói formátumot megadó szöveghez.
+
+Ezután az opcionális fájl jellemzők neveit kell megadnod. Az itt megjelenített értékek használhatóak:
+
+name    a fájl nevét jeleníti meg.
+
+size    a fájl méretét jeleníti meg.
+
+bsize   ez a size formátum egyik formája. Megjeleníti a fájlok és könyvtárak méretét, ha az utóbbi tartalmaz SUB-DIR-t vagy UP--DIR-t.
+
+type    megjelenít egy egykarakteres érték típust. Ez a karakter állítja be azt, hogy mit jelenítsen meg az "ls -F" flaggel. A csillag-jel a futtatható fájlokhoz, a "slash" jel (törtvonal) a könyvtárakhoz, a "at-sign" a linkekhez, az "equal" (egyenlőség) jel a socket-ekhez, a "hyphen" a karakteres eszközökhöz, a pluszjel a blokk eszközökhöz, a "pipe" a fifo-hoz, a "tilde" a könyvtárak szimbolikus linkjeihez és a felkiáltójel a stalled szimlinkekhez (linkek, amik sehova sem mutatnak) használhatók.
+
+mark    a kijelölt fájl megjelölése, csillagozása, space, ha a fájl nem kijelölt.
+
+mtime   a fájl utolsó módosításának (modify) ideje.
+
+atime   a fájl utolsó hozzáférésének (access) ideje.
+
+ctime   a fájl készítésének (create) ideje.
+
+perm    a megjelenített szöveg a fájl jelenlegi hozzáférési jogainak (permission) bitjeit mutatja.
+
+mode    a fájl jelenlegi nyolcas számrendszerbeli hozzáférését mutató bit értéke.
+
+nlink   a fájlra mutató linkek száma.
+
+ngid    a GID (a csoport azonosító kódja; szám).
+
+nuid    a UID (felhasználó azonosító kódja; szám).
+
+owner   a fájl tulajdonosa.
+
+group   a fájl csoportja.
+
+inode   a fájl inódja (helyfoglalása a harddiszken).
+
+Ezeken kívül még a következő érték megnevezések adhatók meg az értékek megjelenítéskori rendezéséhez:
+
+space   helykitöltő a megjelenítési formátumban.
+
+|       ez a karakter használható arra, hogy függőleges vonalat jelenítsünk meg.
+
+Egy érték fix méretének megadásához (mezőszélesség megadás), csak egy ':'-ra van szükséged és azt követően a megjelenített érték karaktereinek számára, ha a szám egy '+' jelet követ, akkor a méret meghatározás a minimum érték szélességet adja meg, ha a program több helyet talál a képernyőn, mint ami az alap megjelenítéshez szükséges, ki tudja használni a maradékot is, az értékek helyének kinyújtásával.
+
+Például a Hosszú lista megjelenítés ehhez a formátumhoz hasonló:
+
+half type name | size | mtime
+
+A Részletes lista megjelenítés ennek a formátumnak megfelelő:
+
+full perm space nlink space owner space group space size space mtime space name
+
+Érdemes például ezt kipróbálni:
+
+half name | size:7 | type mode:3
+
+A Paneleket még a következő módokba lehet állítani:
+
+Infó   Az infó nézet a jelenleg kiválasztott fájlra vonatkozó adatokat mutatja, és, ha látható információ a jelenlegi fájlrendszerről, akkor azt is.
+
+Könyvtárfa
+        A könyvtárfa nézet azonos a KönyvtárfaDirectory Tree eszközzel. Lásd az erről szóló részt további információkért.
+
+Gyorsnézőke
+        Ebben a módban a panel átvált Belső fájlnézőreInternal File Viewer, amely megjeleníti a jelenleg kiválasztott fájl tartalmát, ha a panelt választod ki (a tab billentyűvel, vagy az egérrel), elérhetővé válnak a fájlnéző parancsai.[Sort Order...]
+Rendezés...
+
+Nyolc rendezési sorrend található itt: Név szerinti, Kiterjesztés szerinti, Módosítás ideje szerinti, Elérés ideje szerinti, az inode információk módosítása szerinti, Méret szerinti, az Inode szerinti és a Rendezetlen elrendezés. A Rendezés dialógus ablakban választhatsz a rendezési szabályok közül és megadhatod azt is, hogy a megjelenítés a kijelölt rendezési sorrenddel ellentétes legyen a megfelelő box kijelölésével.
+
+Alapértelmezésben a könyvtárak a fájlok előtt találhatók, de ez megváltoztatható a BeállításokbanOptions Menu (Minden fájl vegyesen opciójával).[Filter...]
+Szűrés
+
+A szűrés parancs engedélyezi számodra azt, hogy meghatározhasd a shell mintát (például *.tar.gz), ha csak az ilyen fájlokat szeretnéd megjeleníteni. Tekintet nélkül a filter kiegészítésre, a könyvtárak, és a könyvtárakra mutató linkek megjelennek a könyvtár panelben.[Reread]
+Frissít
+
+A frissítés parancs újraolvassa a könyvtár fájl listáját. Ez más processzekben is használható, amikor készítünk egy új fájlt, vagy törlünk fájlokat. Ha a panelbe mentett fájlneveket használod, a panel újra fogja olvastatni a könyvtár bejegyzéseket és törli ezen információkat (Lásd a Parancskimenet panelExternal panelize részt további információkért).[File Menu]
+Fájl menü
+
+A Midnight Commander az F1 - F10 gombokat, mint gyorsbillentyűket használja a Fájl menü parancsainak végrehajtásához. Az F-es gombok (funkciógombok) a TERMINFO kf1 ... kf10 escape szekvenciáit használják. Ha a terminálon nincs funkciógomb támogatás, neked kell néhány funkciót végrehajtanod az ESC (META) gomb és az 1-től 9-ig terjedő és a 0 számok használatával ( F1-től F9-ig és F10 egyenként megfelelően).
+
+A Fájl menü a következő parancsokat tartalmazza (a gyorsbillentyűk megjegyzésként megtalálhatóak):
+
+Súgó (F1)
+
+Segítségül hívja a beépített hypertext Súgó nézőt. A Súgó nézőnContents, belül a Tab gombot használhatod a következő link kiválasztására és az Enter gombot a link követésére. A Space és a Backspace gombok az előre- és hátralépésre használhatóak a súgó oldalon belül. Az F1 újbóli lenyomására egy teljes listát kapsz az elérhető gombokról.
+
+Menü (F2)
+
+Ez segítségül hívja a felhasználói menütEdit Menu File. A felhasználói menü könnyű használatot biztosít az új menükkel és az extra eszközökkel a Midnight Commander-hez.
+
+Megnéz (F3, Shift-F3)
+
+Megmutatja a jelenlegi fájlt. Alapértelmezésben ehhez a Belső fájlnézőtInternal File Viewer használja, de ha a "Belső Nézegető" opció ki van kapcsolva, a PAGER környezeti változóban megadott külső fájlnézőt fogja használni. Ha a PAGER értéke sincs megadva, a "view" parancsot fogja használni. Ha a Shift-F3-at használod, a fájlnéző minden formázás, vagy átszerkesztés nélkül nyitja meg a fájlt.
+
+Szűrés... (M-!)
+
+Ez egy parancssort jelenít meg a kiadandó parancshoz és a hozzá tartozó kiegészítés magadásához (a kiegészítés alapértelmezésben a jelenleg kiválasztott fájl neve), a parancs kimeneteit a belső fájl nézővel nézhetjük meg.
+
+Szerkesztés (F4)
+
+Alapértelmezésben a vi editort használja, vagy az EDITOR környezeti változóban megadott szerkesztőt, vagy a Belső fájl szerkesztőtInternal File Editor, ha a belső szerkesztő be van kapcsolva.
+
+Másol (F5)
+
+Egy beviteli ablakot jelenít meg, amely alapértelmezésben a nem kiválasztott panel könyvtárát adja meg rendeltetési helyként, majd átmásolja a kiválasztott fájlt (vagy kijelölt fájlokat, ha egynél több fájlról van szó) a beviteli ablakban megadott könyvtárba. Space for destination file may be preallocated relative to preallocate_space configure option. A folyamat futását a C-c, vagy ESC lenyomásával szakíthatod meg. A forrás maszk beállításairól (ami általában a *, vagy a ^\(.*\)$ közül valamelyik. Ezekről a "Shell kifejezések" beállításnál, illetve a Kijelölt fájlok másolása vagy áthelyezéseMask Copy/Rename rendeltetésénél olvashatsz.
+
+Néhány rendszeren a láthatóság beállítható a háttérben történő másoláshoz a background gomb kijelölésével (vagy a M-b lenyomásával a dialógboxban). A HáttérmunkákBackground jobs a háttér processzek beállítására használható.
+
+Link (C-x l)
+
+Hard linket csinál a fájlhoz.
+
+SymLink (C-x s)
+
+Szimbolikus linket készít a jelenlegi fájlhoz. Azoknak, amik nem tudják mire jók ezek a linkek: kapcsolatot hoz létre a fájlhoz a fájl egy kicsiny másolatával, ám a forrás fájlnév és a célfájl fájlneve ugyanazt a fájlt jeleníti meg. Például, ha szerkeszted ezeket a fájlokat, minden változtatás, amit elvégzel, mindkét fájlban végrehajtódik. Néhányan a linkeket alias-nak (~álnév), vagy gyorsbillyentyűnek hívják.
+
+A hard link valós fájlként látszik. Elkészítése után nem lehet megmondani azt, hogy melyik az eredeti és melyik a link. Ha ezek közül az egyiket törlöd, a másik sértetlen marad. Ez nagyon eltér attól, hogy egy fájl önmaga másolataként jelenjen meg. Akkor használj hard linket, amikor nem igazán tudod mit akarsz csinálni.
+
+A szimbolikus link az eredeti fájl nevére vonatkozik. Ha az eredeti fájlt töröljük, a szimbolikus link használhatatlan lesz. Ezt elég egyszerű úgy megjegyezni, hogy ez a fájlok megjelenítése más néven. A Midnight Commander "@"-jelet jelenít meg a fájlnév előtt, ha az szimbolikus linkkel mutat valahova (a könyvtárakat kivéve, ahol tilde (~) jelet mutat). Az eredeti fájl, ahova mutat a link, láthatóvá válik a mini-fájlinfó sorban, ha a "Mini fájlinfó" opciót engedélyezted. Használj szimbolikus linket, ha el akarod kerülni az összevisszaságot, amit a hard link okozhat.
+
+Átnevezés, vagy mozgatás (F6)
+
+Egy beviteli ablakot jelenít meg, amely alapértelmezésben a nem kiválasztott panel könyvtárát adja meg rendeltetési helyként, és átmásolja a kiválasztott fájlt (vagy kijelölt fájlokat, ha egynél több fájlról van szó) a beviteli ablakban megadott könyvtárba úgy, hogy az eredeti helyéről letörli. A folyamat futását a C-c, vagy az ESC lenyomásával megszakíthatod. További részletekért lásd a Másolás műveletet az elöbbiekben, mivel több dolog azonos.
+
+Néhány rendszeren a láthatóság beállítható a háttérben történő másolás a Háttérben gomb kijelölésével (vagy a M-b lenyomásával a dialógboxban). A HáttérmunkákBackground jobs használható a háttér processzek beállítására is.
+
+Új könyvtár (F7)
+
+Megnyit egy beviteli dialógus ablakot, amelyben megadhatod a készítendő könyvtár jellemzőit.
+
+Törlés (F8)
+
+Törli a kiválasztott fájlt, vagy kijelölt fájlokat, vagy könyvtárakat az aktuális panelben. A folyamatot a C-c, vagy az ESC lenyomásával megszakíthatod.
+
+Gyors cd (M-c) Használd a Gyors cdQuick cd parancsot, ha teljes parancssort akarsz alkalmazni a könyvtárváltáshoz.
+
+Csoport kiválasztás (+)
+
+Ez a fájlok csoportjainak kiválasztására (kijelölésére) használható. A Midnight Commander promptot (dialógus ablakot) jelenít meg a csoport meghatározásának leírására. Ha a Shell kifejezések et engedélyezted, a pontos beírásnak megfelelő fájlnevek választódnak ki a shell-ben (*-ot helyezve az üres-, vagy a több karakterhez és ?-et helyezve egy adott karakter helyére). Ha a Shell kifejezések-et kikapcsoltad, akkor a fájlok kijelölése a szabványos kifejezésekkel (regular expression) történik (lásd ed (1)).
+
+Csoport kiválasztás megszüntetése ()
+
+A fájlcsoportok kiválasztottságának megszüntetésére szolgál. Ez a "Csoport kiválasztás" parancs ellentéte.
+
+Kilépés (F10, Shift-F10)
+
+Leállítja a Midnight Commander-t. A Shift-F10 akkor használható a kilépéshez, ha rejtett shellt használsz. A Shift-F10 nem a Midnight Commander-rel utoljára meglátogatott könyvtárat őrzi meg, hanem a Midnight Commander induláskori könyvtárát.[Quick cd]
+Gyors cd
+
+Ez a parancs akkor használható, amikor a teljes parancssort akarod a cdThe cd internal command parancshoz használni, parancssor nélkül. Ez a parancs egy kis dialógus ablakot jelenít meg, amelybe bármit begépelhetsz, amit a parancssorban a cd parancs után begépeltél volna, és ezután használd az entert.Ez az eszkőz mindenben ugyanaz, mint a belső cd parancsThe cd internal command.[Command Menu]
+Parancsok menü
+
+A KönyvtárfaDirectory Tree parancs lehetővé teszi számodra azt, hogy fa szerkezetben jelenítsd meg a könyvtárakat.
+
+A Fájl keresésFind File parancs lehetővé teszi számodra a speciális fájlok megkeresését. A "Panelek felcserélése" parancs felcseréli a két könyvtár panel tartalmát.
+
+A "Panelok ki-be" parancs megmutatja az utolsó shell parancs kimenetét. Ez csak xterm-en, Linux-on és FreeBSD konzolon működik.
+
+A Könyvtár összehasonlítás (C-x d) parancs összehasonlítja a könyvtár paneleket egymással. Ilyenkor használható a Másol (F5) parancs a panelek azonossá tételére. Ennek három formája van. A gyors változat csak a fájlok méretét, és dátumát vizsgálja meg. Az alapos változat teljesen, byte-ról byte-ra végzi el a vizsgálatot. Az alapos változat nem használható, ha a gép nem támogatja az mmap(2) rendszerhívást. A 'Csak fájlhossz' szerinti változat csak a fájlméretet hasonlítja össze és nem ellenőrzi le a dátumukat.
+
+A Parancssor előzmények parancs megmutatja a begépelt parancsok listáját. Az itt kiválasztott parancs átmásolódik a parancssorba. A Parancssor előzmények a M-p, vagy a M-n begépelésével is elérhető.
+
+A Könyvjelzők (C-\)Hotlist parancs felveszi a jelenlegi könyvtárat a gyakran használt könyvtárak közé.
+
+A Parancskimenet panelExternal panelize lehetővé teszi számodra külső parancsok futtatását, majd a program tartalmát a jellegi panelbe teszi.
+
+A TársításokEdit Extension File lehetővé teszik számodra a futtatandó programok meghatározását, a kiválasztott fájl kiterjesztésének (fájlnév vége) megfelelően akkor, ha futtatod, megtekinted a tartalmát, átszerkeszted vagy más egyéb dolgot szeretnél vele csinálni. A Menu editor editEdit Menu File parancs a felhasználói menü szerkesztésére használható (ami az F2 lenyomásával elérhető).[Directory Tree]
+Könyvtárfa
+
+A Könyvtárfa parancs fa formában mutatja meg a könyvtárakat. Ebből a listából kiválaszthatsz egy könyvtárat és a Midnight Commander abba a könyvtárba lép át.
+
+Két lehetőség van a fa megjelenítésére. Az igazi könyvtárfa parancs elérhető a Parancsok menüből. A másik mód a Bal, vagy a Jobb menüben a fa nézet kiválasztása.
+
+A Midnight Commander a fa nézet készítéséhez csak minden könyvtár belső beállításait szkenneli le, így magszabadít téged a hosszú várakozástól. Ha megtalálod a megtekinteni kívánt könyvtárat, menj rá a szülökönyvtárára és nyomd le a C-r-t (vagy az F2-t).
+
+A következő gombokat használhatod:
+
+Általános mozgási lehetőségek billentyűzettelGeneral Movement Keys.
+
+Enter. A Könyvtárfánál kilép a Könyvtárfából és a jelenlegi panelben átváltja a könyvtárat. Fa nézetben átvált erre a könyvtárra a másik panelben és a jelenlegi panelben marad a fa nézet.
+
+C-r, F2 (Újraolvasás). Újraolvassa ezt a könyvtárat. Ezt akkor használd, ha a fa nézet aktualitását vesztette: ez megkeresi a belső könyvtárakat és megmutat néhány belső könyvtárat, amely eddig nem létezett.
+
+F3 (Elfelejt). Törli ezt a könyvtárat a fa nézetből. Ezt az összevisszaság eltüntetésére használhatod a fa nézetben. Ha vissza akarsz tenni egy könyvtárat a fa nézetbe, nyomd le az F2-t a szülő könyvtáron állva.
+
+F4 (Statikus-Dinamikus). Vált a dinamikus (alapértelmezett) és a statikus böngésző mód között.
+
+A statikus böngésző módban a Fel és Le gombokat használhatod a könyvtár kiválasztására. Minden ismert könyvtár látható.
+
+A dinamikus böngésző módban a Fel és Le gombokat a testvér könyvtárak kiválasztására, a Bal gombot a szülő könyvtárra való lépéshez és a Jobb gombot az alárendelt könyvtárra lépéshez. Csak a szülő, a testvér és az alárendelt könyvtár látható, a többi nem. A fa nézet a dinamikus váltáshoz használhatod.
+
+F5 (Másolás). A könyvtárat másolja.
+
+F6 (Átnevezés vagy mozgatás). Áthelyezi a könyvtárat.
+
+F7 (Létrehoz Könyvtárat). Új könyvtárat készít a könyvtár alá.
+
+F8 (Töröl). Törli a könyvtárat a fájlrendszerből.
+
+C-s, M-s Megkeresi a következő könyvtárat, amely megfelel a keresett szövegnek. Ha nincs ilyen könyvtár, akkor egy sorral lejjebb lép.
+
+C-h, Backspace Törli az utolsó karaktert a keresési szövegben.
+
+Bármely más karakter. Karaktert tesz hozzá a keresési szöveghez és átlép a következő olyan könyvtárra, amely ezekkel a karakterekkel kezdődik. A fa nézetben először a C-s-sel tudod aktiválni a keresést. A keresett szöveg a mini fájlinfó sorban jelenik meg.
+
+A további műveletek csak a könyvtárfában érhetőek el. Ezeket a fa nézet nem támogatja.
+
+F1 (Súgó) Belép a Súgó nézőbe és megjeleníti ezt a részt.
+
+Esc, F10 Kilép a Könyvtárfából. Nem vált könyvtárat.
+
+Az egér használható. A dupla kattintás egy Enter-nek felel meg. További információkat az Egér kezelésMouse Support részben találhatsz.[Find File]
+Fájl keresés
+
+A Fájl keresés eszköz először megkérdezi a keresés induló könyvtárát, majd a keresett fájlnevet. A Könyvtárfa gomb lenyomásával kiválaszthatod az induló könyvtárat a KönyvtárfaDirectory Tree nézetből.
+
+A tartalom mezőben szabványos kifejezéseket is használhatunk megadásával (man egrep(1)). Használd az egrep escape (kilépés) karakterét (backslash, \). Például, ha az "strcmp (" szöveget keresed, ezt így add meg: "strcmp \(" (a dupla idézőjel nélkül).
+
+Az Oké gomb lenyomásával indíthatod el a keresést. Keresés közben a keresés leállítható a Felfüggeszt gombbal és folytatható a Folytatás gombbal.
+
+Böngészhetsz a fájllistában a le és fel gombok használatával. Az Ugrás gombbal a jelenlegi könyvtárat fel tudod cserélni a kiválasztott fájléval. Az Újra gomb az új keresés paramétereit megkérdezi tőled. A Kilép gomb bezárja a keresés műveletet. A Panelba gomb a elhelyezi a jelenlegi könyvtárban a keresett fájlokat, így további műveletek végezhetőek velük (megtekintés, másolás, mozgatás, törlés és a többi). A panelba helyezés művelet után a C-r lenyomásával visszatérhetsz a normál fájl listához.
+
+Lehetséges azon könyvtárak listájának megadása, amelyeket át szeretnénk ugrani a Fájl Keresés parancs használata során (például ha a keresés során el szeretnéd kerülni a CDROM-ot, vagy az NFS könyvtárait amelyeket slow linkkel csatoltak).
+
+Az átlépendő könyvtárakat a ignore_dirs változó állítja be az ~/.config/mc/ini fájlod FindFile részében.
+
+A könyvtár elemeket kettősponttal tudod elválasztani egymástól, emire itt egy példát is láthatsz:
+
+[FindFile]
+ignore_dirs=/cdrom:/nfs/wuarchive:/afs
+
+A Parancskimenet panelExternal panelize parancs használatos néhány műveletben.
+
+A Fájl keresés parancs egyszerű lekérdező eljárás, amely a Parancskimenet panelt használja a szükséges fájlok megkeresésére.[External panelize]
+Parancskimenet panel
+
+A Parancskimenet panel lehetvé teszi számodra külső program futtatását, és a parancs kimenetének megjelenítését a jelenlegi panelben.
+
+Például, ha egyszerre szeretnéd módosítani a jelenlegi könyvtár összes szimbolikus linkjét a jelenlegi panelben, a következő parancsot is használhatod a parancskimenet panelben:
+
+find . -type l -print
+
+A parancs befejeztével a panelban lévő könyvtár-bejegyzések száma nem nagyobb mint a jelenlegi könyvtáré, de minden szimbolikus link fájlt tartalmaz.
+
+Ha minden olyan fájlt meg akarsz jeleníteni a panelben, amelyet ftp szerverről töltöttél le, használhatod az awk parancsot az átmásolt fájlok neveit tartalmazó log fájl tartalmának megjelenítésére:
+
+awk '$9 ~! /incoming/ { print $9 }' < /var/log/xferlog
+
+A gyakran használt parancsokat elmentheted egy számodra egyértelmű néven, így azokat gyorsan újra előhívhatod a későbbiekben is. Úgy tudsz ilyen parancsokat létrehozni, hogy begépeled a parancsot a beviteli mezőbe, és lenyomod az Új gombot. Ekkor begépelheted azt a nevet, amilyen néven el szeretnéd menteni a parancsot. Következő alkalommal csak ki kell választanod a parancsot a listából ahhoz, hogy ne kelljen mégegyszer begépelned azt.[Hotlist]
+Könyvjelzők
+
+A Könyvjelzők parancs megmutatja a gyorslistában szereplő könyvtárakat. A Midnight Commander a kiválasztott értéknek megfelelő könyvtárra váltja át a panel tartalmát. A Könyvjelzők dialógus ablakból kiveheted a már létező elnevezés--könyvtár párokat, és hozzáadhatsz újakat is. Továbbiak hozzáadásához a Hozzáadás a kedvencekhez parancsot használhatod (C-x h), amely a jelenlegi könyvtárat hozzáadja a könyvjelzőkhöz. A felhasználó ezután egyéni megnevezéssel hivatkozhat a könyvtárra.
+
+Ezzel a gyakran használt könyvtárakhoz ugorhatunk. A CDPATH változó használatát megtekintheted a A cd belső parancsThe cd internal command leírásánál.[Edit Extension File]
+Társítások
+
+Ez az ~/.config/mc/mc.ext.ini szerkesztéséhez segítségül fogja hívni a szövegszerkesztődet. If this file does not exist and you are not root, it will be copied from /opt/etc/mc/mc.ext.ini. If you are root, you can choose the file to edit: user's ~/.config/mc/mc.ext.ini or system-wide /opt/etc/mc/mc.ext.ini. The format of this file is described in detail in it.[Background jobs]
+Háttérmunkák
+
+Ezzel szabályozhatod néhány Commander háttérfolyamat állapotát (csak a másolás és a mozgatás fájlműveletek tehetők háttérbe). Ezeket a háttérmunkákat állíthatod le, indíthatod újra, lőheted ki itt. A linuxban futó background processzekre hatástalan.[Edit Menu File]
+Menü szerkesztés
+
+A felhasználói menüt a felhasználó testre szabhatja. Ez az aktulis könyvtár .mc.menu fájlja, ha az létezik, de csak, ha az a felhasználó (illetve a root) a tulajdonosa, és nem lehet bárki számára írható. Ha nem talál ilyen fájlt, az ~/.config/mc/menu keresése a következő lépés, egyébként pedig az mc az alapértelmezett rendszerszintű menüt használja, pl.: /opt/share/mc/mc.menu, esetleg /opt/etc/mc/mc.menu.
+
+A menü fájl formátuma nagyon egyszerű. A sorok, amelyek bármivel kezdődhetnek, de a space, vagy a tab megkülönböztetett menübejegyzések (gyorsbillentyűként definiálható az első karakter). Minden olyan sor ami szóközzel, tabulátorral kezdődik, parancs, amit lefuttat az mc, ha kiválasztottad a bejegyzést.
+
+Ha az opciót kiválasztod, a parancssor bemásolódik egy ideiglenes fájlba a temp könyvtárba (ez vagy az /usr/tmp, vagy a /tmp), és ilyenkor a fájl lefut. Ez lehetővé teszi a felhasználónak normál shell parancslista (script) készítését a menüben. Továbbá egyszerű Makrók helyezhetők el benne, amelyek a menü kód futtatása előtt futnak le. További információkért lásd a Macro HelyettesítőMacro Substitution részt.
+
+Egy példa az mc.menu fájlra:
+
+A       A kiválasztott fájlok listázása oktális formában
+        od -c %f
+
+B       A hiba leírás szerkesztése és elküldése a root-nak
+	I=`mktemp ${MC_TMPDIR:-/tmp}/mail.XXXXXX` || exit 1
+        vi $I
+        mail -s "Midnight Commander bug" root < $I
+	rm -f $I
+
+M       Levél olvasás
+        emacs -f rmail
+
+N       A Usenet hírek elolvasása
+        emacs -f gnus
+
+H       Az info hypertext böngésző elindítása
+        info
+
+J       A jelenlegi könyvtár rekurzív átmásolása a másikba
+        tar cf - . | (cd %D && tar xvpf -)
+
+K       Az aktuális könyvtárról archiválása
+        echo -n "Name of distribution file: "
+        read tar
+        ln -s %d `dirname %d`/$tar
+        cd ..
+        tar cvhf ${tar}.tar $tar
+
+= f *.tar.gz | f *.tgz & t n
+X       A kijelölt tömörített tar fájl kicsomagolása
+        tar xzvf %f
+
+Alapértelmezett Feltételek
+
+Néhány menü bejegyzés irányadó feltételként szerepelhet. A feltétel eslő oszlopában az '=' karakternek kell lennie. Ha a feltétel igaz, a menüpont alapértelmezett bejegyzéssé fog válni.
+
+Feltétel szintaktika: 	= <belső-felt.>
+   vagy:                = <belső-felt.> | <belső-felt.> ...
+   vagy:                = <belső-felt.> & <belső-felt.> ...
+
+A belső feltétel az alábbiak közül valamelyik:
+
+  y <minta>             a jelenlegi fájlminta szintaktikusan
+                        illeszkedik?
+                        csak menüszerkesztéshez
+  f <minta>             jelenlegi fájlminta egyezik?
+  F <minta>             egyéb fájlminta egyezik?
+  d <minta>             jelenlegi könyvtár minta egyezik?
+  D <minta>             más könyvtár minta egyezik?
+  t <type>              jelenlegi fájltípus?
+  T <type>              más fájltípus?
+  x <fájlnév>           ez futtatható fájlnév?
+  ! <belső-felt.>       a belső feltételek ellentéte
+
+A minta lehet a shell által értelmezett, vagy lehet szabványos kifejezés. Felülírhatod a rendszerszintű értékeket a Shell kifejezések opcióval a "shell_patterns=x" beírásával a menü fájl első sorában (ahol az "x" a 0 és 1 közül valamelyik lehet).
+
+A következő karakterek közül egyet, vagy többet is begépelhetsz:
+
+  n	nem könyvtár
+  r	szabályos fájl
+  d	könyvtár
+  l	link
+  c	speciális karakter
+  b	speciális blokk
+  f	fifo
+  s	socket
+  x	futtatható fájl
+  t	fájl kijelölve
+
+Például az 'rlf' bejegyzés esetén lehet fájl, link, vagy fifo. A 't' típus egy kicsit különleges, mert nem fájlon, hanem panelen dolgozik. A '=t t' feltétel igaz akkor, ha a jelenlegi panelben vannak kijelölt fájlok és hamis, ha nincsennek.
+
+Ha a feltétel '=?'-lel kezdődik '=' helyett, a hibakereső (debug) kimenete jelenik meg, mialatt akkor a feltétel eredményét a program kiértékeli.
+
+A feltételek kiértékelése balról-jobbra történik. Ennek megfelelően:
+	= f *.tar.gz | f *.tgz & t n
+kibontva:
+ 	( (f *.tar.gz) | (f *.tgz) ) & (t n)
+
+Egy példa a feltételek használatára:
+
+= f *.tar.gz | f *.tgz & t n
+L	Listázza az aktuális tar archívumot
+	gzip -cd %f | tar xvf -
+
+Járulékos feltételek
+
+Ha a feltétel '+'-szal (vagy '+?'-lel) kezdődik az '=' (vagy '=?') helyett, ez járulékos feltétel. Ha a feltétel igaz, a menü bejegyzés megjelenik a menüben. Ha a feltétel hamis, a menü bejegyzés nem jelenik meg.
+
+Kombinálhatod is az alapértelmezett és a járulékos feltételeket a feltétel sorának '+='-lel, vagy '=+'-szal (vagy '+=?'-lel és '=+?-lel', ha hiba követőt is szeretnél) kezdésével. Ha két eltérő feltételt szeretnél használni, egyet járulékosként és egyet alapértelmezettként, két feltételsort kell készítened; egyet '+'-szal kezdődően és egy másikat '='-lel kezdődően.
+
+A magyarázat sorát '#'-kal kell kezdened. A kiegészítő magyarázat sorait '#'-kal, space-szel, vagy tab-bal kell kezdened.[Options Menu]
+Beállítások
+
+A Midnight Commander rendelkezik néhány olyan opcióval, amely lehetővé teszi a be- illetve a kikapcsolását néhány dialógus eszköznek, amely az adott menüből elérhető. Az opció engedélyezett, ha csillag, vagy "x" áll előtte.
+
+A BeállításokConfiguration parancs dialógus ablakot nyit meg, amelyben a Midnight Commander főbb beállításait elvégezheted.
+
+A MegjelenésLayout parancs dialógus ablakot jelenít meg, amelyben az mc képernyőn történő megjelenésének opcióit találod egy csokorban.
+
+A MegerősítésConfirmation parancs dialógus ablakot jelenít meg, amelyben meg tudod adni azt, hogy mely műveletekhez kell megerősítést kérni.
+
+A KépernyőbitekDisplay bits parancs dialógus ablakot nyit meg, amellyel beállíthatod azt, hogy milyen karakterek jelenhessenek meg a terminálodon.
+
+A Billentyűzet tanításLearn keys dialódus ablakot jelenít meg, amelyben megvizsgálhatod azokat a gombokat, amelyek nem működnek néhány terminálon, és kijavíthatod őket.
+
+A Csatolt fájlrendszer...Virtual FS parancs olyan dialógus ablakot jelenít meg, amelyben VFS-hez kapcsolódó opciókat adhatod meg.
+
+A Beállítások mentéseSave Setup parancs elmenti a Bal, Jobb és a Beállítások jelenlegi értékeit. Néhány egyéb beállítás is elmentődik.[Configuration]
+Az MC konfigurálása
+
+A dialógus ablalban lévő opciók három csoportra bonthatók: Panel Beállítások, Futtatás után vár... és Egyéb.
+
+Panel Beállítások
+
+Backup fájlt mutat. Alapértelmezésben a Midnight Commander nem mutatja a '~'-re végzödő fájlokat (a GNU' -B opciójának megfelelően).
+
+Rejtett fájlt mutat. Alapértelmezésben a Midnight Commander láthatóvá teszi a ponttal kezdődő fájlokat (az ls -a -hoz hasonlóan).
+
+Kijelölés után lefele lép Alapértelmezésben, amikor kijelölsz egy fájlt (a Insert gomb közül valamelyikkel,) a kiválasztó sáv lefelé mozdul el.
+
+Legördülő menük. Amikor ezt az opciót engedélyezed, az F9 gomb lenyomásakor a menü le fog ereszkedni, egyébként te csak a menü címét tudod megjeleníteni és ezek után tudod kiválasztani a menü bejegyzést a nyíl gombokkal, vagy annak megjelölt betűjével, és csak ekkortól tudsz menüpontot kiválasztani.
+
+Minden fájl vegyesen. Ha ezt az opciót engedélyezted, a fájlok és könyvtárak vegyesen jelennek meg. Ha az opció ki van kapcsolva, a felsorolás a könyvtárakkal (és a könyvtár linkekkel) fog kezdődni, és ezeket az egyéb fájlok követik.
+
+Gyors könyvtárlista. Ez az opció alapértelmezésben ki van kapcsolva. Ha bekapcsolod a gyors könyvtárlista funkciót, a Midnight Commander egy trükköt fog használni akkor, ha a könyvtár tartalma megváltozik. A trükk az, hogy csak akkor olvassa újra a könyvtárat, ha a könyvtár inode-ja megváltozott; ez azt jelenti, hogy csak fájl létrehozásakor, és törlésekor kerül újraolvasásra. Ha valami a könyvtárban lévő fájl inode-jában történik (fájlméret-változás, módok, és tulajdonosok változnak, stb.) a megjelenítés nem kerül frisítésre. Ebben az esetben, ha az opció be van kapcsolva, kézzel tudod újraolvastatni a könyvtár tartalmát (a C-r-rel).
+
+Futtatás után vár
+
+Az általad kiadott parancs lefutása után a Midnight Commander várhat amiatt, hogy meg tudd vizsgálni a parancs kimenetét. Három beállítás adható meg ennek a változónak: Soha Abban az esetben, ha te nem kívánod látni azt, hogy mit írt ki a parancs. Ha Linux, vagy FreeBSD konzolt, vagy xterm-et használsz, a parancs kimenete a C-o begépelésével megjeleníthető. Buta terminálokon várakozási üzenetet fogsz kapni azon a terminálon, amely nem képes megmutatni az utolsóként kiadott parancs kimenetét (bármilyen terminálon, amely nem xterm, vagy nem Linux konzol). Mindig A program mindig vár, miután a parancsod lefutott.
+
+Egyéb beállítások
+
+Részletes műveletinfó. Ez van bejelölve akkor, ha a fájl Másolás, Átnevezés és Törlés műveletek részletesek (pl., egy dialógus ablakot jelenít meg néhány művelethez). Ha lassú terminálod van, beállíthatod azt, hogy ne legyenek részletes műveletek. Automatikusan kikapcsolódik ez a beállítás, ha a terminálod sebessége kissebb mint 9600 bps.
+
+Byteok számítása Ha ez az opció engedélyezve van, a Midnight Commander számítja a teljes byte méretet és a teljes fájlszámot a Másolás, Átnevezés és a Törlés műveleteknél. Ez a funkció ellát téged több pontos folyamat sávval, kiegészítve azt néhány sebességgel. Ez az opció nem látható, ha a Részletes műveletinfót nem engedélyezted.
+
+Shell mintázatok Alapesetben a Kiválasztás, Kiválasztás megszüntetése és a Szűrés parancsok a shell-nek megfelelő pontos kiterjesztéseket használják. A következő konverzió átalakítások vannak jelenleg: a '*' kicserélődik a '.*'-gal (zeró, vagy több karakter); a '?' kicserélődik a '.'-tal (pontosan egy karakter) és a '.' a szó szerinti ponttal. Ha az opció nem engedélyezett, akkor a szokásos kiterjesztések azonosak a ed-ben lévőkkel: man ed.
+
+Beállítások automatikus mentése Ha ez az opciót bekapcsoltad, amikor kilépsz a Midnight Commander-ből, az MC opcióinak beállításait az ~/.config/mc/ini fájlba menti.
+
+Auto menük. Ha ez az opció engedélyezett, a felhasználói menü megjelenik az mc indításkor. Különösen azok számára ajánlott, akik nem szoktak hozzá a UNIX-os környezethez.
+
+Belső szövegszerkesztő Ha ez az opció engedélyezve van, a beépített fájlszerkesztőt használja a fájlok szerkesztésére. Ha az opciót nem engedélyezzük, az mc az EDITOR környezeti változóban megadottat használja. Ha ez sincs megadva, a vi-t fogja használni. Lásd a Belső fájlszerkesztőInternal File Editor. részben.
+
+Belső nézegető. Ha ezt az opciót engedélyeztük, a beépített fájlnézőt fogja a fájlok tartalmának megtekintéséhez használni a program. Ha nem engedélyeztük, a PAGER környezeti változóban megadott pager értéket használja. Ha nincs megadva a pager értéke, a Megnéz parancsot használja. Lásd a Belső fájlnézőInternal File Viewer részben.
+
+Kiegészítés: minden mutat Alapértelmezésben a Midnight Commander megjelenít minden elem KiegészítéstCompletion. Ha a kiegészítésben bizonytalan vagy, nyomd le az M-Tab-ot és a második alkalommal kiegészíti, első alkalommal csak annyit jelenít meg, mint amennyit lát, és ebben az esetben a kétértelműség miatt egy beep hangot is kapsz. Ha látni szeretnéd az összes kiegészítést, az első M-Tab lenyomása után, engedélyezd ezt az opciót.
+
+Forgó törtjel Ha ezt az opciót engedélyezted, a Midnight Commander forgó törtjelet jelenít meg a jobb felső sarokban, mutatva ezzel azt, hogy munka van folyamatban.
+
+Mozgás, mint lynx-ben Ha ezt az opciót engedélyezted, a nyíl gombokat, mint automatikus könyvtárváltókat használhatod ha az aktuális kiválasztás egy belső könyvtár és a shell parancssor elérhető. Alapértelmezésben ez a beállítás ki van kapcsolva.
+
+Cd követi a linket Ez az opció, ha be van állítva, akkor a Midnight Commander követi a könyvtárak logikai kapcsolatait ha könyvtárat váltasz valamelyik panelben, vagy a cd parancsot használod. Ez alapértelmezésben a bash jellemzője. Amikor ez nincs beállítva, a Midnight Commander a valós könyvtárszerkezetet követi, úgy, mint amikor a cd..-t gépeled be, a könyvtáron keresztül átlépsz a "szülő" könyvtárba, és nem abba a könyvtárba, amelyre a link mutat.
+
+Biztonságos törlés Ha ezt az opciót engedélyezted, a fájlok közvetlen szándék nélkül törlését megnehezíted. Alapesetben egy "Megerősítés" dialógus ablaknan választhatunk az "Igen" és "Nem" gombok között törléskor. Alapesetben ez az opció nem engedélyezett.[Layout]
+Megjelenés
+
+A Megjelenés dialógus ablakban megváltoztathatod a képernyő-megjelenés beállításait. Beállíthatod azt, hogy a menüsor, a parancssor, a tippek és a funkcióbillentyűk láthatóak legyenek-e. Linux, vagy FreeBSD konzolon megadhatod azt, hogy hány sorban legyen látható a megjelenő ablak.
+
+A képernyő nyugalomban lévő részén két panelt használhatunk. Megadhatod azt, hogy vízszintesen, vagy függőlegesen ossza-e fel a képernyőt a két panel. A felosztás lehet egyenlő arányú, vagy te is megadhatod az arány mértékét.
+
+Alapesetben a könyvtár panelokban lévő fájlok csak néhány színnel kerülnek megjelenítésre, de te azt is megadhatod, hogy a jogosultságok vagy a fájltípusok jelenjenek-e meg speciális SzínekkelColors. Ha pl. a jogosultságokat kérted, a jogok és a mode értékek a Midnight Commander-t futtató felhasználó jogainak megfelelően láthatók a FájllistábanListing Format... a kiválasztás színével. Ez különösen előnyös, ha a könyvtárunkban más felhasználó fájljai is előfordulnak. Ha a fájltípus megjelölést engedélyezted, a fájlok a fájltípusuknak megfelelően jelennek meg (pl. könyvtár, core fájl, futtatható fájl, stb.).
+
+Ha a Mini fájlinfó opciót engedélyezted, egy sor lesz látható a panel alján, a látható, jelenleg is kiválasztott bejegyzések információival.[Confirmation]
+Megerősítés
+
+Ebben a menüben tudod beállítani enter lenyomására a törlés, felülírás, futtatás, és programból történő kilépés Megerősítésének opcióit.[Display bits]
+Képernyőbitek
+
+Ez az ablak a megjelenített karakterek tartományának beállítására szolgál. Ez a beállítás lehet 7-bites, ha terminálod, vagy megjelenítésed csak a hét bites karaktereket támogatja; az ISO-8859-1-ben az ISO-8859-1-es karaktetábla valamennyi karaktere megjeleníthető; végül teljes 8 biten azokon a terminálokon, ahol teljes 8 bitet meg tudsz jeleníteni. A két utolsó megjelenítési forma képes az ő és ű betűk kivételével az összes magyar betűt kijelezni a Belső filenézőben.[Learn keys]
+Billentyűzet tanítás
+
+Ebben a dialógus ablakban tudod letesztelni azt, hogy terminálodon az F1-F20, Home, End, stb. gombok megfelelően működnek-e. Ezek gyakran nem működnek, mióta néhány Terminál adatbázis megváltozott.
+
+A mezőket a Tab gombbal és a vi mozgató gombjaival ('h' balra, 'j' le, 'k' fel és 'l' jobbra) járhatod körbe. Ha egy kurzor gombot legalább egyszer megnyomsz, OK-val jelöli; kilépéskor ez a állapot elmenthető.
+
+Ezek közül bármelyiket tesztelheted a gomb lenyomásával. Amint lenyomtad, a gomb megfelelően fog működni, és egy OK jelenik meg a gomb neve mellett. Amelyik gomb OK-val jelölődik meg, általában az használható. Az F1 az első alkalommal csak le fogja ellenőrizni, hogy megfelelően műkődik-e, másodszor már a súgót jeleníti meg. A tab gomb továbbra is működni fog.
+
+Ha néhány gomb nem működik megfelelően, akkor nem jelenik meg OK a gomb neve után. Ilyenkor lehetőséged van kijavítani ezt. Ezt ennek a gombnak a lenyomásával (egér, vagy a Tab gombbal és az Enter-rel) tudod kijavítani. Ekkor egy piros színű üzenet jelenik meg amely arra kér téged, hogy üsd le a megfelelő gombot. Ha ezt meg akarod szakítani, csak nyomd le az Esc-et, és várj amíg az üzenet el nem tűnik. Egyébként a begépelt gomb lesz az megkérdezett gombbal azonosított. Ezután a dialógus ablak eltűnik.
+
+Amikor végeztél minden gombbal, ezt elmentheted a Mentés gombbal az ~/.config/mc/ini fájlba, a [terminal:TERM] részbe (ahol a TERM a jelenlegi terminál neve), vagy elvetheted. Ha minden gombod megfelelően működik, és nem javítottál semmit, akkor (természetesen) nem fog menteni semmit sem.[Virtual FS]
+Csatolt (látszólagos) fájlrendszer
+
+Ez az opció lehetővé teszi számodra a Csatolt fájlrendszerVirtual File System informcáció cache-ének beállítását.
+
+A Midnight Commander a memóriában tárolja a csatolt fájlrendszer információit a fájlrendszeren lévő fájlok gyorsabb elérése érdekében (Például, könyvtár listázás trükkje távoli ftp szerverek esetén).
+
+Azonfelül a tömörített fájlok tartalmához való hozzáféréskor (például, tömörített tar fájlok) a Midnight Commander készít egy kitömörített temp fájlt a merevlemezeden.
+
+A memóriában és a temp fájlban lévő információk között van némi időbeni különbség, te a hozzáférési sebesség maximalizálása miatt átállíthatod a cached információk újraolvasási paramétereit.
+
+A Tar Fájlrendszer elég ügyesen kezeli a tar fájlokat: csak beolvassa a könyvtár bejegyzéseket, és amikor szükséges a tar fájlban tárolt információk használata, újraolvassa azokat, és kinyeri a szükséges infókat.
+
+Igazából a tar fájlok tömörítettek maradnak (alap tar fájlok fajtái esetében), és mivel ezek a fájlok természetes fájlok (a tar fájlok könyvtár-bejegyzéseinek kiolvasására nem kell várni), a tar fájlrendszer a fájlt a lemez temp könyvtárba kitömöríti, ilyenkor a kitömörített tarfájl hozzáférhető, mint szabványos tar fájl.
+
+Ha elkezdjük böngészni a merevlemezen található tar fájlokat, majd elkezdjük nézni a többit, elveszne a rájuk vonatkozó információ. A Midnight Commander a memória cache-ben tárolja ezeket egy időre, hogy gyorsabb legyen az újraolvasásuk. Az alap frissítési idő egy perc.
+
+Az FTP fájlrendszerFTP File System az ftp szerverről beolvasott könyvtárszerkezetet éppígy a cache-ben tárolja. A cache frissítési ideje az ftpfs cache elévülési idő opcióban konfigurálható. Alacsony érték esetén minden művelet nagyon lassúvá válhat az FTP fájlrendszeren, mivel minden művelet az ftp szerver lekérdezésével történik.
+
+Ezenfelül definiálhatod a proxy host-ot az ftp adatforgalomhoz, és beállíthatod a Midnight Commander-t, hogy mindíg használja a proxy host-ot. Az ezzel kapcsolatos információkat lásd az FTP fájlrendszernélFTP File System.[Save Setup]
+Beállítások mentése
+
+A Midnight Commander indításkor megpróbálja az indítási információkat beolvasni az ~/.config/mc/ini fájlból. Ha ez a fájl nem létezik, ezeket az információkat a rendszerszintű konfigurációs fájlból fogja beolvasni, amelyek a /opt/share/mc/mc.ini fájlban találhatóak meg. Ha ez a rendszerszintű konfigurációs fájl sem létezik, a MC az alapértelmezett beállításokat használja.
+
+A Beállítások mentése parancs elmenti a Bal és Jobb oldali menüLeft and Right Menus és a BeállításokOptions Menu menü beállításait az ~/.config/mc/ini fájlba.
+
+Ha aktiválod az Auto Beállításmentés opciót a MC mindíg elmenti a beállításait kilépéskor.
+
+Még vannak beállítások, amelyek nem állíthatóak be a menükből. Ezek beállításához használd a kedvenc fájlszerkesztődet. Lásd a Speciális BeállításokSpecial Settings részt a további információkért.
+
+[Executing operating system commands]
+Az operációs rendszer parancsainak futtatása
+
+Közvetlenül futtathatod a parancsokat azok begépelésével a Midnight Commander beviteli sorába, vagy a futtatandó program kiválaszátásval valamely panelben a kiválasztó sáv segítségével, és az Enter használatával.
+
+Ha az Enter-t az adott fájl felett lenyomod, nem indul el azonnal, hanem a Midnight Commander leellenőrzi a kiválasztott fájl kiterjesztését a TársításokbanEdit Extension File találhatónak megfelelően. Ha talál egyezést, akkor a kódnak megfelelő bejegyzést futtatja. Egy nagyon egyszerű Macro HelyettesítőMacro Substitution végzi ezt el a parancs futtatása előtt.[The cd internal command]
+A cd belső parancs
+
+A cd parancs végrehajtását a Midnight Commander nem adja át a shellnek. Tehát a shellben értelmezett makrók és helyettesítések helyett a saját beállításai szerint dolgozik:
+
+Tilde helyettesítés A (~) karakter helyettesíti a home könyvtár nevét, ha hozzáfűzöl bármely felhasználói nevet, akkor az MC a megadott felhasználó saját HOME könyvtárára ugrik.
+
+Például a ~guest a guest felhasználó könyvtárára mutat, amíg a ~/guest a guest könyvtárra a te home könyvtáradban.
+
+Előző könyvtár Vissza tudsz ugrani abba a könyvtárba, ahol előzőleg voltál a '-' speciális könyvtárnévvel így: cd -
+
+CDPATH könyvtárak Ha a könyvtármeghatározás a cd parancs és nem a jelenlegi könyvtár, akkor a Midnight Commander a CDPATH környezeti változót keresi a könyvtárnevek között.
+
+Például te beállítod a CDPATH változót az ~/src:/usr/src-re, lehetővé teszi számodra azt, hogy bármely könyvtárról a fájlrendszeren belül a relatív név használatával bárhonnan átléphess az ~/src-be, vagy az /usr/src-be bárhonnan (például a cd linux az /usr/src/linux könyvtárba léptet át).[Macro Substitution]
+Makro helyettesítő
+
+Amikor belépsz a felhasználói menübeEdit Menu File, vagy a társítások parancsotEdit Extension File, futtatod, illetve a parancsot a parancssorból futtatod, a Makró Helyettesítőt használod.
+
+A makrók:
+
+"%i"
+
+        A space-szel jelölt rész, amely azonos a kurzor oszlop pozíciójával. Csak menü szerkesztéshez.
+
+"%y"
+
+        A jelenlegi fájl szintaktikájának típusa. Csak menü szerkesztéshez.
+
+"%k"
+
+        A blokk fájl neve.
+
+"%e"
+
+        A hiba fájl neve.
+
+"%m"
+
+        A jelenlegi menu neve.
+
+"%f" és "%p"
+
+        A jelenlegi fájl neve.
+
+"%n"
+
+        Csak a jelenlegi fájlnév kiterjesztés nélkül.
+
+"%x"
+
+        A jelenlegi fájl kiterjesztése.
+
+"%d"
+
+        A jelenlegi könyvtár neve.
+
+"%F"
+
+        A jelenlegi fájl a nem kijelölt panelben.
+
+"%D"
+
+        A könyvtár neve a nem kiválasztott panelben.
+
+"%t"
+
+        A jelenleg kijelölt fájlok.
+
+"%T"
+
+        A kijelölt fájlok a nem aktív panelben.
+
+"%u" és "%U"
+
+        Azonos a %t és a %T makrókkal, de hozzáadáskor a fájlok nem kerülnek kijelölésre. Ezt a makrót csak egyszer használhatod egy menü fájlon belül, vagy fájl kiterjesztésben bekezdés esetén, mivel a következő alkalommal ezek nem lesznek kijelölt fájlok.
+
+"%s" és "%S"
+
+        A kiválasztott, kijelölt fájlok, ha vannak ilyenek. Egyébként a jelenlegi fájlok.
+
+"%cd"
+
+        Ez a speciális makro, ami arra használható, hogy a jelenlegi könyvtárat lecserélhessük az előtte levő könyvtárra. Ezt elsősorban a Csatolt fájlrendszernélVirtual File System használhatjuk.
+
+"%view"
+
+        Ez a makro használható a belső fájlnéző meghívására. Ez a makro használható egyedül, vagy kiegészítésekkel is. Ha ezen makro bármely kiegészítését használod, akkor annak zárójelen belül kell lennie. A kiegészítések a következők: ascii a fájlnéző ascii módú használatához; hex a hex mód használatához; a nroff mondja meg a fájlnézőnek az nroff a félkövér és az aláhúzás szekvenciáját; az unformated mondja meg a fájlnézőnek azt, hogy az nroff paranccsal készített vastagítása és aláhúzása nem használható.
+
+"%%"
+
+        A % karakter
+
+"%{valamilyen szöveg}"
+
+        Súgó a kiegészítéshez. Beviteli ablak jelenik meg, és a szöveg magyarázatként jelenik meg. A makró a felhasználó által begépelendő szöveget helyettesíti. Ezt az ESC, vagy az F10 lenyomásával tudja törölni a felhasználó. Ez a makró jelenleg még nem működik a parancssorban.[The subshell support]
+A subshell támogatás
+
+A subshell támogatás fordításkori opció, amely a shellek alkalmazásával működik: bash, tcsh and zsh.
+
+Amikor a subshell kódot aktiváljuk, a Midnight Commander létrehozza a shell-ed másolatát (azét, amelyik a SHELL változóban definiálva van, vagy ilyen nincs, akkor az /etc/passwd fájlban találhatóét) és egy ál-terminált fog futtatni, ahelyett, hogy minden parancsfuttatáskor az új shellt aktiválná, a parancs a subshellt fogja használni, ha megadtál ilyet. Ez lehetővé teszi számodra azt is, hogy megváltoztasd a környezeti változókat is, a shell funkciók használatával és megadva az értéküket, amelyeket a Midnight Commander-ből való kilépésig használni fog.
+
+Ha bash-t használsz, a subshell indító parancsait megadhatod az ~/.local/share/mc/bashrc fájlban, és tetszőleges billentyűzet térképet az ~/.local/share/mc/inputrc fájlban. A tcsh felhasználóknak az indítási parancsokat az ~/.local/share/mc/tcshrc fájlban van lehetőségük megadni.
+
+Amikor a subshell kódot használod, bármikor megszakíthatod az alkalmazásokat C-o-val, és visszaugrasz a Midnight Commander-be. Ha félbeszakítod az alkalmazást, nincs lehetőséged más külső parancsot futtatni, amíg ki nem lépsz a megszakított alkalmazásból.
+
+A subshell által használt további eszköz a Midnight Commander által megjelenített prompt, amely ugyanaz, mint amit a jelenleg használt shell is használ.
+
+Az OPTIONS részben további információkat olvashatsz arról, hogy hogyan vezérelheted a subshell kódot.[Chmod]
+Chmod (hozzáférési jogosultság)
+
+A Chmod ablak a fájlok, könyvtárak attribútum bitjeinek beállítására szolgál. A C-x c billenytűkombinációval is indítható ez a funkció.
+
+A Chmod ablak két részből áll - Jogosultság és Állomány (Az Állomány szó itt fájlt, vagy könyvtárnevet jelent).
+
+Az Állomány részben megjelenik a fájlok, illetve könyvtárak neve, és a hozzáférési jogok nyolcas számrendszerbeli formátumban, úgyanúgy mint a tulajdonos és a csoport neve.
+
+A Jogosultság részben az Állomány attribútumbitjének megfelelő sorban a check gombot kell kijelölni. Változtatáskor a nyolcas számrendszerbeli atribútumbitek megváltozott értékét az Állomány részben láthatod.
+
+A widgetek közötti mozgáshoz (gombok, és check gombok) a kurzor billentyűket, vagy a Tab gombot használhatod. A check gombok kijelöléséhez, vagy a gombok kijelöléséhez használd a Space gombot. Ezeken kívül még használhatsz gyorsbillentyűket is, a gombok gyorsabb kiválasztásához (a megjelölt betük a gombokon).
+
+Az attribútum bitek beállítására használd az Enter gombot.
+
+Amikor könyvtárak, vagy fájlok csoportjával dolgozol, csak rá kell kattintanod a megfelelő bitre annak kijelöléséhez, vagy a kijelölés törléséhez. Amikor kiválasztottad azokat a biteket, amiket meg akarsz változtatni, válasz ki egy gombot a művelet gombok közül (Bekapcsol, vagy Töröl).
+
+Végül, az itt megadott beállításoknak megfelelően állítsuk be az attribútumokat a [Mind] gombbal, ami az összes kijelölt fájlon végrehajtja a beállítást.
+
+A [Beállít] csak a kijelölt attribútumokat állítja be a fájlokhoz.
+
+A [Bekapcsol] a megjelölt biteket állítja be az összes fájlhoz.
+
+A [Töröl] a megjelölt attribútum biteket törli a kiválasztott fájloknál.
+
+Az [Ok] egyetlen fájlhoz állítja be az attributumot.
+
+A [Mégsem] kilép Chmod parancs módból.[Chown]
+Chown (Tulajdonos változtatása)
+
+A Chown parancs a fájl tulajdonos, vagy csoport azonosítójának beállítására szolgál. A parancs gyorsbillentyűje a C-x o.[Chown\-advanced]
+Haladó (bővített) Chown
+
+A Haladó Chown parancs a ChmodChmod és a ChownChown parancsok kombinációja egyetlen ablakban. Egyszerre tudod megváltoztatni a fájlok jogosultságait, és tulajdonos, vagy csoport azonosítóját.[File Operations]
+Fájl műveletek
+
+Amikor fájlokat másolsz, mozgatsz, vagy törölsz, a Midnight Commander a Fájl műveletek dialógus ablakot jeleníti meg. Majd megjeleníti az elkezdett művelet fájljait, ahol jobbára három folyamatsávot jelenít meg. A fájl sáv azt mutatja meg, hogy a kijelölt fájlok közül a jelenleg másolt fájlnak mekkora részén hajtotta végre a művelet. A Darab sáv azt mutatja meg, hogy a kijelölt fájlok közül hányat dolgozott fel eddig. A bájt sáv azt mutatja meg, hogy a kijelölt fájlok teljes méretének mekkora része került már átmásolásra. Ha a Részletes műveletinfó ki van kapcsolva, a fájl és a bájtok sáv nem jelenik meg. Két gomb található a dialógus ablak alján. A Következő gomb lenyomásával át tudod lépni a jelenlegi fájlt. A Megszakít gomb megszakítja a műveletet, a fájlok visszamaradó részével nem történik semmi.
+
+Van három másik dialógus ablak is, amelyekkel a fájl műveleteknél találkozhatsz.
+
+A hiba dialógus ablak a hiba körülményeiröl értesít bennünket, és három választási lehetőséget tartalmaz. Normálisan a Következő gomb, amellyel átlépheted a jelenlegi fájlt, vagy a Megszakít gomb, amellyel megszakíthatod a további műveleteket, között választhatsz. Választhatod még az Újra gombot is, ha egy másik virtuális terminálról ki tudtad javítani a hibát.
+
+"A fájl már létezik" dialógus ablak jelenik meg, ha megpróbálod másolással, vagy áthelyezéssel felülírni a már létező fájlt. A dialógus ablak megmutatja mindkét fájl méretét és dátumát. Az Igen gombbal felüliratod a fájlt, a Nem gombbal átléped a fájlt, a Mind gombbal felüliratod az összes fájlt, a Nem gombbal átléped az összes hasonló fájlt és a Frissít gombbal felüliratod a fájlt, ha a célfájl nem azonos dátumú a forrás fájllal. A Megszakít gomb lenyomásával bárhol megszakíthatod a műveletet.
+
+A rekurzív törlés dialógus ablak jelenik meg akkor, amikor egy olyan könyvtárat akarsz törölni, amely nem üres. Az Igen gomb lenyomásakor rekurzívan törli a könyvtárat, a Nem lenyomásakor átlépi a könyvtárat, a Mind gomb lenyomásakor törli az összes könyvtárat, és a nem gomb átlépi az összes olyan könyvtárat, amely nem üres. A Megszakít gomb lenoymásával bárhol megállíthatod a folyamatot. Ha az Igen, vagy a Mind gombot választod egy Megerősítés. Az "Igen"-t csak akkor válaszd, ha teljesen biztos vagy abban, hogy rekurzívan akarsz törölni.
+
+Ha vannak kijelölt fájlok, azok kijelöltsége a művelet sikeres végrehajtása után megszűnik. A művelet megszakításkor a kihagyott fájlok kijelöltek maradnak.[Mask Copy/Rename]
+Kijelölt fájlok másolása vagy áthelyezése
+
+A másolás, vagy mozgatás művelet a fájlok átnevezésének legegyszerűbb módja. Ennek elvégzéséhez meg kell határoznod a megfelelő forrás maszkot, és általában a cél részben a rendeltetés szerinti maszknak megfelelően. Minden forrás maszkkal azonos fájl átmásolásra vagy átnevezésre kerül a cél maszknak megfelelően. Ha vannak kijelölt fájlok, csak a kijelölt fájlokra vonatkozik a átnevezett forrás maszk.
+
+Ezen kívül vannak egyéb opciók is, amiket még beállíthatsz:
+
+A link követés megadja vajon symlink, vagy hardlink készült-e a forrás könyvtárban (rekurzívan belső könyvtáraknál), és új linket kell-e csinálni a cél könyvtárba, vagy csak át kell másolnod a bejegyzést.
+
+"Létező könyvtárba belép" megmondja azt, hogy történjék, ha azonos nevű célkönyvtár létezik, mint amelyet elkezdtünk másolni. Az alapértelmezett művelet ilyenkor az, hogy ebbe a könyvtárba történő átmásoláskor, lehetővé teszi számodra azt, hogy a forrás könyvtárat átmásold. Talán egy példa segíteni fog:
+
+Neked a foo könyvtár tartalmát át kell másolnod a /bla/foo könyvtárba, amely már létezik. Normálisan (amikor az Ugrás (Dive) nincs beállítva), az mc be fogja másolni ezt a /bla/foo könyvtárba. Az opció engedélyezésekor a bejegyzéseket a /bla/foo/foo könyvtárba fogod másolni, mivel a könyvtár már létezik.
+
+Az "Attributumok megőrzése" megmondja azt, vajon az eredeti fájlok jogosultságait, időadatait, és (ha root vagy) az eredeti fájlok UID és GID értéekit. Ha ez az opció nincs beállítva, az umask jelenlegi értékét fogja használni a funkció.
+
+"Shell kifejezések be"
+
+Amikor a "Shell mintát használ" kifejezések opció be van kapcsolva, a forrás maszkhoz használhatsz használhatod a '*' és a '?' maszkokat. Ezek használhatóak a shellben is. A cél maszkhoz csak '*' és '\<szám>' maszk használható. A célmaszk első '*' maszkja megfelel a forrás maszk első maszk csoportjának, a második '*' megfelel a második csoportnak, és így tovább. A '\1' maszk megfelel a forrás maszk első maszk csoportjának, a '\2' maszk megfelel a második csoportnak, és ez így megy '\9'-ig. A '\0' maszk jelentése: a forrás fájl teljes neve.
+
+Két példa:
+
+Ha a forrás maszk, "*.tar.gz" a rendeltetésé a "/bla/*.tgz", a másolandó fájl a "foo.tar.gz", - a másolat a "/bla" könyvtárban található "foo.tgz" lesz.
+
+Tételezzük fel azt, hogy fel akarod cserélni a fájlnevet a kiterjesztéssel, például a "file.c"-t a "c.file"-lal, és a többit. Ennek a forrásmaszkja a "*.*" lesz, a rendeltetésé pedig a "\2.\1".
+
+"Shell kifejezések ki"
+
+Amikor a shell kifejezések opció ki van kapcsolva az MC a továbbiakban nem csoportosít automatikusan. Az '\(...\)' kiegészítést kell használnod a forrásmaszkban, a célmaszk specifikációnak meagadásához. Ez jóval gördülékenyebb módszernel tűnik, de több gépelést igényel. Egyébként a cél maszk használata egyszerűbb, ha a Shell kifejezések opció be van kapcsolva.
+
+Kisbetű-nagybetű csere"
+
+Magváltoztathatod a fájlnév betűnagyságát. Ha a '\u'-t, vagy a '\l'-t használod a cél maszkban, a következő karaktert naggyá, vagy kicsivé konvertálja.
+
+Ha a '\U'-t, vagy '\L'-t használod a cél maszkban a következő karakterek naggyá, illetve kicsivé fognak változni egészen addig, amíg '\E', vagy '\U', '\L', vagy a fájlnév vége következik.
+
+Az '\u' és '\l' erősebb az '\U'-nál és az '\L'-nél.
+
+Például, ha a forrás maszk '*' (Shell kifejezés be van kapcsolva), vagy '^\(.*\)$' (Shell kifejezés ki van kapcsolva) és a célmaszk '\L\u*' a fájl nevek eleje nagybetűsre konvertálódik, a többi betű pedig kicsire.
+
+Ezeken kívül még használhatod a '\' karaktert, mint hivatkozó karaktert. Például a '\\'-t a backslash-hez és a '\*'-et a csillaghoz.[Internal File Viewer]
+Belső fájlnéző
+
+A Belső fájlnéző két megjelenítési módra képes: ASCII és hex. A két mód közötti váltásra használd az F4-es billentyűt. Ha a GNU gzip programot telepítetted, szükség esetén ezzel automatikusan kitömöríti a fájlokat.
+
+A fájlnéző megpróbálja megállapítani a legjobb módot az információk megjelenítéséhez a rendszerednek, vagy a fájl típusának megfelelően. A Belső fájlnéző használ néhány szövegrészletet a vastag, és az aláhúzott szövegattribútumok megjelenítésére azért, hogy a fájl megjelenítése szebb legyen.
+
+Amikor hex módban vagy, a keresés funkcióban lehetővé teszi hexadecimális értékek használatát.
+
+Használhatsz kevert hivatkozást is ezen értékeknek megfelelően: "Szöveg" 0xFE 0xBB "további szöveg". A szöveg értékek közötti részt és a hivatkozás szövegét nem veszi figyelembe.
+
+Néhány belső részlet a fájlnézőről: Azokon a rendszereken, ahol létezik az mmap(2) rendszerhívás, a fájl programtérképe olvasódik be ehelyett; ha a rendszer nem tartalmazza az mmap(2) rendszerhívást, vagy a fájl tartalmaz olyan műveletet, mint ami megfelel a szűrőnek, a fájlnéző egy növekvő buffert fog használni, amely csak azokat a részeit tartalmazza a fájlnak, amelyekhez jelenleg hozzáférsz (ez tömörített fájlokra is vonatkozik).
+
+Ez a lista tartalmazza azokat a gombokat, amelyekhez művelet kapcsolódik a Midnight Commander belső fájlnézőjében.
+
+F1 Elindítja a beépített hypertext súgót.
+
+F2 Átvált sortörés módba.
+
+F4 Átvált hex módba.
+
+F5 Sorra lép. Egy promptot jelenít meg a sor számának megadására, és magjeleníti azt.
+
+F6, /. Szabványos kifejezés keresése.
+
+?, Szabványosos kifejezés keresése visszafelé.
+
+F7 Normál keresés / hex módú keresés.
+
+C-s Normál keresést indít el, ha nem volt megelőző kifejezés keresés, egyébként a következő előfordulást keresi meg.
+
+C-r. Keresés visszafelé, ha nem volt megelőző kifejezés keresés, egyébként a következő előfordulást keresi meg.
+
+n. A következő egyezőt keresi.
+
+F8 Vált a Nyers és Feldolgozott mód között: ez a fájlt, úgy mutatja meg, ahogy megtalálta, vagy, ha folyamatszűrő meg van adva az mc.ext.ini fájlban, akkor a szűrő kimenetét. A Jelenlegi mód mindig a másik, mit amit a gomb felirata mutat.
+
+F9 Vált a formázott-nem formázott mód között: amikor a formázott mód be van kapcsolva, néhány szöveg elemet, a vastagítást és az aláhúzást eltérő színnel jelenít meg. A menüsorban mindíg a másik felirat látható, jelezve, hogy milyen módba lehet átkapcsolni.
+
+F10, Esc. Kilép a Belső fájlnézőből.
+
+next-page, space, C-v. Egy lapot lapoz előre.
+
+prev-page, M-v, C-b, backspace. Egy lapot lapoz vissza.
+
+down-gomb Egy sort gördít elöre.
+
+up-gomb Egy sort gördít vissza.
+
+C-l Frissíti képernyőt.
+
+"[n] m" Beállítja az n kijelölést.
+
+"[n] r" Az n kijelölésre ugrik.
+
+C-f A következő fájlra ugrik.
+
+C-b Az elöző fájlra ugrik.
+
+M-r Ki- és bekapcsolja a vonalzót.
+
+Ez a rész a fájl fájlnézővel történő megjelenítésének leírását tartalmazta, lásd még a TársításokEdit Extension File részt.[Internal File Editor]
+Belső fájlszerkesztő
+
+A Belső fájlszerkesztő egy rengeteg eszközzel ellátott, de egyszerű teljes képernyős szerkesztő. Az F4 gomb segítségével lehet elindítani az inicializáló fájl use_internal_edit opciójának megfelelő beállításokkal. A kezelt fájlnál 16 MByte-os mérethatárral rendelkezik, és hibátlanul lekezeli a bináris fájlokat is.
+
+Az eszközök, amielyek használhatók: Blokk másolás, mozgatás, törlés, kivágás, beillesztés; "billentyű a billentyű visszavonására"; legördülő menük; fájl beillesztés; makró készítés; szabványos kifejezés keresés és csere; shift-kurzor MSW-MAC szöveg kijelölés (csak linux konzolon); beillesztés-felülírás beállítás váltása; és a pipe szöveg blokkokkal a shell parancsok közvetlen elérése.
+
+A szerkesztő használata nagyon egyszerű és nem igényel magyarázatot. Annak megtekintéséhez, hogy melyik gomb mit csinál, a megfelelő legördülő menü megtekintése szükséges. Egyéb gombok: Shift és nyíl billentyűk a szöveg kijelöléséhez. A Ctrl-Ins kimásolja a szöveget a mcedit.clip-be és a Shift-Ins beilleszti azt a mcedit.clip-ből. A Shift-Del kivágja a szöveget a mcedit.clip-be, és a Ctrl-Del törli a kijelölt szöveget. A lezáró billentyűként szintén használható a Return az automatikus bekezdéssel. Az egér kijelölés is működik, kijelölhetsz egérrel a shift gomb lenyomásával, amíg a normál terminál egeret csak a szöveg megjelölésére használhatod.
+
+Macró megadásához nyomd le a Ctrl-R-t és ekkor add meg a vezérlő gombokat a futtatandó folyamat megadásához. Nyomd le a Ctrl-R-t újra, ha ezt be akarod fejezni. Ekkor a makróhoz bármilyen billentyűt hozzárendelhetsz az adott gomb lenyomásával. A makró lefut a Ctrl-A és a megadott gomb lenyomásakor. A makró lefuttatható még akkor is, ha lenyomod a Váltó (Alt), Ctrl, vagy az Esc-et és a megadott gombot, feltételezve azt, hogy a gombot nem használja más funkció. Miután megadtad, a makro parancs a home könyvtárad ~/.local/share/mc/mcedit/mcedit.macros fájljába kerül. A makrót a fájl megfelelő sorának törlésével végezheted el.
+
+Az F19 formázza a szöveget (C, C++, vagy más kódra) amikor ez a rész kijelölt. Ennek használatához elöször egy futtatható fájlt kell készítened ~/.local/share/mc/mcedit/edit.indent.rc néven. Szerkeszd ezt szkriptet, ha szükséges.
+
+A szerkesztő megjeleníti még a nem-amerikai karaktereket is (160 fölött). Amikor bináris fájlokat szerkesztesz, a Beállításoknál beállíthatod a Képernyőbiteket 7 bitre a térközök tisztasága miatt.[Completion]
+Kiegészítés
+
+A Midnight Commander begépeli neked a kívánt szöveget.
+
+Megkísérli kiegészíteni a szöveget a jelenlegi pozíciótól. Az MC kiegészíti a szöveget (ha a szöveg $-ral kezdődik), felhasználónevet (ha a szöveg ~-vel kezdődik), hostnevet (ha a szöveg @-lel kezdődik), vagy parancsot (ha a parancssor azon részén állsz, ahova a parancsot kell begépelni, megjeleníti a kiegészítést, ha a shell tartalmazza a szót, és az a shell beépített parancsa). Ha ezek közül egyik sem egyezik, akkor fájlnév kiegészítéssel próbálkozik.
+
+A fájlnév, felhasználónév, változó és hostnév kiegészítése működik az összes beviteli sorban, a parancskiegészítés csak a parancssorban. Ha a kiegészítés kétértelmű (több érték megjelenítése lehetséges), a MC hangjelzést ad és a BeállításokConfiguration dialogbox kiegészítés: összes opciójának megfelelően hajtja végre a további műveleteket. Ha ez az opció be van állítva, az összes megjeleníthető elem egy listában jelenik meg a jelenlegi pozíciótól kezdődően, a fel-le nyilak segítségével, és az Enter-rel tudod kiegészíteni a bejegyzésed. Ezen kívűl, még begépelhetsz az első helyre akkor, amikor a listában megjelenített összes kiegészítés eltér az általad kívánttól. Ha újra lenyomod a M-Tab-ot, egy listarészlet jelenik meg a listában, egyébként pedig csak az első egyező elem, amely az összes kijelölt karakterrel egyezik. Hamarosan a kétértelműség meg fog szűnni, a dialógus ablak eltűnik, amit az Esc F10 és a bal, illetve a jobb nyíl billentyűkkel is megtehetsz. Ha a kiegészítés: összesConfiguration nincs beállítva, a dialógus ablak csak a M-Tab második lenyomására jelenik meg, az első lenyomáskor, az MC csak hangjelzést ad.[Virtual File System]
+Csatolt (látszólagos) fájlrendszer
+
+A Midnight Commander kód rétegekkel biztosítja azt, hozzáférj a fájlrednszerhez; Ez a kód réteg arra képes, hogy átváltson csatolt fájlrendszerre. A csatolt fájlrendszerre történő átváltás lehetővé teszi a Midnight Commander számára azt, hogy a fájl műveleteket végezzen akkor is, ha a fájlok nincsenek a UNIX fájlrendszeren.
+
+Jelenleg a Midnight Commander a következő Csatolt Fájlrendszerekkel rendelkezik (VFS): a helyi fájlrendszert a szokásos Unix fájlrendszeren lévő fájlokhoz használja; az ftpfs-t, az FTP protokollal rendelkező távoli gépek fájlainak módosítására használja; a tarfs-t a tar és tömörített tar fájlok módosítására használja; az undelfs-t, a törölt fájlok visszaállítására használja az ext2-es fájlrendszeren (az alapértelmezett fájlrendszer Linux rendszereken), a fish (a fájlok shellen keresztüli módosításához, mint pl. rsh és ssh) és végül az mcfs (a Midnight Commander fájlrendszere), amely hálózat alapú fájlrendszer.
+
+A VFS kódváltója minden elérési útvonal leírást értelmez és követi azt a megfelelő fájlrendszerrel, azt, hogy melyik rendszeren melyik használatos, azt a későbbiekben a megfelelő résznél találhatod meg.[FTP File System]
+FTP fájlrendszer
+
+Az ftpfs lehetővé teszi számodra azt, hogy távoli gépeken használjunk fájlokat, ennek használatához, próbáld ki a panel FTP kapcsolat... parancsát (elérhető a menüből), vagy közvetlenül átválthatsz a jelenlegi könyvtárból a cd parancs használatával, valahogy így:
+
+ftp://[!][felhasználó[:jelszó]@]machine[:port][távoli-könyvtár]
+
+A felhasználó, port és a távoli-könyvtár elemek opcionálisak. Ha megadod a felhasználó elemet, akkor a Midnight Commander a távoli gépre megpróbál ezzel a felhasználónévvel belépni, egyébként a te bejelentkező nevedet fogja használni. Opcionális a jelszó elem, ha meg van adva akkor ezt a jelszót fogja használni a bejelentkezéshez. Ajánlott ennek használata (soha ne tartsd ezeket a gyorslistádban, kivéve ha beállítod a megfelelő jogosultságokat, és még ekkor sem lesz minden esetben tökéletesen biztonságos megoldás).
+
+Példák:
+
+    ftp://ftp.nuclecu.unam.mx/linux/local
+    ftp://tsx-11.mit.edu/pub/linux/packages
+    ftp://!behind.firewall.edu/pub
+    ftp://guest@remote-host.com:40/pub
+    ftp://miguel:xxx@server/pub
+
+Tűzfalon keresztüli kapcsolat létrehozásához, az ftp://! kiegészítés használatára van szükséged (pl., felkiáltójel a dupla perjel után) ahhoz, hogy a Midnight Commander használni tudja a proxy host-ot az ftp átvitelhez. A Csatolt fájlrendszer...Virtual FS dialógus ablakban tudod beállítani a proxy host tulajdonságait.
+
+A Csatolt fájlrendszer...Virtual FS dialógus ablak másik beállítandó opciója az ftp proxy-n keresztül opció. Ez beállítja a program számára azt, hogy mindig használja a proxy host-ot. Ha ez a változó be van állítva, akkor a program két dolgot csinál: konzultál a /opt/etc/mc/mc.no_proxy fájl soraival, hogy azok tartalmazzák-e a host nevet, mint helyi eszközt (ha a host neve ponttal kezdődik, akkor ezt domainként tartja számon), és feltételezi azt, hogy a pont nélküli hostnevek közvetlenül felodhatók.
+
+Ha ftpfs kódot használsz csomagszűrő router esetén, akkor nincs lehetőséged a fájlok megszokott módon történő megnyitására, ezért neked kell a program számára megadnod azt, hogy a fájlokat passzív módon nyissa meg. Ennek használatához állítsd be az ftpfs_use_passive_connections opciót az indító fájlban.
+
+A Midnight Commander a könyvtárlistát a cache-ben tárolja. A cache frissítésének ideje a Csatolt fájlrendszer...Virtual FS dialógus ablakban végezhető el. Ez komikus helyzetet idézhet elő akkor, amikor változtatást hajtasz végre a könyvtárban, és az nem jelenik meg addíg, amíg a cache-t nem iratod újra a C-r gombbal. Ez sajátos jellegzetesség (amikor tapasztalod ezt a hibát, gondolj arra, hogy az ftpfs-el megváltoztatott fájlok esetleg az Atlanti-óceán másik oldalán vannak).[Tar File System]
+Tar fájlrendszer
+
+A Tar fájlrendszer gondoskodik arról, hogy csak olvasható módon a chdir parancs használatával hozzáférhess a tar fájlaidhoz és tömörített tar fájljaidhoz. A könyvtár tar fájlra történő átváltásához a tar fájlodat a következő szintaktikájú parancs segítségével tudod átváltani könyvtárrá:
+
+/filename.tar:utar/[dir-inside-tar]
+
+Az mc.ext.ini fájl már tartalmaz gyorsbillentyűket a tar fájlokhoz, ezért csak rá kell mutatnod a tar fájlra és le kell nyomnod az entert ahhoz, hogy beléphess a tar fájlba, ehhez nézd meg a TársításokEdit Extension File részt, hogy megismerhesd az ezzel kapcsolatos információkat:
+
+Példák:
+
+    mc-3.0.tar.gz/utar://mc-3.0/vfs
+    /ftp/GCC/gcc-2.7.0.tar/utar://
+
+Az utóbbi meghatározás a tar arhívum teljes elérési útját tartalmazza.[FIle transfer over SHell filesystem]
+Fájl áthelyezése a Shell fájlrendszeren túlra
+
+A fish fájlrendszer hálózat alapú fájlrendszer, amely lehetővé teszi műveletek végrehajtását a távoli gépeken, mintha azok a saját gépeden lennének. Ennek használatához a másik oldali gépnek futtatnia kell a fish szervert, vagy bash kompatibilis shellel kell rendelkeznie.
+
+A távoli géphez történő kapcsolódáshoz csak könyvtárat kell váltanod a következő formátumnak megfelelő könyvtárba:
+
+sh://[felhasználó@]machine[:opciók];/[távoli-könyvtár];</em>
+
+A felhasználó, opciók és a távoli-könyvtár elemek opcionálisak. Ha megadod a felhasználó elemet, akkor a Midnight Commander megpróbál belépni a távoli gépre ezzel a felhasználó névvel, egyébként pedig a te belépő nevedet használja.
+
+A 'C' opció a tömörítéshez használatos; a 'rsh' az rsh használatához az ssh helyett. Ha a távoli-könyvtár elemet beírtad, a távoli gépnek ezt a könyvtárát állítod be.
+
+Példák:
+
+    sh://onlyrsh.mx:r/linux/local
+    sh://joe@want.compression.edu:C/private
+    sh://joe@noncompressed.ssh.edu/private
+[Undelete File System]
+Törlés visszaállítása
+
+(csak ext2; second extended filesystem)
+
+Linux rendszereken, ha azt válaszolod a konfiguráláskor, hogy használni akarod az ext2fs törlés visszavonás lehetőségét, akkor lehetőséged lesz a törlés művelet visszavonására. A Törlés visszaállítása funkció csak ext2 fájlrendszeren végezhető el. A Törlés visszaállítása csak csatlakozó eszköz az ext2fs library-hoz: helyrehozza az összes törölt fájlnevet az ext2fs-en, megjeleníti őket és a kiválasztott fájlokat a kiteszi a megadott partícióra.
+
+Ezen fájlrendszer használatához abba a speciális fájlrendszerbe kell belépned, amely "undel://" meghatározással kezdődik, és annak az aktuális fájlrendszernek a nevét tartalmazza, ahol a visszaállítani kívánt file található.
+
+Például, ha a törölt fájlokat az első scsi lemez második partícióján szeretnénk visszaállítani, akkor a következő elérési utat kell megadnunk:
+
+    undel://sda2
+
+Persze várakozni kell, amíg az undelfs a szükséges információkat beolvassa, a fájl böngészés megkezdése előtt.[EXTernal File System]
+EXTernal File System
+
+extfs allows to integrate numerous features and file types into GNU Midnight Commander in an easy way, by writing scripts.
+
+Extfs filesystems can be divided into two categories:
+
+1. Stand-alone filesystems, which are not associated with any existing file. They represent certain system-wide data as a directory tree. You can invoke them by typing 'cd fsname://' where fsname is an extfs short name (see below). Examples of such filesystems include audio (list audio tracks on the CD) or apt (list of all Debian packages in the system).
+
+For example, to list CD-Audio tracks on your CD-ROM drive, type
+
+  cd audio://
+
+2. 'Archive' filesystems (like rpm, patchfs and more), which represent contents of a file as a directory tree. It can consist of 'real' files compressed in an archive (urar, rpm) or virtual files, like messages in a mailbox (mailfs) or parts of a patch (patchfs). To access such filesystems 'fsname://' should be appended to the archive name. Note that the archive itself can be on another vfs.
+
+For example, to list contents of a zip archive documents.zip type
+
+  cd documents.zip/uzip://
+
+In many aspects, you could treat extfs like any other directory. For instance, you can add it to the hotlist or change to it from directory history. An important limitation is that you cannot invoke shell commands inside extfs, just like any other non-local VFS.
+
+Common extfs scripts included with Midnight Commander are:
+
+a       access 'A:' DOS/Windows diskette (cd a://).
+
+apt     front end to Debian's APT package management system (cd apt://).
+
+audio   audio CD ripping and playing (cd audio:// or cd device/audio://).
+
+bpp     package of Bad Penguin GNU/Linux distribution (cd file.bpp/bpp://).
+
+deb     package of Debian GNU/Linux distribution (cd file.deb/deb://).
+
+dpkg    Debian GNU/Linux installed packages (cd deb://).
+
+hp48    view and copy files to/from a HP48 calculator (cd hp48://).
+
+lslR    browsing of lslR listings as found on many FTPs (cd filename/lslR://).
+
+mailfs  mbox-style mailbox files support (cd mailbox/mailfs://).
+
+patchfs extfs to handle unified and context diffs (cd filename/patchfs://).
+
+rpm     RPM package (cd filename/rpm://).
+
+rpms    RPM database management (cd rpms://).
+
+ulha, urar, uzip, uzoo, uar, uha
+        archivers (cd archive/xxxx:// where xxxx is one of: ulha, urar, uzip, uzoo, uar, uha).
+
+You could bind file type/extension to specified extfs as described in the Edit Extension FileEdit Extension File section. Here is an example entry for Debian packages:
+
+  regex/.deb$
+          Open=%cd %p/deb://
+[Colors]
+Színek
+
+A Midnight Commander megpróbálja megállapítani azt, hogy a terminál amelyet használsz, támogatja-e a színhasználatot a terminál adatbázis és a terminál név segítségével. Néha ez összezavarodhat, ezért előfordulhat, hogy neked kell megmondanod azt, hogy színes, vagy színtelen módot használjon a -c illetve a -b kiegészítéssel.
+
+Ha a programot a S-Lang képernyő kezelővel fordították az ncurses helyett, szintén le fogja ellenőrizni a COLORTERM változó értékét, ha be van állítva, ez olyan hatású, mintha a -c flaggal indítottál volna.
+
+Magadhatod azt a terminálnak, hogy mindíg a színes módot használja a Colors részben color_terminals változónál az indító fájlban. Így a terminál színtámogatásának vizsgálatát a Midnight Commander nem végzi el. Például:
+
+[Colors]
+color_terminals=linux,xterm
+color_terminals=terminal-name1,terminal-name2...
+
+A program mindkét opcióval fordítható (ncurses és S-Lang). Az ncurses nem jelent feltétlenül színes üzemmódot; csak a terminál adatbázist használja.
+
+A Midnight Commander lehetőséget nyújt az alapértelmezett színek beállítására. Jelenleg a színek a MC_COLOR_TABLE környezeti változóban, vagy a Colors részben definiálhatók az indító fájlban.
+
+Az alapértelmezett színtérképet a Colors rész a base_color változójából olvassa ki. Megadhatsz ettől eltérő színtérképet is, a terminál nevének kulcsszóként való használatával. Példa:
+
+[Colors]
+base_color=
+xterm=menu=magenta:marked=,magenta:markselect=,red
+
+A színmeghatározás formátuma:
+
+  <kulcsszó>=<előtérszín>,<háttérszín>:<kulcsszó>= ...
+
+A színek opcionálisak, a kulcsszavak a következők: normal, selected, marked, markselect, errors, input, reverse, gauge; A menü színek: menunormal, menusel, menuhot, menuhotsel, menuinactive; A dialog színek: dnormal, dfocus, dhotnormal, dhotfocus; Súgó színek: helpnormal, helpitalic, helpbold, helplink, helpslink; Fájlnéző színek: viewunderline; Speciális kijelölés színei: executable, directory, link, stalelink, device, special, core; Viewer colors are: viewnormal, viewbold, viewunderline, viewselected. Szerkesztő színei: editnormal, editbold, editmarked, editnonprintable.
+
+input maghatározza a beviteli sorok színét a dialogus ablakora vonatkozóan.
+
+gauge meghatározza a folyamat-mutató sáv (gauge) kitöltött részének, amely pl. azt mutatja, hogy a fájl másolásakor annak hány százaléka másolásolódott már át a grafikus megjelenítésben.
+
+A dialógus ablakok a következő színeket használják: dnormal a normál szöveghez, dfocus a jelenleg kiválasztott szövegelemekhez, dhotnormal a gyorsbillentyűk színei, amelyek eltérnek a normál szöveg színétől, aholis a dhotfocus színt használjuk a jelenleg kiválasztott komponensekhez.
+
+A menük azonos sémát használnak a menunormal, menusel, menuhot, menuhotsel és a menuinactive részeknél.
+
+A súgó a következő színeket használja: helpnormal a normál szöveghez, helpitalic ahhoz a szöveghez, amelyet dőlt betűvel szeretnénk nyomatékosítani akarunk a manualban, helpbold ahhoz a szöveghez, amelyet félkövérrel szeretnénk nyomatékosítani a man oldalon, helplink-et a nem kiválaszott hyperlinkekhez használjuk és a helpslink-et a kiválasztott hyperlinkekhez.
+
+A kiemelés színei azt határozzák meg, a fájlok hogyan jelenjenek meg akkor, ha a kiemelés engedélyezve van (lásd a Megjelenés résztLayout). directory a könyvtárakhoz, és a könyvtárak szimbolikus linkjeihez használatos; executable a futtatható fájlokhoz; link a szimbolikus linkekhez, amelyekk még létezőek, és nem könyvtárra mutató linkek; stalelink az elvesztett szimbolikus linkekhez; device - karakter és blokk eszközökhöz; special a speciális fájlokhoz, mint pl.FIFO-k és az IPC socket-ek; core a core fájlokhoz.
+
+A megjeleníthető színek: black (fekete), gray (szürke), red (piros), brightred (világospiros), green (zöld), brightgreen (világoszöld), brown (barna), yellow (sárga), blue (kék), brightblue (világoskék), magenta (bíborvörös), brightmagenta (világos bíborvörös), cyan, brightcyan (világos zöldeskék), lightgray (világosszürke) és a white (fehér). Van külön speciális kulcsszó az átlátszó háttérhez. Ez a 'default' (alapértelmezett). Csak a 'default'-ot tudod háttérszínként használni. Példa:
+
+[Colors]
+base_color=normal=white,default:marked=magenta,default
+[Special Settings]
+Speciális Beállítások
+
+A legtöbb Midnight Commander beállítás a menükből is elérhető. Ám van néhány beállítás, ami csak a setup fájl szerkesztésével állítható be.
+
+Ezeket a változókat az ~/.config/mc/ini fájlban állíthatod be:
+
+clear_before_exec
+
+        Alapértelmezésben a Midnight Commander törli a képernyőt, mielőtt futtatna egy parancsot. Ha a parancs kimenetét a képernyő alján szeretnéd látni, az ~/mc.ini fájlban javítsd ki a clear_before_exec értékét 0-ra.
+
+confirm_view_dir
+
+        Ha lenyomod az F3 gombot a könyvtár felett állva, normálisan a MC belép a könyvtárba. Ha ez a flag 1-re van állítva, akkor az MC kijelölt fájlok esetén megerősítő kérdést fog feltenni, mielőtt könyvtárat váltana.
+
+ftpfs_retry_seconds
+
+        Ez az érték az a szám, amely megadja azt, hogy Commander mennyit várjon mielőtt megpróbál újra kapcsolódni az ftp szerverre, elutasítás esetén. Ha az érték nulla, akkor nem próbálkozik újra a kapcsolatteremtéssel.
+
+ftpfs_use_passive_connections.
+
+        Ez az opció alapesetben ki van kapcsolva. Ez teszi az ftpfs kódot használhatóvá passzív megnyitás módúvá a letöltött fájloknál. Ezt akkor használják, ha csomagszűrő routert használnak. Ez az opció csak akkor működik, ha a nem használsz ftp proxy-t.
+
+max_dirt_limit
+
+        Meghatározza azt, hogy hány képernyőfrissítést tudjon átlépni a Belső fájlnéző. Normálisan ez az érték nem meghatározott, mivel a kód automatikusan módosítja a képfrissítés sebességét, ha túl gyosran ütöd le egymás után a billentyűket. Habár a nagyon lassú gépeken, vagy, ha nagy billenty ismétlési sebességet állítottunk, a nagy érték tudja megfelelően frissíteni a képernyőt. A legjobb az ha a max_dirt_limit értékét 10-re állítod, és ez az alapértelmezett érték.
+
+mouse_move_pages
+
+        Vezérel akkor, amikor a panelben az egérrel legördítesz oldalanként, vagy sorról sorra.
+
+mouse_move_pages_viewer
+
+        Vezérel akkor, amikor a panelben az egérrel legördítesz egy oldala oldalanként, vagy sorról sorra a Belső fájlnézőben.
+
+old_esc_mode
+
+        Alapesetben a Midnight Commander az ESC gombot a gomb rendeltetésének megfelelően használja (Meta) (old_esc_mode=0), ha beállítod ezt az opciót, (old_esc_mode=1), akkor az ESC gomb egy másodpercig vár, és, ha ilyenkor nem nyomsz le egy kiegészítő gombot, az ESC műveletet megszakító gombként fog működni (ESC ESC).
+
+only_leading_plus_minus
+
+        speciálisan kezeli a '+', '-', '*' karaktereket a parancssorban (kiválasztás, kiválasztás megszüntetése, megfordítja a kiválasztást), de csak akkor, ha a parancssor üres. A parancssorban nem kell idézőjelek közé tenni. Amikor a parancssor nem üres, nem tudjuk megváltoztatni a kiválasztást.
+
+panel_scroll_pages
+
+        Ha be van állítva (alapértelmezésben), a panel egy fél képernyőnyit fog fel-le gördülni, ha a kurzor eléri a panel végét, vagy elejét, egyébként csak egy fájlt fog legördítani ilyenkor.
+
+show_output_starts_shell
+
+        Ez a változó csak akkor működik, ha a subshell támogatást nem használod. Amikor a C-o billentyű kombinációt használod, visszalépsz a felhasználói képernyőre, ha "egy" a beállítás, akkor a shellt frissíted. Egyébként bármely gomb lenyomásával visszatérhetsz a Midnight Commander-hez.
+
+torben_fj_mode
+
+        Ha ez a flag be van állítva, akkor a home és az end gombok kissé eltérően fognak működni a panelekben, a kiválasztást a panel első és utolsó fájljára mozgatja, s a következőképp működik: A home gombnál: Felmegy a középső sorra, ha lejjebb volt; egyébként a felső sor lép addíg, amíg el nem éri a legfelső sort, ebben ez esetben ez lesz a panel első fájlja. Az end gomb működése hasonló: Lemegy a középső sorra, ha felette volt; egyébként a legalsó sorra lép addíg, amíg el nem éri az utolsó fájl a panelben.
+
+use_file_to_guess_type
+
+        Ha ez a változó be van állítva (alapértelmezésben) meg foja jelölni azt a fájl parancsot, amelyhez a TársításokbanEdit Extension File a fájl típusnál egyezőt talált.
+
+xtree_mode
+
+        Ha ez a változó be van kapcsolva (alapértelmezésben ki van kapcsolva), akkor, amikor a fájlrendszert a Fa panelben böngészed, az automatikusan újraolvassa a másik panelt a kiválasztott könyvtárnak megfelelő tartalommal.[Terminal databases]
+Terminál adatbázisok
+
+A Midnight Commander lehetőséget nyújt a terminál adatbázis root jogok használata nélküli módosítására. A Midnight Commander a rendszer indító fájlban (az mc.lib fájlt a Midnight Commander library könyvtárában találjuk), vagy az ~/.config/mc/ini file "terminal:your-terminal-name" részében keres, és, a "terminal:general" rész minden sora tartalmazza azokat a billentyűzet szimbólumokat az egyenlőségjelet és a definiált szimbólumot követően, amelyeket te mag akarsz határozni. A \e speciális formátumot az escape és a ^x-t a control-x karakter megjelenítésére használhatod.
+
+A látható billentyű szimbólumok:
+
+f0-tól f20-ig Funkció billentyűk f0-f20
+bs            backspace
+home          home gomb
+end           end gomb
+up            kurzor fel gomb
+down          kurzor le gomb
+left          kurzor balra gomb
+right         kurzor jobbra gomb
+pgdn          page down gomb
+pgup          page up gomb
+insert        az insert karakter
+delete        a delete karakter
+complete      a lezáró
+
+Például ahhoz, hogy az insert gomb az Escape + [+ O + p-pel legyen azonos, az alábbiakat állítsd be az ini fájlban:
+
+insert=\e[Op
+
+A complete billentyű szimbólum megjeleníti az escape szekvenciát, amely a leállító folyamatot indítja el, az M-tab-bal indítható el, de definiálhatsz más gombokat is ugyanerre a folyamatra (azokon a billentyűzeteken, ahol valamelyik gomb nem használható).
+
+[FILES]
+Fájlok
+
+A progam minden ezzel kapcsolatos infomációt az MC_DATADIR környezeti változóban tárol. Ha ezt a változót nem állítottuk be, akkor ez vissza fog állítódni a /usr könyvtárra.
+
+/opt/share/mc/help/mc.hlp
+
+        A program súgó fájlja.
+
+/opt/share/mc/mc.ext.ini
+
+        Az alapértelmezett rendszerszintű kiterjesztés fájl.
+
+~/.config/mc/mc.ext.ini
+
+        A felhasználó saját kiterjesztései, nézet beállítások és szerkesztési beállítások. Ezek felülbírálják a rendszerszintű fájl bejegyzéseit, ha van ilyen.
+
+/opt/share/mc/mc.ini
+
+        Az alapértelmezett rendszerszintű Midnight Commander beállítás, amelyet csak akkor használ, ha a felhasználónak nincs saját ~/.config/mc/ini fájlja.
+
+/opt/share/mc/mc.lib
+
+        A Midnight Commander globális beállításai. Az ebben a fájlban elvégzett beállítások minden felhasználó Midnight Commander-jére vonatkoznak, ez használható a site-globális terminál beállításaihoz.
+
+~/.config/mc/ini
+
+        A felhasználó saját beállításai. Ha ez a fájl elérhető, akkor a beállítások ebből a fájlból olvasódnak be a rendszerszintű indító fájl helyett.
+
+/opt/share/mc/hints/mc.hint
+
+        Ez a fájl tartalmazza a program által megjelenített útmutattásokat (cookie-kat).
+
+/opt/share/mc/mc.menu
+
+        Ez a fájl azonos a rendszerszintű alkalmazás menüvel.
+
+~/.config/mc/menu
+
+        A falhasználó saját alkalmazás menüje. Ha ez a fájl elérhető a rendszerszintű alkalmazás menü helyett ezt fogja használni.
+
+~/.cache/mc/Tree
+
+        A könyvtárlista a Könyvtárfa és a Fa nézethez. Minden sor egy bejegyzés. Minden sor perjellel kezdik a teljes könyvtár neveknél. A sorok egy számmal kezdődnek, amik azonosak az elöző könyvtáréval. Ha ezt a fájlt el akarod készíteni a következő parancsot használd:
+find / -type d -print | sort > ~/.cache/mc/Tree"
+        Normálisan nincs erre szükséged, mert a Midnight Commander automatikusan frissíti ezt.
+
+./.mc.menu
+
+        Helyi felhasználó által definiált menü. Ha ez a fájl létezik, ezt használja a home, vagy rendszerszintű alkalmazás menü helyett.
+
+To change default home directory of MC, you can use MC_PROFILE_ROOT environment variable. The value of MC_PROFILE_ROOT must be an absolute path. If MC_PROFILE_ROOT is unset or empty, HOME variable is used. If HOME is unset or empty, MC directories are get from GLib library.[AVAILABILITY]
+A Midnight Commander frissítése
+
+A program legutolsó verzióját az ftp.nuclecu.unam.mx címen a /linux/local könyvtárban találhatod meg, Európából pedig a sunsite.mff.cuni.cz címen a /GNU/mc könyvtárban és az ftp.teuto.de címen az /lmb/mc könyvtárban.[SEE ALSO]
+Lásd még...
+
+ed(1), gpm(1), terminfo(1), view(1), sh(1), bash(1), tcsh(1), zsh(1).
+
+A Midnight Commander World Wide Web oldalának címe a
+következő:
+	https://www.midnight-commander.org/
+[AUTHORS]
+Szerzők
+
+Miguel de Icaza (miguel@roxanne.nuclecu.unam.mx), Janne Kukonlehto (jtklehto@paju.oulu.fi), Radek Doulik (rodo@ucw.cz), Fred Leeflang (fredl@nebula.ow.org), Dugan Porter (dugan@b011.eunet.es), Jakub Jelinek (jj@sunsite.mff.cuni.cz), Ching Hui (mr854307@cs.nthu.edu.tw), Andrej Borsenkow (borsenkow.msk@sni.de), Norbert Warmuth (nwarmuth@privat.circular.de), Mauricio Plaza (mok@roxanne.nuclecu.unam.mx), Paul Sheer (psheer@icon.co.za) and Pavel Machek (pavel@ucw.cz) are the developers of this package; Alessandro Rubini (rubini@ipvvis.unipv.it) has been especially helpful debugging and enhancing the program's mouse support, John Davis (davis@space.mit.edu) also made his S-Lang library available to us under the GPL and answered my questions about it, and the following people have contributed code and many bug fixes (in alphabetical order):
+
+Adam Tla/lka (atlka@sunrise.pg.gda.pl), alex@bcs.zp.ua (Alex I. Tkachenko), Antonio Palama, DOS port (palama@posso.dm.unipi.it), Erwin van Eijk (wabbit@corner.iaf.nl), Gerd Knorr (kraxel@cs.tu-berlin.de), Jean-Daniel Luiset (luiset@cih.hcuge.ch), Jon Stevens (root@dolphin.csudh.edu), Juan Francisco Grigera, Win32 port (j-grigera@usa.net), Juan Jose Ciarlante (jjciarla@raiz.uncu.edu.ar), Ilya Rybkin (rybkin@rouge.phys.lsu.edu), Marcelo Roccasalva (mfroccas@raiz.uncu.edu.ar), Massimo Fontanelli (MC8737@mclink.it), Pavel Roskin (proski@gnu.org), Sergey Ya. Korshunoff (seyko2@gmail.com), Thomas Pundt (pundtt@math.uni-muenster.de), Timur Bakeyev (timur@goff.comtat.kazan.su), Tomasz Cholewo (tjchol01@mecca.spd.louisville.edu), Torben Fjerdingstad (torben.fjerdingstad@uni-c.dk), Vadim Sinolitis (vvs@nsrd.npi.msu.su) and Wim Osterholt (wim@djo.wtm.tudelft.nl).[BUGS]
+Hibák bejelentése
+
+Nézd meg a disztribúció TODO fájlát, hogy megtudhasd, milyen teendők vannak még vissza.
+
+Ha a programmal kapcsolatos problémád van, akkor azt küld el az alábbi levélcímre: mc-devel@lists.midnight-commander.org.
+
+Gondoskodj arról, hogy tartalmazza a hiba minél pontosabb meghatározását, a futtatott program verziószámát (az mc -V parancs meg fogja jeleníttetni ezt), az operációs rendszert, amin futtatod a programot amikor az összeomlott, méltányolni fogjuk a részletes leírást.
+[main]
+ lqwqk     k           k     
+ x x x .   x     .     x     
+ x x x k lqu wqk k lqw tqk n 
+ x x x x x x x x x x x x x x 
+ v   v v mqv v v v mqu v v mj
+     qqqqqqCommanderqj 
+
+Ez a GNU Midnight Commander súgója.
+
+Az interaktív súgó használatának megismeréséhez csak üss egy entertHow to use help. Itt közvetlenül a súgó tartalomjegyzékébeContents juthatsz.
+
+A Midnight Commander-t a következő szerzőkAUTHORS készítették.
+
+A Midnight Commander mindenféle garanciaWarranty nélkül kerül kiadásra. Ez szabad szoftver, így továbbadhatod azt a Felhasználási engedélybenLicense meghatározott feltételekkel.
+
+[License]
+
+                 GNU GENERAL PUBLIC LICENSE
+                   Version 3, 29 June 2007
+
+Copyright © 2007 Free Software Foundation, Inc.
+<http://fsf.org/>
+
+    Everyone is  permitted  to copy  and  distribute  verbatim copies of this  license  document,  but  changing  it  is  not allowed.
+
+                         Preamble
+
+    The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+    The licenses for most software and other practical works are designed to take away your freedom  to  share  and  change the works. By contrast, the  GNU  General  Public  License  is intended to guarantee your freedom to  share  and  change  all versions of a program to make sure it  remains  free  software for all its users. We, the Free Software Foundation,  use  the GNU General Public  License  for  most  of  our  software;  it applies also to any  other  work  released  this  way  by  its authors. You can apply it to your programs, too.
+
+    When we speak of free software, we are referring  to freedom, not price. Our General Public Licenses  are  designed to make sure that you have the freedom to distribute copies of free software (and charge for them  if  you  wish),  that  you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free  programs, and that you know you can do these things.
+
+    To protect your rights, we need to prevent others from denying you these  rights  or  asking  you  to  surrender  the rights. Therefore, you have certain  responsibilities  if  you distribute copies of  the  software,  or  if  you  modify  it: responsibilities to respect the freedom of others.
+
+    For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source  code. And you must show them these terms so they know their rights.
+
+    Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you  this License giving you legal permission to copy, distribute and/or modify it.
+
+    For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software.  For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
+
+    Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuseoccurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
+
+    Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
+
+    The precise terms and conditions for copying, distribution and modification follow.
+
+                   TERMS AND CONDITIONS
+
+0. Definitions.
+---------------
+
+    “This License” refers to version 3 of the GNU General Public License.
+
+    “Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
+
+    “The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations.
+
+    To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.
+
+    A “covered work” means either the unmodified Program or a work based on the Program.
+
+    To “propagate” a work means to do anything with  it  that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
+
+    To “convey” a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+    An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
+
+
+1. Source Code.
+---------------
+
+    The “source code” for a work means the preferred form of the work for making modifications to it. “Object code” means any non-source form of a work.
+
+    A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+    The  “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+    The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+    The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+    The Corresponding Source for a work in source code form is
+that same work.
+
+2. Basic Permissions.
+---------------------
+
+    All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+    You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+    Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+--------------------------------------------------------------
+
+    No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+    When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
+
+4. Conveying Verbatim Copies.
+-----------------------------
+
+    You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+    You may charge any price or no price for each copy that you convey,and you may offer support or warranty protection for a fee.
+
+5. Conveying Modified Source Versions.
+--------------------------------------
+
+    You may convey a work based on the Program, or the modificationsto produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
+
+  a) The work must carry prominent notices stating that you modified it, and giving a relevant date.
+  b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to “keep intact all notices”.
+  c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+  d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
+
+    A compilation of a covered work with other separate and independent works,
+which are not by their nature extensions of the covered work, and which are not
+combined with it such as to form a larger program, in or on a volume of a
+storage or distribution medium, is called an “aggregate” if the compilation and
+its resulting copyright are not used to limit the access or legal rights of the
+compilation's users beyond what the individual works permit. Inclusion of a
+covered work in an aggregate does not cause this License to applyto the other
+parts of the aggregate.
+
+6. Conveying Non-Source Forms.
+------------------------------
+
+    You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+  a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+  b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+  c) Convey individual copies of the  object code  with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+  d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+  e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+
+    A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+    A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+    “Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+    If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+    The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+    Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+7. Additional Terms.
+--------------------
+
+    “Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+    When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+    Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+  a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+  b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+  c) Prohibiting  misrepresentation of the origin of that  material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+  d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+  e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+  f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+
+    All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+    If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+    Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
+
+8. Termination.
+---------------
+
+    You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your  rights  under  this  License  (including any patent licenses granted under the third paragraph of section 11).
+
+    However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+    Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+    Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
+
+9. Acceptance Not Required for Having Copies.
+---------------------------------------------
+
+    You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
+
+10. Automatic Licensing of Downstream Recipients.
+-------------------------------------------------
+
+    Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
+
+    An “entity transaction” is a transaction transferring control of an organization, or substantially all assets  of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's  predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+    You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
+
+11. Patents.
+------------
+
+    A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”.
+
+    A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+    Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+    In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+    If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to  copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+    If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+    A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+    Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
+
+12. No Surrender of Others' Freedom.
+------------------------------------
+
+    If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
+
+13. Use with the GNU Affero General Public License.
+---------------------------------------------------
+
+    Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+14. Revised Versions of this License.
+-------------------------------------
+
+    The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+    Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public  License, you may choose any version ever published by the Free Software Foundation.
+
+    If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+    Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+[Warranty]
+15. Disclaimer of Warranty.
+---------------------------
+
+    THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. Limitation of Liability.
+----------------------------
+
+    IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+17. Interpretation of Sections 15 and 16.
+-----------------------------------------
+
+    If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
+
+                      END OF TERMS AND CONDITIONS
+
+
+               How to Apply These Terms to Your New Programs
+
+    If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.
+
+    To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the “copyright” line and a pointer to where the full notice is found.
+
+  <one line to give the program's name and a brief idea of what it does.>
+  Copyright (C) <year>  <name of author>
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Also add information on how to contact you by electronic and paper mail.
+
+
+    If the program does terminal interaction, make it output a short notice like this when it starts in an interactive mode:
+
+  <program>  Copyright (C) <year>  <name of author>
+  This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+  This is free software, and you are welcome to redistribute it
+  under certain conditions; type `show c' for details.
+
+
+    The hypothetical commands `show w' and `show c' should show the appropriate parts of the General Public License. Of course, your program's commands might be different; for a GUI interface, you would use an “about box”.
+
+    You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see <http://www.gnu.org/licenses/>.
+
+    The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+
+[QueryBox]
+Lekérdező box
+
+A lekérdező boxban kezeléséhez a nyíl billentyűket, a szövegrész elejének magadásást, vagy a gombokra történő egérkattintást használhatod.
+
+[How to use help]
+Hogyan használjuk a súgót
+
+A súgóban a navigációhoz a billentyűzet gombjait és az egér gombjait is használhatod. A lefelé mutató nyíl lenyomására a következő bejegyzésre ugorhatsz, vagy legördítheted azt. A felfelé mutató nyíl lenyomására ez előző bejegyzésre ugorhatsz, vagy felhúzhatod azt. A jobbra mutató nyíl lenyomására a linknek megfelelő címre lép. A balra mutató nyíl lenyomására az előzőleg meglátogatott címre lépsz vissza.
+
+Ha az általad használt terminál nem támogatja a kurzor gombok használatát, használd a szóköz billentyűt az előre lépésre, a 'b' gombot a visszalépésre. Használd a TAB gombot a következő bejegyzésre való ugráshoz és az ENTER-t a jelenlegi link által megadott címre történő lépéshez. Az 'l' (last=utolsó) gombot az előzőleg látogatott oldalra való visszalépésre használhatod. Az ESC lenyomásával kiléphetsz a Súgóból.
+
+A bal egérgomb lenyomásával követheted a linket, vagy gördíthetsz. A jobb gomb lenyomásával visszatérhetsz az előzőleg látogatott pontra.
+
+A Súgóban használható összes gomb listája:
+
+Általános mozgási lehetőségek billentyűzettelGeneral Movement Keys.
+
+tab           Mozgás a következő elemre.
+M-tab         Mozgás az előző elemre.
+down          Mozgás a következő elemre; a sorokat lefelé
+              gördíti.
+up            Mozgás az előző elemre; a sorokat felfelé
+              gördíti.
+right, enter  Követi a jelenlegi linket.
+left, l       Visszalép az előzőleg meglátogatott pontra.
+F1            Megjeleníti a Súgót a Súgó nézővel.
+n             Átlép a következő pontra.
+p             Átlép az előző pontra.
+c             A Tartalomjegyzékhez ugrik.
+F10, esc      Kilép a Súgóból.
+
+Local variables:
+fill-column: 58
+end:

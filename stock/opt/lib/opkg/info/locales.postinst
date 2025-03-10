@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo 'Entware uses separate locale-archive file independent from main system'
+if ! [ -f '/opt/usr/lib/locale/locale-archive' ]; then
+	mkdir -p /opt/usr/lib/locale
+	echo 'Creating locale archive /opt/usr/lib/locale/locale-archive'
+	echo 'Adding en_EN.UTF-8'
+	/opt/bin/localedef.new -c -f UTF-8 -i en_US en_US.UTF-8
+	echo 'Adding ru_RU.UTF-8'
+	/opt/bin/localedef.new -c -f UTF-8 -i ru_RU ru_RU.UTF-8
+fi
+if ! [ -f '/opt/usr/lib/locale/locale-archive' ]; then
+	echo 'locale-archive file was not created, not enough memory? Downloading...'
+	wget http://bin.entware.net/other/locale-archive.2.27 -O /opt/usr/lib/locale/locale-archive
+fi
+echo 'You can download locale sources from http://bin.entware.net/other/i18n_glib227.tar.gz'
+echo 'You can add new locales to Entware using /opt/bin/localedef.new'
+exit 0

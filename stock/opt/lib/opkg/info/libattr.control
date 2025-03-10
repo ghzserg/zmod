@@ -1,0 +1,16 @@
+Package: libattr
+Version: 2.5.2-3
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/utils/attr
+SourceName: attr
+License: LGPL-2.1-or-later
+LicenseFiles: doc/COPYING.LGPL
+Section: libs
+SourceDateEpoch: 1720621812
+URL: http://savannah.nongnu.org/projects/attr
+CPE-ID: cpe:/a:attr_project:attr
+Maintainer: Maxim Storchak <m.storchak@gmail.com>
+Architecture: armv7-3.2
+Installed-Size: 20480
+Description:  Extended attributes support
+ This package provides libattr

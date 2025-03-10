@@ -1,0 +1,6 @@
+[[protocols]]
+name = "vp702x"
+protocol = "unknown"
+[protocols.scancodes]
+0x0001 = "KEY_1"
+0x0002 = "KEY_2"

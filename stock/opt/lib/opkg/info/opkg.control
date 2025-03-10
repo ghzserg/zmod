@@ -1,0 +1,19 @@
+Package: opkg
+Version: 2022.02.24~d038e5b6-2
+Source: feeds/base/system/opkg
+SourceName: opkg
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: base
+SourceDateEpoch: 1720610989
+URL: https://git.openwrt.org/project/opkg-lede.git
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: armv7-3.2
+Installed-Size: 757760
+Description:  Lightweight package management system
+ opkg is the opkg Package Management System, for handling
+ installation and removal of packages on a system. It can
+ recursively follow dependencies and download all packages
+ necessary to install a particular package.
+ 
+ opkg knows how to install both .ipk and .deb packages.

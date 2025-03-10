@@ -1,0 +1,12 @@
+Package: zoneinfo-core
+Version: 2024a-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/packages/utils/zoneinfo
+SourceName: zoneinfo
+License: Public-Domain
+Section: utils
+SourceDateEpoch: 1716287455
+Maintainer: Vladimir Ulrich <admin@evl.su>
+Architecture: armv7-3.2
+Installed-Size: 102400
+Description:  Zone Information (core)

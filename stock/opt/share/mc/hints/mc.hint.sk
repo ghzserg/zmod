@@ -1,0 +1,87 @@
+Tip: Pomocou C-x t skopírujete označené názvy súborov do príkazového riadka.
+
+Tip: Pomocou C-x p skopírujete aktuálnu cestu do príkazového riadka.
+
+Tip: Dopĺňanie pomocou M-Tab (alebo Esc+Tab). Ak ho napíšete dvakrát, zobrazí sa zoznam.
+
+Tip: Pomocou M-p a M-n zobrazíte históriu príkazov.
+
+Tip: Potrebujete vložiť znak? Stlačte Control-q a napíšte znak.
+
+Tip: Už vás tieto správy unavujú? Vypnite ich v menu Možnosti/Rozmiestnenie.
+
+Tip: Výber adresárov: pridajte lomku na koniec vyhľadávacieho vzoru.
+
+Tip: Ak váš terminál nemá funkčné klávesy, použite ESC+číselnú postupnosť.
+
+Tip: Domovská stránka GNU Midnight Commander: https://www.midnight-commander.org
+
+Tip: Hlásenia chýb posielajte na mc-devel@lists.midnight-commander.org
+
+Tip: Tabulátor mení váš aktuálny panel.
+
+Tip: VFS: stlačením Enter na súbore .tar preskúmate jeho obsah.
+
+Tip: Máme aj peknú manuálovú stránku.
+
+Tip: Chcete navigáciu v štýle Lynx? Nastavte si ju v dialógu Konfigurácia.
+
+Tip: Makrá % fungujú aj na príkazovom riadku.
+
+Tip: M-! vám umožní spúšťať programy a vidieť výstup v prehliadači.
+
+Tip: Formát výpisu súborov je možné prispôsobiť. Podrobnosti nájdete v „man mc“.
+
+Tip: %D/%T expanduje označené súbory v náprotivnom adresári.
+
+Tip: Chcete čistý shell? Stlačte C-o a späť do MC sa prepnite oäť pomocou C-o.
+
+Tip: Nastavenie premennej CDPATH vám ušetrí písanie pri príkazoch cd.
+
+Tip: Ak chcete vidieť súbory .*, zapnite si to v dialógu Konfigurácia.
+
+Tip: Ak chcete vidieť záložné súbory *~, zapnite si to v dialógu Konfigurácia.
+
+Tip: Dopĺňanie funguje vo vstupných poliach všetkých dialógov. Stačí stlačiť M-Tab.
+
+Tip: Na pomalých termináloch môže pomôcť prepínač -s.
+
+Tip: Nájdenie súboru: s nájdenými súbormi môžete pracovať pomocou tlačidla Panelizovať.
+
+Tip: Chcete využiť komplexné hľadanie? Použite príkaz Externá panelizácia.
+
+Tip: Ak chcete zmeniť adresár uprostred písania príkazu, použite M-c (rýchle cd).
+
+Tip: príkazy shellu nebudú fungovať, keď sa nachádzate na nelokálnom súborovom systéme.
+
+Tip: Vráťte späť zmazaný text pomocou C-y.
+
+Tip: Nefungujú niektoré z vašich klávesov? Pozrite sa na Možnosti/Učenie klávesov.
+
+Tip: Pomocou M-! zobrazíte výstup príkazu v prehliadači.
+
+Tip: F13 (alebo Shift-F3) vyvolá prehliadač v nespracovanom režime.
+
+Tip: Premennou prostredia EDITOR môžete určiť editor pre F4.
+
+Tip: Premennými prostredia VIEWER alebo PAGER môžete určiť externý prehliadač.
+
+Tip: Môžete zakázať všetky žiadosti o potvrdenie pomocou Možnosti/Konfigurácia.
+
+Tip: Do často používaných adresárov môžete skákať pomocou C-\.
+
+Tip: Prístup k anonymnému FTP z mc získate napísaním „cd ftp://machine.edu“
+
+Tip: FTP je súčasťou aplikácie Midnight Commander, pozrite si menu Súbor/Pripojenie FTP.
+
+Tip: M-t rýchlo zmení režim výpisu.
+
+Tip: Môžete uviesť meno používateľa v príkaze ftps: 'cd ftp://používateľ@počítač'
+
+Tip: Stlačením Enter na súbore .rpm môžete prechádzať súbory v RPM.
+
+Tip: Adresáre v dialógovom okne výberu môžete označiť pridaním lomky.
+
+Tip: Na kopírovanie a vkladanie pomocou myši môže byť potrebné podržať Shift.
+
+Tip: Uložte si často navštevované servery FTP do hotlistu: C-\

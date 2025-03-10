@@ -1,0 +1,1 @@
+/opt/config/mod/.shell/prepare.sh

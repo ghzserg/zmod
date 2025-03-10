@@ -1,0 +1,5 @@
+NAME=Buildroot
+VERSION=2019.02.1-svn19
+ID=buildroot
+VERSION_ID=2019.02.1
+PRETTY_NAME="Buildroot 2019.02.1"

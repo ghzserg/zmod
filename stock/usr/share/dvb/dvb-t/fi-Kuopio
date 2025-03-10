@@ -1,0 +1,28 @@
+# 2014-04-18 Antti Palosaari <crope@iki.fi>
+# generated from http://www.digita.fi/kuluttajat/tv/nakyvyysalueet/kanavanumerot_ja_taajuudet
+
+[Kuopio-A]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 498000000
+	BANDWIDTH_HZ = 8000000
+
+[Kuopio-B]
+	DELIVERY_SYSTEM = DVBT2
+	FREQUENCY = 562000000
+	BANDWIDTH_HZ = 8000000
+
+[Kuopio-C]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 618000000
+	BANDWIDTH_HZ = 8000000
+
+[Kuopio-E]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 674000000
+	BANDWIDTH_HZ = 8000000
+
+[Kuopio-F]
+	DELIVERY_SYSTEM = DVBT2
+	FREQUENCY = 634000000
+	BANDWIDTH_HZ = 8000000
+

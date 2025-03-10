@@ -1,0 +1,14 @@
+Package: libiconv-full
+Version: 1.17-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/base/libs/libiconv-full
+SourceName: libiconv-full
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING.LIB
+Section: libs
+SourceDateEpoch: 1658478628
+URL: https://www.gnu.org/software/libiconv/
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: armv7-3.2
+Installed-Size: 921600
+Description:  Character set conversion library

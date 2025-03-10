@@ -1,0 +1,28 @@
+# bash.pc.in
+
+prefix=/usr
+exec_prefix=/usr
+includedir=${prefix}/include
+libdir=${exec_prefix}/lib
+
+loadablesdir=${libdir}/bash
+headersdir=${includedir}/bash
+
+LOCAL_CFLAGS = 
+LOCAL_DEFS = -DSHELL
+CCFLAGS = ${LOCAL_DEFS} ${LOCAL_CFLAGS}
+
+CC = /home/linux/work/hard_t113_s3/t113/T113/T113-Linux-Auto-v1.1/out/t113/evb1_auto/longan/buildroot/host/bin/arm-linux-gnueabi-gcc
+SHOBJ_CC = /home/linux/work/hard_t113_s3/t113/T113/T113-Linux-Auto-v1.1/out/t113/evb1_auto/longan/buildroot/host/bin/arm-linux-gnueabi-gcc
+SHOBJ_CFLAGS = -fPIC
+SHOBJ_LD = ${CC}
+SHOBJ_LDFLAGS = -shared -Wl,-soname,$@
+SHOBJ_XLDFLAGS = 
+SHOBJ_LIBS = 
+
+Name: bash
+Description: Bash headers for bash loadable builtins
+Version: 4.4-release
+Url: 
+Libs: ${SHOBJ_LIBS}
+Cflags: ${SHOBJ_CFLAGS} ${CCFLAGS} -I${headersdir} -I${headersdir}/builtins -I${headersdir}/include

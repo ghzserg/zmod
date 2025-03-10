@@ -1,0 +1,87 @@
+Suggerimento: Ctrl-x t per copiare i nomi di file selezionati nella linea di comando.
+
+Suggerimento: Ctrl-x p per copiare il percorso attuale nella linea di comando.
+
+Suggerimento: Completamento: M-Tab (o Esc+Tab). Due volte per ottenere la lista.
+
+Suggerimento: M-p e M-n per accedere alla storia dei comandi.
+
+Suggerimento: Quotare un carattere? Ctrl-q seguito dal carattere.
+
+Suggerimento: Disattivare questi messaggi? Opzioni/menu di Layout/ barra aiuti.
+
+Suggerimento: Selezionare cartelle: aggiungere una barra dopo i caratteri di confronto.
+
+Suggerimento: Se nel terminale mancano i tasti di funzione, utilizzare la sequenza ESC+numero.
+
+Suggerimento: La pagina principale su Internet di GNU Midnight Commander é: https://www.midnight-commander.org
+
+Suggerimento: Inviare i rapporti d'errore a mc-devel@lists.midnight-commander.org
+
+Suggerimento: Tab modifica il pannello corrente.
+
+Suggerimento: La forza dei VFS: Invio su un tar file permette di esaminarne il contenuto.
+
+Suggerimento: Abbiamo anche un bel manuale manpage.
+
+Suggerimento: Si vuole una navigazione stile Lynx? Basta settarla in Opzioni/Configurazione/movimenti tipo Lynx.
+
+Suggerimento: le % macro funzionano anche nella linea di comando.
+
+Suggerimento: M-! permette l'esecuzione di programmi avendo mostrato l'output nel visualizzatore.
+
+Suggerimento: Il formato di visualizzazione dei documenti è personalizzabile; "man mc" per i dettagli
+
+Suggerimento: %D/%T espande i documenti selezionati nella cartella opposta.
+
+Suggerimento: Si vuole la shell intera? Ctrl-o, e ancora Ctrl-o per tornare a mc.
+
+Suggerimento: Impostare la variabile CDPATH permette di salvare la sequenza di tasti premuti nei comandi cd.
+
+Suggerimento: Se si vogliono vedere i propri file .*, specificarlo nel menù Opzioni/Configurazione.
+
+Suggerimento: Se si vogliono vedere i propri file di backup *~, specificarlo nel menù Opzioni/Configurazione.
+
+Suggerimento: Il completamento funziona su tutte le righe di immissione, in tutti i menù. Basta premere M-Tab.
+
+Suggerimento: L'opzione -s aiuta con i terminali lenti.
+
+Suggerimento: Trovare documento: è possibile lavorare sui documenti trovati tramite il pulsante Pannellizza.
+
+Suggerimento: Si vogliono eseguire ricerche complicate? Usare il comando Pannellizza Esternamente.
+
+Suggerimento: Per cambiare la cartella attuale mentre si sta componendo un comando: M-c (cd rapido).
+
+Suggerimento: I comandi della shell non sono disponibili in un file-system non locale.
+
+Suggerimento: Riprendere del testo con Ctrl-y.
+
+Suggerimento: Qualche tasto non funziona? Guarda Opzioni/Impara tasti.
+
+Suggerimento: Per leggere l'output del comando nel visualizzatore usare M-!.
+
+Suggerimento: F13 (o Shift-F13) invoca il visualizzatore in modalità base.
+
+Suggerimento: Si può specificare l'editor richiamabile con F4, tramite la variabile d'ambiente EDITOR.
+
+Suggerimento: Si può specificare il visualizzatore esterno tramite le variabili d'ambiente VIEWER o PAGER.
+
+Suggerimento: È possibile disabilitare tutte le richieste di conferma
+
+Suggerimento: Si può saltare verso cartelle usate frequentemente mediante Ctrl-\.
+
+Suggerimento: È possibile creare una connessione FTP anonima con mc digitando 'cd ftp://host.edu'.
+
+Suggerimento: L'FTP è implementato in mc nel menu DESTRO/SINISTRO/FTP Link.
+
+Suggerimento: M-t modifica velocemente la modalità di lista.
+
+Suggerimento: È possibile specificare il nome utente per una sessione FTP: 'cd ftp://utente@host.edu'.
+
+Suggerimento: È possibile vedere il contenuto di un file RPM mediante Invio.
+
+Suggerimento: Per segnare delle cartelle nel riquadro di selezione, appendere una barra.
+
+Suggerimento: per utilizzare il mouse per il taglia e incolla premere il tasto Shift.
+
+Suggerimento: Per richiamare la lista degli indirizzi FTP più utilizzati: Ctrl-\.

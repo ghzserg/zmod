@@ -1,0 +1,7 @@
+# Kensington Orbit claims to have a middle button, same for
+[Kensington Orbit Scroll Wheel]
+MatchBus=usb
+MatchVendor=0x047d
+MatchProduct=0x2048
+ModelTrackball=1
+AttrEventCodeDisable=BTN_MIDDLE

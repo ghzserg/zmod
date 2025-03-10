@@ -1,0 +1,9 @@
+ACTION!="add|change", GOTO="libinput_device_group_end"
+KERNEL!="event[0-9]*", GOTO="libinput_device_group_end"
+
+ATTRS{phys}=="?*", \
+	ENV{LIBINPUT_DEVICE_GROUP}=="", \
+	PROGRAM="libinput-device-group %S%p", \
+	ENV{LIBINPUT_DEVICE_GROUP}="%c"
+
+LABEL="libinput_device_group_end"

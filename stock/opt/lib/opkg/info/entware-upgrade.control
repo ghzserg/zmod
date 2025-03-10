@@ -1,0 +1,12 @@
+Package: entware-upgrade
+Version: 1.0-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/rtndev/entware-upgrade
+SourceName: entware-upgrade
+Section: base
+SourceDateEpoch: 1708601332
+Maintainer: Entware team, https://entware.net
+Architecture: all
+Installed-Size: 10240
+Description:  Helper package to upgrade Entware for future usage. Currently used to upgrade
+ armv7soft (2.3.36) to the new codebase.

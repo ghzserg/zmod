@@ -1,0 +1,3 @@
+#!/bin/sh
+umount -l /mnt/sdcard/$MDEV*
+rm -rf /mnt/sdcard/$MDEV*

@@ -1,0 +1,17 @@
+Package: libslang2
+Version: 2.3.3-2
+Depends: libc, libssp, librt, libpthread, terminfo
+Source: feeds/packages/libs/slang2
+SourceName: slang
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1716287455
+URL: https://www.jedsoft.org/slang/
+Maintainer: Jeffery To <jeffery.to@gmail.com>
+Architecture: armv7-3.2
+Installed-Size: 1320960
+Description:  Multi-platform programmer's library providing facilities for interactive
+ applications. Includes such things as display/screen management,
+ keyboard input, keymaps, etc. Includes the embeddable S-Lang
+ interpreter.

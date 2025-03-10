@@ -1,0 +1,14 @@
+Package: terminfo
+Version: 6.4-3
+Depends: libc, libssp, librt, libpthread
+Source: feeds/base/libs/ncurses
+SourceName: ncurses
+License: MIT
+LicenseFiles: README
+Section: libs
+SourceDateEpoch: 1720598025
+URL: http://www.gnu.org/software/ncurses/
+CPE-ID: cpe:/a:gnu:ncurses
+Architecture: armv7-3.2
+Installed-Size: 61440
+Description:  Terminal Info Database (ncurses)

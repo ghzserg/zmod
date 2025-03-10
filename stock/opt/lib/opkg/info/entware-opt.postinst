@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ -e /opt/bin/busybox ] && exit 0
+
+for fw_cmd in sbin/ifconfig sbin/route sbin/ip bin/netstat bin/sh bin/ash; do
+    if [ -f /$fw_cmd ] && [ ! -f /opt/$fw_cmd ]; then
+	ln -s /$fw_cmd /opt/$fw_cmd
+    fi
+done

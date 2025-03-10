@@ -1,0 +1,3 @@
+#!/bin/sh
+
+grep -q "^export TERMINFO" /opt/etc/profile || echo "export TERMINFO=/opt/share/terminfo" >> /opt/etc/profile

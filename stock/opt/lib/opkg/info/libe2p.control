@@ -1,0 +1,15 @@
+Package: libe2p
+Version: 1.47.0-2
+Depends: libc, libssp, librt, libpthread, libuuid
+Source: feeds/base/utils/e2fsprogs
+SourceName: e2fsprogs
+License: GPL-2.0
+LicenseFiles: NOTICE
+Section: libs
+SourceDateEpoch: 1720778201
+URL: http://e2fsprogs.sourceforge.net/
+CPE-ID: cpe:/a:e2fsprogs_project:e2fsprogs
+Architecture: armv7-3.2
+Installed-Size: 40960
+Description:  This package contains libe2p, ext2fs userspace programs utility library
+ bundled with e2fsprogs.

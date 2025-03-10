@@ -1,0 +1,4 @@
+# Automatically load the proper keymaps after the Remote Controller device
+# creation.  The keycode tables rules should be at /etc/rc_maps.cfg
+
+ACTION=="add", SUBSYSTEM=="input", SUBSYSTEMS=="rc", KERNEL=="event*", ENV{.rc_sysdev}="$id", RUN+="/usr/bin/ir-keytable -a /etc/rc_maps.cfg -s $env{.rc_sysdev}"

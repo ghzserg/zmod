@@ -1,0 +1,6 @@
+# Aliases for symbols, used by symbol_request().
+alias symbol:xradio_etf_to_wlan xr819s
+alias symbol:crypto_sha1_finup sha1_generic
+alias symbol:sha1_zero_message_hash sha1_generic
+alias symbol:crypto_sha1_update sha1_generic
+alias symbol:md5_zero_message_hash md5

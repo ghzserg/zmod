@@ -1,0 +1,16 @@
+Package: libmbedtls
+Version: 3.6.0-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/base/libs/mbedtls
+SourceName: mbedtls
+License: GPL-2.0-or-later
+LicenseFiles: gpl-2.0.txt
+Section: libs
+SourceDateEpoch: 1720598025
+URL: https://tls.mbed.org
+CPE-ID: cpe:/a:arm:mbed_tls
+Architecture: armv7-3.2
+Installed-Size: 532480
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the mbedtls library.

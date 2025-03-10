@@ -1,0 +1,16 @@
+/opt/share/terminfo/t/tmux-256color
+/opt/share/terminfo/a/ansi
+/opt/share/terminfo/d/dumb
+/opt/share/terminfo/r/rxvt
+/opt/share/terminfo/r/rxvt-unicode
+/opt/share/terminfo/x/xterm-utf8
+/opt/share/terminfo/x/xterm-256color
+/opt/share/terminfo/l/linux
+/opt/share/terminfo/v/vt100
+/opt/share/terminfo/v/vt102
+/opt/share/terminfo/x/xterm-color
+/opt/share/terminfo/x/xterm
+/opt/share/terminfo/a/alacritty
+/opt/share/terminfo/s/screen-256color
+/opt/share/terminfo/s/screen
+/opt/share/terminfo/t/tmux

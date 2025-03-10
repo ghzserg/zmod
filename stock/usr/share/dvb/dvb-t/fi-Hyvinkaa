@@ -1,0 +1,18 @@
+# 2014-04-18 Antti Palosaari <crope@iki.fi>
+# generated from http://www.digita.fi/kuluttajat/tv/nakyvyysalueet/kanavanumerot_ja_taajuudet
+
+[Hyvinkaa-A]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 538000000
+	BANDWIDTH_HZ = 8000000
+
+[Hyvinkaa-C]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 530000000
+	BANDWIDTH_HZ = 8000000
+
+[Hyvinkaa-E]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 610000000
+	BANDWIDTH_HZ = 8000000
+

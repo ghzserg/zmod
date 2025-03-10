@@ -1,0 +1,14 @@
+Package: libintl-full
+Version: 0.22.5-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/base/libs/gettext-full
+SourceName: gettext-full
+License: GPL-3.0-or-later
+Section: libs
+SourceDateEpoch: 1720598025
+URL: http://www.gnu.org/software/gettext/
+CPE-ID: cpe:/a:gnu:gettext
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: armv7-3.2
+Installed-Size: 61440
+Description:  GNU Internationalization library

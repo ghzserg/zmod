@@ -1,0 +1,52 @@
+#!/bin/sh
+
+MAC=`cat /etc/MAC`
+ifconfig eth0 hw ether $MAC
+
+# Start all init scripts in /etc/init.d
+# executing them in numerical order.
+#
+for i in /etc/init.d/S??* ;do
+
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+
+     case "$i" in
+	*.sh)
+	    # Source shell script for speed.
+	    (
+		trap - INT QUIT TSTP
+		set start
+		. $i
+	    )
+	    ;;
+	*)
+	    # No sh extension, so fork subprocess.
+	    $i start
+	    ;;
+    esac
+done
+
+#echo /sbin/mdev > /proc/sys/kernel/hotplug
+#mdev -s
+
+/etc/adb_conf.sh start &
+
+tinymix set "ADC3 Input MIC3 Boost Switch" 1 > /dev/null
+tinymix set "HpSpeaker Switch" 1 > /dev/null
+tinymix set "Headphone Switch" 1 > /dev/null
+
+if [ ! -f "/usr/lib/libcrypto.so.1.0.0" ]; then
+    ln -s /usr/lib/libcrypto.so.1.1 /usr/lib/libcrypto.so.1.0.0
+fi
+
+if [ ! -f "/usr/lib/libssl.so.1.0.0" ]; then
+    ln -s /usr/lib/libssl.so.1.1 /usr/lib/libssl.so.1.0.0
+fi
+
+#. /etc/qtenv.sh && Launcher &
+
+
+/opt/auto_run.sh &
+
+

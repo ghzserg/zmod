@@ -1,0 +1,10 @@
+prefix=/home/zhanglei/flashforge/bsp/S3BSP-EMMC/tslib-1.12/tmp
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: tslib
+Description: Touchscreen Access Library
+Version: 1.12
+Libs: -L${libdir} -lts
+Cflags: -I${includedir}

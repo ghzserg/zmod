@@ -1,0 +1,12 @@
+Package: entware-opt
+Version: 227000-3
+Depends: libc, libssp, librt, libpthread, libgcc, libstdcpp, libpthread, librt, entware-release, zoneinfo-asia, zoneinfo-europe, findutils, terminfo, locales, opkg, entware-upgrade
+Conflicts: opt-ndmsv2
+Source: feeds/rtndev/entware-opt
+SourceName: entware-opt
+Section: base
+SourceDateEpoch: 1708601332
+Maintainer: Entware team, https://entware.net
+Architecture: all
+Installed-Size: 30720
+Description:  entware-opt is a metapackage to install Entware basic libraries and scripts.

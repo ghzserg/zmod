@@ -1,0 +1,12 @@
+Package: libstdcpp
+Version: 8.4.0-11
+Source: feeds/base/libs/toolchain
+SourceName: toolchain
+License: GPL-3.0-with-GCC-exception
+Section: libs
+SourceDateEpoch: 1600326586
+URL: http://gcc.gnu.org/
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: armv7-3.2
+Installed-Size: 1044480
+Description:  GNU Standard C++ Library v3

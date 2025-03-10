@@ -1,0 +1,6 @@
+[[protocols]]
+name = "az6027"
+protocol = "unknown"
+[protocols.scancodes]
+0x01 = "KEY_1"
+0x02 = "KEY_2"

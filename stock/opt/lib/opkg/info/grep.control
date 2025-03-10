@@ -1,0 +1,18 @@
+Package: grep
+Version: 3.11-1
+Depends: libc, libssp, librt, libpthread, libpcre2
+Alternatives: 300:/opt/bin/egrep:/opt/libexec/egrep-gnu, 300:/opt/bin/fgrep:/opt/libexec/fgrep-gnu, 300:/opt/bin/grep:/opt/libexec/grep-gnu
+Source: feeds/packages/utils/grep
+SourceName: grep
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1716287455
+URL: https://www.gnu.org/software/grep/
+CPE-ID: cpe:/a:gnu:grep
+Maintainer: Julen Landa Alustiza <julen@zokormazo.info>
+Architecture: armv7-3.2
+Installed-Size: 215040
+Description:  The grep command searches one or more input files for lines
+ containing a match to a specified pattern. By default, grep
+ prints the matching lines.

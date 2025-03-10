@@ -1,0 +1,14 @@
+Package: libgmp
+Version: 6.3.0-1
+Depends: libc, libssp, librt, libpthread
+Source: feeds/base/libs/gmp
+SourceName: gmp
+License: GPL-2.0-or-later
+Section: libs
+SourceDateEpoch: 1707310794
+URL: http://gmplib.org/
+CPE-ID: cpe:/a:gmplib:gmp
+Architecture: armv7-3.2
+Installed-Size: 399360
+Description:  GMP is a free library for arbitrary precision arithmetic, operating on
+ signed integers, rational numbers, and floating point numbers.

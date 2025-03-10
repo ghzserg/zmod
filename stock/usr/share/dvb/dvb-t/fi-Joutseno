@@ -1,0 +1,28 @@
+# 2014-04-18 Antti Palosaari <crope@iki.fi>
+# generated from http://www.digita.fi/kuluttajat/tv/nakyvyysalueet/kanavanumerot_ja_taajuudet
+
+[Joutseno-A]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 682000000
+	BANDWIDTH_HZ = 8000000
+
+[Joutseno-B]
+	DELIVERY_SYSTEM = DVBT2
+	FREQUENCY = 658000000
+	BANDWIDTH_HZ = 8000000
+
+[Joutseno-C]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 594000000
+	BANDWIDTH_HZ = 8000000
+
+[Joutseno-E]
+	DELIVERY_SYSTEM = DVBT
+	FREQUENCY = 562000000
+	BANDWIDTH_HZ = 8000000
+
+[Joutseno-F]
+	DELIVERY_SYSTEM = DVBT2
+	FREQUENCY = 634000000
+	BANDWIDTH_HZ = 8000000
+

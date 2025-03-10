@@ -1,0 +1,57 @@
+# GStreamer
+# Copyright (C) 2015 Mathieu Duponchelle <mathieu.duponchelle@opencreed.com>
+#
+# bash/zsh completion support for common gstreamer options
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Library General Public
+# License as published by the Free Software Foundation; either
+# version 2 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# Library General Public License for more details.
+#
+# You should have received a copy of the GNU Library General Public
+# License along with this library; if not, write to the
+# Free Software Foundation, Inc., 51 Franklin St, Fifth Floor,
+# Boston, MA 02110-1301, USA.
+
+_GST_HELPER="/usr/libexec/gstreamer-1.0/gst-completion-helper"
+if [[ ! -x "$_GST_HELPER" ]]
+then
+        helper="$(pkg-config --variable=helpersdir gstreamer-1.0)/gst-completion-helper"
+
+        if [ -x "$helper" ]
+        then
+          _GST_HELPER=$helper
+        fi
+fi
+
+___gst_debug_level () { _gst_mandatory_argument; }
+___gst_debug () { _gst_mandatory_argument; }
+___gst_debug_color_mode () { _gst_mandatory_argument; }
+___gst_plugin_path () { _gst_mandatory_argument; }
+___gst_plugin_load () { _gst_mandatory_argument; }
+
+_gst_all_arguments ()
+{
+	COMPREPLY=( $(compgen -W "$($1 --help-all | grep "^  -" | grep -oh '[[:graph:]]*--[[:graph:]]*\|-[[:alpha:]],' | cut -d'=' -f1 | cut -d',' -f1)" -- $cur) )
+}
+
+_gst_mandatory_argument ()
+{
+	__app=$1
+	if [[ -z $__app ]]
+	then
+		__app=gst-launch-1.0
+	fi
+
+	if [[ "$prev" != "$command" ]]
+	then
+		_gst_all_arguments $__app
+	else
+		COMPREPLY=("$cur")
+	fi
+}

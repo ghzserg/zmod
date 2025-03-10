@@ -1,0 +1,15 @@
+Package: glib2
+Version: 2.80.3-1
+Depends: libc, libssp, librt, libpthread, libiconv-full, libintl-full, zlib, libpthread, libffi, libattr, libpcre2
+Source: feeds/packages/libs/glib2
+SourceName: glib2
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1720611845
+URL: http://www.gtk.org/
+CPE-ID: cpe:/a:gnome:glib
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: armv7-3.2
+Installed-Size: 3112960
+Description:  The GLib library of C routines

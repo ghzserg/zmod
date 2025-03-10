@@ -1,0 +1,87 @@
+Consell: Empreu «Ctrl-x» per a copiar els fitxers marcats a la línia d'ordres.
+
+Consell: Empreu «Ctrl-x» per a copiar tot el camí a la línia d'ordres.
+
+Consell: Compleció: empreu «M-Tab» (o «Esc+Tab»). Dues vegades per a mostrar una llista.
+
+Consell: Empreu «M-p» i «M-n» per accedir a l'historial de les ordres.
+
+Consell: Us cal un caràcter especial? Empreu «Ctrl-q» i el caràcter.
+
+Consell: Cansat d'aquests missatges? Es treuen des del menú «Opcions/Format».
+
+Consell: Seleccionar directoris: afegiu «/» al final del patró de coincidència.
+
+Consell: Si no funcionen les tecles de funció, empreu la seqüència «ESC+número».
+
+Consell: La pàgina inicial del Midnight Commander de GNU és https://www.midnight-commander.org
+
+Consell: Si us plau, envieu qualsevol informe d'error a «mc-devel@lists.midnight-commander.org».
+
+Consell: El tabulador canvia de plafó.
+
+Consell: El millor VFS: toqueu «Retorn» en un fitxer TAR per examinar el seu contingut.
+
+Consell: També tenim una bona pàgina de manual.
+
+Consell: Voleu navegar a l'estil del Lynx? Establiu-ho al diàleg de configuració.
+
+Consell: Les macros amb % funcionen fins i tot a la línia d'ordres.
+
+Consell: Amb «M-!» podreu executar programes i veure la sortida en el visor.
+
+Consell: El format del llistat es pot personalitzar, per a més detalls feu «man mc».
+
+Consell: %D/%T representa els fitxers marcats al directori oposat.
+
+Consell: Voleu un intèrpret d'ordres pla? Premeu «Ctrl-o», el mateix per tornar al MC.
+
+Consell: Establint la variable CDPATH podreu estalviar pulsacions de teclat en les ordres «cd».
+
+Consell: Si voleu veure els fitxers «.*», digueu-ho al diàleg de configuració.
+
+Consell: Voleu veure els fitxers de còpia de seguretat «.~»? Establiu-ho al diàleg de configuració.
+
+Consell: La compleció funciona en totes les línies d'entrada en tots els diàlegs. Simplement premeu «M-Tab».
+
+Consell: En terminals lents, l'indicador «-s» pot ajudar.
+
+Consell: Trobar fitxers: podeu treballar en trobar fitxers amb el botó «Quadre de cerca».
+
+Consell: Voleu fer cerques complexes? Empreu l'ordre «Quadre de cerca externa».
+
+Consell: Canvieu a meitat de camí del directori escrivint una ordre, empreu «M-c» («cd» ràpid).
+
+Сonsell: Les ordres de l'intèrpret d'ordres no funcionaran quan s'està en un sistema de fitxers no local.
+
+Consell: Recupereu el text esborrat amb «Ctrl-y».
+
+Consell: Alguna de les tecles no funciona? Mireu «Opcions/Aprendre les tecles».
+
+Consell: Mireu la sortida d'una ordre al visor, empreu «M-!».
+
+Consell: «F13» (o «Maj-F3») invocareu el visor en el mode sense format.
+
+Consell: Podeu especificar l'editor per a «F4» amb la variable d'entorn EDITOR.
+
+Consell: Podeu especificar el visor extern amb la variable d'entorn VIEWER o PAGER.
+
+Consell: Podeu inhabilitar tots els missatges de confirmació a «Opcions/Confirmació».
+
+Consell: Aneu als directoris emprats sovint amb «Ctrl-\».
+
+Consell: Podeu fer FTP anònim amb mc escrivint «cd ftp://màquina.edu».
+
+Consell: L'FTP està integrat al Midnight Commander, comproveu el menú «Fitxer/Enllaç FTP».
+
+Consell: «M-t» canvia ràpidament entre els modes de llistat.
+
+Consell: Podeu especificar el nom d'usuari quan feu FTPS: «cd ftp://usuari@màquina.domini»
+
+Consell: Podeu navegar pels fitxers RPM prement «Retorn» a sobre d'un fitxer RPM.
+
+Consell: Per a marcar directoris al diàleg de selecció, afegiu-l'hi un «/».
+
+Consell: Per a tallar i enganxar amb el ratolí, podria requerir mantenir premuda la tecla «Maj».
+
+Consell: Els FTP visitats sovint es poden desar a Favorits: escriviu «Ctrl-\».

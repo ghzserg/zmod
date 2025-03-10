@@ -1,0 +1,18 @@
+Package: libmpfr
+Version: 4.2.1-1
+Depends: libc, libssp, librt, libpthread, libgmp
+Source: feeds/base/libs/mpfr
+SourceName: mpfr
+License: LGPL-3.0-or-later
+LicenseFiles: COPYING.LESSER
+Section: libs
+SourceDateEpoch: 1707305462
+URL: https://www.mpfr.org/
+CPE-ID: cpe:/a:mpfr:gnu_mpfr
+Maintainer: Jeffery To <jeffery.to@gmail.com>
+Architecture: armv7-3.2
+Installed-Size: 419840
+Description:  MPFR is a portable library written in C for arbitrary precision
+ arithmetic on floating-point numbers. It is based on the GNU MP library.
+ It aims to provide a class of floating-point numbers with precise
+ semantics.

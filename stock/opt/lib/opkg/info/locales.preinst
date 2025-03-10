@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -x '/opt/bin/locale.new' ] && [ -z "$(/opt/bin/locale.new -V | grep 2.27)" ]; then
+	echo 'locale-archive needs upgrade, deleting old one.'
+	rm -f /opt/usr/lib/locale/locale-archive
+fi
+exit 0

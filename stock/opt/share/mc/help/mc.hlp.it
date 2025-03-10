@@ -1,0 +1,1787 @@
+[Contents]
+Indice degli argomenti:
+
+  OPZIONIDESCRIPTION
+  PanoramicaOverview
+  Supporto mouseMouse Support
+
+  TastiKeys
+    Tasti variMiscellaneous Keys
+    Pannelli directoryDirectory Panels
+    Quick searchQuick search
+    Shell a riga di comandoShell Command Line
+    Tasti generali di movimentoGeneral Movement Keys
+    Tasti di riga di ingressoInput Line Keys
+
+  Barra dei menuMenu Bar
+    Menu sinistra e destra (sopra e sotto)Left and Right Menus
+      Modalità lista...Listing Format...
+      Ordina per...Sort Order...
+      Filtro...Filter...
+      RicaricaReread
+    Menu fileFile Menu
+      Cambia dir veloceQuick cd
+    Menu comandoCommand Menu
+      Albero directoryDirectory Tree
+      Trova fileFind File
+      Pannellizza comandoExternal panelize
+      Directory favoriteHotlist
+      Modifica file estensioniEdit Extension File
+      Processi in backgroundBackground jobs
+      Modifica file menuEdit Menu File
+    Menu opzioniOptions Menu
+      ConfigurazioneConfiguration
+      AspettoLayout
+      ConfermeConfirmation
+      Mostra bitDisplay bits
+      Impara tastiLearn keys
+      FS virtuale Virtual FS
+      Salva configurazioneSave Setup
+
+  Esecuzione comandi del sistema operativoExecuting operating system commands
+    Il comando cd internoThe cd internal command
+    Sostituzione di macroMacro Substitution
+    Supporto alla subshellThe subshell support
+  PermessiChmod
+  ProprietarioChown
+  Proprietario avanzatoAdvanced Chown
+  Operazioni sui fileFile Operations
+  Maschera Copia/RinominaMask Copy/Rename
+  Visualizzatore di file internoInternal File Viewer
+  Editor di file internoInternal File Editor
+  CompletamentoCompletion
+  File system virtualeVirtual File System
+    File system FTPFTP File System
+    File system TarTar File System
+    Trasferimento di file su FIlesystem di SHell (FISH)FIle transfer over SHell filesystem
+    Recupero file cancellatiUndelete File System
+    EXTernal File SystemEXTernal File System
+  ColoriColors
+  Impostazioni specialiSpecial Settings
+  Database di terminaliTerminal databases
+
+  FILEFILES
+  REPERIBILITA'AVAILABILITY
+  VEDERE ANCHESEE ALSO
+  AUTORIAUTHORS
+  BACHIBUGS
+  LicenzaLicenza
+  Finestre di dialogo di richiesta datiQueryBox
+  Come usare la guida interattivaHow to use help
+[DESCRIPTION]
+DESCRIZIONE
+
+Il Midnight Commander è un file manager per sistemi operativi di tipo Unix.
+OPTIONS
+
+OPZIONI
+
+
+"-a"    Disabilita l'uso dei caratteri grafici per il disegno delle linee.
+
+"-b"    Forza la visualizzazione in bianco e nero.
+
+"-c"    Forza la modalità colore; consultare la sezione coloriColors per ulteriori informazioni.
+
+"-C arg"
+        Usato per specificare un set di colori differente a riga di comando. Il formato di arg è documentato nella sezione coloriColors.
+
+"-d"    Disabilita il supporto mouse.
+
+"-e [file]"
+        Esegue l'editor interno. Se il file viene specificato, lo apre alla partenza. Vedere anche mcedit (1).
+
+"-f"    Mostra i percorsi di ricerca compilati per i file del Midnight Commander.
+
+"-k"    Reimposta i softkeys ai valori predefiniti dal database termcap/terminfo. Utile solo su terminali HP quando non vanno i tasti funzione.
+
+"-l file" 
+        Salva il dialogo ftpfs con il server in file.
+
+"-P file"
+        Quest'opzione indica al Midnight Commander di stampare l'ultima directory di lavoro sul file specificato. Questa funzione non è fatta per un uso diretto, ma dovrebbe essere utilizzata da una speciale funzione shell che imposti automaticamente l'ultima directory corrente della shell come l'ultima directory in cui stava il Midnight Commander. Prelevate i file /opt/lib/mc/mc.sh (utenti bash e zsh) o rispettivamente /opt/lib/mc/mc.csh (utenti tcsh) per definire mc come un alias allo script di shell appropriato.
+
+"-s"    Abilita il modo terminale lento, in questa modalità il programma non disegna le linee e disabilita la modalità prolissa.
+
+"-t"    Usata solo se il codice è stato compilato con S-Lang e terminfo: fa in modo che il Midnight Commander usi il valore della variabile TERMCAP per le informazioni sul terminale invece delle informazioni di sistema sul database terminali.
+
+"-u"    Disabilita l'uso della shell concorrente (ha senso solo se il Midnight Commander è stato compilato con il supporto per la shell concorrente).
+
+"-U"    Abilita l'uso della shell concorrente (ha senso solo se il Midnight Commander è stato compilato con il supporto per la shell concorrente impostato come una caratteristica opzionale).
+
+"-v file"
+        Lancia il visualizzatore interno per il file specificato.
+
+"-V"    Mostra la versione del programma.
+
+"-x"    Forza la modalità xterm. Usata quando è in funzione su terminali abilitati-xterm (due modalità video e in grado di spedire sequenze mouse di escape).
+
+-X, --no-x11
+        Do not use X11 to get the state of modifiers Alt, Ctrl, Shift
+
+-g, --oldmouse
+        Force a "normal tracking" mouse mode. Used when running on xterm-capable terminals (tmux/screen).
+
+Se specificato, il primo percorso è la directory mostrata nel pannello selezionato; il secondo è la directory mostrata nell'altro pannello.[Overview]
+Panoramica
+
+Lo schermo del Midnight Commander è diviso in quattro parti. Quasi tutto lo spazio è occupato dai due pannelli directory. Come impostazione predefinita la seconda riga dal fondo è la riga di comando, mentre quella in basso mostra le etichette dei tasti funzione. La riga più in alto è la riga dei menuMenu Bar. La barra dei menu può essere invisibile, ma compare se clicchi la riga più in alto con il mouse o se premi il tasto F9.
+
+Il Midnight Commander fornisce la vista di due directory contemporaneamente. Uno dei due pannelli è quello corrente (la barra di selezione è presente solo in questo). Quasi tutte le operazioni hanno luogo nel pannello corrente. Alcune azioni come Rinomina e Copia usano la directory del pannello non selezionato come valore predefinito di destinazione (ma si richiede sempre una conferma prima). Per informazioni aggiuntive, vedere le sezioni sui pannelli directoryDirectory Panels, i menu sinistra e destraLeft and Right Menus e menu fileFile Menu.
+
+E' possibile eseguire comandi di sistema dal Midnight Commander semplicemente battendoli. Ogni cosa scritta apparirà sulla riga di comando e quando si preme l'invio il Midnight Commander eseguirà la riga di comando appena battuta; leggere le sezioni shell a riga di comandoShell Command Line e tasti della riga di ingressoInput Line Keys per saperne di più sulla riga di comando.[Mouse Support]
+Supporto mouse
+
+Il Midnight Commander è fornito di supporto mouse. Esso viene attivato ogniqualvolta lo si esegue in un terminale xterm(1) (funziona anche se si fa una connessione telnet, ssh o rlogin con un'altra macchina da un xterm) o se sta funzionando su una console Linux e si ha il mouse server gpm in funzione.
+
+Quando si fa clic con il tasto sinistro in un file nel pannello directory, il file viene selezionato; se si fa clic con il tasto destro il file viene marcato (o smarcato, a seconda dello stato precedente).
+
+Se il file è un programma eseguibile, il doppio clic su di esso lo eseguirà altrimenti se il file estensioniEdit Extension File ha un programma specifico per quell'estensione del file, il suddetto programma verrà eseguito.
+
+E' anche possibile eseguire i comandi assegnati ai tasti funzione cliccando sulle etichette dei tasti.
+
+Se un tasto del mouse viene premuto sulla riga in cima al pannello directory, il pannello sfoglia di una pagina in alto. Allo stesso modo, un clic sulla riga in basso provocherà un cambio di pagina in basso. Questo metodo dei bordi funziona anche nel visualizzatore dell'aiutoContents e nell' albero directoryDirectory Tree.
+
+L'auto ripetizione predefinita per il mouse è di 400 millisecondi. Questo valore può essere cambiato modificando il file ~/.config/mc/iniSave Setup e cambiando il parametro mouse_repeat_rate.
+
+Se il Commander sta funzionando con il supporto mouse, si può saltarlo ed ottenere il funzionamento del mouse normale (taglia e incolla di testo) tenendo premuto il tasto Maiuscole.
+
+[Keys]
+Tasti
+
+Alcuni comandi nel Midnight Commander presuppongono l'uso dei tasti Control (talvolta chiamato CTRL o CTL) e Meta (talvolta chiamato ALT o anche Compose). In questo manuale si utilizzeranno le seguenti abbreviazioni:
+
+C-<chr> significa premere il tasto control mentre si batte il carattere <chr>. Perciò C-f sarà: premi e tieni premuto il tasto Control e premi f.
+
+M-<chr> significa premere il tasto Meta o Alt mentre si batte <chr>. Se non c'è un tasto Meta o Alt, premere ESC, rilasciarlo, poi premere il carattere <chr>.
+
+S-<chr> significa premere il tasto Maiuscole mentre si batte il carattere <chr>.
+
+Tutte le linee di ingresso nel Midnight Commander usano un'approssimazione dei tasti usati dall'editor GNU Emacs.
+
+Ci sono molte sezioni che parlano dei tasti. Le seguenti sono le più importanti.
+
+La sezione menu fileFile Menu documenta le abbreviazioni di tasti per i comandi che appaiono nel menu file. Questa sezione include i tasti funzione. Molti di questi comandi lavorano sui file selezionati o sui file marcati.
+
+La sezione pannelli directoryDirectory Panels documenta i tasti che selezionano o marcano i file come oggetto per una seguente azione (l'azione normalmente deriva dal menu file).
+
+La sezione shell a riga di comandoShell Command Line elenca i tasti utilizzati per immettere e modificare linee di comando. Molti di questi copiano nomi di file o altro dal pannello directory alla riga di comando (per evitare troppo lavoro di battitura) o per accedere alla cronologia comandi.
+
+I tasti della riga di ingressoInput Line Keys sono usati per modificare le righe di ingresso. Cioè sia la riga di comando che le righe di ingresso nelle finestre di interrogazione.[Miscellaneous Keys]
+Tasti vari
+
+Qua ci sono alcuni tasti che non sono classificabili in nessuna delle altre categorie:
+
+Invio   se c'è del testo nella riga di comando (quella in fondo ai pannelli), allora quel comando viene eseguito. Se non c'è testo nella riga di comando allora se la barra di selezione è sopra una directory il Midnight Commander esegue un chdir(2) alla directory selezionata e ricarica le informazioni sul pannello; se la selezione è un file eseguibile allora esso viene eseguito. Per ultimo, se l'estensione del file selezionato corrisponde ad una delle estensioni presenti nel file estensioniEdit Extension File, il comando corrispondente viene eseguito.
+
+C-l     ridisegna tutto nel Midnight Commander.
+
+C-x c   esegue il comando chmodChmod su un file o su un gruppo di file marcati.
+
+C-x o   esegue il comando chownChown sul file corrente o sui file marcati.
+
+C-x l   crea un collegamento.
+
+C-x s   crea un collegamento simbolico.
+
+C-x i   imposta la modalità della visualizzazione dell'altro pannello a informazioni.
+
+C-x q   imposta la modalità della visualizzazione dell'altro pannello a vista rapida.
+
+C-x !   esegue il comando pannellizza comandoExternal panelize.
+
+C-x h   esegue il comando aggiungi directory alla lista directory favoriteHotlist.
+
+M-!     esegue il comando vista filtrata, descritto in visualizzatore di file internoInternal File Viewer.
+
+M-?     esegue il comando trova fileFind File.
+
+M-c     mostra la finestra cambia dir veloceQuick cd.
+
+C-o     quando il programma viene eseguito in una console Linux o FreeBSD o in un xterm, mostrerà il risultato del comando precedente. Eseguito in console Linux, il Midnight Commander usa un programma esterno (cons.saver) per gestire il salvataggio e recupero delle informazioni sullo schermo.
+
+Se è stato compilato il supporto alla subsell, è possibile premere C-o in ogni momento per tornare alla schermata principale del Midnight Commander; per tornare all'applicazione basta premere C-o. Se si ha un'applicazione sospesa usando questo trucco, non si sarà in grado di eseguire altri programmi dal Midnight Commander finché non si terminerà l'applicazione sospesa.[Directory Panels]
+Pannelli directory
+
+Questa sezione elenca i tasti che operano sui pannelli directory. Se si desidera sapere come cambiare la visualizzazione dei pannelli, date un'occhiata alla sezione su menu sinistra e destraLeft and Right Menus.
+
+Tab, C-i
+        cambia il pannello corrente. L'altro pannello diventa il nuovo pannello corrente mentre il pannello corrente diventa l'altro pannello. La barra di selezione si sposta dal vecchio pannello al nuovo corrente.
+
+Ins, C-t
+        DEPRECATED! per marcare i file si può usare il tasto di Inserimento (la sequenza teminfo kich1) o la sequenza C-t (Control-t). Per smarcare i file basta marcare un file già marcato.
+
+Insert, C-t
+        to tag files you may use the Insert key (the kich1 terminfo sequence). To untag files, just retag a tagged file.
+
+M-e     to change charset of panel you may use M-e (Alt-e). Recoding is made from selected codepage into system codepage. To cancel the recoding you may select "directory up" (..) in active panel. To cancel the charsets in all directories, select "No translation " in the dialog of encodings.
+
+M-g, M-r, M-j
+        usato per selezionare rispettivamente il file superiore, il file centrale o quello inferiore in un pannello.
+
+M-t     cambia il modo di visualizzazione corrente per mostrare la modalità successiva. In questo modo è possibile cambiare velocemente da listati lunghi a listati normali a listati definiti dall'utente.
+
+C-\ (control-barra retroversa)
+        mostra le directory favoriteHotlist e va alla directory selezionata.
+
++ (più)
+        viene utilizzato per selezionare (marcare) un gruppo di file. Il Midnight Commander richiederà un'espressione regolare per descrivere il gruppo. Quando i modelli della shell sono abilitati, le espressioni regolari sono molto simili alle espressioni regolari in una shell (* significa zero o più caratteri e ? un carattere). Se i modelli della shell sono disabilitati, la marcatura dei file viene fatta con le normali espressioni regolari (vedere ed (1)).
+
+\ (barra retroversa)
+        usare il tasto "\" per deselezionare un gruppo di file. Questo è l'opposto del tasto più.
+
+freccia-su, C-p
+        sposta la barra di selezione alla voce precedente nel pannello.
+
+freccia-giù, C-n
+        sposta barra di selezione alla voce successiva nel pannello.
+
+home, a1, M-<
+        sposta la barra di selezione alla prima voce nel pannello.
+
+fine, c1, M->
+        sposta la barra di selezione all'ultima voce nel pannello.
+
+pagina-giù, C-v
+        sposta la barra di selezione di una pagina in basso.
+
+pagina-su, M-v
+        sposta la barra di selezione di una pagina in alto.
+
+M-o     rende la directory corrente del pannello corrente, la directory corrente dell'altro pannello. Mette l'altro pannello in modalità elenco se necessario. Se il pannello corrente è pannellizzato, l'altro non diventa pannellizzato.
+
+C-PaginaSu, C-PaginaGiù
+        solo quando si esegue in console Linux: rispettivamente cambia directory a ".." e alla directory correntemente selezionata.
+
+M-y     sposta la directory precedente nella cronologia, equivalente a premere '<' con il mouse.
+
+M-u     sposta la directory successiva nella cronologia, equivalente a premere '>' con il mouse.
+
+M-S-h, M-H
+        mostra la cronologia directory, equivalente a premere 'v' con il mouse.[Quick search]
+Quick search
+
+
+C-s, M-s
+        inizia una ricerca nella directory. Quando la ricerca è attiva i dati immessi dall'utente vengono aggiunti alla stringa di ricerca invece della riga di comando. Se l'opzione Mostra mini-stato è abilitata, la stringa di ricerca viene mostrata nella riga di mini-stato. Scrivendo, la barra di selezione si muove al prossimo file che comincia con le lettere battute. I tasti backspace o canc  possono essere utilizzati per correggere errori di battitura. Se viene premuto nuovamente, viene ricercata la corrispondenza successiva.[Shell Command Line]
+Shell a riga di comando
+
+Questa sezione elenca i tasti utili ad evitare troppe battiture nell'immissione dei comandi.
+
+M-Invio copia nella riga di comando il nome del file attualmente selezionato.
+
+C-Invio come M-Invio, ma funziona solo dalla console Linux.
+
+M-Tab   esegue automaticamente il completamentoCompletion del nome del file, variabile, nome utente e nome host.
+
+C-x t, C-x C-t
+        copia i file marcati (o se non vi sono file marcati, il file selezionato) del pannello corrente (C-x t) o dell'altro pannello (C-x C-t) sulla riga di comando.
+
+C-x p, C-x C-p
+        la prima sequenza di tasti copia il percorso corrente sulla riga di comando e la seconda copia il percorso del pannello non selezionato sulla riga di comando.
+
+C-q     il comando di inserimento letterale serve per inserire caratteri che sarebbero altrimenti interpretati dal Midnight Commander (come il simbolo '+')
+
+M-p, M-n
+        Usa questi tasti per navigare attraverso la cronologia comandi. M-p va alla voce precedente, M-n va alla successiva.
+
+M-h     mostra la cronologia per la riga di ingresso corrente.[General Movement Keys]
+Tasti generali di movimento
+
+Il visualizzatore dell'aiuto, il visualizzatore dei file e l'albero directory usano un codice comune per gestire il movimento. Per questa ragione essi accettano esattamente gli stessi tasti. Ognuno di questi però accetta anche altri tasti indipendenti.
+
+Diverse parti del Midnight Commander usano gli stessi tasti di movimento, questa sezione riguarda quelle parti.
+
+Su, C-p si sposta di una riga indietro.
+
+Giù, C-n
+        si sposta di una riga avanti.
+
+Pag. Prec., Pagina Su, M-v
+        si sposta di una pagina in alto.
+
+Pag. Succ., Pagina Giù, C-v
+        si sposta di una pagina in basso.
+
+Home, A1
+        si sposta all'inizio.
+
+Fine, C1
+        si sposta alla fine.
+
+In aggiunta a quelli menzionati sopra, il visualizzatore dell'aiuto accetta i seguenti tasti:
+
+b, C-b, C-h, Backspace, Canc
+        si sposta di una pagina in alto.
+
+Barra spaziatrice
+        si sposta di una pagina in basso.
+
+u, d    si sposta di mezza pagina in alto o in basso.
+
+g, G    si sposta all'inizio o alla fine.[Input Line Keys]
+Tasti di riga di ingresso
+
+I tasti di riga di ingresso (sono usati per la riga di comandoShell Command Line e per i dialoghi di richiesta dati nel programma) accettano questi tasti:
+
+C-a     sposta il cursore all'inizio della riga.
+
+C-e     sposta il cursore alla fine della riga
+
+C-b, freccia-sinistra
+        sposta il cursore di una posizione a sinistra.
+
+C-f, freccia-destra
+        sposta il cursore di una posizione a destra.
+
+M-f     sposta il cursore di una parola in avanti.
+
+M-b     sposta il cursore di una parola indietro.
+
+C-h, backspace
+        cancella il carattere precedente.
+
+C-d, Canc
+        cancella il carattere nel punto (sopra il cursore).
+
+C-@     imposta il marcatore per tagliare.
+
+C-w     copia il testo tra il cursore e il marcatore in un kill buffer e rimuove il testo dalla riga di ingresso.
+
+M-w     copia il testo tra il cursore ed il marcatore in un kill buffer.
+
+C-y     inserisce il contenuto del kill buffer.
+
+C-k     elimina il testo dal cursore alla fine della riga.
+
+M-p, M-n
+        usa questi tasti per navigare attraverso la cronologia dei comandi. M-p posiziona sull'ultima voce, M-n posiziona sulla seguente.
+
+M-C-h, M-Backspace
+        cancella una parola indietro.
+
+M-Tab   fa del nomefile, comando, variabile, nomeutente e nomehost il completamentoCompletion automatico.
+
+[Menu Bar]
+Barra dei menu
+
+La barra dei menu compare premendo F9 o cliccando con il mouse sopra la riga superiore dello schermo. La barra menu possiede cinque menu: "Sinistra", "File", "Comando", "Opzioni" e "Destra".
+
+I menu sinistra e destra Left and Right Menus permettono di modificare l'aspetto dei pannelli directory di sinistra e di destra.
+
+Il menu fileFile Menu elenca le azioni che possono essere condotte sui file correntemente selezionati o marcati.
+
+Il menu comando Command Menu elenca le azioni più generali e non ha relazione con il file correntemente selezionati o marcati.
+
+Il menu opzioniOptions Menu elenca le azioni che permettono di personalizzare il Midnight Commander.[Left and Right Menus]
+Menu sinistra e destra (sopra e sotto)
+
+L'apparenza dei pannelli directory è modificabile tramite i menu sinistra e destra  (vengono chiamati sopra e sotto se la divisione pannello nella finestra aspettoLayout del menu opzioni è orizzontale).[Listing Format...]
+Modalità lista...
+
+La modalità lista serve a mostrare un elenco di file; ci sono quattro modalità elenco disponibili: completa, breve, lunga e definita dall'utente. La modalità completa mostra il nome del file, l'ampiezza del file e la data di modifica.
+
+La modalità breve mostra solo il nome del file in due colonne (perciò mostrando il doppio del numero dei file che nelle altre modalità). La modalità lunga è simile a quella del comando ls -l. La modalità lunga usa tutta l'ampiezza dello schermo.
+
+Se si sceglie il formato definibile dall'utente, è necessario specificare il formato della vista.
+
+Il formato definibile dall'utente deve cominciare con una specifica dell'ampiezza del pannello. Questa può essere "half" o "full", che descrive un pannello di mezza grandezza o completa rispettivamente.
+
+Dopo l'ampiezza del pannello, è possibile specificare la modalità a due colonne aggiungendo il numero "2" alla stringa di formato.
+
+Dopodiché si aggiunge il nome dei campi con una specifica di ampiezza opzionale. Questi sono i campi disponibile per la visualizzazione:
+
+name    mostra il nome del file.
+
+size    mostra l'ampiezza del file.
+
+bsize   è una forma alternativa del formato size mostra l'ampiezza del file e per le directory mostra solo SUB-DIR o UP--DIR.
+
+type    mostra un campo di un carattere. Questo carattere è simile a quello mostrato dal comando ls con la flag -F - * per i file eseguibili, / per le directory, @ per i collegamenti, = per i socket, - per i dispositivi a carattere, + per i dispositivi a blocchi, | per le pipe, ~ per i collegamenti simbolici a directory e ! per i collegamenti simbolici stallati (che non puntano a niente).
+
+mark    un asterisco se il file è marcato, uno spazio se non lo è.
+
+mtime   la data dell'ultima modifica al file.
+
+atime   la data dell'ultimo accesso al file.
+
+ctime   la data della creazione del file.
+
+perm    una stringa che rappresenta i bit dei permessi del file.
+
+mode    un valore ottale con i permessi correnti del file.
+
+nlink   il numero dei collegamenti al file.
+
+ngid    il GID (numerico).
+
+nuid    l'UID (numerico).
+
+owner   il proprietario del file.
+
+group   il gruppo del file.
+
+inode   l'inode del file.
+
+Puoi usare ache questi campi per sistemare la visualizzazione:
+
+space   uno spazio nel formato visualizzazione.
+
+|       aggiunge una linea verticale al formato di visualizzazione.
+
+Per forzare un campo ad un'ampiezza fissa (una specifica di ampiezza), basta semplicemente aggiungere :  ed il numero dei caratteri che si vuole che il campo abbia. Se il numero è seguito dal simbolo +, allora la specifica definisce l'ampiezza minima - se il programma trova che serve più spazio sullo schermo, espanderà il campo.
+
+Per esempio la modalità completa corrisponde a questo formato:
+
+half type name | size | mtime
+
+E quella lunga corrisponde a questo formato:
+
+full perm space nlink space owner space group space size space mtime space name
+
+Questa è una modalità interessante:
+
+half name | size:7 | type mode:3
+
+I pannelli possono anche essere impostati alle modalità seguenti:
+
+"Informazioni"
+        La modalità informazioni mostra alcuni dati relativi al file correntemente selezionato e se possibile informazioni circa il file system corrente.
+
+"Albero" 
+        La vista ad albero è abbastanza simile al comando albero directoryDirectory Tree. Vedere la sezione corrispondente per maggiori informazioni.
+
+"Vista rapida"
+        In questa modalità il pannello si imposta come un visualizzatoreInternal File Viewer ridotto che mostra i contenuti del file correntemente selezionato; se si seleziona il pannello (con il tasto tab o con il mouse), si ha accesso ai normali comandi del visualizzatore.[Sort Order...]
+Ordina per...
+
+Gli otto possibili ordinamenti sono per nome, estensione, data di modifica, data di accesso, data di modifica informazioni di inode, ampiezza, per inode e non ordinato. Nella finestra di dialogo di ordinamento è possibile scegliere il tipo di ordinamento ed è anche possibile specificare se si desidera l'ordinamento inverso selezionando la voce inverso.
+
+Normalmente le directory sono ordinate prima dei file ma quest'impostazione può essere modificata dal menu opzioniOptions Menu (opzione mescola tutti i file).[Filter...]
+Filtro...
+
+Il comando di filtro permette di specificare un modello (per esempio *.tar.gz) che il file deve corrispondere per essere visualizzato. Malgrado il modello del filtro, le directory e i collegamenti a directory vengono sempre visualizzati sul pannello directory.[Reread]
+Ricarica
+
+Il comando ricarica l'elenco dei file nella directory. E' utile se un'altro processo ha creato o rimosso dei file. Se si ha pannellizzato dei nomi di file in un pannello, questo ricaricherà il contenuto della directory e rimuoverà le informazioni pannellizzate (vedere sezione pannellizza comandoExternal panelize per ulteriori informazioni).[File Menu]
+Menu file
+
+Il Midnight Commander usa i tasti F1 - F10 come tasti veloci per i comandi che appaiono nel menu file. Le sequenze di escape per i tasti funzione sono capacità terminfo da kf1 a kf10. Su terminali senza supporto per i tasti funzione, è possibile ottenere la stessa funzionalità premendo il tasto ESC e un numero da 1 a 9 più lo 0 (corrispondentemente ai tasti da F1 a F9 e F10 rispettivamente).
+
+Il file menu comprende i comandi seguenti (tasti veloci tra parentesi):
+
+Aiuto (F1)
+
+Invoca il visualizzatore incorporato di ipertesti per l'aiuto. All'interno del visualizzatore aiutoContents, è possibile usare il tasto tab per selezionare il successivo collegamento e il tasto invio per seguirlo. I tasti Barra spaziatrice e Backspace vengono utilizzati per muoversi avanti e indietro nella pagina di aiuto. Premere F1 nuovamente per ottenere la lista completa dei tasti accettati.
+
+Menu (F2)
+
+Invoca il menu utenteEdit Menu File. Il menu utente fornisce un modo semplice per dare agli utenti un menu ed aggiungere nuove funzionalità al Midnight Commander.
+
+Visualizza (F3, Maiusc-F3)
+
+Visualizza il file correntemente selezionato. Nell'impostazione predefinita viene invocato il visualizzatore interno di fileInternal File Viewer ma se l'opzione "Usa visualizzatore interno" è deselezionata, verrà invocato un visualizzatore esterno specificato dalla variabile ambiente PAGER. Se PAGER non è definita, verrà invocato il comando "view". Se si usa invece il comando Maiusc-F3, il visualizzatore verrà invocato senza nessun tipo di formattazione o preprocessamento sul file.
+
+Vista filtrata (M-!)
+
+Questo tasto richiede all'utente un comando ed i suoi argomenti (l'argomento predefinito è il nome del file attualmente selezionato), il risultato di tale comando viene mostrato nel visualizzatore di file interno.
+
+Cambia (F4)
+
+Invoca l'editor vi  o l'editor specificato nella variabile d'ambiente EDITOR oppure l'editor di file internoInternal File Editor se l'opzione, "usa editor interno" è stata impostata.
+
+Copia (F5)
+
+Mostra una finestra di dialogo con destinazione predefinita alla directory del pannello non selezionato, che copia il file selezionato (o i file marcati, se ce n'è almeno uno) sulla directory specificata dall'utente nella finestra di dialogo. Space for destination file may be preallocated relative to preallocate_space configure option. Durante il processo è possibile premere C-c o ESC per abortire l'operazione. Per maggiori dettagli sulla maschera sorgente (che sarà normalmente * o ^\(.*\)$ a seconda dell'impostazione di "modelli della shell") o sui caratteri jolly sulla destinazione vedere maschera copia/rinominaMask Copy/Rename.
+
+In alcuni sistemi è possibile eseguire la copia in background cliccando sul bottone background (o premendo M-b nella finestra di dialogo). Il comando processi in backgroundBackground jobs è utile per controllarne l'andamento.
+
+Collegamento (C-x l)
+
+Crea un collegamento fisico (hard link) al file corrente.
+
+Collegamento Simbolico (C-x s)
+
+Crea un collegamento simbolico al file corrente. Per chi non sapesse cosa sono i collegamenti: creare un collegamento ad un file è come copiare il file ma sia il nome sorgente che destinazione rappresentano la stessa immagine fisica del file. Per esempio, se si modifica uno dei due file, tutti i cambiamenti appariranno su tutti i file. Alcuni li chiamano anche alias o scorciatoie (o link come in originale inglese).
+
+Un collegamento fisico appare come un file reale. Dopo che sia stato creato non c'è modo di distinguere quale sia il collegamento e quale sia l'originale. Se si cancella uno dei due l'altro rimarrà intatto. E' molto difficile notare che i file rappresentano la stessa immagine. Usate i collegamenti fisici quando non volete proprio saperlo.
+
+Un collegamento simbolico è un riferimento al nome del file originale. Se il file originale viene cancellato, il collegamento è inutile. E' facile distinguere i collegamenti simbolici dall'immagine stessa. Se il file è un collegamento simbolico a qualcosa, il Midnight Commander mostra un simbolo "@" davanti al nome del file (eccetto se punta ad una directory, nel qualcaso mostrerà una tilde (~)). Il file originale sul quale punta il collegamento simbolico viene mostrato sulla riga di mini-stato se "Mostra Mini-stato" è abilitata. Usare i collegamenti simbolici se si vuole evitare la confusione che creano i collegamenti fisici.
+
+Rinomina/Sposta (F6)
+
+Mostra una finestra di dialogo con destinazione predefinita alla directory del pannello non selezionato, che sposta il file selezionato (o i file marcati, se ce n'è almeno uno) sulla directory specificata dall'utente nella finestra di dialogo. Durante il processo è possibile premere C-c o ESC per abortire l'operazione. Per maggiori dettagli vedere la sezione precedente Copia, dato che il comando è molto simile.
+
+In alcuni sistemi è possibile eseguire la copia in background cliccando sul bottone background (o premendo M-b nella finestra di dialogo). Il comando processi in backgroundBackground jobs è utile per controllarne l'andamento.
+
+Crea Directory (F7)
+
+Mostra una finestra di dialogo che crea la directory specificata.
+
+Elimina (F8)
+
+Cancella il file correntemente selezionato o i file marcati nel pannello corrente. Durante il processo è possibile premere C-c o ESC per abortire l'operazione.
+
+Cambia dir veloce (M-c) Usare il comando Cambia Dir veloceQuick cd se si vuole cambiare directory corrente e si ha la riga di comando occupata.
+
+Seleziona gruppo (+)
+
+Viene utilizzato per selezionare (marcare) un gruppo di file. Il Midnight Commander richiedera un'espressione regolare per descrivere il gruppo; se l'opzione modelli della shell è abilitata, l'espressione regolare è simile al file globbing nella shell (* significa zero o più caratteri e ? significa un carattere). Se l'opzione modelli della shell è disabilitata, allora la selezione dei file viene eseguita con le normali espressioni regolari (vedere ed (1)).
+
+Deseleziona gruppo (\)
+
+Usata per deselezionare un gruppo di file. E' l'opposto di del comando Seleziona gruppo.
+
+Uscita (F10, Maiusc-F10)
+
+Termina l'esecuzione del Midnight Commander. Maiusc-F10 viene usata se si esce e si sta usando lo shell wrapper. Maiusc-F10 in tal caso non vi porterà all'ultima directory utilizzata dal Midnight Commander ma vi lascerà nella directory dalla quale avete fatto partire il Midnight Commander.[Quick cd]
+Cambia dir veloce
+
+Questo comando è utile se si ha la riga di comando piena e si vuole eseguire cdThe cd internal command per cambiare directory senza dover cancellare e riscrivere la riga di comando. Questo comando fa uscire una piccola finestra di dialogo che richiede l'immissione degli stessi argomenti che si darebbero al comando cd  a riga di comando. Questo ha le stesse caratteristiche già presenti nel comando comando interno cdThe cd internal command.[Command Menu]
+Menu comando
+
+Il comando albero directoryDirectory Tree mostra un disegno ad albero delle directory.
+
+Il comando trova fileFind File permette di cercare un file specifico. Il comando "Scambia pannelli" scambia il contenuto dei due pannelli directory.
+
+Il comando "attiva/disattiva pannelli" mostra il risultato dell'ultimo comando shell. Quest'ultimo funziona solo su xterm e sulle console Linux e FreeBSD.
+
+Il comando Confronta directory (C-x d) confronta il contenuto dei pannelli directory uno con l'altro. E' poi possibile usare il comando Copia (F5) per rendere i pannelli identici. Ci sono tre metodi di confronto. Il metodo veloce confronta solo l'ampiezza e la data del file. Il metodo completo fa un confronto byte-per-byte. Il metodo completo non è disponibile se la macchina non supporta la chiamata di sistema mmap(2). Il metodo solo dimensione confronta solo l'ampiezza dei file e non controlla il contenuto né la data del file.
+
+Il comando cronologia comandi mostra un'elenco dei comandi battuti. Il comando selezionato viene copiato sulla riga di comando. Alla cronologia comandi vi si può accedere premendo M-p o M-n.
+
+Il comando directory favorite (C-\)Hotlist permette un cambio più veloce dalla directory corrente ad una di quelle usate più spesso.
+
+Il comando pannellizza comandoExternal panelize permette di eseguire un coamndo esterno e di mettere il risultato nel pannello corrente.
+
+Il comando modifica file estensioniEdit Extension File permette di specificare i programmi che devono essere eseguiti quando si prova ad eseguire, visualizzare, modificare e un mucchio di altre cose, file con una specifica estensione (la fine del nome del file). Il comando modifica file menuEdit Menu File serve a modificare il menu utente (che appare premendo F2).[Directory Tree]
+Albero directory
+
+Il comando albero directory mostra una rappresentazione ad albero delle directory. Selezionando una directory dalla rappresentazione il Midnight Commander cambierà a quella directory.
+
+Ci sono due modi di invocare l'albero. Il vero comando di albero directory è accessibile dal menu Comandi. L'altro modo è di selezionare la vista ad albero dai menu Sinistra o Destra.
+
+Per evitare i lunghi ritardi il Midnight Commander crea la rappresentazione ad albero scansionando solo una piccola porzione di tutte le directory. Se manca la directory che si vuole visualizzare, spostarsi sulla sua directory genitrice e premere C-r (o F2).
+
+E' possibile utilizzare i tasti seguenti:
+
+Sono accettati i tasti generali di movimentoGeneral Movement Keys.
+
+Invio. Nell'albero directory, esce dall'albero della directory e lo cambia alla directory corrente nel pannello selezionato. Nella vista ad albero, cambia a questa directory nell'altro pannello e rimane nella modalità vista ad albero in quello corrente.
+
+C-r, F2 (Ricarica). Ricarica la directory. Usare questo comando quando la rappresentazione ad albero non è aggiornata: mancano directory o mostra alcune sottodirectory che non esistono più.
+
+F3 (Scorda). Cancella questa directory dalla rappresentazione ad albero. Usare questo comando per eliminare la confusione dal'albero. Se si vuole nuovamente visualizzare l'albero completo premere F2 nella sua directory genitrice.
+
+F4 (Statico/Dinamico). Cambia tra modo di navigazione dinamico (predefinito) e statico.
+
+Nella navigazione statica si usano i tasti Su e Giù per selezionare la directory. Tutte le directory conosciute vengono mostrate.
+
+Nella navigazione dinamica si usano i tasti Su e Giù per selezionare una directory sorella, il tasto Sinistra sposta sulla directory genitrice e il tasto Destra sposta sulla directory figlia. Solo i parenti, sorelle e figlie, vengono mostrate; le altre sono tralasciate. La rappresentazione ad albero cambia dinamicamente come la si attraversa.
+
+F5 (Copia). Copia la directory.
+
+F6 (RinSpo). Sposta la directory.
+
+F7 (CreDir). Crea una nuova directory sotto questa directory.
+
+F8 (CancDir). Cancella questa directory dal file system.
+
+C-s, M-s. Cerca la prossima directory che corrisponde alla stringa di ricerca. Se tale directory non esiste, questi tasti faranno scendere di una riga (il cursore).
+
+C-h, Backspace. Cancella l'ultimo carattere nella stringa di ricerca.
+
+Qualsiasi altro carattere. Aggiunge un carattere alla stringa di ricerca e sposta alla nuova directory che comincia con questi caratteri (il cursore). Nella vista ad albero si deve prima attivare la ricerca premendo C-s. La stringa di ricerca è visibile nella riga di mini stato.
+
+Le azioni seguenti sono disponibili solo nell'albero directory. Non sono supportate nella vista ad albero.
+
+F1 (Aiuto). Invoca il visualizzatore dell'aiuto e mostra questa sezione.
+
+Esc, F10. Esce dalla rappresentazione ad albero. Non cambia directory.
+
+Il mouse è supportato. Un doppio clic si comporta come premere Invio. Vedere anche la sezione supporto mouseMouse Support.[Find File]
+Trova file
+
+Il comando trova file domanda prima la directory di inizio per la ricerca ed il nome del file da cercare. Premendo il tasto albero puoi selezionare la directory di partenza dall'albero directoryDirectory Tree.
+
+Il campo contenuto accetta espressioni regolari simili a egrep(1). Ciò significa che è necessario proteggere i caratteri con significati speciali per egrep con "\", per esempio se si ricerca "strcmp (" si dovrà immettere "strcmp \(" (senza le virgolette).
+
+Per far partire la ricerca premere il tasto Ok. E' possibile bloccare la ricerca con il tasto Sospende e farla riprendere con il tasto Continua.
+
+E' possibile navigare l'elenco file con i tasti freccia Su e Giù. Il tasto Chdir cambierà la directory corrente a quella del file selezionato. Il tasto Ripete chiederà nuovamente i parametri per una nuova ricerca. Il tasto Uscita esce dal comando Trova. Il tasto Pannellizza metterà i file trovati sul pannello di directory corrente cosicché si possa svolgere ulteriori operazioni su di essi (visualizzazione, copia, spostamento, e così via). Dopo la pannellizzazione è possibile premere C-r per ripristinare la vista normale dei file.
+
+E' possibile avere una lista di directory che il comando trova file dovrebbe saltare durante la ricerca (per esempio, si può evitare di fare ricerche su un CDROM o su una directory NFS montata attraverso un collegamento lento).
+
+Le directory che devono essere saltate devono essere impostate nella variabile ignore_dirs  nella sezione FindFile del file ~/.config/mc/ini.
+
+Le directory devono essere separate da una virgola, come nell'esempio:
+
+[FindFile]
+ignore_dirs=/cdrom:/nfs/wuarchive:/afs
+
+Si può prendere in considerazione l'uso del comando pannellizza comandoExternal panelize per operazioni particolari. Il comando trova file serve solo per ricerche semplici mentre usando pannellizza comando si può fare ricerche complesse come si vuole.[External panelize]
+Pannellizza comando
+
+Pannellizza comando permette di eseguire un programma esterno, e mettere il risultato del programma nel pannello corrente.
+
+Per esempio, se si vuole manipolare in uno dei pannelli tutti i collegamenti simbolici nella directory corrente, basta usare pannellizza comando per eseguire il seguente:
+
+find . -type l -print
+
+Al completamento del comando, il contenuto del pannello non sarà più il listato della directory ma tutti i file che rappresentano collegamenti simbolici.
+
+Volendo pannellizzare tutti i file che sono stati scaricati dal proprio server ftp preferito, si può usare questo comando awk per estrarre il nome del file dal file di log del traferimento:
+
+awk '$9 ~! /incoming/ { print $9 }' < /var/log/xferlog
+
+Se si desidera si può salvare i comandi di pannellizzazione usati più spesso con uno nome più descrittivo, in maniera da richiamarli più velocemente. Per fare ciò basta battere il comando sulla riga di ingresso e premere il tasto Aggiungi nuovo. Poi si deve dare un nome al quale associare il comando che si desidera salvare. La prossima volta sarà possibile scegliere quel comando dall'elenco e non servirà ribatterlo nuovamente.[Hotlist]
+Directory favorite
+
+Il comando Directory favorite mostra le etichette delle directory nell'elenco delle favorite. Il Midnight Commander andrà alla directory corrispondente all'etichetta selezionata. Dalla finestra delle favorite si possono rimuovere etichette/directory già create ed aggiungerne di nuove. Per aggiungere velocemente nuove directory basta usare il comando Aggiungi alle favorite (C-x h), che aggiunge la directory corrente alla lista delle favorite, richiedendo l'etichetta per identificarla.
+
+Questo rende più veloce il cd verso directory usate spesso. Considera l'uso della variabile CDPATH come descritto in comando cd internoThe cd internal command.[Edit Extension File]
+Modifica file estensioni
+
+Questo comando invocherà l'editor sul file ~/.config/mc/mc.ext.ini. If this file does not exist and you are not root, it will be copied from /opt/etc/mc/mc.ext.ini. If you are root, you can choose the file to edit: user's ~/.config/mc/mc.ext.ini or system-wide /opt/etc/mc/mc.ext.ini. The format of this file is described in detail in it.[Background jobs]
+Processi in background
+
+Questo comando permette di controllare lo stato di ogni processo in background del Midnight Commander (in background possono essere eseguite solo operazioni di copia e rinomina). Da qui si può bloccare, far ripartire e uccidere un lavoro in background.[Edit Menu File]
+Modifica file menu
+
+Il menu utente è un menu di comandi utili che possono essere personalizzati dall'utente. Quando si accede al menu utente, viene utilizzato, se esiste, il file .mc.menu dalla directory corrente, ma solo se è di proprietà dell'utente o di root e se non è scrivibile a tutti. Se tale file non viene trovato, mc alla stessa maniera prova con ~/.config/mc/menu altrimenti usa il menu di sistema /opt/share/mc/mc.menu.
+
+Il formato del file menu è molto semplice. Le righe che cominciano con qualsiasi cosa che non sia uno spazio o una tabulazione sono considerate voci per il menu (per fare in modo di usarle anche come scelta rapida, il primo carattere deve essere una lettera). Tutte le righe che cominciano con uno spazio o un tab sono i comandi che verranno eseguiti quando la voce viene selezionata.
+
+Quando un'opzione viene selezionata tutte le linee di comando dell'opzione vengono copiate in un file temporaneo nella directory temporanea (normalmente /usr/tmp) e poi il file viene eseguito. Ciò permette all'utente di mettere normali costrutti shell nei menu. Prima dell'esecuzione del codice del menu ha luogo una semplice sostituzione di macro. Per ulteriori informazioni vedere sostituzione macroMacro Substitution.
+
+Ecco un esempio di un file mc.menu:
+
+A	Mostra un dump del file correntemente selezionato
+	od -c %f
+
+B	Modifica un rapporto bachi e lo spedisce a root
+	I=`mktemp ${MC_TMPDIR:-/tmp}/mail.XXXXXX` || exit 1
+	vi $I
+	mail -s "Midnight Commander bug" root < $I
+	rm -f $I
+
+M	Legge la posta
+	emacs -f rmail
+
+N	Legge le news 
+	emacs -f gnus
+
+H	Chiama il visualizzatore ipertestuale info
+	info
+
+J	Copia la directory corrente nell'altro pannello ricorsivamente
+	tar cf - . | (cd %D && tar xvpf -)
+
+K	Crea un rilascio della directory corrente
+	echo -n "Nome del file di distribuzione: "
+	read tar
+	ln -s %d `dirname %d`/$tar 
+	cd ..
+	tar cvhf ${tar}.tar $tar
+
+= f *.tar.gz | f *.tgz & t n
+X       Estrae il contenuto di un file tar compresso
+	tar xzvf %f
+
+Condizioni Predefinite
+
+Ogni voce di menu può essere preceduta da una condizione. La condizione deve cominciare nella prima colonna con un carattere '='. Se la condizione è vera, la voce di menu sarà la voce predefinita.
+
+Sintassi condizione: 	= <sotto-cond>
+  oppure:		= <sotto-cond> | <sotto-cond> ...
+  oppure:		= <sotto-cond> & <sotto-cond> ... 
+
+Sotto-condizione è una delle seguenti:
+
+  y <modello>	        sintassi della corrispondenza modello file corrente?
+                        (solo per modifica menu).
+  f <modello>	        corrispondenza modello file corrente?
+  F <modello>	        corrispondenza modello altro file?
+  d <modello>	        corrispondenza modello directory corrente?
+  D <modello>	        corrispondenza modello altra directory?
+  t <tipo>		file corrente di tipo?
+  T <tipo>		altro file di tipo?
+  x <nomefile>		nomefile è eseguibile?
+  ! <sotto-cond>	nega il risultato di una sotto-condizione
+
+Modello è un normale modello della shell o un'espressione regolare, a seconda dell'opzione modelli della shell. E' possibile scavalcare il valore globale dell'opzione modelli della shell scrivendo "shell_patterns=x" sulla prima riga del file menu (dove "x" è 0 o 1).
+
+Tipo è uno o più dei seguenti caratteri:
+
+  n	non directory
+  r	file regolare 
+  d	directory
+  l	collegamento
+  c	carattere speciale
+  b	blocco speciale
+  f	fifo (pipe)
+  s	socket
+  x	eseguibile
+  t	marcato
+
+Per esempio 'rlf' significa file regolare, collegamento o fifo. Il tipo 't' è particolare perché agisce sul pannello invece che sul file. La condizione '=t t' è vera se ci sono file marcati nel pannello corrente e falsa se non ce ne sono.
+
+Se la condizione comincia con '=?' invece che '=' una traccia di debug sarà mostrata ogniqualvolta viene calcolato il valore della condizione.
+
+Le condizioni sono calcolate da sinistra a destra. Ciò significa che
+	= f *.tar.gz | f *.tgz & t n
+viene calcolata come
+	( (f *.tar.gz) | (f *.tgz) ) & (t n)
+
+Ecco un esempio dell'uso delle condizioni:
+
+= f *.tar.gz | f *.tgz & t n
+L	Elenca i contenuti di un archivio compresso tar
+	gzip -cd %f | tar xvf -
+
+Condizioni Addizione
+
+Se la condizione comincia con '+' (o '+?') invece che '=' (o '=?') è una condizione addizione. Se la condizione è vera la voce di menu sarà inclusa nel menu. Se la condizione è falsa la voce di menu non sarà inclusa nel menu.
+
+E' possibile combinare condizioni predefinite e addizione iniziando la condizione con '+=' o '=+' (o '+=?' o '=+?' se vuoi una traccia di debug). Se si vuole usare due differenti condizioni, una per addizionale e l'altra per predefinita, si può precedere una voce di menu con due righe di condizione, una che comincia con '+' e l'altra con '='.
+
+I commenti cominciano con '#'. Linee di commento aggiuntive devono cominciare con '#', spazi o tabulazioni.[Options Menu]
+Menu opzioni
+
+Il Midnight Commander possiede alcune opzioni che possono essere abilitate e disabilitate in molte finestre di dialogo accessibili da questo menu. Le opzioni sono abilitate se hanno un "x" di fronte ad esse.
+
+Il comando configurazioneConfiguration mostra una finestra di dialogo dalla quale è possibile cambiare molte delle inpostazioni del Midnight Commander.
+
+Il comando aspettoLayout mostra una finestra di dialogo con la quale è possibile impostare molte opzioni relative a come mc appare sullo schermo.
+
+Il comando confermeConfirmation mostra una finestra di dialogo dalla quale è possibile specificare per quali azioni si vuole una richiesta di conferma.
+
+Il comando mostra bitDisplay bits mostra una finestra di dialogo dalla quale è possibile selezionare quali caratteri il vostro terminale è capace di mostrare.
+
+Il comando impara tastiLearn keys mostra una finestra di dialogo dalla quale è possibile controllare i tasti che non appaiono funzionare su alcuni terminali ed è possibile aggiustare.
+
+Il comando FS virtualeVirtual FS mostra una finestra di dialogo con la quale è possibile impostare alcune opzioni relative al VFS.
+
+Il comando salva configurazioneSave Setup salva le impostazioni correnti dei menu sinistra, destra e opzioni. Viene salvato anche un piccolo numero di altre opzioni.[Configuration]
+Configurazione
+
+Le opzioni in questa finestra sono divise in tre gruppi: Opzioni del pannello, Pausa dopo l'esecuzione e Altre opzioni.
+
+Opzioni del pannello
+
+Mostra file di backup. Se abilitata, il Midnight Commander mostrerà i file che terminano con una tilde. Altrimenti essi non verranno mostrati (come nell'opzione -B del comando GNU ls).
+
+Mostra file nascosti. Se abilitata, il Midnight Commander mostrerà tutti i file che cominciano con un punto (come ls -a).
+
+Cursore in basso mentre seleziona. Se abilitata, la barra di selezione si muoverà in basso dopo aver selezionato un file (sia con tasto Ins).
+
+Rilascia menu a cascata. Quando quest'opzione è abilitata, la discesa dei menu sarà attivata non appena si preme il tasto F9. Altrimenti si otterrà solo il titolo del menu e si dovrà attivare il menu con i tasti freccia o con i tasti di selezione rapida. E' raccomandata se si stanno usando i tasti di selezione rapida.
+
+Mescola tutti i file. Se quest'opzione è abilitata, tutti i file e le directory vengono mostrati mescolati insieme. Se l'opzione è spenta, le directory (e i collegamenti a sottodirectory) vengono mostrati all'inizio dell'elenco con gli altri file a seguire.
+
+Aggiornamento rapido directory. Se quest'opzione è abilitata, il Midnight Commander userà un trucco per determinare se i contenuti della directory sono cambiati. Il trucco consiste nel ricaricare la directory solo se l'i-node della directory è cambiato. Ciò significa che la ricarica accade solo quando i file vengono creati o cancellati. Se quello che cambia è l'i-node di un file nella directory (cambia l'ampiezza di un file, cambiano il proprietario o le flag, etc.) la visualizzazione non viene aggiornata. In questi casi se l'opzione è abilitata, è necessario ricaricare la directory manualmente (con C-r).
+
+Pausa dopo l'esecuzione
+
+Dopo l'esecuzione di comandi, il Midnight Commander può fermarsi, in maniera da permettere di esaminare il risultato del comando. Ci sono tre possibili impostazioni per questa variabile:
+
+        Mai. Significa che non si vuole vedere il risultato del comando. Se si sta usando la console Linux o FreeBSD o un xterm, ci sarà la possibilità di vedere il risultato del comando premendo C-o.
+
+        Su terminali stupidi. Si avrà il messaggio di pausa su quei terminali che non sono in grado di mostrare il risultato dell'ultimo comando eseguito (qualsiasi terminale che non sia un xterm o una console Linux o FreeBSD).
+
+        Sempre. Il programma si fermerà dopo l'esecuzione di tutti i comandi.
+
+Altre opzioni
+
+Operazioni prolisse. Quest'opzione decide se le operazioni di Copia, Spostamento o Cancellazione saranno prolisse (cioè se mostreranno una finestra di dialogo per ogni operazione). Se si ha un terminale lento potresti voler disabilitare quest'opzione. Viene automaticamente spenta se la velocità del proprio terminale è inferiore a 9600 bps.
+
+Calcola totali. Se quest'opzione è abilitata, il Midnight Commander calcolerà i totali delle ampiezze in byte e il numero totale dei file prima di ogni operazione di Copia, Spostamento o Cancellazione. Questo genererà una barra di progressione più accurata a discapito di un po' di velocità. Quest'opzione non ha effetto se Operazioni prolisse è disabilitata.
+
+Modelli della shell. Normalmente i comandi Seleziona, Deseleziona e Filtro usano espressioni regolari di tipo shell. Le seguenti conversioni vengono eseguite per ottenere questo risultato: '*' viene rimpiazzato da '.*' (zero o più caratteri); '?' viene rimpiazzato da '.' (esattamente un carattere) e '.' dal carattere letterale punto. Se l'opzione è disabilitata, allora le espressioni regolari sono quelle descritte in ed(1).
+
+Autosalva configurazione. Se quest'opzione è abilitata, quando si esce dal Midnight Commander le opzioni configurabili del Midnight Commander vengono salvate nel file ~/.config/mc/ini.
+
+Menu automatici. Se quest'opzione è abilitata, il menu utente sarà invocato alla partenza. Utile per creare menu per utenti non abituati a unix.
+
+Usa editor interno. Se quest'opzione è abilitata, verrà usato l'editor integrato interno per modificare i file. Se l'opzione è disabilitata, verrà usato l'editor specificato dalla variabile ambiente EDITOR. Se nessun editor è stato specificato, verrà usato vi. Vedere la sezione editor di file internoInternal File Editor.
+
+Usa il visualizzatore interno. Se quest'opzione è abilitata, verrà usato il visualizzatore di file interno per visualizzare i file. Se l'opzione è disabilitata, verrà utilizzato il visualizzatore specificato dalla variabile ambiente PAGER. Se il visualizzatore non è definito, verrà usato il comando view. Vedere sezione visualizzatore file internoInternal File Viewer.
+
+Completamento: visualizza tutto Normalmente il Midnight Commander mostra tutti i possibili completamentiCompletion se il completamento è ambiguo se si preme M-Tab una seconda volta, la prima completa per quanto possibile e, in caso di ambiguità, emette un suono. Se si vuole vedere tutti i possibili completamenti già alla pressione del primo M-Tab, abilitare quest'opzione.
+
+Barre che girano. Se quest'opzione è abilitata, il Midnight Commander mostra una barra rotante nell'angolo in alto a destra come indicatore di progressione.
+
+Navigazione stile Lynx. Se quest'opzione è abilitata, è possibile usare i tasti freccia per cambiare automaticamente directory se la selezione corrente è una subdirectory e se la riga di comando è vuota. Normalmente quest'opzione è spenta.
+
+Cd segue i collegamenti. Quest'opzione, se impostata, fa in modo che il Midnight Commander segua la catena logica delle directory, quando si cambia la directory corrente in ogni pannello o usando il comando cd. Questo è il comportamento predefinito di bash. Quando non è impostata, il Midnight Commander segue la reale struttura della directory, perciò eseguendo cd .. se si è entrati in una directory attraverso un collegamento, ci porterà alla genitrice reale della directory corrente e non alla directory dov'era il collegamento.
+
+Cancellazione sicura. Se quest'opzione è abilitata, la cancellazione non intenzionale dei file sarà più difficile. La preimpostazione della finestra di dialogo della conferma cambia da "Si" a "No". Normalmente quest'opzione è disabilitata.[Layout]
+Aspetto
+
+La finestra di aspetto da la possibilità di cambiare l'aspetto generale dello schermo. Si può specificare la visibilità della barra dei menu, della riga dei comandi, della riga dei suggerimenti o della riga dei tasti funzione. Sulle console Linux o FreeBSD si può impostare quante righe siano visibili sulla finestra di uscita.
+
+Il resto dell'area dello schermo viene usata per i due pannelli directory. Si può specificare se l'area venga divisa dai due pannelli in direzione verticale o orizzontale. La divisione può essere uguale o si può dividere in maniera asimmetrica.
+
+Normalmente i contenuti dei pannelli directory sono visualizzati dello stesso colore, ma si può specificare se i permessi  e i tipi di file siano evidenziati con speciali coloriColors. Se l'evidenziazione dei permessi è abilitata, i campi permessi e modalità dello schermoListing Format... valide per l'utente che usa il Midnight Commander sono evidenziati con il colore definito con la parolachiave selezionata. Se l'evidenziazione del tipo di file è abilitata, i file vengono colorati a seconda del tipo (per esempio directory, file core, eseguibili, ...).
+
+Se l'opzione Mostra mini-stato è abilitata, una riga di informazioni di stato circa la voce correntemente selezionata viene mostrata sul fondo dei pannelli.[Confirmation]
+Conferme
+
+In questo menu è possibile configurare le opzioni di conferma per la cancellazione e sovrascrittura dei file, esecuzione dei file premendo invio e per l'uscita dal programma.[Display bits]
+Mostra bit
+
+Viene usata per configurare la quantità dei caratteri visibili sullo schermo. Quest'impostazione può essere 7 bit, se il terminale/libreria_curses supporta solo sette bit in uscita, ISO-8859-1 se mostra tutti i caratteri nella mappa ISO-8859-1 e uscita completa a 8 bit per quei terminali che possono visualizzare tutti i caratteri a 8 bit.[Learn keys]
+Impara tasti
+
+Questa finestra di dialogo permette di controllare e ridefinire i tasti funzione, i tasti freccia e alcuni altri tasti per farli funzionare correttamente sul terminale corrente. Spesso non funzionano dato che molti database di terminali sono incompleti o errati.
+
+Ci si può muovere con il tasto Tab e con i tasti di movimento di vi ('h' sinistra, 'j' giù, 'k' su e 'l' destra). Una volta premuti e riconosciuti i tasti di movimento del cursore, si possono tranquillamente utilizzare.
+
+E' possibile provare i tasti semplicemente premendoli ognuno. Quando si preme un tasto ed è riconosciuto correttamente, appare un OK accanto al nome di quel tasto. Una volta che il tasto è marcato OK, esso comincia a funzionare regolarmente, per esempio premendo il tasto F1, la prima volta controllerà il funzionamento, ma dopodiché mostrerà la schermata di aiuto. Lo stesso dicasi per i tasti freccia. Il tasto Tab dovrebbe funzionare sempre.
+
+Se alcuni tasti non funzionano correttamente, non si vedrà apparire l'OK dopo la pressione di quel tasto. Allora è possibile ridefinirlo. Fatelo, premendo il bottone corrispondente al nome del tasto (con il mouse o premendo Invio o Spazio, dopo aver selezionato il bottone con Tab o con le frecce). Ecco che un messaggio apparirà richiedendo di premere quel tasto. Fatelo ed aspettate che la finestra sparisca. Se si vuole annullare, basta premere Esc una volta ed aspettare.
+
+Quando si è finito con tutti i tasti, è possibile salvarli. Le definizioni dei tasti che si è ridefinito saranno scritte nella sezione [terminal:TERM] del vostro ~/.config/mc/ini file (dove TERM è il nome del terminale corrente). Le definizioni dei tasti che già funzionavano correttamente non vengono salvate.[Virtual FS]
+FS virtuale
+
+Quest'opzione permette di controllare l'impostazione della cache informazioni del file system virtualeVirtual File System.
+
+Il Midnight Commander tiene in memoria le informazioni relative ad alcuni dei file system virtuali per accelerare l'accesso all'elenco dei file nel file system (per esempio, l'elenco dei file scaricato dai server ftp).
+
+Inoltre, per accedere al contenuto dei file compressi (per esempio file tar compressi) il Midnight Commander deve creare un file temporaneo non compresso sul disco.
+
+Siccome sia le informazioni in memoria che i file temporanei su disco occupano risorse, si può voler impostare i parametri delle informazioni della cache per ridurre l'uso delle risorse o per massimizzare la velocità di accesso ai file system usati spesso.
+
+A causa del formato degli archivi tar, il filesystem tar necessita di leggere l'intero file solo per caricare le voci dei file. Dato che molti file tar sono compressi (i file tar non compressi sono una specie in via di estinzione), il file system tar deve decomprimere il file su disco, in una locazione temporanea per poi accedervi come un file tar normale.
+
+Ora, visto che noi tutti amiamo navigare nei file e nei file tar dappertutto su disco, succede spesso che si lascia un file tar per poi rientrarvi successivamente. Siccome la decompressione è lenta, il Midnight Commander conserverà l'informazione in memoria per un tempo limitato, allo scadere del quale, tutte le risorse associate al file system verranno liberate. La scadenza predefinita è impostata a un minuto.
+
+Il file system FTPFTP File System (ftpfs) permette di navigare le directory su server FTP remoti. Esso possiede diverse opzioni.
+
+Password ftp anonimo è la password utilizzata per accedere come "anonimo". Alcuni siti richiedono un indirizzo email valido. D'altra parte, probabilmente non si vuole dare il vostro indirizzo email reale a siti non di fiducia, specialmente se non si sta usando filtri anti spam.
+
+L'ftpfs mantiene l'elenco della directory che scarica dal server ftp in una cache. Il tempo di scadenza della cache è configurabile con l'opzione scadenza cache directory ftpfs. Un valore basso per quest'opzione può rallentare ogni operazione sul file system ftp perché ogni operazione è accompagnata da una richiesta al server ftp.
+
+E' possibile definire un host proxy per fare trasferimenti ftp. Notare che molti firewall moderni sono totalmente trasparenti almeno per i trasferimenti FTP passivi (vedere di seguito), perciò i proxy ftp sono considerati obsoleti.
+
+Se usa sempre ftp proxy non è impostata, è possibile usare il punto escamativo per abilitare il proxy per certi host. Vedere la sezione file system FTPFTP File System per gli esempi.
+
+Se quest'opzione è impostata, il programma farà due cose: consulterà il file /opt/etc/mc/mc.no_proxy per le righe contenenti nomi host locali (se il nome host comincia con un punto, è considerato un dominio) e assumendo che ogni nome host senza punti nel nome sia direttamente accessibile. Tutti gli altri host verranno contattati attraverso il proxy host specificato.
+
+E' possibile abilitare l'uso del file ~/.netrc che mantiene i nomi di accesso e le password per i server ftp. Vedere netrc (5) per una descrizione del formato .netrc.
+
+Usa modalità passiva abilita l'uso della modalità FTP passiva quando la connessione per il trasferimento file è iniziata dal client, non dal server. Quest'opzione è raccomandata e preimpostata. Se quest'opzione è spenta, la connessione dati viene iniziata dal server. Questo potrebbe non funzionare con alcuni firewall.[Save Setup]
+Salva configurazione
+
+Alla partenza il Midnight Commander prova a caricare le informazioni di inizializzazione dal file ~/.config/mc/ini. Se questo file non esiste, caricherà le informazioni dal file di configurazione di sistema posizionato in /opt/share/mc/mc.ini. Se il file di configurazione di sistema non esiste, MC userà le impostazioni predefinite.
+
+Il comando salva configurazione crea il file ~/.config/mc/ini salvando le impostazioni correnti dei menu sinistra, destraLeft and Right Menus e opzioniOptions Menu.
+
+Se si attiva l'opzione autosalva configurazione, MC salverà sempre le impostazioni correnti all'uscita.
+
+Esistono anche impostazioni che non possono essere cambiate dai menu. Per cambiare queste impostazioni è necessario modificare il file di configurazione con il vostro editor preferito. Vedere sezione impostazioni specialiSpecial Settings per ulteriori informazioni.
+
+[Executing operating system commands]
+Esecuzione comandi del sistema operativo
+
+E' possibile eseguire comandi del sistema operativo direttamente nella riga di comando del Midnight Commander o selezionando il programma che si vuole eseguire con la barra di selezione in uno dei pannelli e premendo Invio.
+
+Se si preme Invio su di un file che non è eseguibile, il Midnight Commander confronta l'estensione del file selezionato con ciò che trova nel file estensioniEdit Extension File. Se viene trovata una corrispondenza, verrà eseguito il codice associato. Verrà eseguita una semplice espansione di macroMacro Substitution prima di eseguire il comando.[The cd internal command]
+Il comando cd interno
+
+Il comando cd non viene passato alla shell per l'esecuzione ma viene interpretato dal Midnight Commander. Perciò esso non può gestire tutte quelle simpatiche espansioni di macro e sostituzioni che fa la shell, malgrado alcune le possa ancora fare:
+
+Sostituzione della tilde. La (~) verrà sostituita con la vostra directory home e se si appende un nome utente dopo la tilde, allora verrà sostituita con la directory di login dell'utente indicato.
+
+Per esempio, ~ospite è la directory home dell'utente ospite, mentre ~/ospite è la directory ospite nella vostra home directory.
+
+Directory precedente. E' possibile saltare alla directory dove si era precedentemente usando il nome directory speciale '-' così: cd -
+
+Directory CDPATH. Se la directory indicata al comando cd  non è nella directory corrente, il Midnight Commander userà il valore della viariabile ambiente CDPATH per cercare la directory in ognuna delle directory nominate.
+
+Per esempio si può impostare la variabile CDPATH a ~/src:/usr/src, permettendo di cambiare directory verso ognuna delle directory presenti nelle directory ~/src e /usr/src da qualunque parte nel file system (per esempio cd linux vi porterà in /usr/src/linux).[Macro Substitution]
+Sostituzione di macro
+
+Quando si accede ad un menu utenteEdit Menu File, o si esegue un comando dipendente dall'estensioneEdit Extension File, o si esegue un comando dalla riga di ingresso, viene eseguita una semplice sostituzione di macro.
+
+Le macro sono:
+
+"%i"    Indentazione di spazi, uguale alla colonna della posizione del cursore. Solo per la modifica menu.
+
+"%y"    Il tipo di sintassi del file corrente. Solo per la modifica menu.
+
+"%k"    Nome del file di blocco.
+
+"%e"    Nome del file di errore.
+
+"%m"    Nome del menu corrente.
+
+%fe%p   Nome del file corrente.
+
+"%x"    L'estensione del file corrente.
+
+"%b"    Nome del file corrente ma senza estensione.
+
+"%d"    Nome della directory corrente.
+
+"%F"    Il file corrente nel pannello non selezionato.
+
+"%D"    La directory corrente nel pannello non selezionato.
+
+"%t"    I file attualmente marcati.
+
+"%T"    I file attualmente marcati nel pannello non selezionato.
+
+%ue%U   Simili alle macro %t e %T, in aggiunta i file vengono deselezionati. E' possibile usare questa macro solo una volta per voce di menu file o per voce di file estensione, dato che la volta successiva non ci saranno file marcati.
+
+%se%S   I file selezionati se ce ne sono. Altrimenti il file corrente.
+
+"%cd"   Questa è una macro speciale usata per cambiare la directory corrente alla directory specificata di fronte ad essa. Usata principalmente come interfaccia al file system virtualeVirtual File System.
+
+"%view" Questa macro serve per invocare il visualizzatore interno. Può essere usata da sola o con argomenti. Se si passa argomenti a questa macro, questi dovrebbero essere racchiusi da parentesi.
+
+        Gli argomenti sono: ascii per forzare il visualizzatore in modo ascii; hex per forzare il visualizzatore in modo esadecimale; nroff per dire al visualizzatore che deve interpretare le sequenze di grassetto e sottolineato di nroff; unformatted per dire al visualizzatore di non interpretare i comandi nroff per rendere il testo grassetto o sottolineato.
+
+"%%"    Il carattere %
+
+"%{testo}"
+        Visualizza una richiesta di sostituzione. Viene mostrata una finestra contenente il testo all'interno delle graffe. La macro viene sostituita dal testo immesso dall'utente. L'utente può premere ESC o F10 per annullare. Questa macro non funziona ancora sulla riga di comando.
+
+"%var{ENV:default}"
+        Se la variabile di ambiente ENV non è impostata, la sostituzione prenderà default. Altrimenti, verrà sostituito il valore di ENV.[The subshell support]
+Supporto alla subshell
+
+Il supporto alla subshell è una opzione di compilazione che lavora con le seguenti shell: bash, tcsh e zsh.
+
+Quando il codice di subshell è attivato il Midnight Commander genererà un processo copia concorrente della shell (quella definita dalla variabile SHELL e se non è definita, prenderà quella presente nel file /etc/passwd) e lo eseguirà in un pseudo terminale; invece di invocare una nuova shell ogniqualvolta si esegue un comando, il comando verrà passato alla subshell come se lo si avesse battuto personalmente. Questo permette di cambiare le variabili di ambiente, usare funzioni della shell e definire alias che rimangono validi fintanto che non si esca dal Midnight Commander.
+
+Se si sta usando bash si può specificare comandi alla partenza della subshell nel file ~/.local/share/mc/bashrc e mappature speciali della tastiera nel file ~/.local/share/mc/inputrc. tcsh  gli utenti possono specificare comandi alla partenza nel file ~/.local/share/mc/tcshrc.
+
+Quando il codice della subshell viene utilizzato, si può sospendere l'applicazione in ogni momento con la sequenza C-o e saltare nuovamente al Midnight Commander; se si interrompe un'applicazione, non si sarà in grado di eseguire altri comandi esterni finché non si esce dall'applicazione interrotta.
+
+Una caratteristica aggiuntiva dell'usare la subshell è data dal fatto che il prompt mostrato dal Midnight Commander sarà lo stesso di quello utilizzato dalla shell.
+
+La sezione OPZIONIOPTIONS contiene informazioni aggiuntive riguardo come controllare il codice della subshell.[Chmod]
+Permessi
+
+La finestra Permessi serve a cambiare i bit di attributo in gruppi di file o directory. La si può invocare con la combinazione di tasti C-x c.
+
+La finestra dei Permessi ha due parti - Permessi e File.
+
+La sezione File mostra il nome del file o della directory ed i suoi permessi in forma ottale, oltre che il proprietario ed il gruppo.
+
+Nella sezione Permessi c'è un set di caselle che corrispondono agli attributi dei file. Come si cambia il bit di attributo, si può vedere il valore in ottale aggiornato nella sezione File.
+
+Per muoversi attraverso le sezioni (bottoni e caselle) usare i tasti freccia oppure Tab. Per cambiare lo stato delle caselle o per selezionare un bottone usare lo Spazio. Si può usare anche i tasti di scelta rapida sui bottoni per attivarli velocemente. I tasti di scelta rapida corrispondono alle lettere evidenziate dei bottoni.
+
+Per impostare i bit degli attributi, usare il tasto Invio.
+
+Quando si lavora con un gruppo di file o directory, basta cliccare sui bit che si vogliono impostare o cancellare. Una volta selezionati i bit da cambiare, selezionare una delle azioni (Imposta marcati o Cancella marcati).
+
+Infine, per impostare gli attributi esattamente come specificato, usare il tasto [Imposta tutti], che agisce su tutti i file marcati.
+
+[Modifica tutti] modifica solo gli attributi marcati su tutti i file.
+
+[Imposta marcati] pone a uno i bit marcati degli attributi di tutti i file selezionati.
+
+[Cancella marcati] pone a zero i bit marcati degli attributi di tutti i file selezionati.
+
+[Imposta] imposta gli attributi di un file.
+
+[Cancella] cancella il comando Permessi.[Chown]
+Proprietario
+
+Il comando proprietario serve a cambiare il proprietario/gruppo di un file. Il tasto di scelta rapida per questo comando è C-x o.[Advanced Chown]
+Proprietario avanzato
+
+Il comando Proprietario avanzato consiste nel comando permessiChmod e proprietarioChown combinati assieme in una finestra. E' così possibile cambiare i permessi ed il proprietario/gruppo dei file in un sol colpo.[File Operations]
+Operazioni sui file
+
+Quando si copia, sposta o cancella dei file il Midnight Commander mostra la finestra di operazioni sui file. Essa mostra i file sui cui si sta operando attualmente e ci possono essere fino a tre barre di progressione. La barra file mostra quanta parte del file corrente è stata copiata. La barra conteggio mostra quanti dei file selezionati sono stati gestiti. La barra byte comunica quanto dell'ampiezza totale dei file selezionati è stata elaborato. Se l'opzione operazioni prolisse è deselezionata, non verranno mostrate la barra file e la barra byte.
+
+Ci sono due bottoni sul fondo della finestra di dialogo. Premendo il tasto Salta si salterà il resto del file. Premendo il tasto Esci si bloccherà tutta l'operazione ed il resto dei file saranno ignorati.
+
+Ci sono tre altre finestre di dialogo che si possono incontrare durante le operazioni sui file.
+
+La finestra di dialogo di errore informa circa le condizioni di errore ed ha tre scelte. Normalmente si seleziona il tasto Salta per saltare il file o Esci per bloccare l'operazione. E' possibile anche selezionare il tasto Riprova se nel frattempo si ha risolto il problema da un'altro terminale.
+
+La finestra di dialogo di rimpiazzo viene mostrata quando si tenta di copiare o spostare un file sopra un file esistente. La finestra mostra la data e la dimensione di tutti e due i file. Premere il tasto Si per rimpiazzare il file, No per saltare il file, Tutti per sovrascrivere tutti i file, Nessuno per non sovrascriverli mai e Aggiorna per sovrascriverli solo se il file sorgente è più recente del file di destinazione. E' possibile bloccare l'intera operazione premendo il tasto Esci.
+
+La finestra di dialogo della cancellazione ricorsiva appare quando si tenta di cancellare una directory che non è vuota. Premere il tasto Si per cancellare la directory ricorsivamente o No per saltare la directory, il tasto Tutto per cancellare tutte le directory non vuote e Nessuno per saltare tutte le directory non vuote. Per fermare l'intera operazione premere il tasto Esci. Se si seleziona il tasto Si o Tutto verrà richiesta una conferma. Premere "si" solo se si è veramente sicuri di voler fare una cancellazione ricorsiva.
+
+Se si hanno dei file marcati e si esegue un'operazione su di essi, solo i file sui quali l'operazione ha avuto successo verranno deselezionati. I file su cui è fallita l'operazione o che sono stati saltati vengono lasciati marcati.[Mask Copy/Rename]
+Maschera Copia/Rinomina
+
+L'operazione di copia/rinomina permette di cambiare il nomi dei file in maniera semplice. Per farlo, è necessario specificare la maschera di sorgente corretta e generalmente, nella parte finale della destinazione, specificare alcuni caratteri jolly. Tutti i file corrispondenti alla maschera sorgente sono copiati/rinominati secondo la maschera destinazione. Se ci sono file marcati, vengono rinominati solo i file marcati che corrispondono alla maschera sorgente.
+
+Queste le opzioni che possono essere impostate:
+
+Segue i collegamenti, specifica se creare i collegamenti simbolici o no (hard link), presenti nella directory sorgente (e ricorsivamente nelle sue sotto directory) come nuovi collegamenti oppure se invece si desidera che venga copiato il loro contenuto.
+
+In una sottodir se esiste già, specifica cosa fare se nella directory obiettivo esiste una directory con lo stesso nome del file/directory in copia. L'azione predefinita è di copiare il suo contenuto in quella directory, ma selezionando quest'opzione si può copiare la directory sorgente in questa directory. Forse un esempio aiuterà:
+
+Si vuole copiare il contenuto di una directory pallo su /pinco/pallo, che è una directory che esiste già. Normalmente (quando l'opzione non è impostata), mc farebbe la copia in /pinco/pallo. Abilitando quest'opzione verrà eseguita la copia in /pinco/pallo/pallo, perché la directory esiste già.
+
+Mantiene gli attributi, specifica se si vuole preservare i permessi originali del file, le date e se si è l'utente root, gli attributi UID e GID. Se quest'opzione non è impostata verrà rispettato il valore corrente di umask.
+
+"Usa i modelli della shell, opzione abilitata"
+
+Quando l'opzione dei modelli della shell è abilitata è possibile usare i caratteri jolly '*' e '?' nella maschera sorgente. Questi lavorano come nella shell. Nella maschera obbiettivo sono permessi solo i caratteri jolly '*' e '\<cifra>'. Il primo carattere jolly '*' nella maschera obbiettivo corrisponde al primo gruppo di caratteri jolly nella maschera sorgente, il secondo '*' al secondo gruppo e così via. Il carattere jolly '\1' corrisponde al primo gruppo di caratteri jolly nella maschera sorgente, '\2' corrisponde al secondo gruppo e così via fino al '\9'. Il carattere jolly '\0' rappresenta tutto il nome del file sorgente.
+
+Due esempi:
+
+Se la maschera sorgente è "*.tar.gz", la destinazione è "/bla/*.tgz" e il file da copiare è "foo.tar.gz", la copia sarà "foo.tgz" in "/bla".
+
+Supponiamo si voglia scambiare la base e l'estensione di un file cosicché "file.c" divenga "c.file" e così via. La maschera sorgente per questa operazione sarà "*.*" e la destinazione sarà "\2.\1".
+
+"Usa i modelli della shell, opzione disabilitata"
+
+Quando l'opzione dei modelli della shell è disabilitata, MC non esegue più il raggruppamento automatico. E' necessario usare espressioni tipo '\(...\)' nella maschera sorgente per dare significato ai caratteri jolly nella maschera obbiettivo. Altrimenti le maschere obbiettivo si trovano nella situazione di quando i modelli della shell sono abilitati.
+
+Due esempi:
+
+Se la maschera sorgente è "^\(.*\)\.tar\.gz$", la destinazione è "/bla/*.tgz" e il file da copiare è "foo.tar.gz", la copia sarà "/bla/foo.tgz".
+
+Supponiamo che si voglia scambiare la base e l'estensione di un file cosicché "file.c" divenga "c.file" e così via. La maschera sorgente per questa operazione sarà "^\(.*\)\.\(.*\)$" e la destinazione sarà "\2.\1".
+
+"Conversioni Maiuscole/Minuscole"
+
+E' anche possibile cambiare tra maiuscole e minuscole i caratteri dei file. Se si usa '\u' o '\l' nella maschera obbiettivo, il carattere successivo sarà convertito rispettivamente in maiuscolo o minuscolo.
+
+Se si usa '\U' o '\L' nella maschera obbiettivo, il caratteri successivi saranno convertiti rispettivamente in maiuscolo o minuscolo fino alla prossima corrispondenza di '\E' o '\U', '\L' o alla fine del nome del file.
+
+Notare che '\u' e '\l' sono più forti di '\U' e '\L'.
+
+Per esempio, se la maschera sorgente è '*' (modelli della shell abilitati) o '^\(.*\)$' (modelli della shell disabilitati) e la maschera obbiettivo è '\L\u*' i nomi dei file saranno convertiti ad avere maiuscola iniziale ed il resto minuscolo.
+
+Si può usare '\' come carattere di protezione. Per esempio, '\\' è una barra retroversa e '\*' è un asterisco.[Internal File Viewer]
+Visualizzatore di file interno
+
+Il visualizzatore di file interno fornisce due modalità di visualizzazione: ASCII e esadecimale. Per passare da una modalità all'altra, usare il tasto F4. Se si ha il programma GNU gzip installato, esso verrà usato automaticamente per decomprimere i file al volo.
+
+Il visualizzatore tenterà di usare il metodo migliore fornito dal sistema o a seconda del tipo di file, per mostrare le informazioni. Il visualizzatore interno interpreterà alcune sequenze di stringa per impostare gli attributi di grassetto e sottolineato, per mostrare al meglio i file.
+
+In modalità esadecimale, la funzione di ricerca accetta testo protetto e costanti numeriche. Il testo protetto viene confrontato esattamente dopo la rimozione della protezione. Ogni numero rappresenta un byte. E' possibile mescolare testo protetto con costanti come nell'esempio:
+
+"Stringa" -1 0xBB 012 "ancora testo"
+
+Notare che 012 è un numero ottale. -1 viene convertito in 0xFF.
+
+Alcuni dettagli interni circa il visualizzatore: su sistemi che forniscono la chiamata di sistema mmap(2), il programma mappa il file invece di caricarlo; se il sistema non fornisce la chiamata di sistema mmap(2) o il file corrisponde ad un'azione che richiede un filtro, allora il visualizzatore userà i buffer di accrescimanto (growing), caricando perciò solo le parti del file su cui vi si accede (inclusi i file compressi).
+
+Ecco un'elenco di azioni associate ad ogni tasto che il Midnight Commander gestisce nel visualizzatore di file interno.
+
+F1 Invoca il visualizzatore ipertestuale dell'aiuto.
+
+F2 Abilita/disabilita la funzione di a capo automatico.
+
+F4 Abilita/disabilita la modalità esadecimale.
+
+F5 Vai alla riga. Questo comando richiederà un numero di riga e mostrerà quella riga.
+
+F6, /.  Ricerca tramite espressione regolare.
+
+?, Ricerca in ordine inverso, tramite espressione regolare.
+
+F7 Ricerca normale / ricerca in modalità esadecimale.
+
+C-s, F17, n. Inizia una ricerca normale, se non c'era già un'espressione di ricerca, altrimenti trova la prossima occorrenza.
+
+C-r. Inizia una ricerca normale in ordine inverso, se non c'era già un'espressione di ricerca, altrimenti trova la prossima occorrenza.
+
+F8 Cambia tra modalità Normale/Filtrata: questo mostrerà il file come si trova su disco o se è stato specificato un filtro nel file mc.ext.ini, come esce dal filtro. La modalità corrente è sempre quella diversa da quella mostrata dall'etichetta del tasto, dato che il bottone rappresenta la modalità nella quale si entra premendolo.
+
+F9 Cambia tra modalità non formattata e formattata: quando la modalità è formattata, il visualizzatore interpreterà alcune sequenze di stringa per rappresentare il grassetto e il sottolineato con colori diversi. Anche per questa funzione, l'etichetta sul tasto rappresenta la modalità non corrente.
+
+F10, Esc. Esce dal visualizzatore di file interno.
+
+pagina-giù, spazio, C-v. Sfoglia di una pagina in avanti.
+
+pagina-sù, M-v, C-b, backspace. Sfoglia di una pagina indietro.
+
+freccia-in-basso Si sposta di una riga in avanti.
+
+up-key Si sposta di una riga indietro.
+
+C-l Ridisegna lo schermo.
+
+C-o Passa alla subshell e mostra la schermata dei comandi.
+
+"[n] m" Imposta l'indice n.
+
+"[n] r" Salta all' indice n.
+
+C-f Salta al file successivo.
+
+C-b  Salta al file precedente.
+
+M-r  Abilita/disabilita il righello.
+
+E' anche possibile istruire il visualizzatore su come mostrare un file, vedere la sezione modifica file estensioniEdit Extension File.[Internal File Editor]
+Editor di file interno
+
+L'editor di file interno fornisce molte delle funzioni dei più diffusi editor a pieno schermo. Viene invocato tramite F4 sempre che l'opzione use_internal_edit sia impostata nel file di inizializzazione. Esso ha un limite estensibile di sedici megabyte e gestisce i file binari senza problemi.
+
+Le funzioni che allo stato attuale supporta sono: copia, spostamento, cancellazione, taglia e incolla di blocchi; tasto per l'annullamento; menu a discesa, inserimento file, definizione di macro, ricerca e sostituzione di espressioni regolari; evidenziazione di testo maiuscole-freccia MSW-MAC (solo per la console Linux); scambio tra inserimento-rimpiazzo e un'opzionale flusso di blocchi di testo attraverso comandi shell come indent.
+
+L'editor è molto semplice da usare e non richiede apprendimento. Per vedere cosa fanno i tasti, basta consultare il menu a discesa appropriato. Gli altri tasti sono: maiusc + tasti freccia produce la selezione del testo. Ctrl-Ins copia nel file mcedit.clip e Shift-Ins incolla da mcedit.clip. Shift-Del  taglia in mcedit.clip, e Ctrl-Del cancella il testo selezionato. Funziona anche l'evidenziazione con il mouse che, come al solito, si può utilizzare come in un normale terminale, premendo contemporaneamente il tasto Maiuscole mentre si fa clic trascinando con il mouse.
+
+Per definire una macro, premere Ctrl-R poi premere i tasti che si voglia essere eseguiti. Premere nuovamente Ctrl-R quando si ha finito. E' possibile assegnare una macro a qualsiasi tasto si preme. La macro viene eseguita quando si preme Ctrl-A  e poi il tasto assegnato. La macro viene eseguita anche se si preme il tasto Meta, Ctrl, o Esc e il tasto assegnato, basta che il tasto non sia già assegnato a qualche altra funzione. Una volta definiti, i macro comandi finiscono nel file ~/.local/share/mc/mcedit/mcedit.macros nella propria directory home. E' possibile cancellare una macro cancellando la riga appropriata nel suddetto file.
+
+F19 formatterà il blocco evidenziato correntemente (testo, codice C o C++ o altro). Questo comportamento viene controllato dal file /opt/share/mc/edit.indent.rc che viene copiato nel ~/.local/share/mc/mcedit/edit.indent.rc nella propria directory home la prima volta che lo si usa.
+
+L'editor visualizza snche caratteri non-americani (160+). Quando si modifica file binari, si dovrebbe impostare mostra bit a 7 bit nel menu opzioni, per mantenere la spaziatura pulita.[Completion]
+Completamento
+
+Ovvero lascia che il Midnight Commander scriva per te.
+
+Tentativi per eseguire un completamento del testo prima della posizione corrente. MC tenta il completamento trattando il testo come una variabile (se il testo comincia con $), nomeutente (se il testo comincia con ~), nomehost (se il testo comincia con @) o comando (se si è sulla riga di comando nell'atto di battere un comando, allora possibili completamenti includerebbero parole riservate e comandi integrati della shell). Se nessuno di questi produce una corrispondenza, viene tentato un completamento del nome del file.
+
+Completamenti di nomefile, nomeutente, variabili e nomehost funzionano su tutte le righe di ingresso, il completamento dei comandi invece è specifico della riga di comando. Se il completamento è ambiguo (ci sono più possibilità differenti), MC emette un suono e l'azione seguente dipenderà a seconda delle impostazioni dell'opzione completamento: visualizza tutto nella finestra configurazioneConfiguration. Se è abilitata, un elenco di tutte le possibilità viene mostrato vicino alla posizione corrente per poter selezionare con i tasti freccia e Invio la voce corretta. Si può anche battere le prime lettere nelle quali le varie possibilità differiscono per muoversi in un sottoinsieme di tutte le possibilità e completare il più possibile. Se si preme nuovamente M-Tab, verrà mostrato solo il sottoinsieme nella finestra dell'elenco, altrimenti la prima voce che corrisponde a tutti i caratteri precedenti verrà evidenziata. Non appena non c'è più ambiguità, la finestra scompare, ma la si può nascondere con i tasti di cancellamento Esc, F10 e i tasti di freccia sinistra e destra. Se completamento: visualizza tuttoConfiguration è disabilitato, la finestra viene mostrata solo se si preme M-Tab una seconda volta; la prima volta MC emette solo un suono.[Virtual File System]
+File system virtuale
+
+Il Midnight Commander è provvisto di uno strato di codice per accedere al file system; questo strato di codice è conosciuto anche con il nome di commutazione di file system virtuale. La commutazione del file system virtuale permette al Midnight Commander di manipolare file all'interno di un file system non di tipo Unix.
+
+Attualmente il Midnight Commander viene confezionato con alcuni File System Virtuali (VFS): il file system locale, usato per accedere al normale file system Unix; l'ftpfs, usato per manipolare file su sistemi remoti con il protocollo FTP; il tarfs, usato per manipolare file tar e file tar compressi; l'undelfs, usato per recuperare file cancellati su file system di tipo ext2 (il file system predefinito per sistemi Unix), fish (per manipolare file su connessioni shell come rsh e ssh) e per ultimo l'mcfs (file system del Midnight Commander), un file system basato sulla rete.
+
+Il codice di commutazione di file system interpreta tutti i nomi di percorso utilizzati e li dirige al file system corretto; il formato utilizzato per ognuno di questi file system viene descritto più avanti nella sezioni apposite.[FTP File System]
+File system FTP
+
+Il file system FTP (ftpfs) permette di manipolare file su macchine remote. Per utilizzarlo, si può usare il pannello del comando Connessione FTP (accessibile dalla barra dei menu) oppure si può cambiare direttamente la directory corrente con un comando cd verso un percorso simile al seguente:
+
+ftp://[!][utente[:pass]@]macchina[:porta][dir-remota]
+
+Gli elementi utente, porta e dir-remota sono opzionali. Se si specifica l'elemento utente, allora il Midnight Commander tenterà di collegarsi alla macchina remota come quell'utente, altrimenti userà il vostro nome di login o il nome di login prelevato dal file ~/.netrc. L'elemento opzionale pass è la parola d'ordine per la connessione. L'uso della password nel nome VFS della directory non è raccomandabile, dato che può apparire sullo schermo in chiaro e può essere salvato nella cronologia directory.
+
+Per abilitare l'uso del proxy FTP, anteporre ! (un punto esclamativo) al nome host.
+
+Esempi:
+
+    ftp://ftp.nuclecu.unam.mx/linux/local
+    ftp://tsx-11.mit.edu/pub/linux/packages
+    ftp://!dietro.il.firewall.edu/pub
+    ftp://guest@host-remoto.com:40/pub
+    ftp://miguel:xxx@server/pub
+
+Controllare la finestra di dialogo file system virtualeVirtual FS per le opzioni ftpfs.[Tar File System]
+File system Tar
+
+Il file system tar fornisce un accesso in sola lettura ai file tar e tar compressi usando il comando chdir. Per cambiare la directory corrente al file tar usare la seguente sintassi:
+
+/nomefile.tar/utar://[dir-dentro-tar]
+
+Il file mc.ext.ini già fornisce un collegamento per il file tar; ciò significa che normalmente basta selezionare un file tar e premere invio per entrare nel file tar, vedere la sezione modifica file estensioniEdit Extension File per i dettagli su come questo viene fatto.
+
+Esempi:
+
+    mc-3.0.tar.gz/utar://mc-3.0/vfs
+    /ftp/GCC/gcc-2.7.0.tar/utar://
+
+L'ultima riga, specifica il percorso completo dell'archivio tar.[FIle transfer over SHell filesystem]
+Trasferimento di file su FIlesystem di SHell (FISH)
+
+Il file system fish è un file system basato sulla rete che permette di manipolare i file di una macchina remota come fossero locali. Per usarlo, l'altra parte deve avere un server fish o avere una shell compatibile bash.
+
+Per collegarsi ad una macchina remota, basta solo fare cd in una speciale directory il cui nome ha il seguente formato:
+
+sh://[utente@]macchina[:opzioni]/[dir-remota]
+Gli elementi utente, opzioni e dir-remota sono opzionali. Se si specifica l'elemento utente allora il Midnight Commander tenterà di connettersi alla macchina remota con quell'utente, altrimenti userà il nome di login.
+
+Le opzioni sono 'C' - usa la compressione e 'rsh' per usare rsh invece di ssh. Se l'elemento dir-remota è presente, la directory corrente sulla macchina remota sarà impostata a questo valore.
+
+Esempi:
+
+    sh://solorsh.mx:r/linux/locale
+    sh://joe@vuole.lacompressione.edu:C/privato
+    sh://joe@noncompresso.ssh.edu/privato
+[Undelete File System]
+Recupero file cancellati
+
+Su sistemi Linux, se si richiede, tramite configure, di usare la caratteristica di undelete del file system ext2, si avrà accesso al file system di recupero file cancellati. Il recupero file cancellati è disponibile solo su file system di tipo ext2. Il file system è solo un'interfaccia alla libreria ext2fs che: recupera tutti i nomi dei file cancellati su un fs ext2 e fornisce ed estrae i file selezionati in una partizione normale.
+
+Per usare questo file system, è necessario entrare nella directory con il nome speciale formato dal prefisso "undel://" e dal nome del file system dove il file risiede.
+
+Per esempio, per recuperare file cancellati sulla seconda partizione del primo disco SCSI su Linux, si dovrà usare il seguente percorso:
+
+    undel://sda2
+
+Il recupero può metterci un po' di tempo per caricare le informazioni necessarie per poter cominciare a navigare attraverso i file.[EXTernal File System]
+EXTernal File System
+
+extfs allows to integrate numerous features and file types into GNU Midnight Commander in an easy way, by writing scripts.
+
+Extfs filesystems can be divided into two categories:
+
+1. Stand-alone filesystems, which are not associated with any existing file. They represent certain system-wide data as a directory tree. You can invoke them by typing 'cd fsname://' where fsname is an extfs short name (see below). Examples of such filesystems include audio (list audio tracks on the CD) or apt (list of all Debian packages in the system).
+
+For example, to list CD-Audio tracks on your CD-ROM drive, type
+
+  cd audio://
+
+2. 'Archive' filesystems (like rpm, patchfs and more), which represent contents of a file as a directory tree. It can consist of 'real' files compressed in an archive (urar, rpm) or virtual files, like messages in a mailbox (mailfs) or parts of a patch (patchfs). To access such filesystems 'fsname://' should be appended to the archive name. Note that the archive itself can be on another vfs.
+
+For example, to list contents of a zip archive documents.zip type
+
+  cd documents.zip/uzip://
+
+In many aspects, you could treat extfs like any other directory. For instance, you can add it to the hotlist or change to it from directory history. An important limitation is that you cannot invoke shell commands inside extfs, just like any other non-local VFS.
+
+Common extfs scripts included with Midnight Commander are:
+
+a       access 'A:' DOS/Windows diskette (cd a://).
+
+apt     front end to Debian's APT package management system (cd apt://).
+
+audio   audio CD ripping and playing (cd audio:// or cd device/audio://).
+
+bpp     package of Bad Penguin GNU/Linux distribution (cd file.bpp/bpp://).
+
+deb     package of Debian GNU/Linux distribution (cd file.deb/deb://).
+
+dpkg    Debian GNU/Linux installed packages (cd deb://).
+
+hp48    view and copy files to/from a HP48 calculator (cd hp48://).
+
+lslR    browsing of lslR listings as found on many FTPs (cd filename/lslR://).
+
+mailfs  mbox-style mailbox files support (cd mailbox/mailfs://).
+
+patchfs extfs to handle unified and context diffs (cd filename/patchfs://).
+
+rpm     RPM package (cd filename/rpm://).
+
+rpms    RPM database management (cd rpms://).
+
+ulha, urar, uzip, uzoo, uar, uha
+        archivers (cd archive/xxxx:// where xxxx is one of: ulha, urar, uzip, uzoo, uar, uha).
+
+You could bind file type/extension to specified extfs as described in the Edit Extension FileEdit Extension File section. Here is an example entry for Debian packages:
+
+  regex/.deb$
+          Open=%cd %p/deb://
+[Colors]
+Colori
+
+Il Midnight Commander tenta di stabilire se il terminale corrente supporta i colori usando il database dei terminali e il nome del terminale corrente. Capita che possa sbagliarsi, perciò si può essere costretti a forzare la modalità a colori o a disabilitarla usando rispettivamente le opzioni -c e -b.
+
+Se il programma è compilato con il manager dello schermo S-Lang invece che ncurses, controllerà se è impostata anche la variabile COLORTERM, con lo stesso effetto dell'opzione -c.
+
+E' possibile specificare i terminali su cui si vuole forzare sempre la modalità colore aggiungendo la variabile color_terminals nella sezione Colors del file di inizializzazione. Questo previene il Midnight Commander dal tentare di controllare se il terminale supporta i colori. Per esempio:
+[Colors]
+color_terminals=linux,xterm
+color_terminals=nome_terminale-1,nome-terminale-2...
+
+Il programma può essere compilato sia con il supporto di ncurses che di S-Lang ma ncurses non fornisce alcun modo per forzare la modalità colore: ncurses userà solo le informazioni nel database dei terminali.
+
+Il Midnight Commander fornisce un modo per cambiare i colori predefiniti. Attualmente i colori sono configurati usando la variabile ambiente MC_COLOR_TABLE  o la sezione Colors nel file di inizializzazione.
+
+Nella sezione Colors, la mappa dei colori predefinita viene caricata dalla variabile base_color. Si può specificare una mappa colori alternativa per un terminale usando il nome del terminale come chiave nella sezione. Esempio:
+
+[Colors]
+base_color=
+xterm=menu=magenta:marked=,magenta:markselect=,red
+
+Il formato della definizione dei colori è:
+
+  <parolachiave>=<coloreprimopiano>,<coloresfondo>:<parolachiave>= ...
+
+I colori sono opzionali e le parolechiave sono: normal, selected, marked, markselect, errors, input, reverse, gauge. I colori dei menu sono: menunormal, menusel, menuhot, menuhotsel, menuinactive. I colori delle finestre di dialogo sono: dnormal, dfocus, dhotnormal, dhotfocus. I colori dell'aiuto sono: helpnormal, helpitalic, helpbold, helplink, helpslink. Il colore del visualizzatore è: viewunderline. Colori speciali di evidenziazione: executable, directory, link, device, special, core. I colori dell'viewer sono: viewnormal, viewbold, viewunderline, viewselected. I colori dell'editor sono: editnormal, editbold, editmarked, editnonprintable.
+
+input  determina il colore delle righe di input usate delle finestre di dialogo.
+
+gauge  determina il colore della parte riempita della barra di progressione (gauge), che mostra quanta percentuale del file è stata copiata o altro in forma grafica.
+
+Le finestre di dialogo usano i colori seguenti: dnormal  usata per il testo normale, dfocus è il colore usato per il componente correntemente selezionato, dhotnormal è il colore usato per differenziare il tasto di scelta rapida nei componenti normali, mentre il colore dhotfocus viene usato per il colore evidenziato nel componente correntemente selezionato.
+
+I menu usano lo stesso schema ma usano invece i selettori menunormal, menusel, menuhot, menuhotsel e menuinactive.
+
+L'aiuto usa i seguenti colori: helpnormal viene usato per il testo normale, helpitalic viene usato per il testo enfatizzato con il corsivo nelle pagine del manuale, helpbold viene usato per il testo enfatizzato con il grassetto nelle pagine del manuale, helplink viene usato per un collegamento non selezionato e helpslink viene usato per un collegamento selezionato.
+
+I colori speciali di evidenziazione determinano come i file vengono visualizzati quando l'evidenziazione dei file è abilitata (vedere sezione aspettoLayout). directory usata per directory o collegamenti simbolici a directory; executable per il file eseguibili; link viene usata per i collegamenti simbolici che non sono nè interrotti nè connessi a directory; stalelink usata per collegamenti simbolici interrotti; device - dispositivi a caratteri e blocchi; special usata per i file speciali, come pipe e socket; core usata per i file core.
+
+I colori possibili sono: black, gray, red, brightred, green, brightgreen, brown, yellow, blue, brightblue, magenta, brightmagenta, cyan, brightcyan, lightgray e white. Inoltre c'è una speciale parola chiave per lo sfondo trasparente. Essa è 'default'. Il 'default' può essere usato solo come colore di sfondo. Esempio:
+[Colors]
+base_color=normal=white,default:marked=magenta,default
+[Special Settings]
+Impostazioni speciali
+
+Molte delle impostazioni del Midnight Commander possono essere cambiate dai menu. Comunque, c'è un piccolo numero di impostazioni che possono essere cambiate solo agendo sul file di configurazione.
+
+Queste sono le variabili che possono essere impostate nel file ~/.config/mc/ini:
+
+clear_before_exec
+        Il valore predefinito del Midnight Commander è di cancellare lo schermo prima dell'esecuzione di un comando. Se si preferisce vedere il risultato di un comando in fondo allo schermo, si modifichi la copia locale del file ~/.config/mc/ini e si cambi il valore del campo clear_before_exec a 0.
+
+confirm_view_dir
+        Se si preme F3 su di una directory, normalmente MC entra nella directory. Se questa opzione è impostata a 1, MC chiederà una conferma prima di cambiare directory se si hanno dei file marcati.
+
+ftpfs_retry_seconds
+        Questo valore è il numero di secondi che il Midnight Commander aspetta prima di tentare di riconnettersi ad un ftp server che ha negato l'autenticazione. Se il valore è zero, l'autenticazione non verrà ritentata.
+
+max_dirt_limit
+        Specifica al massimo quanti aggiornamenti possono essere saltati nel visualizzatore di file interno. Normalmente questo valore non è significativo, dato che il codice automaticamente aggiusta il numero da saltare a seconda della velocità con cui arrivano le pressioni dei tasti. Comunque, su macchine molto lente o su terminali con un'auto ripetizione dei tasti molto veloce, un grande valore può rendere gli aggiornamenti dello schermo troppo instabili.
+
+        Sembra che impostare max_dirt_limit a 10 porta i migliori risultati, e questo è il valore predefinito.
+
+mouse_move_pages
+        Controlla il fatto che lo scorrimento con il mouse sui pannelli sia fatto per pagine o per righe.
+
+mouse_move_pages_viewer
+        Controlla se lo scorrimento del mouse nel visualizzatore di file interno sia fatto per pagine o per righe.
+
+old_esc_mode
+        Normalmente il Midnight Commander tratta il tasto ESC come un prefisso (old_esc_mode=0), ma se si imposta quest'opzione (old_esc_mode=1), allora il tasto ESC agirà come un tasto di prefisso per un secondo, e se non vengono premuti altri tasti, allora il tasto ESC sarà interpretato come un tasto di cancellazione (ESC ESC).
+
+only_leading_plus_minus
+        Permette una gestione speciale per '+', '-', '*' nella riga di comando (selezione, deselezione, selezione inversa) solo se la riga di comando è vuota. Non è necessario proteggere questi caratteri nel mezzo della riga di comando ma non è possibile cambiare selezione se la riga di comando non è vuota.
+
+panel_scroll_pages
+        Se impostata (valore predefinito), i pannelli scorrono di metà quando il cursore raggiunge la fine o l'inizio del pannello, altrimenti scorrono di un file per volta.
+
+show_output_starts_shell
+        Questa variabile lavora solo se non si sta usando il supporto della subshell. Quando si usano i tasti C-o per tornare allo schermo utente, se quest'opzione è impostata, si avrà una nuova shell. Altrimenti, premendo qualsiasi tasto si tornerà al Midnight Commander.
+
+torben_fj_mode
+        Se quest'opzione è impostata, allora i tasti inizio e fine lavoreranno leggermente differentemente sui pannelli. Invece che muovere le selezioni al primo e ultimo file del pannello, agiranno nel modo seguente:
+
+        Il tasto inizio: va alla riga centrale, se sotto di essa, altrimenti va alla riga in cima a meno che non ci sia già; in tal caso andrà al primo file del pannello.
+
+        Il tasto fine ha un comportamento simile: va giù alla riga centrale se era sopra di essa, altrimenti va alla riga di fondo a meno che non ci sia già; in tal caso sposterà la selezione all'ultimo file del pannello.
+
+use_file_to_guess_type
+        Se questa variabile è abilitata (valore predefinito) userà il comando file per trovare delle corrispondenze sui tipi di file elencati nel file mc.ext.iniEdit Extension File.
+
+xtree_mode
+        Se questa variabile è impostata (il valore predefinito è no) quando si naviga il file system su un pannello ad albero, automaticamente ricaricherà l'altro pannello con il contenuto della directory selezionata.[Terminal databases]
+Database di terminali
+
+Il Midnight Commander fornisce una maniera per correggere il database dei terminali si sistema senza richiedere i privilegi di amministratore (root). Il Midnight Commander ricerca nel file di inizializzazione di sistema (il file mc.lib collocato nella directory di libreria del Midnight Commander) e nel file ~/.config/mc/ini la sezione "terminal:nome-del-terminale-in-uso" e poi la sezione "terminal:general", ogni riga della sezione contiene il simbolo chiave che si vuol definire, seguito da un segno di uguale e la definizione per quel tasto. E' possibile usare la forma speciale \e per rappresentare il carattere di escape e ^x per rappresentare il carattere control-x.
+
+I simboli chiave possibili sono:
+
+f0 a f20      tasti funzione f0-f20
+bs	      backspace
+home          tasto inizio
+end           tasto fine
+up            tasto freccia in su
+down          tasto freccia in giù
+left          tasto freccia a sinistra
+right         tasto freccia a destra
+pgdn          tasto pagina in giù
+pgup          tasto pagina in su
+insert        tasto inserimento
+delete        tasto cancellazione
+complete      per fare il completamento
+
+Per esempio, per definire il tasto di inserimento come escape + [ + O + p impostare il seguente nel file ini:
+
+insert=\e[Op
+
+Il tasto di completamento rappresenta le sequenze di escape usate per invocare il processo di completamento, invocato tramite M-tab, ma ridefinibile ad altri tasti per fare lo stesso lavoro (su quelle tastiere con tonnellate di simpatici tasti dappertutto).
+
+[FILES]
+FILE
+
+Il programma recupera tutte le informazioni relative al proprio funzionamento dalla variabile ambiente MC_DATADIR, e se la variabile non è impostata, passerà alla directory /opt/share/mc .
+
+/opt/share/mc/help/mc.hlp
+
+        Il file di aiuto per il programma.
+
+/opt/share/mc/mc.ext.ini
+
+        Il file delle estensioni di sistema predefinito.
+
+~/.config/mc/mc.ext.ini
+
+        Le estensioni dell'utente, la configurazione del visualizzatore e dell'editor di file. Se presenti, questi file si sovrappongono ai file di sistema.
+
+/opt/share/mc/mc.ini
+
+        La configurazione di sistema predefinita per il Midnight Commander, usata solo se l'utente non possiede il proprio file ~/.config/mc/ini.
+
+/opt/share/mc/mc.lib
+
+        Le impostazioni globali per il Midnight Commander. La modifica di questo file influisce su tutti gli utenti, che abbiano o no il file ~/.config/mc/ini . Attualmente vengono caricate solo le impostazioni del terminaleTerminal databases da mc.lib.
+
+~/.config/mc/ini
+
+        La configurazione dell'utente. Se questo file è presente, la configurazione viene caricata da qui invece che dal file di sistema.
+
+/opt/share/mc/hints/mc.hint
+
+        Questo file contiene i suggerimenti (dritte) mostrate dal programma.
+
+/opt/share/mc/mc.menu
+
+        Questo file contiene il menu di sistema per le applicazioni.
+
+~/.config/mc/menu
+
+        Il menu utente per le applicazioni. Se presente viene usato al posto del menu delle applicazioni di sistema.
+
+~/.cache/mc/Tree
+
+        L'elenco di directory per l'albero directory e per la vista ad albero.
+
+./.mc.menu
+
+        Menu locale definito dall'utente. Se questo file è presente viene usato al posto del menu delle applicazioni utente o di sistema.
+
+To change default home directory of MC, you can use MC_PROFILE_ROOT environment variable. The value of MC_PROFILE_ROOT must be an absolute path. If MC_PROFILE_ROOT is unset or empty, HOME variable is used. If HOME is unset or empty, MC directories are get from GLib library.[AVAILABILITY]
+REPERIBILITA'
+
+L'ultima versione di questo programma si trova su http://ftp.midnight-commander.org/.[SEE ALSO]
+VEDERE ANCHE
+
+ed(1), gpm(1), terminfo(1), view(1), sh(1), bash(1), tcsh(1), zsh(1).
+
+La pagina Web del Midnight Commander:
+	https://www.midnight-commander.org/
+[AUTHORS]
+AUTORI
+
+Miguel de Icaza (miguel@ximian.com), Janne Kukonlehto (jtklehto@paju.oulu.fi), Radek Doulik (rodo@ucw.cz), Fred Leeflang (fredl@nebula.ow.org), Dugan Porter (dugan@b011.eunet.es), Jakub Jelinek (jj@sunsite.mff.cuni.cz), Ching Hui (mr854307@cs.nthu.edu.tw), Andrej Borsenkow (borsenkow.msk@sni.de), Norbert Warmuth (nwarmuth@privat.circular.de), Mauricio Plaza (mok@roxanne.nuclecu.unam.mx), Paul Sheer (psheer@icon.co.za), Pavel Machek (pavel@ucw.cz) e Pavel Roskin (proski@gnu.org) sono gli sviluppatori di questo pacchetto. Alessandro Rubini (rubini@ipvvis.unipv.it) ha dato un notevole contribuito nella correzione e nel miglioramento del supporto del mouse nel programma, John Davis (davis@space.mit.edu) ha reso disponibile la sua libreria S-lang sotto la licenza GPL e ha risposto alle mie domande su di essa; le seguenti persone hanno contribuito al codice e in molte correzioni (in ordine alfabetico):
+
+Adam Tla/lka (atlka@sunrise.pg.gda.pl), alex@bcs.zp.ua (Alex I. Tkachenko), Antonio Palama, DOS port (palama@posso.dm.unipi.it), Erwin van Eijk (wabbit@corner.iaf.nl), Gerd Knorr (kraxel@cs.tu-berlin.de), Jean-Daniel Luiset (luiset@cih.hcuge.ch), Jon Stevens (root@dolphin.csudh.edu), Juan Francisco Grigera, port su piattaforma Win32 (j-grigera@usa.net), Juan Jose Ciarlante (jjciarla@raiz.uncu.edu.ar), Ilya Rybkin (rybkin@rouge.phys.lsu.edu), Marcelo Roccasalva (mfroccas@raiz.uncu.edu.ar), Massimo Fontanelli (MC8737@mclink.it), Sergey Ya. Korshunoff (seyko2@gmail.com), Thomas Pundt (pundtt@math.uni-muenster.de), Timur Bakeyev (timur@goff.comtat.kazan.su), Tomasz Cholewo (tjchol01@mecca.spd.louisville.edu), Torben Fjerdingstad (torben.fjerdingstad@uni-c.dk), Vadim Sinolitis (vvs@nsrd.npi.msu.su) e Wim Osterholt (wim@djo.wtm.tudelft.nl).[BUGS]
+BACHI
+
+Vedere il file TODO nella distribuzione per informazioni su quello che rimane ancora da fare.
+
+Se si vuole fare un rapporto di un problema nel programma, si prega di spedire un messaggio di posta a questo indirizzo: mc-devel@lists.midnight-commander.org.
+
+Nel rapporto è necessario fornire una descrizione dettagliata del baco, la versione del programma (mc -v mostra quest'informazione), il sistema operativo su cui si sta facendo girare il programma e, se il programma va in crash, è gradita una traccia dello stack.
+
+[main]
+ lqwqk     k           k     
+ x x x .   x     .     x     
+ x x x k lqu wqk k lqw tqk n 
+ x x x x x x x x x x x x x x 
+ v   v v mqv v v v mqu v v mj
+     qqqqqqCommanderqj 
+
+Questa è la principale schermata della guida interattiva del GNU Midnight Commander. 
+
+Per saperne di più su come usare la guida interattiva, premere semplicemente invioHow to use help. Se lo si desidera, è possibile  consultare direttamente il sommarioContents della guida.
+
+Il Midnight Commander è stato scritto dai suoi autoriAUTHORS.
+
+Il Midnight Commander NON E' COPERTO DA ALCUNA GARANZIAWarranty. Questo è software libero, lo si può ridistribuire sotto  certe condizioniLicenza.
+
+[Licenza]
+
+                 GNU GENERAL PUBLIC LICENSE
+                   Version 3, 29 June 2007
+
+Copyright © 2007 Free Software Foundation, Inc.
+<http://fsf.org/>
+
+    Everyone is  permitted  to copy  and  distribute  verbatim copies of this  license  document,  but  changing  it  is  not allowed.
+
+                         Preamble
+
+    The GNU General Public License is a free, copyleft license for software and other kinds of works.
+
+    The licenses for most software and other practical works are designed to take away your freedom  to  share  and  change the works. By contrast, the  GNU  General  Public  License  is intended to guarantee your freedom to  share  and  change  all versions of a program to make sure it  remains  free  software for all its users. We, the Free Software Foundation,  use  the GNU General Public  License  for  most  of  our  software;  it applies also to any  other  work  released  this  way  by  its authors. You can apply it to your programs, too.
+
+    When we speak of free software, we are referring  to freedom, not price. Our General Public Licenses  are  designed to make sure that you have the freedom to distribute copies of free software (and charge for them  if  you  wish),  that  you receive source code or can get it if you want it, that you can change the software or use pieces of it in new free  programs, and that you know you can do these things.
+
+    To protect your rights, we need to prevent others from denying you these  rights  or  asking  you  to  surrender  the rights. Therefore, you have certain  responsibilities  if  you distribute copies of  the  software,  or  if  you  modify  it: responsibilities to respect the freedom of others.
+
+    For example, if you distribute copies of such a program, whether gratis or for a fee, you must pass on to the recipients the same freedoms that you received. You must make sure that they, too, receive or can get the source  code. And you must show them these terms so they know their rights.
+
+    Developers that use the GNU GPL protect your rights with two steps: (1) assert copyright on the software, and (2) offer you  this License giving you legal permission to copy, distribute and/or modify it.
+
+    For the developers' and authors' protection, the GPL clearly explains that there is no warranty for this free software.  For both users' and authors' sake, the GPL requires that modified versions be marked as changed, so that their problems will not be attributed erroneously to authors of previous versions.
+
+    Some devices are designed to deny users access to install or run modified versions of the software inside them, although the manufacturer can do so. This is fundamentally incompatible with the aim of protecting users' freedom to change the software. The systematic pattern of such abuseoccurs in the area of products for individuals to use, which is precisely where it is most unacceptable. Therefore, we have designed this version of the GPL to prohibit the practice for those products. If such problems arise substantially in other domains, we stand ready to extend this provision to those domains in future versions of the GPL, as needed to protect the freedom of users.
+
+    Finally, every program is threatened constantly by software patents. States should not allow patents to restrict development and use of software on general-purpose computers, but in those that do, we wish to avoid the special danger that patents applied to a free program could make it effectively proprietary. To prevent this, the GPL assures that patents cannot be used to render the program non-free.
+
+    The precise terms and conditions for copying, distribution and modification follow.
+
+                   TERMS AND CONDITIONS
+
+0. Definitions.
+---------------
+
+    “This License” refers to version 3 of the GNU General Public License.
+
+    “Copyright” also means copyright-like laws that apply to other kinds of works, such as semiconductor masks.
+
+    “The Program” refers to any copyrightable work licensed under this License. Each licensee is addressed as “you”. “Licensees” and “recipients” may be individuals or organizations.
+
+    To “modify” a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission, other than the making of an exact copy. The resulting work is called a “modified version” of the earlier work or a work “based on” the earlier work.
+
+    A “covered work” means either the unmodified Program or a work based on the Program.
+
+    To “propagate” a work means to do anything with  it  that, without permission, would make you directly or secondarily liable for infringement under applicable copyright law, except executing it on a computer or modifying a private copy. Propagation includes copying, distribution (with or without modification), making available to the public, and in some countries other activities as well.
+
+    To “convey” a work means any kind of propagation that enables other parties to make or receive copies. Mere interaction with a user through a computer network, with no transfer of a copy, is not conveying.
+
+    An interactive user interface displays “Appropriate Legal Notices” to the extent that it includes a convenient and prominently visible feature that (1) displays an appropriate copyright notice, and (2) tells the user that there is no warranty for the work (except to the extent that warranties are provided), that licensees may convey the work under this License, and how to view a copy of this License. If the interface presents a list of user commands or options, such as a menu, a prominent item in the list meets this criterion.
+
+
+1. Source Code.
+---------------
+
+    The “source code” for a work means the preferred form of the work for making modifications to it. “Object code” means any non-source form of a work.
+
+    A “Standard Interface” means an interface that either is an official standard defined by a recognized standards body, or, in the case of interfaces specified for a particular programming language, one that is widely used among developers working in that language.
+
+    The  “System Libraries” of an executable work include anything, other than the work as a whole, that (a) is included in the normal form of packaging a Major Component, but which is not part of that Major Component, and (b) serves only to enable use of the work with that Major Component, or to implement a Standard Interface for which an implementation is available to the public in source code form. A “Major Component”, in this context, means a major essential component (kernel, window system, and so on) of the specific operating system (if any) on which the executable work runs, or a compiler used to produce the work, or an object code interpreter used to run it.
+
+    The “Corresponding Source” for a work in object code form means all the source code needed to generate, install, and (for an executable work) run the object code and to modify the work, including scripts to control those activities. However, it does not include the work's System Libraries, or general-purpose tools or generally available free programs which are used unmodified in performing those activities but which are not part of the work. For example, Corresponding Source includes interface definition files associated with source files for the work, and the source code for shared libraries and dynamically linked subprograms that the work is specifically designed to require, such as by intimate data communication or control flow between those subprograms and other parts of the work.
+
+    The Corresponding Source need not include anything that users can regenerate automatically from other parts of the Corresponding Source.
+
+    The Corresponding Source for a work in source code form is
+that same work.
+
+2. Basic Permissions.
+---------------------
+
+    All rights granted under this License are granted for the term of copyright on the Program, and are irrevocable provided the stated conditions are met. This License explicitly affirms your unlimited permission to run the unmodified Program. The output from running a covered work is covered by this License only if the output, given its content, constitutes a covered work. This License acknowledges your rights of fair use or other equivalent, as provided by copyright law.
+
+    You may make, run and propagate covered works that you do not convey, without conditions so long as your license otherwise remains in force. You may convey covered works to others for the sole purpose of having them make modifications exclusively for you, or provide you with facilities for running those works, provided that you comply with the terms of this License in conveying all material for which you do not control copyright. Those thus making or running the covered works for you must do so exclusively on your behalf, under your direction and control, on terms that prohibit them from making any copies of your copyrighted material outside their relationship with you.
+
+    Conveying under any other circumstances is permitted solely under the conditions stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+--------------------------------------------------------------
+
+    No covered work shall be deemed part of an effective technological measure under any applicable law fulfilling obligations under article 11 of the WIPO copyright treaty adopted on 20 December 1996, or similar laws prohibiting or restricting circumvention of such measures.
+
+    When you convey a covered work, you waive any legal power to forbid circumvention of technological measures to the extent such circumvention is effected by exercising rights under this License with respect to the covered work, and you disclaim any intention to limit operation or modification of the work as a means of enforcing, against the work's users, your or third parties' legal rights to forbid circumvention of technological measures.
+
+4. Conveying Verbatim Copies.
+-----------------------------
+
+    You may convey verbatim copies of the Program's source code as you receive it, in any medium, provided that you conspicuously and appropriately publish on each copy an appropriate copyright notice; keep intact all notices stating that this License and any non-permissive terms added in accord with section 7 apply to the code; keep intact all notices of the absence of any warranty; and give all recipients a copy of this License along with the Program.
+
+    You may charge any price or no price for each copy that you convey,and you may offer support or warranty protection for a fee.
+
+5. Conveying Modified Source Versions.
+--------------------------------------
+
+    You may convey a work based on the Program, or the modificationsto produce it from the Program, in the form of source code under the terms of section 4, provided that you also meet all of these conditions:
+
+  a) The work must carry prominent notices stating that you modified it, and giving a relevant date.
+  b) The work must carry prominent notices stating that it is released under this License and any conditions added under section 7. This requirement modifies the requirement in section 4 to “keep intact all notices”.
+  c) You must license the entire work, as a whole, under this License to anyone who comes into possession of a copy. This License will therefore apply, along with any applicable section 7 additional terms, to the whole of the work, and all its parts, regardless of how they are packaged. This License gives no permission to license the work in any other way, but it does not invalidate such permission if you have separately received it.
+  d) If the work has interactive user interfaces, each must display Appropriate Legal Notices; however, if the Program has interactive interfaces that do not display Appropriate Legal Notices, your work need not make them do so.
+
+    A compilation of a covered work with other separate and independent works,
+which are not by their nature extensions of the covered work, and which are not
+combined with it such as to form a larger program, in or on a volume of a
+storage or distribution medium, is called an “aggregate” if the compilation and
+its resulting copyright are not used to limit the access or legal rights of the
+compilation's users beyond what the individual works permit. Inclusion of a
+covered work in an aggregate does not cause this License to applyto the other
+parts of the aggregate.
+
+6. Conveying Non-Source Forms.
+------------------------------
+
+    You may convey a covered work in object code form under the terms of sections 4 and 5, provided that you also convey the machine-readable Corresponding Source under the terms of this License, in one of these ways:
+
+  a) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by the Corresponding Source fixed on a durable physical medium customarily used for software interchange.
+  b) Convey the object code in, or embodied in, a physical product (including a physical distribution medium), accompanied by a written offer, valid for at least three years and valid for as long as you offer spare parts or customer support for that product model, to give anyone who possesses the object code either (1) a copy of the Corresponding Source for all the software in the product that is covered by this License, on a durable physical medium customarily used for software interchange, for a price no more than your reasonable cost of physically performing this conveying of source, or (2) access to copy the Corresponding Source from a network server at no charge.
+  c) Convey individual copies of the  object code  with a copy of the written offer to provide the Corresponding Source. This alternative is allowed only occasionally and noncommercially, and only if you received the object code with such an offer, in accord with subsection 6b.
+  d) Convey the object code by offering access from a designated place (gratis or for a charge), and offer equivalent access to the Corresponding Source in the same way through the same place at no further charge. You need not require recipients to copy the Corresponding Source along with the object code. If the place to copy the object code is a network server, the Corresponding Source may be on a different server (operated by you or a third party) that supports equivalent copying facilities, provided you maintain clear directions next to the object code saying where to find the Corresponding Source. Regardless of what server hosts the Corresponding Source, you remain obligated to ensure that it is available for as long as needed to satisfy these requirements.
+  e) Convey the object code using peer-to-peer transmission, provided you inform other peers where the object code and Corresponding Source of the work are being offered to the general public at no charge under subsection 6d.
+
+    A separable portion of the object code, whose source code is excluded from the Corresponding Source as a System Library, need not be included in conveying the object code work.
+
+    A “User Product” is either (1) a “consumer product”, which means any tangible personal property which is normally used for personal, family, or household purposes, or (2) anything designed or sold for incorporation into a dwelling. In determining whether a product is a consumer product, doubtful cases shall be resolved in favor of coverage. For a particular product received by a particular user, “normally used” refers to a typical or common use of that class of product, regardless of the status of the particular user or of the way in which the particular user actually uses, or expects or is expected to use, the product. A product is a consumer product regardless of whether the product has substantial commercial, industrial or non-consumer uses, unless such uses represent the only significant mode of use of the product.
+
+    “Installation Information” for a User Product means any methods, procedures, authorization keys, or other information required to install and execute modified versions of a covered work in that User Product from a modified version of its Corresponding Source. The information must suffice to ensure that the continued functioning of the modified object code is in no case prevented or interfered with solely because modification has been made.
+
+    If you convey an object code work under this section in, or with, or specifically for use in, a User Product, and the conveying occurs as part of a transaction in which the right of possession and use of the User Product is transferred to the recipient in perpetuity or for a fixed term (regardless of how the transaction is characterized), the Corresponding Source conveyed under this section must be accompanied by the Installation Information. But this requirement does not apply if neither you nor any third party retains the ability to install modified object code on the User Product (for example, the work has been installed in ROM).
+
+    The requirement to provide Installation Information does not include a requirement to continue to provide support service, warranty, or updates for a work that has been modified or installed by the recipient, or for the User Product in which it has been modified or installed. Access to a network may be denied when the modification itself materially and adversely affects the operation of the network or violates the rules and protocols for communication across the network.
+
+    Corresponding Source conveyed, and Installation Information provided, in accord with this section must be in a format that is publicly documented (and with an implementation available to the public in source code form), and must require no special password or key for unpacking, reading or copying.
+
+7. Additional Terms.
+--------------------
+
+    “Additional permissions” are terms that supplement the terms of this License by making exceptions from one or more of its conditions. Additional permissions that are applicable to the entire Program shall be treated as though they were included in this License, to the extent that they are valid under applicable law. If additional permissions apply only to part of the Program, that part may be used separately under those permissions, but the entire Program remains governed by this License without regard to the additional permissions.
+
+    When you convey a copy of a covered work, you may at your option remove any additional permissions from that copy, or from any part of it. (Additional permissions may be written to require their own removal in certain cases when you modify the work.) You may place additional permissions on material, added by you to a covered work, for which you have or can give appropriate copyright permission.
+
+    Notwithstanding any other provision of this License, for material you add to a covered work, you may (if authorized by the copyright holders of that material) supplement the terms of this License with terms:
+
+  a) Disclaiming warranty or limiting liability differently from the terms of sections 15 and 16 of this License; or
+  b) Requiring preservation of specified reasonable legal notices or author attributions in that material or in the Appropriate Legal Notices displayed by works containing it; or
+  c) Prohibiting  misrepresentation of the origin of that  material, or requiring that modified versions of such material be marked in reasonable ways as different from the original version; or
+  d) Limiting the use for publicity purposes of names of licensors or authors of the material; or
+  e) Declining to grant rights under trademark law for use of some trade names, trademarks, or service marks; or
+  f) Requiring indemnification of licensors and authors of that material by anyone who conveys the material (or modified versions of it) with contractual assumptions of liability to the recipient, for any liability that these contractual assumptions directly impose on those licensors and authors.
+
+    All other non-permissive additional terms are considered “further restrictions” within the meaning of section 10. If the Program as you received it, or any part of it, contains a notice stating that it is governed by this License along with a term that is a further restriction, you may remove that term. If a license document contains a further restriction but permits relicensing or conveying under this License, you may add to a covered work material governed by the terms of that license document, provided that the further restriction does not survive such relicensing or conveying.
+
+    If you add terms to a covered work in accord with this section, you must place, in the relevant source files, a statement of the additional terms that apply to those files, or a notice indicating where to find the applicable terms.
+
+    Additional terms, permissive or non-permissive, may be stated in the form of a separately written license, or stated as exceptions; the above requirements apply either way.
+
+8. Termination.
+---------------
+
+    You may not propagate or modify a covered work except as expressly provided under this License. Any attempt otherwise to propagate or modify it is void, and will automatically terminate your  rights  under  this  License  (including any patent licenses granted under the third paragraph of section 11).
+
+    However, if you cease all violation of this License, then your license from a particular copyright holder is reinstated (a) provisionally, unless and until the copyright holder explicitly and finally terminates your license, and (b) permanently, if the copyright holder fails to notify you of the violation by some reasonable means prior to 60 days after the cessation.
+
+    Moreover, your license from a particular copyright holder is reinstated permanently if the copyright holder notifies you of the violation by some reasonable means, this is the first time you have received notice of violation of this License (for any work) from that copyright holder, and you cure the violation prior to 30 days after your receipt of the notice.
+
+    Termination of your rights under this section does not terminate the licenses of parties who have received copies or rights from you under this License. If your rights have been terminated and not permanently reinstated, you do not qualify to receive new licenses for the same material under section 10.
+
+9. Acceptance Not Required for Having Copies.
+---------------------------------------------
+
+    You are not required to accept this License in order to receive or run a copy of the Program. Ancillary propagation of a covered work occurring solely as a consequence of using peer-to-peer transmission to receive a copy likewise does not require acceptance. However, nothing other than this License grants you permission to propagate or modify any covered work. These actions infringe copyright if you do not accept this License. Therefore, by modifying or propagating a covered work, you indicate your acceptance of this License to do so.
+
+10. Automatic Licensing of Downstream Recipients.
+-------------------------------------------------
+
+    Each time you convey a covered work, the recipient automatically receives a license from the original licensors, to run, modify and propagate that work, subject to this License. You are not responsible for enforcing compliance by third parties with this License.
+
+    An “entity transaction” is a transaction transferring control of an organization, or substantially all assets  of one, or subdividing an organization, or merging organizations. If propagation of a covered work results from an entity transaction, each party to that transaction who receives a copy of the work also receives whatever licenses to the work the party's  predecessor in interest had or could give under the previous paragraph, plus a right to possession of the Corresponding Source of the work from the predecessor in interest, if the predecessor has it or can get it with reasonable efforts.
+
+    You may not impose any further restrictions on the exercise of the rights granted or affirmed under this License. For example, you may not impose a license fee, royalty, or other charge for exercise of rights granted under this License, and you may not initiate litigation (including a cross-claim or counterclaim in a lawsuit) alleging that any patent claim is infringed by making, using, selling, offering for sale, or importing the Program or any portion of it.
+
+11. Patents.
+------------
+
+    A “contributor” is a copyright holder who authorizes use under this License of the Program or a work on which the Program is based. The work thus licensed is called the contributor's “contributor version”.
+
+    A contributor's “essential patent claims” are all patent claims owned or controlled by the contributor, whether already acquired or hereafter acquired, that would be infringed by some manner, permitted by this License, of making, using, or selling its contributor version, but do not include claims that would be infringed only as a consequence of further modification of the contributor version. For purposes of this definition, “control” includes the right to grant patent sublicenses in a manner consistent with the requirements of this License.
+
+    Each contributor grants you a non-exclusive, worldwide, royalty-free patent license under the contributor's essential patent claims, to make, use, sell, offer for sale, import and otherwise run, modify and propagate the contents of its contributor version.
+
+    In the following three paragraphs, a “patent license” is any express agreement or commitment, however denominated, not to enforce a patent (such as an express permission to practice a patent or covenant not to sue for patent infringement). To “grant” such a patent license to a party means to make such an agreement or commitment not to enforce a patent against the party.
+
+    If you convey a covered work, knowingly relying on a patent license, and the Corresponding Source of the work is not available for anyone to  copy, free of charge and under the terms of this License, through a publicly available network server or other readily accessible means, then you must either (1) cause the Corresponding Source to be so available, or (2) arrange to deprive yourself of the benefit of the patent license for this particular work, or (3) arrange, in a manner consistent with the requirements of this License, to extend the patent license to downstream recipients. “Knowingly relying” means you have actual knowledge that, but for the patent license, your conveying the covered work in a country, or your recipient's use of the covered work in a country, would infringe one or more identifiable patents in that country that you have reason to believe are valid.
+
+    If, pursuant to or in connection with a single transaction or arrangement, you convey, or propagate by procuring conveyance of, a covered work, and grant a patent license to some of the parties receiving the covered work authorizing them to use, propagate, modify or convey a specific copy of the covered work, then the patent license you grant is automatically extended to all recipients of the covered work and works based on it.
+
+    A patent license is “discriminatory” if it does not include within the scope of its coverage, prohibits the exercise of, or is conditioned on the non-exercise of one or more of the rights that are specifically granted under this License. You may not convey a covered work if you are a party to an arrangement with a third party that is in the business of distributing software, under which you make payment to the third party based on the extent of your activity of conveying the work, and under which the third party grants, to any of the parties who would receive the covered work from you, a discriminatory patent license (a) in connection with copies of the covered work conveyed by you (or copies made from those copies), or (b) primarily for and in connection with specific products or compilations that contain the covered work, unless you entered into that arrangement, or that patent license was granted, prior to 28 March 2007.
+
+    Nothing in this License shall be construed as excluding or limiting any implied license or other defenses to infringement that may otherwise be available to you under applicable patent law.
+
+12. No Surrender of Others' Freedom.
+------------------------------------
+
+    If conditions are imposed on you (whether by court order, agreement or otherwise) that contradict the conditions of this License, they do not excuse you from the conditions of this License. If you cannot convey a covered work so as to satisfy simultaneously your obligations under this License and any other pertinent obligations, then as a consequence you may not convey it at all. For example, if you agree to terms that obligate you to collect a royalty for further conveying from those to whom you convey the Program, the only way you could satisfy both those terms and this License would be to refrain entirely from conveying the Program.
+
+13. Use with the GNU Affero General Public License.
+---------------------------------------------------
+
+    Notwithstanding any other provision of this License, you have permission to link or combine any covered work with a work licensed under version 3 of the GNU Affero General Public License into a single combined work, and to convey the resulting work. The terms of this License will continue to apply to the part which is the covered work, but the special requirements of the GNU Affero General Public License, section 13, concerning interaction through a network will apply to the combination as such.
+
+14. Revised Versions of this License.
+-------------------------------------
+
+    The Free Software Foundation may publish revised and/or new versions of the GNU General Public License from time to time. Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+    Each version is given a distinguishing version number. If the Program specifies that a certain numbered version of the GNU General Public License “or any later version” applies to it, you have the option of following the terms and conditions either of that numbered version or of any later version published by the Free Software Foundation. If the Program does not specify a version number of the GNU General Public  License, you may choose any version ever published by the Free Software Foundation.
+
+    If the Program specifies that a proxy can decide which future versions of the GNU General Public License can be used, that proxy's public statement of acceptance of a version permanently authorizes you to choose that version for the Program.
+
+    Later license versions may give you additional or different permissions. However, no additional obligations are imposed on any author or copyright holder as a result of your choosing to follow a later version.
+
+[Warranty]
+15. Disclaimer of Warranty.
+---------------------------
+
+    THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. Limitation of Liability.
+----------------------------
+
+    IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+17. Interpretation of Sections 15 and 16.
+-----------------------------------------
+
+    If the disclaimer of warranty and limitation of liability provided above cannot be given local legal effect according to their terms, reviewing courts shall apply local law that most closely approximates an absolute waiver of all civil liability in connection with the Program, unless a warranty or assumption of liability accompanies a copy of the Program in return for a fee.
+
+                      END OF TERMS AND CONDITIONS
+
+
+               How to Apply These Terms to Your New Programs
+
+    If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.
+
+    To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively state the exclusion of warranty; and each file should have at least the “copyright” line and a pointer to where the full notice is found.
+
+  <one line to give the program's name and a brief idea of what it does.>
+  Copyright (C) <year>  <name of author>
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+Also add information on how to contact you by electronic and paper mail.
+
+
+    If the program does terminal interaction, make it output a short notice like this when it starts in an interactive mode:
+
+  <program>  Copyright (C) <year>  <name of author>
+  This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+  This is free software, and you are welcome to redistribute it
+  under certain conditions; type `show c' for details.
+
+
+    The hypothetical commands `show w' and `show c' should show the appropriate parts of the General Public License. Of course, your program's commands might be different; for a GUI interface, you would use an “about box”.
+
+    You should also get your employer (if you work as a programmer) or school, if any, to sign a “copyright disclaimer” for the program, if necessary. For more information on this, and how to apply and follow the GNU GPL, see <http://www.gnu.org/licenses/>.
+
+    The GNU General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Lesser General Public License instead of this License. But first, please read <http://www.gnu.org/philosophy/why-not-lgpl.html>.
+
+[QueryBox]
+Finestre di dialogo di richiesta dati
+
+Nelle finestre di dialogo di richiesta dati è possibile usare i tasti freccia o la prima lettera per selezionare una voce o cliccare con il mouse sul bottone.
+
+[How to use help]
+Come usare la guida interattiva
+
+Usare i tasti del cursore o il mouse per navigare nel visualizzatore della guida.
+
+Premere freccia in giù per spostarsi alla voce successiva o per spostarsi in basso. Premere freccia in su per spostarsi alla voce precedente o per spostarsi in alto. Premere freccia a destra per seguire il collegamento corrente. Premere freccia a sinistra per tornare indietro nello storico dei nodi visitati.
+
+Se il terminale non supporta i tasti del cursore si può usare la barra spaziatrice per spostarsi in avanti ed il tasto 'b' per tornare indietro. Usare il tasto TAB per spostarsi sulla prossima voce e premere INVIO per seguire il collegamento corrente. Usare il tasto 'l' per tornare indietro nello storico dei nodi visitati. Premere ESC per uscire dal visualizzatore della guida.
+
+Il tasto sinistro del mouse segue il collegamento  o sfoglia le pagine. Il tasto destro del mouse torna indietro nello storico  dei nodi visitati.
+
+Elenco completo dei tasti del visualizzatore della guida:
+
+Sono accettati i tasti generali di movimentoGeneral Movement Keys.
+
+tab           Va alla voce successiva.
+M-tab         Va alla voce precedente. 
+giù           Va alla voce successiva o una riga in basso.
+su            Va alla voce precedente o una riga in alto.
+destra, invio Segue il collegamento corrente.
+sinistra, l   Torna indietro nello storico dei nodi visitati.
+F1            Mostra la guida per il visualizzatore della 
+              guida stessa.
+n             Va al nodo successivo.
+p             Va al nodo precedente.
+c             Va al nodo del sommario.
+F10, esc      Esce dal visualizzatore della guida.
+
+Local variables:
+fill-column: 58
+end:

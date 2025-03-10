@@ -1,0 +1,12 @@
+Package: zoneinfo-europe
+Version: 2024a-1
+Depends: libc, libssp, librt, libpthread, zoneinfo-core
+Source: feeds/packages/utils/zoneinfo
+SourceName: zoneinfo
+License: Public-Domain
+Section: utils
+SourceDateEpoch: 1716287455
+Maintainer: Vladimir Ulrich <admin@evl.su>
+Architecture: armv7-3.2
+Installed-Size: 215040
+Description:  Zone Information (Europe)
