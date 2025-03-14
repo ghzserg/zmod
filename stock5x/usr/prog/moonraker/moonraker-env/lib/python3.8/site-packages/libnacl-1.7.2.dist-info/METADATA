@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: libnacl
+Version: 1.7.2
+Summary: Python bindings for libsodium based on ctypes
+Home-page: https://libnacl.readthedocs.org/
+Author: Thomas S Hatch
+Author-email: thatch@saltstack.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Security :: Cryptography
+
+UNKNOWN
+
+

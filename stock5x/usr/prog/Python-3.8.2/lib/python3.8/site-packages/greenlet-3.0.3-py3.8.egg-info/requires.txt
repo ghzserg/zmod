@@ -1,0 +1,8 @@
+
+[docs]
+Sphinx
+furo
+
+[test]
+objgraph
+psutil

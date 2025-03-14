@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+# Start moonraker
+#
+
+PYTHON=/usr/prog/Python-3.8.2/bin/python3
+MOONRAKER=/usr/prog/moonraker/moonraker/moonraker/moonraker.py
+PRINTER_DATA=/usr/data
+PRINTER_DATA_TMP=/usr/data/tmp
+PID_FILE=/run/moonraker.pid
+
+start() {
+    rm -rf $PRINTER_DATA_TMP && mkdir -p $PRINTER_DATA_TMP # clean temp
+    export TMPDIR=$PRINTER_DATA_TMP # without TMPDIR moonraker writes to /tmp which is a ramdisk
+    start-stop-daemon -S -b -m -p $PID_FILE --exec $PYTHON -- $MOONRAKER -d $PRINTER_DATA
+}
+
+stop() {
+    start-stop-daemon -K -p $PID_FILE
+}
+restart() {
+    stop
+    sleep 2
+    start
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|reload)
+        restart
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

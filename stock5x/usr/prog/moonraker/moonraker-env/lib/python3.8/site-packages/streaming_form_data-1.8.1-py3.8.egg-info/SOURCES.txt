@@ -1,0 +1,14 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+streaming_form_data/__init__.py
+streaming_form_data/_parser.c
+streaming_form_data/parser.py
+streaming_form_data/targets.py
+streaming_form_data/validators.py
+streaming_form_data.egg-info/PKG-INFO
+streaming_form_data.egg-info/SOURCES.txt
+streaming_form_data.egg-info/dependency_links.txt
+streaming_form_data.egg-info/top_level.txt

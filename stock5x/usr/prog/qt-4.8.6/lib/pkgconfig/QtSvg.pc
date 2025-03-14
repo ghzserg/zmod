@@ -1,0 +1,19 @@
+prefix=/opt/qt-4.8.6
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include/QtSvg
+qt_config=lex yacc warn_on uic resources qt warn_on release incremental link_prl cross_compile shared def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release embedded stl precompile_header exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_pc create_libtool explicitlib moc thread dll shared
+moc_location=${prefix}/bin/moc
+uic_location=${prefix}/bin/uic
+rcc_location=${prefix}/bin/rcc
+lupdate_location=${prefix}/bin/lupdate
+lrelease_location=${prefix}/bin/lrelease
+
+Name: Qtsvg
+Description: Qtsvg Library
+Version: 4.8.6
+Libs: -L${libdir} -lQtSvg 
+Libs.private: -L/opt/ADMU/tslib-1.12/lib -L/opt/qt-4.8.6/lib  -lQtGui -L/opt/ADMU/tslib-1.12/lib -L/opt/qt-4.8.6/lib -lQtNetwork -lQtCore -lts -lpthread   
+Cflags: -DQT_SHARED -I/opt/qt-4.8.6/include -I${includedir}
+Requires: QtCore QtGui
+

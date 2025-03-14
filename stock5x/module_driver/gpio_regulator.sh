@@ -1,0 +1,1 @@
+insmod gpio_regulator.ko regulator_gpio0=PC11 regulator_gpio1=-1 regulator_gpio2=-1 active_gpio0=0 active_gpio1=-1 active_gpio2=-1 init_enable0=-1 init_enable1=-1 init_enable2=-1 regulator_name0="GPIO-POWER0" regulator_name1=-1 regulator_name2=-1

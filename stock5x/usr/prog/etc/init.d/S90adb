@@ -1,0 +1,36 @@
+#!/bin/sh
+#
+# Start mass_storage, adb, etc....
+#
+
+case "$1" in
+  start)
+    # ENABLE ADB TCP LISTEN
+
+	if [ -f /sys/class/android_usb/android0/functions ]
+	then
+	    # echo "310"
+	    /etc/init.d/adb/S310adb $1
+	else
+	    # echo "440"
+	    /etc/init.d/adb/S440adb $1
+	fi
+	;;
+  stop)
+	if [ -f /sys/class/android_usb/android0/functions ]
+	then
+	    # echo "310"
+	    /etc/init.d/adb/S310adb $1
+	else
+	    # echo "440"
+	    /etc/init.d/adb/S440adb $1
+	fi
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

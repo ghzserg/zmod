@@ -1,0 +1,45 @@
+#!/bin/sh
+#
+# Start klipepr 
+#
+
+PYTHON=/usr/prog/Python-3.8.2/bin/python3
+KLIPPER=/usr/prog/klipper/klippy/klippy.py
+#KLIPPER=/usr/data/klipper/klippy/klippy.py
+#KLIPPER=/usr/prog/klipper-0.12.0/klippy/klippy.py
+KLIPPER_CONF=/usr/data/config/printer.cfg
+KLIPPER_LOG=/usr/data/logs/printer.log
+PID_FILE=/run/klipper.pid
+KLIPPER_UDS=/tmp/uds
+#KLIPPER_NICENESS=-20
+
+start() {
+    mkdir -p $(dirname $KLIPPER_LOG) # make sure the log directory exists
+    start-stop-daemon -S -b -m -p $PID_FILE --exec $PYTHON -- $KLIPPER $KLIPPER_CONF -l $KLIPPER_LOG -a $KLIPPER_UDS
+}
+
+stop() {
+    start-stop-daemon -K -p $PID_FILE
+}
+restart() {
+    stop
+    sleep 2
+    start
+}
+
+case "$1" in
+  start)
+        start
+        ;;
+  stop)
+        stop
+        ;;
+  restart|reload)
+        restart
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?

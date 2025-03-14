@@ -1,0 +1,8 @@
+
+[certs]
+certifi==2016.9.26
+
+[ssl]
+
+[ssl:sys_platform == "win32"]
+wincertstore==0.2

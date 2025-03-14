@@ -1,0 +1,7 @@
+QMAKE_PRL_BUILD_DIR = /opt/ADMU/tools/qt-4.8/qt-everywhere-opensource-src-4.8.6/./src/network
+QMAKE_PRO_INPUT = network.pro
+QMAKE_PRL_TARGET = libQtNetwork.so.4.8.6
+QMAKE_PRL_DEFINES = QT_SHARED
+QMAKE_PRL_CONFIG = lex yacc warn_on uic resources qt warn_on release incremental link_prl cross_compile shared def_files_disabled no_mocdepend release stl qt_no_framework cross_compile release embedded stl precompile_header exceptions_off dylib create_prl link_prl depend_includepath QTDIR_build qt_install_headers qt warn_on depend_includepath qmake_cache target_qt hide_symbols create_pc create_libtool explicitlib moc thread dll shared
+QMAKE_PRL_VERSION = 4.8.6
+QMAKE_PRL_LIBS = -L/opt/ADMU/tslib-1.12/lib -L/opt/qt-4.8.6/lib  -lQtCore -L/opt/ADMU/tslib-1.12/lib -L/opt/qt-4.8.6/lib -lts -lpthread 

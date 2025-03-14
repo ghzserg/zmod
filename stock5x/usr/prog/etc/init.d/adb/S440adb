@@ -1,0 +1,143 @@
+#!/bin/sh
+#
+# Start adb....
+#
+
+VID=0x18d1
+PID=0xd002
+
+prg_name=$0
+status=$1
+
+# 配置adb设备
+adb_start() {
+	# echo "Creating the USB gadget..."
+	mount -t configfs none /sys/kernel/config
+
+	mkdir /sys/kernel/config/usb_gadget/adb_demo
+	cd /sys/kernel/config/usb_gadget/adb_demo
+
+	# 配置设备描述符
+	# echo "Setting Device Descriptor..."
+	echo $VID > idVendor
+	echo $PID > idProduct
+	echo "0x200" > bcdUSB
+	echo "0x100" > bcdDevice
+
+	# 配置字符串描述符
+	# echo "Setting English strings..."
+	mkdir strings/0x409
+	echo "ingenic" > strings/0x409/manufacturer
+	echo "composite-adb" > strings/0x409/product
+
+	# 配置配置描述符
+	# echo "Creating Config..."
+	mkdir configs/c.1
+	echo "120" > configs/c.1/MaxPower
+
+	mkdir configs/c.1/strings/0x409
+	echo "adb" > configs/c.1/strings/0x409/configuration
+
+	killall adbd
+
+	# 创建功能目录
+	mkdir functions/ffs.adb
+	ln -s functions/ffs.adb configs/c.1
+
+	mkdir -p /dev/usb-ffs/adb
+
+	mac=dev
+
+	if [ "$env_adb_device_use_diffrent_name" = "y" ]; then
+		if [ -f /sys/class/net/wlan0/address ]; then
+			mac=$(cat /sys/class/net/wlan0/address | sed 's/[^0-9|a-z]//g')
+			mac=${mac:8}
+		elif [ -f /sys/class/misc/efuse-string-version/dev ]; then
+			mac=$(cmd_efuse read CHIP_ID | sed 's/[^0-9|a-z]//g')
+			mac=${mac:0:4}
+		fi
+	fi
+
+	mac=$env_adb_device_name_prefix"_"${mac}
+
+	echo -n $mac > strings/0x409/serialnumber
+
+	echo "Starting adb ..."
+	if [ ! -f "/sbin/adbserver.sh" ]; then
+		/usr/bin/adbd &
+	else
+		/sbin/adbserver.sh 440 &
+	fi
+}
+
+# 卸载adb设备
+adb_stop() {
+	cd /sys/kernel/config/usb_gadget/adb_demo
+
+	echo "" > UDC
+	killall adbserver.sh
+	killall adbd
+
+	rm configs/c.1/ffs.adb
+	rmdir functions/ffs.adb
+	rmdir configs/c.1/strings/0x409
+	rmdir configs/c.1
+
+	rmdir strings/0x409
+
+	cd -
+	rmdir /sys/kernel/config/usb_gadget/adb_demo/
+
+	umount /sys/kernel/config
+	umount /dev/usb-ffs/adb
+
+	rmdir /dev/usb-ffs/adb
+	rmdir /dev/usb-ffs
+}
+
+
+case "$1" in
+  start)
+
+	if [ "$#" != "1" ]; then
+		echo "Usage: $prg_name start"
+		exit 1
+	fi
+
+	if [ -f /usr/data/disableadb ]; then
+		echo "Not start adb"
+		exit 1
+	fi
+
+	if [ -d /sys/kernel/config/usb_gadget ]; then
+		echo "Usage: usb configfs already mounted"
+		exit 1
+	fi
+
+	# 配置adb设备
+	adb_start
+
+	;;
+  stop)
+
+	if [ "$#" != "1" ]; then
+		echo "Usage: $prg_name stop"
+		exit 1
+	fi
+
+	if [ ! -d /sys/kernel/config/usb_gadget/adb_demo ]; then
+		echo "Error: usb configfs adb_demo uninitialized"
+		exit 1
+	fi
+
+
+	# 卸载adb设备
+	adb_stop
+
+	;;
+  *)
+	echo "Usage: $0 {start|stop}"
+	exit 1
+esac
+
+exit $?

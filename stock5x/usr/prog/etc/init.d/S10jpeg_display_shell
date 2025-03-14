@@ -1,0 +1,39 @@
+#!/bin/sh
+
+jpeg_display()
+{
+    while true
+    do
+        if [ -e "/dev/fb0" ]; then
+            break
+        fi
+        sleep 0.01
+    done
+#    sleep 6
+#    echo 1 >/sys/class/backlight/backlight_gpio0/brightness
+    cmd_fb enable /dev/fb0 &
+#    cmd_jpeg_display /etc/logo.jpeg
+    if [ -f "/usr/prog/logo.jpeg" ]; then
+        cmd_jpeg_display /usr/prog/logo.jpeg
+    else
+        cmd_jpeg_display /etc/logo.jpeg
+    fi
+    sleep 0.5
+    echo 1 >/sys/class/backlight/backlight_gpio0/brightness
+
+}
+
+case "$1" in
+    start)
+	cd /module_driver/
+	sh utils.sh
+	sh gpio_backlight.sh
+	#insmod //module_driver/utils.ko
+        #insmod /module_driver/gpio_backlight.ko backlight_gpio=PC14 backlight_dev_name="backlight_gpio0" backlight_enabled=0 gpio_active_level=1
+	jpeg_display&
+    ;;
+    *)
+        exit 1
+esac
+
+exit 0

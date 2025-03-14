@@ -1,0 +1,172 @@
+.\" Copyright (c) 2017, Martin Kepplinger <martink@posteo.de>
+.\"
+.\" %%%LICENSE_START(GPLv2+_DOC_FULL)
+.\" This is free documentation; you can redistribute it and/or
+.\" modify it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2 of
+.\" the License, or (at your option) any later version.
+.\"
+.\" The GNU General Public License's references to "object code"
+.\" and "executables" are to be interpreted as the output of any
+.\" document formatting or typesetting system, including
+.\" intermediate and printed output.
+.\"
+.\" This manual is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public
+.\" License along with this manual; if not, see
+.\" <http://www.gnu.org/licenses/>.
+.\" %%%LICENSE_END
+.\"
+.TH TS_READ 3  "" "" "tslib"
+.SH NAME
+ts_read, ts_read_raw, ts_read_mt, ts_read_raw_mt \- read tslib touch samples
+.SH SYNOPSIS
+.nf
+.B #include <tslib.h>
+.sp
+.BI "int ts_read(struct tsdev *" dev ", struct ts_sample *" samp ", int " nr ");"
+.sp
+.BI "int ts_read_raw(struct tsdev *" dev ", struct ts_sample *" samp ", int " nr ");"
+.sp
+.BI "int ts_read_mt(struct tsdev *" dev ", struct ts_sample_mt **" samp ", int " slots ", int " nr ");"
+.sp
+.BI "int ts_read_raw_mt(struct tsdev *" dev ", struct ts_sample_mt **" samp ", int " slots ", int " nr ");"
+.sp
+.fi
+
+.SH DESCRIPTION
+.BR ts_read ()
+reads
+.BR nr
+input samples with tslib's filters applied.
+.BI "struct ts_sample"
+is define as follows:
+.nf
+struct ts_sample {
+        int             x;
+        int             y;
+        unsigned int    pressure;
+        struct timeval  tv;
+};
+.fi
+.PP
+
+.BR ts_read_mt()
+reads
+.BR nr
+*
+.BR slots
+input samples with tslib's filters applied.
+.BI "struct ts_sample_mt"
+is defined as follows:
+.nf
+struct ts_sample_mt {
+        /* most recent ABS_MT_* event codes.
+         * see linux/input.h for descriptions */
+        int             x;
+        int             y;
+        unsigned int    pressure;
+        int             slot;
+        int             tracking_id;
+
+        int             tool_type;
+        int             tool_x;
+        int             tool_y;
+        unsigned int    touch_major;
+        unsigned int    width_major;
+        unsigned int    touch_minor;
+        unsigned int    width_minor;
+        int             orientation;
+        int             distance;
+        int             blob_id;
+
+        struct timeval  tv;
+
+        /* BTN_TOUCH state */
+        short           pen_down;
+
+        /* valid is set to 1 if this sample
+         * contains new data; set to 0 otherwise */
+        short           valid;
+};
+.fi
+.PP
+The user has to provide the amount of memory described in
+.BR nr
+and
+.BR slots
+to hold them.
+
+.BR ts_read_raw ()
+and
+.BR ts_read_raw_mt ()
+do the same thing without tslib's filters applied.
+
+.SH RETURN VALUE
+The number of actually read samples is returned. Especially when opened in non-blocking mode, see
+.BR ts_setup()
+, that can be less than requested in the call. On failure, a negative error number is returned.
+
+.SH EXAMPLE
+The following program continuously reads tslib multitouch input samples
+and prints slot and position values to stdout as the touch screen is
+touched.
+.sp
+.nf
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+#include <tslib.h>
+
+#define READ_SAMPLES 1
+#define MAX_SLOTS 5
+
+int main(int argc, char **argv)
+{
+        struct tsdev *ts;
+        struct ts_sample_mt **samp_mt = NULL;
+        int i, j;
+        int ret;
+
+        ts = ts_setup(NULL, 0);
+        if (!ts)
+                return \-1;
+
+        samp_mt = malloc(READ_SAMPLES * sizeof(struct ts_sample_mt **));
+        if (!samp_mt)
+                return \-1;
+
+        for (i = 0; i < READ_SAMPLES; i++) {
+                samp_mt[i] = calloc(MAX_SLOTS, sizeof(struct ts_sample_mt));
+                if (!samp_mt[i])
+                        return \-1;
+        }
+
+        while(1) {
+                ret = ts_read_mt(ts, samp_mt, MAX_SLOTS, READ_SAMPLES);
+                for (i = 0; i < ret; i++) {
+                        printf("sample nr %d\n", i);
+                        for (j = 0; i < MAX_SLOTS; j++) {
+                                if (samp_mt[i][j].valid != 1)
+                                        continue;
+
+                                printf("slot %d: X:%d Y: %d\n",
+                                       samp_mt[i][j].slot,
+                                       samp_mt[i][j].x,
+                                       samp_mt[i][j].y);
+                        }
+                }
+        }
+}
+.fi
+.SH SEE ALSO
+.BR ts_setup (3),
+.BR ts_config (3),
+.BR ts_open (3),
+.BR ts_close (3),
+.BR ts.conf (5)

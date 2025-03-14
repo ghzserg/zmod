@@ -1,0 +1,410 @@
+source /etc/factory_test/factory_test_conf
+factory_test_log="/tmp/factory_test.log"
+result=""
+
+call_func()
+{
+    dev_name=$1
+    echo -n "test $dev_name ... "
+    func=test_${dev_name}_func
+    $func >> $factory_test_log 2>&1
+    echo $result
+}
+
+
+
+test_pwm_led_func()
+{
+    cmd_pwm config $pwm_gpio freq=$pwm_freq max_level=$pwm_max_level active_level=$pwm_active_level accuracy_priority=$pwm_accuracy_priority
+    if [ $? != 0 ];then
+        result="failed [set pwm config]"
+        return 1
+    fi
+
+    cmd_pwm set_level $pwm_gpio $pwm_max_level
+    if [ $? != 0 ];then
+        result="failed [set pwm level]"
+        return 1
+    fi
+
+    for i in $( seq 0 $pwm_max_level )
+    do
+        cmd_pwm set_level $pwm_gpio $(($pwm_max_level-$i))
+        usleep 1000
+    done
+
+    for i in $( seq 0 $pwm_max_level )
+    do
+        cmd_pwm set_level $pwm_gpio $i
+        usleep 1000
+    done
+
+    result="ok"
+}
+
+
+
+test_fb_func()
+{
+    bk_name=$(ls /sys/class/backlight/)
+    if [ $bk_name = "" ];then
+        result="failed [backlight device not exist]"
+        return 1
+    else
+        bk_name=$(echo $bk_name | awk '{printf $1}')
+    fi
+
+    bl_dev=$(find /sys/class/backlight/ -name $bk_name)
+    echo 0 > $bl_dev/bl_power
+    if [ $? != 0 ];then
+        result="failed [set backlight power on]"
+        return 1
+    fi
+
+    max_level=$(cat $bl_dev/max_brightness)
+    let set_level=$max_level*8/10
+    if [ $set_level -lt 1 ];then
+        let set_level++
+    fi
+    echo $set_level > $bl_dev/brightness
+    if [ $? != 0 ];then
+        result="failed [set backlight level]"
+        return 1
+    fi
+
+    cmd_fb enable $fb_dev
+    if [ $? != 0 ];then
+        result="failed [enable fb]"
+        return 1
+    fi
+
+    cmd_fb clear $fb_dev color=0xffff0000 frame_index=0
+    if [ $? != 0 ];then
+        result="failed [clear fb to color]"
+        return 1
+    fi
+
+    cmd_fb display $fb_dev frame_index=0
+    if [ $? != 0 ];then
+        result="failed [display fb]"
+        return 1
+    fi
+    sleep 1
+
+    cmd_fb clear $fb_dev color=0xff00ff00 frame_index=0
+    cmd_fb display $fb_dev frame_index=0
+    sleep 1
+    cmd_fb clear $fb_dev color=0xff0000ff frame_index=0
+    cmd_fb display $fb_dev frame_index=0
+
+    for i in $( seq 0 $set_level )
+    do
+        echo $(($set_level-$i)) > $bl_dev/brightness
+        usleep 20000
+    done
+
+    for i in $( seq 0 $set_level )
+    do
+        echo $i > $bl_dev/brightness
+        usleep 20000
+    done
+
+    result="ok"
+}
+
+
+
+test_camera_func()
+{
+    camera_dev=/dev/camera
+    camera_cmd=cmd_camera
+
+    ls /dev/mscaler* 2> /dev/null
+    if [ $? = 0 ];then
+        camera_dev=`ls /dev/mscaler* | head -n 1`
+        camera_cmd=cmd_isp
+        $camera_cmd init $camera_dev  width=640 height=480 frame_nums=3 format=NV12
+    else
+        ls /dev/vic* 2> /dev/null
+        if [ $? = 0 ];then
+            camera_dev=`ls /dev/vic* | head -n 1`
+        fi
+    fi
+
+    $camera_cmd  power_on $camera_dev
+    if [ $? != 0 ];then
+        result="failed [set power on]"
+        return 1
+    fi
+
+    $camera_cmd  stream_on $camera_dev
+    if [ $? != 0 ];then
+        result="failed [set stream on]"
+        return 1
+    fi
+
+    $camera_cmd  get_frame $camera_dev > /tmp/frame
+    if [ $? != 0 ];then
+        result="failed [get frame data]"
+        return 1
+    fi
+
+    if [ ! -s "/tmp/frame" ];then
+        result="failed [/tmp/frame is empty]"
+        return 1
+    fi
+
+    rm -f /tmp/frame
+
+    result="ok"
+}
+
+
+
+test_wifi_func()
+{
+    wifi_up.sh /etc/factory_test/wpa_supplicant.conf
+    if [ $? != 0 ];then
+        result="failed [start up]"
+        return 1
+    fi
+    sleep 8
+    ping -I wlan0 www.baidu.com -c 10
+    if [ $? != 0 ];then
+        result="failed [ping ip]"
+        return 1
+    fi
+
+    wifi_down.sh
+    if [ $? != 0 ];then
+        result="failed [close down]"
+        return 1
+    fi
+
+    result="ok"
+}
+
+
+
+
+test_mac_func()
+{
+    ifconfig eth0 $mac_ip_addr netmask $mac_mask up
+    if [ $? != 0 ];then
+        result="failed [start up]"
+        return 1
+    fi
+
+    route add default gw  $mac_gw
+    if [ $? != 0 ];then
+        result="failed [add default gateway]"
+        return 1
+    fi
+
+    ping -I eth0 14.215.177.39 -c 10
+    if [ $? != 0 ];then
+        result="failed [ping ip]"
+        return 1
+    fi
+
+    ifconfig eth0 down
+    if [ $? != 0 ];then
+        result="failed [close down]"
+        return 1
+    fi
+
+    result="ok"
+}
+
+
+
+test_amic_func()
+{
+    arecord -c $amic_channel -f S16_LE -r 16000 -d 10 /tmp/record.wav -vv
+    if [ $? != 0 ];then
+        result="failed [arecord /tmp/record.wav]"
+        return 1
+    fi
+
+    if [ ! -s "/tmp/record.wav" ];then
+        result="failed [/tmp/record.wav is empty]"
+        return 1
+    fi
+    rm -f /tmp/record.wav
+    result="ok"
+}
+
+
+
+test_dmic_func()
+{
+    arecord -d 10 -f S16_LE -r 16000 -c $dmic_channel -t wav /tmp/dmic_test.wav -vv
+    if [ $? != 0 ];then
+        result="failed [arecord /tmp/dmic_test.wav]"
+        return 1
+    fi
+
+    if [ ! -s "/tmp/dmic_test.wav" ];then
+        result="failed [/tmp/dmic_test.wav is empty]"
+        return 1
+    fi
+    rm -f /tmp/dmic_test.wav
+    result="ok"
+}
+
+test_speak_func()
+{
+    ls /dev/snd/pcmC*p
+    if [ $? != 0 ];then
+        result="failed [sound card device not exist]"
+        return 1
+    fi
+
+    snd_dev=$(find /dev/snd/ -name 'pcmC*p')
+    for dev in $snd_dev
+    do
+        card=${dev: 13:1}
+        device=${dev: 15:1}
+        aplay -Dplughw:${card},${device} -f S16_LE -r 16000 /etc/factory_test/audio_pcm.aiff
+        if [ $? = 0 ];then
+            result="ok"
+            return 0;
+        fi
+    done
+    result="failed [aplay /etc/factory_test/audio_pcm.aiff]"
+    return 1
+}
+
+
+
+bt_test_select()
+{
+    echo 2
+    sleep $bt_detect_time
+    echo 99
+}
+
+test_bt_bcm_func()
+{
+    bt_enable_bsa.sh
+    if [ $? != 0 ];then
+        result="failed [enable bt_bcm | device=bcm]"
+        return 1
+    fi
+
+    cp /etc/factory_test/app_manager /run/blue_bsa/
+    cd /run/blue_bsa/
+    bt_test_select | ./app_manager
+    if [ $? != 0 ];then
+        result="failed [enable blue_bsa | device=bcm]"
+        return 1
+    fi
+
+    result="ok [device=bcm]"
+}
+
+test_bt_realtek_func()
+{
+    bt_enable_rtk.sh
+    if [ $? != 0 ];then
+        result="failed [Enable bt_rtk | device=rtk]"
+        return 1
+    fi
+
+    hciconfig hci0 up
+    if [ $? != 0 ];then
+        result="failed [Set up hic0 | device=rtk]"
+        return 1
+    fi
+
+    hcitool -i hci0 scan
+    if [ $? != 0 ];then
+        result="failed [Scan bt | device=rtk]"
+        return 1
+    fi
+
+    result="ok [device=rtk]"
+}
+
+
+test_keyboard_func()
+{
+    cmd_keyboard_test $keys
+    if [ $? != 0 ];then
+        result="failed [Test keyboard]"
+        return 1
+    fi
+
+    result="ok"
+}
+
+
+test_all_dev()
+{
+    if [ "$enable_pwm_test" = "y" ]; then
+        call_func "pwm_led"
+    fi
+
+    if [ "$enable_fb_test" = "y" ]; then
+        call_func "fb"
+    fi
+
+    if [ "$enable_keyboard_test" = "y" ]; then
+        echo 'please press the key which you want to test' 2>&1
+        call_func "keyboard"
+    fi
+
+    if [ "$enable_camera_test" = "y" ]; then
+        call_func "camera"
+    fi
+
+    if [ "$enable_wifi_test" = "y" ]; then
+        call_func "wifi"
+    fi
+
+    if [ "$enable_mac_test" = "y" ]; then
+        call_func "mac"
+    fi
+
+    if [ "$enable_amic_test" = "y" ]; then
+        call_func "amic"
+    fi
+
+    if [ "$enable_dmic_test" = "y" ]; then
+	    call_func "dmic"
+    fi
+
+    if [ "$enable_speak_test" = "y" ]; then
+        call_func "speak"
+    fi
+
+    if [ "$enable_bt_bcm_test" = "y" ]; then
+        call_func "bt_bcm"
+    fi
+
+    if [ "$enable_bt_realtek_test" = "y" ]; then
+        call_func "bt_realtek"
+    fi
+
+}
+
+
+case "$1" in
+    start)
+        #if [ -f "/usr/data/factory_test_disable" ]; then
+        #    exit 0
+        #fi
+        #sleep 1
+        if [ -f "/usr/prog/app_startup.sh" ]; then
+                /usr/prog/app_startup.sh
+        else
+           ifconfig eth0 up
+	   ifconfig eth0 10.33.31.60     
+        fi
+        #test_all_dev
+    ;;
+    *)
+        exit 1
+esac
+
+exit $?

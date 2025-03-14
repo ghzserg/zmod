@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+
+case "$1" in
+  start)
+	cd /module_driver/
+	./driver_default_init_script.sh
+	cd -
+	;;
+  *)
+	exit 1
+esac
+
+exit $?

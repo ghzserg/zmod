@@ -1,0 +1,57 @@
+#!/bin/sh
+#
+# Start adb....
+#
+
+case "$1" in
+  start)
+
+	if [ -f /usr/data/disableadb ]; then
+		echo "Not start adb"
+		exit 1
+	fi
+
+	cd /sys/class/android_usb/android0
+	value=`cat ./functions`
+	if [ "$value" != "adb" ]
+	then
+	    echo 0 > enable
+	    echo 18d1 > idVendor
+	    echo d002 > idProduct
+	    echo adb > functions
+	    echo 1 > enable
+	fi
+	cd -
+
+	mac=dev
+	if [ "$env_adb_device_use_diffrent_name" = "y" ]; then
+		if [ -f /sys/class/net/wlan0/address ]; then
+			mac=$(cat /sys/class/net/wlan0/address | sed 's/[^0-9|a-z]//g')
+			mac=${mac:8}
+		elif [ -f /sys/class/misc/efuse-string-version/dev ]; then
+			mac=$(cmd_efuse read CHIP_ID | sed 's/[^0-9|a-z]//g')
+			mac=${mac:0:4}
+		fi
+	fi
+
+	mac=$env_adb_device_name_prefix"_"${mac}
+
+	echo -n $mac > /sys/class/android_usb/android0/iSerial
+
+	echo "Starting adb ..."
+	if [ ! -f "/sbin/adbserver.sh" ];then
+		/usr/bin/adbd &
+	else
+		/sbin/adbserver.sh 310 &
+	fi
+
+	;;
+  stop)
+	;;
+  *)
+
+	echo "Usage: $0 {start|stop}"
+	exit 1
+esac
+
+exit $?

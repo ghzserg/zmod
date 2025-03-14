@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+
+case "$1" in
+  start)
+	mount_mmc_ext4.sh userdata /usr/data/
+	;;
+  stop)
+	;;
+  restart|reload)
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?
