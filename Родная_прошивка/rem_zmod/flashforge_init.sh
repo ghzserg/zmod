@@ -9,7 +9,8 @@
 # 6. Принтер 3 раза перезагрузится
 # 7. Извлеките флешку и пользуйтесь стоковой прошивкой
 
-echo "">/opt/config/mod/FULL_REMOVE
+echo "">/opt/config/mod/FULL_REMOVE || echo "FF5m not found"
+echo "">/usr/data/config/mod/FULL_REMOVE || echo "AD5X not found"
 sync
 rm /mnt/flashforge_init.sh
 sync
