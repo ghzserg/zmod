@@ -124,4 +124,4 @@ MD5 сумма `41c286d39d369b6a6f69bb7ff5786cab  Adventurer5M-zmod-1.4.1.tgz`
 
 [На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=f274b4b2-cc14-4164-ae60-ca0f7c384f0a)
 
-[[/images/VTB.jpg]]
+<a href="https://vtb.paymo.ru/collect-money/?transaction=f274b4b2-cc14-4164-ae60-ca0f7c384f0a"><img src="https://github.com/ghzserg/zmod/wiki/images/VTB.jpg" width="100" alt="QR"></a>
