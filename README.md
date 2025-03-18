@@ -14,9 +14,9 @@
 MD5 сумма `41c286d39d369b6a6f69bb7ff5786cab  Adventurer5M-zmod-1.4.1.tgz`
 
 Как проверить:
-- перейти в папку где лежит файл Adventurer5MPro-zmod-1.1.0.tgz
+- перейти в папку где лежит файл Adventurer5M-zmod-1.4.1.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.4.0.tgz md5`
+- `certutil -hashfile Adventurer5M-zmod-1.4.1.tgz md5`
 - Сумма должна совпасть
 
 Ставится на чистую версию **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
