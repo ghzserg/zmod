@@ -17,7 +17,7 @@ MD5 сумма:
 - AD5X-zmod-1.4.2.tgz `632674d41842cadc2acc9151db7bd2a9`
 
 Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.4.1.tgz
+- Перейти в папку где лежит файл Adventurer5M-zmod-1.4.2.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
 - `certutil -hashfile Adventurer5M-zmod-1.4.2.tgz md5`
 - `certutil -hashfile Adventurer5MPro-zmod-1.4.2.tgz md5`
