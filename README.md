@@ -118,10 +118,9 @@ MD5 сумма:
 - Root основан на реализации [@darksimpson](https://t.me/darksimpson). Логин и пароль: root. [Ссылка](https://t.me/c/2000598629/12695/186253)
 - Beeper основан на реализации [@drmax_gc](https://t.me/drmax_gc). M300. M356 fur Elise. [Ссылка](https://t.me/FF_5M_5M_Pro/1/333800)
 - Включена проверка md5 от Igor Polunovskiy. [Ссылка](https://t.me/FF_5M_5M_Pro/12695/272417)
-
-Мод во многом основывался на 
-- [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/)
 - [GuppyScreen](https://github.com/ballaswag/guppyscreen)
+
+Мод использовал наработки [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), но не является его развитием и продолжением, а также не совместим с ним ни синтаксимом макросов ни бинарно.
 
 ## Установка/Обновление/Удаление мода
 
