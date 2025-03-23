@@ -7,21 +7,21 @@
 >
 > Поставили мод. Ни хотите ни в чем разбираться - печатаете как и печатали. Вообще ничего нигде настраивать и менять не надо. Решили, что готовы двигаться дальше - двигаетесь - читая документацию.
 
-Последняя версия: **1.4.2** ставится только с флешки на версии младше `1.4.1` или через Fluidd/Mainsail с версии `1.4.1`.
+Последняя версия: **1.4.3** ставится только с флешки на версии младше `1.4.2`.
 
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
 MD5 сумма:
-- Adventurer5M-zmod-1.4.2.tgz `bab74be49f43bbee56052c4b87c35843`
-- Adventurer5MPro-zmod-1.4.2.tgz `bab74be49f43bbee56052c4b87c35843`
-- AD5X-zmod-1.4.2.tgz `632674d41842cadc2acc9151db7bd2a9`
+- Adventurer5M-zmod-1.4.3.tgz `102556c138db67d1ce1da2d33bd16d56`
+- Adventurer5MPro-zmod-1.4.3.tgz `102556c138db67d1ce1da2d33bd16d56`
+- AD5X-zmod-1.4.3.tgz `5da0a48b175bcad94288ad02728029c4`
 
 Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.4.2.tgz
+- Перейти в папку где лежит файл Adventurer5M-zmod-1.4.3.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.4.2.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.4.2.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.4.2.tgz md5`
+- `certutil -hashfile Adventurer5M-zmod-1.4.3.tgz md5`
+- `certutil -hashfile Adventurer5MPro-zmod-1.4.3.tgz md5`
+- `certutil -hashfile AD5X-zmod-1.4.3.tgz md5`
 - Сумма должна совпасть
 
 Ставится на чистую версию:
