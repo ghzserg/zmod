@@ -120,7 +120,7 @@ MD5 сумма:
 - Включена проверка md5 от Igor Polunovskiy. [Ссылка](https://t.me/FF_5M_5M_Pro/12695/272417)
 - [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
-Мод использовал наработки [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), но не является его развитием и продолжением, а также не совместим с ним ни синтаксимом макросов ни бинарно.
+Мод использует наработки [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), но не является его развитием и продолжением, а также не совместим с ним ни синтаксимом макросов ни бинарно.
 
 ## Установка/Обновление/Удаление мода
 
