@@ -70,7 +70,7 @@ Supported features:
 25. Stock screen menu functionality remains unchanged
 
 ## Version History
-[Changelog](https://github.com/ghzserg/zmod/wiki/Changelog)
+[Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
 
 ## FAQ
 
