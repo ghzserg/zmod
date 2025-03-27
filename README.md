@@ -128,6 +128,4 @@ MD5 сумма:
 
 ## Помочь разработке
 
-[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=f274b4b2-cc14-4164-ae60-ca0f7c384f0a)
-
-<a href="https://vtb.paymo.ru/collect-money/?transaction=f274b4b2-cc14-4164-ae60-ca0f7c384f0a"><img src="https://github.com/ghzserg/zmod/wiki/images/VTB.jpg" width="100" alt="QR"></a>
+[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
