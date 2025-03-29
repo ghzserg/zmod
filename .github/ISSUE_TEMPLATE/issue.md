@@ -8,10 +8,10 @@ assignees: ghzserg
 ---
 
 Before asking a question, read:
-- **[TAR_CONFIG formatting algorithm](https://github.com/ghzserg/zmod/wiki/FAQ#help)** - without it, the ticket will not be considered
-- [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
-- [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations)
-- [Macro documentation](https://github.com/ghzserg/zmod/wiki/Macros)
+- **[TAR_CONFIG formatting algorithm](https://github.com/ghzserg/zmod/wiki/FAQ_en#help)** - without it, the ticket will not be considered
+- [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
+- [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
+- [Macro documentation](https://github.com/ghzserg/zmod/wiki/Macros_en)
 
 - [ ] I have AD5M
 - [ ] I have AD5M PRO
@@ -22,7 +22,7 @@ Before asking a question, read:
 - [ ] I work with Guppyscreen
 (replace the space with x inside the brackets)
 
-I uploaded [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ#help) to the zmod chat (https://t.me/FF_5M_5M_Pro/408369) or to a file sharing service.
+I uploaded [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ_en#help) to the zmod chat (https://t.me/FF_5M_5M_Pro/408369) or to a file sharing service.
 Attach a link to the message with the file or attach the file to this text using the button with a paperclip at the bottom.
 
 If the problem occurs on a specific file with gcode, then attach this file too.
