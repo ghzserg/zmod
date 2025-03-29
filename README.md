@@ -9,6 +9,8 @@
 
 Latest version: **1.4.3** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
 
+**Macro LANG - change language (RU<->EN)**
+
 [Download](https://github.com/ghzserg/zmod/releases/).
 
 MD5 checksums:
