@@ -9,6 +9,8 @@
 
 Последняя версия: **1.4.3** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
 
+**Макрос LANG - смена языка (RU<->EN)**
+
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
 MD5 сумма:
