@@ -1,131 +1,130 @@
 # FF5M / FF5M Pro / AD5X ZMOD
 
 > [!CAUTION]
-> *Если вы хотите установить этот мод на свой AD5M (Pro) / AD5X, то имейте в виду, что вы рискуете потерять гарантию или повредить принтер. Действуйте на свой страх и риск, если хотите попробовать этот мод!*
+> *If you want to install this mod on your AD5M (Pro) / AD5X, be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
 > 
-> Если вы не знаете что это такое, не понимаете зачем нужна веб страница klipper или просто довольны стоком, не устанавливайте эту модификацию, для всех остальных - **пожалуйста прочтите полностью инструкцию**!
+> If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 >
-> Поставили мод. Ни хотите ни в чем разбираться - печатаете как и печатали. Вообще ничего нигде настраивать и менять не надо. Решили, что готовы двигаться дальше - двигаетесь - читая документацию.
+> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the documentation.
 
-Последняя версия: **1.4.3** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
+Latest version: **1.4.3** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
 
-[Скачать](https://github.com/ghzserg/zmod/releases/).
+[Download](https://github.com/ghzserg/zmod/releases/).
 
-MD5 сумма:
-- Adventurer5M-zmod-1.4.3.tgz `758a2f36a77d8253b91e624ea985d762`
-- Adventurer5MPro-zmod-1.4.3.tgz `758a2f36a77d8253b91e624ea985d762`
-- AD5X-zmod-1.4.3.tgz `1f90ffd1410ebb616ad3495bee484117`
+MD5 checksums:
+- Adventurer5M-zmod-1.4.3.tgz `1ef1da80e02794696e2a32a4d465ddfb`
+- Adventurer5MPro-zmod-1.4.3.tgz `1ef1da80e02794696e2a32a4d465ddfb`
+- AD5X-zmod-1.4.3.tgz `147dbe90aa51dc543741df6ccfd842e1`
 
-Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.4.3.tgz
-- Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.4.3.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.4.3.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.4.3.tgz md5`
-- Сумма должна совпасть
+How to verify:
+- Navigate to the folder containing Adventurer5M-zmod-1.4.3.tgz
+- Right-click on an empty space -> `Open in Terminal`
+- Run:  
+  `certutil -hashfile Adventurer5M-zmod-1.4.3.tgz md5`  
+  `certutil -hashfile Adventurer5MPro-zmod-1.4.3.tgz md5`  
+  `certutil -hashfile AD5X-zmod-1.4.3.tgz md5`
+- Ensure the checksums match.
 
-Ставится на чистую версию:
-- FF5M/FF5MPro **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
-- AD5X **не ниже 1.0.2**
+Compatible with clean firmware versions:
+- FF5M/FF5MPro: **v2.7.5 or higher** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
+- AD5X: **v1.0.2 or higher**
 
-Чистая версия лежит в папке [Родная_прошивка](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0)
+Clean firmware files are located in the [Stock_Firmware](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0) folder.
 
-## Не нужно ставить мод, если вам достаточно исправить следующие проблемы на родной прошивке
+## Do NOT install this mod if the following stock firmware fixes suffice
 
-Эти функции портированы на стандартную прошивку:
-1. Исправление ошибки [E0011](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0011)
-2. Исправление ошибки [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
-3. [Отключение обновлений принтера/телеметрии/китайских облаков](https://github.com/ghzserg/zmod/wiki/Macros#china_cloud)
-4. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0)
-5. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
-6. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
+These features are ported to the stock firmware:
+1. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
+2. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
+3. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
+4. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0)
+5. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
+6. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
 
-## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
-Поддерживаемые функции:
-1. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
-2. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros#telegram-bot)
-3. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Macros#zrestore)
-4. Адаптивное снятие карты стола [KAMP](https://github.com/ghzserg/zmod/wiki/Macros#kamp)
-5. [Калибровка стола](https://github.com/ghzserg/zmod/wiki/Macros#auto_full_bed_level) при любой температуре и возможен запуск при начале печати
-6. [Снятие шейперов c генерацией графиков](https://github.com/ghzserg/zmod/wiki/Macros#zshaper) с учетом [SCV](https://github.com/ghzserg/zmod/wiki/Macros#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-7. [Регулировка винтов стола](https://github.com/ghzserg/zmod/wiki/Macros#bed_level_screws_tune)
-8. Калибровка PID [экструдера](https://github.com/ghzserg/zmod/wiki/Macros#pid_tune_extruder) и [стола](https://github.com/ghzserg/zmod/wiki/Macros#pid_tune_bed).
-9. [Чистка сопла, как в родной прошивке](https://github.com/ghzserg/zmod/wiki/Macros#clear_noize)
-10. Работа как с родной так и с [альтернативной реализацией камеры](https://github.com/ghzserg/zmod/wiki/Macros#camera_on) (экономит память и позволяет менять разрешение камеры.)
-11. Поддержка moonraker-telegram-bot на [внешнем хосте](https://github.com/ghzserg/zmod/wiki/Macros#telegram-bot)
-12. [Воспроизведение MIDI файлов](https://github.com/ghzserg/zmod/wiki/Macros#play_midi)
-13. [Контроль MD5](https://github.com/ghzserg/zmod/wiki/Macros#check_md5), при передаче файла по сети 
-14. Автоматическое обновление `Fluidd`/`Mainsail`/`Moonraker` и ZMOD по сети
-15. Работа в [режиме без родного экрана](https://github.com/ghzserg/zmod/wiki/Macros#display_off). Экономит 20 мегабайт оперативной памяти.
-16. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros#display_off) - как легковесная замена родного экрана
-17. Поддержа ROOT и mc
-18. Реализован [COLDPULL/Колдпул](https://github.com/ghzserg/zmod/wiki/Macros#coldpull) (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
-19. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
-20. Исправлена ошибка [E0011](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0011)
-21. Исправлена ошибка [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
-22. [Поддержка отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
-23. [Автоматическая остановка печати при отрыве детали или ударе сопла о стол](https://github.com/ghzserg/zmod/wiki/Macros#nozzle_control).
-24. [Проверка и восстановление файлов/прав/символических ссылок родной файловой системы](https://github.com/ghzserg/zmod/wiki/Macros#check_system)
-25. Функционал родного экранного меню не изменен
+## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
+Supported features:
+1. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
+2. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
+3. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Macros_en#zrestore)
+4. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Macros_en#kamp)
+5. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Macros_en#auto_full_bed_level) at any temperature, optionally triggered at print start
+6. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Macros_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+7. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Macros_en#bed_level_screws_tune)
+8. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_bed).
+9. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_noize)
+10. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on) (saves memory and allows resolution changes).
+11. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
+12. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Macros_en#play_midi)
+13. [MD5 verification](https://github.com/ghzserg/zmod/wiki/Macros_en#check_md5) for network transfers
+14. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
+15. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off). Saves 20MB RAM.
+16. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off) – lightweight screen replacement
+17. ROOT access and `mc` support
+18. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
+19. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
+20. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
+21. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
+22. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+23. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Macros_en#nozzle_control).
+24. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/Macros_en#check_system)
+25. Stock screen menu functionality remains unchanged
 
-## История версий
-[История версий](https://github.com/ghzserg/zmod/wiki/Changelog)
+## Version History
+[Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
 
-## Частые вопросы
+## FAQ
 
-[Обязательно к прочтению](https://github.com/ghzserg/zmod/wiki/FAQ)
+[Must-read](https://github.com/ghzserg/zmod/wiki/FAQ_en)
 
-## Рекомендации по повышению стабильности работы принтера
+## Printer Stability Recommendations
 
-[Читать - если что-то работает не так](https://github.com/ghzserg/zmod/wiki/Recomendations)
+[Read if encountering issues](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
 
-## Список Макросов
+## Macro List
 
-Весь функционал работает через макросы
+All features are accessed via macros.
 
-[Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros)
+[Macro List](https://github.com/ghzserg/zmod/wiki/Macros_en)
 
-## Хранение настроек
-Доступ к папке **mod_data** через веб интерфейс fluidd. 
+## Configuration Storage
+Access the **mod_data** folder via Fluidd web interface:  
+`Configuration` → `Configuration Files` → `mod_data`
 
-`Конфигурация` -> `Файлы конфигурации` -> `mod_data`
+- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg`.
+- Custom Moonraker settings go into `mod_data/user.moonraker.cfg`.
+- Custom MIDI files are stored in `mod_data/midi/`.
+- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros_en#save_zmod_data) macro.
+- Shutdown scripts are stored in `mod_data/power_off.sh`.
 
-- Пользовательские настройки klipper необходимо вносить в файл `mod_data/user.cfg`, настройки записанные в это файл могут заменять/дополнять настройки из `printer_base.cfg`
-- Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.cfg`
-- Пользовательские мелодии хранятся в `mod_data/midi/`
-- Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros#save_zmod_data) *нюхлер*
-- Код исполняемый при выключении принтера  хранится тут `mod_data/power_off.sh`
+## Known Peculiarities:
+- During actions like `M109` (extruder heating), `M190` (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.
+- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros_en#new_save_config) for restarts).
+- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros_en#close_dialogs) or [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros_en#fast_close_dialogs)).
+- The stock screen always loads the `DEFAULT_MESH` profile when starting a print and deletes the `Default` profile post-print.
 
-## Известные особенности:
-- Если принтер выполняет какието действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то родной экран замирает
-- Если перезапускается klipper, то родной экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros#new_save_config))
-- После отмены печати, на родном экране надо нажать кнопку Ок (используйте макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#close_dialogs) или [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#fast_close_dialogs))
-- Родной экран при загрузке печати всегда грузит профиль `DEFAULT_MESH`, а после окончания печати всегда удаляет профиль `Default`
+## Screenless Version Notes:
+- Remove all start gcode and use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#start_print) and [END_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#end_print) macros.
+- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on).
+- Manually set [Z_OFFSET](https://github.com/ghzserg/zmod/wiki/Macros_en#%D1%8D%D1%82%D0%BE-%D0%BD%D0%B5-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-start_print-%D1%8D%D1%82%D0%BE-%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%84%D0%BB%D0%B0%D0%B3%D0%B8%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%81%D1%8F-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-save_zmod_data) in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#start_print) or use [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Macros_en#load_zoffset) to load saved offsets.
+- Bed mesh `auto` loads automatically on startup.
+- FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":  
+  - Protocol: `Octo/Klipper`  
+  - Hostname: `printer_IP:7125`  
+  - URL: `printer_IP`
 
-## Особености версии без экрана
-- Необходимо удалить весь стартовый gcode и прописать [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros#start_print), а в конечный [END_PRINT](https://github.com/ghzserg/zmod/wiki/Macros#end_print)
-- Не работает камера, необходимо запустить альтернативную камеру через макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Macros#camera_on)
-- При необходимости, надо вручную прописать параметр [Z_OFFSET](https://github.com/ghzserg/zmod/wiki/Macros#%D1%8D%D1%82%D0%BE-%D0%BD%D0%B5-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-start_print-%D1%8D%D1%82%D0%BE-%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%84%D0%BB%D0%B0%D0%B3%D0%B8%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%81%D1%8F-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-save_zmod_data) в макросе [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros#start_print) или использовать глобальный параметр [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Macros#load_zoffset) который загружает Z-offset из глобальных параметров, сохраненных ранее через SET_GCODE_OFFSET. *крот*
-- При включении принтера автоматически загружается карта стола `auto`
-- Не работает отправка через протокол FlashForge, т.к. его обрабатывает экран.
-  Необходимо переключиться на протокол "Octo/Klipper":
-  - Протокол: `Octo/Klipper`
-  - Имя хоста: `IP_принтера:7125`
-  - Url-адрес хоста: `IP_принтера`
- 
-## Используемые дополнения
+## Credits
 
-- Root основан на реализации [@darksimpson](https://t.me/darksimpson). Логин и пароль: root. [Ссылка](https://t.me/c/2000598629/12695/186253)
-- Beeper основан на реализации [@drmax_gc](https://t.me/drmax_gc). M300. M356 fur Elise. [Ссылка](https://t.me/FF_5M_5M_Pro/1/333800)
-- Включена проверка md5 от Igor Polunovskiy. [Ссылка](https://t.me/FF_5M_5M_Pro/12695/272417)
+- Root access based on [@darksimpson](https://t.me/darksimpson)'s work. Login: `root`, password: `root`. [Link](https://t.me/c/2000598629/12695/186253)
+- Beeper (M300) implementation by [@drmax_gc](https://t.me/drmax_gc). [Link](https://t.me/FF_5M_5M_Pro/1/333800)
+- MD5 verification by Igor Polunovskiy. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
 - [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
-Мод использует наработки [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), но не является его развитием и продолжением, а также не совместим с ним ни синтаксимом макросов ни бинарно.
+This mod builds upon [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/) but is not a direct continuation and is incompatible with it.
 
-## Установка/Обновление/Удаление мода
+## Installation/Update/Removal
 
-[Установка/Обновление/Удаление мода](https://github.com/ghzserg/zmod/wiki/Setup)
+[Installation/Update/Removal Guide](https://github.com/ghzserg/zmod/wiki/Setup_en)
 
-## Помочь разработке
+## Support Development
 
-[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
+[Donate to support development](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
