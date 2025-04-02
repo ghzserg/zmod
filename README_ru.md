@@ -14,9 +14,9 @@
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
 MD5 сумма:
-- Adventurer5M-zmod-1.4.3.tgz `1ef1da80e02794696e2a32a4d465ddfb`
-- Adventurer5MPro-zmod-1.4.3.tgz `1ef1da80e02794696e2a32a4d465ddfb`
-- AD5X-zmod-1.4.3.tgz `1f90ffd1410ebb616ad3495bee484117`
+- Adventurer5M-zmod-1.4.3.tgz `fed04385430030a40261cf1b83b130ad`
+- Adventurer5MPro-zmod-1.4.3.tgz `fed04385430030a40261cf1b83b130ad`
+- AD5X-zmod-1.4.3.tgz `15202da04d90ed8c049b17b019a16bb9`
 
 Как проверить:
 - Перейти в папку где лежит файл Adventurer5M-zmod-1.4.3.tgz
