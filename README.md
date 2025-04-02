@@ -31,7 +31,7 @@ How to verify:
 
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: **v2.7.5 or higher** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
-- AD5X: **v1.0.2 not higher**
+- AD5X: **only v1.0.2**
 
 Clean firmware files are located in the [Stock_Firmware](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0) folder.
 
