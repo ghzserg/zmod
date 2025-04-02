@@ -7,7 +7,11 @@
 >
 > After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the documentation.
 
+[На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
+
 Latest version: **1.4.3** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
+
+**Macro LANG - change language (RU<->EN)**
 
 [Download](https://github.com/ghzserg/zmod/releases/).
 
@@ -95,6 +99,7 @@ Access the **mod_data** folder via Fluidd web interface:
 - Custom MIDI files are stored in `mod_data/midi/`.
 - Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros_en#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
+- Power on scripts are stored in `mod_data/power_on.sh`.
 
 ## Known Peculiarities:
 - During actions like `M109` (extruder heating), `M190` (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.
