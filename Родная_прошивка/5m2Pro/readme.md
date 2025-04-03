@@ -1,3 +1,20 @@
+##### MODEL_CONVERSION  
+**Convert FlashForge 5M to 5M Pro**  
+
+1. **Format USB drive** as FAT32.  
+2. **Save firmware file** to USB flash:  
+   - *Download the appropriate 5M Pro firmware file (not provided here – ensure compatibility!)*  
+3. **Power off** the printer.  
+4. **Insert USB** into the printer.  
+5. **Power on** the printer.  
+6. **Wait for update completion** (printer may reboot automatically).  
+7. **Remove USB flash drive**.  
+
+⚠️ **Warning:**  
+- This operation may void warranties.  
+- Use only verified firmware files to avoid bricking the device.  
+- Backup original firmware before attempting conversion.  
+
 ## Переводит FF5M в FF5MPRO
 
 - Отформатируйте USB в FAT32
