@@ -41,7 +41,7 @@ These features are ported to the stock firmware:
 1. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
 2. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
 3. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
-4. [Factory reset](#restoring-printer-to-factory-settings-required-for-mod-installation)
+4. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
 5. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
 6. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
 
