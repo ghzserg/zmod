@@ -1,3 +1,16 @@
+##### FIX_MCU_UPDATE_LOOP  
+**Resolves persistent MCU update issues**  
+
+1. **Format USB drive** as FAT32  
+2. **Download and save** the fix file to USB:  
+   - [flashforge_init.sh](https://example.com/path/to/fix_file) *(replace with actual file link)*  
+3. **Power off** the printer completely  
+4. **Insert USB** into the printer's port  
+5. **Power on** the printer:  
+   - Printer will emit **loud beeping** during update  
+6. **Wait for automatic reboot** (do not interrupt)  
+7. **Remove USB drive** after reboot completes  
+
 ## Исправляет проблему постоянного обновления MCU
 
 - Отформатируйте USB в FAT32
