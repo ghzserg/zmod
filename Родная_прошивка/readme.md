@@ -1,4 +1,5 @@
-# [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R)
+# [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) 
+[https://github.com/ghzserg/zmod/releases/tag/R](https://github.com/ghzserg/zmod/releases/tag/R)
 
 ## No need to install the mod if you just want to fix the following issues on the native firmware
 
@@ -11,6 +12,7 @@ These features have been ported to the standard firmware:
 6. [Updating FF5MPro in FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
 
 # [Родная прошивка](https://github.com/ghzserg/zmod/releases/tag/R)
+[https://github.com/ghzserg/zmod/releases/tag/R](https://github.com/ghzserg/zmod/releases/tag/R)
 
 ## Не нужно ставить мод, если вам достаточно исправить следующие проблемы на родной прошивке
 
