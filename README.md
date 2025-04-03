@@ -38,6 +38,7 @@ Clean firmware files are located in the [Stock_Firmware](https://github.com/ghzs
 ## Do NOT install this mod if the following stock firmware fixes suffice
 
 These features are ported to the stock firmware:
+0. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
 1. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
 2. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
 3. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
