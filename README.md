@@ -16,9 +16,9 @@ Latest version: **1.4.3** can only be installed via USB flash drive or the [ZFLA
 [Download](https://github.com/ghzserg/zmod/releases/).
 
 MD5 checksums:
-- Adventurer5M-zmod-1.4.3.tgz `fed04385430030a40261cf1b83b130ad`
-- Adventurer5MPro-zmod-1.4.3.tgz `fed04385430030a40261cf1b83b130ad`
-- AD5X-zmod-1.4.3.tgz `15202da04d90ed8c049b17b019a16bb9`
+- AD5X-zmod-1.4.3.tgz `c2cf7ff86171b4412bf1dfae9564815e`
+- Adventurer5MPro-zmod-1.4.3.tgz `8aac25b685c4578f25e23ac35ca4020d`
+- Adventurer5M-zmod-1.4.3.tgz `8aac25b685c4578f25e23ac35ca4020d`
 
 How to verify:
 - Navigate to the folder containing Adventurer5M-zmod-1.4.3.tgz
