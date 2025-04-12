@@ -56,7 +56,7 @@ Supported features:
 6. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Macros_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
 7. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Macros_en#bed_level_screws_tune)
 8. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_bed).
-9. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_noize)
+9. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_nozzle)
 10. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on) (saves memory and allows resolution changes).
 11. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
 12. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Macros_en#play_midi)
@@ -66,10 +66,10 @@ Supported features:
 16. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off) – lightweight screen replacement
 17. ROOT access and `mc` support
 18. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
-19. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
+19. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
 20. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
 21. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
-22. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+22. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction)
 23. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Macros_en#nozzle_control).
 24. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/Macros_en#check_system)
 25. Stock screen menu functionality remains unchanged
