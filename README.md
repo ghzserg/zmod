@@ -11,7 +11,7 @@
 
 Latest version: **1.4.3** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
 
-**Macro LANG - change language (RU<->EN)**
+**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Macros_en#lang) - change language (RU/EN/DE/IT/FR/ES) **
 
 [Download](https://github.com/ghzserg/zmod/releases/).
 
