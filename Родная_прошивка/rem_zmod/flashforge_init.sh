@@ -9,6 +9,14 @@
 # 6. Принтер 3 раза перезагрузится
 # 7. Извлеките флешку и пользуйтесь стоковой прошивкой
 
+zreboot() {
+  sync
+  echo 1 > /proc/sys/kernel/sysrq
+  sync
+  echo b > /proc/sysrq-trigger || echo "error sysrq-trigger"
+  sync
+}
+
 echo "">/opt/config/mod/FULL_REMOVE || echo "FF5m not found"
 echo "">/usr/data/config/mod/FULL_REMOVE || echo "AD5X not found"
 sync
@@ -16,4 +24,5 @@ rm /mnt/flashforge_init.sh
 sync
 sleep 5
 sync
-reboot
+[ -f /opt/config/mod/FULL_REMOVE ] && reboot
+[ -f /usr/data/config/mod/FULL_REMOVE ] && zreboot
