@@ -9,7 +9,7 @@
 
 Последняя версия: **1.4.3** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
 
-**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Macros#lang) - смена языка (RU/EN/DE/IT/FR/ES) **
+**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Macros#lang) - смена языка (RU/EN/DE/IT/FR/ES)**
 
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
