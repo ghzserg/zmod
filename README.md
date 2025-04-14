@@ -38,42 +38,42 @@ Clean firmware files are located in the [Stock_Firmware](https://github.com/ghzs
 ## Do NOT install this mod if the following stock firmware fixes suffice
 
 These features are ported to the stock firmware:
-0. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
-1. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
-2. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
-3. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
-4. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
-5. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
-6. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
+1. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
+2. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
+3. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
+4. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
+5. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
+6. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
+7. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
-0. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Macros_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
-1. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
-2. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
-3. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Macros_en#zrestore)
-4. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Macros_en#kamp)
-5. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Macros_en#auto_full_bed_level) at any temperature, optionally triggered at print start
-6. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Macros_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-7. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Macros_en#bed_level_screws_tune)
-8. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_bed).
-9. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_nozzle)
-10. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on) (saves memory and allows resolution changes).
-11. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
-12. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Macros_en#play_midi)
-13. [MD5 verification](https://github.com/ghzserg/zmod/wiki/Macros_en#check_md5) for network transfers
-14. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
-15. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off). Saves 20MB RAM.
-16. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off) – lightweight screen replacement
-17. ROOT access and `mc` support
-18. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
-19. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
-20. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
-21. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
-22. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction)
-23. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Macros_en#nozzle_control).
-24. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/Macros_en#check_system)
-25. Stock screen menu functionality remains unchanged
+1. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Macros_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+2. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
+3. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
+4. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Macros_en#zrestore)
+5. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Macros_en#kamp)
+6. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Macros_en#auto_full_bed_level) at any temperature, optionally triggered at print start
+7. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Macros_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+8. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Macros_en#bed_level_screws_tune)
+9. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_bed).
+10. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_nozzle)
+11. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on) (saves memory and allows resolution changes).
+12. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
+13. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Macros_en#play_midi)
+14. [MD5 verification](https://github.com/ghzserg/zmod/wiki/Macros_en#check_md5) for network transfers
+15. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
+16. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off). Saves 20MB RAM.
+17. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off) – lightweight screen replacement
+18. ROOT access and `mc` support
+19. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
+21. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
+22. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
+23. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
+24. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction)
+25. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Macros_en#nozzle_control).
+26. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/Macros_en#check_system)
+27. Stock screen menu functionality remains unchanged
 
 ## Version History
 [Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
