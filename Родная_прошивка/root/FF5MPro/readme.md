@@ -2,7 +2,7 @@
 **Install ROOT**
 
 1. **Format USB drive** as FAT32
-2. **Download and save** the file `flashforge_init.sh` to USB
+2. **Download and save** the file `Adventurer5MPro-root.tgz` to USB
 3. **Power off** the printer completely
 4. **Insert USB** into the printer's port
 5. **Power on** the printer:
@@ -17,7 +17,7 @@ Password: root
 ## Установка Root
 
 - Отформатируйте USB в FAT32
-- Сохраните на usb flash файл `flashforge_init.sh`
+- Сохраните на usb flash файл `Adventurer5MPro-root.tgz`
 - Выключите принтер
 - Вставьте usb flash в принтер
 - Включите принтер
