@@ -48,7 +48,7 @@ These features are ported to the stock firmware:
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
-0. - Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Macros_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+0. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Macros_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
 1. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
 2. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
 3. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Macros_en#zrestore)
