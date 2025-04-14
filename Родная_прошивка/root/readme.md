@@ -15,7 +15,7 @@ Username: root
 
 Password: root
 
-## Исправляет проблему постоянного обновления MCU
+## Установка Root
 
 - Отформатируйте USB в FAT32
 - Сохраните на usb flash файл flashforge_init.sh:
