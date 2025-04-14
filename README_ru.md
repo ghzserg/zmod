@@ -9,7 +9,7 @@
 
 Последняя версия: **1.4.3** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
 
-**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Macros#lang) - смена языка (RU/EN/DE/IT/FR/ES)**
+**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Macros#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
@@ -45,7 +45,7 @@ MD5 checksums:
 
 ## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
 Поддерживаемые функции:
-0. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Macros#lang): Английский, Немецкий, Французский, Итальянский, Испанский
+0. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Macros#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский
 1. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
 2. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros#telegram-bot)
 3. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Macros#zrestore)
