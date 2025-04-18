@@ -33,19 +33,19 @@ Compatible with clean firmware versions:
 - FF5M/FF5MPro: **v2.7.5 or higher** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
 - AD5X: **only v1.0.2**
 
-Clean firmware files are located in the [Stock_Firmware](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0) folder.
+Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/tree/main/Native_firmware) folder.
 
 ## Do NOT install this mod if the following stock firmware fixes suffice
 
 These features are ported to the stock firmware:
 1. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
-2. [Install root](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/root)
+2. [Install root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
 3. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
 4. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
 5. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
 6. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
-7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/5m2Pro)
-8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/%D0%A0%D0%BE%D0%B4%D0%BD%D0%B0%D1%8F_%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B0/Pro25M)
+7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
+8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
