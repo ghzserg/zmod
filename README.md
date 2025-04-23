@@ -9,24 +9,24 @@
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
-Latest version: **1.5.0** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
+Latest version: **1.5.1** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
 
 **Macro [LANG](https://github.com/ghzserg/zmod/wiki/Macros_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
 [Download](https://github.com/ghzserg/zmod/releases/).
 
 MD5:
-- AD5X-zmod-1.5.0.tgz `fa7d8afe59a230c94d308faec8649fc6`
-- Adventurer5MPro-zmod-1.5.0.tgz `113a7256a3ed74f57ebb22ad4ae82a28`
-- Adventurer5M-zmod-1.5.0.tgz `113a7256a3ed74f57ebb22ad4ae82a28`
+- AD5X-zmod-1.5.1.tgz `553e4ce6c88dbd3c2b01fbc0a059f4bf`
+- Adventurer5MPro-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
+- Adventurer5M-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
 
 How to verify:
-- Navigate to the folder containing Adventurer5M-zmod-1.5.0.tgz
+- Navigate to the folder containing Adventurer5M-zmod-1.5.1.tgz
 - Right-click on an empty space -> `Open in Terminal`
 - Run:  
-  `certutil -hashfile Adventurer5M-zmod-1.5.0.tgz md5`  
-  `certutil -hashfile Adventurer5MPro-zmod-1.5.0.tgz md5`  
-  `certutil -hashfile AD5X-zmod-1.5.0.tgz md5`
+  `certutil -hashfile Adventurer5M-zmod-1.5.1.tgz md5`  
+  `certutil -hashfile Adventurer5MPro-zmod-1.5.1.tgz md5`  
+  `certutil -hashfile AD5X-zmod-1.5.1.tgz md5`
 - Ensure the checksums match.
 
 Compatible with clean firmware versions:

@@ -7,23 +7,23 @@
 >
 > Поставили мод. Ни хотите ни в чем разбираться - печатаете как и печатали. Вообще ничего нигде настраивать и менять не надо. Решили, что готовы двигаться дальше - двигаетесь - читая документацию.
 
-Последняя версия: **1.5.0** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
+Последняя версия: **1.5.1** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros#zflash).
 
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Macros#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
 MD5:
-- AD5X-zmod-1.5.0.tgz `fa7d8afe59a230c94d308faec8649fc6`
-- Adventurer5MPro-zmod-1.5.0.tgz `113a7256a3ed74f57ebb22ad4ae82a28`
-- Adventurer5M-zmod-1.5.0.tgz `113a7256a3ed74f57ebb22ad4ae82a28`
+- AD5X-zmod-1.5.1.tgz `553e4ce6c88dbd3c2b01fbc0a059f4bf`
+- Adventurer5MPro-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
+- Adventurer5M-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
 
 Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.5.0.tgz
+- Перейти в папку где лежит файл Adventurer5M-zmod-1.5.1.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.5.0.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.5.0.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.5.0.tgz md5`
+- `certutil -hashfile Adventurer5M-zmod-1.5.1.tgz md5`
+- `certutil -hashfile Adventurer5MPro-zmod-1.5.1.tgz md5`
+- `certutil -hashfile AD5X-zmod-1.5.1.tgz md5`
 - Сумма должна совпасть
 
 Ставится на чистую версию:
