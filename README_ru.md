@@ -14,7 +14,7 @@
 [Скачать](https://github.com/ghzserg/zmod/releases/).
 
 MD5:
-- AD5X-zmod-1.5.1.tgz `553e4ce6c88dbd3c2b01fbc0a059f4bf`
+- AD5X-zmod-1.5.1.tgz `97deca953600851c77697598edc2589e`
 - Adventurer5MPro-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
 - Adventurer5M-zmod-1.5.1.tgz `e5421ef75b82e685642983c647938be9`
 
