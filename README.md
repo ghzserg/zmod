@@ -9,9 +9,9 @@
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
-Latest version: **1.5.1** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Macros_en#zflash) macro.
+Latest version: **1.5.1** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
 
-**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Macros_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
+**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
 [Download](https://github.com/ghzserg/zmod/releases/).
 
@@ -40,40 +40,40 @@ Clean firmware files are located in the [Native firmware](https://github.com/ghz
 These features are ported to the stock firmware:
 1. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
 2. [Install root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
-3. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
-4. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
-5. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Macros_en#china_cloud)
+3. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
+4. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
+5. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Global_en#china_cloud)
 6. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
 7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
 8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
-1. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Macros_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+1. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
 2. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
-3. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
-4. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Macros_en#zrestore)
-5. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Macros_en#kamp)
-6. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Macros_en#auto_full_bed_level) at any temperature, optionally triggered at print start
-7. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Macros_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-8. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Macros_en#bed_level_screws_tune)
-9. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Macros_en#pid_tune_bed).
-10. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Macros_en#clear_nozzle)
-11. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on) (saves memory and allows resolution changes).
-12. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Macros_en#telegram-bot)
-13. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Macros_en#play_midi)
-14. [MD5 verification](https://github.com/ghzserg/zmod/wiki/Macros_en#check_md5) for network transfers
+3. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+4. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
+5. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
+6. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) at any temperature, optionally triggered at print start
+7. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+8. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune)
+9. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed).
+10. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Main_en#clear_nozzle)
+11. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) (saves memory and allows resolution changes).
+12. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+13. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Main_en#play_midi)
+14. [MD5 verification](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) for network transfers
 15. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
-16. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off). Saves 20MB RAM.
-17. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/Macros_en#display_off) – lightweight screen replacement
+16. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/System_en#display_off). Saves 20MB RAM.
+17. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off) – lightweight screen replacement
 18. ROOT access and `mc` support
-19. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Macros_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
+19. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
 21. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
-22. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0011)
-23. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Macros_en#fix_e0017)
+22. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
+23. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
 24. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction)
-25. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Macros_en#nozzle_control).
-26. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/Macros_en#check_system)
+25. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control).
+26. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/System_en#check_system)
 27. Stock screen menu functionality remains unchanged
 
 ## Version History
@@ -100,20 +100,20 @@ Access the **mod_data** folder via Fluidd web interface:
 - Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg`.
 - Custom Moonraker settings go into `mod_data/user.moonraker.cfg`.
 - Custom MIDI files are stored in `mod_data/midi/`.
-- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Macros_en#save_zmod_data) macro.
+- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
 - Power on scripts are stored in `mod_data/power_on.sh`.
 
 ## Known Peculiarities:
 - During actions like `M109` (extruder heating), `M190` (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.
-- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros_en#new_save_config) for restarts).
-- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros_en#close_dialogs) or [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros_en#fast_close_dialogs)).
+- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_en#new_save_config) for restarts).
+- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#close_dialogs) or [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#fast_close_dialogs)).
 - The stock screen always loads the `DEFAULT_MESH` profile when starting a print and deletes the `Default` profile post-print.
 
 ## Screenless Version Notes:
-- Remove all start gcode and use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#start_print) and [END_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#end_print) macros.
-- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_on).
-- Manually set [Z_OFFSET](https://github.com/ghzserg/zmod/wiki/Macros_en#%D1%8D%D1%82%D0%BE-%D0%BD%D0%B5-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-start_print-%D1%8D%D1%82%D0%BE-%D0%B3%D0%BB%D0%BE%D0%B1%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%84%D0%BB%D0%B0%D0%B3%D0%B8%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B5-%D1%81%D1%82%D0%B0%D0%B2%D0%B8%D1%82%D1%81%D1%8F-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-save_zmod_data) in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Macros_en#start_print) or use [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Macros_en#load_zoffset) to load saved offsets.
+- Remove all start gcode and use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) and [END_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#end_print) macros.
+- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on).
+- Manually set [Z_OFFSET] in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) or use [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Global_en#load_zoffset) to load saved offsets.
 - Bed mesh `auto` loads automatically on startup.
 - FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":  
   - Protocol: `Octo/Klipper`  
