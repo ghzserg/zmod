@@ -11,7 +11,8 @@
 
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
-[Скачать](https://github.com/ghzserg/zmod/releases/).
+- [Скачать](https://github.com/ghzserg/zmod/releases/)
+- [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
 MD5:
 - AD5X-zmod-1.5.2.tgz `75c7ec15f7706553deae0b404d1d8bca`

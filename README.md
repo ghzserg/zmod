@@ -13,7 +13,8 @@ Latest version: **1.5.2** can only be installed via USB flash drive or the [ZFLA
 
 **Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
-[Download](https://github.com/ghzserg/zmod/releases/).
+- [Download](https://github.com/ghzserg/zmod/releases/).
+- [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 MD5:
 - AD5X-zmod-1.5.2.tgz `75c7ec15f7706553deae0b404d1d8bca`
