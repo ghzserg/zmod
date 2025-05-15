@@ -31,7 +31,7 @@ MD5:
 - FF5M/FF5MPro **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5)
 - AD5X **только 1.0.2, 1.0.8**
 
-Чистая версия лежит в папке [Native firmware](https://github.com/ghzserg/zmod/tree/main/Native_firmware)
+Рожная прошивка доступна [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R)
 
 ## Не нужно ставить мод, если вам достаточно исправить следующие проблемы на родной прошивке
 
