@@ -135,4 +135,6 @@ MD5:
 
 ## Помочь разработке
 
+BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
+
 [На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
