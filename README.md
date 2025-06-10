@@ -136,4 +136,4 @@ This mod builds upon [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipp
 
 ## Support Development
 
-BTC: 17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL
+BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
