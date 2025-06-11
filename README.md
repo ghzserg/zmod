@@ -17,7 +17,7 @@ Latest version: **1.5.3** can only be installed via USB flash drive or the [ZFLA
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 MD5:
-- AD5X-zmod-1.5.2.tgz `75c7ec15f7706553deae0b404d1d8bca`
+- AD5X-zmod-1.5.3.tgz `0858ec8232f679bebdc48b21306f2867`
 - Adventurer5MPro-zmod-1.5.3.tgz `34c5c4aab95ab72e1d694a1336be240c`
 - Adventurer5M-zmod-1.5.3.tgz `34c5c4aab95ab72e1d694a1336be240c`
 
