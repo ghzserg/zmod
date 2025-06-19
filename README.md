@@ -136,4 +136,8 @@ This mod builds upon [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipp
 
 ## Support Development
 
+Since people have been asking, I accept donations but please remember that I work on zmod for fun and not for the money. I will not accept donations to work on specific bugs or features.
+
+[Sponsor](https://github.com/ghzserg/zmod/wiki/Sponsor)
+
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
