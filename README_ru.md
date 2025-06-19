@@ -135,6 +135,10 @@ MD5:
 
 ## Помочь разработке
 
+Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над zmod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
+
+[Sponsor](https://github.com/ghzserg/zmod/wiki/Sponsor)
+
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 [На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
