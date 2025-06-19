@@ -32,7 +32,7 @@ How to verify:
 
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5)
-- AD5X: only (**1.0.2**, 1.0.7, 1.0.8)
+- AD5X: only (1.0.2, **1.0.7**, 1.0.8)
 
 Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) folder.
 
@@ -135,5 +135,9 @@ This mod builds upon [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipp
 [Installation/Update/Removal Guide](https://github.com/ghzserg/zmod/wiki/Setup_en)
 
 ## Support Development
+
+Since people have been asking, I accept donations but please remember that I work on zmod for fun and not for the money. I will not accept donations to work on specific bugs or features.
+
+[Sponsor](https://github.com/ghzserg/zmod/wiki/Sponsor)
 
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
