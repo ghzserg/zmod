@@ -4,7 +4,7 @@
 # Copyright (C) 2021  Troy Jacobson <troy.d.jacobson@gmail.com>
 #
 # This file may be distributed under the terms of the GNU GPLv3 license.
-
+import sys, os
 import logging
 import json
 
@@ -20,7 +20,8 @@ class ExcludeObject:
         self.next_transform = None
         self.last_position_extruded = [0., 0., 0., 0.]
         self.last_position_excluded = [0., 0., 0., 0.]
-
+        self.clear_mem = False
+        self.time_count = 0
         self._reset_state()
         self.gcode.register_command(
             'EXCLUDE_OBJECT_START', self.cmd_EXCLUDE_OBJECT_START,
@@ -173,7 +174,8 @@ class ExcludeObject:
         status = {
             "objects": self.objects,
             "excluded_objects": self.excluded_objects,
-            "current_object": self.current_object
+            "current_object": self.current_object,
+            "clear_mem": self.clear_mem
         }
         return status
 
@@ -190,28 +192,40 @@ class ExcludeObject:
             if self.in_excluded_region:
                 self._move_from_excluded_region(newpos, speed)
             else:
+                self.time_count = self.time_count + 1
+                if self.time_count % 10 == 0:
+                    reactor = self.printer.get_reactor()
+                    reactor.pause(reactor.monotonic() + .005)
+                    self.time_count = 0
                 self._normal_move(newpos, speed)
 
     cmd_EXCLUDE_OBJECT_START_help = "Marks the beginning the current object" \
                                     " as labeled"
     def cmd_EXCLUDE_OBJECT_START(self, gcmd):
+        reactor = self.printer.get_reactor()
+        reactor.pause(reactor.monotonic() + .01)
         name = gcmd.get('NAME').upper()
         if not any(obj["name"] == name for obj in self.objects):
             self._add_object_definition({"name": name})
         self.current_object = name
         self.was_excluded_at_start = self._test_in_excluded_region()
-
+        if self.was_excluded_at_start:
+            self.clear_mem = True
+        else:
+            self.clear_mem = False
     cmd_EXCLUDE_OBJECT_END_help = "Marks the end the current object"
     def cmd_EXCLUDE_OBJECT_END(self, gcmd):
+        reactor = self.printer.get_reactor()
+        reactor.pause(reactor.monotonic() + .01)
         if self.current_object == None and self.next_transform:
-            gcmd.respond_info("EXCLUDE_OBJECT_END called, but no object is"
-                              " currently active")
+            #gcmd.respond_info("EXCLUDE_OBJECT_END called, but no object is"
+            #                  " currently active")
             return
         name = gcmd.get('NAME', default=None)
-        if name != None and name.upper() != self.current_object:
-            gcmd.respond_info("EXCLUDE_OBJECT_END NAME=%s does not match the"
-                              " current object NAME=%s" %
-                              (name.upper(), self.current_object))
+        #if name != None and name.upper() != self.current_object:
+            #gcmd.respond_info("EXCLUDE_OBJECT_END NAME=%s does not match the"
+            #                  " current object NAME=%s" %
+            #                  (name.upper(), self.current_object))
 
         self.current_object = None
 
@@ -246,7 +260,7 @@ class ExcludeObject:
     def cmd_EXCLUDE_OBJECT_DEFINE(self, gcmd):
         reset = gcmd.get('RESET', None)
         name = gcmd.get('NAME', '').upper()
-
+        self.clear_mem = False
         if reset:
             self._reset_file()
 

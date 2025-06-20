@@ -303,6 +303,9 @@ class VirtualSD:
             else:
                 next_file_position = self.file_position + len(line) + 1
             self.next_file_position = next_file_position
+            #if line.startswith("EXCLUDE_OBJECT_DEFINE") or line.startswith("EXCLUDE_OBJECT_START") or line.startswith("EXCLUDE_OBJECT_END"):
+               # self.file_position = self.next_file_position
+               # continue
             #logging.info("Starting SD card print (line %s)", line)   
             if line in VALID_GCODE_T and self.enable_ffm and line.startswith("T"):
                 self.print_channel = int(line[line.rfind('T')+1:])
@@ -316,7 +319,8 @@ class VirtualSD:
                             break
                         self.reactor.pause(self.reactor.monotonic() + 0.5)
                 self.load_channel = self.print_channel
-                self.change_filament = False                    
+                self.change_filament = False
+                self.file_position = self.next_file_position
                 continue         
             try:
                 self.gcode.run_script(line)
