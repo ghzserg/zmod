@@ -5,7 +5,7 @@
 > 
 > If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 >
-> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the documentation.
+> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://github.com/ghzserg/zmod/wiki).
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
