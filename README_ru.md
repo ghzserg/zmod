@@ -7,7 +7,7 @@
 >
 > Поставили мод. Ни хотите ни в чем разбираться - печатаете как и печатали. Вообще ничего нигде настраивать и менять не надо. Решили, что готовы двигаться дальше - двигаетесь - читая [документацию](https://github.com/ghzserg/zmod/wiki/Home_ru).
 
-Последняя версия: **1.5.3** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
+Последняя версия: **1.5.4** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
 
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
@@ -15,16 +15,16 @@
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
 MD5:
-- AD5X-zmod-1.5.3.tgz `0858ec8232f679bebdc48b21306f2867`
-- Adventurer5MPro-zmod-1.5.3.tgz `34c5c4aab95ab72e1d694a1336be240c`
-- Adventurer5M-zmod-1.5.3.tgz `34c5c4aab95ab72e1d694a1336be240c`
+- AD5X-zmod-1.5.4.tgz `4cc137d29d6db33bbdf87e4842850dda`
+- Adventurer5MPro-zmod-1.5.4.tgz `350a1d0225cecc2b48a915fa44cc7218`
+- Adventurer5M-zmod-1.5.4.tgz `350a1d0225cecc2b48a915fa44cc7218`
 
 Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.5.3.tgz
+- Перейти в папку где лежит файл Adventurer5M-zmod-1.5.4.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.5.3.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.5.3.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.5.3.tgz md5`
+- `certutil -hashfile Adventurer5M-zmod-1.5.4.tgz md5`
+- `certutil -hashfile Adventurer5MPro-zmod-1.5.4.tgz md5`
+- `certutil -hashfile AD5X-zmod-1.5.4.tgz md5`
 - Сумма должна совпасть
 
 Ставится на чистую версию:
