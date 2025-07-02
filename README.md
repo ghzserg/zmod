@@ -5,11 +5,13 @@
 > 
 > If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 >
-> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://github.com/ghzserg/zmod/wiki).
+> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://ghzserg.github.io/).
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
 Latest version: **1.5.4** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
+
+[https://ghzserg.github.io/](https://ghzserg.github.io/)
 
 **Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
 
