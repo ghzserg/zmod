@@ -12,6 +12,7 @@ These features have been ported to the standard firmware:
 6. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
 7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
 8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
+9. [Fix HOME AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/fix_HOME_AD5X)
 
 # [Родная прошивка](https://github.com/ghzserg/zmod/releases/tag/R)
 [https://github.com/ghzserg/zmod/releases/tag/R](https://github.com/ghzserg/zmod/releases/tag/R)
@@ -27,3 +28,4 @@ These features have been ported to the standard firmware:
 6. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0)
 7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
 8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
+9. [Fix HOME AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/fix_HOME_AD5X)

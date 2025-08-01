@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/mnt/tool
+
+
+
