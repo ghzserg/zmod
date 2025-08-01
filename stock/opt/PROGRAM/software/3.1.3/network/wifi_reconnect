@@ -1,0 +1,5 @@
+#!/bin/sh
+case "$2" in 
+CONNECTED) echo "connection established"; ;;
+DISCONNECTED) echo "connection lost"; ;; 
+esac

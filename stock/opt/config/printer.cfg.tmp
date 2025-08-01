@@ -1,0 +1,74 @@
+[include printer.base.cfg]
+
+[extruder]
+step_pin: eboard:PB14
+dir_pin: !eboard:PB15
+enable_pin: !eboard:PB12
+microsteps: 16
+rotation_distance: 4.7
+nozzle_diameter: 0.400
+filament_diameter: 1.750
+heater_pin: eboard:PA8
+sensor_type: Generic 3950
+sensor_pin: eboard:PA0
+control: pid
+pid_Kp: 20.109
+pid_Ki: 1.943
+pid_Kd: 52.031
+min_temp: -100
+max_temp: 350
+min_extrude_temp: 100
+pressure_advance:0.035
+pressure_advance_smooth_time: 0.040
+max_extrude_only_distance:1500.00
+max_extrude_cross_section:1000
+
+[verify_heater extruder]
+max_error: 290
+check_gain_time:200
+hysteresis: 10
+heating_gain: 10
+
+[tmc2209 extruder]
+uart_pin: eboard:PB10
+interpolate:True
+run_current: 0.8
+hold_current:0.8
+sense_resistor:0.10
+#stealthchop_threshold: 999999
+
+[input_shaper]
+#shaper_type_x: mzv
+#shaper_freq_x: 47.4
+#shaper_type_y: mzv
+#shaper_freq_y: 46.2
+
+# Save Mesh Data #
+
+#*# <---------------------- SAVE_CONFIG ---------------------->
+#*# DO NOT EDIT THIS BLOCK OR BELOW. The contents are auto-generated.
+#*#
+#*# [bed_mesh MESH_DATA]
+#*# version = 1
+#*# points =
+#*# 	  -1.441667, -1.251667, -1.257500, -1.315000, -1.516667
+#*# 	  -1.670833, -1.435833, -1.333333, -1.387500, -1.497500
+#*# 	  -1.705833, -1.514167, -1.451667, -1.431667, -1.508333
+#*# 	  -1.582500, -1.451667, -1.386667, -1.385833, -1.456667
+#*# 	  -1.385833, -1.322500, -1.326667, -1.385000, -1.453333
+#*# x_count = 5
+#*# y_count = 5
+#*# mesh_x_pps = 3
+#*# mesh_y_pps = 3
+#*# algo = bicubic
+#*# tension = 0.20000000000000001
+#*# min_x = -105.0
+#*# max_x = 105.0
+#*# min_y = -105.0
+#*# max_y = 105.0
+#*#
+#*# [input_shaper]
+#*# shaper_type_x = mzv
+#*# shaper_freq_x = 53.4
+#*# shaper_type_y = mzv
+#*# shaper_freq_y = 47.8

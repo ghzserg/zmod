@@ -1,0 +1,79 @@
+{
+	"cameraInfo" : 
+	{
+		"cameraDelay" : 1.0,
+		"cameraStatus" : true,
+		"cameraVideo" : false
+	},
+	"flashcloud" : 
+	{
+		"flashCloudAccount" : "",
+		"flashCloudRegCode" : "",
+		"flashCloudServerUrl" : "https://cloud.sz3dp.com",
+		"flashCloudStatus" : false
+	},
+	"general" : 
+	{
+		"autoAppData" : false,
+		"autoEveryPrint" : false,
+		"brightNess" : 0,
+		"buildOffset" : 0,
+		"buzzerStatus" : true,
+		"extruderCalibrationValue" : -3.0,
+		"extruderLight" : 100,
+		"extruderType" : "0.4-300",
+		"fanSpeed" : 10,
+		"fanSwitch" : false,
+		"filamentCumulative" : 0,
+		"filamentDetect" : false,
+		"filterAir" : false,
+		"firstBuild" : false,
+		"guide" : false,
+		"keepTime" : 5,
+		"ledStatus" : true,
+		"nozzleTempDifferentValue" : 10,
+		"powerOff" : false,
+		"printerLanguage" : "english",
+		"printerName" : "Guider 3 Ultra",
+		"printerSerialNumber" : "123456",
+		"printerTotalTime" : 32,
+		"protectTotalTime" : 1,
+		"recover" : false
+	},
+	"leftExtruderOffset" : 
+	{
+		"xOffset" : 0.0,
+		"yOffset" : 0.0,
+		"zOffset" : 0.0
+	},
+	"log" : 
+	{
+		"logLevel" : 1,
+		"logSaveDir" : "/opt/test.log"
+	},
+	"network" : 
+	{
+		"configDns" : "",
+		"configGateway" : "",
+		"configIp" : "",
+		"configNetmask" : "",
+		"ethernetStatus" : false,
+		"isManual" : false,
+		"isUdhcpc" : true,
+		"wifiHotspotStatus" : false,
+		"wifiStationStatus" : true
+	},
+	"polarcloud" : 
+	{
+		"polarCloudAccount" : "",
+		"polarCloudPINCode" : "",
+		"polarCloudSerialNo" : "",
+		"polarCloudStatus" : false
+	},
+	"webConsole" : 
+	{
+		"isFirstLogin" : true,
+		"userID" : "admin",
+		"userPass" : "ff123456"
+	}
+}

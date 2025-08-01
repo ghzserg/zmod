@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Flashforge Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+<div class="w3-maskdiv ">
+  <div class="w3-largecarm w3-animate-zoom">
+    <div class="close"></div>
+    <div><img src="" alt="Forest" id="Camera_large"></div>
+  </div>
+  <div class="w3-newupdate w3-animate-zoom">
+    <div class="close"></div>
+    <h1>NEW UPDATE AVAILABLE!</h1>
+    <p></p>
+    <input type="button" class="later" value="Later">
+    <input type="button" class="accept" value="Accept">
+  </div>
+</div>
+<!-- Top container -->
+  <div class="w3-bar w3-top w3-light-grey w3-large" style="z-index:4"></div>
+  <h1 class="w3-center w3-animate-top"><b>Flashforge Dashboard</b></h1>
+</div>
+<!-- Sidebar/menu -->
+<iframe src="Header.html" frameborder="0" style="width:100%; height:45px; overflow:hidden;" id="ifrmid" name="header"></iframe>
+<!-- Overlay effect when opening sidebar on small screens -->
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:3px;">
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:0px">
+    <!--  <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>  -->
+  </header>
+      </div>
+      <!-- This pulls the printer model from the device. -->
+</div>
+<!-- Page Container -->
+<!-- Page Container -->
+<div class="w3-container " style="max-width:100%;margin-top:1px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center"><b>Adventurer 4</b></h4>
+         <!--<p class="w3-center"><img src="images/3D45.png" class="w3-circle" style="height:106px;width:126px" alt="3D45"></p>
+         <hr>
+         <p class="fa-pencil">50-300 microns</p>-->
+         <p class="fa-home">Bed 0-100 ℃</p>
+         <p class="fa-birthday-cake">Nozzle 0-280 ℃</p>
+         <p class="fa-print">Firware Version</p>
+         <p class="fa-counter">Usage Counter</p>
+         <p class="fa-serial">Serial Number</p>
+		 <p class="fa-add1">Extruder Type</p>
+		 <p class="fa-add2">Printer Name</p>
+		 <p class="fa-add3">Registration Code</p>
+		 <p class="fa-add4">Polar Serial No</p>
+        </div>
+		<div class="w3-container">
+          <p><b>Current Material</b></p>
+          <p>
+            <span class="w3-tag w3-round w3-small w3-theme-d5 w3-teal">PLA</span> <!--https://digilab.dremel.com/products/filament  -->
+            <span class="w3-tag w3-round w3-small w3-theme-d4 w3-teal">ECO-ABS</span> <!--https://digilab.dremel.com/products/filament  -->
+            <span class="w3-tag w3-round w3-small w3-theme-d3 w3-teal">NYLON</span> <!--https://digilab.dremel.com/products/filament  -->
+            <span class="w3-tag w3-round w3-small w3-theme-d2 w3-teal" style="display:none;">PC</span><!--https://digilab.dremel.com/products/filament  -->
+            <span class="w3-tag w3-round w3-small w3-theme-d1 w3-teal" style="display:none;">Flex</span><!--https://digilab.dremel.com/products/filament  -->         
+            <span class="w3-tag w3-round w3-small w3-theme-d6 w3-teal">PETG</span>
+            <span class="w3-tag w3-round w3-small w3-theme-d7 w3-teal">CUSTOM</span>
+          </p>
+        </div>
+      </div>
+    <!-- End Left Column -->
+    </div>  
+  <!-- Middle Column -->
+    <div class="w3-col m7">
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <!--<h6 class="w3-opacity"></h6>-->
+               <div class="w3-row-padding"> <!-- DELETE?  -->
+                <div class="w3-third" style="width:50%">
+                  <div class="w3-container w3-red w3-round w3-padding-16">
+                    <!--<div class="w3-left"><i class="fa w3-xxxlarge"></i></div>-->
+                    <div class="home_block">
+                    <div class="home_switchdiv">
+                      <label class="switch home_switch" style="display:none">
+                        <input type="checkbox" unchecked id="Nozzle_switch">
+                        <span class="slider round" id="Nozzle_on"></span>
+                      </label>
+                    </div>
+                    <h3 ><span id="NozzleTemp"></span>&#x2103;/<span id="NozzleTempTarget"></span>&#x2103;</h3> <!-- Reads nozzle temp from printer -->
+                    </div>
+                    <!--<div class="w3-clear"></div>-->
+                    <h4 class="home_blockh4">Nozzle Temp</h4>
+                  </div>
+                </div>
+	            <div class="w3-third" style="width:50%">
+                  <div class="w3-container w3-blue w3-round w3-padding-16">
+                    <!--<div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>-->
+                    <div class="home_block">
+                      <div class="home_switchdiv">
+                      <label class="switch home_switch" style="display:none">
+                        <input type="checkbox" unchecked id="Bed_switch">
+                        <span class="slider round" id="Bed_on"></span>
+                      </label>
+                      </div>
+                      <h3><span id="BedTemp"></span>&#x2103;/<span id="BedTempTarget"></span>&#x2103;</h3> <!-- Reads Bed temp from printer -->
+                    </div>
+                    <!--<div class="w3-clear"></div>-->
+                    <h4 class="home_blockh4">Platform Temp</h4>
+                  </div>
+                </div>
+                
+	          </div>
+            </div>
+          </div>
+         <div class="w3-card w3-round w3-white w3-padding-16 w3-center" style="margin-top:15px;">
+           <div class="w3-panel">
+             <div class="w3-row-padding" style="margin:0 -16px">
+               <div class="w3-third w3-printed">
+                 <h5><b>Current File Printing</b></h5>
+		         <p>
+                   <img src="images/pt_icon.png" class="w3-spin">
+                   <span id="PrintingFile">Server connection failed</span>
+                 </p>
+                 <img src="" style="width:160px; height:120px" alt="" id="FilePic">
+              </div>
+              <div class="w3-Ptstatus">
+               Printer status:<span class="status"></span>
+              </div>
+              <div class="w3-leftTime">
+               Remaining time:<span class="time"></span>
+              </div>
+           </div>
+         </div>
+         <p class="w3-ptitle">Print progress</p>
+	     <div class="w3-grey prt_pro">
+           <div class="w3-card w3-center w3-round w3-padding w3-teal" id="PrintingPres" style="width:0%;"><span>0%</span></div>
+         </div>
+         <p class="w3-ptitle">Available Storage</p>
+         <div class="w3-grey prt_pro">
+           <div class="w3-card w3-container w3-center w3-round w3-padding w3-green" style="width:0%"><span>0%</span></div>
+         </div>
+	   </div>
+        </div>
+        <!--20180202removed-->
+        <!--<div class="w3-container">
+          <h5><b>User Prints</b></h5>
+          <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+             <tr>
+               <td>mcrowe3797@gmail.com</td>
+               <td>65</td>
+             </tr>
+             <tr>
+               <td>Michael.crowe@us.bosch.com</td>
+               <td>4</td>
+             </tr>
+             <tr>
+               <td>Chris.heflin@us.bosch.com</td>
+               <td>1</td>
+             </tr>
+         </table>
+       </div>
+       <div class="w3-container">
+       <h5><b>Admin Users</b></h5>
+          <ul class="w3-ul w3-card-4 w3-white">
+            <li class="w3-padding-16">
+              <span class="w3-xlarge">Mcrowe3797@gmail.com</span><br>
+            </li>
+            <li class="w3-padding-16">
+              <span class="w3-xlarge">Chris.heflin@us.bosch.com</span><br>
+            </li>
+            <li class="w3-padding-16">
+              <span class="w3-xlarge">Jane.Doe@company.com</span><br>
+            </li>
+         </ul>
+      </div> -->
+      
+      </div>
+	</div> 
+  <!-- Right Column -->
+    <div class="w3-col m2" style="float:left;">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Camera</p>
+          <img src="" alt="Forest" style="width:100%;" id="Camera">
+		  <P class="w3-round-large w3-button w3-block w3-grey w3-hover-teal w3-theme-l4">Fullscreen</P>
+        </div>
+      </div>
+    </div>
+</div></div>
+  <!-- End page content -->
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/home.js"></script> 
+
+</body>
+</html>

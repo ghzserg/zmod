@@ -1,0 +1,8 @@
+a25c992521dd2fd966b670c2d391960e  ./rcS
+8eef8d43a07946f18e43fa6beb8d65a8  ./run.sh
+c4aabbae50d6f56c8db2109804456ed2  ./sunxi.dtb
+609e66d877c7bdb89e9bc826fea42c59  ./8821cu.ko
+a927ccad137533d0c239b03a20815e56  ./bootlogo.bmp
+9f145b0b10de254d94318f88b2d00ca4  ./uImage
+a927ccad137533d0c239b03a20815e56  ./fastbootlogo.bmp
+d03f0478e015f87310a7f2657d634928  ./udhcpd.conf

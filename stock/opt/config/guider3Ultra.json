@@ -1,0 +1,80 @@
+{
+	"cameraInfo" : 
+	{
+		"cameraDelay" : 1.0,
+		"cameraStatus" : false,
+		"cameraVideo" : false
+	},
+	"flashcloud" : 
+	{
+		"flashCloudAccount" : "",
+		"flashCloudRegCode" : "",
+		"flashCloudServerUrl" : "https://cloud.sz3dp.com",
+		"flashCloudStatus" : false
+	},
+	"general" : 
+	{
+		"autoAppData" : true,
+		"autoEveryPrint" : false,
+		"brightNess" : 50,
+		"buildOffset" : 0,
+		"buzzerStatus" : true,
+		"extruderCalibrationValue" : -3.0,
+		"extruderLight" : 100,
+		"extruderType" : "0.4-300",
+		"fanSpeed" : 10,
+		"fanSwitch" : false,
+		"filamentCumulative" : 0,
+		"filamentDetect" : false,
+		"filterAir" : true,
+		"firstBuild" : false,
+		"guide" : false,
+		"keepTime" : 5,
+		"ledStatus" : true,
+		"loopStatus" : false,
+		"nozzleTempDifferentValue" : 10,
+		"powerOff" : false,
+		"printerLanguage" : "english",
+		"printerName" : "Adventurer 5 M",
+		"printerSerialNumber" : "SNAD5M0000001",
+		"printerTotalTime" : 18,
+		"protectTotalTime" : 1,
+		"recover" : false
+	},
+	"leftExtruderOffset" : 
+	{
+		"xOffset" : 0.0,
+		"yOffset" : 0.0,
+		"zOffset" : 0.0
+	},
+	"log" : 
+	{
+		"logLevel" : 1,
+		"logSaveDir" : "/opt/test.log"
+	},
+	"network" : 
+	{
+		"configDns" : "",
+		"configGateway" : "",
+		"configIp" : "",
+		"configNetmask" : "",
+		"ethernetStatus" : false,
+		"isManual" : false,
+		"isUdhcpc" : true,
+		"wifiHotspotStatus" : false,
+		"wifiStationStatus" : false
+	},
+	"polarcloud" : 
+	{
+		"polarCloudAccount" : "",
+		"polarCloudPINCode" : "",
+		"polarCloudSerialNo" : "",
+		"polarCloudStatus" : false
+	},
+	"webConsole" : 
+	{
+		"isFirstLogin" : true,
+		"userID" : "admin",
+		"userPass" : "ff123456"
+	}
+}

@@ -1,0 +1,6 @@
+8c83499d7f83a0b5e2758bd2331d722c  ./create-rsa.sh
+2b43d8c4b039eee7f52a60ff661f1c4e  ./run.sh
+e5ae4de076764c39f869cdc44d9fb068  ./nim.tar
+3f4d0c89a13616cda548a10e7680a509  ./env.cfg
+e1d3ba30b0a19628e8890ae4802134c0  ./ffstartup.cfg
+e61561c1e9875bb259a7761c1769886c  ./ffstartup-arm

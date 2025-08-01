@@ -1,0 +1,90 @@
+{
+	"cameraInfo" : 
+	{
+		"cameraDelay" : 1.0,
+		"cameraStatus" : false,
+		"cameraVideo" : false
+	},
+	"flashcloud" : 
+	{
+		"flashCloudAccount" : "",
+		"flashCloudRegCode" : "",
+		"flashCloudServerUrl" : "https://cloud.sz3dp.com",
+		"flashCloudStatus" : false
+	},
+	"general" : 
+	{
+		"autoAppData" : false,
+		"autoEveryPrint" : false,
+		"brightNess" : 0,
+		"buildOffset" : 0,
+		"buzzerStatus" : true,
+		"externalFan" : false,
+		"extruderCalibrationValue" : -3.0,
+		"extruderLight" : 100,
+		"extruderType" : "0.4-300",
+		"extruderTypeInfo" : "0.4mm",
+		"fanSpeed" : 10,
+		"fanSwitch" : false,
+		"filamentCumulative" : 0,
+		"filterAir" : false,
+		"firstBuild" : false,
+		"guide" : false,
+		"internalFan" : false,
+		"keepTime" : 5,
+		"lanCode" : "8cc0b83e",
+		"lcdProtect" : false,
+		"ledStatus" : true,
+		"leftFilamentDetect" : true,
+		"localName" : "Group A",
+		"modifyTime" : "202001010101.76",
+		"nozzleTempDifferentValue" : 10,
+		"powerOff" : false,
+		"powerTime" : 30,
+		"printerLanguage" : "russian",
+		"printerName" : "SNMQQE9100319",
+		"printerSerialNumber" : "SNMQQE9100319",
+		"printerTotalTime" : 0,
+		"protectTotalTime" : 1,
+		"recover" : false,
+		"rightFilamentDetect" : false,
+		"zLevelOffset" : -1.7000000476837158
+	},
+	"leftExtruderOffset" : 
+	{
+		"xOffset" : 0.0,
+		"yOffset" : 0.0,
+		"zOffset" : 0.0
+	},
+	"log" : 
+	{
+		"logLevel" : 1,
+		"logSaveDir" : "/opt/test.log"
+	},
+	"network" : 
+	{
+		"configDns" : "",
+		"configGateway" : "",
+		"configIp" : "",
+		"configNetmask" : "",
+		"ethernetStatus" : false,
+		"isManual" : false,
+		"isUdhcpc" : true,
+		"lanStatus" : true,
+		"wifiHotspotStatus" : false,
+		"wifiStationStatus" : true
+	},
+	"polarcloud" : 
+	{
+		"polarCloudAccount" : "",
+		"polarCloudPINCode" : "",
+		"polarCloudSerialNo" : "",
+		"polarCloudStatus" : false
+	},
+	"webConsole" : 
+	{
+		"isFirstLogin" : true,
+		"userID" : "admin",
+		"userPass" : "ff123456"
+	}
+}
