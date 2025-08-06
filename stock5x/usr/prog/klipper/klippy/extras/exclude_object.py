@@ -22,6 +22,7 @@ class ExcludeObject:
         self.last_position_excluded = [0., 0., 0., 0.]
         self.clear_mem = False
         self.time_count = 0
+        self.excluded = False
         self._reset_state()
         self.gcode.register_command(
             'EXCLUDE_OBJECT_START', self.cmd_EXCLUDE_OBJECT_START,
@@ -192,11 +193,12 @@ class ExcludeObject:
             if self.in_excluded_region:
                 self._move_from_excluded_region(newpos, speed)
             else:
-                self.time_count = self.time_count + 1
-                if self.time_count % 10 == 0:
-                    reactor = self.printer.get_reactor()
-                    reactor.pause(reactor.monotonic() + .005)
-                    self.time_count = 0
+                if self.excluded:
+                    self.time_count = self.time_count + 1
+                    if self.time_count % 10 == 0:
+                        reactor = self.printer.get_reactor()
+                        reactor.pause(reactor.monotonic() + .005)
+                        self.time_count = 0
                 self._normal_move(newpos, speed)
 
     cmd_EXCLUDE_OBJECT_START_help = "Marks the beginning the current object" \
@@ -243,6 +245,7 @@ class ExcludeObject:
                 self.excluded_objects = []
 
         elif name:
+            self.excluded = True
             if name.upper() not in self.excluded_objects:
                 self._exclude_object(name.upper())
 
@@ -261,6 +264,7 @@ class ExcludeObject:
         reset = gcmd.get('RESET', None)
         name = gcmd.get('NAME', '').upper()
         self.clear_mem = False
+        self.excluded = False
         if reset:
             self._reset_file()
 

@@ -217,7 +217,7 @@ class VirtualSD:
             #if fname not in flist:
             #    fname = files_by_lower[fname.lower()]
             fname = os.path.join(self.sdcard_dirname, fname)
-            f = io.open(fname, 'r', newline='')
+            f = io.open(fname, 'r', encoding='utf-8', errors='ignore', newline='')
             f.seek(0, os.SEEK_END)
             fsize = f.tell()
             f.seek(0)
