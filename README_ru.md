@@ -49,32 +49,33 @@ MD5:
 
 ## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
 Поддерживаемые функции:
-1. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский
-2. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
-3. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
-4. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore)
-5. Адаптивное снятие карты стола [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#kamp)
-6. [Калибровка стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#auto_full_bed_level) при любой температуре и возможен запуск при начале печати
-7. [Снятие шейперов c генерацией графиков](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) с учетом [SCV](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-8. [Регулировка винтов стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#bed_level_screws_tune)
-9. Калибровка PID [экструдера](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_extruder) и [стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_bed).
-10. [Чистка сопла, как в родной прошивке](https://github.com/ghzserg/zmod/wiki/Main_ru#clear_noize)
-11. Работа как с родной так и с [альтернативной реализацией камеры](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on) (экономит память и позволяет менять разрешение камеры.)
-12. Поддержка moonraker-telegram-bot на [внешнем хосте](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
-13. [Воспроизведение MIDI файлов](https://github.com/ghzserg/zmod/wiki/Main_ru#play_midi)
-14. [Контроль MD5](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5), при передаче файла по сети 
-15. Автоматическое обновление `Fluidd`/`Mainsail`/`Moonraker` и ZMOD по сети
-16. Работа в [режиме без родного экрана](https://github.com/ghzserg/zmod/wiki/System_ru#display_off). Экономит 20 мегабайт оперативной памяти.
-17. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off) - как легковесная замена родного экрана
-18. Поддержа ROOT и mc
-19. Реализован [COLDPULL/Колдпул](https://github.com/ghzserg/zmod/wiki/Filament_ru#coldpull) (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
-20. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
-21. Исправлена ошибка [E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
-22. Исправлена ошибка [E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
-23. [Поддержка отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
-24. [Автоматическая остановка печати при отрыве детали или ударе сопла о стол](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control).
-25. [Проверка и восстановление файлов/прав/символических ссылок родной файловой системы](https://github.com/ghzserg/zmod/wiki/System_ru#check_system)
-26. Функционал родного экранного меню не изменен
+1. Klipper 13 начиная с версии 1.6.0
+2. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский
+3. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
+4. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
+5. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore)
+6. Адаптивное снятие карты стола [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#kamp)
+7. [Калибровка стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#auto_full_bed_level) при любой температуре и возможен запуск при начале печати
+8. [Снятие шейперов c генерацией графиков](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) с учетом [SCV](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+9. [Регулировка винтов стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#bed_level_screws_tune)
+10. Калибровка PID [экструдера](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_extruder) и [стола](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_bed).
+11. [Чистка сопла, как в родной прошивке](https://github.com/ghzserg/zmod/wiki/Main_ru#clear_noize)
+12. Работа как с родной так и с [альтернативной реализацией камеры](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on) (экономит память и позволяет менять разрешение камеры.)
+13. Поддержка moonraker-telegram-bot на [внешнем хосте](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
+14. [Воспроизведение MIDI файлов](https://github.com/ghzserg/zmod/wiki/Main_ru#play_midi)
+15. [Контроль MD5](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5), при передаче файла по сети 
+16. Автоматическое обновление `Fluidd`/`Mainsail`/`Moonraker` и ZMOD по сети
+17. Работа в [режиме без родного экрана](https://github.com/ghzserg/zmod/wiki/System_ru#display_off). Экономит 20 мегабайт оперативной памяти.
+18. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off) - как легковесная замена родного экрана
+19. Поддержа ROOT и mc
+20. Реализован [COLDPULL/Колдпул](https://github.com/ghzserg/zmod/wiki/Filament_ru#coldpull) (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
+21. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
+22. Исправлена ошибка [E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
+23. Исправлена ошибка [E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
+24. [Поддержка отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+25. [Автоматическая остановка печати при отрыве детали или ударе сопла о стол](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control).
+26. [Проверка и восстановление файлов/прав/символических ссылок родной файловой системы](https://github.com/ghzserg/zmod/wiki/System_ru#check_system)
+27. Функционал родного экранного меню не изменен
 
 ## История версий
 [История версий](https://github.com/ghzserg/zmod/wiki/Changelog)

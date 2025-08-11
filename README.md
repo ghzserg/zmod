@@ -52,25 +52,26 @@ These features are ported to the stock firmware:
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
-1. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
-2. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
-3. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
-4. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
-5. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
-6. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) at any temperature, optionally triggered at print start
-7. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-8. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune)
-9. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed).
-10. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Main_en#clear_nozzle)
-11. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) (saves memory and allows resolution changes).
-12. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Telegram_en)
-13. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Main_en#play_midi)
-14. [MD5 verification](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) for network transfers
-15. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
-16. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/System_en#display_off). Saves 20MB RAM.
-17. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off) – lightweight screen replacement
-18. ROOT access and `mc` support
-19. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
+1. Klipper 13 (zmod version 1.6.0+)
+2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+3. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
+4. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+5. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
+6. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
+7. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) at any temperature, optionally triggered at print start
+8. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+9. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune)
+10. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed).
+11. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Main_en#clear_nozzle)
+12. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) (saves memory and allows resolution changes).
+13. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+14. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Main_en#play_midi)
+15. [MD5 verification](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) for network transfers
+16. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
+17. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/System_en#display_off). Saves 20MB RAM.
+18. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off) – lightweight screen replacement
+19. ROOT access and `mc` support
+20. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
 21. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
 22. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
 23. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
