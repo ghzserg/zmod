@@ -20,7 +20,7 @@ These features have been ported to the standard firmware:
 ## Не нужно ставить мод, если вам достаточно исправить следующие проблемы на родной прошивке
 
 Эти функции портированы на стандартную прошивку:
-1. Я хочу Klipper. (Klipper уже есть в принтере, но нет веб интерфейса)
+1. Я хочу Klipper. (Klipper 11 уже есть в принтере AD5M, но нет веб интерфейса). Klipper 13 есть в zmod
 2. [Установить root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
 3. Исправление ошибки [E0011](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0011)
 4. Исправление ошибки [E0017](https://github.com/ghzserg/zmod/wiki/Macros#fix_e0017)
