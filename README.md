@@ -9,7 +9,7 @@
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
-Latest version: **1.5.4** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
+Latest version: **1.6.0** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/)
 
@@ -19,16 +19,16 @@ Latest version: **1.5.4** can only be installed via USB flash drive or the [ZFLA
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 MD5:
-- AD5X-zmod-1.5.4.tgz `4cc137d29d6db33bbdf87e4842850dda`
-- Adventurer5MPro-zmod-1.5.4.tgz `350a1d0225cecc2b48a915fa44cc7218`
+- AD5X-zmod-1.6.0.tgz `4cc137d29d6db33bbdf87e4842850dda`
+- Adventurer5MPro-zmod-1.6.0.tgz `350a1d0225cecc2b48a915fa44cc7218`
 - Adventurer5M-zmod-1.5.4.tgz `350a1d0225cecc2b48a915fa44cc7218`
 
 How to verify:
-- Navigate to the folder containing Adventurer5M-zmod-1.5.4.tgz
+- Navigate to the folder containing Adventurer5M-zmod-1.6.0.tgz
 - Right-click on an empty space -> `Open in Terminal`
 - Run:  
-  `certutil -hashfile Adventurer5M-zmod-1.5.4.tgz md5`  
-  `certutil -hashfile Adventurer5MPro-zmod-1.5.4.tgz md5`  
+  `certutil -hashfile Adventurer5M-zmod-1.6.0.tgz md5`  
+  `certutil -hashfile Adventurer5MPro-zmod-1.6.0.tgz md5`  
   `certutil -hashfile AD5X-zmod-1.5.4.tgz md5`
 - Ensure the checksums match.
 
