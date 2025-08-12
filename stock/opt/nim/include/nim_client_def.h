@@ -232,6 +232,8 @@ static const char* kNIMRsaPublicKeyModule = "rsa_public_key_module";
 static const char* kNIMRsaVersion = "rsa_version";
 /// int，上层使用的开发框架
 static const char* kNIMDevelopmentFramework = "development_framework";
+/// string，ca 证书文件路径，默认为空，如果需要使用 websocket 链接则必须指定
+static const char* kNIMClientCAFilePath = "client_ca_file_path";
 
 /** @}*/  // json extension params for nim_client_init API
 
