@@ -20,6 +20,9 @@ Before asking a question, read:
 - [X] I work with the native screen
 - [ ] I work without a screen
 - [ ] I work with Guppyscreen
+
+- [X] I work with native klipper
+- [ ] I work with klipper 13
 (replace the space with x inside the brackets)
 
 I uploaded [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ_en#help) to the zmod chat (https://t.me/FF_5M_5M_Pro/408369) or to a file sharing service.
