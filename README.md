@@ -1,7 +1,7 @@
 # FF5M / FF5M Pro / AD5X ZMOD
 
 > [!CAUTION]
-> *If you want to install this mod on your AD5M (Pro) / AD5X, be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
+> *If you want to install this mod on your AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
 > 
 > If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 >
@@ -34,7 +34,7 @@ How to verify:
 
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5, 3.1.9)
-- AD5X: only (1.0.2, **1.0.7**, 1.0.8, 1.0.9, 1.1.1, 1.1.6)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, **1.0.7**, 1.0.8, 1.0.9, 1.1.1, 1.1.6)
 
 Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) folder.
 
