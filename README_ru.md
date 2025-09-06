@@ -7,7 +7,7 @@
 >
 > Поставили мод. Ни хотите ни в чем разбираться - печатаете как и печатали. Вообще ничего нигде настраивать и менять не надо. Решили, что готовы двигаться дальше - двигаетесь - читая [документацию](https://ghzserg.github.io/).
 
-Последняя версия: **1.6.0** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
+Последняя версия: **1.6.1** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/)
 
@@ -17,16 +17,16 @@
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
 MD5:
-- AD5X-zmod-1.5.4.tgz `4cc137d29d6db33bbdf87e4842850dda`
-- Adventurer5MPro-zmod-1.6.0.tgz `718f3323e9f093239f84ccb57500d61f`
-- Adventurer5M-zmod-1.6.0.tgz `718f3323e9f093239f84ccb57500d61f`
+- AD5X-zmod-1.6.1.tgz `9df770ee59219ce4545390bc01756343`
+- Adventurer5MPro-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
+- Adventurer5M-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
 
 Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.6.0.tgz
+- Перейти в папку где лежит файл Adventurer5M-zmod-1.6.1.tgz
 - Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.6.0.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.6.0.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.5.4.tgz md5`
+- `certutil -hashfile Adventurer5M-zmod-1.6.1.tgz md5`
+- `certutil -hashfile Adventurer5MPro-zmod-1.6.1.tgz md5`
+- `certutil -hashfile AD5X-zmod-1.6.1.tgz md5`
 - Сумма должна совпасть
 
 Ставится на чистую версию:
