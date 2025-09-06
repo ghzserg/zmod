@@ -17,7 +17,7 @@
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
 MD5:
-- AD5X-zmod-1.6.1.tgz `9df770ee59219ce4545390bc01756343`
+- AD5X-zmod-1.6.1.tgz `792742f072966b8854f394e4d51be2f2`
 - Adventurer5MPro-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
 - Adventurer5M-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
 
