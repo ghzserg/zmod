@@ -131,7 +131,7 @@ Access the **mod_data** folder via Fluidd web interface:
 - MD5 verification by Igor Polunovskiy. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
 - [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
-This mod builds upon [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/) but is not a direct continuation and is incompatible with it.
+The mod uses the developments of [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), but is not its development or continuation, and is not compatible with it either in macro syntax or binary.
 
 ## Installation/Update/Removal
 
