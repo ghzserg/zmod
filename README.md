@@ -1,5 +1,4 @@
 # FF5M / FF5M Pro / AD5X ZMOD
-<meta name="google-site-verification" content="po-RlVyJqgZJhVMPMkcky190V8TkeECMG7WZm9p6sOQ" />
 
 > [!CAUTION]
 > *If you want to install this mod on your AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
