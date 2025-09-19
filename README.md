@@ -19,9 +19,9 @@ Latest version: **1.6.1** can only be installed via USB flash drive or the [ZFLA
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 MD5:
-- AD5X-zmod-1.6.1.tgz `792742f072966b8854f394e4d51be2f2`
-- Adventurer5MPro-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
-- Adventurer5M-zmod-1.6.1.tgz `a6d178ad773d025f6798901d0f237078`
+- AD5X-zmod-1.6.1.tgz `001bb63d8da76f7a4f0401706d0bb175`
+- Adventurer5MPro-zmod-1.6.1.tgz `73f616ce294743b6b58b9e8164a01f56`
+- Adventurer5M-zmod-1.6.1.tgz `73f616ce294743b6b58b9e8164a01f56`
 
 How to verify:
 - Navigate to the folder containing Adventurer5M-zmod-1.6.1.tgz
