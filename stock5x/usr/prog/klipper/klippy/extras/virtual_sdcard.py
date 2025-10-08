@@ -6,7 +6,7 @@
 import os, sys, logging, io
 
 VALID_GCODE_EXTS = ['gcode', 'g', 'gco','gx']
-VALID_GCODE_T = ['T0', 'T1', 'T2', 'T3','T4', 'T5', 'T6', 'T7','T8', 'T9', 'T10', 'T11','T12', 'T13', 'T14', 'T15']
+VALID_GCODE_T = {'T0', 'T1', 'T2', 'T3','T4', 'T5', 'T6', 'T7','T8', 'T9', 'T10', 'T11','T12', 'T13', 'T14', 'T15'}
 
 DEFAULT_ERROR_GCODE = """
 {% if 'heaters' in printer %}
@@ -217,7 +217,7 @@ class VirtualSD:
             #if fname not in flist:
             #    fname = files_by_lower[fname.lower()]
             fname = os.path.join(self.sdcard_dirname, fname)
-            f = io.open(fname, 'r', encoding='utf-8', errors='ignore', newline='')
+            f = io.open(fname, 'r', newline='')
             f.seek(0, os.SEEK_END)
             fsize = f.tell()
             f.seek(0)
@@ -303,25 +303,25 @@ class VirtualSD:
             else:
                 next_file_position = self.file_position + len(line) + 1
             self.next_file_position = next_file_position
-            #if line.startswith("EXCLUDE_OBJECT_DEFINE") or line.startswith("EXCLUDE_OBJECT_START") or line.startswith("EXCLUDE_OBJECT_END"):
-               # self.file_position = self.next_file_position
-               # continue
-            #logging.info("Starting SD card print (line %s)", line)   
-            if line in VALID_GCODE_T and self.enable_ffm and line.startswith("T"):
-                self.print_channel = int(line[line.rfind('T')+1:])
-                if self.print_channel != self.load_channel:
-                    self.gcode.run_script("M400")
-                    self.change_filament = True
-                    while True:
-                        if not self.change_filament:
-                            break 
-                        if self.must_pause_work or self.work_timer is None:
-                            break
-                        self.reactor.pause(self.reactor.monotonic() + 0.5)
-                self.load_channel = self.print_channel
-                self.change_filament = False
-                self.file_position = self.next_file_position
-                continue         
+            #logging.info("Starting SD card print (line %s)", line)
+            if line.startswith("T") and self.enable_ffm:
+                cmd = line.split(';', 1)[0].strip()
+                if cmd in VALID_GCODE_T:
+                    self.print_channel = int(cmd[1:])
+                    if self.print_channel != self.load_channel:
+                        self.gcode.run_script("M400")
+                        self.change_filament = True
+                        # zmod 1.3
+                        self.gcode.run_script(f"_A_CHANGE_FILAMENT CHANNEL={self.print_channel}")
+                        while True:
+                            if not self.change_filament:
+                                break
+                            if self.must_pause_work or self.work_timer is None:
+                                break
+                            self.reactor.pause(self.reactor.monotonic() + 0.5)
+                    self.load_channel = self.print_channel
+                    self.change_filament = False
+                    continue
             try:
                 self.gcode.run_script(line)
             except self.gcode.error as e:
