@@ -293,7 +293,7 @@ class VirtualSD:
                 continue
             # Pause if any other request is pending in the gcode class
             if gcode_mutex.test():
-                self.reactor.pause(self.reactor.monotonic() + 0.100)
+                self.reactor.pause(self.reactor.monotonic() + 0.050)
                 continue
             # Dispatch command
             self.cmd_from_sd = True
@@ -311,7 +311,7 @@ class VirtualSD:
                     if self.print_channel != self.load_channel:
                         self.gcode.run_script("M400")
                         self.change_filament = True
-                        # zmod 1.3
+                        # zmod 1.4
                         self.gcode.run_script(f"_A_CHANGE_FILAMENT CHANNEL={self.print_channel}")
                         while True:
                             if not self.change_filament:
