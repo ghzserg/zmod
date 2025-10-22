@@ -104,7 +104,7 @@ All features are accessed via macros.
 Access the **mod_data** folder via Fluidd web interface:  
 `Configuration` → `Configuration Files` → `mod_data`
 
-- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg`.
+- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and zMod files.
 - Custom Moonraker settings go into `mod_data/user.moonraker.cfg`.
 - Custom MIDI files are stored in `mod_data/midi/`.
 - Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) macro.
