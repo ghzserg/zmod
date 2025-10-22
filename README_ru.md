@@ -47,6 +47,9 @@ MD5:
 7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
 8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
 
+## Плагины
+zMod поддерживает [Плагины](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
+
 ## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
 Поддерживаемые функции:
 1. Klipper 13 начиная с версии 1.6.0. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
