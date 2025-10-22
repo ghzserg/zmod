@@ -51,7 +51,7 @@ These features are ported to the stock firmware:
 8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
 
 ## Plugins
-zMod support [Pluggins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
+zMod support [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
