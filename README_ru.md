@@ -53,7 +53,7 @@ zMod поддерживает [Плагины](https://github.com/ghzserg/g28_te
 ## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
 Поддерживаемые функции:
 1. Klipper 13 начиная с версии 1.6.0. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-2. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский
+2. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский, Португальский, Русский
 3. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
 4. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
 5. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore)

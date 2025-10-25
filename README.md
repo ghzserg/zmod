@@ -56,7 +56,7 @@ zMod support [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.m
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
 1. Klipper 13, zMod 1.6.0+. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
 3. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
 4. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
 5. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
