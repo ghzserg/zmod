@@ -311,8 +311,8 @@ class VirtualSD:
                     if self.print_channel != self.load_channel:
                         self.gcode.run_script("M400")
                         self.change_filament = True
-                        # zmod 1.4
-                        self.gcode.run_script(f"_A_CHANGE_FILAMENT CHANNEL={self.print_channel}")
+                        # zmod 1.5
+                        self.gcode.run_script(f"_A_CHANGE_FILAMENT CHANNEL={self.print_channel} RESTORE_POSITION=1 RESTORE_TEMP=1")
                         while True:
                             if not self.change_filament:
                                 break
