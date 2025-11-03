@@ -19,9 +19,9 @@ Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLA
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 MD5:
-- AD5X-zmod-1.6.2.tgz `bd76dc5b5a98c7ac71adde316c745c57`
-- Adventurer5MPro-zmod-1.6.2.tgz `a674d5c832c5e38da417eff28d3b1291`
-- Adventurer5M-zmod-1.6.2.tgz `a674d5c832c5e38da417eff28d3b1291`
+- AD5X-zmod-1.6.2.tgz `57df996435bfb7606bbe7fcf68de344d`
+- Adventurer5MPro-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
+- Adventurer5M-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
 
 How to verify:
 - Navigate to the folder containing Adventurer5M-zmod-1.6.2.tgz
@@ -56,7 +56,7 @@ zMod support [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.m
 ## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
 Supported features:
 1. Klipper 13, zMod 1.6.0+. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
+2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian, Czech
 3. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
 4. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
 5. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)

@@ -17,9 +17,9 @@
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
 MD5:
-- AD5X-zmod-1.6.2.tgz `bd76dc5b5a98c7ac71adde316c745c57`
-- Adventurer5MPro-zmod-1.6.2.tgz `a674d5c832c5e38da417eff28d3b1291`
-- Adventurer5M-zmod-1.6.2.tgz `a674d5c832c5e38da417eff28d3b1291`
+- AD5X-zmod-1.6.2.tgz `57df996435bfb7606bbe7fcf68de344d`
+- Adventurer5MPro-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
+- Adventurer5M-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
 
 Как проверить:
 - Перейти в папку где лежит файл Adventurer5M-zmod-1.6.2.tgz
@@ -53,7 +53,7 @@ zMod поддерживает [Плагины](https://github.com/ghzserg/g28_te
 ## Поддержка Moonraker и Fluidd/Mainsaill/GuppyScreen на родном Клиппере
 Поддерживаемые функции:
 1. Klipper 13 начиная с версии 1.6.0. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-2. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский, Португальский, Русский
+2. Поддержка [следующих языков](https://github.com/ghzserg/zmod/wiki/Global_ru#lang): Английский, Немецкий, Французский, Итальянский, Испанский, Китайский, Японский, Корейский, Португальский, Русский, Чешский
 3. Веб интрефейс на базе [Fluidd](https://docs.fluidd.xyz/) или [Mainsail](https://docs.mainsail.xyz/) (порт 80)
 4. Загрузка и печать файлов через Octoprinter/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
 5. [Восстановление печати при отключении электричества](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore)
