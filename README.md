@@ -13,7 +13,7 @@ Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLA
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/)
 
-**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
+**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
 - [Download](https://github.com/ghzserg/zmod/releases/)
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)

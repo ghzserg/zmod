@@ -11,7 +11,7 @@
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/)
 
-**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO)**
+**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
 - [Скачать](https://github.com/ghzserg/zmod/releases/)
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
