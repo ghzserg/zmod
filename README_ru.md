@@ -11,6 +11,8 @@
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/)
 
+[@zmod_help_bot](http://t.me/zmod_help_bot)
+
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
 - [Скачать](https://github.com/ghzserg/zmod/releases/)
