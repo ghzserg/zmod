@@ -7,7 +7,7 @@ assignees: ghzserg
 
 ---
 
-Before asking a question, read:
+Before asking a question, ask [@zmod_help_bot](http://t.me/zmod_help_bot) and read:
 - **[TAR_CONFIG formatting algorithm](https://github.com/ghzserg/zmod/wiki/FAQ_en#help)** - without it, the ticket will not be considered
 - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
 - [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
