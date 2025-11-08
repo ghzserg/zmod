@@ -18,19 +18,6 @@
 - [Скачать](https://github.com/ghzserg/zmod/releases/)
 - [Установка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
 
-MD5:
-- AD5X-zmod-1.6.2.tgz `57df996435bfb7606bbe7fcf68de344d`
-- Adventurer5MPro-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
-- Adventurer5M-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
-
-Как проверить:
-- Перейти в папку где лежит файл Adventurer5M-zmod-1.6.2.tgz
-- Правой кнопкой мыши по свободному месту -> `Открыть в терминале`
-- `certutil -hashfile Adventurer5M-zmod-1.6.2.tgz md5`
-- `certutil -hashfile Adventurer5MPro-zmod-1.6.2.tgz md5`
-- `certutil -hashfile AD5X-zmod-1.6.2.tgz md5`
-- Сумма должна совпасть
-
 Ставится на чистую версию:
 - FF5M/FF5MPro **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5, 3.1.9, 3.2.3)
 - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) **только** (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**)

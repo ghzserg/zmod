@@ -20,20 +20,6 @@ Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLA
 - [Download](https://github.com/ghzserg/zmod/releases/)
 - [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
-MD5:
-- AD5X-zmod-1.6.2.tgz `57df996435bfb7606bbe7fcf68de344d`
-- Adventurer5MPro-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
-- Adventurer5M-zmod-1.6.2.tgz `20db858c7216653a586ae3b7f3a659a5`
-
-How to verify:
-- Navigate to the folder containing Adventurer5M-zmod-1.6.2.tgz
-- Right-click on an empty space -> `Open in Terminal`
-- Run:
-  `certutil -hashfile Adventurer5M-zmod-1.6.2.tgz md5`
-  `certutil -hashfile Adventurer5MPro-zmod-1.6.2.tgz md5`
-  `certutil -hashfile AD5X-zmod-1.6.2.tgz md5`
-- Ensure the checksums match.
-
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5, 3.1.9, 3.2.3)
 - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**)
