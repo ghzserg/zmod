@@ -1,10 +1,10 @@
 # FF5M / FF5M Pro / AD5X ZMOD
 
+<img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
+
 Последняя версия: **1.6.2** ставится только с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
 
-[https://ghzserg.github.io/](https://ghzserg.github.io/)
-
-[@zmod_help_bot](http://t.me/zmod_help_bot)
+[https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
