@@ -1,19 +1,12 @@
 # FF5M / FF5M Pro / AD5X ZMOD
 
-> [!CAUTION]
-> *If you want to install this mod on your AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
-> 
-> If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
->
-> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://ghzserg.github.io/).
+<img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
 Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
 
-[https://ghzserg.github.io/](https://ghzserg.github.io/)
-
-[@zmod_help_bot](http://t.me/zmod_help_bot)
+[https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 **Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
@@ -25,6 +18,86 @@ Compatible with clean firmware versions:
 - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**)
 
 Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) folder.
+
+ZMOD for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer
+Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, ZMOD is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
+
+### What is ZMOD?
+ZMOD is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface.
+
+### Key Advantages of ZMOD vs. Stock Firmware
+Here’s what you gain by installing ZMOD:
+
+#### 1. Full Remote Control
+**Stock firmware**: You can send files over Wi-Fi, but only via Orca FF or the FlashForge app (both may be unavailable due to server issues).
+**ZMOD**: Complete browser-based control from your PC or phone:
+- **Fluidd / Mainsail**: Intuitive web interfaces showing live print stats, temperatures, fan speed control, axis movement, and full console access.
+- **Octo/Klipper-style file upload**: Seamless integration with Orca Slicer and other slicers for direct G-code file transfers.
+
+#### 2. Advanced Calibration & Bed Leveling
+**Stock firmware**: Basic automatic bed leveling (ABL).
+**ZMOD**:
+- **Adaptive Mesh (KAMP)**: The printer generates a mesh map only over the area where your model is located — saving time and improving accuracy.
+- **PID Tuning**: Precise calibration of extruder and bed thermal behavior for stable, oscillation-free temperatures.
+- **Input Shaping**: Analyzes and compensates for frame vibrations, enabling faster printing without “ringing” artifacts.
+- **Belt Spectrogram**: Diagnoses belt condition for predictive maintenance.
+- **Screw Tilt Adjustment**: Fully level the bed in under 10 minutes.
+
+#### 3. Intelligent Reliability Features
+**Stock firmware**: Basic filament-runout detection. No firmware or file integrity checks → print hangs possible.
+**ZMOD**:
+- **Nozzle Collision Detection**: Uses strain gauges to detect nozzle collisions with the print or bed — and automatically pauses to prevent damage.
+- **Power-loss Recovery**: Remembers the last print position and resumes after power is restored.
+- **Firmware Integrity Check**: Validates both stock firmware and ZMOD files to prevent corruption.
+- **G-code File Integrity Check**: Verifies MD5 checksums during file transfer.
+
+#### 4. Flexible Filament Handling (Especially for AD5X)
+**Stock firmware**: Standard spool selection via UI menu.
+**ZMOD (for AD5X)**:
+- **Smart COLOR Menu**: Visually select spools, color changes, and material types directly from the web UI.
+- **Infinite Spool Mode**: If multiple spools use the same material, the printer automatically switches to the next one when the current runs out.
+- **Fine-tuned Purge Control**: Reduce purge filament volume during color changes, saving material.
+
+#### 5. Ecosystem & Integration
+**Stock firmware**: Closed system.
+**ZMOD**:
+- **Telegram Bot**: Get real-time notifications and camera snapshots in Telegram for print start/completion.
+- **Plugin Support**: Extend functionality via modules (e.g., `bambufy` for better Bambu Studio compatibility).
+- **Alternative Camera Setup**: Adjustable resolution, FPS, and memory optimization for stable streaming.
+- **Jingle Playback**: Plays custom tunes when prints start or finish.
+
+#### 6. Optimization & Low-level Control
+**Stock firmware**: Limited configurability.
+**ZMOD**:
+- **Stock LCD Disable**: Frees up RAM (critical on AD5M with only 128 MB).
+- **GuppyScreen**: Enhanced replacement UI for the printer’s display.
+- **Log Viewing**: Full system logs for diagnostics.
+- **Firmware Retraction**: Adjust retraction parameters on-the-fly, no reslicing needed.
+- **Full ROOT Access**: Full system control always available.
+
+#### 7. Klipper 13
+**Stock firmware**: AD5M runs outdated Klipper v11, plagued by bugs (E0011, E0017, incorrect object exclusion, broken SCV, faulty resume, etc.).
+**ZMOD**:
+- Fixes known Klipper bugs and enables a modern, stable version.
+
+---
+
+### Summary: Who Is ZMOD For?
+
+| If you are… | ZMOD gives you… |
+|-------------|-----------------|
+| A **beginner** | Easy remote control and automated calibrations for reliable “first-try” quality. |
+| An **enthusiast** | Full control over every printing parameter, advanced tuning tools, and speed experimentation. |
+| An **AD5X owner** | The most convenient multi-color workflow and reduced filament waste. |
+
+ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the **choice**: stick with the familiar touchscreen UI, or leverage modern 3D printing tools to get the absolute most from your FlashForge. It’s the logical next step for any FlashForge owner aiming to maximize their printer’s capabilities.
+
+> [!CAUTION]
+> *If you want to install this mod on your AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
+>
+> If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
+>
+> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://ghzserg.github.io/).
 
 ## Do NOT install this mod if the following stock firmware fixes suffice
 
@@ -40,36 +113,6 @@ These features are ported to the stock firmware:
 
 ## Plugins
 zMod support [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
-
-## Moonraker and Fluidd/Mainsail/GuppyScreen Support on Stock Klipper
-Supported features:
-1. Klipper 13, zMod 1.6.0+. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-2. Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian, Czech
-3. Web interface based on [Fluidd](https://docs.fluidd.xyz/) or [Mainsail](https://docs.mainsail.xyz/) (port 80)
-4. File upload and printing via Octoprint/Fluidd/FlashForge/Mainsail/[GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off)/[Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en)
-5. [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
-6. Adaptive bed mesh with [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
-7. [Bed leveling](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) at any temperature, optionally triggered at print start
-8. [Input Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper), accounting for [SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-9. [Bed screw adjustment](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune)
-10. PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed).
-11. [Nozzle cleaning (stock-like)](https://github.com/ghzserg/zmod/wiki/Main_en#clear_nozzle)
-12. Support for both stock and [alternative camera implementation](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) (saves memory and allows resolution changes).
-13. Moonraker-telegram-bot support on [external hosts](https://github.com/ghzserg/zmod/wiki/Telegram_en)
-14. [MIDI file playback](https://github.com/ghzserg/zmod/wiki/Main_en#play_midi)
-15. [MD5 verification](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) for network transfers
-16. Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD via network
-17. [Headless mode (no stock screen)](https://github.com/ghzserg/zmod/wiki/System_en#display_off). Saves 20MB RAM.
-18. [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off) – lightweight screen replacement
-19. ROOT access and `mc` support
-20. [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) (nozzle cleaning) without force. Based on [this method](https://t.me/FF_5M_5M_Pro/2836/447172).
-21. [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
-22. Fixed [E0011 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
-23. Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
-24. [Rollback from firmware](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction)
-25. [Automatic print stop on part detachment or nozzle collision](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control).
-26. [File/permissions/symlink verification and repair](https://github.com/ghzserg/zmod/wiki/System_en#check_system)
-27. Stock screen menu functionality remains unchanged
 
 ## Version History
 [Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
