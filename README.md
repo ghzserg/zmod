@@ -88,33 +88,6 @@ All features are accessed via macros.
 
 [Macro List](https://github.com/ghzserg/zmod/wiki/Macros_en)
 
-## Configuration Storage
-Access the **mod_data** folder via Fluidd web interface:  
-`Configuration` → `Configuration Files` → `mod_data`
-
-- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and zMod files.
-- Custom Moonraker settings go into `mod_data/user.moonraker.cfg`.
-- Custom MIDI files are stored in `mod_data/midi/`.
-- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) macro.
-- Shutdown scripts are stored in `mod_data/power_off.sh`.
-- Power on scripts are stored in `mod_data/power_on.sh`.
-
-## Known Peculiarities:
-- During actions like `M109` (extruder heating), `M190` (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.
-- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_en#new_save_config) for restarts).
-- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#close_dialogs) or [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#fast_close_dialogs)).
-- The stock screen always loads the `DEFAULT_MESH` profile when starting a print and deletes the `Default` profile post-print.
-
-## Screenless Version Notes:
-- Remove all start gcode and use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) and [END_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#end_print) macros.
-- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on).
-- Manually set [Z_OFFSET] in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) or use [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Global_en#load_zoffset) to load saved offsets.
-- Bed mesh `auto` loads automatically on startup.
-- FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":  
-  - Protocol: `Octo/Klipper`  
-  - Hostname: `printer_IP:7125`  
-  - URL: `printer_IP`
-
 ## Credits
 
 - Root access based on [@darksimpson](https://t.me/darksimpson)'s work. Login: `root`, password: `root`. [Link](https://t.me/c/2000598629/12695/186253)

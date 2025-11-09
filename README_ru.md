@@ -86,35 +86,6 @@ zMod поддерживает [Плагины](https://github.com/ghzserg/g28_te
 
 [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros)
 
-## Хранение настроек
-Доступ к папке **mod_data** через веб интерфейс fluidd. 
-
-`Конфигурация` -> `Файлы конфигурации` -> `mod_data`
-
-- Пользовательские настройки klipper необходимо вносить в файл `mod_data/user.cfg`, настройки записанные в это файл могут заменять/дополнять настройки из `printer_base.cfg` и файлов zMod.
-- Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.cfg`
-- Пользовательские мелодии хранятся в `mod_data/midi/`
-- Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) *нюхлер*
-- Код исполняемый при выключении принтера хранится тут `mod_data/power_off.sh`
-- Код исполняемый при включении принтера хранится тут `mod_data/power_on.sh`
-
-## Известные особенности:
-- Если принтер выполняет какието действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то родной экран замирает
-- Если перезапускается klipper, то родной экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config))
-- После отмены печати, на родном экране надо нажать кнопку Ок (используйте макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_ru#close_dialogs) или [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_ru#fast_close_dialogs))
-- Родной экран при загрузке печати всегда грузит профиль `DEFAULT_MESH`, а после окончания печати всегда удаляет профиль `Default`
-
-## Особености версии без экрана
-- Необходимо удалить весь стартовый gcode и прописать [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print), а в конечный [END_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#end_print)
-- Не работает камера, необходимо запустить альтернативную камеру через макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on)
-- При необходимости, надо вручную прописать параметр `Z_OFFSET` в макросе [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) или использовать глобальный параметр [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Global_ru#load_zoffset) который загружает Z-offset из глобальных параметров, сохраненных ранее через SET_GCODE_OFFSET. *крот*
-- При включении принтера автоматически загружается карта стола `auto`
-- Не работает отправка через протокол FlashForge, т.к. его обрабатывает экран.
-  Необходимо переключиться на протокол "Octo/Klipper":
-  - Протокол: `Octo/Klipper`
-  - Имя хоста: `IP_принтера:7125`
-  - Url-адрес хоста: `IP_принтера`
- 
 ## Используемые дополнения
 
 - Root основан на реализации [@darksimpson](https://t.me/darksimpson). Логин и пароль: root. [Ссылка](https://t.me/c/2000598629/12695/186253)
