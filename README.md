@@ -11,7 +11,7 @@ Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLA
 **Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS)**
 
 - [Download](https://github.com/ghzserg/zmod/releases/)
-- [Install](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
+- [Install/Initial calibration](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5, 3.1.9, 3.2.3)
