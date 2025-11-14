@@ -192,8 +192,6 @@ class Printer:
             if run_result == 'firmware_restart':
                 self.send_event("klippy:firmware_restart")
             self.send_event("klippy:disconnect")
-            os.system("cmd_mcu write_firmware /usr/prog/libmcu-bare.bin")
-            os.system("cmd_mcu bootup")
         except:
             logging.exception("Unhandled exception during post run")
         return run_result
