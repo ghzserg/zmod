@@ -4,7 +4,7 @@
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
-Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
+Latest version: **1.6.3** can only be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
@@ -14,8 +14,8 @@ Latest version: **1.6.2** can only be installed via USB flash drive or the [ZFLA
 - [Install/Initial calibration](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
 
 Compatible with clean firmware versions:
-- FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, **3.1.4**, 3.1.5, 3.1.9, 3.2.3)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, 1.1.7, **1.1.9**)
+- FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, **3.2.4**)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, **1.1.9**)
 
 Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) folder.
 
@@ -33,6 +33,7 @@ Here’s what you gain by installing ZMOD:
 **ZMOD**: Complete browser-based control from your PC or phone:
 - **Fluidd / Mainsail**: Intuitive web interfaces showing live print stats, temperatures, fan speed control, axis movement, and full console access.
 - **Octo/Klipper-style file upload**: Seamless integration with Orca Slicer and other slicers for direct G-code file transfers.
+- **Access to the printer's web interface via the Internet** cloud service [zmod.link](https://zmod.link)
 
 #### 2. Advanced Calibration & Bed Leveling
 **Stock firmware**: Basic automatic bed leveling (ABL).
