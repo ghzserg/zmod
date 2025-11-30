@@ -13,6 +13,9 @@ Before asking a question, ask [@zmod_help_bot](http://t.me/zmod_help_bot) and re
 - [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
 - [Macro documentation](https://github.com/ghzserg/zmod/wiki/Macros_en)
 
+If you're using any plugins other than recommended, disable them.
+If the issue persists, create a ticket. If the issue is caused by the g28_tenz or nopoop plugins, please indicate this in the issue title. [If the issue is caused by the bambufy plugin, please contact the author](https://github.com/function3d/bambufy).
+
 - [ ] I have AD5M
 - [ ] I have AD5M PRO
 - [ ] I have AD5X
