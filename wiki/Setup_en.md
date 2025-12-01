@@ -681,7 +681,9 @@ After installation:
 
 **Recommended method:** Use the `REMOVE_ZMOD` macro. Use USB removal only if macros are unavailable.
 
-Important! If you're using Klipper 13, you need to calibrate ```UPDATE_MCU```. This will prevent the MCU and Klipper from being different versions.
+Attention!
+- If you are using Klipper 13, you must run ```UPDATE_MCU```. This will prevent the MCU and Klipper from being different versions.
+- If you have enabled plugins, you must first disable them using ```DISABLE_PLUGIN name=g28_tenz```
 
 **USB Removal:**
 1. Format a USB drive to FAT/FAT16/FAT32.
