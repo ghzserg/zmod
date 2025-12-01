@@ -75,11 +75,17 @@
 13. Нажать `Проверить обновления`, подождать пока обновления проверятся
 14. Нажать **Обновление** и обновить все компоненты.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
-15. Переведите мод на ваш язык. В консоли наберите ```LANG LANG=ru```
+
+    Если показывает много ошибок, то это нормально. Плагины не входят в состав прошивки и скачиваются отдельно. Нужно нажать `Проверить обновления`.
+    И по одному восстановить и обновить все модули. Принтер при этом будет перезагружаться.
+    
+    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
+
+16. Переведите мод на ваш язык. В консоли наберите ```LANG LANG=ru```
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
-16. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) ```ENABLE_PLUGIN name=recommend```
+17. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) ```ENABLE_PLUGIN name=recommend```
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
-17. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)  
+18. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)  
     Весь стартовый код нужно заменить на этот:
 
     ```
@@ -108,11 +114,11 @@
 
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
-18. [Включите контроль MD5](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5--%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-md5)
+19. [Включите контроль MD5](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5--%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-md5)
 
     <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
-19. [Прочитайте рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
-20. [Прочитайте FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
+20. [Прочитайте рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
+21. [Прочитайте FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
 
 ### Внимание AD5X
 
