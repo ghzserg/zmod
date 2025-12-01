@@ -74,7 +74,7 @@
     If it shows a lot of errors, that's normal. Plugins aren't included in the firmware and are downloaded separately. Click 'Check for updates'.
     Then restore and update all modules one by one. The printer will reboot during this process.
     
-    <img width="995" height="758" alt="image" src="https://github.com/user-attachments/assets/766b0847-418e-4ce1-b0d8-f03824f0d0ea" />
+    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 12. Go to Fluidd/Mainsail → Settings → Software Update. Click Check Updates and install the latest ZMOD updates.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 13. Translate the mod into your language. In the console, type ```LANG LANG=es``` 
