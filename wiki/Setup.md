@@ -78,8 +78,8 @@
 
     Если показывает много ошибок, то это нормально. Плагины не входят в состав прошивки и скачиваются отдельно. Нужно нажать `Проверить обновления`.
     И по одному восстановить и обновить все модули. Принтер при этом будет перезагружаться.
-    <img width="995" height="758" alt="image" src="https://github.com/user-attachments/assets/766b0847-418e-4ce1-b0d8-f03824f0d0ea" />
-
+    
+    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
 16. Переведите мод на ваш язык. В консоли наберите ```LANG LANG=ru```
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
