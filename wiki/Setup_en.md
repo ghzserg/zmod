@@ -70,13 +70,13 @@
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
     If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
-    
+12. Go to Fluidd/Mainsail → Settings → Software Update. Click Check Updates and install the latest ZMOD updates.
+    <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+        
     If it shows a lot of errors, that's normal. Plugins aren't included in the firmware and are downloaded separately. Click 'Check for updates'.
     Then restore and update all modules one by one. The printer will reboot during this process.
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
-12. Go to Fluidd/Mainsail → Settings → Software Update. Click Check Updates and install the latest ZMOD updates.
-    <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 13. Translate the mod into your language. In the console, type ```LANG LANG=es``` 
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
 14. Activate [plugin with recommendations](https://github.com/ghzserg/recommend/blob/main/Readme.md) ```ENABLE_PLUGIN name=recommend``` 
