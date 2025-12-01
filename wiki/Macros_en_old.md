@@ -14,7 +14,7 @@ It can be called from:
 
 Set the language for zMod to work in.
 
-- LANG - language, en - English, ru - Russian, de - German, fr - French, it - Italian, es - Spanish, zh - Chinese, ja - Japanese, ko - Korean, pt - Portugal
+- LANG - language, en - English, ru - Russian, de - German, fr - French, it - Italian, es - Spanish, zh - Chinese, ja - Japanese, ko - Korean, pt - Portugal, tr - Turkish
 
 Example:
 ```

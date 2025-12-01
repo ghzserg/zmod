@@ -128,7 +128,7 @@ It can be called from:
 
 Set the language for ZMOD operation.
 
-- LANG - language: en (English), ru (Russian), de (German), fr (French), it (Italian), es (Spanish), zh (Chinese), ja (Japanese), ko (Korean), pt (Portugal), cs (Czech)
+- LANG - language: en (English), ru (Russian), de (German), fr (French), it (Italian), es (Spanish), zh (Chinese), ja (Japanese), ko (Korean), pt (Portugal), cs (Czech), tr(Turkish)
 
 Example:
 ```
