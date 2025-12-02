@@ -751,7 +751,7 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 5. Включить принтер
 6. Сгенерировать проблему
 7. Выполнить [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_ru#tar_config) - сохранить лог файлы
-8. Выложить одно сообщение с описанием и файлом `config.tar`
+8. Выложить одно сообщение с описанием и файлом `config.tar.gz`
 9. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
 
 <div align="center">

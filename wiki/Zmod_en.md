@@ -148,7 +148,7 @@ Remaining active:
 ### TAR_CONFIG
 
 Backup configuration files into an archive.
-Download the archive via: **Configuration → mod_data → config.tar**
+Download the archive via: **Configuration → mod_data → config.tar.gz**
 
 <div align="center">
 
@@ -159,8 +159,8 @@ Download the archive via: **Configuration → mod_data → config.tar**
 ---
 ### RESTORE_TAR_CONFIG
 
-Restore configurations from the `config.tar` archive.
-Upload the archive to: **Configuration → mod_data → config.tar**
+Restore configurations from the `config.tar.gz` archive.
+Upload the archive to: **Configuration → mod_data → config.tar.gz**
 
 <div align="center">
 

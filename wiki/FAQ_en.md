@@ -634,7 +634,7 @@ No - all settings are saved
 4. Power it back on.
 5. Reproduce the issue.
 6. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to save logs.
-7. Submit the issue with `config.tar` and description.
+7. Submit the issue with `config.tar.gz` and description.
 8. [Open a GitHub issue](https://github.com/ghzserg/zmod/issues).
 
 <div align="center">

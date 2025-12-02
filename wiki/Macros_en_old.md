@@ -640,9 +640,9 @@ Backup logs and configs.
 
 ### RESTORE_TAR_CONFIG
 
-Restores configuration files from the `config.tar` archive
+Restores configuration files from the `config.tar.gz` archive
 
-The archive must be loaded in 'Configuration' -> 'mod_data' -> `config.tar`
+The archive must be loaded in 'Configuration' -> 'mod_data' -> `config.tar.gz`
 
 ---
 
@@ -743,7 +743,7 @@ Set timezone.
 **Example:** `SET_TIMEZONE ZONE=Asia/Yekaterinburg`
 
 ### TAR_CONFIG
-Backup configs to `mod_data/config.tar`.
+Backup configs to `mod_data/config.tar.gz`.
 
 ### ZFLASH
 Update ZMOD via USB.

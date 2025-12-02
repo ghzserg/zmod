@@ -65,7 +65,7 @@ Installation takes a long time, up to an hour.
 Download to flash drive
 - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
 - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, if you previously did it via `TAR_CONFIG`
+- `config.tar.gz`, if you previously did it via `TAR_CONFIG`
 - After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 # Установка полной прошивки на FF5M
@@ -75,7 +75,7 @@ Download to flash drive
 Загрузите на флешку 
 - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
 - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, если вы его ранее делали через `TAR_CONFIG`
+- `config.tar.gz`, если вы его ранее делали через `TAR_CONFIG`
 - После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 # AD5X-ENABLE-zmod.tgz
