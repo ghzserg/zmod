@@ -28,30 +28,29 @@ jobs:
             
             let attachmentFound = false;
             let fileAccessible = false;
+            let fileUrl = '';
             
-            if (issue.data.body && issue.data.body.toLowerCase().includes('config.tar.gz')) {
+            // Ищем именно markdown ссылку [config.tar.gz](url)
+            const markdownRegex = /\[config\.tar\.gz\]\((https?:\/\/[^\s)]+)\)/i;
+            const match = issue.data.body.match(markdownRegex);
+            
+            if (match && match[1]) {
               attachmentFound = true;
+              fileUrl = match[1];
               
-              const attachmentRegex = /!\[.*?\]\((https?:\/\/github\.com\/.*?\/issues\/.*?\/attachments\/.*?\/config\.tar\.gz)\)/g;
-              const matches = [...issue.data.body.matchAll(attachmentRegex)];
-              
-              if (matches.length > 0) {
-                const fileUrl = matches[0][1];
-                try {
-                  const response = await fetch(fileUrl, { method: 'HEAD' });
-                  if (response.ok) {
-                    fileAccessible = true;
-                  }
-                } catch (error) {
-                  fileAccessible = false;
+              try {
+                const response = await fetch(fileUrl, { method: 'HEAD' });
+                if (response.ok) {
+                  fileAccessible = true;
                 }
-              } else {
-                fileAccessible = true;
+              } catch (error) {
+                fileAccessible = false;
               }
             }
             
             core.setOutput('attachment_found', attachmentFound.toString());
             core.setOutput('file_accessible', fileAccessible.toString());
+            core.setOutput('file_url', fileUrl);
 
       - name: Handle successful attachment
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
