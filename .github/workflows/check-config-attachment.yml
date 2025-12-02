@@ -30,7 +30,6 @@ jobs:
             let fileAccessible = false;
             let fileUrl = '';
             
-            // Ищем именно markdown ссылку [config.tar.gz](url)
             const markdownRegex = /\[config\.tar\.gz\]\((https?:\/\/[^\s)]+)\)/i;
             const match = issue.data.body.match(markdownRegex);
             
@@ -55,6 +54,9 @@ jobs:
       - name: Handle successful attachment
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
         uses: actions/github-script@v6
+        env:
+          ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
+          FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
         with:
           script: |
             const issueNumber = context.issue.number;
@@ -86,6 +88,9 @@ jobs:
       - name: Handle missing or inaccessible attachment
         if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true'
         uses: actions/github-script@v6
+        env:
+          ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
+          FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
         with:
           script: |
             const issueNumber = context.issue.number;
@@ -108,10 +113,12 @@ jobs:
             }
             
             let commentBody = '';
+            const attachmentFound = process.env.ATTACHMENT_FOUND === 'true';
+            const fileAccessible = process.env.FILE_ACCESSIBLE === 'true';
             
-            if (steps.check_attachment.outputs.attachment_found !== 'true') {
+            if (!attachmentFound) {
               commentBody = '❌ **Error!** The file `config.tar.gz` was not found in the issue.\n\n❌ **Ошибка!** Файл `config.tar.gz` не найден в тикете.\n\n';
-            } else if (steps.check_attachment.outputs.file_accessible !== 'true') {
+            } else if (!fileAccessible) {
               commentBody = '⚠️ **Warning!** The file `config.tar.gz` was found in the issue but is not accessible for download.\n\n⚠️ **Предупреждение!** Файл `config.tar.gz` найден в тикете, но недоступен для скачивания.\n\n';
             }
             
