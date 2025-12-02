@@ -25,9 +25,6 @@ If the issue persists, create a ticket. If the issue is caused by the g28_tenz o
 - [ ] I work with Guppyscreen
 (replace the space with x inside the brackets)
 
-I uploaded [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ_en#help) to the zmod chat (https://t.me/FF_5M_5M_Pro/408369) or to a file sharing service.
-Attach a link to the message with the file or attach the file to this text using the button with a paperclip at the bottom.
-
 If the problem occurs on a specific file with gcode, then attach this file too.
 If the problem occurs even when printing a standard cube, then attach the file with the gcode of this cube.
 
@@ -55,3 +52,6 @@ Call GET_ZMOD_DATA and put the output here.
 
 Detailed error description:
 Please describe in as much detail as possible what you did, what you planned to get, and what you got.
+
+Attach the config.tar.gz file to this text using the paperclip button below.
+Without the config.tar.gz file, the ticket will be automatically closed.
