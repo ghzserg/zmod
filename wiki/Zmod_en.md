@@ -118,6 +118,8 @@ Uninstall Zmod.
 The `/opt/config/mod_data` directory stores configurations for `zmod`, `fluidd`, `moonraker`, and `mainsail`.
 It is not deleted by default to prevent accidental data loss.
 
+Warning! Disable all plugins yourself and switch to the native Klipper.
+
 <div align="center">
 
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
@@ -129,6 +131,9 @@ It is not deleted by default to prevent accidental data loss.
 
 Reboot into the original system without Zmod.
 Disables Zmod, Moonraker, and Fluidd configurations.
+
+Warning! Disable all plugins yourself and switch to the native Klipper.
+
 Remaining active:
 - Alternative camera
 - SSH
