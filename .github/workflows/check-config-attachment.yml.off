@@ -11,98 +11,108 @@ jobs:
       issues: write
       
     steps:
-      - name: Check if config.tar.gz is attached
+      - name: Check attachment status
         id: check_attachment
-        run: |
-          echo "Issue body: ${{ github.event.issue.body }}"
-          
-          if echo "${{ github.event.issue.body }}" | grep -q "config\.tar\.gz"; then
-            echo "attachment_found=true" >> $GITHUB_OUTPUT
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
             
-            URL=$(echo "${{ github.event.issue.body }}" | grep -o 'https://[^"]*config\.tar\.gz[^"]*' | head -1)
-            if [ -n "$URL" ]; then
-              echo "attachment_url=$URL" >> $GITHUB_OUTPUT
+            const issue = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueNumber
+            });
+            
+            let attachmentFound = false;
+            let fileAccessible = false;
+            
+            if (issue.data.body && issue.data.body.toLowerCase().includes('config.tar.gz')) {
+              attachmentFound = true;
               
-              if curl --output /dev/null --silent --head --fail "$URL"; then
-                echo "file_accessible=true" >> $GITHUB_OUTPUT
-              else
-                echo "file_accessible=false" >> $GITHUB_OUTPUT
-              fi
-            else
-              echo "file_accessible=false" >> $GITHUB_OUTPUT
-            fi
-          else
-            echo "attachment_found=false" >> $GITHUB_OUTPUT
-            echo "file_accessible=false" >> $GITHUB_OUTPUT
-          fi
+              const attachmentRegex = /!\[.*?\]\((https?:\/\/github\.com\/.*?\/issues\/.*?\/attachments\/.*?\/config\.tar\.gz)\)/g;
+              const matches = [...issue.data.body.matchAll(attachmentRegex)];
+              
+              if (matches.length > 0) {
+                const fileUrl = matches[0][1];
+                try {
+                  const response = await fetch(fileUrl, { method: 'HEAD' });
+                  if (response.ok) {
+                    fileAccessible = true;
+                  }
+                } catch (error) {
+                  fileAccessible = false;
+                }
+              } else {
+                fileAccessible = true;
+              }
+            }
+            
+            core.setOutput('attachment_found', attachmentFound.toString());
+            core.setOutput('file_accessible', fileAccessible.toString());
 
       - name: Handle successful attachment
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
         uses: actions/github-script@v6
-        env:
-          ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
-          FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
         with:
           script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
             const issue = await github.rest.issues.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number
+              owner,
+              repo,
+              issue_number: issueNumber
             });
             
             if (issue.data.state === 'closed') {
               await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
+                owner,
+                repo,
+                issue_number: issueNumber,
                 state: 'open'
               });
               
               await github.rest.issues.createComment({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
+                issue_number: issueNumber,
+                owner,
+                repo,
                 body: '✅ **Perfect!** The file `config.tar.gz` has been found and is accessible.\n\n✅ **Отлично!** Файл `config.tar.gz` найден и доступен для скачивания.\n\nThe issue has been reopened and will be processed. / Тикет был переоткрыт и будет обработан.'
-              });
-            } else {
-              await github.rest.issues.createComment({
-                issue_number: context.issue.number,
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                body: '✅ **Perfect!** The file `config.tar.gz` has been found and is accessible.\n\n✅ **Отлично!** Файл `config.tar.gz` найден и доступен для скачивания.\n\nYour issue will be processed. / Ваш тикет будет обработан.'
               });
             }
 
       - name: Handle missing or inaccessible attachment
         if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true'
         uses: actions/github-script@v6
-        env:
-          ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
-          FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
         with:
           script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            
             const issue = await github.rest.issues.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number
+              owner,
+              repo,
+              issue_number: issueNumber
             });
             
             if (issue.data.state === 'open') {
               await github.rest.issues.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.issue.number,
+                owner,
+                repo,
+                issue_number: issueNumber,
                 state: 'closed'
               });
             }
             
             let commentBody = '';
-            const attachmentFound = process.env.ATTACHMENT_FOUND === 'true';
-            const fileAccessible = process.env.FILE_ACCESSIBLE === 'true';
             
-            if (!attachmentFound) {
+            if (steps.check_attachment.outputs.attachment_found !== 'true') {
               commentBody = '❌ **Error!** The file `config.tar.gz` was not found in the issue.\n\n❌ **Ошибка!** Файл `config.tar.gz` не найден в тикете.\n\n';
-            } else if (!fileAccessible) {
+            } else if (steps.check_attachment.outputs.file_accessible !== 'true') {
               commentBody = '⚠️ **Warning!** The file `config.tar.gz` was found in the issue but is not accessible for download.\n\n⚠️ **Предупреждение!** Файл `config.tar.gz` найден в тикете, но недоступен для скачивания.\n\n';
             }
             
@@ -111,8 +121,8 @@ jobs:
             commentBody += '🔄 After editing, the issue will be automatically reopened if the file is found and accessible.\n\n🔄 После редактирования тикет будет автоматически переоткрыт, если файл найден и доступен.';
             
             await github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              issue_number: issueNumber,
+              owner,
+              repo,
               body: commentBody
             });
