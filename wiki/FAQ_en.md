@@ -627,15 +627,16 @@ No - all settings are saved
 ### Help
 ### How to Contact Support
 
-0. [Update ZMOD to the latest version and all plugins](https://github.com/ghzserg/zmod/wiki/Setup_en#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0).
-1. Describe the issue clearly (screenshots, photos, text).
-2. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear logs.
-3. **Power off the printer.**
-4. Power it back on.
-5. Reproduce the issue.
-6. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to save logs.
-7. Submit the issue with `config.tar.gz` and description.
-8. [Open a GitHub issue](https://github.com/ghzserg/zmod/issues).
+1. [Update ZMOD to the latest version and all plugins](https://github.com/ghzserg/zmod/wiki/Setup_en#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0).
+2. Translate the mod into Russian ```LANG LANG=ru``` or English ```LANG LANG=en```
+3. Describe the issue clearly (screenshots, photos, text).
+4. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear logs.
+5. **Power off the printer.**
+6. Power it back on.
+7. Reproduce the issue.
+8. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to save logs.
+9. Submit the issue with `config.tar.gz` and description.
+10. [Open a GitHub issue](https://github.com/ghzserg/zmod/issues).
 
 <div align="center">
 
