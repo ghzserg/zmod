@@ -29,6 +29,7 @@ Differences from AD5M:
 *   **Always use** `FAST_CLOSE_DIALOGS` (fast closing) instead of `CLOSE_DIALOGS` (slow closing).
 *   The `NEW_SAVE_CONFIG` macro **does not work**.
 *   To enable the camera, use ```CAMERA_ON VIDEO=video3``` or ```CAMERA_ON VIDEO=video0``` or ```CAMERA_ON VIDEO=video99```.
+*   Klipper may crash. Solution: 'Process Profile' -> 'Other' -> 'Output G-code' -> 'Exclude Models', uncheck.
 
 ---
 

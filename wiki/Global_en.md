@@ -614,6 +614,7 @@ Fix E0011 and `Communication timeout during homing` errors. Changing this parame
 Example: `SAVE_ZMOD_DATA FIX_E0011=1`
 
 This error may also occur:
+- Large volume of model exclusions: Solution `Process profile` -> `Other` -> `Output G-cod` -> `Exclude models` uncheck.
 - If you disabled swap on FF5M/FF5MPro.
 
   Run the `MEM` macro and see if there is swap and what size it is.
