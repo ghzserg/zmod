@@ -12,7 +12,7 @@
 7. [Add custom filament types](#7-add-custom-filament-types)
 8. [Add custom colors](#8-add-custom-colors)
 9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
-   - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-stock-firmware-ad5x)
+   - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
    - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
 10. [IFS commands](#10-ifs-commands)
 

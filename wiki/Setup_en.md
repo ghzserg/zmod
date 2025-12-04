@@ -120,6 +120,9 @@
 [@Khamai](https://t.me/Khamai)
 
 After installing the Native Firmware, the print head may not be correctly positioned against the filament receiver (the receiver shutter may not be fully closed, filament may be pushed onto the table, etc.).
+
+[Via the engineering menu on the stock firmware](https://github.com/ghzserg/zmod/wiki/AD5X_en#setting-up-the-basket-on-the-ad5x-stock-firmware)
+
 If you encounter this issue, you need to calibrate the print head position using the following algorithm:
 1. Download the [Set.XY.Offset.zip](https://github.com/ghzserg/zmod/releases/download/R/Set.XY.Offset.zip) archive and unzip it to the root of a flash drive.
 2. Insert the flash drive into the turned-off printer and turn it on.
