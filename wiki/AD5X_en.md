@@ -12,6 +12,8 @@
 7. [Add custom filament types](#7-add-custom-filament-types)
 8. [Add custom colors](#8-add-custom-colors)
 9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
+   - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-stock-firmware-ad5x)
+   - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
 10. [IFS commands](#10-ifs-commands)
 
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
@@ -367,6 +369,22 @@ Write these numbers to the file `/rw/Adventurer5M.json`. The knife is calibrated
 7. Then enter: `_GOTO_TRASH` (this will move to the trash bin).
 
 Restart the printer — everything is ready.
+
+---
+
+## Setting up the basket on the AD5X stock firmware
+
+1. Go to the "i" tab and hold `Device Info` for 20 seconds
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/fa166a53-e2ef-4523-a408-3612066c3dcb" />
+2. Select `TOOL` and click the adjustment button
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/5dd72b3c-ec25-4026-b2d7-fac87acffa17" />
+3. Adjust the head position in the basket so it closes. Use the control arrows to position the print head against the receiver so that the print head presses the shutter lever firmly, the nozzle is behind the movable shutter, and the shutter itself is flush with the front surface of the receiver.
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
+   
+   Press the `Set` button
 
 ---
 
