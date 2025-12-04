@@ -374,17 +374,31 @@ Restart the printer — everything is ready.
 
 ## Setting up the basket on the AD5X stock firmware
 
-1. Go to the "i" tab and hold `Device Info` for 20 seconds
+1. Go to the "i" tab and press the `Status` button
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/fa166a53-e2ef-4523-a408-3612066c3dcb" />
-2. Select `TOOL` and click the adjustment button
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/5dd72b3c-ec25-4026-b2d7-fac87acffa17" />
-3. Adjust the head position in the basket so it closes. Use the control arrows to position the print head against the receiver so that the print head presses the shutter lever firmly, the nozzle is behind the movable shutter, and the shutter itself is flush with the front surface of the receiver.
+2. Go to the 6th tab
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
+   
+3. Press and hold `Move the extruder to waste tray position` for 20 seconds
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+   
+4. Adjust the head position in the waste tray so that it closes. Using the control arrows, park the print head at the receiver in such a way that the print head sufficiently presses the shutter lever, the nozzle is behind the moving shutter, and the shutter itself is flush with the front surface of the receiver.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
    
-   Press the `Set` button
+   Press the `Set` button.
+   
+5. Press and hold `Move the extruder to cutter striker position` for 20 seconds
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+   
+6. Adjust the cutter. Press `CutX` — the cutter should cut the filament without slipping or striking.
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
+   
+   Press the `Set` button.
 
 ---
 

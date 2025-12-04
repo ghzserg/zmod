@@ -372,15 +372,28 @@ filament_NEWTYPE: 300
 
 ## Настройка корзины на родной прошивке AD5X
 
-1. Перейти на вкладку "i" и зажать `Device Info` на 20 секунд
+1. Перейти на вкладку "i" и нажать кнопку `Status`
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/fa166a53-e2ef-4523-a408-3612066c3dcb" />
-2. Выбрать `TOOL` и нажать на кнопку регулировки
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
+2. Перейти на 6 вкладку
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/5dd72b3c-ec25-4026-b2d7-fac87acffa17" />
-3. Отрегулируйте положение головы в корзине, так чтобы она закрывалась. Стрелками управления припарковать печатающую голову к приемнику таким образом, чтобы печатающая голова достаточно прижимала рычажок шторки, сопло было за подвижной шторкой, а сама шторка была на одном уровне с передней поверхностью приемника.
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
+
+3. Зажмите `Move the extruder to waste tray position` и держите 20 секунд
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+
+4. Отрегулируйте положение головы в корзине, так чтобы она закрывалась. Стрелками управления припарковать печатающую голову к приемнику таким образом, чтобы печатающая голова достаточно прижимала рычажок шторки, сопло было за подвижной шторкой, а сама шторка была на одном уровне с передней поверхностью приемника.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
+   
+   Нажмите  кнопку `Set`
+
+5. Зажмите `Move the extruder to cutter stiker position` и держите 20 секунд
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+
+4. Отрегулируйте нож. Нажмите `CutX` - нож должен отрезать филамент без сдвигов и ударов.
+   
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
    
    Нажмите  кнопку `Set`
 
