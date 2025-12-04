@@ -6,8 +6,8 @@
 |---|---|
 | [Restoring Printer to Factory Settings](#restoring-printer-to-factory-settings-required-for-mod-installation) | [Installing the Mod](#installing-the-mod) |
 | [Updating the Mod](#updating-the-mod) | [How to Update Stock Firmware](#updating-stock-firmware) |
-| [Removing - Temporarily Disabling the Mod](#removing-or-temporarily-disabling-the-mod) | [Using a Stable Release Branch](#using-a-stable-release-branch) |
-| [Boot Recovery](#boot-recovery) | [Support Mod Development](#support-mod-development) |
+| [Removing - Temporarily Disabling the Mod](#removing-or-temporarily-disabling-the-mod) | [Boot Recovery](#boot-recovery) |
+| [Support Mod Development](#support-mod-development) | - |
 
 ## [Calibration](#printer-calibration-for-beginners)
 
@@ -721,25 +721,6 @@ If ZMOD is outdated:
 Attention! If you're using Klipper 13, you must run ```UPDATE_MCU``` before updating the stock firmware. This will prevent situations where the MCU and Klipper are different versions.
 
 [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) requires [zMod activation](https://github.com/ghzserg/zmod/releases/tag/R) via `AD5X-ENABLE-zmod.tgz` from flash drive, after stock update.
-
-<div align="center">
-
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#setup)
-
-</div>
-
----
-
-## Using a Stable Release Branch
-
-To switch to a stable branch:
-1. Add to `mod_data/user.moonraker.conf`:
-   ```
-   [update_manager zmod]
-   channel: stable
-   ```
-2. Stable updates are released weekly.
-3. For bug reports or new features, switch back to the latest release by removing the above lines.
 
 <div align="center">
 
