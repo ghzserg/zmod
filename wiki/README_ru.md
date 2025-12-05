@@ -158,4 +158,4 @@ zMod поддерживает [Плагины](https://github.com/ghzserg/g28_te
 
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
-[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
+[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=8d2a46ac-0951-4be5-a279-cfb82a55dbaa)

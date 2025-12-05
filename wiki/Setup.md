@@ -703,7 +703,7 @@ max_accel: 8700 ; Максимальное ускорение для осей X 
 
 ## Помочь разработке
 
-[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=0efce2b8-c321-4cb1-a6f9-5b7a9d34e34f)
+[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=8d2a46ac-0951-4be5-a279-cfb82a55dbaa)
 
 BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 

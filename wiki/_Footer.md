@@ -7,4 +7,4 @@
 - [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros) | [List of Macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
 - [Установка/Калибровка](https://github.com/ghzserg/zmod/wiki/Setup) | [Installation/Calibrations](https://github.com/ghzserg/zmod/wiki/Setup_en)
 
-[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=90d13d80-3ffb-4ff0-bcbf-02de31f94eee) | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
+[На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=8d2a46ac-0951-4be5-a279-cfb82a55dbaa) | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
