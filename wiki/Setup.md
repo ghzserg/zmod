@@ -62,6 +62,8 @@
    <img width="800" height="480" alt="install" src="https://github.com/user-attachments/assets/9d6b9ad7-e9ec-4bc2-bd8f-54c945b5add5" />
    
    <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
+   
+   На AD5X установка может занимать до 40 минут
 8. Вытащить флешку
 9. Выключить принтер
 10. Включить принтер

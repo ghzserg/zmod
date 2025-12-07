@@ -63,6 +63,8 @@
    <img width="800" height="480" alt="install" src="https://github.com/user-attachments/assets/9d6b9ad7-e9ec-4bc2-bd8f-54c945b5add5" />
    
    <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
+   
+   Installation on the AD5X can take up to 40 minutes
 8. Remove the USB drive.
 9. Power the printer.
 10. **Open the printer's IP address in the browser**
