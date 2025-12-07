@@ -126,6 +126,8 @@ Instead, you can use:
 
 Add [CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) to your workflow.
 
+It is recommended to use the [global parameter FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+
 *Add [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) or
 [addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
 [addMD5.py](https://github.com/ghzserg/zmod/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)*

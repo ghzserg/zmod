@@ -120,6 +120,8 @@
 
 [CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
 
+Рекомендуется использовать [глобальный параметр FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+
 *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) или
 [addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
 [addMD5.py](https://github.com/ghzserg/zmod/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)*
