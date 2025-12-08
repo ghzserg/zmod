@@ -44,12 +44,6 @@ Put your printer end G-code here
 END_PRINT
 ```
 
-Here are my SAVE_ZMOD_DATA parameters:
-
-```
-Call GET_ZMOD_DATA and put the output here.
-```
-
 Detailed error description:
 Please describe in as much detail as possible what you did, what you planned to get, and what you got.
 
