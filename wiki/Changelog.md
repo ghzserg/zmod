@@ -47,7 +47,7 @@
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Добавлен глобальный параметр [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament) - извлечь филамент после печати
 * Добавлен [плагин рекомендуемых настроек](https://github.com/ghzserg/recommend)
 * Добавлен чешский язык
-* Добавлен контроль версмии MCU для Klipper 13
+* Добавлен контроль версии MCU для Klipper 13
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Добавлена кнопка левелинга
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Исправления для Klipper 13
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Исправление чистки сопла
