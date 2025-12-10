@@ -273,7 +273,7 @@ Example: `SAVE_ZMOD_DATA USE_KAMP=1`
 ---
 ##### MESH_TEST
 
-Test bed mesh before printing: 0 (no), 1 (yes) (1).
+Test bed mesh before printing: 0 (no), 1 (yes), 2 (test, in case of mismatch, run KAMP) (1).
 
 If KAMP smart purge is used, heating occurs near the purge area instead of a corner.
 
