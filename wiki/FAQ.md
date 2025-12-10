@@ -116,7 +116,7 @@ ZMOD НЕ основан на KlipperMod, и НЕ является его раз
 
 ## Известные особенности:
 - Если принтер выполняет какие-то действия `M109` (прогрев экструдера), `M190`(прогрев стола), калибровку PID - в общем любое действие, которое заставляет приостановится gcod, то родной экран замирает
-- Если перезапускается klipper, то родной экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config))
+- Если перезапускается klipper (после сохранения карты стола, PID, Шейперов и т.д.), то родной экран замерзает (используйте перезапуск через [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config)
 - После отмены печати, на родном экране надо нажать кнопку Ок (используйте макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_ru#close_dialogs) или [FAST_CLOSE_DIALOGS](https://github.com/ghzserg
 /zmod/wiki/Main_ru#fast_close_dialogs))
 - Родной экран при загрузке печати всегда грузит профиль `DEFAULT_MESH`, а после окончания печати всегда удаляет профиль `Default`
