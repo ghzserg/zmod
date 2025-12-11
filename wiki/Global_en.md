@@ -1,4 +1,4 @@
-<h1 align="center">Global</h1>
+<h1 align="center">Global param</h1>
 
 *[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Global_ru)*
 
@@ -23,10 +23,11 @@ It can be called from:
 <tbody>
  <tr>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#lang">LANG</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#global">GLOBAL</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#get_zmod_data">GET_ZMOD_DATA</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data">SAVE_ZMOD_DATA</a></td>
  </tr>
  <tr>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data">SAVE_ZMOD_DATA</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control">NOZZLE_CONTROL</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#set_timezone">SET_TIMEZONE</a></td>
  </tr>
@@ -119,7 +120,7 @@ It can be called from:
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -137,7 +138,7 @@ LANG LANG=en
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -149,7 +150,7 @@ Change the timezone.
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -184,11 +185,12 @@ To enable nozzle control on initial layers, add `ZCONTROL_PAUSE` in the slicer a
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
 ---
+
 ### GET_ZMOD_DATA
 
 Retrieve ZMOD global parameters/flags.
@@ -198,11 +200,26 @@ After execution, the console displays saved parameters applied at runtime.
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
 ---
+
+### GLOBAL
+
+Simplified management of global parameters. Only parameters that can be changed with a button click are available. Parameters that require entering a number, specifying a file name, etc. are not controlled by this macro.
+
+After changing parameters, it is recommended to restart the printer.
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+---
+
 ### SAVE_ZMOD_DATA
 
 Save ZMOD global parameters/flags (applied during every print).
@@ -225,7 +242,7 @@ Example: `SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -238,7 +255,7 @@ Example: `SAVE_ZMOD_DATA PRECLEAR=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -252,7 +269,7 @@ Example: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -266,7 +283,7 @@ Example: `SAVE_ZMOD_DATA USE_KAMP=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -293,7 +310,7 @@ Example: `SAVE_ZMOD_DATA MESH_TEST=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -324,7 +341,7 @@ Example: `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -339,7 +356,7 @@ Example: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -354,7 +371,7 @@ Example: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -367,7 +384,7 @@ Example: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -395,7 +412,7 @@ Example: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -409,7 +426,7 @@ Example: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -422,7 +439,7 @@ Example: `SAVE_ZMOD_DATA STOP_MOTOR=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -438,7 +455,7 @@ Example: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -456,7 +473,7 @@ Example: `SAVE_ZMOD_DATA MOTION_SENSOR=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -475,7 +492,7 @@ Example: `SAVE_ZMOD_DATA SILENT=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -493,7 +510,7 @@ Example: `SAVE_ZMOD_DATA AUTOINSERT=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg  )](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg  )](#Global-param)
 
 </div>
 
@@ -513,7 +530,7 @@ Example: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -533,7 +550,7 @@ Example: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -564,7 +581,7 @@ This reduces cornering speeds and generally improves print quality with a slight
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -585,7 +602,7 @@ Then disable Wi-Fi on the native screen.
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -653,7 +670,7 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -690,7 +707,7 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -703,7 +720,7 @@ Example: `SAVE_ZMOD_DATA LED=50`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -716,7 +733,7 @@ Example: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -729,7 +746,7 @@ Example: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -745,7 +762,7 @@ Example: `SAVE_ZMOD_DATA USE_SWAP=1`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -785,7 +802,7 @@ Instead, you can use:
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -810,7 +827,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -825,7 +842,7 @@ Example: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -838,7 +855,7 @@ Example: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
 
 </div>
 
@@ -856,7 +873,7 @@ Example: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 <div align="center">
 
 [![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_en)
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global-param)
 [![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_en)
 
 </div>
