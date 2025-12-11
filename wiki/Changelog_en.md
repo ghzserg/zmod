@@ -1,5 +1,6 @@
 # Changelog
 - [Version History](#version-history)
+  - [Version 1.6.4](#version-164)
   - [Version 1.6.3](#version-163)
   - [Version 1.6.2](#version-162)
   - [Version 1.6.1](#version-161)
@@ -39,6 +40,10 @@
 ---
 
 ## Version History
+
+### Version 1.6.4
+11.12.2025
+* Improved ease of setup and use
 
 ### Version 1.6.3
 **25.11.2025 — ZMOD’s Birthday!**
