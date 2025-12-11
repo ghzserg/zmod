@@ -1,8 +1,8 @@
-<h1 align="center">Global</h1>
+<h1 align="center">Global param</h1>
 
 *[Read in English](https://github.com/ghzserg/zmod/wiki/Global_en)*
 
-Макрос - это небольшая программа на языке Klipper/Gcode. 
+Макрос - это небольшая программа на языке Klipper/Gcode.
 
 Он может вызываться:
 - Из файла GCODE
@@ -23,9 +23,10 @@
  <tr>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#lang">LANG</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data">GET_ZMOD_DATA</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data">SAVE_ZMOD_DATA</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control">GLOBAL</a></td>
  </tr>
  <tr>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data">SAVE_ZMOD_DATA</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control">NOZZLE_CONTROL</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#set_timezone">SET_TIMEZONE</a></td>
  </tr>
@@ -118,7 +119,7 @@
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -137,7 +138,7 @@ LANG LANG=en
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -151,7 +152,7 @@ LANG LANG=en
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -187,7 +188,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -202,7 +203,21 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
+
+</div>
+
+---
+
+### GLOBAL
+
+Упрощенное управление глобальными параметрами. Доступны только параметры, которые можно изменить нажатием кнопки. Параметры требующие ввода числа, задания имени файла и т.д. не управляются через это макрос.
+
+После изменения параметров рекомендуется перезагрузить принтер
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -218,8 +233,6 @@ WEIGHT - вес в граммах (1500)
 
 Второй вариант. Написать в консоли Fluidd нужную команду например: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
 
-[Прочитать сохраненные параметры](https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data)
-
 #### START_PRINT
 
 #### Параметры используемые при начале печати, построении карты стола [START_PRINT]:
@@ -232,7 +245,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -246,7 +259,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -260,7 +273,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -278,7 +291,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -308,7 +321,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -339,7 +352,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -355,7 +368,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -371,7 +384,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -385,7 +398,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -422,7 +435,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -438,7 +451,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -453,7 +466,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -470,7 +483,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -493,7 +506,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -512,7 +525,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -530,7 +543,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -550,7 +563,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -570,7 +583,7 @@ WEIGHT - вес в граммах (1500)
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -603,7 +616,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -624,7 +637,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -695,7 +708,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -735,7 +748,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -749,7 +762,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -763,7 +776,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -777,7 +790,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -794,7 +807,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -840,7 +853,7 @@ square_corner_velocity: 9
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -866,7 +879,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -882,7 +895,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
@@ -896,7 +909,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 <div align="center">
 
-[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global_param)
 
 </div>
 
