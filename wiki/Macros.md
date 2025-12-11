@@ -100,7 +100,7 @@
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#preclear">PRECLEAR</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew_correct">DISABLE_SKEW_CORRECT</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew">DISABLE_SKEW</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_priming">DISABLE_PRIMING</a></td>
  </tr>
 </tbody>

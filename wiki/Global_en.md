@@ -51,7 +51,7 @@ It can be called from:
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#preclear">PRECLEAR</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#disable_skew_correct">DISABLE_SKEW_CORRECT</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#disable_skew">DISABLE_SKEW</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#disable_priming">DISABLE_PRIMING</a></td>
  </tr>
 </tbody>
@@ -329,13 +329,13 @@ Example: `SAVE_ZMOD_DATA FORCE_MD5=1`
 </div>
 
 ---
-##### DISABLE_SKEW_CORRECT
+##### DISABLE_SKEW
 
 1 (disable SKEW correction), 0 (load `skew_profile` via `SKEW_PROFILE LOAD=skew_profile`) (1).
 
 [Details](https://www.klipper3d.org/Skew_Correction.html)
 
-Example: `SAVE_ZMOD_DATA DISABLE_SKEW_CORRECT=1`
+Example: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 
 <div align="center">
 

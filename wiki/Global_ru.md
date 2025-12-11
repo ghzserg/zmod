@@ -50,7 +50,7 @@
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#preclear">PRECLEAR</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew_correct">DISABLE_SKEW_CORRECT</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew">DISABLE_SKEW</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_priming">DISABLE_PRIMING</a></td>
  </tr>
 </tbody>
@@ -345,13 +345,13 @@ WEIGHT - вес в граммах (1500)
 
 ---
 
-##### DISABLE_SKEW_CORRECT
+##### DISABLE_SKEW
 
 1 - запретить SKEW коррекцию, 0 - загрузить профиль `skew_profile`(будет вызван макрос `SKEW_PROFILE LOAD=skew_profile`) (1)
 
 [Подробнее](https://www.klipper3d.org/Skew_Correction.html)
 
-Пример: `SAVE_ZMOD_DATA DISABLE_SKEW_CORRECT=1`
+Пример: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 
 <div align="center">
 

@@ -102,7 +102,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - `DISABLE_PRIMING` — disable nozzle priming: `0` = enable, `1` = disable (default: `0`).
 - `FORCE_MD5` — verify file MD5 hashes (default: `1`).
   *Use [`addMD5.bat`](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) or [`addMD5.sh`](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) in post-processing scripts.*
-- `DISABLE_SKEW_CORRECT` — disable skew correction: `1` = disable, `0` = load `skew_profile` (default: `1`).
+- `DISABLE_SKEW` — disable skew correction: `1` = disable, `0` = load `skew_profile` (default: `1`).
 - `AUTO_REBOOT` — auto-reboot after print: `0` = disable, `1` = enable, `2` = firmware restart (default: `0`).
 - `CLOSE_DIALOGS` — auto-close dialogs: `0` = disable, `1` = slow, `2` = fast (requires enabling "Local Network Only" on the printer screen).
 - `STOP_MOTOR` — disable motors after print: `0` = disable, `1` = enable (default: `1`).
