@@ -44,6 +44,7 @@
 ### Version 1.6.4
 11.12.2025
 * Improved ease of setup and use
+* Update Fluidd/Mainsail
 
 ### Version 1.6.3
 **25.11.2025 — ZMOD’s Birthday!**
