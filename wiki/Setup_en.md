@@ -560,6 +560,8 @@ The graph and input shaper calculations in Klipper by default use the value `squ
     ```
     *   **What does this do?** The printer will slightly reduce speed on sharp corners. This will marginally increase print time but significantly reduce vibrations and improve corner clarity.
 
+You can simplify things. Enter ENABLE_PLUGIN name=recommend into the console. This command will enable the recommendations plugin, which already has FIX_SCV enabled and square_corner_velocity: 9 set.
+
 #### How to Use the `ZSHAPER` Macro
 
 [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper) - this macro makes the printer vibrate at different frequencies, measures the response, and builds graphs to find the ideal input shaper parameters for the X and Y axes.
