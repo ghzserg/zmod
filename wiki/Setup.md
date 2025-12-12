@@ -566,6 +566,8 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 А можно все упростить. Введите в консоль ```ENABLE_PLUGIN name=recommend``` - эта команда  включит плагин рекомендаций, в котором уже включен `FIX_SCV` и прописан `square_corner_velocity: 9`
 
+Не забудьте перезагрузить принтер!
+
 #### Как использовать макрос `ZSHAPER`
 
 [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) - этот макрос заставляет принтер вибрировать с разными частотами, измеряет отклик и строит графики, чтобы найти идеальные параметры шейпера для осей X и Y.
