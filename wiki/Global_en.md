@@ -23,7 +23,7 @@ It can be called from:
 <tbody>
  <tr>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#lang">LANG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#global">GLOBAL</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#global">GLOBAL</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#get_zmod_data">GET_ZMOD_DATA</a></td>
  </tr>
  <tr>
