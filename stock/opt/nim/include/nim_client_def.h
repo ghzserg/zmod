@@ -180,6 +180,7 @@ static const char* kNIMDataBaseEncryptKey = "db_encrypt_key";
 /// bool,
 /// 是否需要预下载附件(图片和语音),选填,默认为true,如果有对带宽流量有较高要求的请关闭该选项，改为上层开发者按需下载附件文件
 static const char* kNIMPreloadAttach = "preload_attach";
+static const char* kNIMQChatAutoSub = "qchat_auto_sub";
 /// int, 预下载图片质量,选填,范围0-100
 static const char* kNIMPreloadImageQuality = "preload_image_quality";
 /// string, 预下载图片基于长宽做内缩略,选填,比如宽100高50,则赋值为100x50,中间为字母小写x

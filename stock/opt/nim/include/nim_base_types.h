@@ -55,7 +55,7 @@ typedef unsigned __int64 uint64_t;
 #ifdef _WIN64
 typedef __int64 intptr_t;
 #else  /* _WIN64 */
-typedef _W64 int intptr_t;
+typedef int intptr_t;
 #endif /* _WIN64 */
 #endif /* _INTPTR_T_DEFINED */
 
@@ -64,7 +64,7 @@ typedef _W64 int intptr_t;
 #ifdef _WIN64
 typedef unsigned __int64 uintptr_t;
 #else  /* _WIN64 */
-typedef _W64 unsigned int uintptr_t;
+typedef unsigned int uintptr_t;
 #endif /* _WIN64 */
 #endif /* _UINTPTR_T_DEFINED */
 
