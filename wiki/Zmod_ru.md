@@ -370,6 +370,7 @@ SSH запускается через 3 минуты  после  старта  
    Достаточно выбрать нужную кнопку.
 
 PS: Камера может прогрузиться позже, чем интерфейс - это нормально
+
 PPS: Если что-то работает не так, то обновите страницу Ctrl + F5 и зайдите на [zmod.link](https://zmod.link)
 
    <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />

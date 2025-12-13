@@ -349,6 +349,7 @@ How to connect to the cloud [zmod.link](https://zmod.link):
    Just select the desired button.
 
 PS: The camera may load later than the interface - this is normal
+
 PPS: If something is not working correctly, refresh the page with Ctrl + F5 and go to [zmod.link](https://zmod.link)
 
    <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
