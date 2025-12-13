@@ -727,6 +727,10 @@ If ZMOD is outdated:
 2. Install online updates via Fluidd.
 3. Update the stock firmware.
 
+If the native screen doesn't find updates:
+- Your serial number hasn't been updated yet.
+- You have Chinese clouds disabled. Enable them by entering `SAVE_ZMOD_DATA CHINA_CLOUD=1` in the console or setting them using the `GLOBAL` macro.
+
 Attention!
 - If you are using Klipper 13, you must run ```UPDATE_MCU``` before updating the stock firmware. This will prevent a situation where the MCU and Klipper are different versions.
 - If you have enabled plugins other than `recoomend`, disable them before updating using ```DISABLE_PLUGIN name=plugin_name```
