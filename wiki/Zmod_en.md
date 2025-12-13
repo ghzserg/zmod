@@ -302,6 +302,7 @@ Connect to the cloud [zmod.link](https://zmod.link)
 - Data is transmitted from the printer to the cloud using encryption.
 - Access to the cloud from anywhere also uses encryption.
 - The user only sees their own printers and cannot connect to others.
+- Access to user printers is protected by login and password
 
 How to get login and password:
 1. Connect to the bot [@zmod_help_bot](https://t.me/zmod_help_bot)
