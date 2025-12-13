@@ -734,7 +734,7 @@ If the native screen doesn't find updates:
 
 Attention!
 - If you are using Klipper 13, you must run ```UPDATE_MCU``` before updating the stock firmware. This will prevent a situation where the MCU and Klipper are different versions.
-- If you have enabled plugins other than `recoomend`, disable them before updating using ```DISABLE_PLUGIN name=plugin_name```
+- If you have enabled plugins other than `recommend`, disable them before updating using ```DISABLE_PLUGIN name=plugin_name```
 
 [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) requires [zMod activation](https://github.com/ghzserg/zmod/releases/tag/R) via `AD5X-ENABLE-zmod.tgz` from flash drive, after stock update.
 

@@ -766,7 +766,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Внимание!
 - Если у вас используется **Klipper 13**, то перед обновлением родной прошивки надо выполнить ```UPDATE_MCU```. Это позволит избежать ситуации, когда MCU и Klipper разных версий.
-- Если у вас включены плагины кроме `recoomend`, то отключите их перед обновлением через ```DISABLE_PLUGIN name=имя_плагина```
+- Если у вас включены плагины кроме `recommend`, то отключите их перед обновлением через ```DISABLE_PLUGIN name=имя_плагина```
 
 Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/releases/tag/R) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока.
 
