@@ -73,7 +73,7 @@
 
 <table style="width: 100%; table-layout: fixed;" align="center">
 <thead><tr>
-  <th colspan="4"><p align="center"><strong>🔷 Параметры окончания печати [END_PRINT] 🔷</strong></p></th>
+  <th colspan="4"><p align="center"><strong>🔷 Общесистемные параметры 🔷</strong></p></th>
 </tr></thead>
 <tbody>
  <tr>
@@ -97,7 +97,7 @@
  <tr>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#pro_poweroff_timeout">PRO_POWEROFF_TIMEOUT</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#wifi">WIFI</a></td>
-  <td align="center"></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_filament_sensors">SAVE_FILAMENT_SENSORS</a></td>
   <td align="center"></td>
  </tr>
 </tbody>
@@ -923,6 +923,22 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 При локальном сохранении макросов, новые макросы попадают в отдельный раздел.
 
 Пример: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
+
+---
+<div align="center">
+
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global-param)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+
+</div>
+
+##### SAVE_FILAMENT_SENSORS
+
+- 0 - Не сохранаять состояние датчиков филамента после перезагрузки, они всегда будут включены (по умолчанию)
+- 1 - Созраняться состояние датчиков после перезагрузки. Если отключить датчик, то после перезагрузки он также будет отключен.
+
+Пример: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
 
 ---
 <div align="center">

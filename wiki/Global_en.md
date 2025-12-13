@@ -98,7 +98,7 @@ It can be called from:
  <tr>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#pro_poweroff_timeout">PRO_POWEROFF_TIMEOUT</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#wifi">WIFI</a></td>
-  <td align="center"></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#save_filament_sensors">SAVE_FILAMENT_SENSORS</a></td>
   <td align="center"></td>
  </tr>
 </tbody>
@@ -860,6 +860,7 @@ Example: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
 </div>
 
 ---
+
 ##### SAVE_MOONRAKER
 
 - 0 - Load macro button layouts from ZMOD (default).
@@ -869,7 +870,7 @@ Locally saved macros are stored in a separate section.
 
 Example: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 
----
+
 <div align="center">
 
 [![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_en)
@@ -877,3 +878,22 @@ Example: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 [![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_en)
 
 </div>
+
+---
+
+##### SAVE_FILAMENT_SENSORS
+
+- 0 - Do not save the state of filament sensors after a reboot; they will always be enabled (default)
+- 1 - Save the state of the sensors after a reboot. If you disable a sensor, it will also be disabled after a reboot.
+
+Example: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
+
+<div align="center">
+
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global-param)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+
+</div>
+
+---
