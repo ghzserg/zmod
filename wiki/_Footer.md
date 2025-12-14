@@ -8,4 +8,5 @@
 - [Установка/Калибровка](https://github.com/ghzserg/zmod/wiki/Setup) | [Installation/Calibrations](https://github.com/ghzserg/zmod/wiki/Setup_en)
 
 [На развитие zmod: СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)| Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
+
 <img width="100" height="100" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
