@@ -795,3 +795,27 @@ Filament stalling in IFS can also be related to:
 </div>
 
 ---
+
+### Before each print, the printer measures the center of the bed.
+
+Before printing, the printer:
+- heats the bed and nozzle.
+- cleans the nozzle.
+- Cools the nozzle
+- **Measures the bed center** (Starting manual Z probe. Use TESTZ to adjust position)
+- Heats the nozzle
+- Starts printing
+
+This is a feature of the native firmware starting with version:
+- **1.1.8** AD5X
+- **3.2.4** AD5M/AD5MPro
+
+Solution:
+- [Roll back the native firmware](https://github.com/ghzserg/zmod/wiki/R) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
+- [Disable the native display](https://github.com/ghzserg/zmod/wiki/System_en#display_off)
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)
+
+</div>

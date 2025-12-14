@@ -910,3 +910,27 @@ detection_length: 8
 </div>
 
 ---
+
+### Перед каждой печатью измеряет стол по цетру
+
+Перед печатью принтер:
+- нагревает стол и сопло.
+- очищает сопло.
+- остужает сопло
+- **делает замер по центру стола** (Starting manual Z probe. Use TESTZ to adjust position)
+- нагревает сопло
+- начинает печать
+
+Это особенность **родной прошивки** начиная с версии:
+- 1.1.8 AD5X
+- 3.2.4 AD5M/AD5MPro
+
+Решение:
+- [Откатать родную прошивку](https://github.com/ghzserg/zmod/wiki/R) на версию **1.1.7** для AD5X, **3.2.3** для FF5M/FF5MPro
+- [Отключить родной экран](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)
+
+</div>
