@@ -8,6 +8,8 @@ Since people have been asking, I accept donations but please remember that I wor
 
 * BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 * [СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
+* <img width="820" height="820" alt="image" src="https://github.com/user-attachments/assets/bf5341c0-413e-4cb0-9e6d-eee2149ab6a8" />
+
 
 Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purchasing [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) for development represented by
 
