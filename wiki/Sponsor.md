@@ -7,7 +7,7 @@ Since people have been asking, I accept donations but please remember that I wor
 Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над zMod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
 
 * BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
-* [На развитие мода](https://vtb.paymo.ru/collect-money/?transaction=8d2a46ac-0951-4be5-a279-cfb82a55dbaa)
+* [СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
 
 Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purchasing [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) for development represented by
 
