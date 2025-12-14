@@ -29,7 +29,7 @@
 | [AD5X Specifics](#ad5x-specifics) | [How to Contact Support](#how-to-contact-support) |
 | [How to change the boot logo](#how-to-change-the-boot-logo) | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) |
 | [WeightValue](#weightvalue) | [MCU Protocol error](#mcu-protocol-error) |
-| [Filament has run out or stopped](https://github.com/ghzserg/zmod/wiki/FAQ_en#filament-has-run-out-or-stopped) | - |
+| [Filament has run out or stopped](https://github.com/ghzserg/zmod/wiki/FAQ_en#filament-has-run-out-or-stopped) | [Before each print, the printer measures the center of the bed](#before-each-print-the-printer-measures-the-center-of-the-bed) |
 
 ---
 

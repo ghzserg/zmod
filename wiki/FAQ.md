@@ -28,6 +28,8 @@
 | [Как изменить логотип загрузки](#как-изменить-логотип-загрузки) | [Что такое откат из прошивки?](#что-такое-откат-из-прошивки) |
 | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) | [WeightValue](#weightvalue) |
 | [MCU Protocol error](#mcu-protocol-error) | [Кончился или остановился филамент](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%BE%D0%BD%D1%87%D0%B8%D0%BB%D1%81%D1%8F-%D0%B8%D0%BB%D0%B8-%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB%D1%81%D1%8F-%D1%84%D0%B8%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82) |
+| [Перед каждой печатью измеряет стол по цетру](#перед-каждой-печатью-измеряет-стол-по-цетру) | - |
+
 
 ### Чем ZMOD отличается от KlipperMod/родной прошивки
 
