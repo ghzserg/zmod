@@ -99,20 +99,24 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: config_file
+  - type: textarea
+    id: config_attachment
     attributes:
-      label: Имя файла config.tar.gz
-      description: Убедитесь, что прикрепили файл config.tar.gz к тикету, используя кнопку со скрепкой внизу. Без файла тикет будет автоматически закрыт.
-      placeholder: "config.tar.gz"
+      label: Прикрепите файл config.tar.gz
+      description: |
+        **ВАЖНО:** Без файла `config.tar.gz` тикет будет автоматически закрыт.
+        1. Нажмите на область текстового поля ниже.
+        2. Либо перетащите файл `config.tar.gz` прямо на эту область, либо используйте значок скрепки в углу поля для его выбора[citation:1][citation:10].
+        3. В поле появится ссылка на загруженный файл. Убедитесь, что она есть.
+      placeholder: "Перетащите файл сюда или нажмите, чтобы выбрать..."
     validations:
-      required: true
+      required: false # К сожалению, нельзя установить required: true для проверки наличия файла[citation:8]
 
   - type: markdown
     attributes:
       value: |
         **Проверьте перед отправкой:**
-        - [ ] Я прикрепил файл `config.tar.gz`
-        - [ ] Я отключил все сторонние плагины (кроме recommend)
-        - [ ] Я прочитал рекомендованные материалы
+        - Я прикрепил файл `config.tar.gz`
+        - Я отключил все сторонние плагины (кроме recommend)
+        - Я прочитал рекомендованные материалы
 
