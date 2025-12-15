@@ -1,0 +1,121 @@
+name: Report a Problem
+description: Describe the printer issue in detail. Contact the bot before creating a report.
+title: "Problem: "
+labels: ["bug"]
+assignees: ["ghzserg"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before asking a question, please ask [@zmod_help_bot](http://t.me/zmod_help_bot) and read:**
+        - **[TAR_CONFIG Submission Guide](https://github.com/ghzserg/zmod/wiki/FAQ#help)** – tickets without it will not be reviewed.
+        - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
+        - [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations)
+        - [Macros Documentation](https://github.com/ghzserg/zmod/wiki/Macros)
+
+        **Important:** If you are using any plugins other than 'recommend', disable them.
+        If the issue is caused by the 'g28_tenz' or 'nopoop' plugin, please mention it in the title.
+        [If the error is in the 'bambufy' plugin, contact the author](https://github.com/function3d/bambufy).
+
+  - type: dropdown
+    id: printer_model
+    attributes:
+      label: Printer Model
+      description: Select your model
+      multiple: false
+      options:
+        - AD5M
+        - AD5M PRO
+        - AD5X
+    validations:
+      required: true
+
+  - type: dropdown
+    id: display_type
+    attributes:
+      label: Screen / Interface Type
+      description: How do you interact with the printer?
+      options:
+        - I use the native/original screen
+        - I use Guppyscreen
+        - I run without a screen (headless)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: firmware_type
+    attributes:
+      label: Klipper Version
+      description: Which Klipper version are you using?
+      options:
+        - I use the native/original Klipper
+        - I use Klipper 13
+    validations:
+      required: true
+
+  - type: dropdown
+    id: web_type
+    attributes:
+      label: Web Interface
+      description: Which web interface do you use?
+      options:
+        - Fluidd
+        - Mainsail
+    validations:
+      required: true
+
+  - type: textarea
+    id: start_gcode
+    attributes:
+      label: Start G-code
+      description: Paste your start G-code here.
+      placeholder: |
+        START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+        M190 S[bed_temperature_initial_layer_single]
+        M104 S[nozzle_temperature_initial_layer]
+    validations:
+      required: true
+
+  - type: textarea
+    id: end_gcode
+    attributes:
+      label: End G-code
+      description: Paste your end G-code here.
+      placeholder: |
+        END_PRINT
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Detailed Problem Description
+      description: Please describe in detail what you were doing, what you expected to happen, and what actually happened.
+      placeholder: |
+        1. Step 1...
+        2. Step 2...
+        3. Expected result...
+        4. Actual result...
+    validations:
+      required: true
+
+  - type: textarea
+    id: config_attachment
+    attributes:
+      label: Attach config.tar.gz file
+      description: |
+        **IMPORTANT:** The ticket will be automatically closed without the `config.tar.gz` file.
+        1. Click on the text area below.
+        2. Either drag & drop the `config.tar.gz` file directly into this area or use the paperclip icon in the corner to select it.
+        3. A link to the uploaded file will appear in the field. Please ensure it is present.
+      placeholder: "Drag & drop a file here or click to browse..."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        **Please verify before submitting:**
+        - I have attached the `config.tar.gz` file.
+        - I have disabled all third-party plugins (except for 'recommend').
+        - I have read the recommended materials.
