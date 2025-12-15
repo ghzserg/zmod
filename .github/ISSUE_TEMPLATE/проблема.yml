@@ -12,6 +12,7 @@ body:
         - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
         - [Рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
         - [Документацию по макросам](https://github.com/ghzserg/zmod/wiki/Macros)
+        - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)
 
         **Важно:** Если вы используете какие-либо плагины кроме recommend, то отключите их.
         Если проблема вызвана плагином g28_tenz или nopoop, укажите это в заголовке.
