@@ -928,7 +928,7 @@ detection_length: 8
 - 3.2.4 AD5M/AD5MPro
 
 Решение:
-- [Откатать родную прошивку](https://github.com/ghzserg/zmod/wiki/R) на версию **1.1.7** для AD5X, **3.2.3** для FF5M/FF5MPro
+- [Откатить родную прошивку](https://github.com/ghzserg/zmod/wiki/R) на версию **1.1.7** для AD5X, **3.2.3** для FF5M/FF5MPro
 - [Отключить родной экран](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)
 
 <div align="center">
