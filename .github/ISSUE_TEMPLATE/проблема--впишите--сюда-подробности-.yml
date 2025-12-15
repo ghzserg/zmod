@@ -39,6 +39,8 @@ body:
         - label: Я работаю с родным экраном
         - label: Я работаю без экрана
         - label: Я работаю с Guppyscreen
+    validations:
+      required: true
 
   - type: checkboxes
     id: firmware_type
@@ -46,8 +48,21 @@ body:
       label: Версия Klipper
       description: Какую версию Klipper вы используете?
       options:
-        - label: Я работаю с родным klipper
-        - label: Я работаю с klipper 13
+        - label: Я работаю с родным Klipper
+        - label: Я работаю с Klipper 13
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: web_type
+    attributes:
+      label: Веб интерфейс
+      description: Какой веб интерфейс вы используете?
+      options:
+        - label: Fluidd
+        - label: Mainsail
+    validations:
+      required: true
 
   - type: textarea
     id: start_gcode
@@ -68,6 +83,8 @@ body:
       description: Вставьте ваш завершающий G-код
       placeholder: |
         END_PRINT
+    validations:
+      required: true
 
   - type: textarea
     id: problem_description
