@@ -30,37 +30,37 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: display_type
     attributes:
       label: Тип экрана/интерфейса
       description: Как вы работаете с принтером?
       options:
-        - label: Я работаю с родным экраном
-        - label: Я работаю без экрана
-        - label: Я работаю с Guppyscreen
+        - Я работаю с родным экраном
+        - Я работаю с Guppyscreen
+        - Я работаю без экрана
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: firmware_type
     attributes:
       label: Версия Klipper
       description: Какую версию Klipper вы используете?
       options:
-        - label: Я работаю с родным Klipper
-        - label: Я работаю с Klipper 13
+        - Я работаю с родным Klipper
+        - Я работаю с Klipper 13
     validations:
       required: true
 
-  - type: checkboxes
+  - type: dropdown
     id: web_type
     attributes:
       label: Веб интерфейс
       description: Какой веб интерфейс вы используете?
       options:
-        - label: Fluidd
-        - label: Mainsail
+        - Fluidd
+        - Mainsail
     validations:
       required: true
 
@@ -119,4 +119,3 @@ body:
         - Я прикрепил файл `config.tar.gz`
         - Я отключил все сторонние плагины (кроме recommend)
         - Я прочитал рекомендованные материалы
-
