@@ -1,0 +1,101 @@
+name: Сообщить о проблеме
+description: Опишите проблему с принтером подробно. Перед созданием отчета обратитесь к боту.
+title: "Проблема: "
+labels: ["bug"]
+assignees: ["ghzserg"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Перед тем, как задавать вопрос, спросите его у [@zmod_help_bot](http://t.me/zmod_help_bot) и прочитайте:**
+        - **[Алгоритм оформления TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ#help)** - без него тикет рассматриваться не будет
+        - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
+        - [Рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
+        - [Документацию по макросам](https://github.com/ghzserg/zmod/wiki/Macros)
+
+        **Важно:** Если вы используете какие-либо плагины кроме recommend, то отключите их.
+        Если проблема вызвана плагином g28_tenz или nopoop, укажите это в заголовке.
+        [Если ошибка в плагине bambufy, обратитесь к автору](https://github.com/function3d/bambufy).
+
+  - type: dropdown
+    id: printer_model
+    attributes:
+      label: Модель принтера
+      description: Выберите вашу модель
+      multiple: false
+      options:
+        - AD5M
+        - AD5M PRO
+        - AD5X
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: display_type
+    attributes:
+      label: Тип экрана/интерфейса
+      description: Как вы работаете с принтером?
+      options:
+        - label: Я работаю с родным экраном
+        - label: Я работаю без экрана
+        - label: Я работаю с Guppyscreen
+
+  - type: checkboxes
+    id: firmware_type
+    attributes:
+      label: Версия Klipper
+      description: Какую версию Klipper вы используете?
+      options:
+        - label: Я работаю с родным klipper
+        - label: Я работаю с klipper 13
+
+  - type: textarea
+    id: start_gcode
+    attributes:
+      label: Стартовый G-код
+      description: Вставьте ваш стартовый G-код
+      placeholder: |
+        START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+        M190 S[bed_temperature_initial_layer_single]
+        M104 S[nozzle_temperature_initial_layer]
+    validations:
+      required: true
+
+  - type: textarea
+    id: end_gcode
+    attributes:
+      label: Завершающий G-код
+      description: Вставьте ваш завершающий G-код
+      placeholder: |
+        END_PRINT
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Подробное описание ошибки
+      description: Максимально подробно опишите, что вы делали, что планировали получить и что получили.
+      placeholder: |
+        1. Шаг 1...
+        2. Шаг 2...
+        3. Ожидаемый результат...
+        4. Фактический результат...
+    validations:
+      required: true
+
+  - type: input
+    id: config_file
+    attributes:
+      label: Имя файла config.tar.gz
+      description: Убедитесь, что прикрепили файл config.tar.gz к тикету, используя кнопку со скрепкой внизу. Без файла тикет будет автоматически закрыт.
+      placeholder: "config.tar.gz"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **Проверьте перед отправкой:**
+        - [ ] Я прикрепил файл `config.tar.gz`
+        - [ ] Я отключил все сторонние плагины (кроме recommend)
+        - [ ] Я прочитал рекомендованные материалы
+
