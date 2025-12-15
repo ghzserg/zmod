@@ -831,7 +831,7 @@ To see which one:
 - Go to the console and read the error text
 - Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and enter the error text or look up the description in the documentation yourself
 
-If you can't fix it, [you need to create a ticket](https://github.com/ghzserg/zmod/wiki/Help).
+If you can't fix it, [you need to create a ticket](https://github.com/ghzserg/zmod/wiki/Help_en).
 
 <div align="center">
 
