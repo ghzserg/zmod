@@ -156,7 +156,7 @@ jobs:
           rm -rf "$EXTRACT_DIR"
           rm -f "/tmp/config.tar.gz"
 
-      # ШАГ 3: Обработка УСПЕШНОГО сценария (всё в порядке)
+      # ШАГ 3: Обработка УСПЕШНОГО сценария (с проверкой версии)
       - name: Handle successful and valid attachment
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true' && steps.verify_archive.outputs.file_valid == 'true'
         uses: actions/github-script@v6
@@ -175,36 +175,68 @@ jobs:
               issue_number: issueNumber
             });
 
-            if (issue.data.state === 'closed') {
-              await github.rest.issues.update({
-                owner,
-                repo,
-                issue_number: issueNumber,
-                state: 'open'
-              });
-            }
-
             const versionOutdated = process.env.VERSION_OUTDATED === 'true';
             const versionMessage = process.env.VERSION_CHECK_MESSAGE || '';
 
-            let commentBody = '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible, and contains the required structure.\n\n';
-            commentBody += '✅ **Отлично!** Файл `config.tar.gz` найден, доступен и имеет корректную структуру.\n\n';
-            commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
-
+            // --- СЦЕНАРИЙ 1: ВЕРСИЯ УСТАРЕЛА ---
             if (versionOutdated) {
-              commentBody += '🔄 **Please update your mod! / Пожалуйста, обновите мод!**\n';
+              // Гарантируем, что тикет ЗАКРЫТ
+              if (issue.data.state === 'open') {
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: issueNumber,
+                  state: 'closed'
+                });
+              }
+
+              let commentBody = '✅ **Archive Check Passed** / **Проверка архива пройдена**\n';
+              commentBody += `The file \`config.tar.gz\` is valid. / Файл \`config.tar.gz\` корректен.\n\n`;
+
+              commentBody += `🔴 **Action Required / Требуется действие:** ${versionMessage}\n\n`;
+
+              commentBody += '🚫 **Issue Status / Статус тикета:**\n';
+              commentBody += 'This issue will remain **closed** until the mod is updated to the latest version.\n';
+              commentBody += 'Тикет останется **закрытым** до обновления мода до последней версии.\n\n';
+
+              commentBody += '🔄 **Please update your mod first! / Сначала обновите мод!**\n';
               commentBody += '- Update guide (English): https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod\n';
               commentBody += '- Инструкция по обновлению (Русский): https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0\n\n';
+
+              commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
+              commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
+
+              await github.rest.issues.createComment({
+                issue_number: issueNumber,
+                owner,
+                repo,
+                body: commentBody
+              });
             }
+            // --- СЦЕНАРИЙ 2: ВЕРСИЯ АКТУАЛЬНА ---
+            else {
+              // Открываем тикет, если он закрыт
+              if (issue.data.state === 'closed') {
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: issueNumber,
+                  state: 'open'
+                });
+              }
 
-            commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
+              let commentBody = '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible, and contains the required structure.\n\n';
+              commentBody += '✅ **Отлично!** Файл `config.tar.gz` найден, доступен и имеет корректную структуру.\n\n';
+              commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
+              commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
 
-            await github.rest.issues.createComment({
-              issue_number: issueNumber,
-              owner,
-              repo,
-              body: commentBody
-            });
+              await github.rest.issues.createComment({
+                issue_number: issueNumber,
+                owner,
+                repo,
+                body: commentBody
+              });
+            }
 
       # ШАГ 4: Обработка ОШИБОК (нет файла, нет доступа, архив невалидный)
       - name: Handle missing, inaccessible, or invalid attachment
