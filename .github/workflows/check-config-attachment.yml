@@ -137,7 +137,7 @@ jobs:
               issue_number: issueNumber,
               owner,
               repo,
-              body: '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible, and contains the required `opt/config/mod_data/log/console.log`.\n\n✅ **Отлично!** Файл `config.tar.gz` найден, доступен и содержит требуемый файл `opt/config/mod_data/log/console.log`.\n\nThe issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.'
+              body: '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible.\n\n✅ **Отлично!** Файл `config.tar.gz` найден, доступен.\n\nThe issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.'
             });
 
       # Шаг 4: Обработка ОШИБОК (нет вложения, нет доступа ИЛИ архив невалидный)
@@ -191,8 +191,8 @@ jobs:
               commentBody += `**Подробности:** ${verificationError}\n\n`;
             }
 
-            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz` file (it must contain `opt/config/mod_data/log/console.log`)\n3. Save the changes\n\n';
-            commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz` (он должен содержать `opt/config/mod_data/log/console.log`)\n3. Сохраните изменения\n\n';
+            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz`\n3. Save the changes\n\n';
+            commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz`\n3. Сохраните изменения\n\n';
 
             commentBody += '🔄 After editing, this check will run again automatically.\n🔄 После редактирования эта проверка запустится автоматически снова.';
 
