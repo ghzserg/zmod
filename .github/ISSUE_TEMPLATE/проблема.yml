@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         **Перед тем, как задавать вопрос, спросите его у [@zmod_help_bot](http://t.me/zmod_help_bot) и прочитайте:**
-        - **[Алгоритм оформления TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/FAQ#help)** - без него тикет рассматриваться не будет
+        - **[Алгоритм оформления TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Help)** - без него тикет рассматриваться не будет
         - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
         - [Рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
         - [Документацию по макросам](https://github.com/ghzserg/zmod/wiki/Macros)

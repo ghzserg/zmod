@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
         **Before asking a question, please ask [@zmod_help_bot](http://t.me/zmod_help_bot) and read:**
-        - **[TAR_CONFIG Submission Guide](https://github.com/ghzserg/zmod/wiki/FAQ#help)** – tickets without it will not be reviewed.
+        - **[TAR_CONFIG Submission Guide](https://github.com/ghzserg/zmod/wiki/Help_en)** – tickets without it will not be reviewed.
         - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
         - [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations)
         - [Macros Documentation](https://github.com/ghzserg/zmod/wiki/Macros)
