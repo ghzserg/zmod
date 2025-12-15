@@ -30,7 +30,7 @@
 | [How to change the boot logo](#how-to-change-the-boot-logo) | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) |
 | [WeightValue](#weightvalue) | [MCU Protocol error](#mcu-protocol-error) |
 | [Filament has run out or stopped](https://github.com/ghzserg/zmod/wiki/FAQ_en#filament-has-run-out-or-stopped) | [Before each print, the printer measures the center of the bed](#before-each-print-the-printer-measures-the-center-of-the-bed) |
-
+| [E0120](#e0120) | - |
 ---
 
 ## Configuration Storage
@@ -813,6 +813,25 @@ This is a feature of the native firmware starting with version:
 Solution:
 - [Roll back the native firmware](https://github.com/ghzserg/zmod/wiki/R) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
 - [Disable the native display](https://github.com/ghzserg/zmod/wiki/System_en#display_off)
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)
+
+</div>
+
+---
+
+### E0120
+
+This is a Klipper error.
+
+To see which one:
+- Open Fluidd/Mainsail
+- Go to the console and read the error text
+- Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and enter the error text or look up the description in the documentation yourself
+
+If you can't fix it, [you need to create a ticket](https://github.com/ghzserg/zmod/wiki/Help).
 
 <div align="center">
 

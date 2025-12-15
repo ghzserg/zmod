@@ -28,7 +28,7 @@
 | [Как изменить логотип загрузки](#как-изменить-логотип-загрузки) | [Что такое откат из прошивки?](#что-такое-откат-из-прошивки) |
 | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) | [WeightValue](#weightvalue) |
 | [MCU Protocol error](#mcu-protocol-error) | [Кончился или остановился филамент](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%BE%D0%BD%D1%87%D0%B8%D0%BB%D1%81%D1%8F-%D0%B8%D0%BB%D0%B8-%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB%D1%81%D1%8F-%D1%84%D0%B8%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82) |
-| [Перед каждой печатью измеряет стол по цетру](#перед-каждой-печатью-измеряет-стол-по-цетру) | - |
+| [Перед каждой печатью измеряет стол по цетру](#перед-каждой-печатью-измеряет-стол-по-цетру) | [E0120](#e0120) |
 
 
 ### Чем ZMOD отличается от KlipperMod/родной прошивки
@@ -921,6 +921,25 @@ detection_length: 8
 Решение:
 - [Откатить родную прошивку](https://github.com/ghzserg/zmod/wiki/R) на версию **1.1.7** для AD5X, **3.2.3** для FF5M/FF5MPro
 - [Отключить родной экран](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)
+
+</div>
+
+---
+
+### E0120
+
+Это ошибка Klipper.
+
+Чтобы посмотреть какая именно:
+- откройте Fluidd/Mainsail
+- перейдите в консоль и прочитайте текст ошибки
+- откройте телеграм бот [@zmod_help_bot](http://t.me/zmod_help_bot) и введите текст ошибки или найдите описание в документации самостоятельно
+
+Если не получается исправить, то [нужно создать тикет](https://github.com/ghzserg/zmod/wiki/Help).
 
 <div align="center">
 
