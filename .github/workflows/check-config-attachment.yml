@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      contents: read # Может потребоваться, если архив будет скачан в workspace
+      contents: read
 
     steps:
-      # Шаг 1: Проверяем наличие и доступность вложения (ваш исходный код)
+      # ШАГ 1: Поиск ссылки на вложение в теле issue
       - name: Check attachment status
         id: check_attachment
         uses: actions/github-script@v6
@@ -38,7 +38,6 @@ jobs:
             if (match && match[1]) {
               attachmentFound = true;
               fileUrl = match[1];
-
               try {
                 const response = await fetch(fileUrl, { method: 'HEAD' });
                 if (response.ok) {
@@ -53,65 +52,117 @@ jobs:
             core.setOutput('file_accessible', fileAccessible.toString());
             core.setOutput('file_url', fileUrl);
 
-      # НОВЫЙ ШАГ 2: Скачиваем, распаковываем и проверяем архив
+      # ШАГ 2: Скачивание, распаковка и проверка архива (включая версию)
       - name: Extract and verify archive contents
         id: verify_archive
-        # Выполняем этот шаг, только если вложение найдено и доступно
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
         env:
           FILE_URL: ${{ steps.check_attachment.outputs.file_url }}
         run: |
-          set -e # Прерывать выполнение при ошибках
-
+          set -e
           echo "Downloading config.tar.gz from $FILE_URL..."
-          # Скачиваем архив. Используем curl с опцией -L для следования за редиректами.
           curl -L -s -o "/tmp/config.tar.gz" "$FILE_URL"
 
           if [ ! -s "/tmp/config.tar.gz" ]; then
             echo "ERROR: Downloaded file is empty or does not exist."
             echo "file_valid=false" >> $GITHUB_OUTPUT
             echo "verification_error=Archive is empty or failed to download." >> $GITHUB_OUTPUT
-            exit 0 # Выходим без ошибки, чтобы workflow продолжил обработку и оставил комментарий
+            exit 0
           fi
 
           echo "Extracting archive to verify contents..."
-          # Создаем временную папку для распаковки
           EXTRACT_DIR=$(mktemp -d)
           cd "$EXTRACT_DIR"
 
-          # Пытаемся распаковать. tar -xzf молчит при успехе, показывает ошибку при проблеме.
           if ! tar -xzf /tmp/config.tar.gz 2>/dev/null; then
-            echo "ERROR: Failed to extract config.tar.gz. File might be corrupted or not a valid gzip archive."
+            echo "ERROR: Failed to extract config.tar.gz."
             echo "file_valid=false" >> $GITHUB_OUTPUT
             echo "verification_error=Failed to extract archive. File may be corrupted." >> $GITHUB_OUTPUT
             exit 0
           fi
 
-          # Проверяем наличие конкретного файла внутри архива
-          TARGET_FILE="opt/config/mod_data/log/console.log"
-          if [ -f "$EXTRACT_DIR/$TARGET_FILE" ]; then
-            echo "SUCCESS: Required file '$TARGET_FILE' found inside the archive."
-            echo "file_valid=true" >> $GITHUB_OUTPUT
-            echo "verification_error=" >> $GITHUB_OUTPUT
-          else
-            echo "ERROR: Required file '$TARGET_FILE' NOT found inside the archive."
+          # 1. Проверка обязательного файла console.log
+          REQUIRED_FILE="opt/config/mod_data/log/console.log"
+          if [ ! -f "$EXTRACT_DIR/$REQUIRED_FILE" ]; then
+            echo "ERROR: Required file '$REQUIRED_FILE' NOT found."
             echo "file_valid=false" >> $GITHUB_OUTPUT
-            echo "verification_error=The archive does not contain the required file: $TARGET_FILE" >> $GITHUB_OUTPUT
+            echo "verification_error=The archive does not contain the required file: $REQUIRED_FILE" >> $GITHUB_OUTPUT
+            rm -rf "$EXTRACT_DIR"
+            rm -f "/tmp/config.tar.gz"
+            exit 0
+          fi
+          echo "SUCCESS: Required file '$REQUIRED_FILE' found."
+
+          # 2. Проверка версии мода (сначала 5X, потом 5M)
+          VERSION_CHECK_MESSAGE=""
+          VERSION_OUTDATED="false"
+
+          VERSION_FILE_5X="opt/config/mod/version_5x.txt"
+          REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/zmod_ff5x/refs/heads/1.6/version_5x.txt"
+
+          if [ -f "$EXTRACT_DIR/$VERSION_FILE_5X" ]; then
+            echo "Found $VERSION_FILE_5X, checking version..."
+            LOCAL_VERSION_5X=$(cat "$EXTRACT_DIR/$VERSION_FILE_5X" | xargs)
+            REMOTE_VERSION_5X=$(curl -s -f "$REMOTE_VERSION_URL_5X" | xargs)
+
+            if [ -z "$REMOTE_VERSION_5X" ]; then
+              echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5X"
+              VERSION_CHECK_MESSAGE="⚠️ Could not check for updates (failed to fetch latest version)."
+            elif [ "$LOCAL_VERSION_5X" != "$REMOTE_VERSION_5X" ]; then
+              echo "OUTDATED: Local version ($LOCAL_VERSION_5X) differs from remote ($REMOTE_VERSION_5X)."
+              VERSION_OUTDATED="true"
+              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** does not match the latest version **$REMOTE_VERSION_5X**."
+            else
+              echo "UP-TO-DATE: Version $LOCAL_VERSION_5X is current."
+              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** is up to date."
+            fi
+
+          else
+            VERSION_FILE_5M="opt/config/mod/version_5m.txt"
+            REMOTE_VERSION_URL_5M="https://raw.githubusercontent.com/ghzserg/zmod_ff5m/refs/heads/1.6/version_5m.txt"
+
+            if [ -f "$EXTRACT_DIR/$VERSION_FILE_5M" ]; then
+              echo "Found $VERSION_FILE_5M, checking version..."
+              LOCAL_VERSION_5M=$(cat "$EXTRACT_DIR/$VERSION_FILE_5M" | xargs)
+              REMOTE_VERSION_5M=$(curl -s -f "$REMOTE_VERSION_URL_5M" | xargs)
+
+              if [ -z "$REMOTE_VERSION_5M" ]; then
+                echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5M"
+                VERSION_CHECK_MESSAGE="⚠️ Could not check for updates (failed to fetch latest version)."
+              elif [ "$LOCAL_VERSION_5M" != "$REMOTE_VERSION_5M" ]; then
+                echo "OUTDATED: Local version ($LOCAL_VERSION_5M) differs from remote ($REMOTE_VERSION_5M)."
+                VERSION_OUTDATED="true"
+                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** does not match the latest version **$REMOTE_VERSION_5M**."
+              else
+                echo "UP-TO-DATE: Version $LOCAL_VERSION_5M is current."
+                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** is up to date."
+              fi
+
+            else
+              echo "ERROR: No version file found (neither 5x.txt nor 5m.txt)."
+              echo "file_valid=false" >> $GITHUB_OUTPUT
+              echo "verification_error=The archive does not contain a valid version file (version_5x.txt or version_5m.txt)." >> $GITHUB_OUTPUT
+              rm -rf "$EXTRACT_DIR"
+              rm -f "/tmp/config.tar.gz"
+              exit 0
+            fi
           fi
 
-          # Очистка временных файлов (опционально)
+          echo "file_valid=true" >> $GITHUB_OUTPUT
+          echo "verification_error=" >> $GITHUB_OUTPUT
+          echo "version_outdated=$VERSION_OUTDATED" >> $GITHUB_OUTPUT
+          echo "version_check_message=$VERSION_CHECK_MESSAGE" >> $GITHUB_OUTPUT
+
           rm -rf "$EXTRACT_DIR"
           rm -f "/tmp/config.tar.gz"
 
-      # Шаг 3: Обработка УСПЕШНОГО результата (архив найден, доступен И проверен)
+      # ШАГ 3: Обработка УСПЕШНОГО сценария (всё в порядке)
       - name: Handle successful and valid attachment
-        # Условие стало строже: нужен и доступный архив, и успешная проверка
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true' && steps.verify_archive.outputs.file_valid == 'true'
         uses: actions/github-script@v6
         env:
-          ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
-          FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
-          FILE_VALID: ${{ steps.verify_archive.outputs.file_valid }}
+          VERSION_OUTDATED: ${{ steps.verify_archive.outputs.version_outdated }}
+          VERSION_CHECK_MESSAGE: ${{ steps.verify_archive.outputs.version_check_message }}
         with:
           script: |
             const issueNumber = context.issue.number;
@@ -133,22 +184,35 @@ jobs:
               });
             }
 
+            const versionOutdated = process.env.VERSION_OUTDATED === 'true';
+            const versionMessage = process.env.VERSION_CHECK_MESSAGE || '';
+
+            let commentBody = '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible, and contains the required structure.\n\n';
+            commentBody += '✅ **Отлично!** Файл `config.tar.gz` найден, доступен и имеет корректную структуру.\n\n';
+            commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
+
+            if (versionOutdated) {
+              commentBody += '🔄 **Please update your mod! / Пожалуйста, обновите мод!**\n';
+              commentBody += '- Update guide (English): https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod\n';
+              commentBody += '- Инструкция по обновлению (Русский): https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0\n\n';
+            }
+
+            commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
+
             await github.rest.issues.createComment({
               issue_number: issueNumber,
               owner,
               repo,
-              body: '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible.\n\n✅ **Отлично!** Файл `config.tar.gz` найден, доступен.\n\nThe issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.'
+              body: commentBody
             });
 
-      # Шаг 4: Обработка ОШИБОК (нет вложения, нет доступа ИЛИ архив невалидный)
+      # ШАГ 4: Обработка ОШИБОК (нет файла, нет доступа, архив невалидный)
       - name: Handle missing, inaccessible, or invalid attachment
-        # Срабатывает, если НЕ выполнилось условие успеха из шага 3.
         if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '')
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
           FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
-          FILE_VALID: ${{ steps.verify_archive.outputs.file_valid }}
           VERIFICATION_ERROR: ${{ steps.verify_archive.outputs.verification_error }}
         with:
           script: |
@@ -165,10 +229,8 @@ jobs:
             let commentBody = '';
             const attachmentFound = process.env.ATTACHMENT_FOUND === 'true';
             const fileAccessible = process.env.FILE_ACCESSIBLE === 'true';
-            const fileValid = process.env.FILE_VALID === 'true';
-            const verificationError = process.env.VERIFICATION_ERROR;
+            const verificationError = process.env.VERIFICATION_ERROR || 'Unknown archive error.';
 
-            // Закрываем issue, только если оно еще открыто
             if (issue.data.state === 'open') {
               await github.rest.issues.update({
                 owner,
@@ -178,22 +240,19 @@ jobs:
               });
             }
 
-            // Формируем понятное сообщение об ошибке
             if (!attachmentFound) {
               commentBody = '❌ **Error!** The file `config.tar.gz` was not found in the issue.\n\n❌ **Ошибка!** Файл `config.tar.gz` не найден в тикете.\n\n';
             } else if (!fileAccessible) {
               commentBody = '⚠️ **Warning!** The file `config.tar.gz` was found in the issue but is not accessible for download.\n\n⚠️ **Предупреждение!** Файл `config.tar.gz` найден в тикете, но недоступен для скачивания.\n\n';
-            } else if (!fileValid) {
-              // Специфичная ошибка проверки содержимого архива
+            } else {
               commentBody = `🔍 **Archive Content Issue!** The file \`config.tar.gz\` was found and downloaded, but it does not meet the requirements.\n\n`;
               commentBody += `**Details:** ${verificationError}\n\n`;
               commentBody += `🔍 **Проблема с содержимым архива!** Файл \`config.tar.gz\` найден и скачан, но не соответствует требованиям.\n\n`;
               commentBody += `**Подробности:** ${verificationError}\n\n`;
             }
 
-            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz`\n3. Save the changes\n\n';
-            commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz`\n3. Сохраните изменения\n\n';
-
+            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz` file (it must contain `opt/config/mod_data/log/console.log` and a valid version file)\n3. Save the changes\n\n';
+            commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz` (он должен содержать `opt/config/mod_data/log/console.log` и корректный файл версии)\n3. Сохраните изменения\n\n';
             commentBody += '🔄 After editing, this check will run again automatically.\n🔄 После редактирования эта проверка запустится автоматически снова.';
 
             await github.rest.issues.createComment({
