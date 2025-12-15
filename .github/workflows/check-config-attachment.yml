@@ -201,7 +201,7 @@ jobs:
 
               commentBody += '🔄 **Please update your mod first! / Сначала обновите мод!**\n';
               commentBody += '- Update guide (English): https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod\n';
-              commentBody += '- Инструкция по обновлению (Русский): https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0\n\n';
+              commentBody += '- Инструкция по обновлению (Русский): https://github.com/ghzserg/zmod/wiki/Setup#updating-the-mod\n\n';
 
               commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
               commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
