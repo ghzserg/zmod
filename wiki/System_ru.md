@@ -181,7 +181,7 @@ chmod +x zfs.sh
 
 Учтите, что родной экране перестанет показывать миниатюры.
 
-Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail создавайте [тикет](https://github.com/ghzserg/zmod/wiki/FAQ#help)
+Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail создавайте [тикет](https://github.com/ghzserg/zmod/wiki/Help)
 
 <div align="center">
 

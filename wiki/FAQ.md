@@ -745,16 +745,7 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ### Как обратиться в поддержку к разработчику
 
-0. [Обновить zMod и все плагины до последней версии](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0)
-1. Перевести мод на русский язык ```LANG LANG=ru```
-2. Четко сформулировать проблему. Скрины, фото, текстовое описание.
-3. Вызвать [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc) для очистки логов
-4. **Обязательно выключить принтер**
-5. Включить принтер
-6. Сгенерировать проблему
-7. Выполнить [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_ru#tar_config) - сохранить лог файлы
-8. Выложить одно сообщение с описанием и файлом `config.tar.gz`
-9. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
+[Инструкция перенесена](https://github.com/ghzserg/zmod/wiki/Help)
 
 <div align="center">
 

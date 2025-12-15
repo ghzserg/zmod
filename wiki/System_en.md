@@ -167,7 +167,7 @@ In Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thu
 
 Note that the native screen will no longer display thumbnails.
 
-Attention! The author uses Fluidd; Mainsail is user-tested only. If you have any issues with Mainsail, please create a [ticket](https://github.com/ghzserg/zmod/wiki/FAQ_en#help)
+Attention! The author uses Fluidd; Mainsail is user-tested only. If you have any issues with Mainsail, please create a [ticket](https://github.com/ghzserg/zmod/wiki/Help_en)
 
 <div align="center">
 
