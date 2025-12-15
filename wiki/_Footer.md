@@ -6,6 +6,8 @@
 - [Рекомендации по повышению стабильности работы принтера](https://github.com/ghzserg/zmod/wiki/Recomendations) | [Recommendations for Improving Printer Stability](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
 - [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros) | [List of Macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
 - [Установка/Калибровка](https://github.com/ghzserg/zmod/wiki/Setup) | [Installation/Calibrations](https://github.com/ghzserg/zmod/wiki/Setup_en)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) | [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en)
+- [Помощь](https://github.com/ghzserg/zmod/wiki/Help) | [Help](https://github.com/ghzserg/zmod/wiki/Help_en)
 
 [На развитие zmod: СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)| Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 

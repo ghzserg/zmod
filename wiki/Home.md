@@ -8,3 +8,6 @@
 - [List Macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
 - [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [Version History](https://github.com/ghzserg/zmod/wiki/Changelog_en)
+- [Help](https://github.com/ghzserg/zmod/wiki/Help_en)
+
+[Русская версия](https://github.com/ghzserg/zmod/wiki/Home_ru)

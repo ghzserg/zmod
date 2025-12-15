@@ -8,3 +8,4 @@
 - [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros)
 - [Плагины](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
 - [История версий](https://github.com/ghzserg/zmod/wiki/Changelog)
+- [Help](https://github.com/ghzserg/zmod/wiki/Help)

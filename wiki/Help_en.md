@@ -1,21 +1,15 @@
 # How to Contact Developer Support
 
+Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it your question. It knows all the documentation.
+
 1. [Update zMod and all plugins to the latest version](https://github.com/ghzserg/zmod/wiki/Setup#updating-the-mod)
-
 2. Clearly describe the issue: provide screenshots, photos, and a detailed textual explanation.
-
 3. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear previous logs.
-
 4. **Power off the printer completely.**
-
 5. Power the printer back on.
-
 6. Reproduce the issue.
-
 7. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to collect log files.
-
 8. Submit **one** post with your description and the generated `config.tar.gz` file.
-
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
 ## Why I Ask You to Create Tickets — Explained Simply
