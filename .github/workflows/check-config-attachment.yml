@@ -9,8 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       issues: write
-      
+      contents: read # Может потребоваться, если архив будет скачан в workspace
+
     steps:
+      # Шаг 1: Проверяем наличие и доступность вложения (ваш исходный код)
       - name: Check attachment status
         id: check_attachment
         uses: actions/github-script@v6
@@ -19,24 +21,24 @@ jobs:
             const issueNumber = context.issue.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            
+
             const issue = await github.rest.issues.get({
               owner,
               repo,
               issue_number: issueNumber
             });
-            
+
             let attachmentFound = false;
             let fileAccessible = false;
             let fileUrl = '';
-            
+
             const markdownRegex = /\[config\.tar\.gz\]\((https?:\/\/[^\s)]+)\)/i;
             const match = issue.data.body.match(markdownRegex);
-            
+
             if (match && match[1]) {
               attachmentFound = true;
               fileUrl = match[1];
-              
+
               try {
                 const response = await fetch(fileUrl, { method: 'HEAD' });
                 if (response.ok) {
@@ -46,29 +48,82 @@ jobs:
                 fileAccessible = false;
               }
             }
-            
+
             core.setOutput('attachment_found', attachmentFound.toString());
             core.setOutput('file_accessible', fileAccessible.toString());
             core.setOutput('file_url', fileUrl);
 
-      - name: Handle successful attachment
+      # НОВЫЙ ШАГ 2: Скачиваем, распаковываем и проверяем архив
+      - name: Extract and verify archive contents
+        id: verify_archive
+        # Выполняем этот шаг, только если вложение найдено и доступно
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
+        env:
+          FILE_URL: ${{ steps.check_attachment.outputs.file_url }}
+        run: |
+          set -e # Прерывать выполнение при ошибках
+
+          echo "Downloading config.tar.gz from $FILE_URL..."
+          # Скачиваем архив. Используем curl с опцией -L для следования за редиректами.
+          curl -L -s -o "/tmp/config.tar.gz" "$FILE_URL"
+
+          if [ ! -s "/tmp/config.tar.gz" ]; then
+            echo "ERROR: Downloaded file is empty or does not exist."
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=Archive is empty or failed to download." >> $GITHUB_OUTPUT
+            exit 0 # Выходим без ошибки, чтобы workflow продолжил обработку и оставил комментарий
+          fi
+
+          echo "Extracting archive to verify contents..."
+          # Создаем временную папку для распаковки
+          EXTRACT_DIR=$(mktemp -d)
+          cd "$EXTRACT_DIR"
+
+          # Пытаемся распаковать. tar -xzf молчит при успехе, показывает ошибку при проблеме.
+          if ! tar -xzf /tmp/config.tar.gz 2>/dev/null; then
+            echo "ERROR: Failed to extract config.tar.gz. File might be corrupted or not a valid gzip archive."
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=Failed to extract archive. File may be corrupted." >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # Проверяем наличие конкретного файла внутри архива
+          TARGET_FILE="opt/config/mod_data/log/console.log"
+          if [ -f "$EXTRACT_DIR/$TARGET_FILE" ]; then
+            echo "SUCCESS: Required file '$TARGET_FILE' found inside the archive."
+            echo "file_valid=true" >> $GITHUB_OUTPUT
+            echo "verification_error=" >> $GITHUB_OUTPUT
+          else
+            echo "ERROR: Required file '$TARGET_FILE' NOT found inside the archive."
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=The archive does not contain the required file: $TARGET_FILE" >> $GITHUB_OUTPUT
+          fi
+
+          # Очистка временных файлов (опционально)
+          rm -rf "$EXTRACT_DIR"
+          rm -f "/tmp/config.tar.gz"
+
+      # Шаг 3: Обработка УСПЕШНОГО результата (архив найден, доступен И проверен)
+      - name: Handle successful and valid attachment
+        # Условие стало строже: нужен и доступный архив, и успешная проверка
+        if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true' && steps.verify_archive.outputs.file_valid == 'true'
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
           FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
+          FILE_VALID: ${{ steps.verify_archive.outputs.file_valid }}
         with:
           script: |
             const issueNumber = context.issue.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            
+
             const issue = await github.rest.issues.get({
               owner,
               repo,
               issue_number: issueNumber
             });
-            
+
             if (issue.data.state === 'closed') {
               await github.rest.issues.update({
                 owner,
@@ -76,33 +131,44 @@ jobs:
                 issue_number: issueNumber,
                 state: 'open'
               });
-              
-              await github.rest.issues.createComment({
-                issue_number: issueNumber,
-                owner,
-                repo,
-                body: '✅ **Perfect!** The file `config.tar.gz` has been found and is accessible.\n\n✅ **Отлично!** Файл `config.tar.gz` найден и доступен для скачивания.\n\nThe issue has been reopened and will be processed. / Тикет был переоткрыт и будет обработан.'
-              });
             }
 
-      - name: Handle missing or inaccessible attachment
-        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true'
+            await github.rest.issues.createComment({
+              issue_number: issueNumber,
+              owner,
+              repo,
+              body: '✅ **Perfect!** The file `config.tar.gz` has been found, is accessible, and contains the required `opt/config/mod_data/log/console.log`.\n\n✅ **Отлично!** Файл `config.tar.gz` найден, доступен и содержит требуемый файл `opt/config/mod_data/log/console.log`.\n\nThe issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.'
+            });
+
+      # Шаг 4: Обработка ОШИБОК (нет вложения, нет доступа ИЛИ архив невалидный)
+      - name: Handle missing, inaccessible, or invalid attachment
+        # Срабатывает, если НЕ выполнилось условие успеха из шага 3.
+        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '')
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
           FILE_ACCESSIBLE: ${{ steps.check_attachment.outputs.file_accessible }}
+          FILE_VALID: ${{ steps.verify_archive.outputs.file_valid }}
+          VERIFICATION_ERROR: ${{ steps.verify_archive.outputs.verification_error }}
         with:
           script: |
             const issueNumber = context.issue.number;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
-            
+
             const issue = await github.rest.issues.get({
               owner,
               repo,
               issue_number: issueNumber
             });
-            
+
+            let commentBody = '';
+            const attachmentFound = process.env.ATTACHMENT_FOUND === 'true';
+            const fileAccessible = process.env.FILE_ACCESSIBLE === 'true';
+            const fileValid = process.env.FILE_VALID === 'true';
+            const verificationError = process.env.VERIFICATION_ERROR;
+
+            // Закрываем issue, только если оно еще открыто
             if (issue.data.state === 'open') {
               await github.rest.issues.update({
                 owner,
@@ -111,21 +177,25 @@ jobs:
                 state: 'closed'
               });
             }
-            
-            let commentBody = '';
-            const attachmentFound = process.env.ATTACHMENT_FOUND === 'true';
-            const fileAccessible = process.env.FILE_ACCESSIBLE === 'true';
-            
+
+            // Формируем понятное сообщение об ошибке
             if (!attachmentFound) {
               commentBody = '❌ **Error!** The file `config.tar.gz` was not found in the issue.\n\n❌ **Ошибка!** Файл `config.tar.gz` не найден в тикете.\n\n';
             } else if (!fileAccessible) {
               commentBody = '⚠️ **Warning!** The file `config.tar.gz` was found in the issue but is not accessible for download.\n\n⚠️ **Предупреждение!** Файл `config.tar.gz` найден в тикете, но недоступен для скачивания.\n\n';
+            } else if (!fileValid) {
+              // Специфичная ошибка проверки содержимого архива
+              commentBody = `🔍 **Archive Content Issue!** The file \`config.tar.gz\` was found and downloaded, but it does not meet the requirements.\n\n`;
+              commentBody += `**Details:** ${verificationError}\n\n`;
+              commentBody += `🔍 **Проблема с содержимым архива!** Файл \`config.tar.gz\` найден и скачан, но не соответствует требованиям.\n\n`;
+              commentBody += `**Подробности:** ${verificationError}\n\n`;
             }
-            
-            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Attach the file `config.tar.gz` using the paperclip icon 📎\n3. Save the changes\n\n🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Прикрепите файл `config.tar.gz` через скрепочку 📎\n3. Сохраните изменения\n\n';
-            
-            commentBody += '🔄 After editing, the issue will be automatically reopened if the file is found and accessible.\n\n🔄 После редактирования тикет будет автоматически переоткрыт, если файл найден и доступен.';
-            
+
+            commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz` file (it must contain `opt/config/mod_data/log/console.log`)\n3. Save the changes\n\n';
+            commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz` (он должен содержать `opt/config/mod_data/log/console.log`)\n3. Сохраните изменения\n\n';
+
+            commentBody += '🔄 After editing, this check will run again automatically.\n🔄 После редактирования эта проверка запустится автоматически снова.';
+
             await github.rest.issues.createComment({
               issue_number: issueNumber,
               owner,
