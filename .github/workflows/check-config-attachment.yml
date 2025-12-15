@@ -205,6 +205,7 @@ jobs:
 
               commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
               commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
+              commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
@@ -229,6 +230,7 @@ jobs:
               commentBody += '✅ **Отлично!** Файл `config.tar.gz` найден, доступен и имеет корректную структуру.\n\n';
               commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
               commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
+              commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
@@ -286,6 +288,7 @@ jobs:
             commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz` file (it must contain `opt/config/mod_data/log/console.log` and a valid version file)\n3. Save the changes\n\n';
             commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz` (он должен содержать `opt/config/mod_data/log/console.log` и корректный файл версии)\n3. Сохраните изменения\n\n';
             commentBody += '🔄 After editing, this check will run again automatically.\n🔄 После редактирования эта проверка запустится автоматически снова.';
+            commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
             await github.rest.issues.createComment({
               issue_number: issueNumber,
