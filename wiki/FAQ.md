@@ -102,7 +102,7 @@ ZMOD НЕ основан на KlipperMod, и НЕ является его раз
 `Конфигурация` -> `Файлы конфигурации` -> `mod_data`
 
 - Пользовательские настройки klipper необходимо вносить в файл `mod_data/user.cfg`, настройки записанные в это файл могут заменять/дополнять настройки из `printer_base.cfg` и файлов zMod.
-- Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.cfg`
+- Пользовательские настройки moonraker необходимо вносить в файл `mod_data/user.moonraker.conf`
 - Пользовательские мелодии хранятся в `mod_data/midi/`
 - Глобальные настройки мода хранятся через макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) *нюхлер*
 - Код исполняемый при выключении принтера хранится тут `mod_data/power_off.sh`
