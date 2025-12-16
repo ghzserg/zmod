@@ -8,6 +8,7 @@
 3. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
 4. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme_ru.md) - Максимальное уменьшение количества отходов от ninjamida.
 5. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Moonraker TimeLapse
+6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Получение уведомлений в телеграм и еще более 100 различных сервисов
 
 ---
 

@@ -8,6 +8,7 @@ Plugins included with zMod:
 3. [Bambufy](https://github.com/function3d/bambufy) - Compatible with Bambu Studio, improves prime tower management, provides accurate time/material estimates, reduces waste, supports Mainsail, fast color changes, and advanced printing features. CANNOT BE USED WITH NATIVE SCREEN
 4. [Nopoop](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
 5. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse
+6. [Notify](https://github.com/ghzserg/notify) - Receive notifications in Telegram and over 100 other different services
 
 ---
 

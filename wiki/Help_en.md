@@ -61,7 +61,7 @@ Our “fleet” includes **over 100 unique configurations**. Just by major categ
 
 - **Optional “features” (plugins)**:
 
-  `nopoop`, `recommend`, `bambufy`, `g28_tenz`, `timelapse`, and others
+  `nopoop`, `recommend`, `bambufy`, `g28_tenz`, `timelapse`, `notify` and others
 
 - **Sensors and peripherals**:
 

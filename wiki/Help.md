@@ -58,7 +58,7 @@
 
 - **Дополнительные «опции» (плагины)**:
 
-  `nopoop`, `recommend`, `bambufy`, `g28_tenz`, `timelapse`, и прочие
+  `nopoop`, `recommend`, `bambufy`, `g28_tenz`, `timelapse`, `notify` и прочие
 
 - **Сенсоры и периферия**:
 
