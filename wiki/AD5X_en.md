@@ -198,6 +198,8 @@ In this file, each material type (PLA, ABS, PETG, etc.) has a list of values. He
 
 #### **Basic Parameters (Most Frequently Adjusted):**
 
+For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
+
 1.  **`temp`** — Nozzle temperature for filament change. **Default value depends on material type.**
 2.  **`filament_drop_length` (Purge Length)**
     *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color.
@@ -212,6 +214,8 @@ In this file, each material type (PLA, ABS, PETG, etc.) has a list of values. He
 ---
 
 ##### **Advanced Parameters (Do Not Adjust If Unsure of the Result):**
+
+For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
 
 *   **`filament_tube_length`** — Total PTFE tube length from IFS module to extruder. Useful for non-standard tubes. **Default: 1000 mm.**
 *   **`filament_unload_before_cutting`** — Filament lift distance **before** cutting. **Default: 0 mm.**
@@ -231,6 +235,8 @@ In this file, each material type (PLA, ABS, PETG, etc.) has a list of values. He
 
 ## **7. Add custom filament types**
 
+For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
+
 To add a new filament type, add the following to ```mod_data/user.cfg```:
 ```
 [zmod_ifs]
@@ -243,6 +249,8 @@ Where NEWTYPE is replaced with the desired filament type (e.g., HIPS), and the n
 ---
 
 ## **8. Add custom colors**
+
+For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
 
 To add or rename a color, open ```mod_data/colors/en.cfg``` (use your language instead of en):
 
@@ -403,6 +411,9 @@ Restart the printer — everything is ready.
 ---
 
 ## **10. IFS commands**
+
+For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
+
 - IFS_F10 - Insert filament
 - IFS_F11 - Remove filament
 - IFS_F13 - IFS state
