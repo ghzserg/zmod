@@ -113,6 +113,19 @@ body:
     validations:
       required: false
 
+  - type: textarea
+    id: config_gcode
+    attributes:
+      label: Attach GCODE file
+      description: |
+        Attach, if necessary, the file whose printing causes the failure. It's better to pack it into a zip archive.
+        1. Click on the text area below.
+        2. Either drag and drop the GCODE file directly onto this area, or use the paperclip icon in the corner of the field to select it.
+        3. A link to the uploaded file will appear in the field. Make sure it's there.
+      placeholder: "Drag and drop file here or click to select..."
+    validations:
+      required: false
+
   - type: markdown
     attributes:
       value: |
