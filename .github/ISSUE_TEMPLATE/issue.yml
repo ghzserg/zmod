@@ -18,6 +18,8 @@ body:
         If the issue is caused by the 'g28_tenz' or 'nopoop' plugin, please mention it in the title.
         [If the error is in the 'bambufy' plugin, contact the author](https://github.com/function3d/bambufy).
 
+        **One issue per ticket** - do not add multiple problems to one ticket; only one issue will be resolved per ticket.
+
   - type: dropdown
     id: printer_model
     attributes:
@@ -133,3 +135,4 @@ body:
         - I have attached the `config.tar.gz` file.
         - I have disabled all third-party plugins (except for 'recommend').
         - I have read the recommended materials.
+        - **One issue per ticket** - do not add multiple problems to one ticket; only one issue will be resolved per ticket.
