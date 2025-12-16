@@ -15,6 +15,8 @@
 
 ---
 
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 <table style="width: 100%; table-layout: fixed;" align="center">
 <thead><tr>
   <th colspan="2"><p align="center"><strong>🔷 Telegram Bot 🔷</strong></p></th>
@@ -52,6 +54,9 @@ D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-helm-%D0%B2-kubernetes-%D0%BE%D1%82-aldiser
 ## Telegram Bot
 
 ### Описание
+
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 Суть:
 У нас очень медленное  железо и очень мало памяти. Поэтому на железе запускать moonraker-telegram-bot нет смысла. 
 Но мы его можем запустить на внешнем сервере.
@@ -106,6 +111,8 @@ D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-helm-%D0%B2-kubernetes-%D0%BE%D1%82-aldiser
 
 #### Установка телеграмм бота одной командой на Debian
 
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 Установка телеграмм бота [одной командой](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) на Debian:
 
 Выполнять под пользователем `root`
@@ -137,6 +144,9 @@ apt update && apt install wget -y
 ---
 
 #### Установка телеграмм бота по шагам
+
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 Берете файл [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) из `mod/telegram/` c принтера.
 
 Устанавливаете docker, далее инструкция для Debian
@@ -282,6 +292,9 @@ sync_rate: 5
 ---
 
 #### Установка и настройка для armbian (от noyhay)
+
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 Скачиваем Debian Minimal/IOT images with Armbian с сайта [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
 Устанавливаем Armbian на sdcard с помощью balenaEtcher с сайта [https://etcher.balena.io/](https://etcher.balena.io/)
@@ -338,6 +351,9 @@ cat >.ssh/authorized_keys
 ---
 
 #### Установка бота телеграмм через helm в kubernetes (от aldiserg)
+
+Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+
 Скачиваем helm и устанавливаем на компьютер [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
 Клонируем репозиторий с helm чартом

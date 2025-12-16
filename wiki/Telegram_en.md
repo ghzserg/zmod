@@ -15,6 +15,8 @@ It can be called from:
 
 ---
 
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 <table style="width: 100%; table-layout: fixed;" align="center">
 <thead><tr>
   <th colspan="2"><p align="center"><strong>🔷 Telegram Bot 🔷</strong></p></th>
@@ -49,6 +51,9 @@ It can be called from:
 
 ## Telegram Bot
 ### Description
+
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 Core Idea:
 Our hardware is very slow and has limited memory. Therefore, running the moonraker-telegram-bot directly on the hardware is impractical.
 However, we can run it on an external server. This requires any server (physical/virtual) that the printer can reach via SSH.
@@ -98,6 +103,8 @@ How to register your bot:
 ### Server Deployment
 #### One-Command Telegram Bot Installation on Debian
 
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 Install the Telegram bot with [one command](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) on Debian:
 
 Execute as the `root` user:
@@ -128,6 +135,9 @@ Add SSH keys manually.
 
 ---
 #### Step-by-Step Telegram Bot Installation
+
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 1. Copy [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) from the printer’s `mod/telegram/` directory.
 2. Install Docker (Debian instructions):
 ```bash
@@ -269,6 +279,9 @@ Specify your time zone. The example file specifies ```TZ=Asia/Yekaterinburg```
 </div>
 
 #### Installation and Setup for Armbian (by noyhay)
+
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 Download Debian Minimal/IOT images with Armbian from the website [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
 Install Armbian on an SD card using balenaEtcher from [https://etcher.balena.io/](https://etcher.balena.io/)
@@ -326,6 +339,9 @@ sudo reboot
 ---
 
 #### Telegram Bot Installation On Kubernetes Via Helm (by aldiserg)
+
+If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+
 Download and install helm [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
 Clone helm chart from repo
