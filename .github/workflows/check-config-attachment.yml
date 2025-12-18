@@ -12,7 +12,6 @@ jobs:
       contents: read
 
     steps:
-      # ШАГ 1: Поиск ссылки на вложение в теле issue
       - name: Check attachment status
         id: check_attachment
         uses: actions/github-script@v6
@@ -52,7 +51,6 @@ jobs:
             core.setOutput('file_accessible', fileAccessible.toString());
             core.setOutput('file_url', fileUrl);
 
-      # ШАГ 2: Скачивание, распаковка и проверка архива (включая версию)
       - name: Extract and verify archive contents
         id: verify_archive
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true'
@@ -81,7 +79,6 @@ jobs:
             exit 0
           fi
 
-          # 1. Проверка обязательного файла console.log
           REQUIRED_FILE="opt/config/mod_data/log/console.log"
           if [ ! -f "$EXTRACT_DIR/$REQUIRED_FILE" ]; then
             echo "ERROR: Required file '$REQUIRED_FILE' NOT found."
@@ -93,7 +90,18 @@ jobs:
           fi
           echo "SUCCESS: Required file '$REQUIRED_FILE' found."
 
-          # 2. Проверка версии мода (сначала 5X, потом 5M)
+          BAMBUGY_CHECK_MESSAGE=""
+          if grep -q -i "bambufy" "$EXTRACT_DIR/$REQUIRED_FILE"; then
+            echo "ERROR: Bambufy plugin detected in console.log"
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=Bambufy plugin detected" >> $GITHUB_OUTPUT
+            echo "bambufy_detected=true" >> $GITHUB_OUTPUT
+            rm -rf "$EXTRACT_DIR"
+            rm -f "/tmp/config.tar.gz"
+            exit 0
+          fi
+          echo "bambufy_detected=false" >> $GITHUB_OUTPUT
+
           VERSION_CHECK_MESSAGE=""
           VERSION_OUTDATED="false"
 
@@ -156,7 +164,6 @@ jobs:
           rm -rf "$EXTRACT_DIR"
           rm -f "/tmp/config.tar.gz"
 
-      # ШАГ 3: Обработка УСПЕШНОГО сценария (с проверкой версии)
       - name: Handle successful and valid attachment
         if: steps.check_attachment.outputs.attachment_found == 'true' && steps.check_attachment.outputs.file_accessible == 'true' && steps.verify_archive.outputs.file_valid == 'true'
         uses: actions/github-script@v6
@@ -178,9 +185,7 @@ jobs:
             const versionOutdated = process.env.VERSION_OUTDATED === 'true';
             const versionMessage = process.env.VERSION_CHECK_MESSAGE || '';
 
-            // --- СЦЕНАРИЙ 1: ВЕРСИЯ УСТАРЕЛА ---
             if (versionOutdated) {
-              // Гарантируем, что тикет ЗАКРЫТ
               if (issue.data.state === 'open') {
                 await github.rest.issues.update({
                   owner,
@@ -205,7 +210,7 @@ jobs:
 
               commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
               commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
-              commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+              commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
@@ -214,9 +219,7 @@ jobs:
                 body: commentBody
               });
             }
-            // --- СЦЕНАРИЙ 2: ВЕРСИЯ АКТУАЛЬНА ---
             else {
-              // Открываем тикет, если он закрыт
               if (issue.data.state === 'closed') {
                 await github.rest.issues.update({
                   owner,
@@ -230,7 +233,7 @@ jobs:
               commentBody += '✅ **Отлично!** Файл `config.tar.gz` найден, доступен и имеет корректную структуру.\n\n';
               commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
               commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
-              commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+              commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
@@ -240,9 +243,56 @@ jobs:
               });
             }
 
-      # ШАГ 4: Обработка ОШИБОК (нет файла, нет доступа, архив невалидный)
+      - name: Handle bambufy plugin detection
+        if: steps.verify_archive.outputs.bambufy_detected == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const issue = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueNumber
+            });
+
+            if (issue.data.state === 'open') {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
+            }
+
+            let commentBody = '❌ **Bambufy Plugin Detected** / **Обнаружен плагин Bambufy**\n\n';
+            commentBody += 'The file `config.tar.gz` was found and downloaded, but the `console.log` contains references to **bambufy**.\n\n';
+            commentBody += 'Файл `config.tar.gz` найден и скачан, но `console.log` содержит упоминания **bambufy**.\n\n';
+            commentBody += '**You are using the bambufy plugin, please disable it or [contact the plugin author](https://github.com/function3d/bambufy).**\n\n';
+            commentBody += '**Вы используете плагин bambufy, отключите его или [обратитесь к автору плагина](https://github.com/function3d/bambufy).**\n\n';
+            commentBody += '🚫 **Issue Status / Статус тикета:**\n';
+            commentBody += 'This issue has been **closed**.\n';
+            commentBody += 'Тикет был **закрыт**.\n\n';
+            commentBody += '🔧 **How to fix / Как исправить:**\n';
+            commentBody += '1. Disable the bambufy plugin from your mod setup\n';
+            commentBody += '2. Create a new `config.tar.gz` file without bambufy references\n';
+            commentBody += '3. Edit this issue and attach the corrected file\n\n';
+            commentBody += '1. Отключите или удалите плагин bambufy из вашей модификации\n';
+            commentBody += '2. Создайте новый файл `config.tar.gz` без упоминаний bambufy\n';
+            commentBody += '3. Отредактируйте этот тикет и прикрепите исправленный файл\n\n';
+            commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+
+            await github.rest.issues.createComment({
+              issue_number: issueNumber,
+              owner,
+              repo,
+              body: commentBody
+            });
+
       - name: Handle missing, inaccessible, or invalid attachment
-        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '')
+        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '' && steps.verify_archive.outputs.bambufy_detected != 'true')
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
@@ -288,7 +338,7 @@ jobs:
             commentBody += '🔧 **You can fix this by:**\n1. Click "Edit" on your original issue comment\n2. Ensure you attach a **correct** `config.tar.gz` file (it must contain `opt/config/mod_data/log/console.log` and a valid version file)\n3. Save the changes\n\n';
             commentBody += '🔧 **Вы можете исправить это:**\n1. Нажмите "Edit" (редактировать) на вашем исходном сообщении\n2. Убедитесь, что вы прикрепляете **правильный** файл `config.tar.gz` (он должен содержать `opt/config/mod_data/log/console.log` и корректный файл версии)\n3. Сохраните изменения\n\n';
             commentBody += '🔄 After editing, this check will run again automatically.\n🔄 После редактирования эта проверка запустится автоматически снова.';
-            commentBody += 'https://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+            commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
 
             await github.rest.issues.createComment({
               issue_number: issueNumber,
