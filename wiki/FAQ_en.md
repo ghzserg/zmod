@@ -241,7 +241,6 @@ Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset fro
 
 Z-offset can also be set via [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) parameters:
 - Z_OFFSET - Set Z offset (0.0)
-- SKIP_ZOFFSET - For native screen printing, don't set Z offset as the screen handles it (True for native screen/False otherwise)
 
 ### What options are available for bed leveling?
 

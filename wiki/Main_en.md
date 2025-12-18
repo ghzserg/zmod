@@ -60,8 +60,8 @@ Parameters:
 - `FORCE_KAMP` — build an adaptive bed mesh (KAMP, default: `False`).
   *Recommended to add `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to use purge areas for KAMP.*
 - `Z_OFFSET` — set Z offset (default: `0.0`)
-- `SKIP_ZOFFSET` — skip Z offset adjustment (default: `True` for native screen, `False` otherwise)
-- `INTERNAL` — For PRO version without native screen: `0` = external air intake, `1` = internal air circulation (default: `1`)
+- INTERNAL - For the PRO version when operating without the native screen, 1 - enable internal recirculation (0)
+- EXTERNAL - For the PRO version when operating without the native screen, 1 - enable external recirculation (0)
 
 **Notes:**
 - Any calibration (e.g., `FORCE_KAMP`/`FORCE_LEVELING`) triggers [CLEAR_NOZZLE](https://github.com/ghzserg/zmod/wiki/Global_en#clear_nozzle).
