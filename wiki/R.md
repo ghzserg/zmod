@@ -29,18 +29,23 @@
 - [1.1.6](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz)
 - [1.1.7](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 - [1.1.9](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.9-1.1.1-3.0.7-20251201-Factory.tgz)
+- [1.2.0](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.2.0-1.1.1-3.0.7-20251212-Factory.tgz)
+- [1.2.1](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.2.1-1.1.1-3.0.7-20251217-Factory.tgz)
 
 ## AD5M native firmware (AD5M родная прошивка)
 - [3.1.3](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.1.9](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
 - [3.2.5](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.2.5-2.2.3-20251205-Factory.tgz)
+- [3.2.6](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.2.6-2.2.3-20251212-Factory.tgz)
+- [3.2.7](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.2.7-2.2.3-20251217-Factory.tgz)
 
 ## AD5MPro native firmware (AD5MPro родная прошивка)
 - [3.1.3](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
 - [3.2.4](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.2.4-2.2.3-20251114-Factory.tgz)
 - [3.2.5](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.2.5-2.2.3-20251126-Factory.tgz)
+- [3.2.7](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.2.7-2.2.3-20251217-Factory.tgz)
 
 # Installing full firmware on AD5X
 
@@ -155,12 +160,3 @@ Fix E0011 Off
 - [addmd5-darwin-arm64](https://github.com/asd2003ru/addmd5/releases) (MacOS Silicon)
 - [addmd5-linux-amd64](https://github.com/asd2003ru/addmd5/releases) (Linux)
 - [addmd5-windows-amd64.exe](https://github.com/asd2003ru/addmd5/releases) (Windows)
-
-# AD5X-1.0.7-1.0.7-FIXED.tgz
-
-Это прошивка версии 1.1.1 с версией экрана 1.0.7, и в ней корректно работает очистка сопла
-
-This is firmware version 1.1.1 with screen version 1.0.7, and nozzle cleaning works correctly in it
-
-[AD5X-1.0.7-1.0.7-FIXED.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.0.7-1.0.7-FIXED.tgz)
-
