@@ -463,6 +463,9 @@ filament_NEWTYPE: 300
 - GND к GND
 
 <img width="235" height="112" alt="image" src="https://github.com/user-attachments/assets/c2089113-c598-4dff-90ed-811689b4a865" />
+
+<img width="346" height="390" alt="{291B74E2-B8C4-44E5-BCBD-9F16C7980A4D}" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+
 - Target Device - `Nations N32G455RE`
 - Target interface: `SWD`
 - Speed: `4000`
@@ -472,10 +475,6 @@ filament_NEWTYPE: 300
 1. Соединяемся
 2. Вбираем [файл для прошивки](https://github.com/ghzserg/zmod/wiki/R#5x-ifs). **Не забудьте его разархивировать**.
 3. Нажимаем **F7** и ждем прошивки устройства
-
-<img width="346" height="390" alt="{291B74E2-B8C4-44E5-BCBD-9F16C7980A4D}" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
-
-
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
 
