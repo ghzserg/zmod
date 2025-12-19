@@ -143,6 +143,13 @@ Fix E0011 Off
 
 [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
+# 5X IFS
+Backup IFS firmware
+
+Архив IFS прошивки
+
+- [3.0.6](https://github.com/ghzserg/zmod/releases/download/R/ifc_3.0.6.zip)
+
 # 5X gcode
 
 - [3DBenchy_PLA.3mf](https://github.com/ghzserg/zmod/releases/download/R/3DBenchy_PLA.3mf)
