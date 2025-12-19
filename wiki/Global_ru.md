@@ -329,6 +329,8 @@ WEIGHT - вес в граммах (1500)
 
 ##### FORCE_MD5
 
+Igor Polunovskiy
+
 Проверять MD5 сумму файла, при ошибке - удалять файл. 0-не проверять, 1 - проверять (1)
 
 *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) или

@@ -190,6 +190,8 @@ Set timezone.
 ---
 ### CHECK_MD5
 
+Igor Polunovskiy
+
 Verify file integrity via MD5 checksum.
 - `DELETE` — delete corrupted files: `yes`/`no`.
 

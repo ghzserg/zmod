@@ -118,6 +118,8 @@
 
 ### Включите  контроль [MD5]
 
+Igor Polunovskiy
+
 [CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
 
 Рекомендуется использовать [глобальный параметр FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`

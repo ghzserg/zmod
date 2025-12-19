@@ -124,6 +124,8 @@ Instead, you can use:
 
 ### Enable [MD5] Checksum Control
 
+Igor Polunovskiy
+
 Add [CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) to your workflow.
 
 It is recommended to use the [global parameter FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`

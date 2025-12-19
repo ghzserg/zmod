@@ -206,6 +206,8 @@ chmod +x zfs.sh
 
 ### CHECK_MD5
 
+Igor Polunovskiy
+
 Рекомендуется использовать [глобальный параметр FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 Проверить MD5 сумму.

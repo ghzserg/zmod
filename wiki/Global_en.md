@@ -318,6 +318,8 @@ Example: `SAVE_ZMOD_DATA MESH_TEST=0`
 
 ##### FORCE_MD5
 
+Igor Polunovskiy
+
 Verify file MD5 hash and delete on mismatch: 0 (disable), 1 (enable) (1).
 
 *Add [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) or
