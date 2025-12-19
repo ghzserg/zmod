@@ -34,6 +34,7 @@
 ---
 
 ## Configuration Storage
+
 Access the **mod_data** folder via Fluidd web interface:
 `Configuration` → `Configuration Files` → `mod_data`
 
@@ -43,6 +44,10 @@ Access the **mod_data** folder via Fluidd web interface:
 - Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
 - Power on scripts are stored in `mod_data/power_on.sh`.
+
+**You cannot make changes to zmod and plugin files**, as this will break the update system.
+
+Any function can be overridden in `mod_data/user.cfg` or `printer.cfg`
 
 <div align="center">
 
