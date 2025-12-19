@@ -647,7 +647,7 @@ max_accel: 8700 ; Maximum acceleration for X and Y axes
 
 ## Updating the Mod
 
-If the mod displays `Обновите ZMOD с флешки` ("Update ZMOD via USB"), you must update via USB, even if recently updated.
+If the mod displays ("Update ZMOD via USB"), you must update via USB, even if recently updated.
 
 **Updating via USB preserves all data.**
 
@@ -661,16 +661,20 @@ If the mod displays `Обновите ZMOD с флешки` ("Update ZMOD via US
 After installation:
 1. Go to Fluidd/Mainsail → `Settings` → `Software Update`.
 2. Click `Check Updates` and install the latest ZMOD updates.
+
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
+If it shows a lot of errors, that's normal.
+
+Plugins aren't included in the firmware and are downloaded separately.
+
+Click `Check for updates`. Then restore and update all modules one by one. The printer will reboot during this process.
+
+<img width="671" height="223" alt="image" src="https://github.com/user-attachments/assets/5744dc8e-ba58-4359-b78a-652be846ca07" />
 
 **Version Compatibility:**
 - The OS version (under `System` → `Distribution`) must match the first two digits of the ZMOD version (`Settings` → `Updates` → `ffm5/zmod`).
 - **Mismatched versions cause instability.**
-
-**Update Rules:**
-- **USB required** if the first or second version digit changes (e.g., 1.2.x → 1.3.x).
-- **Online update** suffices for third/fourth digit changes (e.g., 1.2.6 → 1.2.7).
 
 **Manual USB Update:**
 1. Format a USB drive to FAT/FAT16/FAT32.
