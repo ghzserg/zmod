@@ -26,7 +26,7 @@
 0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) if previously installed.
 1. Reset the printer to default settings.
 2. Format a USB drive to FAT/FAT16/FAT32.
-3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) to the USB root directory:
+3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/wiki/R) to the USB root directory:
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
    - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
@@ -742,7 +742,7 @@ Attention!
 - If you are using Klipper 13, you must run ```UPDATE_MCU``` before updating the stock firmware. This will prevent a situation where the MCU and Klipper are different versions.
 - If you have enabled plugins other than `recommend`, disable them before updating using ```DISABLE_PLUGIN name=plugin_name```
 
-[AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) requires [zMod activation](https://github.com/ghzserg/zmod/releases/tag/R) via `AD5X-ENABLE-zmod.tgz` from flash drive, after stock update.
+[AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) requires [zMod activation](https://github.com/ghzserg/zmod/wiki/R) via `AD5X-ENABLE-zmod.tgz` from flash drive, after stock update.
 
 <div align="center">
 

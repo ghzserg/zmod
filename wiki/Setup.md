@@ -23,7 +23,7 @@
 0. [Удалить KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), если он был установлен
 1. Сбросить принтер до настроек по умолчанию
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
-3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/releases/tag/R) в корневую папку USB Flash
+3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/wiki/R) в корневую папку USB Flash
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
@@ -771,7 +771,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - Если у вас используется **Klipper 13**, то перед обновлением родной прошивки надо выполнить ```UPDATE_MCU```. Это позволит избежать ситуации, когда MCU и Klipper разных версий.
 - Если у вас включены плагины кроме `recommend`, то отключите их перед обновлением через ```DISABLE_PLUGIN name=имя_плагина```
 
-Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/releases/tag/R) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока.
+Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/wiki/R) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока.
 
 <div align="center">
 

@@ -290,7 +290,7 @@ Klipper 13 (по умолчанию отключен).
 
 Если не понимаете, как [восстановить конфиги и прошивку MCU](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ad5x), не запускайте.
 
-Если что-то пойдет не так, обратно только через [factory](https://github.com/ghzserg/zmod/releases/tag/R).
+Если что-то пойдет не так, обратно только через [factory](https://github.com/ghzserg/zmod/wiki/R).
 
 <div align="center">
 
