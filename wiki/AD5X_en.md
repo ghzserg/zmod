@@ -15,6 +15,7 @@
    - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
    - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
 10. [IFS commands](#10-ifs-commands)
+11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
 
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
@@ -445,6 +446,36 @@ silk_count: 1
 stall_count: 1
 filament_NEWTYPE: 300
 ```
+
+## **11. IFS Firmware Recovery**
+
+To recover the IFS firmware, you need an **ARM J-LINK V9** programmer.
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" />
+
+<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
+
+Solder wires to the iFS board.
+
+<img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
+
+Connect:
+- CLK to SWCK
+- DIO to SWIO
+- VCC to 3.3
+- GND to GND
+
+<img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+
+- Target Device - `Nations N32G455RE`
+- Target interface: `SWD`
+- Speed: `4000`
+- Check the first checkbox.
+- Uncheck the second checkbox.
+
+1. Connect.
+2. Select the [firmware file](https://github.com/ghzserg/zmod/wiki/R#5x-ifs). **Don't forget to extract it**.
+3. Press **F7** and wait for the device to be flashed.
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
 
