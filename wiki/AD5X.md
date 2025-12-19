@@ -14,6 +14,7 @@
    - [Через инженерное меню на родной прошивке](#настройка-корзины-на-родной-прошивке-ad5x)
    - [Через флэшку на родной прошивке](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-ad5x)
 10. [IFS команды](#10-ifs-команды)
+11. Восстановление прошивки IFS
 
 [Плагины](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md):
 - [bambufy](https://github.com/function3d/bambufy) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail,
@@ -442,6 +443,39 @@ silk_count: 1
 stall_count: 1
 filament_NEWTYPE: 300
 ```
+
+## **11. Восстановление прошивки IFS**
+
+Для восстановления прошивки IFS нужен программатор **ARM J-LINK V9**
+
+<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" />
+
+<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
+
+Припаиваем провода к плате iFS
+
+<img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
+
+Подключаем:
+- CLK к SWCK
+- DIO к SWIO
+- VCC к 3.3
+- GND к GND
+
+<img width="235" height="112" alt="image" src="https://github.com/user-attachments/assets/c2089113-c598-4dff-90ed-811689b4a865" />
+- Target Device - `Nations N32G455RE`
+- Target interface: `SWD`
+- Speed: `4000`
+- Ставим первую галочку
+- Вторую галочку снимаем
+
+1. Соединяемся
+2. Вбираем [файл для прошивки](https://github.com/ghzserg/zmod/wiki/R#5x-ifs). **Не забудьте его разархивировать**.
+3. Нажимаем **F7** и ждем прошивки устройства
+
+<img width="346" height="390" alt="{291B74E2-B8C4-44E5-BCBD-9F16C7980A4D}" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+
+
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
 
