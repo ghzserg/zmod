@@ -1,5 +1,8 @@
+[Русская версия](https://github.com/ghzserg/zmod/wiki/Home_ru)
+
 - [https://ghzserg.github.io/](https://ghzserg.github.io/)
 - [@zmod_help_bot](http://t.me/zmod_help_bot)
+
 - [Installing/Updating/Uninstalling the Mod](https://github.com/ghzserg/zmod/wiki/Setup_en)
 - [Initial Printer Calibration](https://github.com/ghzserg/zmod/wiki/Setup_en)
 - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en)
@@ -9,5 +12,6 @@
 - [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [Version History](https://github.com/ghzserg/zmod/wiki/Changelog_en)
 - [Help](https://github.com/ghzserg/zmod/wiki/Help_en)
+- [Native firmware](https://github.com/ghzserg/zmod/wiki/R)
 
-[Русская версия](https://github.com/ghzserg/zmod/wiki/Home_ru)
+Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
