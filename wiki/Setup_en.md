@@ -724,25 +724,13 @@ Attention!
 
 ## Updating Stock Firmware
 
-If you have the latest ZMOD version:
-1. Update the stock firmware normally.
-2. Reboot the printer.
+1. Disable all active plugins except `recommend`, `timelapse`, and `notify`:
+   ```DISABLE_PLUGIN name=plugin_name```
+2. If you are using **Klipper 13**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.
+3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
+   ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-If ZMOD is outdated:
-1. Update ZMOD via USB first.
-2. Install online updates via Fluidd.
-3. Update the stock firmware.
-
-If the native screen doesn't find updates:
-- Your serial number hasn't been updated yet.
-- You have Chinese clouds disabled. Enable them by entering `SAVE_ZMOD_DATA CHINA_CLOUD=1` in the console or setting them using the `GLOBAL` macro.
-- [Install the firmware update from a flash drive](https://github.com/ghzserg/zmod/wiki/R)
-
-Attention!
-- If you are using Klipper 13, you must run ```UPDATE_MCU``` before updating the stock firmware. This will prevent a situation where the MCU and Klipper are different versions.
-- If you have enabled plugins other than `recommend`, disable them before updating using ```DISABLE_PLUGIN name=plugin_name```
-
-[AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) requires [zMod activation](https://github.com/ghzserg/zmod/wiki/R) via `AD5X-ENABLE-zmod.tgz` from flash drive, after stock update.
+**For [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X), [zMod activation](https://github.com/ghzserg/zmod/wiki/R) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 
 <div align="center">
 
