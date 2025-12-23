@@ -2,14 +2,16 @@
 
 *[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Telegram_ru)*
 
-A macro is a small program written in Klipper/Gcode language.
-
-It can be called from:
-- A GCODE file
-- The Fluidd/Mainsail console (press `C` in Fluidd)
-
-> [!NOTE]
-> *The value in parentheses is the default value*
+| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru) |
+| :--- | :---: | :---: |
+| **Requires external server** | – | + |
+| **Remote printer control** | – (possible via [zmod.link](https://zmod.link)) | + |
+| **Timelapse creation** | – (possible via [timelapse plugin](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | + |
+| **Print event notifications** (start, pause, cancel, finish) | + | + |
+| **Filament sensor notifications** | + | + |
+| **Print progress percentage** | + | + |
+| **Multiple printers via a single bot** | + | – |
+| **Notifications via other services** | + | – |
 
 [@zmod_help_bot](http://t.me/zmod_help_bot)
 

@@ -2,14 +2,16 @@
 
 *[Read in English](https://github.com/ghzserg/zmod/wiki/Telegram_en)*
 
-Макрос - это небольшая программа на языке Klipper/Gcode. 
-
-Он может вызываться:
-- Из файла GCODE
-- Из консоли Fluidd/Mainsail (нажать английскую букву `C` в fluidd)
-
-> [!NOTE]
-> *Значение указанное в скобках - это значение по умолчанию*
+| Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru) |
+| :--- | :---: | :---: |
+| **Требует внешний сервер** | – | + |
+| **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link)) | + |
+| **Создание таймлапса** | – (можно через плагин [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | + |
+| **Информация о событиях печати** (старт, пауза, отмена, окончание) | + | + |
+| **Информация от датчика филамента** | + | + |
+| **Информация о прогрессе печати в процентах** | + | + |
+| **Работа с несколькими принтерами через одного бота** | + | – |
+| **Информировиние через другие сервисы** | + | - |
 
 [@zmod_help_bot](http://t.me/zmod_help_bot)
 
