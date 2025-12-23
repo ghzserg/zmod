@@ -34,6 +34,7 @@ Here’s what you gain by installing ZMOD:
 - **Fluidd / Mainsail**: Intuitive web interfaces showing live print stats, temperatures, fan speed control, axis movement, and full console access.
 - **Octo/Klipper-style file upload**: Seamless integration with Orca Slicer and other slicers for direct G-code file transfers.
 - **Access to the printer's web interface via the Internet** cloud service [zmod.link](https://zmod.link)
+- **Notification in Telegram and 100+ other services** [notify plugin](https://github.com/ghzserg/notify/)
 
 #### 2. Advanced Calibration & Bed Leveling
 **Stock firmware**: Basic automatic bed leveling (ABL).
