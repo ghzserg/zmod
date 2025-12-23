@@ -6,7 +6,7 @@
 | :--- | :---: | :---: |
 | **Requires external server** | – | + |
 | **Remote printer control** | – (possible via [zmod.link](https://zmod.link)) | + |
-| **Timelapse creation** | – (possible via [timelapse plugin](https://github.com/ghzserg/timelapse/)) | + |
+| **Timelapse creation** | – (possible via [timelapse](https://github.com/ghzserg/timelapse/)) | + |
 | **Print event notifications** (start, pause, cancel, finish) | + | + |
 | **Filament sensor notifications** | + | + |
 | **Print progress percentage** | + | + |
