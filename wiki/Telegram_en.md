@@ -12,6 +12,7 @@
 | **Print progress percentage** | + | + |
 | **Multiple printers via a single bot** | + | – |
 | **Notifications via other services** | + | – |
+| **Splooman** | - | + |
 
 [@zmod_help_bot](http://t.me/zmod_help_bot)
 
