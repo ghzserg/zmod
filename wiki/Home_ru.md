@@ -1,7 +1,7 @@
 - [https://ghzserg.github.io/](https://ghzserg.github.io/)
 - [@zmod_help_bot](http://t.me/zmod_help_bot)
 
-* [Установка/Первоначальная калибровка](https://github.com/ghzserg/zmod/wiki/Setup)
+* [Установка](https://github.com/ghzserg/zmod/wiki/Setup)
 * [Первоначальная калибровка принтера](https://github.com/ghzserg/zmod/wiki/Setup)
 
 * [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
