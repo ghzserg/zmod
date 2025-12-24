@@ -945,6 +945,8 @@ detection_length: 8
 
 Если не получается исправить, то [нужно создать тикет](https://github.com/ghzserg/zmod/wiki/Help).
 
+[Родные конфиги](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
+
 <div align="center">
 
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)

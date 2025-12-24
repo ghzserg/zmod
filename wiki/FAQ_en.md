@@ -837,6 +837,8 @@ To see which one:
 
 If you can't fix it, [you need to create a ticket](https://github.com/ghzserg/zmod/wiki/Help_en).
 
+[Native configs](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
+
 <div align="center">
 
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#faq)
