@@ -779,18 +779,31 @@ detection_length: 8
 
 Filament jam detected (IFS)
 
-For AD5X, you need to calibrate the IFS sensor steps by trial and error. Enter this in `mod_data/user.cfg`
+For AD5X, the IFS motion sensor step count must be calibrated manually. Add the following to `mod_data/user.cfg`:
 
-Increase this number. For some, the standard 10 is enough, but some IFS only work correctly at 17.
 ```
 [zmod_ifs_motion_sensor ifs_motion_sensor]
 detection_length: 8
 ```
 
-Filament stalling in IFS can also be related to:
-- There's 1 filament in the extruder, but 2 filament is being pulled out
-- A filament is inserted into the extruder, but it already contains an old filament
-- 4-in-1 modules and their tubes have different lengths, so you need to adjust the ```nozzle_cleaning_length``` parameter in ```mod_data/filament``` to 70 or higher. [More](https://github.com/ghzserg/zmod/wiki/AD5X_en#basic-parameters-most-frequently-adjusted)
+Increase this value—some printers work fine with the default `10`, while others require up to `17` for stable IFS operation.
+
+Additionally, filament stoppage in IFS may be caused by:
+
+- Extruder is loaded with spool 1, but spool 2 is being pulled out — use [`SET_EXTRUDER_SLOT`](https://github.com/ghzserg/zmod/wiki/AD5X_en#5-how-to-manually-tell-the-printer-which-spool-is-loaded) to sync the extruder’s current slot.
+- New filament is being inserted, while old filament remains inside the extruder.
+- The 4-in-1 modules and their tubes have different lengths, requiring adjustment of `nozzle_cleaning_length` in `mod_data/filament.json`. Set it to **70 or higher**.
+  ➜ [More details](https://github.com/ghzserg/zmod/wiki/AD5X_en#basic-parameters-most-frequently-adjusted)
+
+The issue may also stem from the **inability to unlock the filament in the IFS channel**.
+
+Mechanical causes include:
+- Plastic shavings stuck on the pinch roller shaft.
+- Spring disengaged from the IFS channel lever.
+
+Solution: Remove debris, disassemble the mechanism, and reinstall components correctly.
+
+After repairs, test printing and filament lock/unlock behavior using the [IFS commands](https://github.com/ghzserg/zmod/wiki/AD5X_en#10-ifs-commands).
 
 <div align="center">
 
