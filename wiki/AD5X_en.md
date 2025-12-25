@@ -415,21 +415,21 @@ Restart the printer — everything is ready.
 
 For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
 
-- IFS_F10 - Insert filament
-- IFS_F11 - Remove filament
-- IFS_F13 - IFS state
-- IFS_F15 - Reset driver
-- F18 - Filament purge everywhere
-- F23 - Mark filament as inserted
-- F24 - Filament clamp
-- F39 - Filament purge
-- F112 - Stop filament feed
-- PURGE_PRUTOK_IFS - Purge filament from IFS to the extruder
-- REMOVE_PRUTOK_IFS - Removes filament by filament number
-- INSERT_PRUTOK_IFS - Insert filament into IFS by filament number
-- SET_CURRENT_PRUTOK - Tell klipper which filament is currently active
-- ANALOG_PRUTOK - Load an analog rod
-- IFS_MOTION - Check if the filament has stopped or run out
+- `IFS_F10` - Insert filament
+- `IFS_F11` - Remove filament
+- `IFS_F13` - IFS state
+- `IFS_F15` - Reset driver
+- `F18` - Filament purge everywhere
+- `F23` - Mark filament as inserted
+- `F24` - Filament clamp
+- `F39` - Filament purge
+- `F112` - Stop filament feed
+- `PURGE_PRUTOK_IFS` - Purge filament from IFS to the extruder
+- `REMOVE_PRUTOK_IFS` - Removes filament by filament number
+- `INSERT_PRUTOK_IFS` - Insert filament into IFS by filament number
+- `SET_CURRENT_PRUTOK` - Tell klipper which filament is currently active
+- `ANALOG_PRUTOK` - Load an analog rod
+- `IFS_MOTION` - Check if the filament has stopped or run out
 
 IFS module parameters:
 - debug - debugging (True, *False*)
