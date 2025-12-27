@@ -239,6 +239,8 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### Как работает Z-Offset
 
+Прочитайте статью "[Как работает Z-Offset на нашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5)"
+
 При работе с экраном мод никак не вмешивается в работу z-offset.
 
 Offset при работе с родным экраном и при работе без родного экрана не совпадает и каждый живет своей жизнью и настраивается отдельно. 
