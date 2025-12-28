@@ -78,6 +78,66 @@ RAM usage for stock cameras:
 > - [What is an Alternative Camera?](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-an-alternative-camera)
 > - [I installed the printer, and ZMOD hid my camera! I saw her in Orca-FF, and now she's gone!](https://github.com/ghzserg/zmod/wiki/FAQ_en#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
+#### Camera Setup
+
+**Basic Parameters**
+
+| Parameter | Description | Default Value |
+|---|---|---|
+| `WIDTH` | Image width | 640 |
+| `HEIGHT` | Image height | 480 |
+| `FPS` | Frames per second | 20 |
+| `VIDEO` | Camera device | video0 |
+| `FS` | Fix problematic cameras (1 – yes, 0 – no) | 0 |
+| `STREAMER` | Program for handling the camera stream | auto |
+| `FORMAT` | Image format (for ustreamer only) | MJPEG |
+
+**What is a Streamer?**
+
+A streamer is a program that takes the image from the camera and displays it in a browser.
+
+**Two options are available:**
+
+- **mjpg_streamer** – a simple program, works only with MJPG cameras
+- **ustreamer** – more powerful but uses more memory; supports various cameras
+
+The `STREAMER=auto` parameter will automatically choose the suitable streamer.
+
+**Image Formats (for ustreamer only)**
+
+You can choose: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG.
+
+The default is MJPEG.
+
+**Command Examples**
+
+Simple start of camera video0 via mjpg_streamer:
+```
+CAMERA_ON VIDEO=video0
+```
+
+Start camera video0 via ustreamer with custom settings:
+```
+CAMERA_ON VIDEO=video0 STREAMER=ustreamer FORMAT=YUYV WIDTH=640 HEIGHT=480
+```
+
+**Where to View the Image?**
+
+Open in your browser: `http://printer_ip_address:8080`
+
+There you can adjust brightness, contrast, and other settings.
+
+**Troubleshooting**
+
+Camera not detected?
+Run:
+```
+CAMERA_ON VIDEO=video99
+```
+The program will show a list of available cameras.
+
+**Logs (error records)** are located in the folder: `log/cam/`
+
 <div align="center">
 
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
