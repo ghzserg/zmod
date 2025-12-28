@@ -56,6 +56,8 @@ Parameters:
 - `FPS` — frames per second (default: `20`)
 - `VIDEO` — video device (default: `video0`)
 - `FS` — `1` = enable frame size limiter for unstable cameras, `0` = disable (default: `0`)
+- `STREAMER` - what streamer to use (auto, mjpg_streamer, ustreamer)
+- `FORMAT` - Image format for ustreamer: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG; default: MJPEG
 
 *Disable the camera on the printer's screen before calling this macro.*
 
