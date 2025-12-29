@@ -58,6 +58,8 @@ Download to flash drive
 
 # Установка полной прошивки на AD5X
 
+**Это раскирпичиватель**
+
 Установка занимает много времени до часа.
 
 Загрузите на флешку 
@@ -76,6 +78,8 @@ Download to flash drive
 - After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 # Установка полной прошивки на FF5M
+
+**Это раскирпичиватель**
 
 Установка занимает много времени до часа.
 
