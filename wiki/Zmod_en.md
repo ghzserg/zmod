@@ -148,11 +148,6 @@ The program will show a list of available cameras.
 ### CAMERA_OFF
 
 Disable alternative camera implementation.
-Parameters:
-- `WIDTH` — image width (default: `640`)
-- `HEIGHT` — image height (default: `480`)
-- `FPS` — frames per second (default: `20`)
-- `VIDEO` — video device (default: `video0`)
 
 <div align="center">
 
