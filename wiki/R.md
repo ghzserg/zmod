@@ -49,6 +49,8 @@
 
 # Installing full firmware on AD5X
 
+**This is an un-bricker.**
+
 Installation takes a long time, up to an hour.
 
 Download to flash drive
@@ -68,6 +70,8 @@ Download to flash drive
 - После обновления, если вам надо перешить MCU установите [AD5X](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 # Installing full firmware on FF5M
+
+**This is an un-bricker.**
 
 Installation takes a long time, up to an hour.
 
