@@ -1,6 +1,6 @@
 #!/bin/sh
 
-fix_mcu()
+fix_loop()
 {
     CHECH_ARCH=`uname -m`
     if [ "${CHECH_ARCH}" == "armv7l" ]; then
@@ -14,12 +14,9 @@ fix_mcu()
     fi
     fi
 
-    echo "Start find 1"
-    sync
-    find ${CONFIG_DIR} -name Update -exec rm -f {} \;
-    sync
-    echo "Start find 2"
-    find ${CONFIG_DIR} -name Update
+    if [ "${CHECH_ARCH}" == "armv7l" ]; then
+        find /etc/init.d/ -maxdepth 1 -type l -exec rm -v {} \; ||  echo "X not found"
+    fi
     sync
     echo "Rm /mnt/flashforge_init.sh"
     rm -f /mnt/flashforge_init.sh
@@ -50,4 +47,4 @@ fix_mcu()
     reboot -f
 }
 
-fix_mcu &> /mnt/fix_mcu.log
+fix_loop &> /mnt/fix_loop.log
