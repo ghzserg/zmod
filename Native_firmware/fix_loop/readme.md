@@ -1,5 +1,6 @@
 ##### FIX_LOOP
-**Resolves persistent MCU update issues**
+
+## Fixes brakes on startup
 
 1. **Format USB drive** as FAT32
 2. **Download and save** the `flashforge_init.sh` file to USB:
@@ -10,7 +11,7 @@
 6. **Wait for automatic reboot** (do not interrupt)
 7. **Remove USB drive** after reboot completes
 
-## Исправляет тормозов при включении
+## Исправляет тормоза при включении
 
 - Отформатируйте USB в FAT32
 - Сохраните на usb flash файл `flashforge_init.sh`
