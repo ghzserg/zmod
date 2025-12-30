@@ -88,7 +88,7 @@
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
 
-    Нужно дойти до последнгего эжкрана и нажать `Ok` или `Reboot`. Если этого не сделать, то это окно будет появляться при каждой загрузке
+    Нужно дойти до последнгего экрана и нажать `Ok` или `Reboot`. Если этого не сделать, то это окно будет появляться при каждой загрузке
 
     <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
 
