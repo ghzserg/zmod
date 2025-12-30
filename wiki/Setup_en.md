@@ -72,18 +72,47 @@
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
     If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
-12. Go to Fluidd/Mainsail → Settings → Software Update. Click Check Updates and install the latest ZMOD updates.
-    <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
-        
-    If it shows a lot of errors, that's normal. Plugins aren't included in the firmware and are downloaded separately. Click 'Check for updates'.
-    Then restore and update all modules one by one. The printer will reboot during this process.
+12. Translate the mod into your language.
+
+    <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
     
-    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
-13. Translate the mod into your language. In the console, type ```LANG LANG=es``` 
+    Or type in the console: ```LANG LANG=en```
+    
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
-14. Activate [plugin with recommendations](https://github.com/ghzserg/recommend/blob/main/Readme.md) ```ENABLE_PLUGIN name=recommend``` 
+
+13. Configure the mod
+
+    <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
+    
+    This shows parameters used at print start, print end, and global settings. It is recommended to just review the settings — do not change them unless necessary. The description for each parameter can be [found here](https://github.com/ghzserg/zmod/wiki/Global_en).
+
+    <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
+
+    You must proceed to the last screen and press `Ok` or `Reboot`. If you skip this, the window will appear on every boot.
+
+    <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
+
+    To display this window again later, type in the console: `GLOBAL`
+
+14. Go to `Settings` → `Firmware Updates`  
+15. Click `Check for Updates`, and wait until the check completes  
+16. Click **Update** and update all components.
+
+    <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+
+    If many errors appear — this is normal. Plugins are not part of the firmware and are downloaded separately. Click `Check for Updates` again, then restore and update each module individually. The printer will reboot during the process.
+
+    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
+
+17. Enable the [recommendations plugin](https://github.com/ghzserg/recommend/blob/main/Readme.md)
+
+    <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
+
+    Or enter in the console: ```ENABLE_PLUGIN name=recommend```
+
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
-12. [Send Files via "Octo/Klipper" for Printing](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
+
+18. [Send Files via "Octo/Klipper" for Printing](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
 
     You **need to switch to the Octo/Klipper protocol**:
     - Protocol: `Octo/Klipper`
@@ -92,7 +121,7 @@
     
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
-13. The entire start code should be replaced with this:
+19. The entire start code should be replaced with this:
     ```
     START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
     M190 S[bed_temperature_initial_layer_single]
@@ -113,11 +142,11 @@
     ```SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}``` 
     
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
-14. [Enable MD5 verification](https://github.com/ghzserg/zmod/wiki/Recomendations_en#enable-md5-checksum-control)
+20. [Enable MD5 verification](https://github.com/ghzserg/zmod/wiki/Recomendations_en#enable-md5-checksum-control)
 
     <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
-15. [Read the recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
-16. [Read the FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
+21. [Read the recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
+22. [Read the FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
 
 ### AD5X Warning
 
