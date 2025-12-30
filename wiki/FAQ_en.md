@@ -903,7 +903,12 @@ Solution:
 
 This is a Klipper error.
 
-To see which one:
++Most often it is corrected by the following simple actions:
+- Turn off the power of the printer
+- Wait 10 seconds
+- Power on the printer
+
+To see what exactly is the error:
 - Open Fluidd/Mainsail
 - Go to the console and read the error text
 - Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and enter the error text or look up the description in the documentation yourself
