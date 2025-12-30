@@ -73,9 +73,29 @@
     
     Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
      
-12. Перейти в `Настройки` -> `Обновления ПО` 
-13. Нажать `Проверить обновления`, подождать пока обновления проверятся
-14. Нажать **Обновление** и обновить все компоненты.
+12. Переведите мод на ваш язык.
+    
+    <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
+    
+    Или в консоли наберите ```LANG LANG=ru```
+    
+    <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+13. Настройте мод
+    
+    <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
+    
+    Тут отображаются параметры, которые используются при старте, окончании печтати и глобальные праметры. Рекомендуется просто прочитать настройки, но не менять их. Значение каждой настройки можно [посмотреть тут](https://github.com/ghzserg/zmod/wiki/Global_ru)
+
+    <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
+
+    Нужно дойти до последнгего экрана и нажать `Ok` или `Reboot`. Если этого не сделать, то это окно будет появляться при каждой загрузке
+
+    <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
+
+    Если хотите  снова увидеть это окно - то наберите к консоли `GLOBAL`
+14. Перейдите в `Настройки` -> `Обновления ПО` 
+15. Нажмите `Проверить обновления`, подождите пока обновления проверятся
+16. Нажать **Обновление** и обновить все компоненты.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
     Если показывает много ошибок, то это нормально. Плагины не входят в состав прошивки и скачиваются отдельно. Нужно нажать `Проверить обновления`.
@@ -83,9 +103,12 @@
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
-16. Переведите мод на ваш язык. В консоли наберите ```LANG LANG=ru```
-    <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
-17. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) ```ENABLE_PLUGIN name=recommend```
+17. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
+    
+    <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
+
+    Или введите в консоли ```ENABLE_PLUGIN name=recommend```
+
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 18. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)  
     Весь стартовый код нужно заменить на этот:
