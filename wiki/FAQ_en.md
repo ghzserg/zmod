@@ -903,7 +903,7 @@ Solution:
 
 This is a Klipper error.
 
-+Most often it is corrected by the following simple actions:
+Most often it is corrected by the following simple actions:
 - Turn off the power of the printer
 - Wait 10 seconds
 - Power on the printer
