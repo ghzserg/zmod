@@ -180,7 +180,9 @@ Works automatically, but additional macros are available for Gcode:
 - `ZCONTROL_STATUS` - check status
 - `ZCONTROL_PAUSE` - pause on trigger (only after command queue clears; avoid using on initial layers)
 - `ZCONTROL_ABORT` - abort Klipper on trigger
-- `ZCONTROL_AUTO` - stop the Klipper when working (if the height z < 10), or call PAUSE when z >= 10
+- `ZCONTROL_AUTO` - On trigger, stop Klipper (if Z height < `ZCONTROL_Z`) or call PAUSE if z >= `ZCONTROL_Z`
+- `ZCONTROL_Z Z=10` - Set Z height.
+- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - Save Z height. If you don't want to enable pause, set ```SAVE_ZMOD_DATA ZCONTROL_Z=230```
 
 To enable nozzle control on initial layers, add `ZCONTROL_PAUSE` in the slicer at the desired layer.
 
