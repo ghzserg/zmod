@@ -357,7 +357,7 @@ Write this number to the file `/rw/Adventurer5M.json`. The bin is calibrated.
 
 [Alternative version of the instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
 
-1. Enter the command `_REZGEM_PRUTOK` — the head will move to the knife.
+1. Enter the command `_CUT_PRUTOK` — the head will move to the knife.
 2. You need use GCODE: ```G1 Y-7.7``` ```G1 X-1.7```, move the head until the knife activates.
 3. Check what X and Y coordinates you have.
 4. For **Y**:
