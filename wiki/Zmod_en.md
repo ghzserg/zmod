@@ -65,7 +65,7 @@ To enable the camera, use ```CAMERA_ON VIDEO=video0``` or ```CAMERA_ON VIDEO=vid
 
 <img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
 
-If the camera does not work, then look at the logs `mod_data/cam.log` and `mod_data/camera.log`
+If the camera does not work, then look at the logs `mod_data/log/cam`
 
 RAM usage for stock cameras:
 - 640x480: 2.9 MiB
@@ -77,6 +77,8 @@ RAM usage for stock cameras:
 > [!NOTE]
 > - [What is an Alternative Camera?](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-an-alternative-camera)
 > - [I installed the printer, and ZMOD hid my camera! I saw her in Orca-FF, and now she's gone!](https://github.com/ghzserg/zmod/wiki/FAQ_en#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+
+`Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
 #### Camera Setup
 

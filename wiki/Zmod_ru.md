@@ -64,7 +64,7 @@
 
 <img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
 
-Если камера не работает, то смотрите логи `mod_data/cam/`
+Если камера не работает, то смотрите логи `mod_data/log/cam/`
 
 Потребление оперативной памяти на  стоковой камере:
 - 640x480 - 2.9 MiB
@@ -75,6 +75,8 @@
 
 - [Что такое альтернативная камера?](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%B0%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0)
 - [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80-%D0%B0-zmod-%D1%81%D0%BF%D1%80%D1%8F%D1%82%D0%B0%D0%BB-%D0%BC%D0%BE%D1%8E-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83-%D0%B2-orca-ff-%D1%8F-%D0%B5%D0%B5-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB-%D0%B0-%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-%D0%BE%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%BB%D0%B0)
+
+`Camera Off Waiting...` - эта надпись выводится, если поток камеры еще недоступен. Камера запускается после запуска Klipper - во время вывода информации о глобальных параметрах
 
 #### Настройка камеры
 
