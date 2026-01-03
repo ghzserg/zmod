@@ -15,6 +15,7 @@ fix_loop()
     fi
 
     if [ "${CHECH_ARCH}" == "armv7l" ]; then
+        echo >>/opt/config/mod_data/camera.conf
         find /etc/init.d/ -maxdepth 1 -type l -exec rm -v {} \; ||  echo "X not found"
     fi
     sync
