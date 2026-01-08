@@ -789,6 +789,10 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 [[/images/ff.jpg]]
 
+Try restoring the firmware by installing a full firmware:
+- [FF5M](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ff5m)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ad5x)
+
 **Steps:**
 1. **Unplug the printer.**
 2. Prepare a **3.3V UART/USB converter** (ensure jumper is set to 3.3V).
