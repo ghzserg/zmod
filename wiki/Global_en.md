@@ -291,23 +291,48 @@ Example: `SAVE_ZMOD_DATA USE_KAMP=1`
 </div>
 
 ---
+
 ##### MESH_TEST
 
-Test bed mesh before printing: 0 (no), 1 (yes), 2 (test, in case of mismatch, run KAMP) (1).
+Test the bed mesh before printing:
+- 0 - No
+- 1 - Test WITHOUT Z-Offset auto-tuning (default)
+- 2 - Test WITHOUT Z-Offset auto-tuning, if the mesh doesn't match, run KAMP
+- 3 - Test WITH Z-Offset auto-tuning, without nozzle cleaning
+- 4 - Test WITH Z-Offset auto-tuning, without nozzle cleaning, if the mesh doesn't match, run KAMP
+- 5 - Test WITH Z-Offset auto-tuning, with nozzle cleaning
+- 6 - Test WITH Z-Offset auto-tuning, with nozzle cleaning, if the mesh doesn't match, run KAMP
 
-If KAMP smart purge is used, heating occurs near the purge area instead of a corner.
+**Z-Offset Auto-Tuning**
 
-Test procedure:
-- Raise 5mm
-- Move X +3mm
-- Retract
-- Probe
-- Raise 5mm
-- Unretract
+Algorithm for automatic Z-Offset calibration:
+1.  **Source data:** The printer's memory stores a bed mesh (typically 25 points) obtained during the last leveling procedure.
+2.  **Preparation (optional):**
+    *   If nozzle cleaning is activated, it is heated to the working temperature, wiped on the bed, and cooled down to 140°C.
+3.  **Measurement point selection:**
+    *   If the nozzle was cleaned — the **center** point of the mesh is used.
+    *   If not — a **free** point not occupied by the print model is selected.
+4.  **Measurement and comparison:**
+    *   A new probe measurement is performed at the selected point.
+    *   The obtained value is compared with the value saved in the bed mesh.
+5.  **Offset correction:**
+    *   If the discrepancy is **less than 0.6 mm**, the difference is added to the current Z-Offset value.
+    *   If the discrepancy is **greater than or equal to 0.6 mm**, the system considers the saved mesh outdated and, if the settings allow, automatically initiates a bed re-leveling procedure (KAMP).
 
-The test checks if the Z value falls within the mesh range ±0.21mm. If not, a warning is issued and the print aborts.
+**Without Z-Offset Auto-Tuning**
 
-*This is a rough check and not foolproof.*
+Bed mesh validation algorithm:
+1.  **Measurement:** A standard probe measurement is performed at the current point.
+2.  **Validation:** The obtained Z value is checked for consistency with the loaded mesh.
+3.  **Criterion:** The value must be within the range from (mesh minimum - 0.21 mm) to (mesh maximum + 0.21 mm).
+4.  **Result:**
+    *   **Success:** The mesh is considered correct, printing continues.
+    *   **Failure:** A warning is issued and printing stops or, if settings allow, automatically initiates a bed re-leveling procedure (KAMP).
+
+**Notes:**
+*   This check is a rough estimate. It is intended to detect critical errors, for example, when a mesh taken for a PEI sheet is loaded for thick glass and vice versa.
+*   **Do not rely on this check as absolute protection.**
+*   When using smart cleaning (KAMP), the heating wait occurs near the cleaning location, not in the corner of the bed.
 
 Example: `SAVE_ZMOD_DATA MESH_TEST=0`
 
