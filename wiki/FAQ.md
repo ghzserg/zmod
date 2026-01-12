@@ -55,7 +55,7 @@ ZMOD НЕ основан на KlipperMod, и НЕ является его раз
 #### Что есть в KlipperMod и чего нет в ZMOD:
 - [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - экран для принтера. В ZMOD вместо KlipperScreen родной экран или GuppyScreen
 - [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - в ZMOD используется Телеграм бот или [плагин TimeLapse](https://github.com/ghzserg/timelapse/)
-- Настройка сети через iwd/wpa_supplicant( в случае с guppyscreen) - в zMod настройка сети через родной экран, запуск сети возможен и без родного экрана
+- Настройка сети через iwd/wpa_supplicant( в случае с guppyscreen) - в zMod настройка сети через родной экран, запуск сети возможен и в режиме без родного экрана
 
 #### Что есть в ZMOD и чего нет в KlipperMod:
 - Поддержка [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)
@@ -193,7 +193,7 @@ M104 S[nozzle_temperature_initial_layer]
 
 Если работаете с родным экраном, то ничего менять не надо. 
 
-При работе без родного экрана/Guppy (а также  рекомендуется и при работе с экраном) заменить весь стартовый код:
+При работе в режиме без родного экрана/Guppy (а также  рекомендуется и при работе с экраном) заменить весь стартовый код:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
@@ -243,7 +243,7 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 При работе с экраном мод никак не вмешивается в работу z-offset.
 
-Offset при работе с родным экраном и при работе без родного экрана не совпадает и каждый живет своей жизнью и настраивается отдельно. 
+Offset при работе с родным экраном и при работе в режиме без родного экрана не совпадает и каждый живет своей жизнью и настраивается отдельно.
 
 Используйте ```LOAD_ZOFFSET_NATIVE``` для копирования Z-offset с родного экрана в режим без родного экрана.
 
@@ -267,7 +267,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 - `MESH_DATA` - по умолчанию
 - `DEFAULT` - если установлена галочка `leveling` (построение карты стола перед печатью), а после печати карта `DEFAULT` всегда  удаляется. 
 
-При работе без родного экрана используется карта:
+При работе в режиме без родного экрана используется карта:
 - `auto` - она автоматически подгружается при включении принтера. 
 
 Если вы хотите использовать другую карту при печати(например `moya_karta_na_80_gradusov`), то:
@@ -303,7 +303,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 Параметр `PRINT_LEVELING`:
 - Снимает карту стола при каждой печати
 - Если работаете с экраном, то карту  стола снимает родной экран, так как если бы выбрали файл с экрана и нажали галочку `Выравнивание`. Если параметр равен 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1`, то когда вы отправляете файлы через Orca/Fluidd/Mainsail, принтер считает, что вы с родного экрана выбрали файл для печати и поставили галочку `Выравнивание`. При каждой печати в этом случае будет сниматься карта стола.
-- Если работаете без родного экрана и используете макрос [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) в начальном G-коде, то при каждой печати тоже будет сниматься карта стола
+- Если работаете в режиме без родного экрана и используете макрос [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) в начальном G-коде, то при каждой печати тоже будет сниматься карта стола
 
   Для включения этой возможности нужно настроить один раз макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data), параметр [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Global_ru#zshaper)
 
@@ -450,7 +450,7 @@ M104 S[nozzle_temperature_initial_layer]
 
 Именно поэтому необходимо менять стартовый и конечный G код. *лось*
 
-Также, при работе без родного экрана, принтер не выставляет Z-offset записанный на экране, и его необходимо передавать как параметр в [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) или через глобальные параметры. [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
+Также, при работе в режиме без родного экрана, принтер не выставляет Z-offset записанный на экране, и его необходимо передавать как параметр в [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) или через глобальные параметры. [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
 
 Прочитайте [особенности работы без родного экрана](#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B1%D0%B5%D0%B7-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0).
 

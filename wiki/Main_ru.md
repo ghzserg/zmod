@@ -56,8 +56,8 @@
 - SKIP_LEVELING - не строить карту стола ни при каком условии. Сильнее FORCE_KAMP и FORCE_LEVELING (False)
 - FORCE_KAMP - запустить построение адаптивной карты стола (False) *Рекомендуется также поставить `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.*
 - Z_OFFSET - Установить Z офсет (0.0)
-- INTERNAL - Для PRO версии при работе без родного экрана, 1 - включить внутреннюю рециркуляцию (0)
-- EXTERNAL - Для PRO версии при работе без родного экрана, 1 - включить внешнюю рециркуляцию (0)
+- INTERNAL - Для PRO версии при работе в режиме без родного экрана, 1 - включить внутреннюю рециркуляцию (0)
+- EXTERNAL - Для PRO версии при работе в режиме без родного экрана, 1 - включить внешнюю рециркуляцию (0)
 
 *Любой вызов калибровки FORCE_KAMP или FORCE_LEVELING вызывает [CLEAR_NOZZLE](https://github.com/ghzserg/zmod/wiki/Main_ru#CLEAR_NOZZLE)*
 
@@ -69,7 +69,7 @@ START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_tempe
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
-Пример для Orca без родного экрана
+Пример для Orca в режиме без родного экрана
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
@@ -97,7 +97,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - [FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) - если 1 (по умолчанию 1) - проверять MD5 сумму файла, при ошибке - удалять файл. *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) или [addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте  добавить право исполнения на файл `chmod +x addMD5.sh`) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
 Его надо скачать к себе  на компьютер, а потом в Orca прописать. Профиль процесса -> Прочее -> Скрипты пост обработки. ```С:\путь_до_файла\addMD5.bat;```
 - [DISABLE_SKEW](https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew) - 1 - запретить SKEW коррекцию, 0 - загрузить профиль `skew_profile`(будет вызван макрос `SKEW_PROFILE LOAD=skew_profile`) (1)
-- AUTO_REBOOT - автоматическая перезагрузка принтера после окончания печати 0-нет, 1-да, 2-FIRMWARE_RESTART(только без родного экрана, с экраном REBOOT) (0).
+- AUTO_REBOOT - автоматическая перезагрузка принтера после окончания печати 0-нет, 1-да, 2-FIRMWARE_RESTART(только в режиме без родного экрана, с экраном REBOOT) (0).
 - CLOSE_DIALOGS - автоматически закрывать диалоги по окончанию и отмене печати 0-нет, 1-да медленно, 2-да быстро *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> **включить ползунок** "Только локальные сети"* (0).
 - STOP_MOTOR - Автоматически выключать моторы после печати/отмены печати через 25 секунд 0-нет, 1-да (1).
 - MIDI_START - играть MIDI при запуске печати ("")
@@ -125,7 +125,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 Замена родного конечного g-code
 
 #### Это не параметры END_PRINT, это глобальные флаги/параметры, которые ставится через [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#end_print)
-- AUTO_REBOOT - автоматическая перезагрузка принтера после окончания печати 0-нет, 1-да,2-FIRMWARE_RESTART(только без родного экрана, с экраном REBOOT) (0).
+- AUTO_REBOOT - автоматическая перезагрузка принтера после окончания печати 0-нет, 1-да,2-FIRMWARE_RESTART(только в режиме без родного экрана, с экраном REBOOT) (0).
 - CLOSE_DIALOGS - автоматически закрывать диалоги по окончанию и отмене печати 0-нет, 1-да медленно, 2-да быстро *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> **включить ползунок** "Только локальные сети"* (0).
 - STOP_MOTOR - Автоматически выключать моторы после печати/отмены печати через 25 секунд 0-нет, 1-да (1)
 - MIDI_END - играть MIDI при завершении печати ("")
