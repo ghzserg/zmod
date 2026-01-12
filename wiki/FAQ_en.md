@@ -782,6 +782,7 @@ Here are some errors that depend on the MCU:
 - MCU Protocol error
 - Unknown temperature sensor flashforge_loadcell
 - Required MCU command
+- flashforge_loadcell: Required MCU command 'flashforge_loadcell_h1' is not available
 
 The essence of all these errors is that the Klipper version does not match the MCU version.
 

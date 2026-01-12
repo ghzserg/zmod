@@ -893,6 +893,7 @@ WeightValue - это значение на тензодатчиках в гра�
 - MCU Protocol error
 - Unknown temperature sensor flashforge_loadcell
 - Required MCU command
+- flashforge_loadcell: Required MCU command 'flashforge_loadcell_h1' is not available
 
 Суть всех этих ошибок в том, что версия Klipper не соответсвует версии MCU.
 
