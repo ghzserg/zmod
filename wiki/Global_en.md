@@ -298,26 +298,23 @@ Test the bed mesh before printing:
 - 0 - No
 - 1 - Test WITHOUT Z-Offset auto-tuning (default)
 - 2 - Test WITHOUT Z-Offset auto-tuning, if the mesh doesn't match, run KAMP
-- 3 - Test WITH Z-Offset auto-tuning, without nozzle cleaning
-- 4 - Test WITH Z-Offset auto-tuning, without nozzle cleaning, if the mesh doesn't match, run KAMP
-- 5 - Test WITH Z-Offset auto-tuning, with nozzle cleaning
-- 6 - Test WITH Z-Offset auto-tuning, with nozzle cleaning, if the mesh doesn't match, run KAMP
+- 3 - Test WITH Z-Offset auto-tuning, with nozzle cleaning
+- 4 - Test WITH Z-Offset auto-tuning, with nozzle cleaning, if the mesh doesn't match, run KAMP
 
 **Z-Offset Auto-Tuning**
 
 Algorithm for automatic Z-Offset calibration:
 1.  **Source data:** The printer's memory stores a bed mesh (typically 25 points) obtained during the last leveling procedure.
-2.  **Preparation (optional):**
-    *   If nozzle cleaning is activated, it is heated to the working temperature, wiped on the bed, and cooled down to 140°C.
+2.  **Preparation:**
+    *   Nozzle is heated to the working temperature, wiped on the bed, and cooled down to 150°C.
 3.  **Measurement point selection:**
-    *   If the nozzle was cleaned — the **center** point of the mesh is used.
-    *   If not — a **free** point not occupied by the print model is selected.
+    *   The **center** point of the mesh is used.
 4.  **Measurement and comparison:**
     *   A new probe measurement is performed at the selected point.
     *   The obtained value is compared with the value saved in the bed mesh.
 5.  **Offset correction:**
-    *   If the discrepancy is **less than 0.6 mm**, the difference is added to the current Z-Offset value.
-    *   If the discrepancy is **greater than or equal to 0.6 mm**, the system considers the saved mesh outdated and, if the settings allow, automatically initiates a bed re-leveling procedure (KAMP).
+    *   If the discrepancy is **less than 0.3 mm**, the difference is added to the current Z-Offset value.
+    *   If the discrepancy is **greater than or equal to 0.3 mm**, the system considers the saved mesh outdated and, if the settings allow, automatically initiates a bed re-leveling procedure (KAMP).
 
 **Without Z-Offset Auto-Tuning**
 
