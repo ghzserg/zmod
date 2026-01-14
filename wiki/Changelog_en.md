@@ -1,5 +1,6 @@
 # Changelog
 - [Version History](#version-history)
+  - [Version 1.6.5](#version-165)
   - [Version 1.6.4](#version-164)
   - [Version 1.6.3](#version-163)
   - [Version 1.6.2](#version-162)
@@ -40,6 +41,12 @@
 ---
 
 ## Version History
+
+### Version 1.6.5
+14.01.2025
+* Updated Fluidd/ Mainsail / Clipper
+* Additional camera settings are available
+* Automatic Z offset selection
 
 ### Version 1.6.4
 11.12.2025
