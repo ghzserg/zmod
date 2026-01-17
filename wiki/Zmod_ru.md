@@ -259,7 +259,19 @@ CAMERA_ON VIDEO=video99
 
 ### STOP_ZMOD
 
-Выгрузить из памяти moonraker и fluidd/Mainsail. Телеграм бот тоже  перестанет работать
+Выгрузить из памяти guppy, moonraker и fluidd/Mainsail. Телеграм бот тоже  перестанет работать
+
+Параметры:
+- GUPPY (0 - не выгружать, 1 - выгружать)
+- MOONRAKER (0 - не выгружать, 1 - выгружать)
+- HTTP (0 - не выгружать, 1 - выгружать)
+
+Пример:
+```
+STOP_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+```
+
+Если эту строку прописать в старотовый код, то после начала печати GUPPY будет выгружен из памяти
 
 <div align="center">
 
@@ -271,7 +283,19 @@ CAMERA_ON VIDEO=video99
 
 ### START_ZMOD
 
-Включить обратно moonraker и fluidd/Mainsail после STOP_ZMOD.
+Включить обратно guppy, moonraker и fluidd/Mainsail после STOP_ZMOD.
+
+Параметры:
+- GUPPY (0 - не загружать, 1 - выгружать)
+- MOONRAKER (0 - не загружать, 1 - выгружать)
+- HTTP (0 - не загружать, 1 - выгружать)
+
+Пример:
+```
+START_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+```
+
+Если эту строку прописать в конечный код, то после окончания печати GUPPY будет запущен
 
 <div align="center">
 
