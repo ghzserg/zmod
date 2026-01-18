@@ -43,7 +43,7 @@
 ## Version History
 
 ### Version 1.6.5
-14.01.2025
+14.01.2026
 * Updated Fluidd/ Mainsail / Clipper
 * Additional camera settings are available
 * Automatic Z offset selection
