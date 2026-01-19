@@ -306,7 +306,7 @@ Test the bed mesh before printing:
 Algorithm for automatic Z-Offset calibration:
 1.  **Source data:** The printer's memory stores a bed mesh (typically 25 points) obtained during the last leveling procedure.
 2.  **Preparation:**
-    *   Nozzle is heated to the working temperature, wiped on the bed, and cooled down to 150°C.
+    *   Nozzle is heated to the working temperature, wiped on the bed, and cooled down to 151°C.
 3.  **Measurement point selection:**
     *   The **center** point of the mesh is used.
 4.  **Measurement and comparison:**
