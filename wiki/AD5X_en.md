@@ -62,7 +62,7 @@ The printer has 4 spools (№1, №2, №3, №4). Only spools №1 and №3 are
 
 <img width="800" height="480" alt="color" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" />
 
-*   `Extruder: 1 (PETG/Orange)` – This means the printer is currently loaded with orange PLA filament from spool №1.
+*   `Extruder: 1 (PETG/Orange)` – This means the printer is currently loaded with orange PETG filament from spool №1.
 *   `IFS: True` – The automatic filament feeding system is active.
 
 **Now select the spool you want to work with (e.g., spool 2):**
