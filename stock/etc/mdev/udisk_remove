@@ -1,3 +1,0 @@
-#!/bin/sh
-umount -l /mnt/usb/$MDEV*
-rm -rf /mnt/usb/$MDEV*

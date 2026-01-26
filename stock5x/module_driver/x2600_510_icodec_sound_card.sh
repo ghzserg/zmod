@@ -1,1 +1,0 @@
-insmod x2600_510_icodec_sound_card.ko 

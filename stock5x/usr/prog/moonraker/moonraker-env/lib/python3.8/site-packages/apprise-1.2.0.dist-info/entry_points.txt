@@ -1,3 +1,0 @@
-[console_scripts]
-apprise = apprise.cli:main
-
