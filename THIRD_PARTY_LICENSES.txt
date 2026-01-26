@@ -1,0 +1,268 @@
+THIRD_PARTY_LICENSES.txt
+========================
+
+ENGLISH SECTION
+===============
+
+1. Klipper
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: 3D printer firmware with motion control
+URL: https://github.com/Klipper3d/klipper
+
+2. Moonraker
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: API server for Klipper
+URL: https://github.com/Arksine/moonraker
+
+3. GuppyScreen
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Touch UI for Klipper using APIs exposed by Moonraker. Builds on LVGL as a standalone executable, has no dependency on any display servers such as X/Wayland.
+URL: https://github.com/ballaswag/guppyscreen
+
+4. Fluidd
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Web interface for Klipper
+URL: https://github.com/fluidd-core/fluidd
+
+5. Mainsail
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Web interface for Klipper
+URL: https://github.com/mainsail-crew/mainsail
+
+6. flashforge_ad5m_klipper_mod
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Custom modification to run Moonraker, Klipper, Mainsail and Fluidd on Flashforge AD5M (Pro) 3D printers and unlock the full power of open source software.
+URL: https://github.com/xblax/flashforge_ad5m_klipper_mod
+
+7. Buildroot
+License: GNU General Public License version 2 or later (GPLv2+)
+Description: Build system for embedded Linux systems
+URL: https://buildroot.org/
+
+8. BusyBox
+License: GNU General Public License version 2 (GPLv2)
+Description: Set of Unix utilities for embedded systems
+URL: https://busybox.net/
+
+9. Dropbear SSH
+License: MIT-style license
+Description: Lightweight SSH server and client
+URL: https://matt.ucc.asn.au/dropbear/dropbear.html
+
+10. Python 3
+License: Python Software Foundation License (PSF License)
+Description: Python programming language interpreter
+URL: https://www.python.org/
+
+11. e2fsprogs
+License: GPLv2+|LGPLv2+|NewBSD|MIT
+Description: Utilities for managing ext2/ext3/ext4 filesystems
+URL: https://sourceforge.net/projects/e2fsprogs/
+
+12. XZ Utils
+License: Public domain / LGPLv2.1+ / GPLv2+
+Description: Data compression utilities using LZMA2 algorithm
+URL: https://tukaani.org/xz/
+
+13. OpenSSL
+License: OpenSSL License + SSLeay License
+Description: Cryptography library
+URL: https://www.openssl.org/
+
+14. zlib
+License: zlib license
+Description: Data compression library
+URL: https://zlib.net/
+
+15. util-linux
+License: GNU General Public License version 2 or later (GPLv2+)
+Description: Set of utilities for Linux systems
+URL: https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git
+
+16. ncurses
+License: MIT-like license
+Description: Library for text-based user interfaces
+URL: https://invisible-island.net/ncurses/
+
+17. readline
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Library for command line editing
+URL: https://tiswww.case.edu/php/chet/readline/rltop.html
+
+18. SQLite
+License: Public domain
+Description: Embedded relational database
+URL: https://sqlite.org/
+
+19. htop
+License: GNU General Public License version 2 or later (GPLv2+)
+Description: Interactive process viewer
+URL: https://htop.dev/
+
+20. iotop
+License: GNU General Public License version 2 or later (GPLv2+)
+Description: I/O monitoring tool
+URL: https://github.com/hishamhm/iotop
+
+21. Midnight Commander (mc)
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Text mode file manager
+URL: https://midnight-commander.org/
+
+22. file
+License: BSD license
+Description: Utility for determining file types
+URL: https://www.darwinsys.com/file/
+
+23. Linux Kernel Headers
+License: GNU General Public License version 2 (GPLv2)
+Description: Linux kernel header files
+URL: https://www.kernel.org/
+
+24. GNU C Library (glibc)
+License: GNU Lesser General Public License version 2.1 or later (LGPLv2.1+)
+Description: Standard C library implementation
+URL: https://www.gnu.org/software/libc/
+
+25. GNU Binutils
+License: GNU General Public License version 3 or later (GPLv3+)
+Description: Collection of binary utilities
+URL: https://www.gnu.org/software/binutils/
+
+26. GNU Compiler Collection (GCC)
+License: GNU General Public License version 3 or later (GPLv3+) with Runtime Library Exception
+Description: Compiler collection for multiple programming languages
+URL: https://gcc.gnu.org/
+
+RUSSIAN SECTION
+===============
+
+1. Klipper
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Прошивка для 3D-принтеров с управлением движения
+URL: https://github.com/Klipper3d/klipper
+
+2. Moonraker
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: API сервер для Klipper
+URL: https://github.com/Arksine/moonraker
+
+3. GuppyScreen
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Сенсорный пользовательский интерфейс для Klipper с использованием API Moonraker. Построен на LVGL как самостоятельное исполняемое приложение, не имеет зависимости от дисплейных серверов таких как X/Wayland.
+URL: https://github.com/ballaswag/guppyscreen
+
+4. Fluidd
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Веб-интерфейс для Klipper
+URL: https://github.com/fluidd-core/fluidd
+
+5. Mainsail
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Веб-интерфейс для Klipper
+URL: https://github.com/mainsail-crew/mainsail
+
+6. flashforge_ad5m_klipper_mod
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Нестандартная модификация для запуска Moonraker, Klipper, Mainsail и Fluidd на 3D-принтерах Flashforge AD5M (Pro) и раскрытия полной мощи открытого программного обеспечения.
+URL: https://github.com/xblax/flashforge_ad5m_klipper_mod
+
+7. Buildroot
+Лицензия: GNU General Public License версии 2 или более поздней (GPLv2+)
+Описание: Система сборки для встраиваемых Linux-систем
+URL: https://buildroot.org/
+
+8. BusyBox
+Лицензия: GNU General Public License версии 2 (GPLv2)
+Описание: Набор утилит Unix для встраиваемых систем
+URL: https://busybox.net/
+
+9. Dropbear SSH
+Лицензия: MIT-style license
+Описание: Легковесный SSH сервер и клиент
+URL: https://matt.ucc.asn.au/dropbear/dropbear.html
+
+10. Python 3
+Лицензия: Python Software Foundation License (PSF License)
+Описание: Интерпретатор языка программирования Python
+URL: https://www.python.org/
+
+11. e2fsprogs
+Лицензия: GPLv2+|LGPLv2+|NewBSD|MIT
+Описание: Утилиты для работы с файловыми системами ext2/ext3/ext4
+URL: https://sourceforge.net/projects/e2fsprogs/
+
+12. XZ Utils
+Лицензия: Public domain / LGPLv2.1+ / GPLv2+
+Описание: Утилиты сжатия данных с использованием алгоритма LZMA2
+URL: https://tukaani.org/xz/
+
+13. OpenSSL
+Лицензия: OpenSSL License + SSLeay License
+Описание: Криптографическая библиотека
+URL: https://www.openssl.org/
+
+14. zlib
+Лицензия: zlib license
+Описание: Библиотека сжатия данных
+URL: https://zlib.net/
+
+15. util-linux
+Лицензия: GNU General Public License версии 2 или более поздней (GPLv2+)
+Описание: Набор утилит для Linux систем
+URL: https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git
+
+16. ncurses
+Лицензия: MIT-like license
+Описание: Библиотека для текстовых пользовательских интерфейсов
+URL: https://invisible-island.net/ncurses/
+
+17. readline
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Библиотека для обработки командной строки
+URL: https://tiswww.case.edu/php/chet/readline/rltop.html
+
+18. SQLite
+Лицензия: Public domain
+Описание: Встраиваемая реляционная база данных
+URL: https://sqlite.org/
+
+19. htop
+Лицензия: GNU General Public License версии 2 или более поздней (GPLv2+)
+Описание: Интерактивный просмотр процессов
+URL: https://htop.dev/
+
+20. iotop
+Лицензия: GNU General Public License версии 2 или более поздней (GPLv2+)
+Описание: Инструмент мониторинга операций ввода-вывода
+URL: https://github.com/hishamhm/iotop
+
+21. Midnight Commander (mc)
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Файловый менеджер в текстовом режиме
+URL: https://midnight-commander.org/
+
+22. file
+Лицензия: BSD license
+Описание: Утилита для определения типов файлов
+URL: https://www.darwinsys.com/file/
+
+23. Linux Kernel Headers
+Лицензия: GNU General Public License версии 2 (GPLv2)
+Описание: Заголовочные файлы ядра Linux
+URL: https://www.kernel.org/
+
+24. GNU C Library (glibc)
+Лицензия: GNU Lesser General Public License версии 2.1 или более поздней (LGPLv2.1+)
+Описание: Стандартная реализация библиотеки C
+URL: https://www.gnu.org/software/libc/
+
+25. GNU Binutils
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+)
+Описание: Коллекция бинарных утилит
+URL: https://www.gnu.org/software/binutils/
+
+26. GNU Compiler Collection (GCC)
+Лицензия: GNU General Public License версии 3 или более поздней (GPLv3+) с исключением для Runtime Library
+Описание: Компилятор для различных языков программирования
+URL: https://gcc.gnu.org/
