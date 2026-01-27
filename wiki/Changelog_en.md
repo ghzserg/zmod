@@ -1,5 +1,6 @@
 # Changelog
 - [Version History](#version-history)
+  - [Version 1.6.6](#version-166)
   - [Version 1.6.5](#version-165)
   - [Version 1.6.4](#version-164)
   - [Version 1.6.3](#version-163)
@@ -41,6 +42,11 @@
 ---
 
 ## Version History
+
+### Version 1.6.6
+27.01.2026
+* Updated Fluidd/Mainsail/Klipper
+* Updates for Klipper, Fluidd, Mainsail, and Moonraker are independent of mod updates
 
 ### Version 1.6.5
 14.01.2026
