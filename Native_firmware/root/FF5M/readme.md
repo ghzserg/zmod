@@ -3,7 +3,7 @@
 **Install ROOT**
 
 1. **Format USB drive** as FAT32
-2. **Download and save** the file [Adventurer5M-root.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-root.tgz) to USB
+2. **Download and save** the file [Adventurer5M-root.tgz](https://github.com/ghzserg/ff/releases/download/R/Adventurer5M-root.tgz) to USB
 3. **Power off** the printer completely
 4. **Insert USB** into the printer's port
 5. **Power on** the printer:
@@ -18,7 +18,7 @@ Password: root
 ## Установка Root
 
 - Отформатируйте USB в FAT32
-- Сохраните на usb flash файл [Adventurer5M-root.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-root.tgz)
+- Сохраните на usb flash файл [Adventurer5M-root.tgz](https://github.com/ghzserg/ff/releases/download/R/Adventurer5M-root.tgz)
 - Выключите принтер
 - Вставьте usb flash в принтер
 - Включите принтер
