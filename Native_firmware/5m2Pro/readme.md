@@ -3,7 +3,7 @@
 
 1. **Format USB drive** as FAT32.
 2. **Save firmware file** to USB flash:
-   - *Download the appropriate 5M Pro firmware file [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
+   - *Download the appropriate 5M Pro firmware file [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
 3. **Power off** the printer.
 4. **Insert USB** into the printer.
 5. **Power on** the printer.
@@ -18,7 +18,7 @@
 ## Переводит FF5M в FF5MPRO
 
 - Отформатируйте USB в FAT32
-- Сохраните на usb flash файл [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
+- Сохраните на usb flash файл [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
 - Выключите принтер
 - Вставьте usb flash в принтер
 - Включите принтер
