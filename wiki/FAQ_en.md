@@ -336,6 +336,12 @@ Documentation is often unread, though 90% of questions are answered here. To ver
 
 ### What's the difference between using the screen and without the native screen?
 
+The printer can operate in two modes:
+- With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
+- Without the native screen - in this case, all features are controlled by zMod.
+This doesn't mean you need to turn off the screen or replace it with a different one.
+In the mode without the native screen, you can use the alternative software screen GuppyScreen or turn off the screen completely, so it will turn off.
+
 > [!IMPORTANT]
 > Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros
 
