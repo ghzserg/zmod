@@ -5,11 +5,15 @@ Any user can create and connect their own plugin to **zmod**.
 Plugins included with zMod:
 1. [Recommend](https://github.com/ghzserg/recommend) - Settings recommended for immediate use after installing the mod.
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz) – Z-axis parking using load cells
-3. [Bambufy](https://github.com/function3d/bambufy) - Compatible with Bambu Studio, improves prime tower management, provides accurate time/material estimates, reduces waste, supports Mainsail, fast color changes, and advanced printing features. CANNOT BE USED WITH NATIVE SCREEN
-    - [lessWaste](https://github.com/Hrybmo/lessWaste/) - fork bambufy
-4. [Nopoop](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
-5. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse
-6. [Notify](https://github.com/ghzserg/notify) - Receive notifications in Telegram and over 100 other different services
+2. [Nopoop](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
+3. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse
+4. [Notify](https://github.com/ghzserg/notify) - Receive notifications in Telegram and over 100 other different services
+
+External plugins not developed by the zMod author.
+1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Compatible with Bambu Studio, improves feed tower control, provides accurate time and material consumption estimates, reduces waste, supports Mainsail, quick color changes, and advanced printing features. CANNOT BE USED WITH THE NATIVE SCREEN.
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - a fork of BamBufy
+
+To enable the repository of external plugins not developed by the zMod author, run the command `ENABLE_EXTRA_PLUGINS`.
 
 ---
 

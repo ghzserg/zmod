@@ -5,11 +5,15 @@
 Плагины включенные в поставку zMod:
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) - Настройки, которые рекомендуется использовать сразу после установки мода
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme_ru.md) - Парковка оси Z по тензодатчикам
-3. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
-    - [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк bambufy
 4. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme_ru.md) - Максимальное уменьшение количества отходов от ninjamida.
 5. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Moonraker TimeLapse
 6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Получение уведомлений в телеграм и еще более 100 различных сервисов
+
+Внешние плагины, не разрабатываемых автором zMod.
+1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк BamBufy
+
+Чтобы включить репозиторий внешних плагинов, не разрабатываемых автором zMod, выполните команду `ENABLE_EXTRA_PLUGINS`.
 
 ---
 
