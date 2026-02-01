@@ -124,6 +124,16 @@ This window opens **automatically** when you start printing.
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
+To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](https://github.com/ghzserg/zmod/wiki/Global_en#silent):
+
+- 0 – show dialog (default)
+- 1 – do not show dialog, use previously set colors
+- 2 – do not show dialog, do not use IFS
+
+```gcode
+SAVE_ZMOD_DATA SILENT=1
+```
+
 ---
 
 ## **5. How to Manually Tell the Printer Which Spool Is Loaded**

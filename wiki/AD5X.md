@@ -125,6 +125,15 @@
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
+Чтобы окно выбора цвета не показывалось при начале печати используйте глобальный параметр [SILENT](https://github.com/ghzserg/zmod/wiki/Global_ru#silent)
+
+- 0 - показывать окно (по умолчанию)
+- 1 - не показывать окно, использовать ранее заданные цвета
+- 2 - не показывать окно, не использовать IFS
+
+```gcode
+SAVE_ZMOD_DATA SILENT=1
+```
 
 ## **5. Как вручную указать принтеру, какая катушка сейчас заправлена AD5X**
 
