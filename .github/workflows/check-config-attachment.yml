@@ -110,6 +110,17 @@ jobs:
           fi
           echo "bambufy_detected=false" >> $GITHUB_OUTPUT
 
+          if grep -q -i "lesswaste" "$EXTRACT_DIR/$REQUIRED_FILE"; then
+            echo "ERROR: LessWaste plugin detected in console.log"
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=LessWaste plugin detected in '$FILE_NAME'" >> $GITHUB_OUTPUT
+            echo "lesswaste_detected=true" >> $GITHUB_OUTPUT
+            rm -rf "$EXTRACT_DIR"
+            rm -f "/tmp/config.tar.gz"
+            exit 0
+          fi
+          echo "lesswaste_detected=false" >> $GITHUB_OUTPUT
+
           VERSION_CHECK_MESSAGE=""
           VERSION_OUTDATED="false"
 
@@ -305,8 +316,60 @@ jobs:
               body: commentBody
             });
 
+      - name: Handle lesswaste plugin detection
+        if: steps.verify_archive.outputs.lesswaste_detected == 'true'
+        uses: actions/github-script@v6
+        env:
+          FILE_NAME: ${{ steps.check_attachment.outputs.file_name }}
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const issue = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueNumber
+            });
+
+            if (issue.data.state === 'open') {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
+            }
+
+            const fileName = process.env.FILE_NAME || 'config.tar.gz';
+
+            let commentBody = '❌ **lesswaste Plugin Detected** / **Обнаружен плагин lesswaste**\n\n';
+            commentBody += `The file \`${fileName}\` was found and downloaded, but the \`console.log\` contains references to **lesswaste**.\n\n`;
+            commentBody += `Файл \`${fileName}\` найден и скачан, но \`console.log\` содержит упоминания **lesswaste**.\n\n`;
+            commentBody += '**You are using the lesswaste plugin, please disable it or [contact the plugin author](https://github.com/Hrybmo/lesswaste).**\n\n';
+            commentBody += '**Вы используете плагин lesswaste, отключите его или [обратитесь к автору плагина](https://github.com/Hrybmo/lesswaste).**\n\n';
+            commentBody += '🚫 **Issue Status / Статус тикета:**\n';
+            commentBody += 'This issue has been **closed**.\n';
+            commentBody += 'Тикет был **закрыт**.\n\n';
+            commentBody += '🔧 **How to fix / Как исправить:**\n';
+            commentBody += '1. Disable the lesswaste plugin from your mod setup\n';
+            commentBody += '2. Create a new `config*.tar.gz` file without lesswaste references\n';
+            commentBody += '3. Edit this issue and attach the corrected file\n\n';
+            commentBody += '1. Отключите или удалите плагин lesswaste из вашей модификации\n';
+            commentBody += '2. Создайте новый файл `config*.tar.gz` без упоминаний lesswaste\n';
+            commentBody += '3. Отредактируйте этот тикет и прикрепите исправленный файл\n\n';
+            commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+
+            await github.rest.issues.createComment({
+              issue_number: issueNumber,
+              owner,
+              repo,
+              body: commentBody
+            });
+
       - name: Handle missing, inaccessible, or invalid attachment
-        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '' && steps.verify_archive.outputs.bambufy_detected != 'true')
+        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '' && steps.verify_archive.outputs.bambufy_detected != 'true' && steps.verify_archive.outputs.lesswaste_detected != 'true')
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
