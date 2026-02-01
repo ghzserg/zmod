@@ -20,6 +20,7 @@
 - [bambufy](https://github.com/function3d/bambufy) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail,
 быструю смену цвета и расширенные функции печати.
 - [nopoop](https://github.com/ghzserg/nopoop) - Максимальное уменьшение количества отходов от ninjamida
+- [lessWaste](https://github.com/Hrybmo/lessWaste/) - форк bambufy
 
 ---
 

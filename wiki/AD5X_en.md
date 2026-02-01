@@ -20,6 +20,7 @@
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
+- [lessWaste](https://github.com/Hrybmo/lessWaste/) - форк bambufy
 
 ---
 
