@@ -731,7 +731,7 @@ Reboot the printer twice.
 
 Removing the mod will restore the original logo. If this doesn't happen on the AD5M:
 - Install the mod
-- Upload the [boot.bmp](https://github.com/ghzserg/zmod/releases/download/R/boot.bmp) file to the `mod_data/logo` folder
+- Upload the [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) file to the `mod_data/logo` folder
 - Restart the printer
 
 <div align="center">

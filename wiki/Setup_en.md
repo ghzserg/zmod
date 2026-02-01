@@ -27,9 +27,9 @@
 1. Reset the printer to default settings.
 2. Format a USB drive to FAT/FAT16/FAT32.
 3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/wiki/R) to the USB root directory:
-   - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
-   - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
-   - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
+   - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
+   - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
+   - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
 4. Power off the printer.
 5. Insert the usb drive into printer usb port.
 6. Power on the printer.
@@ -71,7 +71,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
+    If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
 12. Translate the mod into your language.
 
     <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
@@ -157,7 +157,7 @@ After installing the Native Firmware, the print head may not be correctly positi
 [Via the engineering menu on the stock firmware](https://github.com/ghzserg/zmod/wiki/AD5X_en#setting-up-the-basket-on-the-ad5x-stock-firmware)
 
 If you encounter this issue, you need to calibrate the print head position using the following algorithm:
-1. Download the [Set.XY.Offset.zip](https://github.com/ghzserg/zmod/releases/download/R/Set.XY.Offset.zip) archive and unzip it to the root of a flash drive.
+1. Download the [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) archive and unzip it to the root of a flash drive.
 2. Insert the flash drive into the turned-off printer and turn it on.
 3. The calibration interface will appear on the printer screen. Press Reset.
 4. Use the control arrows to position the print head against the receiver so that the print head presses the shutter lever firmly, the nozzle is behind the movable shutter, and the shutter itself is flush with the front surface of the receiver.

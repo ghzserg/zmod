@@ -347,9 +347,9 @@ Igor Polunovskiy
 
 Verify file MD5 hash and delete on mismatch: 0 (disable), 1 (enable) (1).
 
-*Add [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) or
-[addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/zmod/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+*Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
+[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
 
 You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```
@@ -677,10 +677,10 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 **How to fix on stock firmware:**
 - Format a USB drive as FAT32.
 - Save the `flashforge_init.sh` file to the USB:
-  - [Fix parameter Adventurer5M](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0011-on.tgz)
-  - [Restore stock parameter Adventurer5M](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0011-on.tgz)
-  - [Fix parameter Adventurer5MPro](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-  - [Restore stock parameter Adventurer5MPro](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+  - [Fix parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+  - [Restore stock parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+  - [Fix parameter Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+  - [Restore stock parameter Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
 - Power off the printer.
 - Insert the USB into the printer.
 - Power on the printer (it will beep loudly).
@@ -716,8 +716,8 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 **How to fix on stock firmware:**
 - Format a USB drive as FAT32.
 - Save the appropriate file to the USB:
-  - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0017-4.tgz) for FlashForge 5M
-  - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0017-4.tgz) for FlashForge 5M Pro
+  - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) for FlashForge 5M
+  - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) for FlashForge 5M Pro
 - Power off the printer.
 - Insert the USB into the printer.
 - Power on the printer (it will beep loudly).

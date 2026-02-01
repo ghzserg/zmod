@@ -355,9 +355,9 @@ Igor Polunovskiy
 
 Проверять MD5 сумму файла, при ошибке - удалять файл. 0-не проверять, 1 - проверять (1)
 
-*Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) или
-[addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
-[addMD5.py](https://github.com/ghzserg/zmod/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+*Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или
+[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
 
 Также можно использовать [бинарные файлы на Go собранные под основные архитектуры](https://github.com/asd2003ru/addmd5/releases/) от @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Не забудьте выполнить ```chmod +x addmd5-darwin-amd64```
@@ -710,10 +710,10 @@ square_corner_velocity: 9
 Как исправить на стоке:
 - Отформатируйте USB в FAT32
 - Сохраните на usb flash файл `flashforge_init.sh`:
-  - [Для исправления параметра Adventurer5M](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0011-on.tgz)
-  - [Для восстановления параметра как на стоке Adventurer5M](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0011-off.tgz)
-  - [Для исправления параметра Adventurer5MPro](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-  - [Для восстановления параметра как на стоке Adventurer5MPro](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0011-off.tgz)
+  - [Для исправления параметра Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+  - [Для восстановления параметра как на стоке Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
+  - [Для исправления параметра Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+  - [Для восстановления параметра как на стоке Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 - Выключите принтер
 - Вставьте usb flash в принтер
 - Включите принтер
@@ -752,8 +752,8 @@ square_corner_velocity: 9
 Как исправить на стоке:
 - Отформатируйте USB в FAT32
 - Сохраните на usb flash файл:
-  - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-e0017-4.tgz) для FlashForge 5M
-  - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-e0017-4.tgz) для FlashForge 5M Pro
+  - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) для FlashForge 5M
+  - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) для FlashForge 5M Pro
 - Выключите принтер
 - Вставьте usb flash в принтер
 - Включите принтер

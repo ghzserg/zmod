@@ -196,7 +196,7 @@ Verify file integrity via MD5 checksum.
 - `DELETE` — delete corrupted files: `yes`/`no`.
 
 **Usage:**
-1. Copy `addMD5.bat` (Windows) or `addMD5.sh` (macOS/Linux) from the printer's `mod` folder. Or download [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat), [addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh)
+1. Copy `addMD5.bat` (Windows) or `addMD5.sh` (macOS/Linux) from the printer's `mod` folder. Or download [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat), [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
 2. Add the script to your slicer's post-processing settings:
    - **OrcaSlicer**: *Process → Other → Post-processing Scripts*
    - **PrusaSlicer/SuperSlicer**: *Print Settings → Output Options → Post-processing Scripts*
@@ -204,9 +204,9 @@ Verify file integrity via MD5 checksum.
 
 **Note:** Enabled by default via [`FORCE_MD5`](https://github.com/ghzserg/zmod/wiki/Global_en#force_md5).
 
-*Add [addMD5.bat](https://github.com/ghzserg/zmod/releases/download/R/addMD5.bat) or
-[addMD5.sh](https://github.com/ghzserg/zmod/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/zmod/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_en#check_md5)
+*Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
+[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_en#check_md5)
 
 You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```

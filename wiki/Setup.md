@@ -24,9 +24,9 @@
 1. Сбросить принтер до настроек по умолчанию
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
 3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/wiki/R) в корневую папку USB Flash
-   - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
-   - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/zmod/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
-   - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
+   - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
+   - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
+   - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
 4. Выключить принтер
 5. Вставить флешку в принтер
 6. Включить принтер
@@ -71,7 +71,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/zmod/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
+    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
      
 12. Переведите мод на ваш язык.
     
@@ -156,7 +156,7 @@
 [Через инженерное меню на родной прошивке](https://github.com/ghzserg/zmod/wiki/AD5X#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B5-ad5x)
 
 Если вы столкнулись с данной ситуацией, необходимо откалибровать парковку по следующему алгоритму:
-1. Скачать архив [Set.XY.Offset.zip](https://github.com/ghzserg/zmod/releases/download/R/Set.XY.Offset.zip) и распаковать его в корень флешки
+1. Скачать архив [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) и распаковать его в корень флешки
 2. Вставить флешку в выключенный принтер и включить его.
 3. На экране принтера появится интерфейс для калибровки. Необходимо нажать Reset.
 4. Стрелками управления припарковать печатающую голову к приемнику таким образом, чтобы печатающая голова достаточно прижимала рычажок шторки, сопло было за подвижной шторкой, а сама шторка была заподлицо с передней поверхностью приемника.
