@@ -13,6 +13,22 @@
 9. Выложить одно сообщение с описанием и файлом `config.tar.gz`
 10. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
 
+Если невозможно выполнить `TAR_CONFIG`, подключитесь к принтеру по SSH:
+
+AD5M/AD5MPro:
+
+```
+chroot /data/.mod/.zmod/
+/opt/config/mod/.shell/tar_config.sh
+```
+
+AD5X:
+
+```
+chroot /usr/data/.mod/.zmod/
+/opt/config/mod/.shell/tar_config.sh
+```
+
 ## Почему я прошу оформлять тикеты — объяснение «на пальцах»
 
 Представь, что твой принтер — это машина.

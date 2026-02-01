@@ -12,6 +12,22 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 8. Submit **one** post with your description and the generated `config.tar.gz` file.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
+If `TAR_CONFIG` cannot be executed, connect to the printer via SSH:
+
+AD5M/AD5MPro:
+
+```
+chroot /data/.mod/.zmod/
+/opt/config/mod/.shell/tar_config.sh
+```
+
+AD5X:
+
+```
+chroot /usr/data/.mod/.zmod/
+/opt/config/mod/.shell/tar_config.sh
+```
+
 ## Why I Ask You to Create Tickets — Explained Simply
 
 
