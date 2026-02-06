@@ -32,6 +32,66 @@ DISABLE_PLUGIN name=g28_tenz
 
 ---
 
+## Установка классических плагинов Klipper с Python модулями
+
+Для классических плагинов Klipper, которые работают с использованием Python модулей (например, [klipper-led_effect](https://github.com/julianschill/klipper-led_effect)), требуется специальный процесс установки с созданием символической ссылки на модуль Klipper.
+
+### Пример: Установка led_effect
+
+`led_effect` — это плагин для управления WS2812 RGB LED полосками через Klipper.
+
+**Шаг 1: Клонируем репозиторий**
+
+Выполните эти команды в chroot окружении:
+
+```bash
+# Для FF5M:
+chroot /data/.mod/.zmod/
+# Для FF5X:
+chroot /usr/data/.mod/.zmod/
+
+# Одинаково для всех моделей:
+cd /opt/config/mod_data/plugins/
+git clone https://github.com/julianschill/klipper-led_effect.git
+```
+
+**Шаг 2: Добавляем запись в Moonraker config**
+
+В файле `mod_data/user.moonraker.conf` добавьте следующую секцию:
+
+```ini
+[update_manager led_effect]
+type: git_repo
+channel: stable
+path: /opt/config/mod_data/plugins/klipper-led_effect
+origin: https://github.com/julianschill/klipper-led_effect.git
+is_system_service: False
+primary_branch: master
+```
+
+**Шаг 3: Создаём символическую ссылку на модуль Klipper**
+
+Создайте символическую ссылку для подключения модуля к Klipper:
+
+```bash
+ln -s /opt/config/mod_data/plugins/klipper-led_effect/src/led_effect.py /usr/prog/klipper/klippy/extras/led_effect.py
+```
+
+Замените:
+- `klipper-led_effect` на папку вашего плагина
+- `led_effect.py` на имя модуля (может быть другой в зависимости от плагина)
+
+**Шаг 4: Перезагружаем Klipper**
+
+После создания символической ссылки необходимо перезагрузить Klipper через веб-интерфейс Fluidd/Mainsail, нажав кнопку перезагрузки.
+
+### Важные замечания
+
+> **Модуль должен быть совместим с версией Klipper**
+> Убедитесь, что версия плагина совместима с установленной версией Klipper.
+
+---
+
 ## Создание собственного плагина
 
 Пример плагина: https://github.com/ghzserg/g28_tenz
