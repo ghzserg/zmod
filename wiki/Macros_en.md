@@ -44,6 +44,12 @@ It can be called from:
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#reboot">REBOOT</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#shutdown">SHUTDOWN</a></td>
  </tr>
+ <tr>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#_user_start_print">_USER_START_PRINT</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#_user_end_print">_USER_END_PRINT</a></td>
+  <td align="center"></td>
+  <td align="center"></td>
+ </tr>
 </tbody>
 </table>
 

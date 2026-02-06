@@ -141,6 +141,70 @@ Replaces the default end G-code.
 </div>
 
 ---
+### _USER_START_PRINT
+
+Custom macro for user-defined actions at the start of printing.
+
+This macro is automatically called at the end of the `START_PRINT` macro. Use it to extend the standard print initialization process with custom commands.
+
+**Common use cases:**
+- Add custom heating or calibration commands
+- Perform additional setup before printing starts
+- Enable/disable devices (fans, sensors, etc.)
+- Add custom nozzle cleaning or other preparation
+
+**Example override in `mod_data/user.cfg`:**
+```gcode
+[gcode_macro _USER_START_PRINT]
+gcode:
+    # Enable additional fan
+    SET_PIN PIN=my_fan VALUE=1
+    # Some custom command
+    G4 P1000  ; pause for 1 second
+    # Other custom actions
+```
+
+**Note:** By default, this macro is empty and can be overridden by the user according to their needs.
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#main)
+
+</div>
+
+---
+### _USER_END_PRINT
+
+Custom macro for user-defined actions at the end of printing.
+
+This macro is automatically called at the end of the `END_PRINT` macro. Use it to extend the standard print completion process with custom commands.
+
+**Common use cases:**
+- Perform additional actions after printing completes
+- Disable additional devices
+- Save statistics or logs
+- Run custom cleaning or maintenance routines
+
+**Example override in `mod_data/user.cfg`:**
+```gcode
+[gcode_macro _USER_END_PRINT]
+gcode:
+    # Disable additional fan
+    SET_PIN PIN=my_fan VALUE=0
+    # Send notification
+    M118 Print completed!
+    # Or other custom commands
+```
+
+**Note:** By default, this macro is empty and can be overridden by the user according to their needs.
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#main)
+
+</div>
+
+---
 ### CANCEL
 
 Cancel the current print.

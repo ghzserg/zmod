@@ -44,6 +44,12 @@
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_ru#reboot">REBOOT</a></td>
   <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_ru#shutdown">SHUTDOWN</a></td>
  </tr>
+ <tr>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_ru#_user_start_print">_USER_START_PRINT</a></td>
+  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_ru#_user_end_print">_USER_END_PRINT</a></td>
+  <td align="center"></td>
+  <td align="center"></td>
+ </tr>
 </tbody>
 </table>
 
