@@ -26,7 +26,7 @@
 0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) if previously installed.
 1. Reset the printer to default settings.
 2. Format a USB drive to FAT/FAT16/FAT32.
-3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/wiki/R) to the USB root directory:
+3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en) to the USB root directory:
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
    - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
@@ -759,7 +759,7 @@ Attention!
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**For [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X), [zMod activation](https://github.com/ghzserg/zmod/wiki/R) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
+**For [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X), [zMod activation](https://github.com/ghzserg/zmod/wiki/Native_FW_en) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 
 <div align="center">
 
@@ -790,8 +790,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 [[/images/ff.jpg]]
 
 Try restoring the firmware by installing a full firmware:
-- [FF5M](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ff5m)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ad5x)
+- [FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ff5m)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ad5x)
 
 **Steps:**
 1. **Unplug the printer.**

@@ -23,7 +23,7 @@
 0. [Удалить KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), если он был установлен
 1. Сбросить принтер до настроек по умолчанию
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
-3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/wiki/R) в корневую папку USB Flash
+3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_ru) в корневую папку USB Flash
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
@@ -675,7 +675,6 @@ max_accel: 8700 ; Максимальное ускорение для осей X 
 
 ---
 
-## Updating the Mod
 ## Обновление мода
 
 Если мод пишет `Обновите ZMOD с флешки`, то нужно обновить zMod с флешки, даже если вы его недавно обновляли.
@@ -788,9 +787,9 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Если родной экран не находит обновления:
 - Ваш серийный номер еще не попал под раздачу обновлений
-- [Установите обновление родной прошивки с флешки](https://github.com/ghzserg/zmod/wiki/R)
+- [Установите обновление родной прошивки с флешки](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
 
-**Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/wiki/R) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока**.
+**Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/wiki/Native_FW_ru) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока**.
 
 <div align="center">
 
@@ -809,8 +808,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 [[/images/ff.jpg]]
 
 Попробуйте восстановить прошивку, через установку полной прошивки:
-- [FF5M](https://github.com/ghzserg/zmod/wiki/R#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D0%BD%D0%B0-ff5m)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/R#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D0%BD%D0%B0-ad5x)
+- [FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#установка-полной-прошивки-на-ff5m)
+- [AD5X](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#установка-полной-прошивки-на-ad5x)
 
 Алгоритм восстановления:
 1. **Обесточить принтер**
