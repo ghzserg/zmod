@@ -238,6 +238,14 @@ WEIGHT - вес в граммах (1500)
 
 [Просмотр сохраненных параметров](https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data)
 
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+--- 
+
 ### Параметры начала печати, построения карты стола [START_PRINT]:
 
 ##### MIDI_START
@@ -448,6 +456,14 @@ Igor Polunovskiy
 Пример: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
 
 *5M/5MPro: Это не замена родной очистки(CLEAR_NOZZLE), когда сопло тыкается в стол по середине сверху, а потом счищает пластик о стол. Эта очистка сопла непосредственно перед печатью.*
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+--- 
 
 ### Параметры окончания и отмены печати [END_PRINT]:
 

@@ -237,6 +237,14 @@ Second option. Write the required command in the Fluidd console, for example: `S
 
 [View saved parameters](https://github.com/ghzserg/zmod/wiki/Global_en#get_zmod_data)
 
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+---
+
 ### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START
@@ -431,6 +439,14 @@ Select nozzle purge algorithm (LINE_PURGE):
 Custom purge macros can be added to `mod_data/user.cfg`.
 
 Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
+
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+---
 
 ### Print end/cancel parameters[END_PRINT]:
 
