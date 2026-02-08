@@ -2,9 +2,6 @@
 
 *[Read in English](https://github.com/ghzserg/zmod/wiki/Calibrations_en)*
 
-[Калибровка принтера для новичков](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
-
-
 Макрос - это небольшая программа на языке Klipper/Gcode.
 
 Он может вызываться:
@@ -46,6 +43,11 @@
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Calibrations)
 
 </div>
+
+---
+
+> [!TIP]
+> [Калибровка принтера для новичков](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
 
 ---
 

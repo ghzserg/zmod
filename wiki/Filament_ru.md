@@ -8,16 +8,6 @@
 - Из файла GCODE
 - Из консоли Fluidd/Mainsail (нажать английскую букву `C` в fluidd)
 
-Чтобы эти функции работали, нужно в стартовый код добавить:
-```
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-```
-
-В код смены слоя добавить:
-```
-SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
-```
-
 > [!NOTE]
 > *Значение указанное в скобках - это значение по умолчанию*
 
@@ -111,6 +101,18 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - LAYER - номер слоя (0)
 
 ---
+> [!IMPORTANT]
+> Чтобы эти функции работали, нужно в стартовый код добавить:
+> ```
+> SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+> ```
+> 
+> В код смены слоя добавить:
+> ```
+> SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
+> ```
+
+
 <div align="center">
 
 [![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
