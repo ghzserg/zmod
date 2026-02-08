@@ -4,6 +4,7 @@ on:
     branches: [mkdocs]
     paths:
       - wiki/**
+      - mkdocs/**
       - .github/workflows/ghpages.yml
   workflow_dispatch:
 concurrency:
