@@ -237,7 +237,7 @@ Second option. Write the required command in the Fluidd console, for example: `S
 
 [View saved parameters](https://github.com/ghzserg/zmod/wiki/Global_en#get_zmod_data)
 
-#### Print start/bed mapping parameters [START_PRINT]:
+### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START
 
@@ -432,7 +432,7 @@ Custom purge macros can be added to `mod_data/user.cfg`.
 
 Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
 
-#### Print end/cancel parameters[END_PRINT]:
+### Print end/cancel parameters[END_PRINT]:
 
 ##### MIDI_END
 
@@ -491,7 +491,7 @@ Example: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
 
 ---
 
-#### System-wide parameters:
+### System-wide parameters:
 
 ##### MOTION_SENSOR
 
