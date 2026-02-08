@@ -1,26 +1,21 @@
 ### AD5X
 
-## Menu
-- [Menu](#menu)
-  - [Plugins](#plugins)
-- [**1. Key Features**](#1-key-features)
-- [**2. How to Prepare a File in Orca**](#2-how-to-prepare-a-file-in-orca)
-- [**3. How to Use the Color Selection Menu (Macro `COLOR`)**](#3-how-to-use-the-color-selection-menu-macro-color)
-- [**4. Print Menu (Macro `PRINT`)**](#4-print-menu-macro-print)
-- [**5. How to Manually Tell the Printer Which Spool Is Loaded**](#5-how-to-manually-tell-the-printer-which-spool-is-loaded)
-- [**6. How to Configure Waste Filament During Filament Change**](#6-how-to-configure-waste-filament-during-filament-change)
-    - [**Basic Parameters (Most Frequently Adjusted):**](#basic-parameters-most-frequently-adjusted)
-      - [**Advanced Parameters (Do Not Adjust If Unsure of the Result):**](#advanced-parameters-do-not-adjust-if-unsure-of-the-result)
-- [**7. Add custom filament types**](#7-add-custom-filament-types)
-- [**8. Add custom colors**](#8-add-custom-colors)
-- [9. Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
-  - [Trash Bin Calibration](#trash-bin-calibration)
-  - [Knife Calibration](#knife-calibration)
-- [Setting up the basket on the AD5X stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
-- [**10. IFS commands**](#10-ifs-commands)
-- [**11. IFS Firmware Recovery**](#11-ifs-firmware-recovery)
-- [IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)](#ifs-sensor-error-serial-communication-error-read-failed-device-reports-readiness-to-read-but-returned-no-data-device-disconnected-or-multiple-access-on-port)
-
+1. [Key Features](#1-key-features)
+2. [File Preparation in Orca](#2-how-to-prepare-a-file-in-orca)
+3. [Color Selection (`COLOR`)](#3-how-to-use-the-color-selection-menu-macro-color)
+4. [Print Menu (`PRINT`)](#4-print-menu-macro-print)
+5. [Manual Spool Selection](#5-how-to-manually-tell-the-printer-which-spool-is-loaded)
+6. [Waste Filament Configuration](#6-how-to-configure-waste-filament-during-filament-change)
+   - 🔧 [Basic Parameters](#basic-parameters-most-frequently-adjusted)
+   - ⚙️ [Advanced Parameters](#advanced-parameters-do-not-adjust-if-unsure-of-the-result)
+7. [Add custom filament types](#7-add-custom-filament-types)
+8. [Add custom colors](#8-add-custom-colors)
+9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
+   - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
+   - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+10. [IFS commands](#10-ifs-commands)
+11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
+    
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
