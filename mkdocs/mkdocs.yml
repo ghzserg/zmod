@@ -23,18 +23,30 @@ theme:
     - search.highlight
     - content.action.edit
   palette:
-    - scheme: default
-      primary: green
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom 
       accent: light green
       toggle:
         icon: material/weather-night
         name: Switch to dark theme
-    - scheme: slate
-      primary: green
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
       accent: light green
       toggle:
-        icon: material/weather-sunny
-        name: Switch to light theme
+        icon: material/brightness-auto
+        name: Switch to system preference
 
 docs_dir: ../docs
 site_dir: site

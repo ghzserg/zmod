@@ -10,3 +10,9 @@
 .edit-page-footer:hover {
   opacity: 1;
 }
+
+:root  > * {
+  --md-primary-fg-color:        #006400;
+  --md-primary-fg-color--light: #006400;
+  --md-primary-fg-color--dark:  #006400;
+}
