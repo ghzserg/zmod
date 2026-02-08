@@ -349,7 +349,7 @@ In the mode without the native screen, you can use the alternative software scre
 
 Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) parameters or global settings. [Details](https://github.com/ghzserg/zmod/wiki/FAQ_en#how-does-z-offset-work)
 
-Read [features of screenless operation](#screenless-version-features).
+Read [features of screenless operation](#screenless-version-notes).
 
 <div align="center">
 
@@ -602,7 +602,7 @@ Use `GET_RETRACTION` to view current settings.
 ### After installing ZMOD, my screen is dead and not responding to touches.
 
 - [Install the latest native firmware and ZMOD updates](https://github.com/ghzserg/zmod/wiki/Recomendations_en#install-latest-native-firmware-and-zmod-updates)
-- Read [known issues](#known-issues) *bison*
+- Read [known peculiarities](#known-peculiarities) *bison*
 - You might have disabled the screen. Enable it with the [DISPLAY_ON](https://github.com/ghzserg/zmod/wiki/System_en#display_on) macro
 
 <div align="center">
