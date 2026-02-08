@@ -4,9 +4,9 @@
 
 Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над zMod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
 
-* BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
-* [СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
-* <img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
+| <a href="https://pay.cloudtips.ru/p/3cbf9e9f">На развитие zmod: СБП, Банковская карта, T-pay</a> | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` |
+| :----: | :----: |
+| <img width="262" height="262" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> | <img width="262" height="262" alt="BTC" src="https://github.com/user-attachments/assets/da12b899-b5ea-4276-8661-83a348d151df" /> |
 
 Огромное спасибо сообществу [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) за приобретение [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) для разработки в лице
 

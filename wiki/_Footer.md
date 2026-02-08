@@ -11,4 +11,4 @@
 
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">На развитие zmod: СБП, Банковская карта, T-pay</a> | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` |
 | :----: | :----: |
-| <img width="100" height="100" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> | <img width="100" height="100" alt="qr-code" src="https://github.com/user-attachments/assets/da12b899-b5ea-4276-8661-83a348d151df" /> |
+| <img width="100" height="100" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> | <img width="100" height="100" alt="BTC" src="https://github.com/user-attachments/assets/da12b899-b5ea-4276-8661-83a348d151df" /> |
