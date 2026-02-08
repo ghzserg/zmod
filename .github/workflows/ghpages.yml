@@ -1,7 +1,7 @@
 name: Build and publish MkDocs
 on:
   push:
-    branches: [main]
+    branches: [mkdocs]
     paths:
       - wiki/**
       - .github/workflows/ghpages.yml
