@@ -1,0 +1,40 @@
+name: Build and publish MkDocs
+on:
+  push:
+    branches: [main]
+    paths:
+      - wiki/**
+      - .github/workflows/ghpages.yml
+  workflow_dispatch:
+concurrency:
+  group: publish-mkdocs
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  publish-mkdocs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install MkDocs dependencies
+        run: pip install -r mkdocs/requirements.txt
+      - name: Prepare docs files
+        run: python mkdocs/prepare_docs.py
+      - name: Commit docs changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add docs
+            git commit -m "chore: update docs files"
+            git push
+          fi
+      - name: Build and deploy to GitHub Pages
+        working-directory: mkdocs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: mkdocs gh-deploy --config-file mkdocs.yml --force
