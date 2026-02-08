@@ -1,6 +1,5 @@
 ### AD5X
 
-## Menu
 1. [Key Features](#1-key-features)
 2. [File Preparation in Orca](#2-how-to-prepare-a-file-in-orca)
 3. [Color Selection (`COLOR`)](#3-how-to-use-the-color-selection-menu-macro-color)
@@ -16,7 +15,7 @@
    - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
 10. [IFS commands](#10-ifs-commands)
 11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
-
+    
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
@@ -485,7 +484,7 @@ Connect:
 - Uncheck the second checkbox.
 
 1. Connect.
-2. Select the [firmware file](https://github.com/ghzserg/zmod/wiki/R#5x-ifs). **Don't forget to extract it**.
+2. Select the [firmware file](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5x-ifs). **Don't forget to extract it**.
 3. Press **F7** and wait for the device to be flashed.
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

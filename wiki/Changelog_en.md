@@ -19,6 +19,7 @@
   - [Version 1.3.1](#version-131)
   - [Version 1.3.0](#version-130)
   - [Version 1.1.2](#version-112)
+  - [Version 1.1.1](#version-111)
   - [Version 1.1.0](#version-110)
   - [Version 1.0.5](#version-105)
   - [Version 1.0.4](#version-104)
@@ -127,9 +128,9 @@ Thanks for tenz support [@minicx](https://github.com/loss-and-quick/)
 - AD5X - printer table PID installation works
 - AD5X - nozzle cleaning is restored when removing the table card
 - AD5X - the mod operation on firmware 1.0.9, 1.1.0, 1.1.1 has been tested
-- AD5X - a [flash drive installing the screen version 1.0.7, and all other modules version 1.1.1] has been created (https://github.com/ghzserg/zmod/wiki/R)
-- AD5x - a [flash drive for resetting the printer to factory settings] has been created (https://github.com/ghzserg/zmod/wiki/R)
-- AD5X - a [flash drive for activating the mod has been created, after updating the native firmware](https://github.com/ghzserg/zmod/wiki/R)
+- AD5X - a [flash drive installing the screen version 1.0.7, and all other modules version 1.1.1] has been created (https://github.com/ghzserg/zmod/wiki/Native_FW_en)
+- AD5x - a [flash drive for resetting the printer to factory settings] has been created (https://github.com/ghzserg/zmod/wiki/Native_FW_en)
+- AD5X - a [flash drive for activating the mod has been created, after updating the native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en)
 
 ### Version 1.5.3
 * Fixed Klipper bug [#119](https://github.com/ghzserg/zmod/issues/119), which required using [this](https://github.com/ghzserg/zmod/wiki/Recomendations_en#avoid-using-russian-characters-in-filenames)

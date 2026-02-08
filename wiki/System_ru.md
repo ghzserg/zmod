@@ -288,9 +288,9 @@ Klipper 13 (по умолчанию отключен).
 
 Пример: `UPDATE_MCU FORCE=13` принудительно загрузить прошивку Klipper 13
 
-Если не понимаете, как [восстановить конфиги и прошивку MCU](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ad5x), не запускайте.
+Если не понимаете, как [восстановить конфиги и прошивку MCU](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#installing-full-firmware-on-ad5x), не запускайте.
 
-Если что-то пойдет не так, обратно только через [factory](https://github.com/ghzserg/zmod/wiki/R).
+Если что-то пойдет не так, обратно только через [factory](https://github.com/ghzserg/zmod/wiki/Native_FW_ru).
 
 <div align="center">
 

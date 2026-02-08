@@ -481,7 +481,7 @@ filament_NEWTYPE: 300
 - Вторую галочку снимаем
 
 1. Соединяемся
-2. Вбираем [файл для прошивки](https://github.com/ghzserg/zmod/wiki/R#5x-ifs). **Не забудьте его разархивировать**.
+2. Вбираем [файл для прошивки](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#5x-ifs). **Не забудьте его разархивировать**.
 3. Нажимаем **F7** и ждем прошивки устройства
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

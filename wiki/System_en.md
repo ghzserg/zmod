@@ -246,9 +246,9 @@ Without parameters, changes the firmware to the opposite version.
 
 Example: `UPDATE_MCU FORCE=13` forces the download of Klipper 13 firmware.
 
-If you don't understand how to [restore the configs and MCU firmware](https://github.com/ghzserg/zmod/wiki/R#installing-full-firmware-on-ad5x), do not run this command.
+If you don't understand how to [restore the configs and MCU firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ad5x), do not run this command.
 
-If something goes wrong, the only way back is through [factory](https://github.com/ghzserg/zmod/wiki/R).
+If something goes wrong, the only way back is through [factory](https://github.com/ghzserg/zmod/wiki/Native_FW_en).
 
 <div align="center">
 

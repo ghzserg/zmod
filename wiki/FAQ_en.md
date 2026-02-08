@@ -816,7 +816,7 @@ If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - t
 
 If all else fails and **Klipper isn't working**:
 - Switch to the native Klipper as described above.
-- [Install the native Factory firmware](https://github.com/ghzserg/zmod/wiki/R#how-to-install-native-firmware), which will install the native MCU.
+- [Install the native Factory firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en#how-to-install-native-firmware), which will install the native MCU.
 
 <div align="center">
 
@@ -889,7 +889,7 @@ This is a feature of the native firmware starting with version:
 - **3.2.4** AD5M/AD5MPro
 
 Solution:
-- [Roll back the native firmware](https://github.com/ghzserg/zmod/wiki/R) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
+- [Roll back the native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
 - [Disable the native display](https://github.com/ghzserg/zmod/wiki/System_en#display_off)
 
 <div align="center">
