@@ -1,0 +1,12 @@
+/* zMod Wiki custom styles */
+
+.edit-page-footer {
+  margin-top: 1.5rem;
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.edit-page-footer:hover {
+  opacity: 1;
+}

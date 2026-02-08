@@ -1,0 +1,156 @@
+site_name: ZMOD Wiki
+site_description: Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications
+site_author: ghzserg
+repo_url: https://github.com/ghzserg/zmod
+repo_name: ghzserg/zmod
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: images/logo.png
+  favicon: images/fav.png
+  icon:
+    edit: material/pencil
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.action.edit
+  palette:
+    - scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark theme
+    - scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light theme
+
+docs_dir: ../docs
+site_dir: site
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          theme:
+            language: en
+        - locale: ru
+          name: Русский
+          build: true
+          theme:
+            language: ru
+          nav_translations:
+            Home: Главная
+
+            Begin: Начало
+            Setup: Установка
+            Recommendations: Рекомендации
+
+            Configuration: Настройка
+            Parameters: Параметры
+            Plugins: Плагины
+
+            Help: Помощь 
+            FAQ: ЧаВо
+            
+            Macros: Макросы
+            List: Список
+            Main: Основные
+            Calibrations: Калибровки
+            Start/Stop/Global: Старт/Стоп/Глобальные
+            System: Система
+            Filament: Филамент
+            
+            Additional: Дополнительно
+            Native firmware: Родная прошивка
+            Telegram: Телеграм
+            Sponsor: Спонсор
+            Changelog: История изменений
+
+nav:
+  - Home: README.md
+
+  - Begin:
+      - Setup: Setup.md
+      - Recommendations: Recomendations.md
+
+  - Configuration:
+      - AD5X: AD5X.md
+
+
+      - Plugins: Plugin.md
+
+  - Help:
+      - FAQ: FAQ.md
+      - Help: Help.md
+
+  - Macros:
+      - List: Macros.md
+      - Main: Main.md
+      - Calibrations: Calibrations.md
+      - Start/Stop/Global: Global.md
+      - System: System.md
+      - Zmod: Zmod.md
+      - Filament: Filament.md
+      - PRO: Pro.md
+
+
+  - Additional:
+      - Telegram: Telegram.md
+      - Changelog: Changelog.md
+      - Native firmware: Native_FW.md
+      - Sponsor: Sponsor.md
+
+extra:
+  social:
+    - icon: material/robot
+      link: https://t.me/zmod_help_bot
+      name: "Help Bot"
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/FF_5M_5M_Pro/408369
+      name: "Official Telegram Group"
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/groups/1526322885078508
+      name: "Unofficial Facebook Group"
+    - icon: fontawesome/brands/github
+      link: https://github.com/ghzserg/zmod
+      name: "GitHub Repository"
+
+extra_javascript:
+  - /assets/js/external-links.js
+
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - sane_lists
+  - admonition
+  - tables
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+          unicode: true
+  - codehilite
+
+copyright: Copyright &copy; 2026 ZMOD Project
