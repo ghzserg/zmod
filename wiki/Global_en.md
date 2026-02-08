@@ -233,10 +233,12 @@ Do not add this macro to start/end Gcode or Gcode files. Call it from the Fluidd
 - Go to `Fluidd` -> `Macros` -> `System` -> `SAVE ZMOD PARAMETERS`, select the parameter, modify it, and click `SEND`.
 - Alternatively, enter commands directly in the Fluidd console, e.g., `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
+Second option. Write the required command in the Fluidd console, for example: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
+
 [View saved parameters](https://github.com/ghzserg/zmod/wiki/Global_en#get_zmod_data)
 
-#### START_PRINT
-#### Parameters used during print start/bed mapping [START_PRINT]:
+#### Print start/bed mapping parameters [START_PRINT]:
+
 ##### MIDI_START
 
 Play MIDI on print start (""), 0 to disable.
@@ -430,7 +432,8 @@ Custom purge macros can be added to `mod_data/user.cfg`.
 
 Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
 
-#### Parameters used during print end/cancel [END_PRINT]:
+#### Print end/cancel parameters[END_PRINT]:
+
 ##### MIDI_END
 
 Play MIDI on print end (""), 0 to disable.
@@ -487,7 +490,9 @@ Example: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
 </div>
 
 ---
-#### System-wide Parameters:
+
+#### System-wide parameters:
+
 ##### MOTION_SENSOR
 
 Use a [filament motion sensor](https://aliexpress.ru/item/1005007480443587.html) instead of the filament presence sensor (0):
