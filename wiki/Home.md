@@ -25,6 +25,5 @@
 * [Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
 
 - [Help](https://github.com/ghzserg/zmod/wiki/Help_en)
-- [Native firmware](https://github.com/ghzserg/zmod/wiki/R)
-
-Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
+- [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en)
+- [Support development](https://github.com/ghzserg/zmod/wiki/Sponsor)

@@ -22,8 +22,5 @@
 * [История изменений](https://github.com/ghzserg/zmod/wiki/Changelog)
 
 - [Help](https://github.com/ghzserg/zmod/wiki/Help)
-- [Родная прошивка](https://github.com/ghzserg/zmod/wiki/R)
-
-[На развитие zmod: СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
-
-<img width="100" height="100" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
+- [Родная прошивка](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
+- [Поддержать разработку](https://github.com/ghzserg/zmod/wiki/Sponsor_ru)
