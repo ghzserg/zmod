@@ -448,7 +448,7 @@ Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
 
 ---
 
-### Print end/cancel parameters[END_PRINT]:
+### Print end/cancel parameters [END_PRINT]:
 
 ##### MIDI_END
 
