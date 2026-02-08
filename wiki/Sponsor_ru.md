@@ -1,15 +1,14 @@
-# Support Development
+# Поддержать разработку
 
 [@zmod_help_bot](http://t.me/zmod_help_bot)
 
-Since people have been asking, I accept donations but please remember that I work on zMod for fun and not for the money. I will not accept donations to work on specific bugs or features.
+Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над zMod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
 
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">На развитие zmod: СБП, Банковская карта, T-pay</a> | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` |
 | :----: | :----: |
 | <img width="262" height="262" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> | <img width="262" height="262" alt="BTC" src="https://github.com/user-attachments/assets/da12b899-b5ea-4276-8661-83a348d151df" /> |
 
-
-Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purchasing [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) for development represented by
+Огромное спасибо сообществу [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) за приобретение [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) для разработки в лице
 
 - [@Voron_Kor](https://t.me/Voron_Kor)
 - [@solitairweb](https://t.me/solitairweb)
@@ -26,4 +25,3 @@ Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purch
 - [@cackmobile](https://github.com/cackmobile)
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
-
