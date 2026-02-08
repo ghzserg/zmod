@@ -18,8 +18,6 @@
 
 ---
 
-[Калибровка принтера после установки](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-после-установки)
-
 <table style="width: 100%; table-layout: fixed;" align="center">
 <thead><tr>
   <th colspan="3"><p align="center"><strong>🔷 Калибровка 🔷</strong></p></th>
