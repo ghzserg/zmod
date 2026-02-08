@@ -96,7 +96,7 @@
 * Добавлено включение [WiFi](https://github.com/ghzserg/zmod/wiki/Global_ru#wifi) напрямую без использования родного экрана
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Решена проблема с корзиной и отрезанием филамента в новых ревизиях
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Поддержка цвета при восстановлении печати
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Возможность создавать [свои типы филамента и цвета](https://github.com/ghzserg/zmod/wiki/AD5X#7-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D1%81%D0%B2%D0%BE%D0%B8-%D1%82%D0%B8%D0%BF%D1%8B-%D1%84%D0%B8%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%B0) при работе без родного экрана
+* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Возможность создавать [свои типы филамента и цвета](https://github.com/ghzserg/zmod/wiki/AD5X#7-добавить-свои-типы-филамента) при работе без родного экрана
 * Обновлен Klipper и Monnraker
 * Добавлена поддержка ens160.py от @minicx
 * Добавлен португальский язык
@@ -135,7 +135,7 @@
 
 ### Версия 1.5.3
 03.06.2025
-* Исправлена ошибка Klipper [#119](https://github.com/ghzserg/zmod/issues/119), из-за которой нужно было использовать [это](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BD%D0%B5-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B5-%D0%B8%D0%BC%D0%B5%D0%BD%D0%B0-%D0%B2-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%D1%85-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D0%BE%D0%B2)
+* Исправлена ошибка Klipper [#119](https://github.com/ghzserg/zmod/issues/119), из-за которой нужно было использовать [это](https://github.com/ghzserg/zmod/wiki/Recomendations#не-используйте-русские-имена-в-названиях-объектов)
 * Контроль сопла теперь включается и при печати с экрана сразу
 * Мелкие косметические фиксы
 
@@ -279,7 +279,7 @@
 - Спрятаны `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`
 - Для сброса тензодатчиков в режиме без родного экрана используется реализация Igor Polunovskiy
 - Сброс тензодатчиков, теперь только на прогретом столе
-- Новый глобальный параметр [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0-%D1%81%D0%B1%D1%80%D0%BE%D1%81%D0%B0-%D1%82%D0%B5%D0%BD%D0%B7%D0%BE%D0%B4%D0%B0%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2).
+- Новый глобальный параметр [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://github.com/ghzserg/zmod/wiki/FAQ#ошибка-сброса-тензодатчиков).
 - Новый глобальный параметр [CELL_WEIGHT](https://github.com/ghzserg/zmod/wiki/Macros#cell_weight) указывает, при каком весе не надо проводить калибровку тензодатчиков
 - Новый глобальный параметр [CHINA_CLOUD](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud) - позволяет отключить китайские облака
 - Переписано обновление конфига принтера
@@ -305,7 +305,7 @@
 
 ### Версия 1.0.4
 05.01.2025
-- Поддержка [отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8)
+- Поддержка [отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-откат-из-прошивки)
 - Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/System_ru#fix_e0017)
 - Автоматическое включение обдува драйверов, при включении двигателей. Решает проблему снятия шейперов без обдува в стоке.
 - Новый макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) - Записывает SIZE Мб на EMMC и пишет скорость чтения записи.

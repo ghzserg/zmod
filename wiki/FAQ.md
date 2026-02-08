@@ -27,7 +27,7 @@
 | [AD5X](#ad5x) | [Как обратиться в поддержку к разработчику](#как-обратиться-в-поддержку-к-разработчику) |
 | [Как изменить логотип загрузки](#как-изменить-логотип-загрузки) | [Что такое откат из прошивки?](#что-такое-откат-из-прошивки) |
 | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) | [WeightValue](#weightvalue) |
-| [MCU Protocol error](#mcu-protocol-error) | [Кончился или остановился филамент](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%BE%D0%BD%D1%87%D0%B8%D0%BB%D1%81%D1%8F-%D0%B8%D0%BB%D0%B8-%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB%D1%81%D1%8F-%D1%84%D0%B8%D0%BB%D0%B0%D0%BC%D0%B5%D0%BD%D1%82) |
+| [MCU Protocol error](#mcu-protocol-error) | [Кончился или остановился филамент](https://github.com/ghzserg/zmod/wiki/FAQ#кончился-или-остановился-филамент) |
 | [Перед каждой печатью измеряет стол по цетру](#перед-каждой-печатью-измеряет-стол-по-цетру) | [E0120](#e0120) |
 
 
@@ -65,7 +65,7 @@ ZMOD НЕ основан на KlipperMod, и НЕ является его раз
 - [Снятие шейперов c генерацией графиков](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) с учетом [SCV](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
 - [Проверка и восстановление файлов/прав/символических ссылок родной файловой системы](https://github.com/ghzserg/zmod/wiki/System_ru#check_system)
 - Автоматическое обновление `Fluidd`/`Mainsail`/`Moonraker` и ZMOD по сети
-- [Entware](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%B2-zmod-%D0%B2%D1%85%D0%BE%D0%B4%D0%B8%D1%82-entware---%D0%BA%D0%B0%D0%BA-%D0%B8%D0%BC-%D0%B2%D0%BE%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%D1%81%D1%8F)
+- [Entware](https://github.com/ghzserg/zmod/wiki/FAQ#в-zmod-входит-entware---как-им-воспользоваться)
 - Исправлена ошибка [E0017](https://github.com/ghzserg/zmod/wiki/System_ru#fix_e0017)
 - Дополнительно GuppyScreen поддерживает: калибровка PID, управление заслонкой, откат из прошивки, очистка сопла, сброс тензодатчиков, регулировка винтов, ColdPull, доработана карта стола
 - Исправлена работа вентиляторов обдува драйверов. Они автоматически включаются при работе моторов. На родной прошивке - только при печати.
@@ -176,9 +176,9 @@ ZMOD НЕ основан на KlipperMod, и НЕ является его раз
 
 Именно поэтому необходимо менять стартовый и конечный G код. *лось*
 
-Также, при работе в режиме без родного экрана, принтер не выставляет Z-offset записанный на экране, и его необходимо передавать как параметр в [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) или через глобальные параметры. [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
+Также, при работе в режиме без родного экрана, принтер не выставляет Z-offset записанный на экране, и его необходимо передавать как параметр в [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) или через глобальные параметры. [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#как-работает-z-offset)
 
-Прочитайте [особенности работы без родного экрана](#%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B8-%D0%B1%D0%B5%D0%B7-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0).
+Прочитайте [особенности работы без родного экрана](#особенности-версии-без-родного-экрана).
 
 И перейти на протокол Octo/Klipper
 
@@ -213,8 +213,8 @@ M104 S[nozzle_temperature_initial_layer]
 
 ### После установки ZMOD мой экран умер, не реагирует на нажатия.
 
-- [Установите последнее обновление родной прошивки и ZMOD](https://github.com/ghzserg/zmod/wiki/Recomendations#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D0%B5-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5%D0%B4%D0%BD%D0%B5%D0%B5-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8-%D0%B8-zmod)
-- Прочитайте [особенности работы](#%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8) *бизон*
+- [Установите последнее обновление родной прошивки и ZMOD](https://github.com/ghzserg/zmod/wiki/Recomendations#установите-последнее-обновление-родной-прошивки-и-zmod)
+- Прочитайте [особенности работы](#известные-особенности)
 - Вы могли отключить экран. Включите его макросом [DISPLAY_ON](https://github.com/ghzserg/zmod/wiki/System_ru#display_on)
 
 <div align="center">
@@ -257,7 +257,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 
 Прочитайте документацию к [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) и [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data), это позволит вам использовать расширенные и полезные функции ZMOD
 
-Если хотите воспользоваться откатом из прошивки, то прочитайте [документацию](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%BE%D1%82%D0%BA%D0%B0%D1%82-%D0%B8%D0%B7-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B8) и добавьте 
+Если хотите воспользоваться откатом из прошивки, то прочитайте [документацию](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-откат-из-прошивки) и добавьте 
 `Профиль прутка` -> `Дополнительно` -> `Стартовый G-код прутка`
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
@@ -275,7 +275,7 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### Как работает Z-Offset
 
-Прочитайте статью "[Как работает Z-Offset на нашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5)"
+Прочитайте статью "[Как работает Z-Offset на нашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#как-работает-z-offset-на-вашем-принтере)"
 
 При работе с экраном мод никак не вмешивается в работу z-offset.
 
@@ -310,7 +310,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 - Надо выключить авто калибровку в глобальных параметрах
 
   ```SAVE_ZMOD_DATA PRINT_LEVELING=0```
-- Снять заранее карту стола через макрос [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D0%B5%D1%80%D0%B5%D0%B7-%D0%BC%D0%B0%D0%BA%D1%80%D0%BE%D1%81%D1%8B-%D0%B8-%D0%BA%D0%BD%D0%BE%D0%BF%D0%BA%D0%B8-%D0%B2%D0%BE-fluidd). 
+- Снять заранее карту стола через макрос [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/FAQ#через-макросы-и-кнопки-во-fluidd). 
  
   ```AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=moya_karta_na_80_gradusov```
 
@@ -463,8 +463,8 @@ M104 S[nozzle_temperature_initial_layer]
 - [Рекомендации по повышению стабильности работы принтера](https://github.com/ghzserg/zmod/wiki/Recomendations)
 - [Установка/Обновление/Удаление мода](https://github.com/ghzserg/zmod/wiki/Setup)
 - [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros)
-- [Хранение настроек](#%D1%85%D1%80%D0%B0%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BA)
-- [Известные особенности](#%D0%B8%D0%B7%D0%B2%D0%B5%D1%81%D1%82%D0%BD%D1%8B%D0%B5-%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8)
+- [Хранение настроек](#хранение-настроек)
+- [Известные особенности](#известные-особенности)
 
 <div align="center">
 
@@ -491,7 +491,7 @@ M104 S[nozzle_temperature_initial_layer]
 - Отключите на экране принтера родную камеру.
 - Вызовите макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on)
 
-Прочитайте: [Я установил принтер, а ZMOD спрятал мою камеру!](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80-%D0%B0-zmod-%D1%81%D0%BF%D1%80%D1%8F%D1%82%D0%B0%D0%BB-%D0%BC%D0%BE%D1%8E-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83-%D0%B2-orca-ff-%D1%8F-%D0%B5%D0%B5-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB-%D0%B0-%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-%D0%BE%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%BB%D0%B0)
+Прочитайте: [Я установил принтер, а ZMOD спрятал мою камеру!](#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
 
 #### Настройка камеры
 
@@ -688,7 +688,7 @@ rotation: 90
 
 Чтобы зайти на принтер, надо ввести просто IP принтера, **без указания номера порта**. *кролик*
 
-[Как настроить в Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)
+[Как настроить в Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#отправляйте-файлы-на--печать-через-octoklipper)
 
 ### Я переключил веб интерфейс и теперь ничего не работает.
 
@@ -962,9 +962,9 @@ detection_length: 8
 ```
 
 Также остановка филамента в IFS может быть связана:
-- В экструдере пруток 1, а вытягивается пруток 2. Используйте [SET_EXTRUDER_SLOT](https://github.com/ghzserg/zmod/wiki/AD5X#5-%D0%BA%D0%B0%D0%BA-%D0%B2%D1%80%D1%83%D1%87%D0%BD%D1%83%D1%8E-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%83-%D0%BA%D0%B0%D0%BA%D0%B0%D1%8F-%D0%BA%D0%B0%D1%82%D1%83%D1%88%D0%BA%D0%B0-%D1%81%D0%B5%D0%B9%D1%87%D0%B0%D1%81-%D0%B7%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B0-ad5x).
+- В экструдере пруток 1, а вытягивается пруток 2. Используйте [SET_EXTRUDER_SLOT](https://github.com/ghzserg/zmod/wiki/AD5X#5-как-вручную-указать-принтеру-какая-катушка-сейчас-заправлена-ad5x).
 - В экструдер вставляется пруток, но в нем уже есть старый пруток
-- Модули 4 в 1 и трубки к ним имеют разную длину, поэтому нужно отрегулировать параметр ```nozzle_cleaning_length``` в ```mod_data/filament.json``` установив его 70 или больше. [Подробнее](https://github.com/ghzserg/zmod/wiki/AD5X#%D1%81%D0%B0%D0%BC%D1%8B%D0%B5-%D0%B2%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8-%D1%87%D1%82%D0%BE-%D0%BC%D0%B5%D0%BD%D1%8F%D1%82%D1%8C-%D1%87%D0%B0%D1%89%D0%B5-%D0%B2%D1%81%D0%B5%D0%B3%D0%BE-ad5x)
+- Модули 4 в 1 и трубки к ним имеют разную длину, поэтому нужно отрегулировать параметр ```nozzle_cleaning_length``` в ```mod_data/filament.json``` установив его 70 или больше. [Подробнее](https://github.com/ghzserg/zmod/wiki/AD5X#самые-важные-настройки-что-менять-чаще-всего-ad5x)
 
 Также проблема может быть вызвана невозможностью разблокировать пруток в канале IFS.
 
@@ -974,7 +974,7 @@ detection_length: 8
 
 Требуется устранить стружку, разобрать и установить детали на место.
 
-После этого протестировать печать и блокировку/разблокировку прутков через [команды IFS](https://github.com/ghzserg/zmod/wiki/AD5X#10-ifs-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B).
+После этого протестировать печать и блокировку/разблокировку прутков через [команды IFS](https://github.com/ghzserg/zmod/wiki/AD5X#10-ifs-команды).
 
 <div align="center">
 

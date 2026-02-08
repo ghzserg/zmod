@@ -2,7 +2,7 @@
 
 Откройте телеграм бот [@zmod_help_bot](http://t.me/zmod_help_bot) и задайте ему ваш вопрос, он знает всю документацию.
 
-1. [Обновить zMod и все плагины до последней версии](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0)
+1. [Обновить zMod и все плагины до последней версии](https://github.com/ghzserg/zmod/wiki/Setup#обновление-мода)
 2. Перевести мод на русский язык ```LANG LANG=ru```
 3. Четко сформулировать проблему. Скрины, фото, текстовое описание.
 4. Вызвать [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc) для очистки логов

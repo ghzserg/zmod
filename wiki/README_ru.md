@@ -9,7 +9,7 @@
 **Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
 
 - [Скачать](https://github.com/ghzserg/zmod/releases/)
-- [Установка/Первоначальная калибровка](https://github.com/ghzserg/zmod/wiki/Setup#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BC%D0%BE%D0%B4%D0%B0)
+- [Установка/Первоначальная калибровка](https://github.com/ghzserg/zmod/wiki/Setup#установка-мода)
 
 Ставится на чистую версию:
 - FF5M/FF5MPro **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
@@ -112,7 +112,7 @@ ZMOD — это кастомная прошивка (модификация), к
 3. Исправление ошибки [E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
 4. Исправление ошибки [E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
 5. [Отключение обновлений принтера/телеметрии/китайских облаков](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud)
-6. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0)
+6. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)
 7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
 8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
 

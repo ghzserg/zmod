@@ -489,7 +489,7 @@ Now, before each print, the printer will take a bed mesh only where there are ob
 ### How Z-Offset Works on Your Printer
 
 **What is Z-Offset?**
-Simply put, it is the **precise distance between the nozzle tip and the bed** at the moment the printer considers them to have "touched." The correct Z-Offset ensures that the first layer of plastic adheres perfectly to the bed – not too low (the nozzle will scrape the bed) and not too high (the plastic won't stick). [Learn more](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
+Simply put, it is the **precise distance between the nozzle tip and the bed** at the moment the printer considers them to have "touched." The correct Z-Offset ensures that the first layer of plastic adheres perfectly to the bed – not too low (the nozzle will scrape the bed) and not too high (the plastic won't stick). [Learn more](https://github.com/ghzserg/zmod/wiki/FAQ_en#how-does-z-offset-work)
 
 **The Most Important Rule:**
 On our printer, **Z-Offset is ONLY relevant DURING printing**. The values you see on the screen or in the interface BEFORE or AFTER printing are for reference only and do not reflect the actual situation.

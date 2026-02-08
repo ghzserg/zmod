@@ -402,7 +402,7 @@ Igor Polunovskiy
 
 Загружать Z-offset из глобальных параметров, сохраненных ранее через SET_GCODE_OFFSET. 1 - да, 0 -нет (1)
 
-[Как работает Z-Offset](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
+[Как работает Z-Offset](https://github.com/ghzserg/zmod/wiki/FAQ#как-работает-z-offset)
 
 Пример: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 
@@ -681,7 +681,7 @@ square_corner_velocity: 9
 - Битый кабель к экструдеру. Решение: замена/поправка кабеля
 - Неконтакт разъема кабеля с платой в голове экструдера. Решение: Замена платы экструдера
 - Загрузка данных из SWAP (SWAP находится на EMMC, которая работает со скорость 10 МБ/с, объем данных в SWAP при построении шейперов доходит до 25 мегабайт). Решение: отключение SWAP если у вас 256 мегабайт оперативной памяти `SAVE_ZMOD_DATA USE_SWAP=0`
-- Сбой прошивки MCU. Решение: перешивка MCU [через сброс настроек](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0). Перешивка MCU из мода [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
+- Сбой прошивки MCU. Решение: перешивка MCU [через сброс настроек](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода). Перешивка MCU из мода [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
 
 Исправить ошибку E0011, а также `Communication timeout during homing`, при изменении параметра принтер перезагрузится. 0-нет, 1-да (0)
 
@@ -699,7 +699,7 @@ square_corner_velocity: 9
   Включите SWAP, если он выключен ```SAVE_ZMOD_DATA USE_SWAP=1```
 - Если на FF5M/FF5MPro проводите полный тест. А именно, калибровку PID, снятие карты стола и снятие шейперов одновременно.
   
-  Все калибровки лучше проводить [вот по этой инструкции](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%BD%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D0%B2)
+  Все калибровки лучше проводить [вот по этой инструкции](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
 
 Ошибка «Communication timeout during homing» в может возникать из-за высокой задержки связи между хост-компьютером и микроконтроллерами. Обычно время в пути должно быть постоянно меньше 10 мс. Высокая задержка даже на короткие периоды может привести к сбоям при настройке.
 
@@ -843,7 +843,7 @@ square_corner_velocity: 9
 
 Пример: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Отключите китайские облака](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5-%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0)
+[Отключите китайские облака](https://github.com/ghzserg/zmod/wiki/Recomendations#отключите-китайские-облака)
 
 Даже, если у вас все выключено с экрана. Принтер все равно пытается отправлять фото, видео телеметрию на китайские сервера.
 

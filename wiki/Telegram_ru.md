@@ -380,7 +380,7 @@ git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-Как получить bot_token и chat_id смотри [тут](https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B1%D0%BE%D1%82%D0%B0)
+Как получить bot_token и chat_id смотри [тут](https://github.com/ghzserg/zmod/wiki/Telegram_ru#регистрация-бота)
 
 Установка:
 

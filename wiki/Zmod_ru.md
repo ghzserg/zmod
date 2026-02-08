@@ -73,8 +73,8 @@
 
 *Многие камеры с Ali/Ozon/Wildberries всегда потребляют 18 MiB*
 
-- [Что такое альтернативная камера?](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%87%D1%82%D0%BE-%D1%82%D0%B0%D0%BA%D0%BE%D0%B5-%D0%B0%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D0%B0%D1%8F-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D0%B0)
-- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://github.com/ghzserg/zmod/wiki/FAQ#%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D0%BB-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80-%D0%B0-zmod-%D1%81%D0%BF%D1%80%D1%8F%D1%82%D0%B0%D0%BB-%D0%BC%D0%BE%D1%8E-%D0%BA%D0%B0%D0%BC%D0%B5%D1%80%D1%83-%D0%B2-orca-ff-%D1%8F-%D0%B5%D0%B5-%D0%B2%D0%B8%D0%B4%D0%B5%D0%BB-%D0%B0-%D1%82%D0%B5%D0%BF%D0%B5%D1%80%D1%8C-%D0%BE%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%BF%D0%B0%D0%BB%D0%B0)
+- [Что такое альтернативная камера?](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-альтернативная-камера)
+- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://github.com/ghzserg/zmod/wiki/FAQ#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
 
 `Camera Off Waiting...` - эта надпись выводится, если поток камеры еще недоступен. Камера запускается после запуска Klipper - во время вывода информации о глобальных параметрах
 
