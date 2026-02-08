@@ -649,7 +649,7 @@ Specific causes:
 - Damaged extruder cable. Solution: Replace/fix the cable.
 - Loose extruder board cable connection. Solution: Replace the extruder board.
 - SWAP data loading (SWAP resides on EMMC, which operates at 10 MB/s; SWAP data during shaper calculations can reach 25MB). Solution: Disable SWAP if you have 256MB RAM via `SAVE_ZMOD_DATA USE_SWAP=0`.
-- MCU firmware crash. Solution: Reflash the MCU via [factory reset](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0) or use the [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu) mod.
+- MCU firmware crash. Solution: Reflash the MCU via [factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation) or use the [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu) mod.
 
 Fix E0011 and `Communication timeout during homing` errors. Changing this parameter will reboot the printer. 0-no, 1-yes (0):
 - 0 - keep the stock parameter (0.025)
@@ -800,7 +800,7 @@ Enable Chinese cloud services: 0-no, 1-yes (1).
 
 Example: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Disable Chinese clouds](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5-%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D0%BA%D0%B8%D0%B5-%D0%BE%D0%B1%D0%BB%D0%B0%D0%BA%D0%B0)
+[Disable Chinese clouds](https://github.com/ghzserg/zmod/wiki/Recomendations_en#disable-chinese-cloud-services)
 
 Even if all cloud options are disabled via the screen, the printer still attempts to send photos, videos, and telemetry to Chinese servers.
 

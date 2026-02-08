@@ -48,7 +48,7 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
-1. **[Вернуть принтер к заводским настройкам](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BE%D0%B7%D0%B2%D1%80%D0%B0%D1%82-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D1%81%D0%BA%D0%B8%D0%BC-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%D0%BC-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE-%D0%B4%D0%BB%D1%8F-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8-%D0%BC%D0%BE%D0%B4%D0%B0)** [Внимание AD5X](https://github.com/ghzserg/zmod/wiki/Setup#%D0%B2%D0%BD%D0%B8%D0%BC%D0%B0%D0%BD%D0%B8%D0%B5-ad5x)
+1. **[Вернуть принтер к заводским настройкам](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
 3. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
    - для FF5M: Adventurer5M-**zmod**-\*.tgz
@@ -110,7 +110,7 @@
     Или введите в консоли ```ENABLE_PLUGIN name=recommend```
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
-18. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)  
+18. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#отправляйте-файлы-на--печать-через-octoklipper)  
     Весь стартовый код нужно заменить на этот:
 
     ```
@@ -141,7 +141,7 @@
 
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
-19. [Включите контроль MD5](https://github.com/ghzserg/zmod/wiki/Recomendations#%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D1%82%D0%B5--%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C-md5)
+19. [Включите контроль MD5](https://github.com/ghzserg/zmod/wiki/Recomendations#включите--контроль-md5)
 
     <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
 20. [Прочитайте рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
@@ -153,7 +153,7 @@
 
 После установки Native Firmware, возможна некорректная парковка печатающей головы к приемнику филамента (недожим шторки приемника, выдавливание филамента на стол и т.п.).
 
-[Через инженерное меню на родной прошивке](https://github.com/ghzserg/zmod/wiki/AD5X#%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B-%D0%BD%D0%B0-%D1%80%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D0%B5-ad5x)
+[Через инженерное меню на родной прошивке](https://github.com/ghzserg/zmod/wiki/AD5X#настройка-корзины-на-родной-прошивке-ad5x)
 
 Если вы столкнулись с данной ситуацией, необходимо откалибровать парковку по следующему алгоритму:
 1. Скачать архив [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) и распаковать его в корень флешки
@@ -491,7 +491,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ### Как работает Z-Offset на вашем принтере
 
 **Что такое Z-Offset?**
-Проще говоря, это **точное расстояние между кончиком сопла и столом** в момент, когда принтер считает, что они "коснулись" друг друга. Правильный Z-Offset гарантирует, что первый слой пластика будет идеально прилипать к столу — не слишком низко (сопло будет задевать стол) и не слишком высоко (пластик не прилипнет). [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset)
+Проще говоря, это **точное расстояние между кончиком сопла и столом** в момент, когда принтер считает, что они "коснулись" друг друга. Правильный Z-Offset гарантирует, что первый слой пластика будет идеально прилипать к столу — не слишком низко (сопло будет задевать стол) и не слишком высоко (пластик не прилипнет). [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#как-работает-z-offset)
 
 **Самое важное правило:**
 На нашем принтере **Z-Offset актуален ТОЛЬКО во время печати**. Значения, которые вы видите на экране или в интерфейсе ДО или ПОСЛЕ печати, являются лишь справочной информацией и не отражают реальную картину.

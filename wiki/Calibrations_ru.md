@@ -2,7 +2,7 @@
 
 *[Read in English](https://github.com/ghzserg/zmod/wiki/Calibrations_en)*
 
-[Калибровка принтера для новичков](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%B4%D0%BB%D1%8F-%D0%BD%D0%BE%D0%B2%D0%B8%D1%87%D0%BA%D0%BE%D0%B2)
+[Калибровка принтера для новичков](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
 
 
 Макрос - это небольшая программа на языке Klipper/Gcode.
@@ -18,7 +18,7 @@
 
 ---
 
-[Калибровка принтера после установки](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BB%D0%B8%D0%B1%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B8)
+[Калибровка принтера после установки](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-после-установки)
 
 <table style="width: 100%; table-layout: fixed;" align="center">
 <thead><tr>
@@ -176,7 +176,7 @@ KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_
 
 Рекомендуется также поставить `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
 
-[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5-%D0%B5%D1%81%D1%82%D1%8C-%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-%D1%81%D0%BD%D1%8F%D1%82%D0%B8%D1%8F-%D0%BA%D0%B0%D1%80%D1%82%D1%8B-%D1%81%D1%82%D0%BE%D0%BB%D0%B0)
+[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#какие-есть-варианты-снятия-карты-стола)
 
 <div align="center">
 
@@ -202,7 +202,7 @@ M104 S[nozzle_temperature_initial_layer]
 
 Но лучше  использовать [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) и [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Goabal_ru#start_print) PRINT_LEVELING=1
 
-[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5-%D0%B5%D1%81%D1%82%D1%8C-%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-%D1%81%D0%BD%D1%8F%D1%82%D0%B8%D1%8F-%D0%BA%D0%B0%D1%80%D1%82%D1%8B-%D1%81%D1%82%D0%BE%D0%BB%D0%B0)
+[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#какие-есть-варианты-снятия-карты-стола)
 
 <div align="center">
 
@@ -218,7 +218,7 @@ M104 S[nozzle_temperature_initial_layer]
 
 Перенести настройки z-offset с родного экрана в режим без экрана
 
-[Как работает Z-Offset на вашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D0%B5%D1%82-z-offset-%D0%BD%D0%B0-%D0%B2%D0%B0%D1%88%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5)
+[Как работает Z-Offset на вашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#как-работает-z-offset-на-вашем-принтере)
 
 <div align="center">
 

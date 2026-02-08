@@ -84,7 +84,7 @@ SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
-[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5-%D0%B5%D1%81%D1%82%D1%8C-%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-%D1%81%D0%BD%D1%8F%D1%82%D0%B8%D1%8F-%D0%BA%D0%B0%D1%80%D1%82%D1%8B-%D1%81%D1%82%D0%BE%D0%BB%D0%B0)
+[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#какие-есть-варианты-снятия-карты-стола)
 
 *дикобраз*
 

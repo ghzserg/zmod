@@ -545,7 +545,7 @@ ZMOD uses the following ports:
 
 To access the printer, enter its IP address **without specifying a port**. *кролик*
 
-[How to configure in Orca](https://github.com/ghzserg/zmod/wiki/Recomendations_en#%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B9%D1%82%D0%B5-%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%BD%D0%B0--%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D1%8C-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-octoklipper)
+[How to configure in Orca](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
 
 <div align="center">
 
@@ -697,7 +697,7 @@ No - all settings are saved
 ### Help
 ### How to Contact Support
 
-1. [Update ZMOD to the latest version and all plugins](https://github.com/ghzserg/zmod/wiki/Setup_en#%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B0).
+1. [Update ZMOD to the latest version and all plugins](https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod).
 2. Translate the mod into Russian ```LANG LANG=ru``` or English ```LANG LANG=en```
 3. Describe the issue clearly (screenshots, photos, text).
 4. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear logs.
