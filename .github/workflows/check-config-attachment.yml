@@ -125,7 +125,7 @@ jobs:
           VERSION_OUTDATED="false"
 
           VERSION_FILE_5X="opt/config/mod/version_5x.txt"
-          REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/zmod_ff5x/refs/heads/1.6/version_5x.txt"
+          REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/z_ad5x/refs/heads/1.6/version_5x.txt"
 
           if [ -f "$EXTRACT_DIR/$VERSION_FILE_5X" ]; then
             echo "Found $VERSION_FILE_5X, checking version..."
@@ -146,7 +146,7 @@ jobs:
 
           else
             VERSION_FILE_5M="opt/config/mod/version_5m.txt"
-            REMOTE_VERSION_URL_5M="https://raw.githubusercontent.com/ghzserg/zmod_ff5m/refs/heads/1.6/version_5m.txt"
+            REMOTE_VERSION_URL_5M="https://raw.githubusercontent.com/ghzserg/z_ff5m/refs/heads/1.6/version_5m.txt"
 
             if [ -f "$EXTRACT_DIR/$VERSION_FILE_5M" ]; then
               echo "Found $VERSION_FILE_5M, checking version..."
