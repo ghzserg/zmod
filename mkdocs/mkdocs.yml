@@ -98,7 +98,7 @@ plugins:
 
             Download: Скачать
             Video: Видео
-            Telegram_Bot: Телеграм бот
+            TelegramBot: Телеграм бот
 
 
 nav:
@@ -135,7 +135,7 @@ nav:
 
   - Download: Download.md
   - Video: Video.md 
-  - Telegram_Bot: Telegram_bot.md
+  - TelegramBot: Telegrambot.md
 
 extra:
   generator: false
@@ -177,4 +177,3 @@ markdown_extensions:
 
 
 copyright: Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
-
