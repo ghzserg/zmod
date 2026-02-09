@@ -38,4 +38,4 @@ jobs:
         working-directory: mkdocs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: mkdocs gh-deploy --config-file mkdocs.yml --cname zmod.xyzroe.cc --force
+        run: mkdocs gh-deploy --config-file mkdocs.yml --force
