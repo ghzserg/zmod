@@ -66,7 +66,7 @@
 **25.11.2025 — ZMOD’s Birthday!**
 
 * [@zmod_help_bot](http://t.me/zmod_help_bot)
-* [zmod.link](https://zmod.link) | [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) — remote printer access via cloud
+* [zmod.link](https://zmod.link/link/) | [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) — remote printer access via cloud
 * Macro [SCREEN](https://github.com/ghzserg/zmod/wiki/System_ru#screen) — capture a screenshot of the printer’s display
 * Macro [LOAD_ZOFFSET_NATIVE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_zoffset_native) — transfer Z-offset settings from the native screen to screenless mode
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Added global parameter [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament) — unload filament after print completion

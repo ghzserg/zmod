@@ -63,7 +63,7 @@
 ### Версия 1.6.3
 25.11.2025 - Год моду
 * [@zmod_help_bot](http://t.me/zmod_help_bot)
-* [zmod.link](https://zmod.link) [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - удаленное подключение к принтеру через облако
+* [zmod.link](https://zmod.link/link/) [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - удаленное подключение к принтеру через облако
 * Макрос [SCREEN](https://github.com/ghzserg/zmod/wiki/System_ru#screen) получить снимок экрана принтера
 * Макрос [LOAD_ZOFFSET_NATIVE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_zoffset_native) - перенести настройки z-offset с родного экрана в режим без экрана
 * [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Добавлен глобальный параметр [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament) - извлечь филамент после печати
