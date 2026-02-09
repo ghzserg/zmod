@@ -105,16 +105,16 @@ ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the *
 
 These features are ported to the stock firmware:
 1. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
-2. [Install root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
+2. [Install root](https://github.com/ghzserg/zmod/wiki/Native_FW_en#root)
 3. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
 4. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
 5. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Global_en#china_cloud)
 6. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
-7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
-8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
+7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5m-to-5mpro)
+8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5mpro-to-5m)
 
 ## Plugins
-zMod support [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
+zMod support [Plugins](https://github.com/ghzserg/zmod/wiki/Plugin_en)
 
 ## Version History
 [Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)

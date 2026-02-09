@@ -2,8 +2,6 @@
 
 *[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)*
 
-[Printer Calibration for Beginners](https://github.com/ghzserg/zmod/wiki/Setup_en#printer-calibration-for-beginners)
-
 A macro is a small program written in Klipper/Gcode language.
 
 It can be called from:
@@ -47,6 +45,12 @@ It can be called from:
 </div>
 
 ---
+
+> [!TIP]
+> [Printer Calibration for Beginners](https://github.com/ghzserg/zmod/wiki/Setup_en#printer-calibration-for-beginners)
+
+---
+
 ### BED_LEVEL_SCREWS_TUNE
 
 Bed screw leveling calibration ([guide](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe)).

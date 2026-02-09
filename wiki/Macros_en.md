@@ -18,7 +18,7 @@ It can be called from:
 
 ***
 
-<h1 align="center"><a href="Main_en">Main</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en">Main</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -54,7 +54,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Calibrations_en">Calibrations</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en">Calibrations</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -75,7 +75,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Global_en">Global parameters</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en">Global parameters</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -90,7 +90,7 @@ It can be called from:
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_en#start_print">Start Print</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#print-startbed-mapping-parameters-start_print">Start Print</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -112,7 +112,7 @@ It can be called from:
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_en#end_print">End Print</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#print-endcancel-parametersend_print">End Print</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -124,7 +124,7 @@ It can be called from:
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_en#system">System-Wide Parameters</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_en#system-wide-parameters">System-Wide Parameters</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -156,7 +156,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="System_en">System</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en">System</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -181,7 +181,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Zmod_en">Zmod</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en">Zmod</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -211,7 +211,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Filament_en">Filament</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en">Filament</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -227,7 +227,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Telegram_en">Telegram Bot</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en">Telegram Bot</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -249,7 +249,7 @@ It can be called from:
 </table>
 
 ***
-<h1 align="center"><a href="Pro_en">Pro</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_en">Pro</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
