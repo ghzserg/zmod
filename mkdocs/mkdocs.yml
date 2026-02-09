@@ -1,4 +1,4 @@
-site_name: ZMOD Wiki
+site_name: zMod Wiki
 site_description: Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications
 site_author: ghzserg
 repo_url: https://github.com/ghzserg/zmod
@@ -98,6 +98,7 @@ plugins:
 
             Download: Скачать
             Video: Видео
+            Telegram_Bot: Телеграм бот
 
 
 nav:
@@ -134,9 +135,10 @@ nav:
 
   - Download: Download.md
   - Video: Video.md 
+  - Telegram_Bot: Telegram_bot.md
 
 extra:
-  generator: false  
+  generator: false
   social:
     - icon: material/robot
       link: https://t.me/zmod_help_bot
@@ -174,5 +176,5 @@ markdown_extensions:
   - codehilite
 
 
-copyright: Copyright &copy; 2026 ZMOD development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+copyright: Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
 
