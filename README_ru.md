@@ -108,17 +108,17 @@ ZMOD — это кастомная прошивка (модификация), к
 
 Эти функции портированы на стандартную прошивку:
 1. Я хочу Klipper. (Klipper уже есть в принтере, но нет веб интерфейса)
-2. [Установить root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
+2. [Установить root](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#root)
 3. Исправление ошибки [E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
 4. Исправление ошибки [E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
 5. [Отключение обновлений принтера/телеметрии/китайских облаков](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud)
 6. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)
-7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/5m2Pro)
-8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/tree/main/Native_firmware/Pro25M)
+7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#перевод-5m-в-5mpro)
+8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#перевод-5mpro-в-5m)
 
 ## Плагины
 
-zMod поддерживает [Плагины](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
+zMod поддерживает [Плагины](https://github.com/ghzserg/zmod/wiki/Plugin_ru)
 
 ## История версий
 

@@ -236,9 +236,17 @@ WEIGHT - вес в граммах (1500)
 
 Второй вариант. Написать в консоли Fluidd нужную команду например: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
 
-#### START_PRINT
+[Просмотр сохраненных параметров](https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data)
 
-#### Параметры используемые при начале печати, построении карты стола [START_PRINT]:
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+--- 
+
+### Параметры начала печати, построения карты стола [START_PRINT]:
 
 ##### MIDI_START
 
@@ -449,7 +457,15 @@ Igor Polunovskiy
 
 *5M/5MPro: Это не замена родной очистки(CLEAR_NOZZLE), когда сопло тыкается в стол по середине сверху, а потом счищает пластик о стол. Эта очистка сопла непосредственно перед печатью.*
 
-#### Параметры используемые при окончании и отмене печати [END_PRINT]:
+<div align="center">
+
+[![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Global-param)
+
+</div>
+
+--- 
+
+### Параметры окончания и отмены печати [END_PRINT]:
 
 ##### MIDI_END
 
@@ -513,7 +529,7 @@ Igor Polunovskiy
 
 ---
 
-#### Общесистемные параметры:
+### Системные параметры:
 
 ##### MOTION_SENSOR
 

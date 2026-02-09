@@ -18,7 +18,7 @@
 
 ***
 
-<h1 align="center"><a href="Main_ru">Основные</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_ru">Основные</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -54,7 +54,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Calibrations_ru">Калибровка</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru">Калибровка</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -75,7 +75,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Global_ru">Глобальные параметры</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru">Глобальные параметры</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -90,7 +90,7 @@
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_ru#start_print">Параметры начала печати [START_PRINT]</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#параметры-начала-печати-построения-карты-стола-start_print">Параметры начала печати [START_PRINT]</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -112,7 +112,7 @@
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_ru#end_print">Параметры окончания печати [END_PRINT]</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#параметры-окончания-и-отмены-печати-end_print">Параметры окончания печати [END_PRINT]</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -124,7 +124,7 @@
 </tbody>
 </table>
 
-<h2 align="center"><a href="Global_ru#system">Системные параметры</a></h2>
+<h2 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#системные-параметры">Системные параметры</a></h2>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -155,7 +155,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="System_ru">Системные макросы</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru">Системные макросы</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -180,7 +180,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Zmod_ru">Zmod</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru">Zmod</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -210,7 +210,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Filament_ru">Филамент и пауза</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru">Филамент и пауза</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -226,7 +226,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Telegram_ru">Telegram Bot</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru">Telegram Bot</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>
@@ -248,7 +248,7 @@
 </table>
 
 ***
-<h1 align="center"><a href="Pro_ru">Pro</a></h1>
+<h1 align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_ru">Pro</a></h1>
 <table style="width: 100%; table-layout: fixed;" align="center">
 <tbody>
  <tr>

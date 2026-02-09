@@ -8,16 +8,6 @@ It can be called from:
 - A GCODE file
 - The Fluidd/Mainsail console (press the English letter `C` in Fluidd)
 
-To enable these features, add the following to your start code:
-```
-SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
-```
-
-Add this to the layer change code:
-```
-SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
-```
-
 > [!NOTE]
 > *The value in parentheses is the default value*
 
@@ -85,6 +75,7 @@ Works only in native screen mode.
 </div>
 
 ---
+
 ### SET_PAUSE_NEXT_LAYER
 
 Set pause/trigger a macro on the next layer:
@@ -106,6 +97,18 @@ Enable/disable pause at a specific layer number:
 - `LAYER` — target layer number (default: `0`)
 
 ---
+> [!IMPORTANT]
+> To enable these features, add the following to your start code:
+> ```
+> SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+> ```
+> 
+> Add this to the layer change code:
+> ```
+> SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
+> ```
+
+
 <div align="center">
 
 [![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_en)
