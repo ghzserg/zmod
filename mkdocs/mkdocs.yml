@@ -68,7 +68,7 @@ plugins:
           theme:
             language: ru
           nav_translations:
-            Home: Главная
+            Index: Главная
 
             Begin: Начало
             Setup: Установка
@@ -77,6 +77,7 @@ plugins:
             Configuration: Настройка
             Parameters: Параметры
             Plugins: Плагины
+            Telegram: Телеграм
 
             Help: Помощь 
             FAQ: ЧаВо
@@ -92,12 +93,11 @@ plugins:
             
             Additional: Дополнительно
             Native firmware: Родная прошивка
-            Telegram: Телеграм
-            Support: Поддержка
             Changelog: История изменений
+            Support: Поддержка
 
 nav:
-  - Home: Home.md
+  - Index: index.md
 
   - Begin:
       - Setup: Setup.md

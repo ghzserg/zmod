@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # FF5M / FF5M Pro / AD5X ZMOD
 
 <img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
