@@ -99,7 +99,7 @@ plugins:
             Download: Скачать
             Video: Видео
             TelegramBot: Телеграм бот
-
+            zModLink: zMod LINK
 
 nav:
   - Index: index.md
@@ -136,6 +136,7 @@ nav:
   - Download: Download.md
   - Video: Video.md 
   - TelegramBot: Telegrambot.md
+  - zMod LINK: https://zmod.link/link/
 
 extra:
   generator: false
