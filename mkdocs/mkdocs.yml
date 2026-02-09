@@ -129,6 +129,7 @@ nav:
       - Support: Sponsor.md
 
 extra:
+  generator: false  
   social:
     - icon: material/robot
       link: https://t.me/zmod_help_bot
@@ -165,4 +166,6 @@ markdown_extensions:
           unicode: true
   - codehilite
 
-copyright: Copyright &copy; 2026 ZMOD Project
+
+copyright: Copyright &copy; 2026 ZMOD development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+
