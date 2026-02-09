@@ -133,9 +133,9 @@ nav:
       - Changelog: Changelog.md
       - Support: Sponsor.md
 
-  - Download: Download.md
-  - Video: Video.md 
-  - TelegramBot: Telegrambot.md
+  - Download: https://github.com/ghzserg/zmod/releases/latest
+  - Video: Video.md
+  - zmod_help_bot: http://t.me/zmod_help_bot
   - zMod LINK: https://zmod.link/link/
 
 extra:
