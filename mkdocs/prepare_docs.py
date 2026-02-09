@@ -406,7 +406,7 @@ def main() -> int:
 
     _copy_images(wiki_dir, docs_dir)
 
-    files = [p for p in wiki_dir.iterdir() if p.is_file() and not p.name.startswith('_') and not p.name.startswith('Home') and not p.name.startswith('R.')]
+    files = [p for p in wiki_dir.iterdir() if p.is_file() and not p.name.startswith('_') and not p.name.startswith('Home') and not p.name.startswith('R.') and not p.name.startswith('README')]
     groups: dict[str, list[Path]] = {}
     for src in files:
         groups.setdefault(_base_stem(src), []).append(src)

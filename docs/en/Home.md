@@ -2,25 +2,8 @@
 
 <img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
 
-[На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
+### **ZMOD for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer**
 
-Latest version: **1.6.6** can be installed via USB flash drive or the [ZFLASH](/Zmod/#zflash) macro.
-
-[https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
-
-**Macro [LANG](/Global/#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
-
-- [Download](https://github.com/ghzserg/zmod/releases/)
-- [Install/Initial calibration](/Setup/#installing-the-mod)
-
-Compatible with clean firmware versions:
-
-- FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
-- [AD5X](/AD5X/): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
-
-Clean firmware files are located in the [Native firmware](/Native_FW/) folder.
-
-ZMOD for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer
 Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, ZMOD is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
 
 ### What is ZMOD?
@@ -109,7 +92,9 @@ ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the *
     
     After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://ghzserg.github.io/).
 
-## Do NOT install this mod if the following stock firmware fixes suffice
+## Before start
+
+#### Do NOT install this mod if the following stock firmware fixes suffice
 
 These features are ported to the stock firmware:
 
@@ -122,11 +107,18 @@ These features are ported to the stock firmware:
 7. [Convert FF5M to FF5MPro](/Native_FW/#5m-to-5mpro)
 8. [Convert FF5MPro to FF5M](/Native_FW/#5mpro-to-5m)
 
-## Plugins
-zMod support [Plugins](/Plugin/)
 
-## Version History
-[Changelog](/Changelog/)
+### Compatibility
+Compatible with clean firmware versions:
+
+- FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
+- [AD5X](/AD5X/): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
+
+Native firmware files are located [here](/Native_FW/).
+
+## Installation/Update/Removal
+
+[Installation/Update/Removal Guide](/Setup/)
 
 ## FAQ
 
@@ -136,33 +128,13 @@ zMod support [Plugins](/Plugin/)
 
 [Read if encountering issues](/Recomendations/)
 
-## Macro List
+## Plugins
 
-All features are accessed via macros.
-
-[Macro List](/Macros/)
-
-## Credits
-
-- Root access based on [@darksimpson](https://t.me/darksimpson)'s work. Login: `root`, password: `root`. [Link](https://t.me/c/2000598629/12695/186253)
-- Beeper (M300) implementation by [@drmax_gc](https://t.me/drmax_gc). [Link](https://t.me/FF_5M_5M_Pro/1/333800)
-- MD5 verification by Igor Polunovskiy. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
-- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
-
-The mod uses the developments of [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), but is not its development or continuation, and is not compatible with it either in macro syntax or binary.
-
-## Installation/Update/Removal
-
-[Installation/Update/Removal Guide](/Setup/)
+zMod support [Plugins](/Plugin/)
 
 ## Support Development
 
 Since people have been asking, I accept donations but please remember that I work on zMod for fun and not for the money. I will not accept donations to work on specific bugs or features.
 
-[Sponsor](/ru/Sponsor/)
+You can find available support methods on a separate [page](/Sponsor/)
 
-BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
-
-[СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
-
-<img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />

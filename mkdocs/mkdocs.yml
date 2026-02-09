@@ -33,8 +33,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: custom 
-      accent: light green
+      primary: custom
+      accent: green
       toggle:
         icon: material/weather-night
         name: Switch to dark theme
@@ -80,6 +80,7 @@ plugins:
 
             Help: Помощь 
             FAQ: ЧаВо
+            Video: Видео
             
             Macros: Макросы
             List: Список
@@ -92,11 +93,11 @@ plugins:
             Additional: Дополнительно
             Native firmware: Родная прошивка
             Telegram: Телеграм
-            Sponsor: Спонсор
+            Support: Поддержка
             Changelog: История изменений
 
 nav:
-  - Home: README.md
+  - Home: Home.md
 
   - Begin:
       - Setup: Setup.md
@@ -104,12 +105,12 @@ nav:
 
   - Configuration:
       - AD5X: AD5X.md
-
-
       - Plugins: Plugin.md
+      - Telegram: Telegram.md
 
   - Help:
       - FAQ: FAQ.md
+      - Video: Video.md 
       - Help: Help.md
 
   - Macros:
@@ -122,12 +123,10 @@ nav:
       - Filament: Filament.md
       - PRO: Pro.md
 
-
   - Additional:
-      - Telegram: Telegram.md
-      - Changelog: Changelog.md
       - Native firmware: Native_FW.md
-      - Sponsor: Sponsor.md
+      - Changelog: Changelog.md
+      - Support: Sponsor.md
 
 extra:
   social:
@@ -146,6 +145,7 @@ extra:
 
 extra_javascript:
   - /assets/js/external-links.js
+  - /assets/js/header-download.js
 
 markdown_extensions:
   - pymdownx.highlight:

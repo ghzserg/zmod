@@ -7,6 +7,9 @@
 
 {% block content %}
   {{ super() }}
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    {% include ".icons/material/download.svg" %}
+  </span>
   {% if page.edit_url %}
     <hr>
     <p class="edit-page-footer">
