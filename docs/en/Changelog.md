@@ -69,7 +69,7 @@
 ### Version 1.6.3
 **25.11.2025 — ZMOD’s Birthday!**
 
-* [zmod.link](https://zmod.link) | [ZLINK](/ru/Zmod/#zlink) — remote printer access via cloud
+* [zmod.link](https://zmod.link/link/) | [ZLINK](/ru/Zmod/#zlink) — remote printer access via cloud
 * Macro [SCREEN](/ru/System/#screen) — capture a screenshot of the printer’s display
 * Macro [LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native) — transfer Z-offset settings from the native screen to screenless mode
 * [AD5X](/ru/AD5X/): Added global parameter [REMOVE_FILAMENT](/ru/Global/#remove_filament) — unload filament after print completion

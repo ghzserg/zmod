@@ -67,7 +67,7 @@
 ### Версия 1.6.3
 25.11.2025 - Год моду
 
-* [zmod.link](https://zmod.link) [ZLINK](/ru/Zmod/#zlink) - удаленное подключение к принтеру через облако
+* [zmod.link](https://zmod.link/link/) [ZLINK](/ru/Zmod/#zlink) - удаленное подключение к принтеру через облако
 * Макрос [SCREEN](/ru/System/#screen) получить снимок экрана принтера
 * Макрос [LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native) - перенести настройки z-offset с родного экрана в режим без экрана
 * [AD5X](/ru/AD5X/): Добавлен глобальный параметр [REMOVE_FILAMENT](/ru/Global/#remove_filament) - извлечь филамент после печати

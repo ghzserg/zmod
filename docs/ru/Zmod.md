@@ -276,7 +276,7 @@ SSH запускается через 3 минуты  после  старта  
 
 ### ZLINK
 
-Подключить к облаку [zmod.link](https://zmod.link)
+Подключить к облаку [zmod.link](https://zmod.link/link/)
 
 - Облако позволяет управлять принтером через Fluidd или Mainsail из любой точки.
 - Потребление памяти на принтере возрастает на 1 мб.
@@ -292,9 +292,9 @@ SSH запускается через 3 минуты  после  старта  
 3. Чтобы зарегистрировать пользователя с именем `test` введите: ```cloud register test```
 4. Чтобы сбросить пароль введите: ```cloud reset_password```
 
-Как подключиться к облаку [zmod.link](https://zmod.link):
+Как подключиться к облаку [zmod.link](https://zmod.link/link/):
 
-1. Зайти на сайт [zmod.link](https://zmod.link/) и ввести логин и пароль
+1. Зайти на сайт [zmod.link](https://zmod.link/link//) и ввести логин и пароль
    
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 
@@ -339,7 +339,7 @@ SSH запускается через 3 минуты  после  старта  
 
 PS: Камера может прогрузиться позже, чем интерфейс - это нормально
 
-PPS: Если что-то работает не так, то обновите страницу Ctrl + F5 и зайдите на [zmod.link](https://zmod.link)
+PPS: Если что-то работает не так, то обновите страницу Ctrl + F5 и зайдите на [zmod.link](https://zmod.link/link/)
 
    <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
 
