@@ -5,7 +5,7 @@
 | Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru) |
 | :--- | :---: | :---: |
 | **Требует внешний сервер** | – | + |
-| **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link)) | + |
+| **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link/link/)) | + |
 | **Создание таймлапса** | – (можно через [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | + |
 | **Информация о событиях печати** (старт, пауза, отмена, окончание) | + | + |
 | **Информация от датчика филамента** | + | + |

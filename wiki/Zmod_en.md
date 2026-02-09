@@ -380,7 +380,7 @@ Resume printing after power loss or printer errors.
 ---
 ### ZLINK
 
-Connect to the cloud [zmod.link](https://zmod.link)
+Connect to the cloud [zmod.link](https://zmod.link/link/)
 
 - The cloud allows you to manage the printer via Fluidd or Mainsail from anywhere.
 - Memory usage on the printer increases by 1 MB.
@@ -395,8 +395,8 @@ How to get login and password:
 3. To register a user with the name `test`, enter: ```cloud register test```
 4. To reset the password, enter: ```cloud reset_password```
 
-How to connect to the cloud [zmod.link](https://zmod.link):
-1. Go to the website [zmod.link](https://zmod.link/) and enter your login and password
+How to connect to the cloud [zmod.link](https://zmod.link/link/):
+1. Go to the website [zmod.link](https://zmod.link/link//) and enter your login and password
 
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 2. Click the "Add Printer" button
@@ -435,7 +435,7 @@ How to connect to the cloud [zmod.link](https://zmod.link):
 
 PS: The camera may load later than the interface - this is normal
 
-PPS: If something is not working correctly, refresh the page with Ctrl + F5 and go to [zmod.link](https://zmod.link)
+PPS: If something is not working correctly, refresh the page with Ctrl + F5 and go to [zmod.link](https://zmod.link/link/)
 
    <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
 
