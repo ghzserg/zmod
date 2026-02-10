@@ -1,6 +1,0 @@
-#!/bin/sh
-
-/mnt/tool
-
-
-
