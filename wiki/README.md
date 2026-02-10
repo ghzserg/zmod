@@ -4,20 +4,20 @@
 
 [На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
 
-Latest version: **1.6.6** can be installed via USB flash drive or the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro.
+Latest version: **1.6.6** can be installed via USB flash drive or the [ZFLASH](https://wiki.zmod.link/Zmod/#zflash) macro.
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
-**Macro [LANG](https://github.com/ghzserg/zmod/wiki/Global_en#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
+**Macro [LANG](https://wiki.zmod.link/Global/#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
 
 - [Download](https://github.com/ghzserg/zmod/releases/)
-- [Install/Initial calibration](https://github.com/ghzserg/zmod/wiki/Setup_en#installing-the-mod)
+- [Install/Initial calibration](https://wiki.zmod.link/Setup/#installing-the-mod)
 
 Compatible with clean firmware versions:
 - FF5M/FF5MPro: v2.7.5 or higher (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
+- [AD5X](https://wiki.zmod.link/AD5X/): only (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
 
-Clean firmware files are located in the [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en) folder.
+Clean firmware files are located in the [Native firmware](https://wiki.zmod.link/Native_FW/) folder.
 
 ZMOD for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer
 Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, ZMOD is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
@@ -95,7 +95,7 @@ Here’s what you gain by installing ZMOD:
 ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the **choice**: stick with the familiar touchscreen UI, or leverage modern 3D printing tools to get the absolute most from your FlashForge. It’s the logical next step for any FlashForge owner aiming to maximize their printer’s capabilities.
 
 > [!CAUTION]
-> *If you want to install this mod on your AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
+> *If you want to install this mod on your AD5M (Pro) / [AD5X](https://wiki.zmod.link/AD5X/), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*
 >
 > If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 >
@@ -105,33 +105,33 @@ ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the *
 
 These features are ported to the stock firmware:
 1. I want to install Klipper. (Klipper is already in the printer, but there is no web interface)
-2. [Install root](https://github.com/ghzserg/zmod/wiki/Native_FW_en#root)
-3. [E0011 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
-4. [E0017 error fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
-5. [Disable printer updates/telemetry/Chinese clouds](https://github.com/ghzserg/zmod/wiki/Global_en#china_cloud)
-6. [Factory reset](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation)
-7. [Convert FF5M to FF5MPro](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5m-to-5mpro)
-8. [Convert FF5MPro to FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5mpro-to-5m)
+2. [Install root](https://wiki.zmod.link/Native_FW/#root)
+3. [E0011 error fix](https://wiki.zmod.link/Global/#fix_e0011)
+4. [E0017 error fix](https://wiki.zmod.link/Global/#fix_e0017)
+5. [Disable printer updates/telemetry/Chinese clouds](https://wiki.zmod.link/Global/#china_cloud)
+6. [Factory reset](https://wiki.zmod.link/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation)
+7. [Convert FF5M to FF5MPro](https://wiki.zmod.link/Native_FW/#5m-to-5mpro)
+8. [Convert FF5MPro to FF5M](https://wiki.zmod.link/Native_FW/#5mpro-to-5m)
 
 ## Plugins
-zMod support [Plugins](https://github.com/ghzserg/zmod/wiki/Plugin_en)
+zMod support [Plugins](https://wiki.zmod.link/Plugin/)
 
 ## Version History
-[Changelog](https://github.com/ghzserg/zmod/wiki/Changelog_en)
+[Changelog](https://wiki.zmod.link/Changelog/)
 
 ## FAQ
 
-[Must-read](https://github.com/ghzserg/zmod/wiki/FAQ_en)
+[Must-read](https://wiki.zmod.link/FAQ/)
 
 ## Printer Stability Recommendations
 
-[Read if encountering issues](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
+[Read if encountering issues](https://wiki.zmod.link/Recomendations/)
 
 ## Macro List
 
 All features are accessed via macros.
 
-[Macro List](https://github.com/ghzserg/zmod/wiki/Macros_en)
+[Macro List](https://wiki.zmod.link/Macros/)
 
 ## Credits
 
@@ -144,13 +144,13 @@ The mod uses the developments of [KlipperMod](https://github.com/xblax/flashforg
 
 ## Installation/Update/Removal
 
-[Installation/Update/Removal Guide](https://github.com/ghzserg/zmod/wiki/Setup_en)
+[Installation/Update/Removal Guide](https://wiki.zmod.link/Setup/)
 
 ## Support Development
 
 Since people have been asking, I accept donations but please remember that I work on zMod for fun and not for the money. I will not accept donations to work on specific bugs or features.
 
-[Sponsor](https://github.com/ghzserg/zmod/wiki/Sponsor)
+[Sponsor](https://wiki.zmod.link/Sponsor/)
 
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 

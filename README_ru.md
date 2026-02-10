@@ -2,20 +2,20 @@
 
 <img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
 
-Последняя версия: **1.6.6** ставится с флешки или макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash).
+Последняя версия: **1.6.6** ставится с флешки или макросом [ZFLASH](https://wiki.zmod.link/ru/Zmod/#zflash).
 
 [https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
-**Макрос [LANG](https://github.com/ghzserg/zmod/wiki/Global_ru#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
+**Макрос [LANG](https://wiki.zmod.link/ru/Global/#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
 
 - [Скачать](https://github.com/ghzserg/zmod/releases/)
-- [Установка/Первоначальная калибровка](https://github.com/ghzserg/zmod/wiki/Setup#установка-мода)
+- [Установка/Первоначальная калибровка](https://wiki.zmod.link/ru/Setup/#установка-мода)
 
 Ставится на чистую версию:
 - FF5M/FF5MPro **не ниже 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) **только** (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
+- [AD5X](https://wiki.zmod.link/ru/AD5X/) **только** (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 3.0.3)
 
-Родная прошивка доступна [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
+Родная прошивка доступна [Native firmware](https://wiki.zmod.link/ru/Native_FW/)
 
 ### **ZMOD для FlashForge AD5M/PRO/AD5X: Полный контроль над вашим принтером**
 
@@ -98,7 +98,7 @@ ZMOD — это кастомная прошивка (модификация), к
 
 
 > [!CAUTION]
-> *Если вы хотите установить этот мод на свой AD5M (Pro) / [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X), то имейте в виду, что вы рискуете потерять гарантию или повредить принтер. Действуйте на свой страх и риск, если хотите попробовать этот мод!*
+> *Если вы хотите установить этот мод на свой AD5M (Pro) / [AD5X](https://wiki.zmod.link/ru/AD5X/), то имейте в виду, что вы рискуете потерять гарантию или повредить принтер. Действуйте на свой страх и риск, если хотите попробовать этот мод!*
 >
 > Если вы не знаете что это такое, не понимаете зачем нужна веб страница klipper или просто довольны стоком, не устанавливайте эту модификацию, для всех остальных - **пожалуйста прочтите полностью инструкцию**!
 >
@@ -108,39 +108,39 @@ ZMOD — это кастомная прошивка (модификация), к
 
 Эти функции портированы на стандартную прошивку:
 1. Я хочу Klipper. (Klipper уже есть в принтере, но нет веб интерфейса)
-2. [Установить root](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#root)
-3. Исправление ошибки [E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
-4. Исправление ошибки [E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
-5. [Отключение обновлений принтера/телеметрии/китайских облаков](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud)
-6. [Возврат принтера к заводским установкам](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)
-7. [Перешивка FF5M в FF5MPro](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#перевод-5m-в-5mpro)
-8. [Перешивка FF5MPro в FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#перевод-5mpro-в-5m)
+2. [Установить root](https://wiki.zmod.link/ru/Native_FW/#root)
+3. Исправление ошибки [E0011](https://wiki.zmod.link/ru/Global/#fix_e0011)
+4. Исправление ошибки [E0017](https://wiki.zmod.link/ru/Global/#fix_e0017)
+5. [Отключение обновлений принтера/телеметрии/китайских облаков](https://wiki.zmod.link/ru/Global/#china_cloud)
+6. [Возврат принтера к заводским установкам](https://wiki.zmod.link/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)
+7. [Перешивка FF5M в FF5MPro](https://wiki.zmod.link/ru/Native_FW/#перевод-5m-в-5mpro)
+8. [Перешивка FF5MPro в FF5M](https://wiki.zmod.link/ru/Native_FW/#перевод-5mpro-в-5m)
 
 ## Плагины
 
-zMod поддерживает [Плагины](https://github.com/ghzserg/zmod/wiki/Plugin_ru)
+zMod поддерживает [Плагины](https://wiki.zmod.link/ru/Plugin/)
 
 ## История версий
 
-[История версий](https://github.com/ghzserg/zmod/wiki/Changelog)
+[История версий](https://wiki.zmod.link/ru/Changelog/)
 
 ## Частые вопросы
 
-[Обязательно к прочтению](https://github.com/ghzserg/zmod/wiki/FAQ)
+[Обязательно к прочтению](https://wiki.zmod.link/ru/FAQ/)
 
 ## Рекомендации по повышению стабильности работы принтера
 
-[Читать - если что-то работает не так](https://github.com/ghzserg/zmod/wiki/Recomendations)
+[Читать - если что-то работает не так](https://wiki.zmod.link/ru/Recomendations/)
 
 ## Список Макросов
 
 Весь функционал работает через макросы
 
-[Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros)
+[Список Макросов](https://wiki.zmod.link/ru/Macros/)
 
 ## Установка/Обновление/Удаление мода
 
-[Установка/Обновление/Удаление мода](https://github.com/ghzserg/zmod/wiki/Setup)
+[Установка/Обновление/Удаление мода](https://wiki.zmod.link/ru/Setup/)
 
 ## Используемые дополнения
 
@@ -155,7 +155,7 @@ zMod поддерживает [Плагины](https://github.com/ghzserg/zmod/w
 
 Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над zMod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
 
-[Sponsor](https://github.com/ghzserg/zmod/wiki/Sponsor)
+[Sponsor](https://wiki.zmod.link/Sponsor/)
 
 BTC: `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 

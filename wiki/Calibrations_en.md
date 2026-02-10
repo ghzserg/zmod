@@ -1,6 +1,6 @@
 <h1 align="center">Calibrations</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Calibrations/)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -21,19 +21,19 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed">PID_TUNE_BED</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder">PID_TUNE_EXTRUDER</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper">ZSHAPER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#pid_tune_bed">PID_TUNE_BED</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#pid_tune_extruder">PID_TUNE_EXTRUDER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#zshaper">ZSHAPER</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp">KAMP</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_cell_tare">LOAD_CELL_TARE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#kamp">KAMP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#load_cell_tare">LOAD_CELL_TARE</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#belts_shaper_calibration">BELTS_SHAPER_CALIBRATION</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_zoffset_native">LOAD_ZOFFSET_NATIVE </a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#belts_shaper_calibration">BELTS_SHAPER_CALIBRATION</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Calibrations/#load_zoffset_native">LOAD_ZOFFSET_NATIVE </a></td>
  </tr>
 </tbody>
 </table>
@@ -47,7 +47,7 @@ It can be called from:
 ---
 
 > [!TIP]
-> [Printer Calibration for Beginners](https://github.com/ghzserg/zmod/wiki/Setup_en#printer-calibration-for-beginners)
+> [Printer Calibration for Beginners](https://wiki.zmod.link/Setup/#printer-calibration-for-beginners)
 
 ---
 
@@ -83,7 +83,7 @@ Reset load cell weight. Used during bed calibration.
 Bed PID calibration.
 - `TEMPERATURE` — bed temperature (default: `80`)
 
-Automatically calls `SAVE_CONFIG` after calibration. See also [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_en#new_save_config).
+Automatically calls `SAVE_CONFIG` after calibration. See also [NEW_SAVE_CONFIG](https://wiki.zmod.link/Main/#new_save_config).
 
 To disable auto-save, use:
 ```gcode
@@ -127,7 +127,7 @@ Results are stored in:
 - `calibration_data_y.png`
 - CSV files
 
-Read [fix_scv](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv)
+Read [fix_scv](https://wiki.zmod.link/Global/#fix_scv)
 
 [Graph visualization tool](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases).
 
@@ -167,9 +167,9 @@ Add as the first line:
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-**Recommended:** Use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` and `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to utilize purge areas.
+**Recommended:** Use [START_PRINT](https://wiki.zmod.link/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` and `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to utilize purge areas.
 
-[Bed leveling options](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-options-are-available-for-bed-leveling)
+[Bed leveling options](https://wiki.zmod.link/FAQ/#what-options-are-available-for-bed-leveling)
 
 <div align="center">
 
@@ -193,16 +193,16 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
 
-**Recommended:** Use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
+**Recommended:** Use [START_PRINT](https://wiki.zmod.link/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
-[Bed leveling options](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-options-are-available-for-bed-leveling)
+[Bed leveling options](https://wiki.zmod.link/FAQ/#what-options-are-available-for-bed-leveling)
 
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Main_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Main/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Calibrations)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Global_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Global/)
 
 </div>
 
@@ -212,14 +212,14 @@ M104 S[nozzle_temperature_initial_layer]
 
 Move the z-offset from the native screen to screenless mode
 
-[How Z-Offset Works on Your Printer](https://github.com/ghzserg/zmod/wiki/Setup_en#how-z-offset-works-on-your-printer)
+[How Z-Offset Works on Your Printer](https://wiki.zmod.link/Setup/#how-z-offset-works-on-your-printer)
 
 
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Main_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Main/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Calibrations)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Global_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Global/)
 
 </div>
 

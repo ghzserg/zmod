@@ -9,7 +9,7 @@ Since people have been asking, I accept donations but please remember that I wor
 | <img width="262" height="262" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> | <img width="262" height="262" alt="BTC" src="https://github.com/user-attachments/assets/da12b899-b5ea-4276-8661-83a348d151df" /> |
 
 
-Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purchasing [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) for development represented by
+Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purchasing [AD5X](https://wiki.zmod.link/AD5X/) for development represented by
 
 - [@Voron_Kor](https://t.me/Voron_Kor)
 - [@solitairweb](https://t.me/solitairweb)

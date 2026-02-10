@@ -63,17 +63,17 @@
 ### Версия 1.6.3
 25.11.2025 - Год моду
 * [@zmod_help_bot](http://t.me/zmod_help_bot)
-* [zmod.link](https://zmod.link/link/) [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - удаленное подключение к принтеру через облако
-* Макрос [SCREEN](https://github.com/ghzserg/zmod/wiki/System_ru#screen) получить снимок экрана принтера
-* Макрос [LOAD_ZOFFSET_NATIVE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_zoffset_native) - перенести настройки z-offset с родного экрана в режим без экрана
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Добавлен глобальный параметр [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament) - извлечь филамент после печати
+* [zmod.link](https://zmod.link/link/) [ZLINK](https://wiki.zmod.link/ru/Zmod/#zlink) - удаленное подключение к принтеру через облако
+* Макрос [SCREEN](https://wiki.zmod.link/ru/System/#screen) получить снимок экрана принтера
+* Макрос [LOAD_ZOFFSET_NATIVE](https://wiki.zmod.link/Calibrations/#load_zoffset_native) - перенести настройки z-offset с родного экрана в режим без экрана
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Добавлен глобальный параметр [REMOVE_FILAMENT](https://wiki.zmod.link/ru/Global/#remove_filament) - извлечь филамент после печати
 * Добавлен [плагин рекомендуемых настроек](https://github.com/ghzserg/recommend)
 * Добавлен чешский язык
 * Добавлен контроль версии MCU для Klipper 13
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Добавлена кнопка левелинга
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Исправления для Klipper 13
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Исправление чистки сопла
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Убран хруст IFS
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Добавлена кнопка левелинга
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Исправления для Klipper 13
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Исправление чистки сопла
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Убран хруст IFS
 * ```CAMERA_ON VIDEO=video99``` - тест всех доступных камер
 * Проверка обновлений после окончания печати
 * При снятии стола через Fluidd/Mainsail сбрасываются тензы. Но пользователь сам должен очищать сопло и прогревать заранее стол.
@@ -93,10 +93,10 @@
 * Mainsail: Поддержка цвета От @function3d, исправлена проблема 404 ошибки после обновления страницы
 * Guppy: Поддержка цвета. Исправлена интеграция с HA.
 * Добавлено автоподключение флешек при работе с Guppy
-* Добавлено включение [WiFi](https://github.com/ghzserg/zmod/wiki/Global_ru#wifi) напрямую без использования родного экрана
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Решена проблема с корзиной и отрезанием филамента в новых ревизиях
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Поддержка цвета при восстановлении печати
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Возможность создавать [свои типы филамента и цвета](https://github.com/ghzserg/zmod/wiki/AD5X#7-добавить-свои-типы-филамента) при работе без родного экрана
+* Добавлено включение [WiFi](https://wiki.zmod.link/ru/Global/#wifi) напрямую без использования родного экрана
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Решена проблема с корзиной и отрезанием филамента в новых ревизиях
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Поддержка цвета при восстановлении печати
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Возможность создавать [свои типы филамента и цвета](https://wiki.zmod.link/ru/AD5X/#7-добавить-свои-типы-филамента) при работе без родного экрана
 * Обновлен Klipper и Monnraker
 * Добавлена поддержка ens160.py от @minicx
 * Добавлен португальский язык
@@ -105,14 +105,14 @@
 
 ### Версия 1.6.1
 06.09.2025
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) - Поддержка Klipper 13. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) - Датчик температуры в голове
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) - Работа без родного экрана. IFS работает полноценно с настройкой количества сброса
+- [AD5X](https://wiki.zmod.link/ru/AD5X/) - Поддержка Klipper 13. [UPDATE_MCU](https://wiki.zmod.link/ru/System/#update_mcu)
+- [AD5X](https://wiki.zmod.link/ru/AD5X/) - Датчик температуры в голове
+- [AD5X](https://wiki.zmod.link/ru/AD5X/) - Работа без родного экрана. IFS работает полноценно с настройкой количества сброса
 - Мелкие фиксы
 
 ### Версия 1.6.0
 14.08.2025
-- AD5M - Поддержка Klipper 13. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
+- AD5M - Поддержка Klipper 13. [UPDATE_MCU](https://wiki.zmod.link/ru/System/#update_mcu)
 - AD5M - Датчик температуры в голове
 - Мелкие фиксы
 
@@ -129,13 +129,13 @@
 - AD5X - работает установка PID стола принетра
 - AD5X - восстановлена очистка сопла при снятии карты стола
 - AD5X - протестирована работа  мода на прошивках 1.0.9, 1.1.0, 1.1.1
-- AD5X - создана [флешка устанавливающая экран версии 1.0.7, а все остальные модули версии 1.1.1](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
-- AD5x - создана [флешка возврата принтера к заводским настройкам](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
-- AD5X - создана [флешка активации мода, после обновления родной прошивки](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
+- AD5X - создана [флешка устанавливающая экран версии 1.0.7, а все остальные модули версии 1.1.1](https://wiki.zmod.link/ru/Native_FW/)
+- AD5x - создана [флешка возврата принтера к заводским настройкам](https://wiki.zmod.link/ru/Native_FW/)
+- AD5X - создана [флешка активации мода, после обновления родной прошивки](https://wiki.zmod.link/ru/Native_FW/)
 
 ### Версия 1.5.3
 03.06.2025
-* Исправлена ошибка Klipper [#119](https://github.com/ghzserg/zmod/issues/119), из-за которой нужно было использовать [это](https://github.com/ghzserg/zmod/wiki/Recomendations#не-используйте-русские-имена-в-названиях-объектов)
+* Исправлена ошибка Klipper [#119](https://github.com/ghzserg/zmod/issues/119), из-за которой нужно было использовать [это](https://wiki.zmod.link/ru/Recomendations/#не-используйте-русские-имена-в-названиях-объектов)
 * Контроль сопла теперь включается и при печати с экрана сразу
 * Мелкие косметические фиксы
 
@@ -179,13 +179,13 @@
 
 ### Версия 1.4.2
 19.03.2025
-- Доработан функционал [контроля удара  сопла о стол](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control), теперь можно [использовать паузу](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control) вместо завершения работы. Задача [#23](https://github.com/ghzserg/zmod/issues/23)
+- Доработан функционал [контроля удара  сопла о стол](https://wiki.zmod.link/ru/Global/#nozzle_control), теперь можно [использовать паузу](https://wiki.zmod.link/ru/Global/#nozzle_control) вместо завершения работы. Задача [#23](https://github.com/ghzserg/zmod/issues/23)
 - Улучшена функция проверки системы.
 - Изменена цветовая схема Fluidd
-- Добавлен глобальный параметр [SAVE_MOONRAKER](https://github.com/ghzserg/zmod/wiki/Macros#save_moonraker) - разрешает использовать пользовательсткое расположение кнопок макросов
+- Добавлен глобальный параметр [SAVE_MOONRAKER](https://wiki.zmod.link/ru/Macros/#save_moonraker) - разрешает использовать пользовательсткое расположение кнопок макросов
 - В AD5X работает GuppyScreen
-- В AD5X новый макрос [COLOR](https://github.com/ghzserg/zmod/wiki/Filament_ru#color) Управление типом пластика, цветом пластика, загрузкой и выгрузкой филамента из цветных катушек.
-- Изменен алгоритм тестирования стола  перед печатью, введен новый глобальный параметр [MESH_TEST](https://github.com/ghzserg/zmod/wiki/Macros#mesh_test)
+- В AD5X новый макрос [COLOR](https://wiki.zmod.link/ru/Filament/#color) Управление типом пластика, цветом пластика, загрузкой и выгрузкой филамента из цветных катушек.
+- Изменен алгоритм тестирования стола  перед печатью, введен новый глобальный параметр [MESH_TEST](https://wiki.zmod.link/ru/Macros/#mesh_test)
 - Исправлена ошибка [#13](https://github.com/ghzserg/zmod/issues/13) (Печать в воздухе после KAMP)
 - Исправлена ошибка [#14](https://github.com/ghzserg/zmod/issues/14) (Восстановление печати на родном экране)
 - Исправлена ошибка [#31](https://github.com/ghzserg/zmod/issues/27) (Фризы в GuppyScreen)
@@ -211,16 +211,16 @@
 ### Версия 1.4.0
 04.03.2025
 - Обновлен Moonraker, Fluidd,Python
-- [Восстановление печати  при потере питания](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore)
-- [Построение спектрограммы ремней](https://github.com/ghzserg/zmod/wiki/Macros#belts_shaper_calibration)
+- [Восстановление печати  при потере питания](https://wiki.zmod.link/ru/Zmod/#zrestore)
+- [Построение спектрограммы ремней](https://wiki.zmod.link/ru/Macros/#belts_shaper_calibration)
 - Контроль загруженной пластины, проверяет что карта  стола примерно соответствует текущей загруженной пластине
-- Реализована работа с [датчиком движения филамента](https://github.com/ghzserg/zmod/wiki/Macros#motion_sensor)
+- Реализована работа с [датчиком движения филамента](https://wiki.zmod.link/ru/Macros/#motion_sensor)
 - GuppyScreen: исключение объектов, вывод ошибок, откат из прошивки, калибровка PID, сброс веса, работа  с FF5M Pro
-- Выполнение макроса на [следующем слое](https://github.com/ghzserg/zmod/wiki/Macros#set_pause_next_layer), или [на конкретном слое](https://github.com/ghzserg/zmod/wiki/Macros#set_pause_at_layer)
+- Выполнение макроса на [следующем слое](https://wiki.zmod.link/ru/Macros/#set_pause_next_layer), или [на конкретном слое](https://wiki.zmod.link/ru/Macros/#set_pause_at_layer)
 - Логирование всех сообщений с родного экрана в Klipper и ответов на эти сообщения
 - Изменен алгоритм снятия шейперов, графики шейперов строятся с учетом SCV
 - Макрос MUTE - выключение звука до перезагрузки
-- Новый параметр - [время отключения родного экрана](https://github.com/ghzserg/zmod/wiki/System_ru#display_off_timeout)
+- Новый параметр - [время отключения родного экрана](https://wiki.zmod.link/ru/System/#display_off_timeout)
 - Новый файл `mod_data/power_off.sh` - позволяет писать код выполняемый при отключении принтера
 - Включена умная парковка при использовании KAMP
 - Исправлены ошибки удаления мода, отключения мода, полного удаления мода
@@ -239,37 +239,37 @@
 
 ### Версия 1.3.0
 08.02.2025
-- Поддержка [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_ru#display_off)
-- Klipper 12, [в тестовом режиме](https://github.com/ghzserg/zmod/wiki/Macros#update_mcu) (по умолчанию отключен). В нем не работает: нагрев экструдера, температура экструдера, весы.
+- Поддержка [GuppyScreen](https://wiki.zmod.link/ru/System/#display_off)
+- Klipper 12, [в тестовом режиме](https://wiki.zmod.link/ru/Macros/#update_mcu) (по умолчанию отключен). В нем не работает: нагрев экструдера, температура экструдера, весы.
 - Заменен SSH клиент и SSH сервер `dropbear` на актуальную версию.
 - Заменен `mjpg_streamer` на версию с патчем Александра, снижает потребление памяти в 2-4 раза.
 - Исправлено исключение объектов от Igor Polunovskiy (теперь учитываются поддержки).
-- Построение графиков шейперов с учетом SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv).
-- [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_ru#check_system) - Добавлена проверка прав на файлы и каталоги, проверка ссылок и восстановление.
+- Построение графиков шейперов с учетом SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](https://wiki.zmod.link/ru/Global/#fix_scv).
+- [CHECK_SYSTEM](https://wiki.zmod.link/ru/System/#check_system) - Добавлена проверка прав на файлы и каталоги, проверка ссылок и восстановление.
 - Удален макрос SOFT_REMOVE.
 - Обновлен Moonraker, Fluidd, Mainsail
 
 ### Версия 1.1.2
 03.02.2025
-- Новый макрос [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_ru#check_system) - Проверить операционную систему принтера на предмет повреждений файлов.
-- Новый макрос [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control) - Аварийное отключение принтера если зафиксирован отрыв детали или удар сопла о стол.
-- Новый макрос [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/Macros#update_mcu) - Обновить MCU в принтере.
-- Новый глобальный флаг [NICE](https://github.com/ghzserg/zmod/wiki/Macros#nice) - Установить приоритет процесса Klipper, 1 - минимальный приоритет, 40 - максимальный (20).
-- Новый глобальный флаг [FIX_E0011](https://github.com/ghzserg/zmod/wiki/System_ru#fix_e0011) - Исправить ошибку E0011, а также `Communication timeout during homing`
+- Новый макрос [CHECK_SYSTEM](https://wiki.zmod.link/ru/System/#check_system) - Проверить операционную систему принтера на предмет повреждений файлов.
+- Новый макрос [NOZZLE_CONTROL](https://wiki.zmod.link/ru/Global/#nozzle_control) - Аварийное отключение принтера если зафиксирован отрыв детали или удар сопла о стол.
+- Новый макрос [UPDATE_MCU](https://wiki.zmod.link/ru/Macros/#update_mcu) - Обновить MCU в принтере.
+- Новый глобальный флаг [NICE](https://wiki.zmod.link/ru/Macros/#nice) - Установить приоритет процесса Klipper, 1 - минимальный приоритет, 40 - максимальный (20).
+- Новый глобальный флаг [FIX_E0011](https://wiki.zmod.link/ru/System/#fix_e0011) - Исправить ошибку E0011, а также `Communication timeout during homing`
 - Очистка файловой системы принтера от удаленных файлов, ускоряет работу EMMC.
 - Куча мелких фиксов
 
 ### Версия 1.1.1
 24.01.2025
-- Исправлена проблема с порядком, если обратный вызов блокируется в обработчике кнопок [#6440](https://github.com/Klipper3d/klipper/pull/6440) найденное [Alexander K](https://github.com/drA1ex) - теперь [LOAD_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#load_cell_tare) работает как надо.
+- Исправлена проблема с порядком, если обратный вызов блокируется в обработчике кнопок [#6440](https://github.com/Klipper3d/klipper/pull/6440) найденное [Alexander K](https://github.com/drA1ex) - теперь [LOAD_CELL_TARE](https://wiki.zmod.link/ru/Macros/#load_cell_tare) работает как надо.
 - Удалены глобальные параметры: `ALTER_CELL_TARE`, `IGNORE_CELL_TARE`, `CELL_WEIGHT`
 - Увеличен таймаут zsend. Выводятся дополнительные сообщения.
 - G28 теперь паркует сначала Z, потом X и Y
-- Новый макрос [CAMERA_RESTART](https://github.com/ghzserg/zmod/wiki/Macros#camera_restart) - Перезапустить альтернативную реализацию камеры
+- Новый макрос [CAMERA_RESTART](https://wiki.zmod.link/ru/Macros/#camera_restart) - Перезапустить альтернативную реализацию камеры
 - Исправлен код отмены печати без родного экрана
 - Реализация EXCLUDE_OBJECT_DEFINE от Igor Polunovskiy
 - В случае повторной печати моторы не отключаются и принтер не перезагружается, даже если это указано в глобальных параметрах
-- В макросе [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) выводится износ EMMC карты
+- В макросе [TEST_EMMC](https://wiki.zmod.link/ru/Macros/#test_emmc) выводится износ EMMC карты
 - Исправлено отключение китайских облаков
 
 ### Версия 1.1.0
@@ -279,9 +279,9 @@
 - Спрятаны `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`
 - Для сброса тензодатчиков в режиме без родного экрана используется реализация Igor Polunovskiy
 - Сброс тензодатчиков, теперь только на прогретом столе
-- Новый глобальный параметр [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://github.com/ghzserg/zmod/wiki/FAQ#ошибка-сброса-тензодатчиков).
-- Новый глобальный параметр [CELL_WEIGHT](https://github.com/ghzserg/zmod/wiki/Macros#cell_weight) указывает, при каком весе не надо проводить калибровку тензодатчиков
-- Новый глобальный параметр [CHINA_CLOUD](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud) - позволяет отключить китайские облака
+- Новый глобальный параметр [ALTER_CELL_TARE](https://wiki.zmod.link/ru/Macros/#alter_cell_tare). Позволяет обойти [ошибку сброса тензодатчиков](https://wiki.zmod.link/ru/FAQ/#ошибка-сброса-тензодатчиков).
+- Новый глобальный параметр [CELL_WEIGHT](https://wiki.zmod.link/ru/Macros/#cell_weight) указывает, при каком весе не надо проводить калибровку тензодатчиков
+- Новый глобальный параметр [CHINA_CLOUD](https://wiki.zmod.link/ru/Global/#china_cloud) - позволяет отключить китайские облака
 - Переписано обновление конфига принтера
 - В Pro версии теперь корректно работают вентиляторы обдува. Углы по умолчанию 165/105
 - При калибровке экструдера теперь задается скорость кулера
@@ -291,30 +291,30 @@
 
 ### Версия 1.0.5
 13.01.2025
-- Добавлен параметр в макрос [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Macros#auto_reboot), позволяющий перезапускать прошивку
+- Добавлен параметр в макрос [AUTO_REBOOT](https://wiki.zmod.link/ru/Macros/#auto_reboot), позволяющий перезапускать прошивку
 - G28 в макросах вызывается только при необходимости
 - Практически полностью изменен алгоритм работы MD5. Теперь проверка MD5 работает из любого места и не требует нагревания стола или экструдера
-- Доработан макрос [MEM](https://github.com/ghzserg/zmod/wiki/Macros#mem) теперь выводится память Moonraker, Klipper, Экран и как используется SWAP
+- Доработан макрос [MEM](https://wiki.zmod.link/ru/Macros/#mem) теперь выводится память Moonraker, Klipper, Экран и как используется SWAP
 - Процесс klipper имеет более высокий приоритет, чем остальные процессы
-- Глобальный параметр [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Global_ru#zshaper) теперь работает и в без родного экрана
-- Макрос [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#bed_level_screws_tune) теперь корректно использует температуру
-- Макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) может тестировать EMMC, USB Flash и оперативную память.
+- Глобальный параметр [PRINT_LEVELING](https://wiki.zmod.link/ru/Global/#zshaper) теперь работает и в без родного экрана
+- Макрос [BED_LEVEL_SCREWS_TUNE](https://wiki.zmod.link/ru/Calibrations/#bed_level_screws_tune) теперь корректно использует температуру
+- Макрос [TEST_EMMC](https://wiki.zmod.link/ru/Macros/#test_emmc) может тестировать EMMC, USB Flash и оперативную память.
 - Swap теперь можно(но не нужно) разместить на USB Flash 
-- Макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc) - очистка логов и/или GCODE
-- Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/System_ru#fix_e0017)
+- Макрос [CLEAR_EMMC](https://wiki.zmod.link/ru/System/#clear_emmc) - очистка логов и/или GCODE
+- Решение проблемы [E0017](https://wiki.zmod.link/ru/System/#fix_e0017)
 
 ### Версия 1.0.4
 05.01.2025
-- Поддержка [отката из прошивки](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-откат-из-прошивки)
-- Решение проблемы [E0017](https://github.com/ghzserg/zmod/wiki/System_ru#fix_e0017)
+- Поддержка [отката из прошивки](https://wiki.zmod.link/ru/FAQ/#что-такое-откат-из-прошивки)
+- Решение проблемы [E0017](https://wiki.zmod.link/ru/System/#fix_e0017)
 - Автоматическое включение обдува драйверов, при включении двигателей. Решает проблему снятия шейперов без обдува в стоке.
-- Новый макрос [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros#test_emmc) - Записывает SIZE Мб на EMMC и пишет скорость чтения записи.
-- Новый макрос [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc) - Очищает EMMC.
-- Автоматический [рестарт бота при работе по SSH](https://github.com/ghzserg/zmod/wiki/Macros#zssh_on)
+- Новый макрос [TEST_EMMC](https://wiki.zmod.link/ru/Macros/#test_emmc) - Записывает SIZE Мб на EMMC и пишет скорость чтения записи.
+- Новый макрос [CLEAR_EMMC](https://wiki.zmod.link/ru/System/#clear_emmc) - Очищает EMMC.
+- Автоматический [рестарт бота при работе по SSH](https://wiki.zmod.link/ru/Macros/#zssh_on)
 - [Автоматическая очистка](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) видео старше 10 дней в боте.
 - Установка [нужной временной зоны](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) в боте
-- Автоматический переход с очистки KAMP [LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Global_ru#clear) на _CLEAR2, если объекты не найдены
-- Исправлена работа [SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#skip_zmod)
+- Автоматический переход с очистки KAMP [LINE_PURGE](https://wiki.zmod.link/ru/Global/#clear) на _CLEAR2, если объекты не найдены
+- Исправлена работа [SKIP_ZMOD](https://wiki.zmod.link/ru/Macros/#skip_zmod)
 - Обновление fluidd/mainsail теперь не требует перезагрузки
 - Смена fluidd на mainsail теперь не требует перезагрузки
 - Zmod сообщает о файлах, если в них используются дуги
@@ -325,7 +325,7 @@
 ### Версия 1.0.0
 23.12.2024
 - Новая система обновления и установки, теперь практически любые обновления можно получать по сети
-- Новый параметр макроса [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on), VIDEO - устройство видео (video0)
+- Новый параметр макроса [CAMERA_ON](https://wiki.zmod.link/ru/Zmod/#camera_on), VIDEO - устройство видео (video0)
 
 ### Версия 0.2.4
 21.12.2024
@@ -338,19 +338,19 @@
 ### Версия 0.2.3
 19.12.2024
 - ZMOD автоматически пишет, нужно ли обновляться с флэшки
-- Доработан макрос [M600](https://github.com/ghzserg/zmod/wiki/Macros#m600) - замена филамента  с паузой во время печати
+- Доработан макрос [M600](https://wiki.zmod.link/ru/Macros/#m600) - замена филамента  с паузой во время печати
 - Доработан контроль MD5 - теперь выводится сообщение если MD5 не найден
 
 ### Версия 0.2.2
 17.12.2024
-- Новый макрос [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#fast_close_dialogs) - Вызывает быстрое закрытие диалогов с родного экрана. Используется для закрытия окна по окончанию печати или при отмене печати. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети".* Реализация: @darksimpson
-- Новый макрос [LEVELING_PRINT_FILE](https://github.com/ghzserg/zmod/wiki/Macros#leveling_print_file) - Печать файла с построением карты стола с родного экрана. *Для LEVELING_PRINT_FILE необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
-- Новый макрос [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_ru#coldpull) Колдпул (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
-- Новые параметры [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data):
-  - [PRINT_LEVELING](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - при каждой печати строить карту стола средствами родного экрана 0-нет, 1-да (0). *Для работы снятия карты стола с родного экрана необходимо, через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
-  - [USE_KAMP](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0). *Позволяет использовать KAMP при снятии карты стола по сети с родного экрана*
-  - [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - автоматически закрывать диалоги по окончанию и при отмене печати 0-нет, 1-да медленно, 2-да быстро. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"* (0).
-  - [USE_SWAP](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - Использовать SWAP 0-нет, 1-да (1). *Если у вас не перепаянный процессор, то SWAP использовать обязательно*
+- Новый макрос [FAST_CLOSE_DIALOGS](https://wiki.zmod.link/ru/Macros/#fast_close_dialogs) - Вызывает быстрое закрытие диалогов с родного экрана. Используется для закрытия окна по окончанию печати или при отмене печати. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети".* Реализация: @darksimpson
+- Новый макрос [LEVELING_PRINT_FILE](https://wiki.zmod.link/ru/Macros/#leveling_print_file) - Печать файла с построением карты стола с родного экрана. *Для LEVELING_PRINT_FILE необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
+- Новый макрос [COLDPULL](https://wiki.zmod.link/ru/Filament/#coldpull) Колдпул (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
+- Новые параметры [SAVE_ZMOD_DATA](https://wiki.zmod.link/ru/Global/#save_zmod_data):
+  - [PRINT_LEVELING](https://wiki.zmod.link/ru/Global/#save_zmod_data) - при каждой печати строить карту стола средствами родного экрана 0-нет, 1-да (0). *Для работы снятия карты стола с родного экрана необходимо, через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"*
+  - [USE_KAMP](https://wiki.zmod.link/ru/Global/#save_zmod_data) - где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0). *Позволяет использовать KAMP при снятии карты стола по сети с родного экрана*
+  - [CLOSE_DIALOGS](https://wiki.zmod.link/ru/Global/#save_zmod_data) - автоматически закрывать диалоги по окончанию и при отмене печати 0-нет, 1-да медленно, 2-да быстро. *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> включить ползунок "Только локальные сети"* (0).
+  - [USE_SWAP](https://wiki.zmod.link/ru/Global/#save_zmod_data) - Использовать SWAP 0-нет, 1-да (1). *Если у вас не перепаянный процессор, то SWAP использовать обязательно*
 
 ### Версия 0.2.1.1
 10.12.2024
@@ -358,14 +358,14 @@
 - Исправление установки
 - Исправлен SHUTDOWN из главного меню
 - Новый скрипт [addMD5.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.4/addMD5.sh) - контроль md5 для MacOS/Linux - спасибо Alexander
-- Новый параметр [STOP_MOTOR](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - автоматически выключать моторы после печати/отмены печати через 25 секунд.
-- Новый параметр [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - автоматически перезапускать принтер через 1.5 минуты после печати.
-- Новый параметр [PRECLEAR](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - использовать предочистку сопла в START_PRINT
+- Новый параметр [STOP_MOTOR](https://wiki.zmod.link/ru/Global/#save_zmod_data) - автоматически выключать моторы после печати/отмены печати через 25 секунд.
+- Новый параметр [AUTO_REBOOT](https://wiki.zmod.link/ru/Global/#save_zmod_data) - автоматически перезапускать принтер через 1.5 минуты после печати.
+- Новый параметр [PRECLEAR](https://wiki.zmod.link/ru/Global/#save_zmod_data) - использовать предочистку сопла в START_PRINT
 - Новая музыка: BattleCity, IndianaJones, WeWillRockYou от [@drmax_gc](https://t.me/drmax_gc)
 
 ### Версия 0.2.1
 10.12.2024
-- Получение графика шейперов прямо с принтера. Макрос [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper)
+- Получение графика шейперов прямо с принтера. Макрос [ZSHAPER](https://wiki.zmod.link/ru/Calibrations/#zshaper)
 - Исправление ошибки при работе  без родного экрана
 
 ### Версия 0.2.0
@@ -374,12 +374,12 @@
 - Добавление mc, opkg, gdb
 - Перезагрузка через верхнее меню fluidd
 - Исправление ошибок
-- Сильная переработка макроса [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print)
-- Макрос [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros#new_save_config) - сохранить изменения/перезагрузить клиппер без зависания родного экрана. Реализация @darksimpson
-- Макрос [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros#close_dialogs) - закрыть окна по окончанию печати и при отмене печати. Реализация @darksimpson
-- Макрос [STOP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#stop_zmod) - отключить moonraker
-- Макрос [START_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#start_zmod) - включить moonraker
-- Макрос [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data) - cохранить параметры ZMOD 
+- Сильная переработка макроса [START_PRINT](https://wiki.zmod.link/ru/Main/#start_print)
+- Макрос [NEW_SAVE_CONFIG](https://wiki.zmod.link/ru/Macros/#new_save_config) - сохранить изменения/перезагрузить клиппер без зависания родного экрана. Реализация @darksimpson
+- Макрос [CLOSE_DIALOGS](https://wiki.zmod.link/ru/Macros/#close_dialogs) - закрыть окна по окончанию печати и при отмене печати. Реализация @darksimpson
+- Макрос [STOP_ZMOD](https://wiki.zmod.link/ru/Macros/#stop_zmod) - отключить moonraker
+- Макрос [START_ZMOD](https://wiki.zmod.link/ru/Macros/#start_zmod) - включить moonraker
+- Макрос [SAVE_ZMOD_DATA](https://wiki.zmod.link/ru/Global/#save_zmod_data) - cохранить параметры ZMOD 
     - CLOSE_DIALOGS - автоматически закрывать диалоги по окончанию и отмене печати 0-нет, 1-да (0)
     - NEW_SAVE_CONFIG - использовать альтернативный NEW_SAVE_CONFIG при калибровке PID 0-нет, 1-да (0)
     - LED - яркость LED при включении (50)
@@ -390,30 +390,30 @@
 ### Версия 0.1.8
 04.12.2024
 - Поддержка подключения телеграм бота
-- Макрос [ZSSH_ON](https://github.com/ghzserg/zmod/wiki/Macros#zssh_on) - ZSSH_ON SSH_SERVER SSH_PORT SSH_USER VIDEO_PORT MOON_PORT
-- Макрос [ZSSH_OFF](https://github.com/ghzserg/zmod/wiki/Macros#zssh_off) - выключить SSH клиента
-- Макрос [ZSSH_RESTART](https://github.com/ghzserg/zmod/wiki/Macros#zssh_restart) - перезапуск SSH клиента
+- Макрос [ZSSH_ON](https://wiki.zmod.link/ru/Macros/#zssh_on) - ZSSH_ON SSH_SERVER SSH_PORT SSH_USER VIDEO_PORT MOON_PORT
+- Макрос [ZSSH_OFF](https://wiki.zmod.link/ru/Macros/#zssh_off) - выключить SSH клиента
+- Макрос [ZSSH_RESTART](https://wiki.zmod.link/ru/Macros/#zssh_restart) - перезапуск SSH клиента
 
 ### Версия 0.1.7
 03.12.2024
 - Множество исправлений макросов
-- Макрос [STOP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#stop_zmod) - временно отключает fluidd/mainstaill и moonraker
+- Макрос [STOP_ZMOD](https://wiki.zmod.link/ru/Macros/#stop_zmod) - временно отключает fluidd/mainstaill и moonraker
 
 ### Версия 0.1.6
 02.12.2024
 - Исправлено место нахождение логов
-- Исправлен макрос [LOAD_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#load_cell_tare)
+- Исправлен макрос [LOAD_CELL_TARE](https://wiki.zmod.link/ru/Macros/#load_cell_tare)
 - Исправлен макрос  калибровки PID экструдера и стола
-- Макрос [CLEAR_NOZZLE](https://github.com/ghzserg/zmod/wiki/Macros#CLEAR_NOZZLE) - очистка сопла как в родной прошивке
-- Макрос [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single]. Адаптивная карта  стола с очисткой сопла.
-- [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#auto_full_bed_level) - полностью переписан макрос
+- Макрос [CLEAR_NOZZLE](https://wiki.zmod.link/ru/Macros/#CLEAR_NOZZLE) - очистка сопла как в родной прошивке
+- Макрос [KAMP](https://wiki.zmod.link/ru/Calibrations/#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single]. Адаптивная карта  стола с очисткой сопла.
+- [AUTO_FULL_BED_LEVEL](https://wiki.zmod.link/ru/Calibrations/#auto_full_bed_level) - полностью переписан макрос
 
 ### Версия 0.1.5
 30.11.2024
 - Добавлен mainsail. Переключение через макрос WEB
 - Макрос STOP - отключает моторы, прописывается в конечный gcod
-- Макрос [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) - калибровка шейперов и выгрузка файлов csv в /mod_data в конфигурации. Дальнейший анализ через (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
-- Макрос [LOAD_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros#load_cell_tare) - сброс тензодатчиков
+- Макрос [ZSHAPER](https://wiki.zmod.link/ru/Calibrations/#zshaper) - калибровка шейперов и выгрузка файлов csv в /mod_data в конфигурации. Дальнейший анализ через (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
+- Макрос [LOAD_CELL_TARE](https://wiki.zmod.link/ru/Macros/#load_cell_tare) - сброс тензодатчиков
 - Исправлена калибровка стола. Теперь можно установить температуру стола и экструдера для калибровки. по умолчанию 120/80
 - Исправлено отключение экрана в режиме без родного экрана. Он отключатся через 4 минуты.
 
@@ -423,16 +423,16 @@
 - Исправлена ошибка установщика, который в прошлой версии мог удалить [heater_bed] из файлов конфигурации
 - Изменены картинки при установке. Реализовано [@drmax_gc](https://t.me/drmax_gc)
 - Макросы разделены по категориям и переведены на русский язык
-- Макрос [DATE_GET](https://github.com/ghzserg/zmod/wiki/Macros#date_get) - посмотреть текущее время
-- Макрос [DATE_SET](https://github.com/ghzserg/zmod/wiki/Macros#date_set) - установить текущее время
-- Макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on) - Использовать альтернативную реализацию камеры
-- Макрос [CAMERA_OFF](https://github.com/ghzserg/zmod/wiki/Macros#camera_off) - Отключить альтернативную реализацию камеры
+- Макрос [DATE_GET](https://wiki.zmod.link/ru/Macros/#date_get) - посмотреть текущее время
+- Макрос [DATE_SET](https://wiki.zmod.link/ru/Macros/#date_set) - установить текущее время
+- Макрос [CAMERA_ON](https://wiki.zmod.link/ru/Zmod/#camera_on) - Использовать альтернативную реализацию камеры
+- Макрос [CAMERA_OFF](https://wiki.zmod.link/ru/Macros/#camera_off) - Отключить альтернативную реализацию камеры
 
 ### Версия 0.1.3
 28.11.2024
 - Добавлено воспроизведение MIDI. Файлы хранятся в mod_data/midi - доступ через вкладку конфигурация. Спасибо [@drmax_gc](https://t.me/drmax_gc)
-- Макрос [PLAY_MIDI](https://github.com/ghzserg/zmod/wiki/Macros#play_midi). Играет мелодию PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
-- Макрос [SOFT_REMOVE](https://github.com/ghzserg/zmod/wiki/Macros#soft_remove). Удаляет только zMod, оставляет audio, md5, root
+- Макрос [PLAY_MIDI](https://wiki.zmod.link/ru/Macros/#play_midi). Играет мелодию PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
+- Макрос [SOFT_REMOVE](https://wiki.zmod.link/ru/Macros/#soft_remove). Удаляет только zMod, оставляет audio, md5, root
 - После обновления настройки moonraker сохраняются
 - Настройки пользователя для klipper пернесены в mod_data/user.cfg
 - Настройки пользователя для moonraker перенесены в mod_data/user.moonraker.conf
@@ -443,11 +443,11 @@
 ### Версия 0.1.1
 27.11.2024
 - Поддержка работы с отключенным родным дисплеем. Это экономит 20 мегабайт оперативной памяти. Чтобы  включить этот режим, нужно вызвать макрос DISPLAY_OFF. Клипер перезагрузится и будет использовать альтернативные файлы конфигурации. Рекомендуется снять карту  стола  и сохранить в профиль default. После перезагрузки, экран  станет недоступен через 5 минут и загрузится карта  стола из профиля default.
-- Макрос [MEM](https://github.com/ghzserg/zmod/wiki/Macros#mem) - показывает сколько памяти используется и каким приложением.
-- Макрос [DISPLAY_ON](https://github.com/ghzserg/zmod/wiki/System_ru#display_on) - вернет экран в стандартный режим работы, принтер перезагрузится
-- Макрос [LED](https://github.com/ghzserg/zmod/wiki/Macros#led) - включит подсветку на 50%
-- Макрос [LED_ON](https://github.com/ghzserg/zmod/wiki/Macros#led_on) - включит подсветку на 100%
-- Макрос [LED_OFF](https://github.com/ghzserg/zmod/wiki/Macros#led_off) - выключить подсветку
+- Макрос [MEM](https://wiki.zmod.link/ru/Macros/#mem) - показывает сколько памяти используется и каким приложением.
+- Макрос [DISPLAY_ON](https://wiki.zmod.link/ru/System/#display_on) - вернет экран в стандартный режим работы, принтер перезагрузится
+- Макрос [LED](https://wiki.zmod.link/ru/Macros/#led) - включит подсветку на 50%
+- Макрос [LED_ON](https://wiki.zmod.link/ru/Macros/#led_on) - включит подсветку на 100%
+- Макрос [LED_OFF](https://wiki.zmod.link/ru/Macros/#led_off) - выключить подсветку
 
 ### Версия 0.0.9-fix
 25.11.2025
@@ -458,8 +458,8 @@
 - Реализована пауза при печати, обрабатывается через родной экран
 - Реализовано восстановление после паузы, обрабатывается через родной экран
 - Реализована отмена печати, обрабатывается через родной экран
-- [REBOOT](https://github.com/ghzserg/zmod/wiki/Macros#reboot) - макрос перезагружает принтер
-- [SHUTDOWN](https://github.com/ghzserg/zmod/wiki/Macros#shutdown) - макрос на отключение принтера
-- [SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#skip_zmod) - макрос перезагрузки без запуска moonraker и fluidd
-- [REMOVE_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros#remove_zmod) - макрос удаления мода
+- [REBOOT](https://wiki.zmod.link/ru/Macros/#reboot) - макрос перезагружает принтер
+- [SHUTDOWN](https://wiki.zmod.link/ru/Macros/#shutdown) - макрос на отключение принтера
+- [SKIP_ZMOD](https://wiki.zmod.link/ru/Macros/#skip_zmod) - макрос перезагрузки без запуска moonraker и fluidd
+- [REMOVE_ZMOD](https://wiki.zmod.link/ru/Macros/#remove_zmod) - макрос удаления мода
 - Исправлена ошибка: "После паузы из-за срабатывания датчика движения филамента восстанавливает печать, но печатает в воздухе сантиметрах в 3 над местом где надо"

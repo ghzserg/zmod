@@ -34,7 +34,7 @@
 
 Ведется поддержка только последней версии мода.
 
-У автора  нет ресурсов поддерживать все версии, поэтому [установите последнее обновление родной прошивки и ZMODа](https://github.com/ghzserg/zmod/wiki/Setup)
+У автора  нет ресурсов поддерживать все версии, поэтому [установите последнее обновление родной прошивки и ZMODа](https://wiki.zmod.link/ru/Setup/)
 
 ### Замените Cпиральный/Автоматич. Z-Hop.
 
@@ -72,10 +72,10 @@
 
 На экране  принтера. `Настройки` -> `Вкладка камера` -> Убрать галочку `"Камера"` и `"Видео"`. 
 
-Потом выполнить макрос [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on)
+Потом выполнить макрос [CAMERA_ON](https://wiki.zmod.link/ru/Zmod/#camera_on)
 
-- [Что такое альтернативная камера?](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-альтернативная-камера)
-- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://github.com/ghzserg/zmod/wiki/FAQ#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
+- [Что такое альтернативная камера?](https://wiki.zmod.link/ru/FAQ/#что-такое-альтернативная-камера)
+- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://wiki.zmod.link/ru/FAQ/#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
 
 <div align="center">
 
@@ -103,10 +103,10 @@
 `Настройки` -> `Вкладка облако` -> Выключить `"FlashCloud"` и `"Polar3d"`.
 
 Вместо этого можно использовать:
-- [zmod.link](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - облако, для управления принтерами через Fluidd/Mainsail.
-- [Телеграм бот](https://github.com/ghzserg/zmod/wiki/Macros).
+- [zmod.link](https://wiki.zmod.link/ru/Zmod/#zlink) - облако, для управления принтерами через Fluidd/Mainsail.
+- [Телеграм бот](https://wiki.zmod.link/ru/Macros/).
 
-[Еще про китайские облака](https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud).
+[Еще про китайские облака](https://wiki.zmod.link/ru/Global/#china_cloud).
 
 <div align="center">
 
@@ -120,13 +120,13 @@
 
 Igor Polunovskiy
 
-[CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+[CHECK_MD5](https://wiki.zmod.link/ru/System/#check_md5)
 
-Рекомендуется использовать [глобальный параметр FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Рекомендуется использовать [глобальный параметр FORCE_MD5](https://wiki.zmod.link/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или
 [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)*
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://wiki.zmod.link/ru/System/#check_md5)*
 
 Также можно использовать [бинарные файлы на Go собранные под основные архитектуры](https://github.com/asd2003ru/addmd5/releases/) от @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Не забудьте выполнить ```chmod +x addmd5-darwin-amd64```
@@ -149,7 +149,7 @@ Igor Polunovskiy
 
 <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
 
-[Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+[Подробнее](https://wiki.zmod.link/ru/System/#check_md5)
 
 *хомячёк*
 
@@ -186,7 +186,7 @@ Igor Polunovskiy
 
 ### Включите fix ошибки E0017
 
-[E0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
+[E0017](https://wiki.zmod.link/ru/Global/#fix_e0017)
 
 По умолчанию он уже включен
 
@@ -202,7 +202,7 @@ Igor Polunovskiy
 
 Должно исправлять `E0011` и `Communication timeout during homing`
 
-[E0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
+[E0011](https://wiki.zmod.link/ru/Global/#fix_e0011)
 
 <div align="center">
 
@@ -218,7 +218,7 @@ Igor Polunovskiy
 
 Что в конечном итоге приводит к череде  мелких или крупных багов.
 
-Макрос [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_ru#check_system) проверяет MD5 сумму файлов и указывает, какие были повреждены.
+Макрос [CHECK_SYSTEM](https://wiki.zmod.link/ru/System/#check_system) проверяет MD5 сумму файлов и указывает, какие были повреждены.
 
 Также он проверяет корректность символических ссылок и при необходимости  автоматически исправляет их.
 
@@ -234,7 +234,7 @@ Igor Polunovskiy
 
 Контроль по умолчанию отключен.
 
-Включается макросом [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control)
+Включается макросом [NOZZLE_CONTROL](https://wiki.zmod.link/ru/Global/#nozzle_control)
 
 `NOZZLE_CONTROL WEIGHT=0`
 

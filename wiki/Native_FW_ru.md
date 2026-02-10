@@ -81,7 +81,7 @@
 
 ## E0011 на родной прошивке
 
-[fix_e0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
+[fix_e0011](https://wiki.zmod.link/ru/Global/#fix_e0011)
 
 Fix E0011 On
 - [Adventurer5M-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
@@ -93,7 +93,7 @@ Fix E0011 Off
 
 ## E0017 на родной прошивке
 
-[fix_e0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
+[fix_e0017](https://wiki.zmod.link/ru/Global/#fix_e0017)
 
 
 - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz)
@@ -112,7 +112,7 @@ Fix E0011 Off
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
-- [Инструкция по восстановлению прошивки IFS](https://github.com/ghzserg/zmod/wiki/AD5X#11-восстановление-прошивки-ifs)
+- [Инструкция по восстановлению прошивки IFS](https://wiki.zmod.link/ru/AD5X/#11-восстановление-прошивки-ifs)
 
 ## 5X G-code
 

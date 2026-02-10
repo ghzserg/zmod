@@ -1,6 +1,6 @@
 <h1 align="center">Pro</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Pro_en)*
+*[Read in English](https://wiki.zmod.link/Pro/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode. 
 
@@ -21,9 +21,9 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_ru#air_circulation_external">AIR_CIRCULATION_EXTERNAL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_ru#air_circulation_internal">AIR_CIRCULATION_INTERNAL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_ru#air_circulation_stop">AIR_CIRCULATION_STOP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Pro/#air_circulation_external">AIR_CIRCULATION_EXTERNAL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Pro/#air_circulation_internal">AIR_CIRCULATION_INTERNAL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Pro/#air_circulation_stop">AIR_CIRCULATION_STOP</a></td>
  </tr>
 </tbody>
 </table>
@@ -67,8 +67,8 @@
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Telegram/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#pro)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Recomendations)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Recomendations/)
 
 </div>

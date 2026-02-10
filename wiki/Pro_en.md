@@ -1,6 +1,6 @@
 <h1 align="center">Pro</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Pro_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Pro/)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -21,9 +21,9 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_en#air_circulation_external">AIR_CIRCULATION_EXTERNAL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_en#air_circulation_internal">AIR_CIRCULATION_INTERNAL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Pro_en#air_circulation_stop">AIR_CIRCULATION_STOP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Pro/#air_circulation_external">AIR_CIRCULATION_EXTERNAL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Pro/#air_circulation_internal">AIR_CIRCULATION_INTERNAL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Pro/#air_circulation_stop">AIR_CIRCULATION_STOP</a></td>
  </tr>
 </tbody>
 </table>
@@ -64,8 +64,8 @@ Disable air circulation.
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Telegram/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#pro)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Recomendations/)
 
 </div>

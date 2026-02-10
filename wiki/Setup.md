@@ -23,7 +23,7 @@
 0. [Удалить KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), если он был установлен
 1. Сбросить принтер до настроек по умолчанию
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
-3. Поместить файл из [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_ru) в корневую папку USB Flash
+3. Поместить файл из [Native firmware](https://wiki.zmod.link/ru/Native_FW/) в корневую папку USB Flash
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
@@ -48,12 +48,12 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
-1. **[Вернуть принтер к заводским настройкам](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
+1. **[Вернуть принтер к заводским настройкам](https://wiki.zmod.link/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](https://wiki.zmod.link/ru/Setup/#внимание-ad5x)
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
 3. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
    - для FF5M: Adventurer5M-**zmod**-\*.tgz
    - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-   - для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): AD5X-**zmod**-\*.tgz
+   - для [AD5X](https://wiki.zmod.link/ru/AD5X/): AD5X-**zmod**-\*.tgz
 4. Выключить принтер
 5. Вставить флешку в принтер
 6. Включить принтер
@@ -71,7 +71,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
+    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](https://wiki.zmod.link/Native_FW//#ad5x-enable-zmodtgz).
      
 12. Переведите мод на ваш язык.
     
@@ -84,7 +84,7 @@
     
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
     
-    Тут отображаются параметры, которые используются при старте, окончании печтати и глобальные праметры. Рекомендуется просто прочитать настройки, но не менять их. Значение каждой настройки можно [посмотреть тут](https://github.com/ghzserg/zmod/wiki/Global_ru)
+    Тут отображаются параметры, которые используются при старте, окончании печтати и глобальные праметры. Рекомендуется просто прочитать настройки, но не менять их. Значение каждой настройки можно [посмотреть тут](https://wiki.zmod.link/ru/Global/)
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
 
@@ -110,7 +110,7 @@
     Или введите в консоли ```ENABLE_PLUGIN name=recommend```
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
-18. [Настройте  Orca](https://github.com/ghzserg/zmod/wiki/Recomendations#отправляйте-файлы-на--печать-через-octoklipper)  
+18. [Настройте  Orca](https://wiki.zmod.link/ru/Recomendations/#отправляйте-файлы-на--печать-через-octoklipper)  
     Весь стартовый код нужно заменить на этот:
 
     ```
@@ -141,11 +141,11 @@
 
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
-19. [Включите контроль MD5](https://github.com/ghzserg/zmod/wiki/Recomendations#включите--контроль-md5)
+19. [Включите контроль MD5](https://wiki.zmod.link/ru/Recomendations/#включите--контроль-md5)
 
     <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
-20. [Прочитайте рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
-21. [Прочитайте FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
+20. [Прочитайте рекомендации](https://wiki.zmod.link/ru/Recomendations/)
+21. [Прочитайте FAQ](https://wiki.zmod.link/ru/FAQ/)
 
 ### Внимание AD5X
 
@@ -153,7 +153,7 @@
 
 После установки Native Firmware, возможна некорректная парковка печатающей головы к приемнику филамента (недожим шторки приемника, выдавливание филамента на стол и т.п.).
 
-[Через инженерное меню на родной прошивке](https://github.com/ghzserg/zmod/wiki/AD5X#настройка-корзины-на-родной-прошивке-ad5x)
+[Через инженерное меню на родной прошивке](https://wiki.zmod.link/ru/AD5X/#настройка-корзины-на-родной-прошивке-ad5x)
 
 Если вы столкнулись с данной ситуацией, необходимо откалибровать парковку по следующему алгоритму:
 1. Скачать архив [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) и распаковать его в корень флешки
@@ -212,7 +212,7 @@
 
 **Как сделать калибровку?**
 
--  Используйте специальную команду (макрос) [PID_TUNE_EXTRUDER](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_extruder)
+-  Используйте специальную команду (макрос) [PID_TUNE_EXTRUDER](https://wiki.zmod.link/ru/Calibrations/#pid_tune_extruder)
 
 -  Её можно ввести вручную в консоль или нажать на кнопку в интерфейсе, если она у вас есть:
     <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
@@ -259,7 +259,7 @@ max_power: 0.6
 
 **Как сделать калибровку?**
 
--  Используйте макрос [PID_TUNE_BED](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_bed)
+-  Используйте макрос [PID_TUNE_BED](https://wiki.zmod.link/ru/Calibrations/#pid_tune_bed)
 
 -  Его также можно ввести в консоль или вызвать кнопкой в интерфейсе (часто она находится рядом с кнопкой для калибровки экструдера):
 
@@ -295,7 +295,7 @@ max_power: 0.6
 3.  Вы регулируете винты, следуя подсказкам.
 4.  Процесс повторяется до тех пор, пока стол не станет ровным.
 
-**Параметры настройки [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#bed_level_screws_tune):**
+**Параметры настройки [BED_LEVEL_SCREWS_TUNE](https://wiki.zmod.link/ru/Calibrations/#bed_level_screws_tune):**
 
 *   `EXTRUDER_TEMP=130` — температура экструдера. Нужна, чтобы термическое расширение сопла не исказило измерения. Устанавливайте температуру, при которой пластик еще не сочится из сопла.
 *   `BED_TEMP=80` — температура стола. Стол тоже расширяется при нагреве, поэтому калибровку нужно проводить на той температуре, с которой вы печатаете.
@@ -346,7 +346,7 @@ max_power: 0.6
 * Не умеют работать с **тензодатчиком** (который у нас отвечает за точное определение касания).
 * Не делают **очистку сопла** перед началом, чтобы убрать подтеки пластика, который может испортить точность измерений.
 
-Наш макрос [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#auto_full_bed_level) учитывает обе эти особенности!
+Наш макрос [AUTO_FULL_BED_LEVEL](https://wiki.zmod.link/ru/Calibrations/#auto_full_bed_level) учитывает обе эти особенности!
 
 **Важные настройки:**
 Карту нужно строить в тех же условиях, в которых вы печатаете — на прогретом столе и горячем экструдере, так как от температуры металл немного расширяется. Карта стола снятая при 60 градусах кардинально отличается от карты стола  снятой на 110 градусах.
@@ -375,7 +375,7 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 ```
 
 **Что здесь происходит:**
-*   [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) - основной макрос начала печати
+*   [START_PRINT](https://wiki.zmod.link/ru/Main/#start_print) - основной макрос начала печати
 *   Строка `START_PRINT... MESH=80` говорит принтеру: "Начни печать и загрузи карту стола с именем `80`".
 *   `[nozzle_temperature_initial_layer]` и `[bed_temperature_initial_layer_single]` — это переменные из слайсера, которые автоматически подставят нужные вам температуры для первого слоя.
 *   Главное — убедитесь, что параметр `MESH=` указывает на то же имя профиля (в нашем примере это `80`), которое вы использовали в `AUTO_FULL_BED_LEVEL`.
@@ -408,7 +408,7 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 ### Адаптивная калибровка стола (KAMP)
 
 **Зачем это нужно?**
-[KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#kamp) — это умная система, которая строит карту неровностей стола не по всей площади, а только в той зоне, где будут находиться ваши модели! Это значительно ускоряет подготовку к печати, особенно на больших принтерах, при этом сохраняя все преимущества точной карты стола.
+[KAMP](https://wiki.zmod.link/ru/Calibrations/#kamp) — это умная система, которая строит карту неровностей стола не по всей площади, а только в той зоне, где будут находиться ваши модели! Это значительно ускоряет подготовку к печати, особенно на больших принтерах, при этом сохраняя все преимущества точной карты стола.
 
 **Как это работает?**
 1.  Перед началом печати KAMP анализирует расположение всех объектов на столе.
@@ -431,7 +431,7 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 
 **1. Включение адаптивной калибровки (KAMP)**
 
-Активируйте эту опцию, чтобы принтер использовал KAMP везде, где это возможно [SAVE_ZMOD_DATA USE_KAMP=1](https://github.com/ghzserg/zmod/wiki/Global_ru#use_kamp).
+Активируйте эту опцию, чтобы принтер использовал KAMP везде, где это возможно [SAVE_ZMOD_DATA USE_KAMP=1](https://wiki.zmod.link/ru/Global/#use_kamp).
 
 ```gcode
 SAVE_ZMOD_DATA USE_KAMP=1
@@ -446,7 +446,7 @@ SAVE_ZMOD_DATA USE_KAMP=1
 
 **2. Включение калибровки перед каждой печатью**
 
-Если вы хотите, чтобы принтер автоматически строил карту стола перед началом каждой работы (например, при частой смене пластин), активируйте эту функцию [SAVE_ZMOD_DATA PRINT_LEVELING=1](https://github.com/ghzserg/zmod/wiki/Global_ru#print_leveling).
+Если вы хотите, чтобы принтер автоматически строил карту стола перед началом каждой работы (например, при частой смене пластин), активируйте эту функцию [SAVE_ZMOD_DATA PRINT_LEVELING=1](https://wiki.zmod.link/ru/Global/#print_leveling).
 
 ```gcode
 SAVE_ZMOD_DATA PRINT_LEVELING=1
@@ -464,7 +464,7 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 
 **3. Умная очистка перед печатью**
 
-Добавьте эту настройку, чтобы принтер использовал для очистки сопла ту же область, где только что снимал карту стола. Это экономит место и время [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Global_ru#clear).
+Добавьте эту настройку, чтобы принтер использовал для очистки сопла ту же область, где только что снимал карту стола. Это экономит место и время [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](https://wiki.zmod.link/ru/Global/#clear).
 
 ```gcode
 SAVE_ZMOD_DATA CLEAR=LINE_PURGE
@@ -491,7 +491,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ### Как работает Z-Offset на вашем принтере
 
 **Что такое Z-Offset?**
-Проще говоря, это **точное расстояние между кончиком сопла и столом** в момент, когда принтер считает, что они "коснулись" друг друга. Правильный Z-Offset гарантирует, что первый слой пластика будет идеально прилипать к столу — не слишком низко (сопло будет задевать стол) и не слишком высоко (пластик не прилипнет). [Подробнее](https://github.com/ghzserg/zmod/wiki/FAQ#как-работает-z-offset)
+Проще говоря, это **точное расстояние между кончиком сопла и столом** в момент, когда принтер считает, что они "коснулись" друг друга. Правильный Z-Offset гарантирует, что первый слой пластика будет идеально прилипать к столу — не слишком низко (сопло будет задевать стол) и не слишком высоко (пластик не прилипнет). [Подробнее](https://wiki.zmod.link/ru/FAQ/#как-работает-z-offset)
 
 **Самое важное правило:**
 На нашем принтере **Z-Offset актуален ТОЛЬКО во время печати**. Значения, которые вы видите на экране или в интерфейсе ДО или ПОСЛЕ печати, являются лишь справочной информацией и не отражают реальную картину.
@@ -528,7 +528,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 **Как это работает:**
 
-1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](https://github.com/ghzserg/zmod/wiki/Global_ru#load_zoffset):
+1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](https://wiki.zmod.link/ru/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
@@ -580,7 +580,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 Расчеты графиков и шейперов в Klipper по умолчанию используют значение `square_corner_velocity = 5`. Но в нашем принтере значение этого параметра указано как `25`. Это несоответствие приводит к тому, что расчетные значения максимального ускорения на графиках оказываются завышенными в несколько раз.
 
 **Что делать?**
-1.  **Исправить расчеты:** Активируйте исправление для корректного отображения графиков [SAVE_ZMOD_DATA FIX_SCV=1](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv).
+1.  **Исправить расчеты:** Активируйте исправление для корректного отображения графиков [SAVE_ZMOD_DATA FIX_SCV=1](https://wiki.zmod.link/ru/Global/#fix_scv).
     ```gcode
     SAVE_ZMOD_DATA FIX_SCV=1
     ```
@@ -598,7 +598,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 #### Как использовать макрос `ZSHAPER`
 
-[ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper) - этот макрос заставляет принтер вибрировать с разными частотами, измеряет отклик и строит графики, чтобы найти идеальные параметры шейпера для осей X и Y.
+[ZSHAPER](https://wiki.zmod.link/ru/Calibrations/#zshaper) - этот макрос заставляет принтер вибрировать с разными частотами, измеряет отклик и строит графики, чтобы найти идеальные параметры шейпера для осей X и Y.
 
 **Особенность для принтеров с малым объемом памяти (AD5M, AD5MPro):**
 Чтобы не перегружать систему, **нужно калибровать оси по отдельности**.
@@ -681,7 +681,7 @@ max_accel: 8700 ; Максимальное ускорение для осей X 
 
 **При обновлении с флешки все данные сохраняются.**
 
-**Проще всего обновить мод через флешку макросом [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash)**
+**Проще всего обновить мод через флешку макросом [ZFLASH](https://wiki.zmod.link/ru/Zmod/#zflash)**
 
 В этом случае, вам нужно вставить флешку в принтер, перезагрузить принтер и вызвать макрос `ZFLASH`.
 
@@ -713,7 +713,7 @@ max_accel: 8700 ; Максимальное ускорение для осей X 
 2. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
    - для FF5M: Adventurer5M-**zmod**-\*.tgz
    - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-   - для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): AD5X-**zmod**-\*.tgz
+   - для [AD5X](https://wiki.zmod.link/ru/AD5X/): AD5X-**zmod**-\*.tgz
 3. Выключить принтер
 4. Вставить флешку в принтер
 5. Включить принтер
@@ -751,8 +751,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 ## Удаление - временное отключение мода
 
-- [SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Zmod_ru#skip_zmod) - макрос перезагрузки без запуска moonraker и fluidd
-- [REMOVE_ZMOD](https://github.com/ghzserg/zmod/wiki/Zmod_ru#remove_zmod) - макрос удаления мода
+- [SKIP_ZMOD](https://wiki.zmod.link/ru/Zmod/#skip_zmod) - макрос перезагрузки без запуска moonraker и fluidd
+- [REMOVE_ZMOD](https://wiki.zmod.link/ru/Zmod/#remove_zmod) - макрос удаления мода
 
 Рекомендуется **удалять мод через макрос `REMOVE_ZMOD`**, удаление через флешку использовать, только если нет возможности запустить макрос.
 
@@ -787,9 +787,9 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Если родной экран не находит обновления:
 - Ваш серийный номер еще не попал под раздачу обновлений
-- [Установите обновление родной прошивки с флешки](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
+- [Установите обновление родной прошивки с флешки](https://wiki.zmod.link/ru/Native_FW/)
 
-**Для [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) требуется [активация zMod](https://github.com/ghzserg/zmod/wiki/Native_FW_ru) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока**.
+**Для [AD5X](https://wiki.zmod.link/ru/AD5X/) требуется [активация zMod](https://wiki.zmod.link/ru/Native_FW/) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока**.
 
 <div align="center">
 
@@ -808,8 +808,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 [[/images/ff.jpg]]
 
 Попробуйте восстановить прошивку, через установку полной прошивки:
-- [FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#установка-полной-прошивки-на-ff5m)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#установка-полной-прошивки-на-ad5x)
+- [FF5M](https://wiki.zmod.link/ru/Native_FW/#установка-полной-прошивки-на-ff5m)
+- [AD5X](https://wiki.zmod.link/ru/Native_FW/#установка-полной-прошивки-на-ad5x)
 
 Алгоритм восстановления:
 1. **Обесточить принтер**

@@ -1,13 +1,13 @@
 [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 - [Главная страница](https://github.com/ghzserg/zmod) | [Home Page](https://github.com/ghzserg/zmod/blob/main/README.en.md)
-- [История версий](https://github.com/ghzserg/zmod/wiki/Changelog) | [Version History](https://github.com/ghzserg/zmod/wiki/Changelog_en)
-- [Часто задаваемые вопросы](https://github.com/ghzserg/zmod/wiki/FAQ) | [Frequently Asked Questions](https://github.com/ghzserg/zmod/wiki/FAQ_en)
-- [Рекомендации по повышению стабильности работы принтера](https://github.com/ghzserg/zmod/wiki/Recomendations) | [Recommendations for Improving Printer Stability](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
-- [Список Макросов](https://github.com/ghzserg/zmod/wiki/Macros) | [List of Macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
-- [Установка/Калибровка](https://github.com/ghzserg/zmod/wiki/Setup) | [Installation/Calibrations](https://github.com/ghzserg/zmod/wiki/Setup_en)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) | [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en)
-- [Помощь](https://github.com/ghzserg/zmod/wiki/Help) | [Help](https://github.com/ghzserg/zmod/wiki/Help_en)
+- [История версий](https://wiki.zmod.link/ru/Changelog/) | [Version History](https://wiki.zmod.link/Changelog/)
+- [Часто задаваемые вопросы](https://wiki.zmod.link/ru/FAQ/) | [Frequently Asked Questions](https://wiki.zmod.link/FAQ/)
+- [Рекомендации по повышению стабильности работы принтера](https://wiki.zmod.link/ru/Recomendations/) | [Recommendations for Improving Printer Stability](https://wiki.zmod.link/Recomendations/)
+- [Список Макросов](https://wiki.zmod.link/ru/Macros/) | [List of Macros](https://wiki.zmod.link/Macros/)
+- [Установка/Калибровка](https://wiki.zmod.link/ru/Setup/) | [Installation/Calibrations](https://wiki.zmod.link/Setup/)
+- [AD5X](https://wiki.zmod.link/ru/AD5X/) | [AD5X](https://wiki.zmod.link/AD5X/)
+- [Помощь](https://wiki.zmod.link/ru/Help/) | [Help](https://wiki.zmod.link/Help/)
 
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">На развитие zmod: СБП, Банковская карта, T-pay</a> | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` |
 | :----: | :----: |

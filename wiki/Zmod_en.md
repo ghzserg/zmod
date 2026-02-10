@@ -1,6 +1,6 @@
 <h1 align="center">Zmod</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Zmod_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Zmod/)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -21,28 +21,28 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_off">CAMERA_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on">CAMERA_ON</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_restart">CAMERA_RESTART</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash">ZFLASH</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#camera_off">CAMERA_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#camera_on">CAMERA_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#camera_restart">CAMERA_RESTART</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zflash">ZFLASH</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config">TAR_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#restore_tar_config">RESTORE_TAR_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#start_zmod">START_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#stop_zmod">STOP_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#tar_config">TAR_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#restore_tar_config">RESTORE_TAR_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#start_zmod">START_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#stop_zmod">STOP_ZMOD</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_off">ZSSH_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_on">ZSSH_ON</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_reload">ZSSH_RELOAD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_restart">ZSSH_RESTART</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zssh_off">ZSSH_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zssh_on">ZSSH_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zssh_reload">ZSSH_RELOAD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zssh_restart">ZSSH_RESTART</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#remove_zmod">REMOVE_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#skip_zmod">SKIP_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore">ZRESTORE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_en#zlink">ZLINK</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#remove_zmod">REMOVE_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#skip_zmod">SKIP_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zrestore">ZRESTORE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Zmod/#zlink">ZLINK</a></td>
  </tr>
 </tbody>
 </table>
@@ -75,8 +75,8 @@ RAM usage for stock cameras:
 *Many AliExpress/Ozon/Wildberries cameras always consume 18 MiB.*
 
 > [!NOTE]
-> - [What is an Alternative Camera?](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-an-alternative-camera)
-> - [I installed the printer, and ZMOD hid my camera! I saw her in Orca-FF, and now she's gone!](https://github.com/ghzserg/zmod/wiki/FAQ_en#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+> - [What is an Alternative Camera?](https://wiki.zmod.link/FAQ/#what-is-an-alternative-camera)
+> - [I installed the printer, and ZMOD hid my camera! I saw her in Orca-FF, and now she's gone!](https://wiki.zmod.link/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
@@ -317,7 +317,7 @@ ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MO
 
 SSH starts 3 minutes after Klipper boots and automatically restarts at the beginning of prints (via `START_PRINT` macro).
 
-[Telegram Bot details](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+[Telegram Bot details](https://wiki.zmod.link/Telegram/)
 
 <div align="center">
 
@@ -371,9 +371,9 @@ Resume printing after power loss or printer errors.
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/System_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/System/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Filament_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Filament/)
 
 </div>
 
@@ -444,8 +444,8 @@ PPS: If something is not working correctly, refresh the page with Ctrl + F5 and 
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/System_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/System/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Filament_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Filament/)
 
 </div>

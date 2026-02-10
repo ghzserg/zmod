@@ -1,6 +1,6 @@
 <h1 align="center">Filament</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Filament_en)*
+*[Read in English](https://wiki.zmod.link/Filament/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode. 
 
@@ -21,13 +21,13 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru#coldpull">COLDPULL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru#color) (only AD5X">COLOR</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru#m600">M600</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Filament/#coldpull">COLDPULL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Filament/#color) (only AD5X">COLOR</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Filament/#m600">M600</a></td>
  <tr>
  </tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru#set_pause_at_layer">SET_PAUSE_AT_LAYER</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_ru#set_pause_next_layer">SET_PAUSE_NEXT_LAYER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Filament/#set_pause_at_layer">SET_PAUSE_AT_LAYER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Filament/#set_pause_next_layer">SET_PAUSE_NEXT_LAYER</a></td>
  </tr>
 </tbody>
 </table>
@@ -115,8 +115,8 @@
 
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Zmod/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#filament)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Telegram/)
 
 </div>

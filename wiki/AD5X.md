@@ -12,7 +12,7 @@
 8. [Добавить свои цвета](#8-добавить-свои-цвета-ad5x)
 9. [Исправление парковки в корзину и отрезание филамента](#9-исправление-работы-с-корзиной-и-ножом-для-отрезания-филамента-ad5x)
    - [Через инженерное меню на родной прошивке](#настройка-корзины-на-родной-прошивке-ad5x)
-   - [Через флэшку на родной прошивке](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
+   - [Через флэшку на родной прошивке](https://wiki.zmod.link/ru/Setup/#внимание-ad5x)
 10. [IFS команды](#10-ifs-команды)
 11. [Восстановление прошивки IFS](#11-восстановление-прошивки-ifs)
 
@@ -39,7 +39,7 @@
 
 ## **2. Как подготовить файл в Orca AD5X**
 
-[Отправляйте файлы на печать через "Octo/Klipper".](https://github.com/ghzserg/zmod/wiki/Recomendations#отправляйте-файлы-на--печать-через-octoklipper)
+[Отправляйте файлы на печать через "Octo/Klipper".](https://wiki.zmod.link/ru/Recomendations/#отправляйте-файлы-на--печать-через-octoklipper)
 
 
 **Нужно удалить неиспользуемые катушки из списка в Orca.**
@@ -126,7 +126,7 @@
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
-Чтобы окно выбора цвета не показывалось при начале печати используйте глобальный параметр [SILENT](https://github.com/ghzserg/zmod/wiki/Global_ru#silent)
+Чтобы окно выбора цвета не показывалось при начале печати используйте глобальный параметр [SILENT](https://wiki.zmod.link/ru/Global/#silent)
 
 - 0 - показывать окно (по умолчанию)
 - 1 - не показывать окно, использовать ранее заданные цвета
@@ -166,25 +166,25 @@ SET_EXTRUDER_SLOT SLOT=1
 - `Head Switch Sensor` - наличия филамента в экструдере
 - `Ifs Motion Sensor` - движения филамента в IFS
 
-Для отключения функции автоматической вставки прутка в экструдер используйте глобальный параметр [AUTOINSERT](https://github.com/ghzserg/zmod/wiki/Global_ru#autoinsert)
+Для отключения функции автоматической вставки прутка в экструдер используйте глобальный параметр [AUTOINSERT](https://wiki.zmod.link/ru/Global/#autoinsert)
 
 ```gcode
 SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
-Чтобы отключить сброс филамента в корзину при печати, используйте параметр [USE_TRASH_ON_PRINT](https://github.com/ghzserg/zmod/wiki/Global_ru#use_trash_on_print).
+Чтобы отключить сброс филамента в корзину при печати, используйте параметр [USE_TRASH_ON_PRINT](https://wiki.zmod.link/ru/Global/#use_trash_on_print).
 
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
-Чтобы извлечь пруток после окончания печати, используйте параметр [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament).
+Чтобы извлечь пруток после окончания печати, используйте параметр [REMOVE_FILAMENT](https://wiki.zmod.link/ru/Global/#remove_filament).
 
 ```gcode
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Чтобы окно выбора цвета не показывалось при начале печати используйте глобальный параметр [SILENT](https://github.com/ghzserg/zmod/wiki/Global_ru#silent)
+Чтобы окно выбора цвета не показывалось при начале печати используйте глобальный параметр [SILENT](https://wiki.zmod.link/ru/Global/#silent)
 
 - 0 - показывать окно (по умолчанию)
 - 1 - не показывать окно, использовать ранее заданные цвета
@@ -304,7 +304,7 @@ filament_NEWTYPE: 300
 
 ## 9. Исправление работы с корзиной и ножом для отрезания филамента AD5X
 
-[Альтернативный вариант инструкции](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
+[Альтернативный вариант инструкции](https://wiki.zmod.link/ru/Setup/#внимание-ad5x)
 
 У разных принтеров AD5X координаты корзины и ножа могут быть разными. Иногда разница доходит до 4 мм. 
 
@@ -342,7 +342,7 @@ filament_NEWTYPE: 300
 
 ### Настройка корзины AD5X
 
-[Альтернативный вариант инструкции](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
+[Альтернативный вариант инструкции](https://wiki.zmod.link/ru/Setup/#внимание-ad5x)
 
 1. Введите команду `_GOTO_TRASH` — голова принтера поедет к корзине.
 2. Если корзина не закрылась, аккуратно подвиньте голову, пока корзина не закроется. Нужно использовать GCODE: ```G1 Y230.2```
@@ -363,7 +363,7 @@ filament_NEWTYPE: 300
 
 ### Настройка ножа AD5X
 
-[Альтернативный вариант инструкции](https://github.com/ghzserg/zmod/wiki/Setup#внимание-ad5x)
+[Альтернативный вариант инструкции](https://wiki.zmod.link/ru/Setup/#внимание-ad5x)
 
 1. Введите команду `_CUT_PRUTOK` — голова поедет к ножу.
 2. С помощью экрана подвиньте голову, пока нож не сработает. Нужно использовать GCODE: ```G1 Y-7.7``` ```G1 X-1.7```
@@ -481,7 +481,7 @@ filament_NEWTYPE: 300
 - Вторую галочку снимаем
 
 1. Соединяемся
-2. Вбираем [файл для прошивки](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#5x-ifs). **Не забудьте его разархивировать**.
+2. Вбираем [файл для прошивки](https://wiki.zmod.link/ru/Native_FW/#5x-ifs). **Не забудьте его разархивировать**.
 3. Нажимаем **F7** и ждем прошивки устройства
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

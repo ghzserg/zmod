@@ -36,7 +36,7 @@ Enable object exclusion in Orca:
 
 Only the latest version of ZMOD is actively supported.
 
-The developer lacks resources to maintain older versions, so [install the latest stock firmware and ZMOD updates](https://github.com/ghzserg/zmod/wiki/Setup_en).
+The developer lacks resources to maintain older versions, so [install the latest stock firmware and ZMOD updates](https://wiki.zmod.link/Setup/).
 
 <div align="center">
 
@@ -83,10 +83,10 @@ The built-in camera consumes excessive memory and offers poor image quality. Use
 **On the printer screen:**
 `Settings` -> `Camera Tab` -> Disable `Camera` and `Video` toggles.
 
-Then, run the [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) macro.
+Then, run the [CAMERA_ON](https://wiki.zmod.link/Zmod/#camera_on) macro.
 
-- [What is an alternative camera?](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-an-alternative-camera)
-- [I installed ZMOD, and my camera disappeared! It worked in Orca-FF!](https://github.com/ghzserg/zmod/wiki/FAQ_en#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+- [What is an alternative camera?](https://wiki.zmod.link/FAQ/#what-is-an-alternative-camera)
+- [I installed ZMOD, and my camera disappeared! It worked in Orca-FF!](https://wiki.zmod.link/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 <div align="center">
 
@@ -109,10 +109,10 @@ Disabling them also enables faster dialog closure after printing and native bed 
 2. `Settings` -> `Cloud Tab` -> Disable `FlashCloud` and `Polar3d`.
 
 Instead, you can use:
-- [zmod.link](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - cloud, for managing printers via Fluidd/Mainsail.
-- [Telegram bot](https://github.com/ghzserg/zmod/wiki/Macros).
+- [zmod.link](https://wiki.zmod.link/ru/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
+- [Telegram bot](https://wiki.zmod.link/ru/Macros/).
 
-[More about Chinese cloud services](https://github.com/ghzserg/zmod/wiki/Global_en#china_cloud).
+[More about Chinese cloud services](https://wiki.zmod.link/Global/#china_cloud).
 
 <div align="center">
 
@@ -126,13 +126,13 @@ Instead, you can use:
 
 Igor Polunovskiy
 
-Add [CHECK_MD5](https://github.com/ghzserg/zmod/wiki/System_en#check_md5) to your workflow.
+Add [CHECK_MD5](https://wiki.zmod.link/System/#check_md5) to your workflow.
 
-It is recommended to use the [global parameter FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+It is recommended to use the [global parameter FORCE_MD5](https://wiki.zmod.link/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 *Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
 [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)*
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://wiki.zmod.link/ru/System/#check_md5)*
 
 You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```
@@ -147,7 +147,7 @@ Here are the options for adding:
 - ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
 - ```"/home/user/addmd5-linux-amd64";```
 
-[Details](https://github.com/ghzserg/zmod/wiki/System_en#check_md5)
+[Details](https://wiki.zmod.link/System/#check_md5)
 
 <img width="472" height="549" alt="image" src="https://github.com/user-attachments/assets/b330fa6f-fffd-4b0d-95b0-4e879eabd0d3" />
 
@@ -188,7 +188,7 @@ Note that the native screen will no longer display thumbnails.
 
 ### Enable Fix for E0017 Error
 
-[E0017 Fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
+[E0017 Fix](https://wiki.zmod.link/Global/#fix_e0017)
 
 Enabled by default.
 
@@ -204,7 +204,7 @@ Enabled by default.
 
 Resolves `E0011` and `Communication timeout during homing` errors.
 
-[E0011 Fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
+[E0011 Fix](https://wiki.zmod.link/Global/#fix_e0011)
 
 **Experimental feature** — disabled by default.
 
@@ -220,7 +220,7 @@ Resolves `E0011` and `Communication timeout during homing` errors.
 
 Improper printer shutdowns can corrupt the filesystem, leading to minor or major bugs.
 
-The [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_en#check_system) macro checks file MD5 hashes and repairs symbolic links if needed.
+The [CHECK_SYSTEM](https://wiki.zmod.link/System/#check_system) macro checks file MD5 hashes and repairs symbolic links if needed.
 
 <div align="center">
 
@@ -232,7 +232,7 @@ The [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_en#check_system) 
 
 ### Enable Nozzle Collision Detection
 
-Disabled by default. Enable using the [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control) macro:
+Disabled by default. Enable using the [NOZZLE_CONTROL](https://wiki.zmod.link/Global/#nozzle_control) macro:
 
 ```
 NOZZLE_CONTROL WEIGHT=0

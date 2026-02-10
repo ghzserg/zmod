@@ -12,7 +12,7 @@
 8. [Add custom colors](#8-add-custom-colors)
 9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
    - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
-   - [Via a flash drive on the stock firmware](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+   - [Via a flash drive on the stock firmware](https://wiki.zmod.link/Setup/#ad5x-warning)
 10. [IFS commands](#10-ifs-commands)
 11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
     
@@ -38,7 +38,7 @@ Differences from AD5M:
 
 ## **2. How to Prepare a File in Orca**
 
-[Send Files via "Octo/Klipper" for Printing](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
+[Send Files via "Octo/Klipper" for Printing](https://wiki.zmod.link/Recomendations/#send-files-via-octoklipper-for-printing)
 
 **You must remove unused spools from the list in Orca.**
 
@@ -124,7 +124,7 @@ This window opens **automatically** when you start printing.
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
-To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](https://github.com/ghzserg/zmod/wiki/Global_en#silent):
+To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](https://wiki.zmod.link/Global/#silent):
 
 - 0 – show dialog (default)
 - 1 – do not show dialog, use previously set colors
@@ -168,25 +168,25 @@ In screen-off mode, these sensors are enabled:
 - `Head Switch Sensor` – Detects filament presence in the extruder
 - `Ifs Motion Sensor` – Monitors filament movement in IFS
 
-To disable automatic filament insertion into the extruder, use the global parameter [AUTOINSERT](https://github.com/ghzserg/zmod/wiki/Global_en#autoinsert):
+To disable automatic filament insertion into the extruder, use the global parameter [AUTOINSERT](https://wiki.zmod.link/Global/#autoinsert):
 
 ```gcode
 SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
-To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](https://github.com/ghzserg/zmod/wiki/Global_en#use_trash_on_print) parameter.
+To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](https://wiki.zmod.link/Global/#use_trash_on_print) parameter.
 
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
-To unload the filament after printing is complete, use the [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_en#remove_filament) parameter.
+To unload the filament after printing is complete, use the [REMOVE_FILAMENT](https://wiki.zmod.link/Global/#remove_filament) parameter.
 
 ```gcode
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](https://github.com/ghzserg/zmod/wiki/Global_en#silent):
+To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](https://wiki.zmod.link/Global/#silent):
 
 - 0 – show dialog (default)
 - 1 – do not show dialog, use previously set colors
@@ -306,7 +306,7 @@ The text ```_transparent``` will be displayed on buttons.
 
 ## 9. Fixing Trash Bin and Filament Cutting Knife Operation
 
-[Alternative version of the instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+[Alternative version of the instructions](https://wiki.zmod.link/Setup/#ad5x-warning)
 
 Different AD5X printers may have different coordinates for the trash bin and knife. Sometimes the difference can reach up to 4 mm.
 
@@ -344,7 +344,7 @@ Replace **only** these values:
 
 ### Trash Bin Calibration
 
-[Alternative version of the instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+[Alternative version of the instructions](https://wiki.zmod.link/Setup/#ad5x-warning)
 
 1. Enter the command `_GOTO_TRASH` — the printer head will move to the trash bin.
 2. If the bin doesn't close. Сarefully move the head until the bin closes. You need use GCODE: ```G1 Y230.2```
@@ -365,7 +365,7 @@ Write this number to the file `/rw/Adventurer5M.json`. The bin is calibrated.
 
 ### Knife Calibration
 
-[Alternative version of the instructions](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+[Alternative version of the instructions](https://wiki.zmod.link/Setup/#ad5x-warning)
 
 1. Enter the command `_CUT_PRUTOK` — the head will move to the knife.
 2. You need use GCODE: ```G1 Y-7.7``` ```G1 X-1.7```, move the head until the knife activates.
@@ -484,7 +484,7 @@ Connect:
 - Uncheck the second checkbox.
 
 1. Connect.
-2. Select the [firmware file](https://github.com/ghzserg/zmod/wiki/Native_FW_en#5x-ifs). **Don't forget to extract it**.
+2. Select the [firmware file](https://wiki.zmod.link/Native_FW/#5x-ifs). **Don't forget to extract it**.
 3. Press **F7** and wait for the device to be flashed.
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

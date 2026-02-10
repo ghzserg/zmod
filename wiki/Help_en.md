@@ -2,13 +2,13 @@
 
 Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it your question. It knows all the documentation.
 
-1. [Update zMod and all plugins to the latest version](https://github.com/ghzserg/zmod/wiki/Setup#updating-the-mod)
+1. [Update zMod and all plugins to the latest version](https://wiki.zmod.link/ru/Setup/#updating-the-mod)
 2. Clearly describe the issue: provide screenshots, photos, and a detailed textual explanation.
-3. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear previous logs.
+3. Run [CLEAR_EMMC](https://wiki.zmod.link/System/#clear_emmc) to clear previous logs.
 4. **Power off the printer completely.**
 5. Power the printer back on.
 6. Reproduce the issue.
-7. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to collect log files.
+7. Run [TAR_CONFIG](https://wiki.zmod.link/Zmod/#tar_config) to collect log files.
 8. Submit **one** post with your description and the generated `config.tar.gz` file.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
@@ -106,7 +106,7 @@ That’s **inefficient**, **delays help**, and **frustrates everyone**.
 To help me **skip the guessing and start fixing**, please follow this checklist:
 
 ### 1. **Update to the latest version**
-> Follow the [official update guide](https://github.com/ghzserg/zmod/wiki/Setup#updating-the-mod).
+> Follow the [official update guide](https://wiki.zmod.link/ru/Setup/#updating-the-mod).
 
 ### 2. **Describe the issue clearly and concretely**
 > ❌ Bad: _“It doesn’t work.”_

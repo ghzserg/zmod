@@ -1,6 +1,6 @@
 <h1 align="center">System</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/System_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/System/)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -21,25 +21,25 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#check_system">CHECK_SYSTEM</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#mem">MEM</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#check_md5">CHECK_MD5</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#web">WEB</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#check_system">CHECK_SYSTEM</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#mem">MEM</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#check_md5">CHECK_MD5</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#web">WEB</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc">CLEAR_EMMC</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#test_emmc">TEST_EMMC</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#display_off">DISPLAY_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#display_on">DISPLAY_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#clear_emmc">CLEAR_EMMC</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#test_emmc">TEST_EMMC</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#display_off">DISPLAY_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#display_on">DISPLAY_ON</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#date_get">DATE_GET</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#date_set">DATE_SET</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#update_mcu">UPDATE_MCU</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#reset_passwd">RESET_PASSWD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#date_get">DATE_GET</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#date_set">DATE_SET</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#update_mcu">UPDATE_MCU</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#reset_passwd">RESET_PASSWD</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_en#screen">SCREEN</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/System/#screen">SCREEN</a></td>
  </tr>
 </tbody>
 </table>
@@ -73,9 +73,9 @@ Disable the standard screen. Saves 13 MB of RAM (20 MB on older firmware version
 - Do not disable the screen unless you fully understand bed leveling, Z-offset, and the `START_PRINT`/`END_PRINT` macros.
 - The screen remains active for 3 minutes after reboot but does not affect Z-offset or printing.
 
-Adjust activation timing via the [`DISPLAY_OFF_TIMEOUT`](https://github.com/ghzserg/zmod/wiki/Global_en#display_off_timeout) global parameter.
+Adjust activation timing via the [`DISPLAY_OFF_TIMEOUT`](https://wiki.zmod.link/Global/#display_off_timeout) global parameter.
 
-[Learn more about screen modes](https://github.com/ghzserg/zmod/wiki/FAQ_en#whats-the-difference-between-using-the-screen-and-without-the-native-screen).
+[Learn more about screen modes](https://wiki.zmod.link/FAQ/#whats-the-difference-between-using-the-screen-and-without-the-native-screen).
 
 <div align="center">
 
@@ -167,7 +167,7 @@ In Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thu
 
 Note that the native screen will no longer display thumbnails.
 
-Attention! The author uses Fluidd; Mainsail is user-tested only. If you have any issues with Mainsail, please create a [ticket](https://github.com/ghzserg/zmod/wiki/Help_en)
+Attention! The author uses Fluidd; Mainsail is user-tested only. If you have any issues with Mainsail, please create a [ticket](https://wiki.zmod.link/Help/)
 
 <div align="center">
 
@@ -202,11 +202,11 @@ Verify file integrity via MD5 checksum.
    - **PrusaSlicer/SuperSlicer**: *Print Settings → Output Options → Post-processing Scripts*
 3. Add `CHECK_MD5` or `CHECK_MD5 DELETE=true` to your start G-code.
 
-**Note:** Enabled by default via [`FORCE_MD5`](https://github.com/ghzserg/zmod/wiki/Global_en#force_md5).
+**Note:** Enabled by default via [`FORCE_MD5`](https://wiki.zmod.link/Global/#force_md5).
 
 *Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
 [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://github.com/ghzserg/zmod/wiki/System_en#check_md5)
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](https://wiki.zmod.link/System/#check_md5)
 
 You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```
@@ -246,9 +246,9 @@ Without parameters, changes the firmware to the opposite version.
 
 Example: `UPDATE_MCU FORCE=13` forces the download of Klipper 13 firmware.
 
-If you don't understand how to [restore the configs and MCU firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ad5x), do not run this command.
+If you don't understand how to [restore the configs and MCU firmware](https://wiki.zmod.link/Native_FW/#installing-full-firmware-on-ad5x), do not run this command.
 
-If something goes wrong, the only way back is through [factory](https://github.com/ghzserg/zmod/wiki/Native_FW_en).
+If something goes wrong, the only way back is through [factory](https://wiki.zmod.link/Native_FW/).
 
 <div align="center">
 
@@ -290,9 +290,9 @@ Checks:
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Global_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Global/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#system)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Zmod/)
 
 </div>
 
@@ -308,8 +308,8 @@ The photo will be saved in ```mod_data/screen.jpg```
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Global_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Global/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#system)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Zmod/)
 
 </div>

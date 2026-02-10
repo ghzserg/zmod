@@ -29,7 +29,7 @@
 | [AD5X Specifics](#ad5x-specifics) | [How to Contact Support](#how-to-contact-support) |
 | [How to change the boot logo](#how-to-change-the-boot-logo) | [No trigger on probe after full movement](#no-trigger-on-probe-after-full-movement) |
 | [WeightValue](#weightvalue) | [MCU Protocol error](#mcu-protocol-error) |
-| [Filament has run out or stopped](https://github.com/ghzserg/zmod/wiki/FAQ_en#filament-has-run-out-or-stopped) | [Before each print, the printer measures the center of the bed](#before-each-print-the-printer-measures-the-center-of-the-bed) |
+| [Filament has run out or stopped](https://wiki.zmod.link/FAQ/#filament-has-run-out-or-stopped) | [Before each print, the printer measures the center of the bed](#before-each-print-the-printer-measures-the-center-of-the-bed) |
 | [E0120](#e0120) | - |
 ---
 
@@ -41,7 +41,7 @@ Access the **mod_data** folder via Fluidd web interface:
 - Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and zMod files.
 - Custom Moonraker settings go into `mod_data/user.moonraker.conf`.
 - Custom MIDI files are stored in `mod_data/midi/`.
-- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) macro.
+- Global mod settings are saved via the [SAVE_ZMOD_DATA](https://wiki.zmod.link/Global/#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
 - Power on scripts are stored in `mod_data/power_on.sh`.
 
@@ -59,8 +59,8 @@ Any function can be overridden in `mod_data/user.cfg` or `printer.cfg`
 
 ## Known Peculiarities:
 - During actions like `M109` (extruder heating), `M190` (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.
-- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_en#new_save_config) for restarts).
-- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#close_dialogs) or [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Main_en#f
+- Restarting Klipper freezes the stock screen (use [NEW_SAVE_CONFIG](https://wiki.zmod.link/Main/#new_save_config) for restarts).
+- After canceling a print, press "OK" on the stock screen (use [CLOSE_DIALOGS](https://wiki.zmod.link/Main/#close_dialogs) or [FAST_CLOSE_DIALOGS](https://wiki.zmod.link/Main/#f
 ast_close_dialogs)).
 - The stock screen always loads the `DEFAULT_MESH` profile when starting a print and deletes the `Default` profile post-print.
 
@@ -73,9 +73,9 @@ ast_close_dialogs)).
 ---
 
 ## Screenless Version Notes:
-- Remove all start gcode and use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) and [END_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#end_print) macros.
-- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on).
-- Manually set [Z_OFFSET] in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) or use [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Global_en#load_zoffset) to load saved offsets.
+- Remove all start gcode and use [START_PRINT](https://wiki.zmod.link/Main/#start_print) and [END_PRINT](https://wiki.zmod.link/Main/#end_print) macros.
+- Stock camera disabled; use the alternative via [CAMERA_ON](https://github.com/https://wiki.zmod.link/Zmod/#camera_on).
+- Manually set [Z_OFFSET] in [START_PRINT](https://wiki.zmod.link/Main/#start_print) or use [LOAD_ZOFFSET](https://wiki.zmod.link/Global/#load_zoffset) to load saved offsets.
 - If you want to transfer z-offset from native screen to non-native screen mode, call the macro ```LOAD_ZOFFSET_NATIVE``` it will read the z-offset value from the native screen and apply it to non-native screen mode.
 - Bed mesh `auto` loads automatically on startup.
 - FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":
@@ -117,20 +117,20 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 *   Network configuration via iwd/wpa_supplicant (in case of guppyscreen) - in ZMOD network configuration is done through the native screen, network startup is possible even without the native screen
 
 #### What's in ZMOD but not in KlipperMod:
-*   [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X) support
-*   Support for [the following languages](https://github.com/ghzserg/zmod/wiki/Global_en#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
+*   [AD5X](https://wiki.zmod.link/ru/AD5X/) support
+*   Support for [the following languages](https://wiki.zmod.link/Global/#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
 *   Native screen support
-*   [Print recovery after power loss](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore)
-*   [Shaper calibration with graphs](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper) considering [SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
-*   [File/permission/symlink check and repair for the native filesystem](https://github.com/ghzserg/zmod/wiki/System_en#check_system)
+*   [Print recovery after power loss](https://wiki.zmod.link/Zmod/#zrestore)
+*   [Shaper calibration with graphs](https://wiki.zmod.link/Calibrations/#zshaper) considering [SCV](https://wiki.zmod.link/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
+*   [File/permission/symlink check and repair for the native filesystem](https://wiki.zmod.link/System/#check_system)
 *   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD over the network
-*   [Entware](https://github.com/ghzserg/zmod/wiki/FAQ_en#entware-in-zmod-how-to-use-it)
-*   Fixed [E0017 error](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
+*   [Entware](https://wiki.zmod.link/FAQ/#entware-in-zmod-how-to-use-it)
+*   Fixed [E0017 error](https://wiki.zmod.link/Global/#fix_e0017)
 *   Additionally, GuppyScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling
 *   Fixed driver cooling fans operation. They automatically turn on when motors are running. On native firmware - only during printing.
-*   Adaptive bed leveling [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
-*   PID calibration for [extruder](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder) and [bed](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed), including via GuppyScreen
-*   Implemented [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) (nozzle cleaning) without force. Implementation of [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
+*   Adaptive bed leveling [KAMP](https://wiki.zmod.link/Calibrations/#kamp)
+*   PID calibration for [extruder](https://wiki.zmod.link/Calibrations/#pid_tune_extruder) and [bed](https://wiki.zmod.link/Calibrations/#pid_tune_bed), including via GuppyScreen
+*   Implemented [COLDPULL](https://wiki.zmod.link/Filament/#coldpull) (nozzle cleaning) without force. Implementation of [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 #### What's in ZMOD but not in native firmware:
 - Moonraker/Fluidd/Mainsail support
@@ -156,7 +156,7 @@ It can be called:
 - From the Fluidd/Mainsail console
 *hedgehog*
 
-[List of macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
+[List of macros](https://wiki.zmod.link/Macros/)
 
 <div align="center">
 
@@ -215,9 +215,9 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Via the printer screen menu: `Settings` -> `WiFi icon` -> `Network Mode` -> enable `Local Networks Only`.
 
-Read the documentation for [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) and [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) to utilize advanced ZMOD features.
+Read the documentation for [START_PRINT](https://wiki.zmod.link/Main/#start_print) and [SAVE_ZMOD_DATA](https://wiki.zmod.link/Global/#save_zmod_data) to utilize advanced ZMOD features.
 
-For firmware retraction, read [the documentation](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction) and add to `Filament Profile` -> `Advanced` -> `Filament Start G-code`:
+For firmware retraction, read [the documentation](https://wiki.zmod.link/FAQ/#what-is-firmware-retraction) and add to `Filament Profile` -> `Advanced` -> `Filament Start G-code`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -242,9 +242,9 @@ Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from native screens to non-na
 
 Z-offset adjustments via Fluidd/Mainsail/GuppyScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.
 
-Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](https://github.com/ghzserg/zmod/wiki/Global_en#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) macro is utilized.
+Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](https://wiki.zmod.link/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](https://wiki.zmod.link/Main/#start_print) macro is utilized.
 
-Z-offset can also be set via [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) parameters:
+Z-offset can also be set via [START_PRINT](https://wiki.zmod.link/Main/#start_print) parameters:
 - Z_OFFSET - Set Z offset (0.0)
 
 ### What options are available for bed leveling?
@@ -261,9 +261,9 @@ The native screen always uses:
 Without the native screen, the `auto` mesh is auto-loaded on startup.
 
 To use another mesh, disable auto-leveling (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
-- Specify via the `MESH` parameter in [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print). E.g., `START_PRINT MESH=my_80_degree_mesh`
+- Specify via the `MESH` parameter in [START_PRINT](https://wiki.zmod.link/Main/#start_print). E.g., `START_PRINT MESH=my_80_degree_mesh`
 - Load via `BED_MESH_PROFILE LOAD=my_80_degree_mesh` in filament profile. Ensure consistency between profile and `START_PRINT`, or disable nozzle cleaning in `START_PRINT`.
-- Pre-level using [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level). E.g., `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh`
+- Pre-level using [AUTO_FULL_BED_LEVEL](https://wiki.zmod.link/Calibrations/#auto_full_bed_level). E.g., `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh`
 
 #### Via global parameters
 Use `PRINT_LEVELING` and `USE_KAMP` parameters. Enable with:
@@ -305,8 +305,8 @@ Examples:
 
 #### Via macros and buttons in Fluidd
 Use:
-- [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) (Fluidd button `BED LEVELING`)
-- [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp)
+- [AUTO_FULL_BED_LEVEL](https://wiki.zmod.link/Calibrations/#auto_full_bed_level) (Fluidd button `BED LEVELING`)
+- [KAMP](https://wiki.zmod.link/Calibrations/#kamp)
 - Standard Klipper macros (**not recommended**)
 
 <div align="center">
@@ -320,10 +320,10 @@ Use:
 ### Why are animal names periodically mentioned in the documentation?
 
 Documentation is often unread, though 90% of questions are answered here. To verify if someone actually read it, animal names are hidden in the text. If directed here, read the docs and mention the animal related to your question:
-- [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
-- [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
-- [Setup/Update/Uninstall](https://github.com/ghzserg/zmod/wiki/Setup_en)
-- [Macros](https://github.com/ghzserg/zmod/wiki/Macros_en)
+- [FAQ](https://wiki.zmod.link/FAQ/)
+- [Recommendations](https://wiki.zmod.link/Recomendations/)
+- [Setup/Update/Uninstall](https://wiki.zmod.link/Setup/)
+- [Macros](https://wiki.zmod.link/Macros/)
 - [Known Issues](#known-peculiarities)
 
 <div align="center">
@@ -347,7 +347,7 @@ In the mode without the native screen, you can use the alternative software scre
 
 **Disabling the screen saves RAM but changes print management (start/pause/resume/cancel/recovery). Modify start/end G-code accordingly.** *elk*
 
-Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) parameters or global settings. [Details](https://github.com/ghzserg/zmod/wiki/FAQ_en#how-does-z-offset-work)
+Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](https://wiki.zmod.link/Main/#start_print) parameters or global settings. [Details](https://wiki.zmod.link/FAQ/#how-does-z-offset-work)
 
 Read [features of screenless operation](#screenless-version-notes).
 
@@ -367,12 +367,12 @@ The native camera, which is turned on from the screen, has a number of disadvant
 - Only one connection to the camera. Having opened it in the orc, you will no longer see it in the browser
 - Periodic image dumps
 
-The alternative camera, allows you to change the resolution, fps, allow multiple connections, does not overcompress the image, is easily restarted and is configured with a [macro](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on). *hare*
+The alternative camera, allows you to change the resolution, fps, allow multiple connections, does not overcompress the image, is easily restarted and is configured with a [macro](https://wiki.zmod.link/Zmod/#camera_on). *hare*
 
 - Disable the native camera on the printer screen.
-- Call the macro [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on)
+- Call the macro [CAMERA_ON](https://wiki.zmod.link/Zmod/#camera_on)
 
-Read: [I installed a printer, and ZMOD hid my camera!](https://github.com/ghzserg/zmod/wiki/FAQ_en#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+Read: [I installed a printer, and ZMOD hid my camera!](https://wiki.zmod.link/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 #### Camera Setup
 
@@ -453,7 +453,7 @@ In versions up than `1.4.3`, you can also specify:
 - Stream URL: `/webcam/?action=stream`
 - Snapshot URL: `/webcam/?action=snapshot`
 
-For advanced features, use [alternative camera](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on). *mole*
+For advanced features, use [alternative camera](https://wiki.zmod.link/Zmod/#camera_on). *mole*
 
 Assign a static IP to the printer on your router.
 
@@ -520,7 +520,7 @@ The difference between `REBOOT` and `FIRMWARE_RESTART` is that `REBOOT` restarts
 
 ### I Switched the Web Interface, and Now Nothing Works
 
-If you switched the interface using the [WEB](https://github.com/ghzserg/zmod/wiki/System_en#web) macro *выхухоль*:
+If you switched the interface using the [WEB](https://wiki.zmod.link/System/#web) macro *выхухоль*:
 
 1. Press `Ctrl + F5` or `Ctrl + Shift + R` or `Option + Command + E`
 2. If the issue persists in Orca, press `Ctrl + F5` or `Ctrl + Shift + R` or `Option + Command + E` again. *fox*
@@ -545,7 +545,7 @@ ZMOD uses the following ports:
 
 To access the printer, enter its IP address **without specifying a port**. *кролик*
 
-[How to configure in Orca](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
+[How to configure in Orca](https://wiki.zmod.link/Recomendations/#send-files-via-octoklipper-for-printing)
 
 <div align="center">
 
@@ -601,9 +601,9 @@ Use `GET_RETRACTION` to view current settings.
 
 ### After installing ZMOD, my screen is dead and not responding to touches.
 
-- [Install the latest native firmware and ZMOD updates](https://github.com/ghzserg/zmod/wiki/Recomendations_en#install-latest-native-firmware-and-zmod-updates)
+- [Install the latest native firmware and ZMOD updates](https://wiki.zmod.link/Recomendations/#install-latest-native-firmware-and-zmod-updates)
 - Read [known peculiarities](#known-peculiarities) *bison*
-- You might have disabled the screen. Enable it with the [DISPLAY_ON](https://github.com/ghzserg/zmod/wiki/System_en#display_on) macro
+- You might have disabled the screen. Enable it with the [DISPLAY_ON](https://wiki.zmod.link/System/#display_on) macro
 
 <div align="center">
 
@@ -648,7 +648,7 @@ No - all settings are saved
 
 ### Entware in ZMOD: How to Use It
 
-**Warning! There is no Entware in [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)**
+**Warning! There is no Entware in [AD5X](https://wiki.zmod.link/ru/AD5X/)**
 
 1. SSH into the printer (`root`:`root`, port `22`).
 2. Run:
@@ -684,7 +684,7 @@ No - all settings are saved
 
 #### AD5X
 
-[AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)
+[AD5X](https://wiki.zmod.link/ru/AD5X/)
 
 <div align="center">
 
@@ -697,14 +697,14 @@ No - all settings are saved
 ### Help
 ### How to Contact Support
 
-1. [Update ZMOD to the latest version and all plugins](https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod).
+1. [Update ZMOD to the latest version and all plugins](https://wiki.zmod.link/Setup/#updating-the-mod).
 2. Translate the mod into Russian ```LANG LANG=ru``` or English ```LANG LANG=en```
 3. Describe the issue clearly (screenshots, photos, text).
-4. Run [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) to clear logs.
+4. Run [CLEAR_EMMC](https://wiki.zmod.link/System/#clear_emmc) to clear logs.
 5. **Power off the printer.**
 6. Power it back on.
 7. Reproduce the issue.
-8. Run [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_en#tar_config) to save logs.
+8. Run [TAR_CONFIG](https://wiki.zmod.link/Zmod/#tar_config) to save logs.
 9. Submit the issue with `config.tar.gz` and description.
 10. [Open a GitHub issue](https://github.com/ghzserg/zmod/issues).
 
@@ -771,7 +771,7 @@ WeightValue is the value on the load cells in grams. It is displayed in degrees,
 What is this sensor for?
 
  It can be used to measure zoffset via the [g28_tenz](https://github.com/ghzserg/g28_tenz) plugin
-- You can stop printing if the nozzle hits the part or the part is torn off. [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control)
+- You can stop printing if the nozzle hits the part or the part is torn off. [NOZZLE_CONTROL](https://wiki.zmod.link/ru/Global/#nozzle_control)
 - Without resetting it, the table map will be measured incorrectly.
 
 <div align="center">
@@ -816,7 +816,7 @@ If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - t
 
 If all else fails and **Klipper isn't working**:
 - Switch to the native Klipper as described above.
-- [Install the native Factory firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en#how-to-install-native-firmware), which will install the native MCU.
+- [Install the native Factory firmware](https://wiki.zmod.link/Native_FW/#how-to-install-native-firmware), which will install the native MCU.
 
 <div align="center">
 
@@ -851,10 +851,10 @@ Increase this value—some printers work fine with the default `10`, while other
 
 Additionally, filament stoppage in IFS may be caused by:
 
-- Extruder is loaded with spool 1, but spool 2 is being pulled out — use [`SET_EXTRUDER_SLOT`](https://github.com/ghzserg/zmod/wiki/AD5X_en#5-how-to-manually-tell-the-printer-which-spool-is-loaded) to sync the extruder’s current slot.
+- Extruder is loaded with spool 1, but spool 2 is being pulled out — use [`SET_EXTRUDER_SLOT`](https://wiki.zmod.link/AD5X/#5-how-to-manually-tell-the-printer-which-spool-is-loaded) to sync the extruder’s current slot.
 - New filament is being inserted, while old filament remains inside the extruder.
 - The 4-in-1 modules and their tubes have different lengths, requiring adjustment of `nozzle_cleaning_length` in `mod_data/filament.json`. Set it to **70 or higher**.
-  ➜ [More details](https://github.com/ghzserg/zmod/wiki/AD5X_en#basic-parameters-most-frequently-adjusted)
+  ➜ [More details](https://wiki.zmod.link/AD5X/#basic-parameters-most-frequently-adjusted)
 
 The issue may also stem from the **inability to unlock the filament in the IFS channel**.
 
@@ -864,7 +864,7 @@ Mechanical causes include:
 
 Solution: Remove debris, disassemble the mechanism, and reinstall components correctly.
 
-After repairs, test printing and filament lock/unlock behavior using the [IFS commands](https://github.com/ghzserg/zmod/wiki/AD5X_en#10-ifs-commands).
+After repairs, test printing and filament lock/unlock behavior using the [IFS commands](https://wiki.zmod.link/AD5X/#10-ifs-commands).
 
 <div align="center">
 
@@ -889,8 +889,8 @@ This is a feature of the native firmware starting with version:
 - **3.2.4** AD5M/AD5MPro
 
 Solution:
-- [Roll back the native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
-- [Disable the native display](https://github.com/ghzserg/zmod/wiki/System_en#display_off)
+- [Roll back the native firmware](https://wiki.zmod.link/Native_FW/) to version **1.1.7** for AD5X, **3.2.3** for FF5M/FF5MPro
+- [Disable the native display](https://wiki.zmod.link/System/#display_off)
 
 <div align="center">
 
@@ -914,7 +914,7 @@ To see what exactly is the error:
 - Go to the console and read the error text
 - Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and enter the error text or look up the description in the documentation yourself
 
-If you can't fix it, [you need to create a ticket](https://github.com/ghzserg/zmod/wiki/Help_en).
+If you can't fix it, [you need to create a ticket](https://wiki.zmod.link/Help/).
 
 [Native configs](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
 

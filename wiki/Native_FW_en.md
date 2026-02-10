@@ -81,7 +81,7 @@ For those who've lost their minds and moved their "home" (parking lot to the poo
 
 ## E0011 native firmware 
 
-[fix_e0011](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011)
+[fix_e0011](https://wiki.zmod.link/Global/#fix_e0011)
 
 Fix E0011 On
 - [Adventurer5M-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
@@ -93,7 +93,7 @@ Fix E0011 Off
 
 ## E0017 native firmware
 
-[fix_e0017](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017)
+[fix_e0017](https://wiki.zmod.link/Global/#fix_e0017)
 
 - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz)
 - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz)
@@ -110,7 +110,7 @@ Fix E0011 Off
 Backup IFS firmware
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
-- [IFS Firmware Recovery](https://github.com/ghzserg/zmod/wiki/AD5X_en#11-ifs-firmware-recovery)
+- [IFS Firmware Recovery](https://wiki.zmod.link/AD5X/#11-ifs-firmware-recovery)
 
 ## G-code
 

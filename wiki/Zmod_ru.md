@@ -1,6 +1,6 @@
 <h1 align="center">Zmod</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Zmod_en)*
+*[Read in English](https://wiki.zmod.link/Zmod/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode. 
 
@@ -21,28 +21,28 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_off">CAMERA_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_on">CAMERA_ON</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#camera_restart">CAMERA_RESTART</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zflash">ZFLASH</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#camera_off">CAMERA_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#camera_on">CAMERA_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#camera_restart">CAMERA_RESTART</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zflash">ZFLASH</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#tar_config">TAR_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#restore_tar_config">RESTORE_TAR_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#start_zmod">START_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#stop_zmod">STOP_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#tar_config">TAR_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#restore_tar_config">RESTORE_TAR_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#start_zmod">START_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#stop_zmod">STOP_ZMOD</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_off">ZSSH_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_on">ZSSH_ON</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_reload">ZSSH_RELOAD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_restart">ZSSH_RESTART</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zssh_off">ZSSH_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zssh_on">ZSSH_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zssh_reload">ZSSH_RELOAD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zssh_restart">ZSSH_RESTART</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#remove_zmod">REMOVE_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#skip_zmod">SKIP_ZMOD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zrestore">ZRESTORE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink">ZLINK</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#remove_zmod">REMOVE_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#skip_zmod">SKIP_ZMOD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zrestore">ZRESTORE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Zmod/#zlink">ZLINK</a></td>
  </tr>
 </tbody>
 </table>
@@ -73,8 +73,8 @@
 
 *Многие камеры с Ali/Ozon/Wildberries всегда потребляют 18 MiB*
 
-- [Что такое альтернативная камера?](https://github.com/ghzserg/zmod/wiki/FAQ#что-такое-альтернативная-камера)
-- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://github.com/ghzserg/zmod/wiki/FAQ#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
+- [Что такое альтернативная камера?](https://wiki.zmod.link/ru/FAQ/#что-такое-альтернативная-камера)
+- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](https://wiki.zmod.link/ru/FAQ/#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
 
 `Camera Off Waiting...` - эта надпись выводится, если поток камеры еще недоступен. Камера запускается после запуска Klipper - во время вывода информации о глобальных параметрах
 
@@ -326,7 +326,7 @@ chmod +x ff5m.sh
 ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_RUN="./ff5m.sh bot1"
 ```
 
-[Подробнее про работу телеграмм бота](https://github.com/ghzserg/zmod/wiki/Telegram_ru)
+[Подробнее про работу телеграмм бота](https://wiki.zmod.link/ru/Telegram/)
 
 SSH запускается через 3 минуты  после  старта  klipper.
 
@@ -390,9 +390,9 @@ SSH запускается через 3 минуты  после  старта  
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/System/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Filament_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Filament/)
 
 </div>
 
@@ -464,8 +464,8 @@ PPS: Если что-то работает не так, то обновите с
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/System/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#zmod)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Filament_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Filament/)
 
 </div>

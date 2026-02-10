@@ -66,17 +66,17 @@
 **25.11.2025 — ZMOD’s Birthday!**
 
 * [@zmod_help_bot](http://t.me/zmod_help_bot)
-* [zmod.link](https://zmod.link/link/) | [ZLINK](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) — remote printer access via cloud
-* Macro [SCREEN](https://github.com/ghzserg/zmod/wiki/System_ru#screen) — capture a screenshot of the printer’s display
-* Macro [LOAD_ZOFFSET_NATIVE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#load_zoffset_native) — transfer Z-offset settings from the native screen to screenless mode
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Added global parameter [REMOVE_FILAMENT](https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament) — unload filament after print completion
+* [zmod.link](https://zmod.link/link/) | [ZLINK](https://wiki.zmod.link/ru/Zmod/#zlink) — remote printer access via cloud
+* Macro [SCREEN](https://wiki.zmod.link/ru/System/#screen) — capture a screenshot of the printer’s display
+* Macro [LOAD_ZOFFSET_NATIVE](https://wiki.zmod.link/Calibrations/#load_zoffset_native) — transfer Z-offset settings from the native screen to screenless mode
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Added global parameter [REMOVE_FILAMENT](https://wiki.zmod.link/ru/Global/#remove_filament) — unload filament after print completion
 * Added [recommended settings plugin](https://github.com/ghzserg/recommend)
 * Czech language support added
 * MCU version check for Klipper 13 implemented
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Added leveling button
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Fixes for Klipper 13
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Nozzle cleaning improvements
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X): Eliminated IFS grinding noise
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Added leveling button
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Fixes for Klipper 13
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Nozzle cleaning improvements
+* [AD5X](https://wiki.zmod.link/ru/AD5X/): Eliminated IFS grinding noise
 * ```CAMERA_ON VIDEO=video99``` — test all available cameras
 * Update check after print completion
 * When performing bed leveling via Fluidd/Mainsail, load cells are zeroed — but the user must manually clean the nozzle and preheat the bed beforehand
@@ -95,10 +95,10 @@
 * Mainsail: Color Support From @function3d, Fixed 404 Errors After Refreshing
 * Guppy: Color Support. Fixed HA Integration.
 * Added automatic connection of flash drives when working with Guppy
-* Added [WiFi](https://github.com/ghzserg/zmod/wiki/Global_en#wifi) enabling directly without using the native screen
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): Solved the problem with the trash bin and filament cutting in new revisions
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): Color support when restoring print
-* [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): Ability to create [custom filament types and colors](https://github.com/ghzserg/zmod/wiki/AD5X_en#7-add-custom-filament-types) when working without a native screen
+* Added [WiFi](https://wiki.zmod.link/Global/#wifi) enabling directly without using the native screen
+* [AD5X](https://wiki.zmod.link/AD5X/): Solved the problem with the trash bin and filament cutting in new revisions
+* [AD5X](https://wiki.zmod.link/AD5X/): Color support when restoring print
+* [AD5X](https://wiki.zmod.link/AD5X/): Ability to create [custom filament types and colors](https://wiki.zmod.link/AD5X/#7-add-custom-filament-types) when working without a native screen
 * Updated Klipper and Monnraker
 * Added support for ens160.py by @minicx
 * Added Portuguese language
@@ -106,13 +106,13 @@
 * Improved compatibility with the latest versions of the native firmware
 
 ### Version 1.6.1
-- [AD5X ](https://github.com/ghzserg/zmod/wiki/AD5X_en) - Klipper 13 support. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_en#update_mcu)
-- [AD5X ](https://github.com/ghzserg/zmod/wiki/AD5X_en) - Temperature sensor in the head
-- [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en) - Work without a native screen. IFS works fully with the reset quantity setting
+- [AD5X ](https://wiki.zmod.link/AD5X/) - Klipper 13 support. [UPDATE_MCU](https://wiki.zmod.link/System/#update_mcu)
+- [AD5X ](https://wiki.zmod.link/AD5X/) - Temperature sensor in the head
+- [AD5X](https://wiki.zmod.link/AD5X/) - Work without a native screen. IFS works fully with the reset quantity setting
 - Minor fixes
 
 ### Version 1.6.0
-- AD5M - Klipper 13 support. [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
+- AD5M - Klipper 13 support. [UPDATE_MCU](https://wiki.zmod.link/ru/System/#update_mcu)
 - AD5M - Temperature sensor in the head
 - Minor fixes
 
@@ -128,12 +128,12 @@ Thanks for tenz support [@minicx](https://github.com/loss-and-quick/)
 - AD5X - printer table PID installation works
 - AD5X - nozzle cleaning is restored when removing the table card
 - AD5X - the mod operation on firmware 1.0.9, 1.1.0, 1.1.1 has been tested
-- AD5X - a [flash drive installing the screen version 1.0.7, and all other modules version 1.1.1] has been created (https://github.com/ghzserg/zmod/wiki/Native_FW_en)
-- AD5x - a [flash drive for resetting the printer to factory settings] has been created (https://github.com/ghzserg/zmod/wiki/Native_FW_en)
-- AD5X - a [flash drive for activating the mod has been created, after updating the native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en)
+- AD5X - a [flash drive installing the screen version 1.0.7, and all other modules version 1.1.1] has been created (https://wiki.zmod.link/Native_FW/)
+- AD5x - a [flash drive for resetting the printer to factory settings] has been created (https://wiki.zmod.link/Native_FW/)
+- AD5X - a [flash drive for activating the mod has been created, after updating the native firmware](https://wiki.zmod.link/Native_FW/)
 
 ### Version 1.5.3
-* Fixed Klipper bug [#119](https://github.com/ghzserg/zmod/issues/119), which required using [this](https://github.com/ghzserg/zmod/wiki/Recomendations_en#avoid-using-russian-characters-in-filenames)
+* Fixed Klipper bug [#119](https://github.com/ghzserg/zmod/issues/119), which required using [this](https://wiki.zmod.link/Recomendations/#avoid-using-russian-characters-in-filenames)
 * Nozzle control is now enabled when printing from the screen immediately
 * Minor cosmetic fixes
 
@@ -172,15 +172,15 @@ Interface language support:
 - Fixed screen shutdown issue on newer printer revisions.
 
 ### Version 1.4.2
-- Enhanced [nozzle collision detection](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control) with optional pause instead of shutdown. Issue [#23](https://github.com/ghzserg/zmod/issues/23).
+- Enhanced [nozzle collision detection](https://wiki.zmod.link/Global/#nozzle_control) with optional pause instead of shutdown. Issue [#23](https://github.com/ghzserg/zmod/issues/23).
 > [!Note]
 - Nozzle Control does not work on AD5X see here[#75] (https://github.com/ghzserg/zmod/discussions/75#discussion-8196449)
 - Improved system check functionality.
 - Updated Fluidd color scheme.
-- Added global parameter [SAVE_MOONRAKER](https://github.com/ghzserg/zmod/wiki/Macros_en#save_moonraker) for custom macro button layouts.
+- Added global parameter [SAVE_MOONRAKER](https://wiki.zmod.link/Macros/#save_moonraker) for custom macro button layouts.
 - **AD5X**: GuppyScreen support.
-- **AD5X**: New [COLOR](https://github.com/ghzserg/zmod/wiki/Filament_en#color) macro for filament type/color management.
-- Revised pre-print bed testing with [MESH_TEST](https://github.com/ghzserg/zmod/wiki/Macros_en#mesh_test).
+- **AD5X**: New [COLOR](https://wiki.zmod.link/Filament/#color) macro for filament type/color management.
+- Revised pre-print bed testing with [MESH_TEST](https://wiki.zmod.link/Macros/#mesh_test).
 - Fixed:
 - [#13](https://github.com/ghzserg/zmod/issues/13) (Mid-air printing after KAMP).
 - [#14](https://github.com/ghzserg/zmod/issues/14) (Print recovery via stock screen).
@@ -204,16 +204,16 @@ Known features:
 
 ### Version 1.4.0
 - Updated Moonraker, Fluidd, Python.
-- [Power-loss recovery](https://github.com/ghzserg/zmod/wiki/Zmod_en#zrestore).
-- [Belt spectrogram analysis](https://github.com/ghzserg/zmod/wiki/Macros_en#belts_shaper_calibration).
+- [Power-loss recovery](https://wiki.zmod.link/Zmod/#zrestore).
+- [Belt spectrogram analysis](https://wiki.zmod.link/Macros/#belts_shaper_calibration).
 - Bed load detection.
-- [Filament motion sensor](https://github.com/ghzserg/zmod/wiki/Macros_en#motion_sensor) integration.
+- [Filament motion sensor](https://wiki.zmod.link/Macros/#motion_sensor) integration.
 - **GuppyScreen**: Object exclusion, error logging, PID tuning, belt calibration.
-- Layer-triggered macros: [next layer](https://github.com/ghzserg/zmod/wiki/Macros_en#set_pause_next_layer) or [specific layer](https://github.com/ghzserg/zmod/wiki/Macros_en#set_pause_at_layer).
+- Layer-triggered macros: [next layer](https://wiki.zmod.link/Macros/#set_pause_next_layer) or [specific layer](https://wiki.zmod.link/Macros/#set_pause_at_layer).
 - Native screen message logging.
 - Shaper calibration with [SCV adjustment](https://www.klipper3d.org/Config_Reference.html#printer).
-- [MUTE](https://github.com/ghzserg/zmod/wiki/Macros_en#mute) macro for temporary sound disable.
-- [Display timeout](https://github.com/ghzserg/zmod/wiki/System_en#display_off_timeout) setting.
+- [MUTE](https://wiki.zmod.link/Macros/#mute) macro for temporary sound disable.
+- [Display timeout](https://wiki.zmod.link/System/#display_off_timeout) setting.
 - `power_off.sh` script for shutdown tasks.
 - KAMP smart parking.
 - Fixed:
@@ -227,35 +227,35 @@ Known features:
 - **GuppyScreen**: COLDPULL, PID control, firmware retraction, calibration workflows.
 - Nozzle collision detection limited to active prints.
 - Improved headless mode stability.
-- Faster dialog closing with [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros_en#new_save_config).
+- Faster dialog closing with [NEW_SAVE_CONFIG](https://wiki.zmod.link/Macros/#new_save_config).
 
 ### Version 1.3.0
-- [GuppyScreen](https://github.com/ghzserg/zmod/wiki/System_en#display_off) integration.
+- [GuppyScreen](https://wiki.zmod.link/System/#display_off) integration.
 - Experimental Klipper v12 support (disabled by default).
 - Updated SSH tools (`dropbear`).
 - Memory-optimized `mjpg_streamer`.
 - Object exclusion fixes (supports included).
-- [FIX_SCV](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv) for shaper graphs.
-- [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_en#check_system) file permission checks.
-- Removed [SOFT_REMOVE](https://github.com/ghzserg/zmod/wiki/Macros_en#soft_remove).
+- [FIX_SCV](https://wiki.zmod.link/Global/#fix_scv) for shaper graphs.
+- [CHECK_SYSTEM](https://wiki.zmod.link/System/#check_system) file permission checks.
+- Removed [SOFT_REMOVE](https://wiki.zmod.link/Macros/#soft_remove).
 
 ### Version 1.1.2
-- [CHECK_SYSTEM](https://github.com/ghzserg/zmod/wiki/System_en#check_system) for OS integrity checks.
-- [NOZZLE_CONTROL](https://github.com/ghzserg/zmod/wiki/Global_en#nozzle_control) emergency shutdown.
-- [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/Macros_en#update_mcu) firmware updater.
-- Process priority tuning via [NICE](https://github.com/ghzserg/zmod/wiki/Macros_en#nice).
-- Experimental [FIX_E0011](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0011) for homing errors.
+- [CHECK_SYSTEM](https://wiki.zmod.link/System/#check_system) for OS integrity checks.
+- [NOZZLE_CONTROL](https://wiki.zmod.link/Global/#nozzle_control) emergency shutdown.
+- [UPDATE_MCU](https://wiki.zmod.link/Macros/#update_mcu) firmware updater.
+- Process priority tuning via [NICE](https://wiki.zmod.link/Macros/#nice).
+- Experimental [FIX_E0011](https://wiki.zmod.link/Global/#fix_e0011) for homing errors.
 - EMMC optimization.
 
 ### Version 1.1.1
-- Fixed [LOAD_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros_en#load_cell_tare) by Alexander K.
+- Fixed [LOAD_CELL_TARE](https://wiki.zmod.link/Macros/#load_cell_tare) by Alexander K.
 - Removed deprecated parameters.
 - Z-axis parking sequence.
-- [CAMERA_RESTART](https://github.com/ghzserg/zmod/wiki/Macros_en#camera_restart) macro.
+- [CAMERA_RESTART](https://wiki.zmod.link/Macros/#camera_restart) macro.
 - Print cancellation fixes.
 - Igor Polunovskiy's EXCLUDE_OBJECT_DEFINE.
 - Motor persistence during repeated prints.
-- [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros_en#test_emmc) wear reporting.
+- [TEST_EMMC](https://wiki.zmod.link/Macros/#test_emmc) wear reporting.
 
 ### Version 1.1.0
 - Moonraker update.
@@ -263,32 +263,32 @@ Known features:
 - Hidden deprecated macros.
 - Heated bed requirement for load cell reset.
 - New parameters:
-- [ALTER_CELL_TARE](https://github.com/ghzserg/zmod/wiki/Macros_en#alter_cell_tare) for sensor errors.
-- [CELL_WEIGHT](https://github.com/ghzserg/zmod/wiki/Macros_en#cell_weight) calibration threshold.
-- [CHINA_CLOUD](https://github.com/ghzserg/zmod/wiki/Global_en#china_cloud) toggle.
+- [ALTER_CELL_TARE](https://wiki.zmod.link/Macros/#alter_cell_tare) for sensor errors.
+- [CELL_WEIGHT](https://wiki.zmod.link/Macros/#cell_weight) calibration threshold.
+- [CHINA_CLOUD](https://wiki.zmod.link/Global/#china_cloud) toggle.
 - Pro version fan fixes.
 - Timezone synchronization.
 
 ### Version 1.0.5
-- [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Macros_en#auto_reboot) firmware restart option.
+- [AUTO_REBOOT](https://wiki.zmod.link/Macros/#auto_reboot) firmware restart option.
 - Optimized G28 usage.
-- Universal [MD5 checks](https://github.com/ghzserg/zmod/wiki/System_en#check_md5).
-- [MEM](https://github.com/ghzserg/zmod/wiki/Macros_en#mem) memory monitoring.
+- Universal [MD5 checks](https://wiki.zmod.link/System/#check_md5).
+- [MEM](https://wiki.zmod.link/Macros/#mem) memory monitoring.
 - Klipper process prioritization.
-- [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune) temperature handling.
-- [E0017 fix](https://github.com/ghzserg/zmod/wiki/Global_en#fix_e0017).
+- [BED_LEVEL_SCREWS_TUNE](https://wiki.zmod.link/Calibrations/#bed_level_screws_tune) temperature handling.
+- [E0017 fix](https://wiki.zmod.link/Global/#fix_e0017).
 
 ### Version 1.0.4
-- [Firmware retraction](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-is-firmware-retraction).
+- [Firmware retraction](https://wiki.zmod.link/FAQ/#what-is-firmware-retraction).
 - Driver fan auto-activation.
-- [TEST_EMMC](https://github.com/ghzserg/zmod/wiki/Macros_en#test_emmc) speed tests.
-- [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_en#clear_emmc) log cleanup.
+- [TEST_EMMC](https://wiki.zmod.link/Macros/#test_emmc) speed tests.
+- [CLEAR_EMMC](https://wiki.zmod.link/System/#clear_emmc) log cleanup.
 - Telegram bot auto-cleanup.
-- [LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Global_en#clear) fallback.
+- [LINE_PURGE](https://wiki.zmod.link/Global/#clear) fallback.
 
 ### Version 1.0.0
 - Network-based updates.
-- [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) device selection.
+- [CAMERA_ON](https://wiki.zmod.link/Zmod/#camera_on) device selection.
 
 ### Version 0.2.4
 - USB update notifications.
@@ -297,14 +297,14 @@ Known features:
 - Installer auto-reboot.
 
 ### Version 0.2.3
-- [M600](https://github.com/ghzserg/zmod/wiki/Macros_en#m600) filament change.
+- [M600](https://wiki.zmod.link/Macros/#m600) filament change.
 - MD5 validation warnings.
 
 ### Version 0.2.2
-- [FAST_CLOSE_DIALOGS](https://github.com/ghzserg/zmod/wiki/Macros_en#fast_close_dialogs).
-- [LEVELING_PRINT_FILE](https://github.com/ghzserg/zmod/wiki/Macros_en#leveling_print_file) native bed leveling.
-- [COLDPULL](https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull) nozzle cleaning.
-- [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) parameters:
+- [FAST_CLOSE_DIALOGS](https://wiki.zmod.link/Macros/#fast_close_dialogs).
+- [LEVELING_PRINT_FILE](https://wiki.zmod.link/Macros/#leveling_print_file) native bed leveling.
+- [COLDPULL](https://wiki.zmod.link/Filament/#coldpull) nozzle cleaning.
+- [SAVE_ZMOD_DATA](https://wiki.zmod.link/Global/#save_zmod_data) parameters:
 - `PRINT_LEVELING`: Native bed leveling.
 - `USE_KAMP`: Adaptive mesh.
 - `CLOSE_DIALOGS`: Auto-close dialogs.
@@ -312,18 +312,18 @@ Known features:
 
 ### Version 0.2.1.1
 - Async MIDI playback.
-- [STOP_MOTOR](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) post-print.
-- [AUTO_REBOOT](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) timer.
-- [PRECLEAR](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) nozzle purge.
+- [STOP_MOTOR](https://wiki.zmod.link/Global/#save_zmod_data) post-print.
+- [AUTO_REBOOT](https://wiki.zmod.link/Global/#save_zmod_data) timer.
+- [PRECLEAR](https://wiki.zmod.link/Global/#save_zmod_data) nozzle purge.
 
 ### Version 0.2.1
-- [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper) calibration.
+- [ZSHAPER](https://wiki.zmod.link/Calibrations/#zshaper) calibration.
 - Headless mode fixes.
 
 ### Version 0.2.0
 - Fluidd/Mainsail update.
-- [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Macros_en#new_save_config) non-freezing saves.
-- [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data) parameters:
+- [NEW_SAVE_CONFIG](https://wiki.zmod.link/Macros/#new_save_config) non-freezing saves.
+- [SAVE_ZMOD_DATA](https://wiki.zmod.link/Global/#save_zmod_data) parameters:
 - LED brightness.
 - MIDI triggers.
 
@@ -333,31 +333,31 @@ Known features:
 
 ### Version 0.1.7
 - Macro stability fixes.
-- [STOP_ZMOD](https://github.com/ghzserg/zmod/wiki/Macros_en#stop_zmod) service control.
+- [STOP_ZMOD](https://wiki.zmod.link/Macros/#stop_zmod) service control.
 
 ### Version 0.1.6
-- [KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp) adaptive meshing.
+- [KAMP](https://wiki.zmod.link/Calibrations/#kamp) adaptive meshing.
 - PID calibration fixes.
 
 ### Version 0.1.5
-- [ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper) CSV export.
+- [ZSHAPER](https://wiki.zmod.link/Calibrations/#zshaper) CSV export.
 - Temperature-aware bed calibration.
 
 ### Version 0.1.4
 - Camera memory optimization.
-- [CAMERA_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#camera_on) resolution control.
+- [CAMERA_ON](https://wiki.zmod.link/Zmod/#camera_on) resolution control.
 
 ### Version 0.1.3
 - MIDI playback support.
 - User config separation.
 
 ### Version 0.1.1
-- Headless mode ([DISPLAY_OFF](https://github.com/ghzserg/zmod/wiki/System_en#display_off)).
-- [MEM](https://github.com/ghzserg/zmod/wiki/Macros_en#mem) resource monitor.
+- Headless mode ([DISPLAY_OFF](https://wiki.zmod.link/System/#display_off)).
+- [MEM](https://wiki.zmod.link/Macros/#mem) resource monitor.
 
 ### Version 0.0.9-fix
 - Installer fixes.
 
 ### Version 0.0.9
 - Initial pause/resume/cancel support.
-- [REBOOT](https://github.com/ghzserg/zmod/wiki/Macros_en#reboot)/[SHUTDOWN](https://github.com/ghzserg/zmod/wiki/Macros_en#shutdown) macros.
+- [REBOOT](https://wiki.zmod.link/Macros/#reboot)/[SHUTDOWN](https://wiki.zmod.link/Macros/#shutdown) macros.

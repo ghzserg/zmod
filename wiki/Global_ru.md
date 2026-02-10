@@ -1,6 +1,6 @@
 <h1 align="center">Global param</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Global_en)*
+*[Read in English](https://wiki.zmod.link/Global/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode.
 
@@ -21,14 +21,14 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#lang">LANG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data">GET_ZMOD_DATA</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#global">GLOBAL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#lang">LANG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#get_zmod_data">GET_ZMOD_DATA</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#global">GLOBAL</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_zmod_data">SAVE_ZMOD_DATA</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#nozzle_control">NOZZLE_CONTROL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#set_timezone">SET_TIMEZONE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#save_zmod_data">SAVE_ZMOD_DATA</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#nozzle_control">NOZZLE_CONTROL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#set_timezone">SET_TIMEZONE</a></td>
  </tr>
 </tbody>
 </table>
@@ -39,20 +39,20 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#print_leveling">PRINT_LEVELING</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5">FORCE_MD5</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#clear">CLEAR</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#use_kamp">USE_KAMP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#print_leveling">PRINT_LEVELING</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#force_md5">FORCE_MD5</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#clear">CLEAR</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#use_kamp">USE_KAMP</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#midi_start">MIDI_START</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#load_zoffset">LOAD_ZOFFSET</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#mesh_test">MESH_TEST</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#preclear">PRECLEAR</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#midi_start">MIDI_START</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#load_zoffset">LOAD_ZOFFSET</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#mesh_test">MESH_TEST</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#preclear">PRECLEAR</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_skew">DISABLE_SKEW</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#disable_priming">DISABLE_PRIMING</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#disable_skew">DISABLE_SKEW</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#disable_priming">DISABLE_PRIMING</a></td>
  </tr>
 </tbody>
 </table>
@@ -63,10 +63,10 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#midi_end">MIDI_END</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#close_dialogs">CLOSE_DIALOGS</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#stop_motor">STOP_MOTOR</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#auto_reboot">AUTO_REBOOT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#midi_end">MIDI_END</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#close_dialogs">CLOSE_DIALOGS</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#stop_motor">STOP_MOTOR</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#auto_reboot">AUTO_REBOOT</a></td>
  </tr>
 </tbody>
 </table>
@@ -77,27 +77,27 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#motion_sensor">MOTION_SENSOR</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#china_cloud">CHINA_CLOUD</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_moonraker">SAVE_MOONRAKER</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#led">LED</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#motion_sensor">MOTION_SENSOR</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#china_cloud">CHINA_CLOUD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#save_moonraker">SAVE_MOONRAKER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#led">LED</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv">FIX_SCV</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011">FIX_E0011</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017">FIX_E0017</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#midi_on">MIDI_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#fix_scv">FIX_SCV</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#fix_e0011">FIX_E0011</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#fix_e0017">FIX_E0017</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#midi_on">MIDI_ON</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#use_swap">USE_SWAP</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#display_off_timeout">DISPLAY_OFF_TIMEOUT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#new_save_config">NEW_SAVE_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#nice">NICE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#use_swap">USE_SWAP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#display_off_timeout">DISPLAY_OFF_TIMEOUT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#new_save_config">NEW_SAVE_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#nice">NICE</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#pro_poweroff_timeout">PRO_POWEROFF_TIMEOUT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#wifi">WIFI</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#save_filament_sensors">SAVE_FILAMENT_SENSORS</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#pro_poweroff_timeout">PRO_POWEROFF_TIMEOUT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#wifi">WIFI</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#save_filament_sensors">SAVE_FILAMENT_SENSORS</a></td>
   <td align="center"></td>
  </tr>
 </tbody>
@@ -109,10 +109,10 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#silent">SILENT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#autoinsert">AUTOINSERT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#use_trash_on_print">USE_TRASH_ON_PRINT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Global_ru#remove_filament">REMOVE_FILAMENT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#silent">SILENT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#autoinsert">AUTOINSERT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#use_trash_on_print">USE_TRASH_ON_PRINT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Global/#remove_filament">REMOVE_FILAMENT</a></td>
  </tr>
 </tbody>
 </table>
@@ -236,7 +236,7 @@ WEIGHT - вес в граммах (1500)
 
 Второй вариант. Написать в консоли Fluidd нужную команду например: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
 
-[Просмотр сохраненных параметров](https://github.com/ghzserg/zmod/wiki/Global_ru#get_zmod_data)
+[Просмотр сохраненных параметров](https://wiki.zmod.link/ru/Global/#get_zmod_data)
 
 <div align="center">
 
@@ -365,7 +365,7 @@ Igor Polunovskiy
 
 *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или
 [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://wiki.zmod.link/ru/System/#check_md5)
 
 Также можно использовать [бинарные файлы на Go собранные под основные архитектуры](https://github.com/asd2003ru/addmd5/releases/) от @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Не забудьте выполнить ```chmod +x addmd5-darwin-amd64```
@@ -410,7 +410,7 @@ Igor Polunovskiy
 
 Загружать Z-offset из глобальных параметров, сохраненных ранее через SET_GCODE_OFFSET. 1 - да, 0 -нет (1)
 
-[Как работает Z-Offset](https://github.com/ghzserg/zmod/wiki/FAQ#как-работает-z-offset)
+[Как работает Z-Offset](https://wiki.zmod.link/ru/FAQ/#как-работает-z-offset)
 
 Пример: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 
@@ -697,7 +697,7 @@ square_corner_velocity: 9
 - Битый кабель к экструдеру. Решение: замена/поправка кабеля
 - Неконтакт разъема кабеля с платой в голове экструдера. Решение: Замена платы экструдера
 - Загрузка данных из SWAP (SWAP находится на EMMC, которая работает со скорость 10 МБ/с, объем данных в SWAP при построении шейперов доходит до 25 мегабайт). Решение: отключение SWAP если у вас 256 мегабайт оперативной памяти `SAVE_ZMOD_DATA USE_SWAP=0`
-- Сбой прошивки MCU. Решение: перешивка MCU [через сброс настроек](https://github.com/ghzserg/zmod/wiki/Setup#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода). Перешивка MCU из мода [UPDATE_MCU](https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu)
+- Сбой прошивки MCU. Решение: перешивка MCU [через сброс настроек](https://wiki.zmod.link/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода). Перешивка MCU из мода [UPDATE_MCU](https://wiki.zmod.link/ru/System/#update_mcu)
 
 Исправить ошибку E0011, а также `Communication timeout during homing`, при изменении параметра принтер перезагрузится. 0-нет, 1-да (0)
 
@@ -715,7 +715,7 @@ square_corner_velocity: 9
   Включите SWAP, если он выключен ```SAVE_ZMOD_DATA USE_SWAP=1```
 - Если на FF5M/FF5MPro проводите полный тест. А именно, калибровку PID, снятие карты стола и снятие шейперов одновременно.
   
-  Все калибровки лучше проводить [вот по этой инструкции](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
+  Все калибровки лучше проводить [вот по этой инструкции](https://wiki.zmod.link/ru/Setup/#калибровка-принтера-для-новичков)
 
 Ошибка «Communication timeout during homing» в может возникать из-за высокой задержки связи между хост-компьютером и микроконтроллерами. Обычно время в пути должно быть постоянно меньше 10 мс. Высокая задержка даже на короткие периоды может привести к сбоям при настройке.
 
@@ -824,7 +824,7 @@ square_corner_velocity: 9
 
 ##### NEW_SAVE_CONFIG
 
-Использовать альтернативный SAVE_CONFIG(вызывает `SAVE_CONFIG` без зависания родного экрана) [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config) при калибровке PID 0-нет, 1-да (0)
+Использовать альтернативный SAVE_CONFIG(вызывает `SAVE_CONFIG` без зависания родного экрана) [NEW_SAVE_CONFIG](https://wiki.zmod.link/ru/Main/#new_save_config) при калибровке PID 0-нет, 1-да (0)
 
 Пример: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
 
@@ -859,7 +859,7 @@ square_corner_velocity: 9
 
 Пример: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Отключите китайские облака](https://github.com/ghzserg/zmod/wiki/Recomendations#отключите-китайские-облака)
+[Отключите китайские облака](https://wiki.zmod.link/ru/Recomendations/#отключите-китайские-облака)
 
 Даже, если у вас все выключено с экрана. Принтер все равно пытается отправлять фото, видео телеметрию на китайские сервера.
 
@@ -868,8 +868,8 @@ square_corner_velocity: 9
 **Если китайские облака отключены, то принтер не ищет обновления родной прошивки.**
 
 Вместо этого можно использовать:
-- [zmod.link](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zlink) - облако, для управления принтерами через Fluidd/Mainsail.
-- [Телеграм бот](https://github.com/ghzserg/zmod/wiki/Macros).
+- [zmod.link](https://wiki.zmod.link/ru/Zmod/#zlink) - облако, для управления принтерами через Fluidd/Mainsail.
+- [Телеграм бот](https://wiki.zmod.link/ru/Macros/).
 
 Если вы хотите обновить родную прошивку, то нужно разрешить использование китайских облаков, `SAVE_ZMOD_DATA CHINA_CLOUD=1`, перезагрузиться и обновить родную прошивку.
 
@@ -967,9 +967,9 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Calibrations/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global-param)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/System/)
 
 </div>
 
@@ -983,8 +983,8 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Calibrations/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#global-param)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/System_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/System/)
 
 </div>

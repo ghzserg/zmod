@@ -2,14 +2,14 @@
 
 Откройте телеграм бот [@zmod_help_bot](http://t.me/zmod_help_bot) и задайте ему ваш вопрос, он знает всю документацию.
 
-1. [Обновить zMod и все плагины до последней версии](https://github.com/ghzserg/zmod/wiki/Setup#обновление-мода)
+1. [Обновить zMod и все плагины до последней версии](https://wiki.zmod.link/ru/Setup/#обновление-мода)
 2. Перевести мод на русский язык ```LANG LANG=ru```
 3. Четко сформулировать проблему. Скрины, фото, текстовое описание.
-4. Вызвать [CLEAR_EMMC](https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc) для очистки логов
+4. Вызвать [CLEAR_EMMC](https://wiki.zmod.link/ru/System/#clear_emmc) для очистки логов
 5. **Обязательно выключить принтер**
 6. Включить принтер
 7. Сгенерировать проблему
-8. Выполнить [TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Zmod_ru#tar_config) - сохранить лог файлы
+8. Выполнить [TAR_CONFIG](https://wiki.zmod.link/ru/Zmod/#tar_config) - сохранить лог файлы
 9. Выложить одно сообщение с описанием и файлом `config.tar.gz`
 10. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
 
@@ -100,7 +100,7 @@ chroot /usr/data/.mod/.zmod/
 Чтобы я **не гадал, а сразу помог**, сделай всё по чек-листу:
 
 ### 1. **Обновись до актуальной версии**
-> Следуй [официальной инструкции по обновлению](https://github.com/ghzserg/zmod/wiki/Setup#обновление-мода).
+> Следуй [официальной инструкции по обновлению](https://wiki.zmod.link/ru/Setup/#обновление-мода).
 
 ### 2. **Установи русский язык**
 > Выполни в консоли:

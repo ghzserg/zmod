@@ -1,6 +1,6 @@
 <h1 align="center">System</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/System_en)*
+*[Read in English](https://wiki.zmod.link/System/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode. 
 
@@ -21,25 +21,25 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#check_system">CHECK_SYSTEM</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#mem">MEM</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#check_md5">CHECK_MD5</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#web">WEB</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#check_system">CHECK_SYSTEM</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#mem">MEM</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#check_md5">CHECK_MD5</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#web">WEB</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#clear_emmc">CLEAR_EMMC</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#test_emmc">TEST_EMMC</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#display_off">DISPLAY_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#display_on">DISPLAY_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#clear_emmc">CLEAR_EMMC</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#test_emmc">TEST_EMMC</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#display_off">DISPLAY_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#display_on">DISPLAY_ON</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#date_get">DATE_GET</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#date_set">DATE_SET</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#update_mcu">UPDATE_MCU</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#reset_passwd">RESET_PASSWD</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#date_get">DATE_GET</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#date_set">DATE_SET</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#update_mcu">UPDATE_MCU</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#reset_passwd">RESET_PASSWD</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/System_ru#screen">SCREEN</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/System/#screen">SCREEN</a></td>
  </tr>
 </tbody>
 </table>
@@ -75,11 +75,11 @@ GuppyScreen - альтернативная реализация экрана:
 *Не нужно включать этот макрос в  g-code.*
 После перезагрузки экран будет работать ещё 3 минуты, но он не влияет на z-offset т.к. печать идёт, не через него.
 
-Чтобы изменить время активации альтернативного экрана [используйте глобальные параметры](https://github.com/ghzserg/zmod/wiki/Global_ru#display_off_timeout)
+Чтобы изменить время активации альтернативного экрана [используйте глобальные параметры](https://wiki.zmod.link/ru/Global/#display_off_timeout)
 
 Настройте START_PRINT. Установите нужный z-offset через него или через глобальные параметры.
 
-[Прочитайте эту заметку](https://github.com/ghzserg/zmod/wiki/FAQ#чем-отличается-работа-с-экраном-и-без-родного-экрана)
+[Прочитайте эту заметку](https://wiki.zmod.link/ru/FAQ/#чем-отличается-работа-с-экраном-и-без-родного-экрана)
 
 <div align="center">
 
@@ -181,7 +181,7 @@ chmod +x zfs.sh
 
 Учтите, что родной экране перестанет показывать миниатюры.
 
-Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail создавайте [тикет](https://github.com/ghzserg/zmod/wiki/Help)
+Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail создавайте [тикет](https://wiki.zmod.link/ru/Help/)
 
 <div align="center">
 
@@ -208,14 +208,14 @@ chmod +x zfs.sh
 
 Igor Polunovskiy
 
-Рекомендуется использовать [глобальный параметр FORCE_MD5](https://github.com/ghzserg/zmod/wiki/Global_ru#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Рекомендуется использовать [глобальный параметр FORCE_MD5](https://wiki.zmod.link/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 Проверить MD5 сумму.
 - DELETE - удалять битый файл (yes)
 
 *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или
 [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://github.com/ghzserg/zmod/wiki/System_ru#check_md5)
+[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](https://wiki.zmod.link/ru/System/#check_md5)
 
 Также можно использовать [бинарные файлы на Go собранные под основные архитектуры](https://github.com/asd2003ru/addmd5/releases/) от @asd2003ru:
 - `addmd5-darwin-amd64` (MacOS Intel). Не забудьте выполнить ```chmod +x addmd5-darwin-amd64```
@@ -288,9 +288,9 @@ Klipper 13 (по умолчанию отключен).
 
 Пример: `UPDATE_MCU FORCE=13` принудительно загрузить прошивку Klipper 13
 
-Если не понимаете, как [восстановить конфиги и прошивку MCU](https://github.com/ghzserg/zmod/wiki/Native_FW_ru#installing-full-firmware-on-ad5x), не запускайте.
+Если не понимаете, как [восстановить конфиги и прошивку MCU](https://wiki.zmod.link/ru/Native_FW/#installing-full-firmware-on-ad5x), не запускайте.
 
-Если что-то пойдет не так, обратно только через [factory](https://github.com/ghzserg/zmod/wiki/Native_FW_ru).
+Если что-то пойдет не так, обратно только через [factory](https://wiki.zmod.link/ru/Native_FW/).
 
 <div align="center">
 
@@ -332,9 +332,9 @@ Klipper 13 (по умолчанию отключен).
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Global_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Global/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#system)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Zmod/)
 
 </div>
 
@@ -349,8 +349,8 @@ Klipper 13 (по умолчанию отключен).
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Global_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Global/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#system)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Zmod/)
 
 </div>

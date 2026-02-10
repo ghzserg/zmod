@@ -1,6 +1,6 @@
 <h1 align="center">Calibrations</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Calibrations_en)*
+*[Read in English](https://wiki.zmod.link/Calibrations/)*
 
 Макрос - это небольшая программа на языке Klipper/Gcode.
 
@@ -21,19 +21,19 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_bed">PID_TUNE_BED</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#pid_tune_extruder">PID_TUNE_EXTRUDER</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#zshaper">ZSHAPER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#pid_tune_bed">PID_TUNE_BED</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#pid_tune_extruder">PID_TUNE_EXTRUDER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#zshaper">ZSHAPER</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#kamp">KAMP</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#load_cell_tare">LOAD_CELL_TARE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#kamp">KAMP</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#load_cell_tare">LOAD_CELL_TARE</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#belts_shaper_calibration">BELTS_SHAPER_CALIBRATION</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Calibrations_ru#load_zoffset_native">LOAD_ZOFFSET_NATIVE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#belts_shaper_calibration">BELTS_SHAPER_CALIBRATION</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Calibrations/#load_zoffset_native">LOAD_ZOFFSET_NATIVE</a></td>
  </tr>
 </tbody>
 </table>
@@ -47,7 +47,7 @@
 ---
 
 > [!TIP]
-> [Калибровка принтера для новичков](https://github.com/ghzserg/zmod/wiki/Setup#калибровка-принтера-для-новичков)
+> [Калибровка принтера для новичков](https://wiki.zmod.link/ru/Setup/#калибровка-принтера-для-новичков)
 
 ---
 
@@ -84,7 +84,7 @@ Cброс веса тензодатчиков. Вызывается при ка�
 Калибровка PID стола
 - TEMPERATURE - температура стола (80)
 
-После калибровки вызывает `SAVE_CONFIG`, см также [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config)
+После калибровки вызывает `SAVE_CONFIG`, см также [NEW_SAVE_CONFIG](https://wiki.zmod.link/ru/Main/#new_save_config)
 
 Если не хотите использовать автоматическое сохранение, используйте:
 ```
@@ -108,7 +108,7 @@ PID_CALIBRATE HEATER=heater_bed TARGET={temperature}
 
 Калибровать PID надо на ту температуру, на которой печатаете и с тем уровнем обдува, который используете.
 
-После калибровки вызывает `SAVE_CONFIG`, см также [NEW_SAVE_CONFIG](https://github.com/ghzserg/zmod/wiki/Main_ru#new_save_config)
+После калибровки вызывает `SAVE_CONFIG`, см также [NEW_SAVE_CONFIG](https://wiki.zmod.link/ru/Main/#new_save_config)
 
 Если не хотите использовать автоматическое сохранение, используйте:
 ```
@@ -133,7 +133,7 @@ PID_CALIBRATE HEATER=extruder TARGET={temperature}
 
 Csv файлы находятся там же. 
 
-Прочитайте про [fix_scv](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_scv)
+Прочитайте про [fix_scv](https://wiki.zmod.link/ru/Global/#fix_scv)
 
 [Программа для построения графиков](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
 
@@ -172,11 +172,11 @@ SPECTROGRAM - 0 - не строить спектрограмму, 1 - строи
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-Но лучше использовать [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) и [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Global_ru#start_print) PRINT_LEVELING=1 USE_KAMP=1
+Но лучше использовать [START_PRINT](https://wiki.zmod.link/ru/Main/#start_print) и [SAVE_ZMOD_DATA](https://wiki.zmod.link/ru/Global/#start_print) PRINT_LEVELING=1 USE_KAMP=1
 
 Рекомендуется также поставить `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
 
-[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#какие-есть-варианты-снятия-карты-стола)
+[Какие есть варианты снятия карты стола?](https://wiki.zmod.link/ru/FAQ/#какие-есть-варианты-снятия-карты-стола)
 
 <div align="center">
 
@@ -200,15 +200,15 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
 
-Но лучше  использовать [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_ru#start_print) и [SAVE_ZMOD_DATA](https://github.com/ghzserg/zmod/wiki/Goabal_ru#start_print) PRINT_LEVELING=1
+Но лучше  использовать [START_PRINT](https://wiki.zmod.link/ru/Main/#start_print) и [SAVE_ZMOD_DATA](https://wiki.zmod.link/ru/Global/#start_print) PRINT_LEVELING=1
 
-[Какие есть варианты снятия карты стола?](https://github.com/ghzserg/zmod/wiki/FAQ#какие-есть-варианты-снятия-карты-стола)
+[Какие есть варианты снятия карты стола?](https://wiki.zmod.link/ru/FAQ/#какие-есть-варианты-снятия-карты-стола)
 
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Main_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Main/_ru)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Calibrations)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Global_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Global/)
 
 </div>
 
@@ -218,13 +218,13 @@ M104 S[nozzle_temperature_initial_layer]
 
 Перенести настройки z-offset с родного экрана в режим без экрана
 
-[Как работает Z-Offset на вашем принтере](https://github.com/ghzserg/zmod/wiki/Setup#как-работает-z-offset-на-вашем-принтере)
+[Как работает Z-Offset на вашем принтере](https://wiki.zmod.link/ru/Setup/#как-работает-z-offset-на-вашем-принтере)
 
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Main_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Main/_ru)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#Calibrations)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Global_ru)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/ru/Global/)
 
 </div>
 

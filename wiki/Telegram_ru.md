@@ -1,8 +1,8 @@
 <h1 align="center">Telegram Bot</h1>
 
-*[Read in English](https://github.com/ghzserg/zmod/wiki/Telegram_en)*
+*[Read in English](https://wiki.zmod.link/Telegram/)*
 
-| Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_ru) |
+| Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](https://wiki.zmod.link/ru/Telegram/) |
 | :--- | :---: | :---: |
 | **Требует внешний сервер** | – | + |
 | **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link/link/)) | + |
@@ -26,29 +26,29 @@
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5">Описание</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B1%D0%BE%D1%82%D0%B0">Регистрация бота</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5">Описание</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%B1%D0%BE%D1%82%D0%B0">Регистрация бота</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC-%D0%B1%D0%BE%D1%82%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BE%D0%B9-%D0%BD%D0%B0-debian">Установка бота телеграмм одной командой на Debian</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC-%D0%B1%D0%BE%D1%82%D0%B0-%D0%BF%D0%BE-%D1%88%D0%B0%D0%B3%D0%B0%D0%BC">Установка бота телеграмм пошагово</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC-%D0%B1%D0%BE%D1%82%D0%B0-%D0%BE%D0%B4%D0%BD%D0%BE%D0%B9-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%BE%D0%B9-%D0%BD%D0%B0-debian">Установка бота телеграмм одной командой на Debian</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%D0%BC-%D0%B1%D0%BE%D1%82%D0%B0-%D0%BF%D0%BE-%D1%88%D0%B0%D0%B3%D0%B0%D0%BC">Установка бота телеграмм пошагово</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-ssh-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9">Добавление ключей ssh</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-zssh-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5">Запуск ZSSH на принтере</td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-ssh-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9">Добавление ключей ssh</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-zssh-%D0%BD%D0%B0-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5">Запуск ZSSH на принтере</td>
  </tr>
  <tr>
-<td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#TimeZone">Установка Time Zone</td>
-<td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-armbian-%D0%BE%D1%82-noyhay">Для Armbian</td>
+<td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#TimeZone">Установка Time Zone</td>
+<td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B8-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-%D0%B4%D0%BB%D1%8F-armbian-%D0%BE%D1%82-noyhay">Для Armbian</td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#spoolman">Spoolman</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#spoolman">Spoolman</a></td>
   <td align="center"><a href="https://github.com/seligor/web-timelapse">Web Timelaps</a></td>
  </tr>
  <tr>
- <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B1%D0%BE%D1%82%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%
+ <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B1%D0%BE%D1%82%D0%B0-%D1%82%D0%B5%D0%BB%D0%B5%D0%B3%D1%80%D0%B0%D0%BC%
 D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-helm-%D0%B2-kubernetes-%D0%BE%D1%82-aldiserg">Установка бота телеграмм через helm в kubernetes</td>
- <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_ru#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%83-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-ssh">Возможные ошибки</td>
+ <td align="center"><a href="https://wiki.zmod.link/ru/Telegram/#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D1%80%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B0-%D0%BA-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80%D1%83-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-ssh">Возможные ошибки</td>
  </tr>
  </tbody>
 </table>
@@ -72,7 +72,7 @@ D0%BC-%D1%87%D0%B5%D1%80%D0%B5%D0%B7-helm-%D0%B2-kubernetes-%D0%BE%D1%82-aldiser
 - `‎/mod_data/ssh.key` - закрытый ключ. Используется принтером для подключения к серверу.
 
 Сами ключи вам по сути не нужны.
-Вам достаточно вызвать макрос [ZSSH_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_on) передав следующие параметры:
+Вам достаточно вызвать макрос [ZSSH_ON](https://wiki.zmod.link/ru/Zmod/#zssh_on) передав следующие параметры:
 - SSH_SERVER - ip или имя вашего сервера
 - SSH_PORT - порт ssh на сервере - обычно 22
 - SSH_USER - имя  пользователя на ssh сервере
@@ -221,7 +221,7 @@ usermod -a -G docker tbot
 ---
 
 #### Запуск ZSSH на принтере
-После этого запускаете на принтере [ZSSH_ON](https://github.com/ghzserg/zmod/wiki/Zmod_ru#zssh_on) c необходимыми параметрами.
+После этого запускаете на принтере [ZSSH_ON](https://wiki.zmod.link/ru/Zmod/#zssh_on) c необходимыми параметрами.
 
 После  каждой перезагрузки ssh, будет запускаться автоматически через 3 минуты.
 
@@ -380,7 +380,7 @@ git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-Как получить bot_token и chat_id смотри [тут](https://github.com/ghzserg/zmod/wiki/Telegram_ru#регистрация-бота)
+Как получить bot_token и chat_id смотри [тут](https://wiki.zmod.link/ru/Telegram/#регистрация-бота)
 
 Установка:
 
@@ -391,9 +391,9 @@ helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Zmod/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#telegram-bot)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Pro_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Pro/)
 
 </div>
 
@@ -458,8 +458,8 @@ rm -f ssh.pub.txt ssh.key
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_ru)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Zmod/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#telegram-bot)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Pro_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Pro/)
 
 </div>

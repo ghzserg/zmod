@@ -1,6 +1,6 @@
 <h1 align="center">Filament</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Filament_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Filament/)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -22,13 +22,13 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en#coldpull">COLDPULL</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en#color">COLOR (AD5X only)</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en#m600">M600</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Filament/#coldpull">COLDPULL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Filament/#color">COLOR (AD5X only)</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Filament/#m600">M600</a></td>
  <tr>
  </tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en#set_pause_at_layer">SET_PAUSE_AT_LAYER</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Filament_en#set_pause_next_layer">SET_PAUSE_NEXT_LAYER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Filament/#set_pause_at_layer">SET_PAUSE_AT_LAYER</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Filament/#set_pause_next_layer">SET_PAUSE_NEXT_LAYER</a></td>
  </tr>
 </tbody>
 </table>
@@ -111,8 +111,8 @@ Enable/disable pause at a specific layer number:
 
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Zmod/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#filament)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Telegram_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Telegram/)
 
 </div>

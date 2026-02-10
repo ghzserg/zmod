@@ -26,7 +26,7 @@
 0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) if previously installed.
 1. Reset the printer to default settings.
 2. Format a USB drive to FAT/FAT16/FAT32.
-3. Copy the appropriate file from the [Native firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en) to the USB root directory:
+3. Copy the appropriate file from the [Native firmware](https://wiki.zmod.link/Native_FW/) to the USB root directory:
    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
    - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
@@ -49,12 +49,12 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
-1. **[Restore the printer to factory settings](https://github.com/ghzserg/zmod/wiki/Setup_en#restoring-printer-to-factory-settings-required-for-mod-installation).**  [AD5X Warning](https://github.com/ghzserg/zmod/wiki/Setup_en#ad5x-warning)
+1. **[Restore the printer to factory settings](https://wiki.zmod.link/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation).**  [AD5X Warning](https://wiki.zmod.link/Setup/#ad5x-warning)
 2. Format a USB drive to FAT/FAT16/FAT32.
 3. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root directory:
    - For FF5M: Adventurer5M-**zmod**-*.tgz
    - For FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
-   - For [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en): AD5X-**zmod**-*.tgz
+   - For [AD5X](https://wiki.zmod.link/AD5X/): AD5X-**zmod**-*.tgz
 4. Power off the printer.
 5. Insert the USB drive.
 6. Power on the printer.
@@ -71,7 +71,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://github.com/ghzserg/zmod/wiki/R/#ad5x-enable-zmodtgz).
+    If the web interface doesn't open, the stock firmware has disabled the mod. To enable it, copy the file [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) to a USB flash drive and [activate the mod](https://wiki.zmod.link/Native_FW//#ad5x-enable-zmodtgz).
 12. Translate the mod into your language.
 
     <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
@@ -84,7 +84,7 @@
 
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
     
-    This shows parameters used at print start, print end, and global settings. It is recommended to just review the settings — do not change them unless necessary. The description for each parameter can be [found here](https://github.com/ghzserg/zmod/wiki/Global_en).
+    This shows parameters used at print start, print end, and global settings. It is recommended to just review the settings — do not change them unless necessary. The description for each parameter can be [found here](https://wiki.zmod.link/Global/).
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
 
@@ -112,7 +112,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Send Files via "Octo/Klipper" for Printing](https://github.com/ghzserg/zmod/wiki/Recomendations_en#send-files-via-octoklipper-for-printing)
+18. [Send Files via "Octo/Klipper" for Printing](https://wiki.zmod.link/Recomendations/#send-files-via-octoklipper-for-printing)
 
     You **need to switch to the Octo/Klipper protocol**:
     - Protocol: `Octo/Klipper`
@@ -142,11 +142,11 @@
     ```SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}``` 
     
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
-20. [Enable MD5 verification](https://github.com/ghzserg/zmod/wiki/Recomendations_en#enable-md5-checksum-control)
+20. [Enable MD5 verification](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
     <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
-21. [Read the recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
-22. [Read the FAQ](https://github.com/ghzserg/zmod/wiki/FAQ_en)
+21. [Read the recommendations](https://wiki.zmod.link/Recomendations/)
+22. [Read the FAQ](https://wiki.zmod.link/FAQ/)
 
 ### AD5X Warning
 
@@ -154,7 +154,7 @@
 
 After installing the Native Firmware, the print head may not be correctly positioned against the filament receiver (the receiver shutter may not be fully closed, filament may be pushed onto the table, etc.).
 
-[Via the engineering menu on the stock firmware](https://github.com/ghzserg/zmod/wiki/AD5X_en#setting-up-the-basket-on-the-ad5x-stock-firmware)
+[Via the engineering menu on the stock firmware](https://wiki.zmod.link/AD5X/#setting-up-the-basket-on-the-ad5x-stock-firmware)
 
 If you encounter this issue, you need to calibrate the print head position using the following algorithm:
 1. Download the [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) archive and unzip it to the root of a flash drive.
@@ -213,7 +213,7 @@ Calibrate specifically for the conditions you print in:
 
 **How to Perform the Calibration?**
 
--   Use the special command (macro) [PID_TUNE_EXTRUDER](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_extruder)
+-   Use the special command (macro) [PID_TUNE_EXTRUDER](https://wiki.zmod.link/Calibrations/#pid_tune_extruder)
 
 -   You can enter it manually in the console or press a button in the interface if available:
     <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
@@ -260,7 +260,7 @@ The same rule applies here as with the extruder: calibrate for the temperature y
 
 **How to Perform the Calibration?**
 
--   Use the macro [PID_TUNE_BED](https://github.com/ghzserg/zmod/wiki/Calibrations_en#pid_tune_bed)
+-   Use the macro [PID_TUNE_BED](https://wiki.zmod.link/Calibrations/#pid_tune_bed)
 
 -   You can also enter it in the console or call it via a button in the interface (often located next to the extruder calibration button):
 
@@ -296,7 +296,7 @@ Your bed is held by several screws. If they are tightened differently, the bed b
 3.  You adjust the screws according to the prompts.
 4.  The process repeats until the bed is level.
 
-**Configuration Parameters for [BED_LEVEL_SCREWS_TUNE](https://github.com/ghzserg/zmod/wiki/Calibrations_en#bed_level_screws_tune):**
+**Configuration Parameters for [BED_LEVEL_SCREWS_TUNE](https://wiki.zmod.link/Calibrations/#bed_level_screws_tune):**
 
 *   `EXTRUDER_TEMP=130` — extruder temperature. Needed so that the nozzle's thermal expansion doesn't distort the measurements. Set a temperature where the filament doesn't ooze from the nozzle.
 *   `BED_TEMP=80` — bed temperature. The bed also expands when heated, so calibration should be done at the temperature you print at.
@@ -347,7 +347,7 @@ The built-in tools in Fluidd and Mainsail are not suitable for our printers beca
 *   Do not know how to work with the **strain gauge** (which is responsible for precise touch detection).
 *   Do not perform **nozzle cleaning** beforehand to remove plastic ooze that could ruin measurement accuracy.
 
-Our macro [AUTO_FULL_BED_LEVEL](https://github.com/ghzserg/zmod/wiki/Calibrations_en#auto_full_bed_level) accounts for both these features!
+Our macro [AUTO_FULL_BED_LEVEL](https://wiki.zmod.link/Calibrations/#auto_full_bed_level) accounts for both these features!
 
 **Important Settings:**
 The mesh must be built under the same conditions you print in – on a heated bed and hot extruder, as metal expands slightly with heat. A bed mesh taken at 60 degrees is drastically different from one taken at 110 degrees.
@@ -376,7 +376,7 @@ M104 S[nozzle_temperature_initial_layer] ; Set nozzle temperature
 ```
 
 **What happens here:**
-*   [START_PRINT](https://github.com/ghzserg/zmod/wiki/Main_en#start_print) - the main start print macro
+*   [START_PRINT](https://wiki.zmod.link/Main/#start_print) - the main start print macro
 *   The line `START_PRINT... MESH=80` tells the printer: "Start the print and load the bed mesh named `80`".
 *   `[nozzle_temperature_initial_layer]` and `[bed_temperature_initial_layer_single]` are variables from the slicer that will automatically substitute your set temperatures for the first layer.
 *   The main thing is to ensure that the `MESH=` parameter points to the same profile name (in our example, `80`) that you used in `AUTO_FULL_BED_LEVEL`.
@@ -406,7 +406,7 @@ In this case, the bed mesh corresponding to the bed temperature will be loaded.
 ### Adaptive Bed Leveling (KAMP)
 
 **Why is this needed?**
-[KAMP](https://github.com/ghzserg/zmod/wiki/Calibrations_en#kamp) is a smart system that builds a bed mesh not over the entire area, but only in the zone where your models are located! This significantly speeds up print preparation, especially on large printers, while retaining all the benefits of a precise bed mesh.
+[KAMP](https://wiki.zmod.link/Calibrations/#kamp) is a smart system that builds a bed mesh not over the entire area, but only in the zone where your models are located! This significantly speeds up print preparation, especially on large printers, while retaining all the benefits of a precise bed mesh.
 
 **How it Works:**
 1.  Before starting a print, KAMP analyzes the location of all objects on the bed.
@@ -429,7 +429,7 @@ In most cases, there is no need to build a bed mesh before every print. The exce
 
 **1. Enabling Adaptive Calibration (KAMP)**
 
-Activate this option to make the printer use KAMP wherever possible [SAVE_ZMOD_DATA USE_KAMP=1](https://github.com/ghzserg/zmod/wiki/Global_en#use_kamp).
+Activate this option to make the printer use KAMP wherever possible [SAVE_ZMOD_DATA USE_KAMP=1](https://wiki.zmod.link/Global/#use_kamp).
 
 ```gcode
 SAVE_ZMOD_DATA USE_KAMP=1
@@ -444,7 +444,7 @@ Configure Orca:
 
 **2. Enabling Calibration Before Each Print**
 
-If you want the printer to automatically build a bed mesh before starting each job (e.g., when frequently changing plates), activate this function [SAVE_ZMOD_DATA PRINT_LEVELING=1](https://github.com/ghzserg/zmod/wiki/Global_en#print_leveling).
+If you want the printer to automatically build a bed mesh before starting each job (e.g., when frequently changing plates), activate this function [SAVE_ZMOD_DATA PRINT_LEVELING=1](https://wiki.zmod.link/Global/#print_leveling).
 
 ```gcode
 SAVE_ZMOD_DATA PRINT_LEVELING=1
@@ -462,7 +462,7 @@ M104 S[nozzle_temperature_initial_layer] ; Set nozzle temperature
 
 **3. Smart Purge Before Print**
 
-Add this setting to make the printer use the same area for nozzle cleaning where it just took the bed mesh. This saves space and time [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](https://github.com/ghzserg/zmod/wiki/Global_en#clear).
+Add this setting to make the printer use the same area for nozzle cleaning where it just took the bed mesh. This saves space and time [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](https://wiki.zmod.link/Global/#clear).
 
 ```gcode
 SAVE_ZMOD_DATA CLEAR=LINE_PURGE
@@ -489,7 +489,7 @@ Now, before each print, the printer will take a bed mesh only where there are ob
 ### How Z-Offset Works on Your Printer
 
 **What is Z-Offset?**
-Simply put, it is the **precise distance between the nozzle tip and the bed** at the moment the printer considers them to have "touched." The correct Z-Offset ensures that the first layer of plastic adheres perfectly to the bed – not too low (the nozzle will scrape the bed) and not too high (the plastic won't stick). [Learn more](https://github.com/ghzserg/zmod/wiki/FAQ_en#how-does-z-offset-work)
+Simply put, it is the **precise distance between the nozzle tip and the bed** at the moment the printer considers them to have "touched." The correct Z-Offset ensures that the first layer of plastic adheres perfectly to the bed – not too low (the nozzle will scrape the bed) and not too high (the plastic won't stick). [Learn more](https://wiki.zmod.link/FAQ/#how-does-z-offset-work)
 
 **The Most Important Rule:**
 On our printer, **Z-Offset is ONLY relevant DURING printing**. The values you see on the screen or in the interface BEFORE or AFTER printing are for reference only and do not reflect the actual situation.
@@ -527,7 +527,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 **How it Works:**
 
-1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen, you need to activate a special setting once [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](https://github.com/ghzserg/zmod/wiki/Global_en#load_zoffset):
+1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen, you need to activate a special setting once [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](https://wiki.zmod.link/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
@@ -579,7 +579,7 @@ Your printer has already automatically configured the input shapers during the f
 The graph and input shaper calculations in Klipper by default use the value `square_corner_velocity = 5`. But in our printer, this parameter is set to `25`. This discrepancy causes the calculated maximum acceleration values on the graphs to be several times higher than they should be.
 
 **What to Do?**
-1.  **Fix the Calculations:** Activate the fix for correct graph display [SAVE_ZMOD_DATA FIX_SCV=1](https://github.com/ghzserg/zmod/wiki/Global_en#fix_scv).
+1.  **Fix the Calculations:** Activate the fix for correct graph display [SAVE_ZMOD_DATA FIX_SCV=1](https://wiki.zmod.link/Global/#fix_scv).
     ```gcode
     SAVE_ZMOD_DATA FIX_SCV=1
     ```
@@ -597,7 +597,7 @@ Don't forget to restart your printer!
 
 #### How to Use the `ZSHAPER` Macro
 
-[ZSHAPER](https://github.com/ghzserg/zmod/wiki/Calibrations_en#zshaper) - this macro makes the printer vibrate at different frequencies, measures the response, and builds graphs to find the ideal input shaper parameters for the X and Y axes.
+[ZSHAPER](https://wiki.zmod.link/Calibrations/#zshaper) - this macro makes the printer vibrate at different frequencies, measures the response, and builds graphs to find the ideal input shaper parameters for the X and Y axes.
 
 **Specifics for Printers with Low Memory (AD5M, AD5MPro):**
 To avoid overloading the system, **calibrate the axes separately**.
@@ -680,7 +680,7 @@ If the mod displays ("Update ZMOD via USB"), you must update via USB, even if re
 
 **Updating via USB preserves all data.**
 
-**Simplest method:** Use the [ZFLASH](https://github.com/ghzserg/zmod/wiki/Zmod_en#zflash) macro. Insert the USB drive, reboot the printer, and run `ZFLASH`. The macro will:
+**Simplest method:** Use the [ZFLASH](https://wiki.zmod.link/Zmod/#zflash) macro. Insert the USB drive, reboot the printer, and run `ZFLASH`. The macro will:
 - Check for the latest version.
 - Download the latest release for your printer model.
 - Verify checksums.
@@ -725,8 +725,8 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 ## Removing or Temporarily Disabling the Mod
 
-- **[SKIP_ZMOD](https://github.com/ghzserg/zmod/wiki/Zmod_en#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
-- **[REMOVE_ZMOD](https://github.com/ghzserg/zmod/wiki/Zmod_en#remove_zmod)**: Fully uninstalls the mod.
+- **[SKIP_ZMOD](https://wiki.zmod.link/Zmod/#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
+- **[REMOVE_ZMOD](https://wiki.zmod.link/Zmod/#remove_zmod)**: Fully uninstalls the mod.
 
 **Recommended method:** Use the `REMOVE_ZMOD` macro. Use USB removal only if macros are unavailable.
 
@@ -759,7 +759,7 @@ Attention!
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**For [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X), [zMod activation](https://github.com/ghzserg/zmod/wiki/Native_FW_en) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
+**For [AD5X](https://wiki.zmod.link/ru/AD5X/), [zMod activation](https://wiki.zmod.link/Native_FW/) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 
 <div align="center">
 
@@ -790,8 +790,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 [[/images/ff.jpg]]
 
 Try restoring the firmware by installing a full firmware:
-- [FF5M](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ff5m)
-- [AD5X](https://github.com/ghzserg/zmod/wiki/Native_FW_en#installing-full-firmware-on-ad5x)
+- [FF5M](https://wiki.zmod.link/Native_FW/#installing-full-firmware-on-ff5m)
+- [AD5X](https://wiki.zmod.link/Native_FW/#installing-full-firmware-on-ad5x)
 
 **Steps:**
 1. **Unplug the printer.**

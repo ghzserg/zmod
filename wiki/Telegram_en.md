@@ -1,8 +1,8 @@
 <h1 align="center">Telegram Bot</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Telegram_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Telegram/)*
 
-| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](https://github.com/ghzserg/zmod/wiki/Telegram_en) |
+| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](https://wiki.zmod.link/Telegram/) |
 | :--- | :---: | :---: |
 | **Requires external server** | – | + |
 | **Remote printer control** | – (possible via [zmod.link](https://zmod.link/link/)) | + |
@@ -26,27 +26,27 @@ If you only need notifications in Telegram, then [use the Notify plugin](https:/
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#description">Description</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#bot-registration">Bot Registration</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#description">Description</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#bot-registration">Bot Registration</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#one-command-telegram-bot-installation-on-debian">One-Command Telegram Bot Installation on Debian</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#step-by-step-telegram-bot-installation">Step-by-Step Telegram Bot Installation</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#one-command-telegram-bot-installation-on-debian">One-Command Telegram Bot Installation on Debian</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#step-by-step-telegram-bot-installation">Step-by-Step Telegram Bot Installation</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#adding-ssh-keys">Adding SSH Keys</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#starting-zssh-on-the-printer">Starting ZSSH on the Printer</td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#adding-ssh-keys">Adding SSH Keys</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#starting-zssh-on-the-printer">Starting ZSSH on the Printer</td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#TimeZone">TimeZone</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#installation-and-setup-for-armbian-by-noyhay">For ArmBian</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#TimeZone">TimeZone</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#installation-and-setup-for-armbian-by-noyhay">For ArmBian</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#spoolman">Spoolman</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#spoolman">Spoolman</a></td>
   <td align="center"><a href="https://github.com/seligor/web-timelapse">Web Timelaps</a></td>
  </tr>
   <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Telegram_en#telegram-bot-installation-on-kubernetes-via-helm-by-aldiserg">Telegram Bot Installation On Kubernetes Via Helm</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Telegram/#telegram-bot-installation-on-kubernetes-via-helm-by-aldiserg">Telegram Bot Installation On Kubernetes Via Helm</a></td>
  </tr>
  </tbody>
 </table>
@@ -68,7 +68,7 @@ Key locations:
 - `‎/mod_data/ssh.key` — private key. Used by the printer to connect to the server.
 
 You don’t need the keys themselves.
-Simply call the [ZSSH_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_on) macro with the following parameters:
+Simply call the [ZSSH_ON](https://wiki.zmod.link/Zmod/#zssh_on) macro with the following parameters:
 - `SSH_SERVER` — IP or hostname of your server
 - `SSH_PORT` — SSH port on the server (default: 22)
 - `SSH_USER` — SSH server username
@@ -208,7 +208,7 @@ usermod -a -G docker tbot
 
 ---
 #### Starting ZSSH on the Printer
-After setup, run the [ZSSH_ON](https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_on) macro on the printer with the required parameters.
+After setup, run the [ZSSH_ON](https://wiki.zmod.link/Zmod/#zssh_on) macro on the printer with the required parameters.
 
 SSH will automatically restart 3 minutes after each reboot.
 
@@ -368,7 +368,7 @@ Changes:
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-How to get bot_token and chat_id look [here](https://github.com/ghzserg/zmod/wiki/Telegram_en#bot-registration)
+How to get bot_token and chat_id look [here](https://wiki.zmod.link/Telegram/#bot-registration)
 
 Installation:
 
@@ -380,8 +380,8 @@ helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Zmod_en)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/Zmod/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#telegram-bot)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Pro_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Pro/)
 
 </div>

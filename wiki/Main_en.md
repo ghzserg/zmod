@@ -1,6 +1,6 @@
 <h1 align="center">Main</h1>
 
-*[Прочитать на русском языке](https://github.com/ghzserg/zmod/wiki/Main_ru)*
+*[Прочитать на русском языке](https://wiki.zmod.link/ru/Main/_ru)*
 
 A macro is a small program written in Klipper/Gcode language.
 
@@ -21,27 +21,27 @@ It can be called from:
 </tr></thead>
 <tbody>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#start_print">START_PRINT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#end_print">END_PRINT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#close_dialogs">CLOSE_DIALOGS</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#fast_close_dialogs">FAST_CLOSE_DIALOGS</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#start_print">START_PRINT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#end_print">END_PRINT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#close_dialogs">CLOSE_DIALOGS</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#fast_close_dialogs">FAST_CLOSE_DIALOGS</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#led">LED</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#led_off">LED_OFF</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#led_on">LED_ON</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#play_midi">PLAY_MIDI</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#led">LED</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#led_off">LED_OFF</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#led_on">LED_ON</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#play_midi">PLAY_MIDI</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#clear_nozzle">CLEAR_NOZZLE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#new_save_config">NEW_SAVE_CONFIG</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#cancel">CANCEL</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#clear_nozzle">CLEAR_NOZZLE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#new_save_config">NEW_SAVE_CONFIG</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#cancel">CANCEL</a></td>
  </tr>
  <tr>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#pause">PAUSE</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#resume">RESUME</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#reboot">REBOOT</a></td>
-  <td align="center"><a href="https://github.com/ghzserg/zmod/wiki/Main_en#shutdown">SHUTDOWN</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#pause">PAUSE</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#resume">RESUME</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#reboot">REBOOT</a></td>
+  <td align="center"><a href="https://wiki.zmod.link/Main/#shutdown">SHUTDOWN</a></td>
  </tr>
 </tbody>
 </table>
@@ -64,8 +64,8 @@ Parameters:
 - EXTERNAL - For the PRO version when operating without the native screen, 1 - enable external recirculation (0)
 
 **Notes:**
-- Any calibration (e.g., `FORCE_KAMP`/`FORCE_LEVELING`) triggers [CLEAR_NOZZLE](https://github.com/ghzserg/zmod/wiki/Global_en#clear_nozzle).
-- `[ZSSH_RELOAD](https://github.com/ghzserg/zmod/wiki/Zmod_en#zssh_reload)` is called during `START_PRINT` to restore SSH if needed.
+- Any calibration (e.g., `FORCE_KAMP`/`FORCE_LEVELING`) triggers [CLEAR_NOZZLE](https://wiki.zmod.link/Global/#clear_nozzle).
+- `[ZSSH_RELOAD](https://wiki.zmod.link/Zmod/#zssh_reload)` is called during `START_PRINT` to restore SSH if needed.
 
 **Example for Orca with native screen:**
 Replace the start G-code with:
@@ -90,11 +90,11 @@ Add to layer change G-code:
 SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
-[Bed leveling options](https://github.com/ghzserg/zmod/wiki/FAQ_en#what-options-are-available-for-bed-leveling)
+[Bed leveling options](https://wiki.zmod.link/FAQ/#what-options-are-available-for-bed-leveling)
 
 ---
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](https://github.com/ghzserg/zmod/wiki/Global_en#start_print)):
+#### Global flags (set via [`SAVE_ZMOD_DATA`](https://wiki.zmod.link/Global/#start_print)):
 - `PRECLEAR` — pre-nozzle cleaning in `CLEAR_NOZZLE`: `0` = disable, `1` = enable (default: `0`).
 - `CLEAR` — nozzle cleaning method (`LINE_PURGE`).
 - `PRINT_LEVELING` — enable bed leveling for every print: `0` = disable, `1` = enable (default: `0`).
@@ -128,7 +128,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Replaces the default end G-code.
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](https://github.com/ghzserg/zmod/wiki/Global_en#end_print)):
+#### Global flags (set via [`SAVE_ZMOD_DATA`](https://wiki.zmod.link/Global/#end_print)):
 - `AUTO_REBOOT` — auto-reboot after print (same as above).
 - `CLOSE_DIALOGS` — auto-close dialogs (same as above).
 - `STOP_MOTOR` — disable motors after print (same as above).
@@ -223,7 +223,7 @@ Parameters:
 - `EXTRUDER_TEMP` — extruder temperature (default: `230`)
 - `BED_TEMP` — bed temperature (default: `80`)
 
-*`PRECLEAR` (set via `SAVE_ZMOD_DATA PRECLEAR=1`) enables pre-cleaning. [Learn more](https://github.com/ghzserg/zmod/wiki/Global_en#save_zmod_data).*
+*`PRECLEAR` (set via `SAVE_ZMOD_DATA PRECLEAR=1`) enables pre-cleaning. [Learn more](https://wiki.zmod.link/Global/#save_zmod_data).*
 
 <div align="center">
 
@@ -315,7 +315,7 @@ Reboot the printer.
 
 Close dialogs on the native screen (slow method).
 *May cause printer freezes.*
-Controlled by the [`CLOSE_DIALOGS`](https://github.com/ghzserg/zmod/wiki/Global_en#close_dialogs) global parameter.
+Controlled by the [`CLOSE_DIALOGS`](https://wiki.zmod.link/Global/#close_dialogs) global parameter.
 
 <div align="center">
 
@@ -328,7 +328,7 @@ Controlled by the [`CLOSE_DIALOGS`](https://github.com/ghzserg/zmod/wiki/Global_
 
 Close dialogs quickly (recommended).
 *Enable "Local Network Only" in printer settings: **Settings → WiFi icon → Network Mode → Toggle "Local Network Only"**.*
-Controlled by the [`CLOSE_DIALOGS`](https://github.com/ghzserg/zmod/wiki/Global_en#close_dialogs) global parameter.
+Controlled by the [`CLOSE_DIALOGS`](https://wiki.zmod.link/Global/#close_dialogs) global parameter.
 
 <div align="center">
 
@@ -356,9 +356,9 @@ Power off the printer.
 ---
 <div align="center">
 
-[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://github.com/ghzserg/zmod/wiki/Macros)
+[![Back](https://github.com/ghzserg/zmod/wiki/images/Back.svg)](https://wiki.zmod.link/ru/Macros/)
 [![Top](https://github.com/ghzserg/zmod/wiki/images/Top.svg)](#main)
-[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://github.com/ghzserg/zmod/wiki/Calibrations_en)
+[![Forward](https://github.com/ghzserg/zmod/wiki/images/Forward.svg)](https://wiki.zmod.link/Calibrations/)
 
 </div>
 
