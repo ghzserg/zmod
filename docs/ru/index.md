@@ -7,7 +7,7 @@ hide:
 
 <img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
 
-[zMod LINK](https://zmod.link/link/)
+[zMod LINK доступен по этой ссылке ->](https://zmod.link/link/)
 
 ### **ZMOD для FlashForge AD5M/PRO/AD5X: Полный контроль над вашим принтером**
 
