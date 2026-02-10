@@ -39,7 +39,7 @@
 - [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.7-2.2.3-20251217-Factory.tgz)
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 
-# Установка полной прошивки на AD5X
+## Установка полной прошивки на AD5X
 
 Установка занимает много времени до часа.
 
@@ -48,7 +48,7 @@
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
 - После обновления, если вам надо перешить MCU установите [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
-# Установка полной прошивки на FF5M
+## Установка полной прошивки на FF5M
 
 Установка занимает много времени до часа.
 
@@ -58,19 +58,19 @@
 - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 - После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-# AD5X-ENABLE-zmod.tgz
+## AD5X-ENABLE-zmod.tgz
 
 Включение zmod на AD5X после  обновления родной прошивки, позволяет активировать мод без полной его переустановки
 
 [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
 
-# Установка XY
+## Установка XY
 
 Для тех у кого поехала крыша сместился "дом" (парковка к какашкоприемнику). Извлечь содержимое архива в корень флешки, вставить флешку и перезагрузить принтер. Загрузится калибровка. Сначала нажать Reset. Потом выставить кнопками управления на экране правильную позицию головы. Зафиксировать это дело кнопкой Set. Перезагрузить принтер без флешки. Архив от официальной поддержки flashforge.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
-# Root
+## Root
 
 - Логин: root
 - Пароль: root
@@ -79,7 +79,7 @@
 - [Adventurer5MPro-root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-root.tgz)
 - [AD5X-root](https://github.com/ghzserg/FF/releases/download/R/AD5X-root.tgz)
 
-# E0011 на родной прошивке
+## E0011 на родной прошивке
 
 [fix_e0011](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0011)
 
@@ -91,7 +91,7 @@ Fix E0011 Off
 - [Adventurer5M-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
 - [Adventurer5MPro-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
-# E0017 на родной прошивке
+## E0017 на родной прошивке
 
 [fix_e0017](https://github.com/ghzserg/zmod/wiki/Global_ru#fix_e0017)
 
@@ -99,22 +99,22 @@ Fix E0011 Off
 - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz)
 - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz)
 
-# Перевод 5M в 5MPro
+## Перевод 5M в 5MPro
 
 [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
 
-# Перевод 5MPro в 5M
+## Перевод 5MPro в 5M
 
 [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
-# 5X IFS
+## 5X IFS
 Архив IFS прошивки
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
 - [Инструкция по восстановлению прошивки IFS](https://github.com/ghzserg/zmod/wiki/AD5X#11-восстановление-прошивки-ifs)
 
-# 5X G-code
+## 5X G-code
 
 - [3DBenchy_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/3DBenchy_PLA.3mf)
 - [FlashForge-TestModel-01.3mf](https://github.com/ghzserg/FF/releases/download/R/FlashForge-TestModel-01.3mf)
@@ -122,7 +122,7 @@ Fix E0011 Off
 - [Earphone.support_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/Earphone.support_PLA.3mf)
 - [FISH_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/FISH_PLA.3mf)
 
-# MD5
+## MD5
 
 - [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat)
 - [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
