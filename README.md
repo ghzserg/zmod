@@ -2,7 +2,7 @@
 
 <img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
 
-[На русском](https://github.com/ghzserg/zmod/blob/main/README_ru.md)
+[На русском](https://wiki.zmod.link/ru/)
 
 Latest version: **1.6.6** can be installed via USB flash drive or the [ZFLASH](https://wiki.zmod.link/Zmod/#zflash) macro.
 
