@@ -6,7 +6,7 @@
 
 Latest version: **1.6.6** can be installed via USB flash drive or the [ZFLASH](https://wiki.zmod.link/Zmod/#zflash) macro.
 
-[https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
+[https://zmod.link/](https://zmod.link/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 **Macro [LANG](https://wiki.zmod.link/Global/#lang) - change language (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
 

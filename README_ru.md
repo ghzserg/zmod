@@ -4,7 +4,7 @@
 
 Последняя версия: **1.6.6** ставится с флешки или макросом [ZFLASH](https://wiki.zmod.link/ru/Zmod/#zflash).
 
-[https://ghzserg.github.io/](https://ghzserg.github.io/) [@zmod_help_bot](http://t.me/zmod_help_bot)
+[https://zmod.link/](https://zmod.link/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 **Макрос [LANG](https://wiki.zmod.link/ru/Global/#lang) - смена языка (RU/EN/DE/IT/FR/ES/ZH/JA/KO/PT/CS/TR)**
 
