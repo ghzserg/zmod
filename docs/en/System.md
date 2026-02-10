@@ -190,7 +190,7 @@ Checks:
 - Directory permissions.
 - Symbolic links.
 
-**Recovery:** Download intact files from [here](https://github.com/ghzserg/zmod/tree/main/stock).
+**Recovery:** Download intact files from [here](https://github.com/ghzserg/FF/tree/main/stock).
 
 ---
 

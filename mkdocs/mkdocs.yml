@@ -72,6 +72,7 @@ plugins:
 
             Begin: Начало
             Setup: Установка
+            SetupCalibrations: Первоначальная калибровка
             Recommendations: Рекомендации
 
             Configuration: Настройка
@@ -106,6 +107,7 @@ nav:
 
   - Begin:
       - Setup: Setup.md
+      - Setup Calibrations: SetupCalibrations.md
       - Recommendations: Recomendations.md
 
   - Configuration:

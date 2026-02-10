@@ -23,8 +23,8 @@ jobs:
           python-version: "3.11"
       - name: Install MkDocs dependencies
         run: pip install -r mkdocs/requirements.txt
-      - name: Prepare docs files
-        run: python mkdocs/prepare_docs.py
+#      - name: Prepare docs files
+#        run: python mkdocs/prepare_docs.py
       - name: Commit docs changes
         run: |
           if [[ -n "$(git status --porcelain)" ]]; then

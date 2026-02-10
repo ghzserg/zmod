@@ -13,7 +13,7 @@ It can be called from:
 ---
 
 !!! tip
-    [Printer Calibration for Beginners](/Setup/#printer-calibration-for-beginners)
+    [Printer Calibration for Beginners](/SetupCalibrations/#printer-calibration-for-beginners)
 
 ---
 
@@ -135,4 +135,4 @@ M104 S[nozzle_temperature_initial_layer]
 
 Move the z-offset from the native screen to screenless mode
 
-[How Z-Offset Works on Your Printer](/Setup/#how-z-offset-works-on-your-printer)
+[How Z-Offset Works on Your Printer](/SetupCalibrations/#how-z-offset-works-on-your-printer)

@@ -440,7 +440,7 @@ This error may also occur:
 
 - If you are using FF5M/FF5MPro, run a full test. This includes PID calibration, removing the table map, and removing shapers simultaneously.
 
-  It is better to carry out all calibrations [here according to this instructions](/Setup/#printer-calibration-for-beginners)
+  It is better to carry out all calibrations [here according to this instructions](/SetupCalibrations/#printer-calibration-for-beginners)
 
 The `Communication timeout during homing` error may occur due to high communication latency between the host and MCUs. Round-trip time should consistently stay below 10ms. Temporary latency spikes can cause homing failures.
 
@@ -466,7 +466,7 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 
 **Manual fix on stock firmware:**
 
-- Install [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
+- Install [root](https://wiki.zmod.link/Native_FW/#root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/mcu.py`.
 - Locate `TRSYNC_TIMEOUT = 0.025` and change it to `TRSYNC_TIMEOUT = 0.1`.
@@ -500,7 +500,7 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Manual fix on stock firmware:**
 
-- Install [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
+- Install [root](https://wiki.zmod.link/Native_FW/#root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/toolhead.py`.
 - Locate `LOOKAHEAD_FLUSH_TIME = 0.5` and change it to `LOOKAHEAD_FLUSH_TIME = 0.150`.
