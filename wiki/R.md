@@ -1,3 +1,3 @@
 [FF](https://github.com/ghzserg/FF)
-* [Native Firmware](https://github.com/ghzserg/zmod/wiki/Native_FW_en)
-* [Родная прошивка](https://github.com/ghzserg/zmod/wiki/Native_FW_ru)
+* [Native Firmware](https://wiki.zmod.link/Native_FW/)
+* [Родная прошивка](https://wiki.zmod.link/ru/Native_FW/)
