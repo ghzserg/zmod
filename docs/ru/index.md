@@ -5,7 +5,7 @@ hide:
 
 # FF5M / FF5M Pro / AD5X ZMOD
 
-<img width="698" height="291" alt="image" src="https://github.com/user-attachments/assets/849ce93f-7dd9-49ef-8f89-f017ea6e2ace" />
+<img width="698" height="291" alt="logo" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
 [zMod LINK доступен по этой ссылке ->](https://zmod.link/link/)
 
