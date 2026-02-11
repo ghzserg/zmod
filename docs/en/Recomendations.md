@@ -109,7 +109,7 @@ Here are the options for adding:
 
 [Details](/System/#check_md5)
 
-<img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0819ed52-f581-4299-ba21-cf04e34e25f7" />
+<img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
 *hamster*
 
