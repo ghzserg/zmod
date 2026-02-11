@@ -119,11 +119,11 @@ Verify file integrity via MD5 checksum.
 
 **Usage:**
 
-1. Copy `addMD5.bat` (Windows) or `addMD5.sh` (macOS/Linux) from the printer's `mod` folder. Or download [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat), [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
+1. Copy `addMD5.bat` (Windows) or `addMD5.sh` (macOS/Linux) from the printer's `mod/slicer_scripts` folder. Or download [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat), [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
 2. Add the script to your slicer's post-processing settings:
 
     - **OrcaSlicer**: *Process → Other → Post-processing Scripts*
-       - **PrusaSlicer/SuperSlicer**: *Print Settings → Output Options → Post-processing Scripts*
+    - **PrusaSlicer/SuperSlicer**: *Print Settings → Output Options → Post-processing Scripts*
 
 3. Add `CHECK_MD5` or `CHECK_MD5 DELETE=true` to your start G-code.
 
