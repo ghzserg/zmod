@@ -19,49 +19,48 @@ jobs:
       - name: Parse commit message
         id: parse
         run: |
-          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          python - <<'PY'
+          import json
+          import os
 
-          if [[ "$COMMIT_MSG" != *"info_ru:"* && "$COMMIT_MSG" != *"info_en:"* ]]; then
-            echo "has_info=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+          event_path = os.environ.get("GITHUB_EVENT_PATH", "")
+          if not event_path or not os.path.exists(event_path):
+            msg = ""
+          else:
+            with open(event_path, "r", encoding="utf-8") as f:
+              payload = json.load(f)
+            msg = (payload.get("head_commit") or {}).get("message", "")
 
-          RU_PART=""
-          EN_PART=""
+          if "info_ru:" not in msg and "info_en:" not in msg:
+            out = os.environ.get("GITHUB_OUTPUT")
+            with open(out, "a", encoding="utf-8") as f:
+              f.write("has_info=false\n")
+            raise SystemExit(0)
 
-          if [[ "$COMMIT_MSG" == *"info_ru:"* ]]; then
-            RU_PART=$(printf '%s' "$COMMIT_MSG" | awk 'BEGIN{RS=""}
-              {s=$0; r=""; e="";
-               if (match(s,/info_ru:/)) {
-                 r=substr(s,RSTART+RLENGTH)
-                 if (match(r,/info_en:/)) {
-                   r=substr(r,1,RSTART-1)
-                 }
-               }
-               print r }')
-          fi
+          def extract(start, end=None):
+            idx = msg.find(start)
+            if idx == -1:
+              return ""
+            idx += len(start)
+            if end:
+              end_idx = msg.find(end, idx)
+              if end_idx != -1:
+                return msg[idx:end_idx]
+            return msg[idx:]
 
-          if [[ "$COMMIT_MSG" == *"info_en:"* ]]; then
-            EN_PART=$(printf '%s' "$COMMIT_MSG" | awk 'BEGIN{RS=""}
-              {s=$0; e="";
-               if (match(s,/info_en:/)) {
-                 e=substr(s,RSTART+RLENGTH)
-               }
-               print e }')
-          fi
+          ru = extract("info_ru:", "info_en:").strip()
+          en = extract("info_en:", None).strip()
 
-          RU_PART=$(printf '%s' "$RU_PART" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-          EN_PART=$(printf '%s' "$EN_PART" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
-
-          echo "ru_text<<EOF" >> "$GITHUB_OUTPUT"
-          printf '%s\n' "$RU_PART" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
-
-          echo "en_text<<EOF" >> "$GITHUB_OUTPUT"
-          printf '%s\n' "$EN_PART" >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
-
-          echo "has_info=true" >> "$GITHUB_OUTPUT"
+          out = os.environ.get("GITHUB_OUTPUT")
+          with open(out, "a", encoding="utf-8") as f:
+            f.write("ru_text<<EOF\n")
+            f.write(ru + "\n")
+            f.write("EOF\n")
+            f.write("en_text<<EOF\n")
+            f.write(en + "\n")
+            f.write("EOF\n")
+            f.write("has_info=true\n")
+          PY
 
   notify-telegram:
     name: Send Telegram Notification
@@ -79,7 +78,7 @@ jobs:
           EN_TEXT="${{ needs.prepare.outputs.en_text }}"
 
           if [ -n "$RU_TEXT" ] && [ -n "$EN_TEXT" ]; then
-            MESSAGE="$RU_TEXT\n\n$EN_TEXT"
+            MESSAGE=$(printf '%s\n\n%s' "$RU_TEXT" "$EN_TEXT")
           elif [ -n "$RU_TEXT" ]; then
             MESSAGE="$RU_TEXT"
           else
@@ -88,7 +87,9 @@ jobs:
 
           curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
             -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
-            -d text="$MESSAGE"
+            -d parse_mode="Markdown" \
+            -d disable_web_page_preview="true" \
+            --data-urlencode text="$MESSAGE"
 
   notify-discord:
     name: Send Discord Notification
@@ -108,7 +109,7 @@ jobs:
             exit 0
           fi
 
-          JSON_PAYLOAD=$(jq -n --arg content "$EN_TEXT" '{content: $content}')
+          JSON_PAYLOAD=$(jq -n --arg content "$EN_TEXT" '{content: $content, flags: 4}')
 
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
             -H "Content-Type: application/json" \
