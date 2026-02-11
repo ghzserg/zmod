@@ -77,7 +77,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     Вот варианты добавления:
 
     - ```"С:\путь_до_файла\zmod_preprocess-windows-amd64.exe";```
-    - ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
+    - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
     - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
     - ```"/home/user/zmod-preprocess.py";```
     - ```"/home/user/zmod_preprocess-darwin-amd64";```

@@ -253,7 +253,7 @@ Verify file MD5 hash and delete on mismatch: 0 (disable), 1 (enable) (1).
 Here are the options for adding:
 
 - ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
-- ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
+- ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
 - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
 - ```"/home/user/zmod-preprocess.py";```
 - ```"/home/user/zmod_preprocess-darwin-amd64";```
