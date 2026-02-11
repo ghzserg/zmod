@@ -1,0 +1,115 @@
+name: Info Notification
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    name: Prepare Info Message
+    runs-on: ubuntu-latest
+    outputs:
+      ru_text: ${{ steps.parse.outputs.ru_text }}
+      en_text: ${{ steps.parse.outputs.en_text }}
+      has_info: ${{ steps.parse.outputs.has_info }}
+    steps:
+      - name: Parse commit message
+        id: parse
+        run: |
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+
+          if [[ "$COMMIT_MSG" != *"info_ru:"* && "$COMMIT_MSG" != *"info_en:"* ]]; then
+            echo "has_info=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          RU_PART=""
+          EN_PART=""
+
+          if [[ "$COMMIT_MSG" == *"info_ru:"* ]]; then
+            RU_PART=$(printf '%s' "$COMMIT_MSG" | awk 'BEGIN{RS=""}
+              {s=$0; r=""; e="";
+               if (match(s,/info_ru:/)) {
+                 r=substr(s,RSTART+RLENGTH)
+                 if (match(r,/info_en:/)) {
+                   r=substr(r,1,RSTART-1)
+                 }
+               }
+               print r }')
+          fi
+
+          if [[ "$COMMIT_MSG" == *"info_en:"* ]]; then
+            EN_PART=$(printf '%s' "$COMMIT_MSG" | awk 'BEGIN{RS=""}
+              {s=$0; e="";
+               if (match(s,/info_en:/)) {
+                 e=substr(s,RSTART+RLENGTH)
+               }
+               print e }')
+          fi
+
+          RU_PART=$(printf '%s' "$RU_PART" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+          EN_PART=$(printf '%s' "$EN_PART" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+
+          echo "ru_text<<EOF" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$RU_PART" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          echo "en_text<<EOF" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$EN_PART" >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
+
+          echo "has_info=true" >> "$GITHUB_OUTPUT"
+
+  notify-telegram:
+    name: Send Telegram Notification
+    needs: prepare
+    runs-on: ubuntu-latest
+    if: needs.prepare.outputs.has_info == 'true'
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - name: Send Telegram Notification about info
+        if: env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
+        run: |
+          RU_TEXT="${{ needs.prepare.outputs.ru_text }}"
+          EN_TEXT="${{ needs.prepare.outputs.en_text }}"
+
+          if [ -n "$RU_TEXT" ] && [ -n "$EN_TEXT" ]; then
+            MESSAGE="$RU_TEXT\n\n$EN_TEXT"
+          elif [ -n "$RU_TEXT" ]; then
+            MESSAGE="$RU_TEXT"
+          else
+            MESSAGE="$EN_TEXT"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d text="$MESSAGE"
+
+  notify-discord:
+    name: Send Discord Notification
+    needs: prepare
+    runs-on: ubuntu-latest
+    if: needs.prepare.outputs.has_info == 'true'
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+    steps:
+      - name: Send Discord Notification
+        if: env.DISCORD_WEBHOOK != ''
+        run: |
+          EN_TEXT="${{ needs.prepare.outputs.en_text }}"
+
+          if [ -z "$EN_TEXT" ]; then
+            echo "No info_en: found, skipping Discord."
+            exit 0
+          fi
+
+          JSON_PAYLOAD=$(jq -n --arg content "$EN_TEXT" '{content: $content}')
+
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+            -H "Content-Type: application/json" \
+            -d "$JSON_PAYLOAD"
