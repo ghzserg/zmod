@@ -83,7 +83,6 @@ plugins:
             Help: Помощь 
             FAQ: ЧаВо
 
-            
             Macros: Макросы
             List: Список
             Main: Основные
@@ -91,7 +90,7 @@ plugins:
             Start/Stop/Global: Старт/Стоп/Глобальные
             System: Система
             Filament: Филамент
-            
+
             Additional: Дополнительно
             Native firmware: Родная прошивка
             Changelog: История изменений
@@ -101,7 +100,6 @@ plugins:
             Video: Видео
             TelegramBot: Телеграм бот
             zModLink: zMod LINK
-
         - locale: de
           name: Deutsch
           build: true
@@ -109,21 +107,20 @@ plugins:
             language: de
           nav_translations:
             Index: Startseite
-        
+
             Begin: Beginn
             Setup: Einrichtung
             SetupCalibrations: Ersteinrichtung Kalibrierung
             Recommendations: Empfehlungen
-        
+
             Configuration: Konfiguration
             Parameters: Parameter
             Plugins: Plugins
             Telegram: Telegram
-        
+
             Help: Hilfe
             FAQ: FAQ
-        
-        
+
             Macros: Makros
             List: Liste
             Main: Hauptfunktionen
@@ -136,7 +133,7 @@ plugins:
             Native firmware: Native Firmware
             Changelog: Änderungshistorie
             Support: Support
-        
+
             Download: Herunterladen
             Video: Video
             TelegramBot: Telegram-Bot
