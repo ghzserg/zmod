@@ -130,10 +130,9 @@ Fix E0011 Off
 
 ## MD5
 
-- [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat)
-- [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
-- [addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py)
-- [addmd5-darwin-amd64](https://github.com/asd2003ru/addmd5/releases) (MacOS Intel)
-- [addmd5-darwin-arm64](https://github.com/asd2003ru/addmd5/releases) (MacOS Silicon)
-- [addmd5-linux-amd64](https://github.com/asd2003ru/addmd5/releases) (Linux)
-- [addmd5-windows-amd64.exe](https://github.com/asd2003ru/addmd5/releases) (Windows)
+- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Универсальный Python. Не забудьте выполнить ```chmod +x zmod-preprocess.py```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Не забудьте выполнить ```chmod +x zmod-preprocess.sh```
