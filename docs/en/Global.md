@@ -98,6 +98,46 @@ Second option. Write the required command in the Fluidd console, for example: `S
 
 ---
 
+### Print color selection menu parameters ###
+
+**Color selection menu parameters are all for the AD5X only.**
+
+##### ALLOWED_TOOL_COUNT
+
+Number of tools to show in the color selection menu. This refers to the T0, T1, etc commands in the gcode file, not the physical spools in your IFS.
+
+If zMod is able to successfully scan the file for used tools, this will be overridden and the tools used in the file will be shown.
+
+This setting cannot be used when the native screen is enabled.
+
+Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
+
+##### SCAN_FILE_COLORS
+
+Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
+
+Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
+
+##### COLOR_MENU_1_BASED
+
+Determines whether to show 0-based (T0, T1, etc) or 1-based (Color 1, Color 2, etc) labels in the color selection menu. This does not change anything other than how the buttons are labelled and is purely for convenience: 0 (0-based), 1 (1-based)
+
+Example: `SAVE_ZMOD_DATA COLOR_MENU_1_BASED=1`
+
+##### AUTO_ASSIGN_COLORS
+
+Determines whether to attempt automatic mapping of toolchange commands (T0, T1, etc) to physical filament loaded in your IFS when starting a print. Unless you have enabled silent mode, the color selection menu will still appear; this setting only affects the default selections: 0 (disable), 1 (enable)
+
+This setting will also apply to prints started in silent mode. You can configure it to abort the print if certain errors arise with the auto-assignment: 2 (abort if any materials cannot be matched, allow color mismatches), 30 (abort on any issues)
+
+For custom values for error conditions in silent mode, add the following values together to determine the right setting:
+* 2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)
+* 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
+* 8 (At least one color is potentially a poor match)
+* 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
+
 ### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START
@@ -333,6 +373,17 @@ Automatically Load Filament
 Example: `SAVE_ZMOD_DATA AUTOINSERT=0`
 
 ---
+
+##### ALWAYS_FULL_COLOR_CHANGE
+
+AD5X only
+
+Determines whether or not to skip the color change process if the before and after colors are mapped to the same physical spool.
+
+- 0 - skip the process
+- 1 - do not skip the process
+
+Example: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
 ##### USE_TRASH_ON_PRINT
 

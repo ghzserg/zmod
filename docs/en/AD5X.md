@@ -166,6 +166,31 @@ To unload the filament after printing is complete, use the [REMOVE_FILAMENT](/Gl
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
+To set how many tools are shown in the color selection window (if file cannot be scanned for this info), use the [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count) parameter.
+
+```gcode
+SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
+```
+
+To enable scanning gcode files for tool, color and material info, use the [SCAN_FILE_COLORS](/Global/#scan_file_colors) parameter. You can also set this to 2 to check for data prepared by the slicer script, but not attempt to scan entire files.
+
+```gcode
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
+```
+
+To attempt automatic mapping of colors in the gcode file to physical spools, use the [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors) parameter. You must enable file scanning for this to be useful. Using a value of 30 will abort silent mode prints if there is any issue with the auto-assignment.
+
+```gcode
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
+```
+
+When a color change command is encountered, if it indicates a switch to the already-loaded color, usually the change process would be skipped as it is pointless. If for some reason you wish to enable the full color change process, use the [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change) parameter.
+
+```gcode
+SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
+```
+
+
 ---
 
 ## **5. How to Manually Tell the Printer Which Spool Is Loaded**
