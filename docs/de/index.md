@@ -1,6 +1,6 @@
 ---
 hide:
-  - Navigation
+  - navigation
 ---
 
 # FF5M / FF5M Pro / AD5X ZMOD
