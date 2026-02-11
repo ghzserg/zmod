@@ -9,7 +9,7 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 5. Power the printer back on.
 6. Reproduce the issue.
 7. Run [TAR_CONFIG](/Zmod/#tar_config) to collect log files.
-8. Submit **one** post with your description and the generated `config.tar.gz` file.
+8. Submit **one** post with your description and the generated `config-1.6.6-28.tar.gz` file. 1.6.6-28 - current version mod.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
 If `TAR_CONFIG` cannot be executed, connect to the printer via SSH:
