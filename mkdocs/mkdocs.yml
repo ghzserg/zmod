@@ -102,6 +102,46 @@ plugins:
             TelegramBot: Телеграм бот
             zModLink: zMod LINK
 
+        - locale: de
+          name: Deutsch
+          build: true
+          theme:
+            language: de
+          nav_translations:
+            Index: Startseite
+        
+            Begin: Beginn
+            Setup: Einrichtung
+            SetupCalibrations: Ersteinrichtung Kalibrierung
+            Recommendations: Empfehlungen
+        
+            Configuration: Konfiguration
+            Parameters: Parameter
+            Plugins: Plugins
+            Telegram: Telegram
+        
+            Help: Hilfe
+            FAQ: FAQ
+        
+        
+            Macros: Makros
+            List: Liste
+            Main: Hauptfunktionen
+            Calibrations: Kalibrierungen
+            Start/Stop/Global: Start/Stopp/Globale
+            System: System
+            Filament: Filament
+
+            Additional: Zusätzlich
+            Native firmware: Native Firmware
+            Changelog: Änderungshistorie
+            Support: Support
+        
+            Download: Herunterladen
+            Video: Video
+            TelegramBot: Telegram-Bot
+            zModLink: zMod LINK
+
 nav:
   - Index: index.md
 
