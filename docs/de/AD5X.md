@@ -45,7 +45,7 @@ Unterschiede zum AD5M:
 
 ## **2. Wie wird eine Datei in Orca AD5X vorbereitet?
 
-[Dateien zum Drucken über "Octo/Klipper" senden](/de/Empfehlungen/#Dateien-zum-Drucken-octoklipper-senden).
+[Dateien zum Drucken über "Octo/Klipper" senden](/de/Recomendations/#Dateien-zum-Drucken-octoklipper-senden).
 
 **Sie müssen unbenutzte Spulen aus der Liste in Orca entfernen.**
 

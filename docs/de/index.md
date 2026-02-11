@@ -85,7 +85,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 ---
 
-### **Résumé: Für wen ist ZMOD? ###
+### **Résumé: Für wen ist ZMOD?**
 
 | Wenn Sie... | ZMOD wird Ihnen... |
 | :--- | :--- |
@@ -130,14 +130,14 @@ Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 ## Mods installieren/aktualisieren/deinstallieren
 
 [Mods installieren/erweitern/deinstallieren](/de/Setup/)
-  
+ 
 ## Häufig gestellte Fragen
 
 [Muss man lesen](/de/FAQ/)
 
 ## Empfehlungen zur Verbesserung der Druckerstabilität
 
-[Lesen - wenn etwas nicht richtig funktioniert](/de/Empfehlungen/)
+[Lesen - wenn etwas nicht richtig funktioniert](/de/Recomendations/)
 
 ## Plug-ins
 

@@ -154,7 +154,7 @@ Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die D
 
 #### Nach der Installation von ZMOD ist mein Bildschirm tot und reagiert nicht mehr auf Tastendrucke.
 
-- Installieren Sie das letzte Update der nativen Firmware und ZMOD](/de/Empfehlungen/#install-last-update-native-firmware-and-zmod)
+- Installieren Sie das letzte Update der nativen Firmware und ZMOD](/de/Recomendations/#install-last-update-native-firmware-and-zmod)
 - Lesen Sie [Betriebsfunktionen](#known-features)
 - Möglicherweise haben Sie den Bildschirm ausgeschaltet. Schalten Sie ihn mit dem Makro [DISPLAY_ON](/de/System/#display_on) ein.
 
@@ -376,7 +376,7 @@ Deshalb habe ich die Namen der Tiere *opossum* in den Text gestreut und werde si
 Wenn Sie hierher verwiesen wurden. Lesen Sie die Dokumentation und nennen Sie das Tier, das auf Ihrer Frage steht, und Sie werden auf jeden Fall Hilfe bekommen:
 
 - [Häufig gestellte Fragen](/de/FAQ/)
-- [Tipps zur Verbesserung der Druckerstabilität](/de/Empfehlungen/)
+- [Tipps zur Verbesserung der Druckerstabilität](/de/Recomendations/)
 - [Mod installieren/verbessern/deinstallieren](/ru/Setup/)
 - [Makro-Liste](/ru/Makros/)
 - Speichereinstellungen](#storage-settings)
@@ -568,7 +568,7 @@ Welche Ports verwendet ZMOD?
 
 Um auf den Drucker zuzugreifen, geben Sie einfach die Drucker-IP ein, **ohne die Portnummer anzugeben**. *Hase
 
-[Wie man in Orca konfiguriert](/de/Empfehlungen/#send-files-to-print-octoklipper)
+[Wie man in Orca konfiguriert](/de/Recomendations/#send-files-to-print-octoklipper)
 
 #### Ich habe das Webinterface umgestellt und jetzt funktioniert nichts mehr.
 

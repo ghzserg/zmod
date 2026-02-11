@@ -640,7 +640,7 @@ Chinesische Wolken einschalten 0 - nein, 1 - ja (1)
 
 Beispiel: `SAVE_ZMOD_DATA CHINA_CLOUD=0`.
 
-[Chinesische Wolken deaktivieren](/de/Empfehlungen/#disable-china-clouds)
+[Chinesische Wolken deaktivieren](/de/Recomendations/#disable-china-clouds)
 
 Auch wenn Sie alles auf dem Bildschirm ausgeschaltet haben. Der Drucker versucht immer noch, Foto- und Videotelemetrie an chinesische Server zu senden.
 

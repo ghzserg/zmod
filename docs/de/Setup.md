@@ -92,7 +92,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Orca anpassen](/de/Empfehlungen/#send-files-to-print-octoklipper)
+18. [Orca anpassen](/de/Recomendations/#send-files-to-print-octoklipper)
     Der gesamte Startcode muss durch diesen ersetzt werden:
 
     ```
@@ -125,11 +125,11 @@
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
-19. [MD5-Kontrolle aktivieren](/de/Empfehlungen/#aktivieren-md5-kontrolle-md5)
+19. [MD5-Kontrolle aktivieren](/de/Recomendations/#aktivieren-md5-kontrolle-md5)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-20. [Lesen Sie die Empfehlungen](/de/Empfehlungen/)
+20. [Lesen Sie die Empfehlungen](/de/Recomendations/)
 21. [FAQ lesen](/de/FAQ/)
 
 ### Achtung AD5X
