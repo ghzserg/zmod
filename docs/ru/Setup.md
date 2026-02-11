@@ -127,7 +127,7 @@
 
 19. [Включите контроль MD5](/ru/Recomendations/#включите--контроль-md5)
 
-    <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0819ed52-f581-4299-ba21-cf04e34e25f7" />
+    <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
 20. [Прочитайте рекомендации](/ru/Recomendations/)
 21. [Прочитайте FAQ](/ru/FAQ/)
