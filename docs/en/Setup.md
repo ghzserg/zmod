@@ -129,7 +129,7 @@
 
 20. [Enable MD5 verification](/Recomendations/#enable-md5-checksum-control)
 
-    <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
+    <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0819ed52-f581-4299-ba21-cf04e34e25f7" />
 
 21. [Read the recommendations](/Recomendations/)
 22. [Read the FAQ](/FAQ/)
