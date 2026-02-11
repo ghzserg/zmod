@@ -35,7 +35,7 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 
 **Deaktivieren Sie den Bildschirm nur, wenn Sie genau verstehen, wie die Tabellenabbildung, der z-Offset und die Makros START_PRINT und END_PRINT funktionieren**
 
-**Dieses Makro muss nicht in den g-code aufgenommen werden.
+**Dieses Makro muss nicht in den g-code aufgenommen werden.**
 Nach dem Neustart funktioniert der Bildschirm noch 3 Minuten lang, aber das hat keinen Einfluss auf den z-Offset, da er nicht durch ihn hindurch druckt.
 
 Um die Aktivierungszeit des alternativen Bildschirms zu ändern [globale Parameter verwenden](/de/Global/#display_off_timeout)

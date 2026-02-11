@@ -47,7 +47,7 @@ Unterschiede zum AD5M:
 
 [Dateien zum Drucken über "Octo/Klipper" senden](/de/Empfehlungen/#Dateien-zum-Drucken-octoklipper-senden).
 
-**Sie müssen unbenutzte Spulen aus der Liste in Orca entfernen.
+**Sie müssen unbenutzte Spulen aus der Liste in Orca entfernen.**
 
 **Beispiel:**
 Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die Farben der Spulen Nr. 1 und Nr. 3 benötigt.
@@ -70,7 +70,7 @@ Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die F
 * `Extruder: 1 (PETG/Orange)` - Dies bedeutet, dass der Drucker jetzt mit orangefarbenem PETG-Kunststoff von Spule Nummer 1 gefüllt ist.
 * `IFS: True` - Das automatische Filamentzufuhrsystem funktioniert.
 
-**Wählen Sie nun die Spule aus, mit der Sie arbeiten möchten (z. B. Spule 2).
+**Wählen Sie nun die Spule aus, mit der Sie arbeiten möchten (z. B. Spule 2).**
 
 <img width="568" height="455" alt="image" src="https://github.com/user-attachments/assets/f7ea3ed0-28a5-48d5-99db-eade0a199e99" />
 
@@ -264,7 +264,7 @@ Damit diese Einstellungen funktionieren, müssen Sie den **eigenen Bildschirm de
 
 4.  **`nozzle_cleaning_length`** - Die Länge (in mm), die das Filament beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr in Gebrauch ist. **Voreinstellung: 60 mm.
 
-    ** Wenn Sie ein neueres 4-in-1-Modul haben, setzen Sie den Wert auf 70 oder höher.
+    ** Wenn Sie ein neueres 4-in-1-Modul haben, setzen Sie den Wert auf 70 oder höher.**
 
 ---
 

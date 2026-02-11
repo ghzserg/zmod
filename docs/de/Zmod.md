@@ -59,7 +59,7 @@ RAM-Verbrauch der Standard-Kamera:
 | `STREAMER` | Kameraprogramm | auto |
 | `FORMAT` | Bildformat (nur ustreamer) | MJPEG | MJPEG |
 
-**Was ist ein Streamer?
+**Was ist ein Streamer?**
 
 Ein Streamer ist ein Programm, das ein Bild von einer Kamera aufnimmt und es in einem Browser anzeigt.
 
@@ -88,7 +88,7 @@ Starten der Kamera video0 über ustreamer mit Einstellungen:
 CAMERA_ON VIDEO=video0 STREAMER=ustreamer FORMAT=YUYV WIDTH=640 HEIGHT=480
 ```
 
-**Wo kann man das Bild sehen?
+**Wo kann man das Bild sehen?**
 
 In einem Browser öffnen: `http://ip_адрес_принтера:8080`.
 

@@ -99,7 +99,7 @@ Zweite Möglichkeit. Schreiben Sie in die Fluidd-Konsole den gewünschten Befehl
 
 #### Menüparameter für die Farbauswahl drucken ###
 
-**Alle Optionen des Farbauswahlmenüs gelten nur für das AD5X.
+**Alle Optionen des Farbauswahlmenüs gelten nur für das AD5X.**
 
 ##### ERLAUBTE_WERKZEUG_ANZAHL
 
@@ -646,7 +646,7 @@ Auch wenn Sie alles auf dem Bildschirm ausgeschaltet haben. Der Drucker versucht
 
 Wenn Sie diesen Parameter auf 0 setzen, werden solche nützlichen Funktionen für den Hersteller teilweise deaktiviert.
 
-**Wenn chinesische Wolken deaktiviert sind, sucht der Drucker nicht nach nativen Firmware-Updates.
+**Wenn chinesische Wolken deaktiviert sind, sucht der Drucker nicht nach nativen Firmware-Updates.**
 
 Stattdessen können Sie verwenden:
 

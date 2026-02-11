@@ -19,16 +19,16 @@ Aber diese Einstellungen sind ziemlich allgemein, nicht viele Leute drucken bei 
 
 ### Extruder PID-Einstellung
 
-**Warum ist dies notwendig?
+**Warum ist dies notwendig?**
 Stellen Sie sich einen Extruder wie einen Backofen vor. Wenn die Temperatur darin ständig "springt", wird das Gericht (Ihr Teil) möglicherweise nicht gleichmäßig gebacken. Durch die PID-Kalibrierung "lernt" Ihr Drucker, die richtige Temperatur ohne Sprünge zu halten. Dies ist entscheidend für die Qualität des Drucks.
 
-**Ein wichtiger Punkt, bevor Sie beginnen!
+**Ein wichtiger Punkt, bevor Sie beginnen!**
 Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 
 * **Temperatur:** Die Temperatur, die Sie am häufigsten für Ihren Kunststoff verwenden (z.B. 210°C für PLA oder 255°C für PETG).
 * **Kühlung:** Der Kühler sollte mit der gleichen Leistung wie beim normalen Druck arbeiten.
 
-**Wie wird die Kalibrierung durchgeführt?
+**Wie wird die Kalibrierung durchgeführt?**
 
 - Verwenden Sie den speziellen Befehl (Makro) [PID_TUNE_EXTRUDER](/de/Kalibrierungen/#pid_tune_extruder)
 
@@ -45,14 +45,14 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
         * ``COOLER=80`` - die Kühlung erfolgt mit 80% Leistung.
 
 - **Wenn Sie fertig sind:**
-    **Der Drucker speichert die neuen Einstellungen selbständig.
+    **Der Drucker speichert die neuen Einstellungen selbständig.**
         * Starten Sie den Drucker neu, um die Daten im System zu aktualisieren und ein Einfrieren zu vermeiden.
 
 ---
 
 ### Tabelle PID-Einstellung
 
-**Warum brauche ich das?
+**Warum brauche ich das?**
 Der Tisch Ihres Druckers muss, wie der Extruder, die Temperatur genau halten. Wenn er schwankt, kann es zu Problemen mit dem Anhaften der ersten Schicht oder sogar zum Verziehen (Ablösen) des Teils an den Kanten kommen. Durch die PID-Kalibrierung Ihres Tisches lernen Sie, dass er schnell und konstant die richtige Temperatur erreicht, ohne zu überhitzen.
 
 Empfehlung für AD5X
@@ -70,7 +70,7 @@ Sie können auch das Empfehlungs-Plugin aktivieren, das diese Datei selbst korri
 **Ein wichtiger Punkt, bevor Sie beginnen!**
 Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatur, die Sie beim Drucken am häufigsten verwenden werden (z.B. 60°C für PLA oder 110°C für ABS).
 
-**Wie kalibriert man?
+**Wie kalibriert man?**
 
 - Verwenden Sie das Makro [PID_TUNE_BED](/de/Kalibrierungen/#pid_tune_bed)
 
@@ -94,10 +94,10 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatu
 
 ### Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)
 
-**Warum dies tun?
+**Warum dies tun?**
 Ihr Tisch wird von mehreren Schrauben zusammengehalten. Wenn diese nicht gleichmäßig verschraubt sind, wird der Tisch falsch ausgerichtet und der Abstand zwischen dem Tisch und der Düse wird ungleichmäßig. Dies führt dazu, dass der Kunststoff schlecht haftet und die Düse das Modell trifft. Diese Kalibrierung hilft dabei, den Tisch perfekt auszurichten, indem die 4 Schrauben, die ihn festhalten, eingestellt werden.
 
-**Wie funktioniert sie?
+**Wie funktioniert sie?**
 
 1.  Der Drucker bringt die Düse nacheinander in die Positionen über jeder Schraube.
 2. misst den Abstand zum Tisch und zeigt auf dem Bildschirm an, welche Schraube in welche Richtung zu drehen ist.
@@ -131,7 +131,7 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 
 - **Abschluss des Auftrags:**
     **Wenn Sie den Kalibrierungsmodus beenden und verlassen, setzt der Drucker die Temperatur **NICHT automatisch zurück**.
-        **Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!
+        **Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!**
         * **Die Tischkarte und der Z-Offset werden falsch**. Führen Sie eine Füllstandskalibrierung über den **eigenen Bildschirm** durch.
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
@@ -140,10 +140,10 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 
 ### Genaue Tabellenkarte erstellen (AUTO_FULL_BED_LEVEL)
 
-**Warum ist dies notwendig?
+**Warum ist dies notwendig?**
 Selbst ein perfekt nivellierter Tisch kann kleine Vertiefungen oder Unebenheiten aufweisen. Eine Tischkarte (oder "Netzkalibrierung") ist wie eine "Höhenkarte" Ihres Tisches. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf der gesamten Tischfläche einwandfrei haftet.
 
-**Warum dieser Befehl?
+**Warum dieser Befehl?**
 Die eingebauten Werkzeuge Fluidd und Mainsail sind für unsere Drucker nicht geeignet, weil sie:
 
 * Sie können nicht mit dem **Berührungssensor** arbeiten (der bei uns für die genaue Berührungserkennung zuständig ist).
@@ -206,10 +206,10 @@ In diesem Fall wird die Tabellenkarte geladen, die der Temperatur der Tabelle en
 
 ### Adaptive Tabellenkalibrierung (KAMP)
 
-**Warum wird es benötigt?
+**Warum wird es benötigt?**
 [KAMP (/de/Calibrations/#kamp) ist ein cleveres System, das eine Karte der Tischunregelmäßigkeiten nicht über die gesamte Fläche erstellt, sondern nur in dem Bereich, in dem sich Ihre Modelle befinden werden! Dadurch wird die Druckvorbereitung erheblich beschleunigt, insbesondere bei großen Druckern, wobei alle Vorteile einer genauen Tischkarte erhalten bleiben.
 
-**Wie funktioniert es?
+**Wie funktioniert es?**
 
 1.  Vor Druckbeginn analysiert KAMP die Lage aller Objekte auf dem Tisch.
 2.  Anstatt ein komplettes Raster zu erstellen, misst er die Höhe des Tisches nur im gewünschten Bereich.
@@ -227,7 +227,7 @@ Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verh�
 
 #### KAMP einrichten
 
-**Wann sollte man KAMP verwenden?
+**Wann sollte man KAMP verwenden?**
 In den meisten Fällen ist es nicht notwendig, vor jedem Druck eine Tischkarte zu erstellen. Die Ausnahme ist, wenn Sie **Wechselplatten mit unterschiedlichen Dicken** (z.B. PEI-Platte und Glas) verwenden, da diese unterschiedliche Höhen haben können.
 
 **1. Aktivieren der adaptiven Kalibrierung (KAMP)**
@@ -285,7 +285,7 @@ Jetzt wird der Drucker vor jedem Druck die Tabelle map nehmen, nur wenn es Objek
 
 ### Wie funktioniert Z-Offset auf Ihrem Drucker?
 
-**Was ist Z-Offset?
+**Was ist Z-Offset?**
 Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düsenspitze und dem Tisch** in dem Moment, in dem der Drucker denkt, dass sie sich "berühren". Ein korrekter Z-Offset gewährleistet, dass die erste Kunststoffschicht perfekt auf dem Tisch haftet - nicht zu niedrig (die Düse berührt den Tisch) und nicht zu hoch (der Kunststoff haftet nicht). [Mehr lesen](/de/FAQ/#wie-z-offset-arbeitet)
 
 **Wichtigste Regel:**
@@ -298,7 +298,7 @@ Bei unserem Drucker ist der **Z-Offset NUR während des Drucks** relevant. Die W
 
 Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Offsets. Er steuert automatisch den Offset und seine Einstellungen werden sicher gespeichert.
 
-**Damit der Drucker den Z-Offset automatisch einstellt, müssen Sie die Tabellenabbildung über den systemeigenen Bildschirm ausführen.
+**Damit der Drucker den Z-Offset automatisch einstellt, müssen Sie die Tabellenabbildung über den systemeigenen Bildschirm ausführen.**
 
 <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7e5f1ba4-832e-493b-94be-14aadf67ad4e" />
 
@@ -361,17 +361,17 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertra
 
 ### Input Shaper Kalibrierung
 
-**Was sind Shaper und warum werden sie benötigt?
+**Was sind Shaper und warum werden sie benötigt?**
 Wenn sich der Drucker schnell bewegt, kann er wie eine Maschine mit hoher Geschwindigkeit vibrieren. Diese Vibrationen werden auf Ihrem Modell als "Wellen" oder "Geister" an den Wänden abgebildet. Shaper sind clevere Algorithmen, die diese Vibrationen "vorhersagen" und unterdrücken, so dass Sie schneller drucken können, ohne an Qualität zu verlieren.
 
 Ihr Drucker hat bei der ersten Kalibrierung bereits automatisch Shaper eingestellt, und das reicht für die meisten Aufgaben aus. Wenn Sie jedoch die Qualität maximieren oder die Funktionsweise Ihres Druckers besser verstehen möchten, können Sie sich die Diagramme ansehen und manuelle Einstellungen vornehmen.
 
 #### Wichtig: Der Parameter `FIX_SCV`
 
-**Wo liegt das Problem?
+**Wo liegt das Problem?**
 Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_corner_velocity = 5". In unserem Drucker ist der Wert dieses Parameters jedoch mit "25" angegeben. Diese Diskrepanz führt dazu, dass die berechneten Werte der maximalen Beschleunigung auf den Diagrammen um ein Vielfaches überschätzt werden.
 
-**Was ist zu tun?
+**Was ist zu tun?**
 
 1.  **Korrektur der Berechnungen:** Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen [SAVE_ZMOD_DATA FIX_SCV=1](/de/Global/#fix_scv).
     ``gcode
@@ -422,7 +422,7 @@ Um eine Überlastung des Systems zu vermeiden, **müssen die Achsen einzeln kali
 
 #### Wie man die Ergebnisse interpretiert und eine Entscheidung trifft
 
-**Wo kann man die Graphen sehen?
+**Wo kann man die Graphen sehen?**
 Nach dem Ausführen von `ZSHAPER` erscheinen die Graphen und CSV-Dateien in der Registerkarte **"Konfiguration" -> mod_data** in Ihrem Webinterface (Fluidd/Mainsail).
 
 <img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" />
@@ -447,7 +447,7 @@ shaper_type_y = mzv ; Ausgewählter Shaper-Typ für die Y-Achse
 shaper_freq_y = 54.2 ; Resonanzfrequenz für die Y-Achse
 ```
 
-**Und vergessen Sie nicht die Beschleunigung!
+**Und vergessen Sie nicht die Beschleunigung!**
 Da der gewählte Shaper `mzv` eine Beschleunigung von nicht mehr als 8700 mm/s² erlaubt, sollte dieser Wert in die Datei `mod_data/user.cfg` geschrieben werden:
 
 `ini

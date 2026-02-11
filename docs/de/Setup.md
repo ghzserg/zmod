@@ -155,7 +155,7 @@ Die Kalibrierungsschnittstelle wird auf dem Bildschirm des Druckers angezeigt. S
 
 Wenn der Mod sagt `Update zMOD vom Flash-Laufwerk`, müssen Sie zMod vom Flash-Laufwerk aktualisieren, auch wenn Sie es kürzlich aktualisiert haben.
 
-**Wenn Sie von einem USB-Stick aktualisieren, werden alle Daten gespeichert.
+**Wenn Sie von einem USB-Stick aktualisieren, werden alle Daten gespeichert.**
 
 **Der einfachste Weg, zMod von einem USB-Stick zu aktualisieren, ist die Verwendung des Makros [ZFLASH](/de/Zmod/#zflash)**.
 
