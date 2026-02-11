@@ -168,11 +168,15 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 To set how many tools are shown in the color selection window (if file cannot be scanned for this info), use the [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count) parameter.
 
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 To enable scanning gcode files for tool, color and material info, use the [SCAN_FILE_COLORS](/Global/#scan_file_colors) parameter. You can also set this to 2 to check for data prepared by the slicer script, but not attempt to scan entire files.
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -186,6 +190,8 @@ You can create custom values for when to abort in silent mode by adding together
 * 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

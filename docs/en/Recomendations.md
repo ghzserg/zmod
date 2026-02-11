@@ -87,6 +87,7 @@ Add [CHECK_MD5](/System/#check_md5) to your workflow.
 It is recommended to use the [global parameter FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 1. Select and download the file for your architecture and operating system:
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```

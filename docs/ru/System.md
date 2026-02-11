@@ -133,6 +133,7 @@ Igor Polunovskiy
 - DELETE - удалять битый файл (yes)
 
 1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```

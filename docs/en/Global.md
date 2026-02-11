@@ -110,11 +110,15 @@ If zMod is able to successfully scan the file for used tools, this will be overr
 
 This setting cannot be used when the native screen is enabled.
 
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+
 Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
 Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -136,6 +140,8 @@ For custom values for error conditions in silent mode, add the following values 
 * 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -234,6 +240,7 @@ Igor Polunovskiy
 Verify file MD5 hash and delete on mismatch: 0 (disable), 1 (enable) (1).
 
 1. Select and download the file for your architecture and operating system:
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```

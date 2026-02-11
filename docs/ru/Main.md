@@ -64,6 +64,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - [DISABLE_PRIMING](/ru/Global/#disable_priming) - запретить очистку сопла выдавливанием 0-нет, 1-да (0)
 - [FORCE_MD5](/ru/Global/#force_md5) - если 1 (по умолчанию 1) - проверять MD5 сумму файла, при ошибке - удалять файл.
     1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
+
     - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
     - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
     - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```

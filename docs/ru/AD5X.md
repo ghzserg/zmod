@@ -167,11 +167,15 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 Чтобы настроить количество инструментов, отображаемых в окне выбора цвета (если информацию не удается получить путем сканирования файла), используйте параметр [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count).
 
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 Чтобы включить сканирование gcode-файлов на наличие информации об инструментах, цветах и материалах, используйте параметр [SCAN_FILE_COLORS](/Global/#scan_file_colors). Вы также можете установить значение 2, чтобы проверять только данные, подготовленные скриптом слайсера, без сканирования файлов целиком.
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -185,6 +189,8 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 * 4 (Хотя бы один цвет не совпадает совсем, обычно из-за того, что сканирование файлов отключено или не удалось)
 * 8 (Хотя бы один цвет совпадает плохо)
 * 16 (Одна и та же физическая катушка была назначена более чем одному индексу инструмента в файле)
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

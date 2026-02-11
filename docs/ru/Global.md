@@ -109,11 +109,15 @@ WEIGHT - вес в граммах (1500)
 
 Эта настройка не может быть использована, если включен родной экран (native screen).
 
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+
 Пример: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
 Включает сканирование gcode-файлов для определения используемых команд смены инструмента (T0, T1 и т. д.), а также цветов и материалов, назначенных им в слайсере: 0 (выключено), 1 (включено), 2 (выключить полное сканирование, но искать данные, подготовленные скриптом слайсера).
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -135,6 +139,8 @@ WEIGHT - вес в граммах (1500)
 * 4 (Хотя бы один цвет не совпадает совсем, обычно из-за того, что сканирование файлов отключено или не удалось)
 * 8 (Хотя бы один цвет совпадает плохо)
 * 16 (Одна и та же физическая катушка была назначена более чем одному индексу инструмента в файле)
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -238,6 +244,7 @@ Igor Polunovskiy
 Проверять MD5 сумму файла, при ошибке - удалять файл. 0-не проверять, 1 - проверять (1)
 
 1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```

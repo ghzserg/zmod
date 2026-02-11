@@ -72,6 +72,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - `DISABLE_PRIMING` — disable nozzle priming: `0` = enable, `1` = disable (default: `0`).
 - `FORCE_MD5` — verify file MD5 hashes (default: `1`).
     1. Select and download the file for your architecture and operating system:
+
     - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
     - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
     - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
