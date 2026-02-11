@@ -226,12 +226,12 @@ jobs:
               commentBody += 'Тикет останется **закрытым** до обновления мода до последней версии.\n\n';
 
               commentBody += '🔄 **Please update your mod first! / Сначала обновите мод!**\n';
-              commentBody += '- Update guide (English): https://github.com/ghzserg/zmod/wiki/Setup_en#updating-the-mod\n';
-              commentBody += '- Инструкция по обновлению (Русский): https://github.com/ghzserg/zmod/wiki/Setup#updating-the-mod\n\n';
+              commentBody += '- Update guide (English): https://wiki.zmod.link/Setup/#updating-the-mod\n';
+              commentBody += '- Инструкция по обновлению (Русский): https://wiki.zmod.link/ru/Setup/#обновление-мода\n\n';
 
               commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
               commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
-              commentBody += '\nhttps://github.com/ghzserg/zmod/wiki/Help\nhttps://github.com/ghzserg/zmod/wiki/Help_en';
+              commentBody += '\nhttps://wiki.zmod.link/Help/\nhttps://wiki.zmod.link/ru/Help/';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
