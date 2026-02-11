@@ -26,56 +26,60 @@ Veja o que você obtém ao instalar o ZMOD:
 
 **Firmware nativo:** Você pode enviar arquivos por Wi-Fi, mas somente por meio do Orca FF ou do aplicativo FlashForge (que pode não estar disponível devido a problemas no servidor).
 **ZMOD:** Você obtém **controle total do seu navegador** no seu computador ou telefone.
+
     * Fluidd / Mainsail:** Interfaces da Web fáceis de usar, nas quais você vê todas as informações de impressão, temperatura, controla a velocidade dos ventiladores, move os eixos e tem acesso total ao console de comando.
-        * Envio de arquivos via "Octo/Klipper":** Integração com o Orca Slicer e outros fatiadores para envio direto de código G.
-        * Acesso à interface da Web da impressora via serviço de nuvem da Internet** [zmod.link] (https://zmod.link)
-        * **Notificação para o Telegram e mais de 100 outros serviços** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+    * Envio de arquivos via "Octo/Klipper":** Integração com o Orca Slicer e outros fatiadores para envio direto de código G.
+    * Acesso à interface da Web da impressora via serviço de nuvem da Internet** [zmod.link] (https://zmod.link)
+    * **Notificação para o Telegram e mais de 100 outros serviços** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 #### **2. Sistemas avançados de calibração e nivelamento**
 
 **Firmware nativo:** Nivelamento automático básico da mesa (ABL).
 **ZMOD:**
+
     * **Nivelamento adaptativo (KAMP):** A impressora não constrói um mapa de irregularidades da mesa em toda a área, mas somente na área em que seu modelo está localizado. Isso **economiza tempo** e melhora a precisão.
-        * Calibração PID:** Ajuste fino das configurações de temperatura da extrusora e da mesa para obter uma temperatura estável sem flutuações.
-        * Redutor de vibração (Input Shaper):** Analisa e compensa as vibrações do corpo, permitindo que você imprima **mais rápido e sem "anéis "** nos modelos.
-        * Espectrograma da correia:** Analisa a condição das correias da impressora para manutenção preventiva.
-        * Ajuste do parafuso da mesa:** Permite que você nivele a mesa em 10 minutos.
+    * Calibração PID:** Ajuste fino das configurações de temperatura da extrusora e da mesa para obter uma temperatura estável sem flutuações.
+    * Redutor de vibração (Input Shaper):** Analisa e compensa as vibrações do corpo, permitindo que você imprima **mais rápido e sem "anéis "** nos modelos.
+    * Espectrograma da correia:** Analisa a condição das correias da impressora para manutenção preventiva.
+    * Ajuste do parafuso da mesa:** Permite que você nivele a mesa em 10 minutos.
 
 #### **3. Recursos inteligentes para confiabilidade**
 
 * Firmware:** Sensores básicos de terminação de filamento. Não há controle sobre o firmware e os arquivos transferidos, o que resulta em falhas de impressão.
 **ZMOD:**
+
     * Controle de bico: O sistema, usando células de carga, pode detectar que o bico atingiu uma peça impressa ou uma mesa e **interromper automaticamente a impressão**, evitando quebras.
-        * Recuperação de falha de energia:** A impressora se lembrará do local da falha de energia e poderá continuar a imprimir depois que a energia for ligada.
-        * Controle de firmware: A impressora pode corromper arquivos por si só, portanto, pode controlar tanto os arquivos de firmware nativos quanto os arquivos zMod.
-        * Controle de arquivos transferidos para a impressora:** Controle de soma MD5 ao transferir arquivos.
+    * Recuperação de falha de energia:** A impressora se lembrará do local da falha de energia e poderá continuar a imprimir depois que a energia for ligada.
+    * Controle de firmware: A impressora pode corromper arquivos por si só, portanto, pode controlar tanto os arquivos de firmware nativos quanto os arquivos zMod.
+    * Controle de arquivos transferidos para a impressora:** Controle de soma MD5 ao transferir arquivos.
 
 #### **4. Manuseio flexível de filamentos (especialmente para a AD5X)**
 
 **Firmware nativo:** Controle da bobina por meio do menu padrão.
 **ZMOD (para AD5X):**
+
     * Menu inteligente de cores (`COLOR`):** Seleção visual de bobina, mudança de cor e tipo de plástico diretamente da interface da Web.
-        * ** **"Endless Spool Mode":** Se você tiver vários carretéis do mesmo plástico, a impressora passará automaticamente para o próximo quando o primeiro acabar.
-        * Configuração de desperdício fino:** Você pode reduzir a quantidade de plástico que a impressora purga ao trocar de cor, economizando material.
+    * ** **"Endless Spool Mode":** Se você tiver vários carretéis do mesmo plástico, a impressora passará automaticamente para o próximo quando o primeiro acabar.
+    * Configuração de desperdício fino:** Você pode reduzir a quantidade de plástico que a impressora purga ao trocar de cor, economizando material.
 
 #### **5. Ecossistema e integração**
 
 * **Firmware nativo:**Sistema fechado.
 **ZMOD:**
     * Telegram-bot:** Receba notificações sobre o início e o fim da impressão, fotos da câmera diretamente no Telegram.
-        * Suporte a plugins:** Instale plugins adicionais (como o `bambufy` para melhor compatibilidade com o Bambu Studio).
-        * Câmera alternativa: ajuste a resolução, o FPS e reduza a carga de memória para uma transmissão estável.
-        * Reprodução de música:** Reproduz música quando a impressão começa ou termina
+    * Suporte a plugins:** Instale plugins adicionais (como o `bambufy` para melhor compatibilidade com o Bambu Studio).
+    * Câmera alternativa: ajuste a resolução, o FPS e reduza a carga de memória para uma transmissão estável.
+    * Reprodução de música:** Reproduz música quando a impressão começa ou termina
 
 #### **6. Otimização e controle**
 
 * **Firmware nativo:**Configurações limitadas.
 **ZMOD:**
     * Desativar tela nativa: Para economizar RAM (relevante para modelos AD5M com 128 MB).
-        * GuppyScreen:** Uma interface alternativa para a tela da impressora com recursos avançados.
-        * Visualizador de logs: informações completas sobre todos os processos para diagnosticar problemas.
-        * Retração de firmware: configure a retração diretamente durante a impressão, sem necessidade de refazer o corte.
-        * Acesso total ao ROOT:** O acesso total à impressora é sempre possível
+    * GuppyScreen:** Uma interface alternativa para a tela da impressora com recursos avançados.
+    * Visualizador de logs: informações completas sobre todos os processos para diagnosticar problemas.
+    * Retração de firmware: configure a retração diretamente durante a impressão, sem necessidade de refazer o corte.
+    * Acesso total ao ROOT:** O acesso total à impressora é sempre possível
 
 #### **6. Klipper 13**
 
