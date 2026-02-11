@@ -110,9 +110,7 @@ Igor Polunovskiy
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-<img width="472" height="549" alt="image" src="https://github.com/user-attachments/assets/b330fa6f-fffd-4b0d-95b0-4e879eabd0d3" />
-
-<img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
+<img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0819ed52-f581-4299-ba21-cf04e34e25f7" />
 
 [Подробнее](/ru/System/#check_md5)
 
