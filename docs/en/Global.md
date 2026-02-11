@@ -131,10 +131,11 @@ Determines whether to attempt automatic mapping of toolchange commands (T0, T1, 
 This setting will also apply to prints started in silent mode. You can configure it to abort the print if certain errors arise with the auto-assignment: 2 (abort if any materials cannot be matched, allow color mismatches), 30 (abort on any issues)
 
 For custom values for error conditions in silent mode, add the following values together to determine the right setting:
-- 2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)
-- 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
-- 8 (At least one color is potentially a poor match)
-- 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+* 2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)
+* 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
+* 8 (At least one color is potentially a poor match)
+* 16 (At least one physical spool has been assigned to more than one tool index in the file)
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
