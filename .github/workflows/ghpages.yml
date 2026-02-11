@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - doc/**
+      - docs/**
       - mkdocs/**
       - .github/workflows/ghpages.yml
   workflow_dispatch:
