@@ -4,6 +4,7 @@
 2. [File Preparation in Orca](#2-how-to-prepare-a-file-in-orca)
 3. [Color Selection (`COLOR`)](#3-how-to-use-the-color-selection-menu-macro-color)
 4. [Print Menu (`PRINT`)](#4-print-menu-macro-print)
+    - [AD5X Global Parameters](#ad5x-global-parameters)
 5. [Manual Spool Selection](#5-how-to-manually-tell-the-printer-which-spool-is-loaded)
 6. [Waste Filament Configuration](#6-how-to-configure-waste-filament-during-filament-change)
 
@@ -19,7 +20,7 @@
 
 10. [IFS commands](#10-ifs-commands)
 11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
-    
+
 ### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
@@ -133,6 +134,10 @@ This window opens **automatically** when you start printing.
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
+---
+
+### AD5X Global Parameters
+
 To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](/Global/#silent):
 
 - 0 – show dialog (default)
@@ -141,6 +146,24 @@ To prevent the color selection dialog from appearing at the start of a print, us
 
 ```gcode
 SAVE_ZMOD_DATA SILENT=1
+```
+
+To disable automatic filament insertion into the extruder, use the global parameter [AUTOINSERT](/Global/#autoinsert):
+
+```gcode
+SAVE_ZMOD_DATA AUTOINSERT=0
+```
+
+To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
+
+```gcode
+SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
+```
+
+To unload the filament after printing is complete, use the [REMOVE_FILAMENT](/Global/#remove_filament) parameter.
+
+```gcode
+SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
 ---
@@ -180,33 +203,6 @@ In screen-off mode, these sensors are enabled:
 - `Head Switch Sensor` – Detects filament presence in the extruder
 - `Ifs Motion Sensor` – Monitors filament movement in IFS
 
-To disable automatic filament insertion into the extruder, use the global parameter [AUTOINSERT](/Global/#autoinsert):
-
-```gcode
-SAVE_ZMOD_DATA AUTOINSERT=0
-```
-
-To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
-
-```gcode
-SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
-```
-
-To unload the filament after printing is complete, use the [REMOVE_FILAMENT](/Global/#remove_filament) parameter.
-
-```gcode
-SAVE_ZMOD_DATA REMOVE_FILAMENT=1
-```
-
-To prevent the color selection dialog from appearing at the start of a print, use the global parameter [SILENT](/Global/#silent):
-
-- 0 – show dialog (default)
-- 1 – do not show dialog, use previously set colors
-- 2 – do not show dialog, do not use IFS
-
-```gcode
-SAVE_ZMOD_DATA SILENT=1
-```
 
 **How to find these settings:**
 
