@@ -10,7 +10,7 @@
 6. Schalten Sie den Drucker ein
 7. Erzeugen Sie ein Problem
 8. Ausführen von [TAR_CONFIG](/de/Zmod/#tar_config) - Logdateien speichern
-9. Poste eine Nachricht mit Beschreibung und `config.tar.gz`-Datei
+9. Poste eine Nachricht mit Beschreibung und `config-1.6.28-15.tar.gz`-Datei.
 10. [Fehlermeldung hinzufügen](https://github.com/ghzserg/zmod/issues)
 
 Wenn `TAR_CONFIG` nicht ausgeführt werden kann, verbinden Sie sich über SSH mit dem Drucker:
