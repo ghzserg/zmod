@@ -1,5 +1,5 @@
 ---
-ausblenden:
+hide:
   - Navigation
 ---
 
