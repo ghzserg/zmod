@@ -20,7 +20,7 @@ Ativar a exclusão de modelos no Orca:
 
 Somente a versão mais recente do mod é compatível.
 
-O autor não tem os recursos para oferecer suporte a todas as versões, portanto, [instale o firmware nativo mais recente e a atualização do ZMOD] (/en/Setup/).
+O autor não tem os recursos para oferecer suporte a todas as versões, portanto, [instale o firmware nativo mais recente e a atualização do ZMOD](/en/Setup/).
 
 ### Substituir Spiral/Automatic Z-Hop.
 

@@ -188,7 +188,7 @@ Interface language support:
 - Enhanced [nozzle collision detection](/Global/#nozzle_control) with optional pause instead of shutdown. Issue [#23](https://github.com/ghzserg/zmod/issues/23).
 !!! note
     
-- Nozzle Control does not work on AD5X see here[#75] (https://github.com/ghzserg/zmod/discussions/75#discussion-8196449)
+- Nozzle Control does not work on AD5X see here[#75](https://github.com/ghzserg/zmod/discussions/75#discussion-8196449)
 - Improved system check functionality.
 - Updated Fluidd color scheme.
 - Added global parameter [SAVE_MOONRAKER](/Macros/#save_moonraker) for custom macro button layouts.

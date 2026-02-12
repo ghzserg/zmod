@@ -287,14 +287,14 @@ Conecte-se à nuvem [zmod.link](https://zmod.link/link/)
 
 Como obter o login e a senha:
 
-1. Conecte-se ao bot [@zmod_help_bot] (https://t.me/zmod_help_bot)
+1. Conecte-se ao bot [@zmod_help_bot](https://t.me/zmod_help_bot)
 2. Digite o comando ```cloud`` - se você já tiver se registrado antes, ele informará seu nome de usuário
 3. para registrar um usuário com o nome ``test``, digite: ``cloud register test``.
 4. Para redefinir a senha, digite: ``cloud reset_password``.
 
 Como se conectar à nuvem [zmod.link](https://zmod.link/link/):
 
-1. Vá para [zmod.link] (https://zmod.link/link//) e digite seu login e senha
+1. Vá para [zmod.link](https://zmod.link/link//) e digite seu login e senha
    
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 
@@ -339,7 +339,7 @@ Como se conectar à nuvem [zmod.link](https://zmod.link/link/):
 
 PS: A câmera pode carregar mais tarde do que a interface, o que é normal
 
-PPS: Se algo der errado, atualize a página com Ctrl + F5 e vá para [zmod.link] (https://zmod.link/link/).
+PPS: Se algo der errado, atualize a página com Ctrl + F5 e vá para [zmod.link](https://zmod.link/link/).
 
    <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
 

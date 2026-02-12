@@ -71,7 +71,7 @@
 * Macro [SCREEN](/pt/System/#screen) - obtém uma captura de tela da tela da impressora
 * Macro [LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native) - transfere as configurações de z-offset da tela nativa para o modo sem tela
 * [AD5X](/pt/AD5X/): Adicionado o parâmetro global [REMOVE_FILAMENT](/pt/Global/#remove_filament) - remove o filamento após a impressão
-* Adicionado o plug-in [Recommended settings plugin] (https://github.com/ghzserg/recommend)
+* Adicionado o plug-in [Recommended settings plugin](https://github.com/ghzserg/recommend)
 * Adicionado o idioma tcheco
 * Adicionado controle de versão da MCU para o Klipper 13
 * [AD5X](/pt/AD5X/): Adicionado botão de nivelamento
@@ -90,7 +90,7 @@
 ### Versão 1.6.2
 27.10.2025
 
-* [Plugin Support] (https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
+* [Plugin Support](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
 * [Plugin g28_tenz](https://github.com/ghzserg/g28_tenz) - Estacionamento do eixo Z por células de carga
 * Plugin bambufy](https://github.com/function3d/bambufy) - Compatível com o Bambu Studio e o Orca Slicer, melhora o controle da torre de alimentação, fornece estimativa precisa do tempo e do consumo de material, reduz o desperdício, oferece suporte à mudança rápida de cores e a recursos avançados de impressão. De @function3d.
 * [Plugin nopoop](https://github.com/ghzserg/nopoop) - Maximize a redução de desperdício de @ninjamida
@@ -123,7 +123,7 @@
 - AD5M - Sensor de temperatura no cabeçote
 - Pequenas correções
 
-Agradecemos a [@darksimpson] (https://github.com/darksimpson) pelo suporte à MCU.
+Agradecemos a [@darksimpson](https://github.com/darksimpson) pelo suporte à MCU.
 
 Para suporte a tens, obrigado a [@minicx](https://github.com/loss-and-quick/)
 
@@ -237,7 +237,7 @@ Suporte para idiomas de interface:
 - Registro de todas as mensagens de tela nativa para o Klipper e respostas a essas mensagens
 - Alteração do algoritmo de remoção do shaper, os gráficos do shaper são plotados com o SCV levado em consideração
 - Macro MUTE - mudo antes da reinicialização
-- Novo parâmetro - [native screen off timeout] (/pt/System/#display_off_timeout)
+- Novo parâmetro - [native screen off timeout](/pt/System/#display_off_timeout)
 - Novo arquivo `mod_data/power_off.sh` - permite escrever código a ser executado quando a impressora é desligada
 - Ativação do estacionamento inteligente ao usar o KAMP
 - Correção de erros de remoção de mod, desativação de mod e remoção completa de mod
@@ -301,7 +301,7 @@ Suporte para idiomas de interface:
 - Ocultação de `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`.
 - A implementação de Igor Polunovskiy é usada para redefinir as células de carga no modo de tela não nativo
 - Redefinição das células de carga, agora somente na mesa aquecida
-- Novo parâmetro global [ALTER_CELL_TARE](/pt/Macros/#alter_cell_tare). Permite contornar o erro [load cell reset error] (/pt/FAQ/#alter_cell_tare error).
+- Novo parâmetro global [ALTER_CELL_TARE](/pt/Macros/#alter_cell_tare). Permite contornar o erro [load cell reset error](/pt/FAQ/#alter_cell_tare error).
 - O novo parâmetro global [CELL_WEIGHT](/pt/Macros/#cell_weight) especifica em que peso as células de carga não devem ser calibradas
 - Novo parâmetro global [CHINA_CLOUD](/pt/Global/#china_cloud) - permite desativar as nuvens chinesas.
 - Atualização da configuração da impressora reescrita
@@ -373,7 +373,7 @@ Suporte para idiomas de interface:
 
 - Nova macro [FAST_CLOSE_DIALOGS](/pt/Macros/#fast_close_dialogs) - Faz com que as caixas de diálogo sejam fechadas rapidamente na tela nativa. Usado para fechar uma janela quando a impressão é concluída ou quando a impressão é cancelada. *Para que as caixas de diálogo de fechamento rápido funcionem, vá para a guia Configurações -> Ícone WiFi -> Modo de rede -> ative o controle deslizante "Somente redes locais": @darksimpson
 - Nova macro [LEVELING_PRINT_FILE](/pt/Macros/#leveling_print_file) - Imprime um arquivo com plotagem de mapa de tabela a partir da tela nativa. *Para LEVELING_PRINT_FILE, é necessário ir para a guia "Settings" (Configurações) -> "WiFi icon" (Ícone WiFi) -> "Network mode" (Modo de rede) -> ative o controle deslizante "Local networks only" (Somente redes locais) por meio do menu da tela da impressora.
-- Nova macro [COLDPULL](/pt/Filamento/#coldpull) Coldpull (limpeza do bico) sem violência. Implementação de [this algorithm] (https://t.me/FF_5M_5M_Pro/2836/447172)
+- Nova macro [COLDPULL](/pt/Filamento/#coldpull) Coldpull (limpeza do bico) sem violência. Implementação de [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
 - Novos parâmetros [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data):
     - [PRINT_LEVELING](/pt/Global/#save_zmod_data) - construir mapa de mesa com tela nativa significa 0-não, 1-sim (0) em cada impressão. *Para remover o mapa da área de trabalho da tela nativa, vá para a guia "Configurações" -> "Ícone WiFi" -> "Modo de rede" -> ative o controle deslizante "Somente redes locais" por meio do menu da tela da impressora.
       - [USE_KAMP](/pt/Global/#save_zmod_data) - onde é possível usar o mapa adaptável da área de trabalho (KAMP) em vez do mapa completo da área de trabalho 0-não, 1-sim (0). *Permite usar o KAMP ao obter um mapa de tabela pela rede a partir da tela nativa.
@@ -457,7 +457,7 @@ Suporte para idiomas de interface:
 
 - Adicionado controle de câmera do mod. Permite a memória t. E trabalhar com a câmera com a tela desligada. Também é possível alterar a resolução da câmera. (A implementação é imitada de Pavel Mironov)
 - Corrigido o bug do instalador que, na última versão, podia excluir [heater_bed] dos arquivos de configuração
-- Imagens alteradas durante a instalação. Implementado [@drmax_gc] (https://t.me/drmax_gc)
+- Imagens alteradas durante a instalação. Implementado [@drmax_gc](https://t.me/drmax_gc)
 - As macros foram categorizadas e traduzidas para o russo
 - Macro [DATE_GET](/pt/Macros/#date_get) - ver a hora atual
 - Macro [DATE_SET](/pt/Macros/#date_set) - define a hora atual

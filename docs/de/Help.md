@@ -1,6 +1,6 @@
 # So kontaktieren Sie den Entwickler-Support
 
-Öffnen Sie den Telegrammbot [@zmod_help_bot] (http://t.me/zmod_help_bot) und stellen Sie ihm Ihre Frage, er kennt die gesamte Dokumentation.
+Öffnen Sie den Telegrammbot [@zmod_help_bot](http://t.me/zmod_help_bot) und stellen Sie ihm Ihre Frage, er kennt die gesamte Dokumentation.
 
 1. [Aktualisieren Sie zMod und alle Plugins auf die neueste Version](/de/Setup/#update-mod)
 2. Übersetze den Mod ins Russische ```LANG LANG=ru```.
@@ -144,7 +144,7 @@ Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles na
 > 5. Führen Sie `TAR_CONFIG` aus - dies erstellt ein `config.tar.gz`-Archiv mit allen Protokollen
 
 ### 5. **Füllen Sie das Ticket korrekt aus**
-> - Gehen Sie zur [Problemseite] (https://github.com/ghzserg/zmod/issues)
+> - Gehen Sie zur [Problemseite](https://github.com/ghzserg/zmod/issues)
 
 > - Erstellen Sie **eine** Nachricht
 

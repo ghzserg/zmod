@@ -14,7 +14,7 @@
 
 ---
 
-Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
 
 ## Telegram Bot
 
@@ -67,7 +67,7 @@ Wie Sie Ihren Bot registrieren
 
 #### Telegram Bot mit einem Befehl unter Debian installieren
 
-Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
 
 Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) unter Debian:
 
@@ -96,7 +96,7 @@ Sie müssen den ssh-Schlüssel selbst hinzufügen
 
 #### Telegram Bot schrittweise installieren
 
-Wenn Sie nur Benachrichtigungen in Telegram benötigen - dann [verwenden Sie das Notify-Plugin] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Sie nur Benachrichtigungen in Telegram benötigen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Nehmen Sie die Datei [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) aus `mod/telegram/` c printer.
 
@@ -216,7 +216,7 @@ sync_rate: 5
 
 #### Installation und Konfiguration für armbian (von noyhay)
 
-Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Laden Sie Debian Minimal/IOT-Images mit Armbian von [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -269,7 +269,7 @@ Starten Sie das System neu
 
 #### Installation des Telegram-Bots über helm in Kubernetes (von aldiserg)
 
-Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Laden Sie helm herunter und installieren Sie es auf Ihrem Computer [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 

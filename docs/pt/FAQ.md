@@ -18,7 +18,7 @@
       - O KlipperMod usa o KlipperScreen como uma tela para a impressora.
       - O ZMOD usa a tela nativa ou o GuppyScreen em vez do KlipperScreen
       - O KlipperMod usa o moonraker-timelapse
-      - O ZMOD usa o moonraker-telegram-bot em um host EXTERNO que suporta timelapse ou [TimeLapse plugin] (https://github.com/ghzserg/timelapse/).
+      - O ZMOD usa o moonraker-telegram-bot em um host EXTERNO que suporta timelapse ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
 
 Filosofia diferente.
 
@@ -125,7 +125,7 @@ No modo de tela não nativa, você pode usar a tela alternativa do software Gupp
 
 Nossa impressora tem 128 megabytes de memória, metade é consumida pelo sistema e 13 megabytes (20 em versões mais antigas do firmware nativo) são consumidos pelo controle de tela nativo.
 
-Se [desativar a tela nativa] (/pt/System/#display_off), economizaremos memória.
+Se [desativar a tela nativa](/pt/System/#display_off), economizaremos memória.
 
 Mas, nesse caso, as ferramentas de impressão integradas começam a funcionar de forma diferente (iniciar a impressão, pausar, restaurar, cancelar, encerrar a impressão, enviar arquivos para impressão, restaurar após falha de energia).
 
@@ -244,7 +244,7 @@ Se você quiser usar um cartão diferente ao imprimir (por exemplo, `moya_karta_
 
   ````SAVE_ZMOD_DATA PRINT_LEVELING=0````
 
-- Capture o mapa da tabela antecipadamente por meio da macro [AUTO_FULL_BED_LEVEL] (/pt/FAQ/#chores-macros-and-buttons-in-fluidd).
+- Capture o mapa da tabela antecipadamente por meio da macro [AUTO_FULL_BED_LEVEL](/pt/FAQ/#chores-macros-and-buttons-in-fluidd).
  
   ````AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=moya_karta_na_80_gradusov```''
 
@@ -402,7 +402,7 @@ Câmera alternativa, permite alterar a resolução, os fps, permite várias cone
 - Desative a câmera nativa na tela da impressora.
 - Chame a macro [CAMERA_ON](/pt/Zmod/#camera_on)
 
-Leia: [Instalei uma impressora e o ZMOD escondeu a minha câmera!] (#I-installed-a-printer-and-zmod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
+Leia: [Instalei uma impressora e o ZMOD escondeu a minha câmera!](#I-installed-a-printer-and-zmod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
 
 #### Configuração da câmera
 
@@ -485,7 +485,7 @@ Em versões anteriores a `1.4.3`, você também pode especificar:
 - URL do fluxo: `/webcam/?action=stream`.
 - URL do instantâneo: `/webcam/?action=snapshot`.
 
-Se quiser ajustar a resolução, os fps, usar a câmera do bot do Telegram, reduzir o consumo de RAM, permitir conexões paralelas, será necessário usar [alternative camera] (/pt/Zmod/#camera_on). *Câmera
+Se quiser ajustar a resolução, os fps, usar a câmera do bot do Telegram, reduzir o consumo de RAM, permitir conexões paralelas, será necessário usar [alternative camera](/pt/Zmod/#camera_on). *Câmera
 
 No roteador, coloque um *endereço IP estático para a impressora*, caso contrário, ele mudará e a câmera falhará.
 
@@ -700,7 +700,7 @@ Reinicie a impressora duas vezes.
 Quando você excluir o mod, o logotipo nativo será restaurado. Se isso não tiver acontecido no AD5M:
 
 - Você precisará instalar o mod
-- Faça upload do arquivo [boot.bmp] (https://github.com/ghzserg/FF/releases/download/R/boot.bmp) para a pasta `mod_data/logo`.
+- Faça upload do arquivo [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) para a pasta `mod_data/logo`.
 - Reiniciar a impressora
 
 ---
@@ -769,7 +769,7 @@ Se esse não for o caso e o Klipper estiver em execução, execute ```UPDATE_MCU
 Se nada ajudar e o **Klipper não funcionar**:
 
 - Mude para o Klipper nativo conforme descrito acima.
-- [Install native Factory firmware] (/pt/Native_FW/#how-to-install-native-firmware), que instalará a MCU nativa.
+- [Install native Factory firmware](/pt/Native_FW/#how-to-install-native-firmware), que instalará a MCU nativa.
 
 ---
 
@@ -808,7 +808,7 @@ Os motivos são puramente mecânicos:
 
 É necessário remover os cavacos, desmontar e reinstalar as peças.
 
-Em seguida, teste a impressão e o bloqueio/desbloqueio da barra por meio de [comandos IFS] (/pt/AD5X/#10-ifs-commands).
+Em seguida, teste a impressão e o bloqueio/desbloqueio da barra por meio de [comandos IFS](/pt/AD5X/#10-ifs-commands).
 
 ---
 
@@ -849,7 +849,7 @@ Para ver exatamente qual é o erro:
 
 - abra o Fluidd/Mainsail
 - vá para o console e leia o texto do erro
-- abra o bot do Telegram [@zmod_help_bot] (http://t.me/zmod_help_bot) e digite o texto do erro ou encontre você mesmo a descrição na documentação.
+- abra o bot do Telegram [@zmod_help_bot](http://t.me/zmod_help_bot) e digite o texto do erro ou encontre você mesmo a descrição na documentação.
 
 Se não conseguir corrigi-lo, [você precisa criar um tíquete](/pt/Help/).
 

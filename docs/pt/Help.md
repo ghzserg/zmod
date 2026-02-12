@@ -1,6 +1,6 @@
 # Como entrar em contato com o suporte ao desenvolvedor
 
-Abra o bot do telegrama [@zmod_help_bot] (http://t.me/zmod_help_bot) e faça sua pergunta a ele, pois ele conhece toda a documentação.
+Abra o bot do telegrama [@zmod_help_bot](http://t.me/zmod_help_bot) e faça sua pergunta a ele, pois ele conhece toda a documentação.
 
 1. [Atualize o zMod e todos os plug-ins para a versão mais recente](/en/Setup/#update-mod)
 2. Traduza o mod para o russo ```LANG LANG=ru```.
@@ -101,7 +101,7 @@ Isso é **ineficiente**, **atrasa a ajuda** e **incomoda todo mundo**.
 Para que eu **não adivinhe, mas o ajude imediatamente**, faça tudo de acordo com a lista de verificação:
 
 ### 1. **Atualize para a versão mais recente**
-> Siga as [instruções oficiais de atualização] (/en/Setup/#upgrade-mod).
+> Siga as [instruções oficiais de atualização](/en/Setup/#upgrade-mod).
 
 ### 2. **Instalar o idioma russo**
 > Execute no console:
@@ -144,7 +144,7 @@ Para que eu **não adivinhe, mas o ajude imediatamente**, faça tudo de acordo c
 > 5. Execute `TAR_CONFIG` - isso criará um arquivo `config.tar.gz` com todos os registros
 
 ### 5. **Registre o tíquete corretamente**
-> - Vá para [Issues page] (https://github.com/ghzserg/zmod/issues)
+> - Vá para [Issues page](https://github.com/ghzserg/zmod/issues)
 
 > - Crie **uma** mensagem
 

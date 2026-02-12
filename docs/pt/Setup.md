@@ -26,7 +26,7 @@
 
 1. **[Retornar a impressora às configurações de fábrica](/pt/Setup/#return-printer-to-factory-settings-necessary-for-installing-mod)** [Caution AD5X](/pt/Setup/#caution-ad5x)
 2. formate o flash USB para FAT/FAT16/FAT32
-3. Coloque [file] (https://github.com/ghzserg/zmod/releases/) na pasta raiz do USB Flash.
+3. Coloque [file](https://github.com/ghzserg/zmod/releases/) na pasta raiz do USB Flash.
 
     - Para o FF5M: Adventurer5M-**zmod**-\*.tgz
        - Para o FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
@@ -50,7 +50,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Se a interface da Web não abrir, o firmware nativo desativou o mod. Para ativá-lo, é necessário gravar no arquivo flash USB [AD5X-ENABLE-zmod.tgz] (https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) e [activate mod] (/pt/R//#ad5x-enable-zmodtgz).
+    Se a interface da Web não abrir, o firmware nativo desativou o mod. Para ativá-lo, é necessário gravar no arquivo flash USB [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) e [activate mod](/pt/R//#ad5x-enable-zmodtgz).
      
 12. Traduza o mod para seu idioma.
     
@@ -84,7 +84,7 @@
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
-17. Ative o [plug-in de recomendação] (https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
+17. Ative o [plug-in de recomendação](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
     
     <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
 
@@ -142,7 +142,7 @@ Após a instalação do firmware nativo, é possível que o cabeçote de impress
 
 Se você se deparar com essa situação, precisará calibrar o estacionamento usando o seguinte algoritmo:
 
-1. Faça o download do arquivo [Set.XY.Offset.zip] (https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) e extraia-o para a raiz da unidade flash
+1. Faça o download do arquivo [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) e extraia-o para a raiz da unidade flash
 2. Insira a unidade flash na impressora que está desligada e ligue-a. 3.
 3 A interface de calibração aparecerá na tela da impressora. Você precisa pressionar Reset.
 4. Use as setas de controle para estacionar o cabeçote de impressão no receptor de modo que o cabeçote tenha pressão suficiente sobre a alavanca do obturador, o bico fique atrás do obturador móvel e o próprio obturador fique nivelado com a superfície frontal do receptor.
@@ -187,7 +187,7 @@ A versão atual do zMod (guia Settings (Configurações) -> Update (Atualizaçã
 Atualização via pendrive USB:
 
 1. Formate o pendrive USB para FAT/FAT16/FAT32
-2. Coloque [file] (https://github.com/ghzserg/zmod/releases/) na pasta raiz do USB Flash.
+2. Coloque [file](https://github.com/ghzserg/zmod/releases/) na pasta raiz do USB Flash.
 
     - Para o FF5M: Adventurer5M-**zmod**-\*.tgz
        - Para o FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
@@ -233,7 +233,7 @@ Remova o mod completamente ```REMOVE_ZMOD FULL=1```.
 Desinstalação do mod via pen drive:
 
 - Formate a unidade flash para FAT/FAT16/FAT32
-- Coloque o arquivo [flashforge_init.sh] (https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) nessa unidade flash
+- Coloque o arquivo [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) nessa unidade flash
 - Desligue a impressora
 - Insira a unidade USB na impressora
 - Ligue a impressora
@@ -297,7 +297,7 @@ Qual deve ser a aparência da conexão no final:
 
 ![](../images/port.jpg)
 
-6. Execute o programa [PuTTY] (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) e digite sua porta COM (no exemplo acima, COM6), velocidade `115200`, tipo de conexão - `Serial`.
+6. Execute o programa [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) e digite sua porta COM (no exemplo acima, COM6), velocidade `115200`, tipo de conexão - `Serial`.
 
 7. Ligue a alimentação normal da impressora.
 

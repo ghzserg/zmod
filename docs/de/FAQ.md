@@ -700,7 +700,7 @@ Starten Sie den Drucker 2 mal neu.
 Wenn Sie die Mod löschen, wird das ursprüngliche Logo wiederhergestellt. Wenn dies beim AD5M nicht geschehen ist:
 
 - Sie müssen die Mod installieren
-- Laden Sie die Datei [boot.bmp] (https://github.com/ghzserg/FF/releases/download/R/boot.bmp) in den Ordner "mod_data/logo" hoch.
+- Laden Sie die Datei [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) in den Ordner "mod_data/logo" hoch.
 - Starten Sie den Drucker neu
 
 ---
@@ -849,7 +849,7 @@ Um zu sehen, was genau der Fehler ist:
 
 - öffnen Sie Fluidd/Mainsail
 - gehen Sie auf die Konsole und lesen Sie den Fehlertext
-- Öffnen Sie den Telegram-Bot [@zmod_help_bot] (http://t.me/zmod_help_bot) und geben Sie den Fehlertext ein oder suchen Sie selbst in der Dokumentation nach der Beschreibung.
+- Öffnen Sie den Telegram-Bot [@zmod_help_bot](http://t.me/zmod_help_bot) und geben Sie den Fehlertext ein oder suchen Sie selbst in der Dokumentation nach der Beschreibung.
 
 Wenn Sie den Fehler nicht beheben können, [müssen Sie ein Ticket erstellen](/ru/Help/).
 

@@ -15,7 +15,7 @@ Ela pode ser chamada por:
 ### COLDPULL
 
 Coldpool (limpeza do bocal) sem violência.
-Implementação [deste algoritmo] (https://t.me/FF_5M_5M_Pro/2836/447172)
+Implementação [deste algoritmo](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 - Escolha com o que limpar (PETG, ABS, NEYLON).
 - Siga as instruções no console do FLUIDD.

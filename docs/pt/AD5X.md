@@ -5,8 +5,8 @@
 3. [Menu de seleção de cores (`COLOR`)](#3-how-to-use the-colour-selection-menu-macros-color-ad5x)
 4. [Menu de impressão (`PRINT`)](#4-print-menu-macro-print-ad5x)
     - [Parâmetros globais do AD5X](#parâmetros-globais-ad5x)
-5. [Como especificar manualmente o spool] (#5-how-to-manually-indicate-to-the-printer-which-coil-is-now-filled-ad5x)
-6. [Setting the amount of waste at filament change] (#6-how-to-set-the-amount-of-waste-at-filament-change-ad5x)
+5. [Como especificar manualmente o spool](#5-how-to-manually-indicate-to-the-printer-which-coil-is-now-filled-ad5x)
+6. [Setting the amount of waste at filament change](#6-how-to-set-the-amount-of-waste-at-filament-change-ad5x)
 
     - 🔧 [Basic Settings](#most-important-settings-what-to-change-most-often-ad5x)
        - ⚙️ [Configurações avançadas](#settings-for-advanced-don't-change-if-you're-não-certo-do-resultado-ad5x)
@@ -15,7 +15,7 @@
 8. [Add your colours](#8-add-your-colours-ad5x)
 9. [Fixar o estacionamento no cesto e cortar o filamento](#9-fix-working-with-basket-and-knife-to-cut-filament-ad5x)
 
-    - [Por meio do menu de engenharia no firmware nativo] (#customize-the-basket-on-native-firmware-ad5x)
+    - [Por meio do menu de engenharia no firmware nativo](#customize-the-basket-on-native-firmware-ad5x)
        - [Via Flash no firmware nativo](/pt/Setup/#attention-ad5x)
 
 10. [Comandos IFS](#10-ifs-commands)
@@ -536,7 +536,7 @@ Conexão:
 - Desmarque a segunda caixa
 
 1. Conectar
-2. Selecione [arquivo flash] (/en/Native_FW/#5x-ifs). **Não se esqueça de descompactá-lo**.
+2. Selecione [arquivo flash](/en/Native_FW/#5x-ifs). **Não se esqueça de descompactá-lo**.
 3. pressione **F7** e aguarde o dispositivo piscar
 
 ## IFS: erro do sensor: erro de comunicação serial: falha na leitura: o dispositivo informa que está pronto para ler, mas não retornou dados (dispositivo desconectado ou acesso múltiplo na porta?).

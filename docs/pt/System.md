@@ -31,7 +31,7 @@ O GuppyScreen é uma implementação de tela alternativa:
 - Não trava quando o clipper é reinicializado
 - Recomendado para uso em vez da tela nativa.
 - Melhor recuperação de impressão interrompida
-- Criado a partir do [fork] (https://github.com/ghzserg/guppyscreen_ff5m), que é baseado no [repositório original] (https://github.com/ballaswag/guppyscreen) e em outro [fork] (https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
+- Criado a partir do [fork](https://github.com/ghzserg/guppyscreen_ff5m), que é baseado no [repositório original](https://github.com/ballaswag/guppyscreen) e em outro [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
 
 **Não desative a tela a menos que entenda claramente como funcionam o mapa da tabela, o z-offset e as macros START_PRINT e END_PRINT**
 
@@ -205,9 +205,9 @@ Altera o firmware para o firmware oposto sem parâmetros.
 
 Exemplo: `UPDATE_MCU FORCE=13` força o carregamento do firmware do Klipper 13
 
-Se você não entender como [restaurar as configurações e o firmware da MCU] (/pt/Native_FW/#installing-full-firmware-on-ad5x), não o execute.
+Se você não entender como [restaurar as configurações e o firmware da MCU](/pt/Native_FW/#installing-full-firmware-on-ad5x), não o execute.
 
-Se algo der errado, volte apenas para [factory] (/pt/Native_FW/).
+Se algo der errado, volte apenas para [factory](/pt/Native_FW/).
 
 ---
 
@@ -233,7 +233,7 @@ Links simbólicos, direitos a diretórios e arquivos são restaurados automatica
 
 O tempo de verificação é de cerca de 10 minutos.
 
-Se forem encontrados erros, vá para [link] (https://github.com/ghzserg/zmod/tree/main/stock), onde você poderá fazer o download de uma cópia não danificada do arquivo.
+Se forem encontrados erros, vá para [link](https://github.com/ghzserg/zmod/tree/main/stock), onde você poderá fazer o download de uma cópia não danificada do arquivo.
 
 ---
 

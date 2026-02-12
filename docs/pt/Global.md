@@ -109,7 +109,7 @@ Se o zMod escanear com êxito o arquivo em busca de instrumentos em uso, esse va
 
 Essa configuração não poderá ser usada se a tela nativa estiver ativada.
 
-[Consulte a configuração de pré-processamento] (https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
 
 Exemplo: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
@@ -364,7 +364,7 @@ Exemplo: `SAVE_ZMOD_DATA AUTO_REBOOT=0`.
 
 ##### MOTION_SENSOR
 
-Use em vez do sensor de filamento, [sensor de movimento de filamento] (https://aliexpress.ru/item/1005007480443587.html) (0)
+Use em vez do sensor de filamento, [sensor de movimento de filamento](https://aliexpress.ru/item/1005007480443587.html) (0)
 
 - 0 - não
 - 1 - sim
@@ -505,7 +505,7 @@ Causas particulares:
 - Cabo quebrado para a extrusora. Solução: substituir/corrigir o cabo
 - O conector do cabo não está fazendo contato com a placa do cabeçote da extrusora. Solução: substitua a placa da extrusora
 - Download de dados do SWAP (o SWAP está no EMMC, que funciona a 10 MB/s, a quantidade de dados no SWAP é de até 25 megabytes quando os shapers são construídos). Solução: desative o SWAP se você tiver 256 MB de RAM `SAVE_ZMOD_DATA USE_SWAP=0`.
-- Falha no firmware da MCU. Solução: reinicie a MCU [via reset] (/en/Setup/#return-printer-to-factory-settings-needed-for-mod installation). Atualizar novamente a MCU a partir do mod [UPDATE_MCU](/pt/System/#update_mcu)
+- Falha no firmware da MCU. Solução: reinicie a MCU [via reset](/en/Setup/#return-printer-to-factory-settings-needed-for-mod installation). Atualizar novamente a MCU a partir do mod [UPDATE_MCU](/pt/System/#update_mcu)
 
 Corrigir o erro E0011 e o `Communication timeout during homing`; a alteração do parâmetro fará com que a impressora seja reinicializada. 0-não, 1-sim (0)
 
@@ -525,7 +525,7 @@ O erro também pode ocorrer:
 
 - Se estiver no FF5M/FF5MPro, faça um teste completo. Ou seja, calibração do PID, remoção do mapa da tabela e remoção do shaper ao mesmo tempo.
   
-  É melhor fazer todas as calibrações [seguindo estas instruções] (/pt/SetupCalibrations/#calibrate-printer-for-beginners)
+  É melhor fazer todas as calibrações [seguindo estas instruções](/pt/SetupCalibrations/#calibrate-printer-for-beginners)
 
 O erro "Communication timeout during homing" pode ocorrer devido à alta latência de comunicação entre o computador host e os microcontroladores. Normalmente, o tempo de deslocamento deve ser consistentemente menor que 10 ms. Um atraso alto, mesmo por períodos curtos, pode causar mau funcionamento durante a configuração.
 
@@ -658,7 +658,7 @@ Se quiser atualizar o firmware nativo, você precisará ativar as nuvens chinesa
 Para **desativar** as nuvens chinesas no firmware nativo:
 
 - Formate a unidade flash para FAT32
-- Coloque o arquivo [flashforge_init.sh] (https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) nessa unidade flash
+- Coloque o arquivo [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) nessa unidade flash
 - Desligue a impressora
 - Insira a unidade USB na impressora
 - Ligue a impressora
@@ -668,7 +668,7 @@ Para **desativar** as nuvens chinesas no firmware nativo:
 Para **ativar** as nuvens chinesas no firmware nativo:
 
 - Formate a unidade flash para FAT32
-- Coloque o arquivo [flashforge_init.sh] (https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) na unidade flash.
+- Coloque o arquivo [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) na unidade flash.
 - Desligue a impressora
 - Insira a unidade USB na impressora
 - Ligue a impressora

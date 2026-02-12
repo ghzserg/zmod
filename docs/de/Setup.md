@@ -297,7 +297,7 @@ So sollte der Anschluss am Ende aussehen:
 
 ![](../images/port.jpg)
 
-6. Starten Sie das Programm [PuTTY] (https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), geben Sie dort Ihren COM-Port ein (im obigen Beispiel COM6), Geschwindigkeit `115200`, Verbindungstyp - `Seriell`.
+6. Starten Sie das Programm [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), geben Sie dort Ihren COM-Port ein (im obigen Beispiel COM6), Geschwindigkeit `115200`, Verbindungstyp - `Seriell`.
 
 7. Schließen Sie den Drucker an die normale Stromversorgung an.
 

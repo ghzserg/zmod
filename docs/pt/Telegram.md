@@ -14,13 +14,13 @@ Trabalho com várias impressoras por meio de um bot** | + | | | - | | | |
 
 ---
 
-Se você precisar apenas de notificações do Telegram, [use o plug-in Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+Se você precisar apenas de notificações do Telegram, [use o plug-in Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
 
 ## Bot do Telegram
 
 ### Descrição
 
-Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 A essência:
 Temos um ferro muito lento e pouca memória. Portanto, não faz sentido executar o moonraker-telegram-bot no hardware.
@@ -55,7 +55,7 @@ O arquivo de configuração pode ser baixado da impressora `mod/telegram/`.
 
 Como registrar seu bot
 
-1. vá para [@BotFather] (https://t.me/BotFather).
+1. vá para [@BotFather](https://t.me/BotFather).
 2. `/newbot`.
 3. Digite o nome que desejar
 4. Digite o nome do bot ff5msuper_bot - não se esqueça de colocar _bot no final.
@@ -67,9 +67,9 @@ Como registrar seu bot
 
 #### Instale o bot do Telegram com um único comando no Debian
 
-Se você só precisa de notificações do Telegram, então [use o plugin Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+Se você só precisa de notificações do Telegram, então [use o plugin Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
 
-Instale o bot do Telegram [com um comando] (https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) no Debian:
+Instale o bot do Telegram [com um comando](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) no Debian:
 
 Execute com o usuário `root
 ```
@@ -88,7 +88,7 @@ Este script:
 3. Crie o usuário tbot
 4. Escreverá instruções para registrar o bot do telegram e solicitar o `bot_token`.
 5. Escreverá instruções para obter o `chat_id` e solicitará o `chat_id`.
-6. Instalará o [ff5m.sh] (https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Instalará o [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
 
 Você precisará adicionar a chave ssh por conta própria
 
@@ -96,7 +96,7 @@ Você precisará adicionar a chave ssh por conta própria
 
 #### Instalação do bot do Telegram por etapas
 
-Se você só precisa de notificações no Telegram - então [use o plugin Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Se você só precisa de notificações no Telegram - então [use o plugin Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Pegue o arquivo [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) de `mod/telegram/` c printer.
 
@@ -164,7 +164,7 @@ Depois de cada reinicialização, o ssh será iniciado automaticamente após 3 m
 
 #### TimeZone
 
-Edite o arquivo [docker-compose.yml] (https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Edite o arquivo [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Especifique seu fuso horário. O arquivo de exemplo especifica ```TZ=Asia/Yekaterinburg``.
 
@@ -172,7 +172,7 @@ Especifique seu fuso horário. O arquivo de exemplo especifica ```TZ=Asia/Yekate
 
 #### Spoolman
 
-Edite o arquivo [docker-compose.yml] (https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Edite o arquivo [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Adicione:
 ```
@@ -216,9 +216,9 @@ sync_rate: 5
 
 #### Instalação e configuração para armbian (por noyhay)
 
-Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Faça o download das imagens do Debian Minimal/IOT com o Armbian em [https://www.armbian.com/download/] (https://www.armbian.com/download/)
+Faça o download das imagens do Debian Minimal/IOT com o Armbian em [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
 Instale o Armbian no sdcard usando o balenaEtcher em [https://etcher.balena.io/](https://etcher.balena.io/).
 
@@ -269,9 +269,9 @@ Reinicialize o sistema
 
 #### Instalação do bot do telegrama via helm no kubernetes (de aldiserg)
 
-Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify] (https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Se apenas as notificações do Telegram forem suficientes para você, então [use o plugin Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Faça o download do helm e instale-o em seu computador [https://helm.sh/docs/intro/install/] (https://helm.sh/docs/intro/install/)
+Faça o download do helm e instale-o em seu computador [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
 Clone o repositório com o gráfico do helm
 ```

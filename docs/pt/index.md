@@ -29,7 +29,7 @@ Veja o que você obtém ao instalar o ZMOD:
 
     * Fluidd / Mainsail:** Interfaces da Web fáceis de usar, nas quais você vê todas as informações de impressão, temperatura, controla a velocidade dos ventiladores, move os eixos e tem acesso total ao console de comando.
     * Envio de arquivos via "Octo/Klipper":** Integração com o Orca Slicer e outros fatiadores para envio direto de código G.
-    * Acesso à interface da Web da impressora via serviço de nuvem da Internet** [zmod.link] (https://zmod.link)
+    * Acesso à interface da Web da impressora via serviço de nuvem da Internet** [zmod.link](https://zmod.link)
     * **Notificação para o Telegram e mais de 100 outros serviços** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 #### **2. Sistemas avançados de calibração e nivelamento**
@@ -100,11 +100,11 @@ Veja o que você obtém ao instalar o ZMOD:
 O **ZMOD não substitui o firmware nativo**, mas torna-se um complemento que lhe dá a **escolha** de trabalhar da maneira antiga, por meio da tela, ou usar todas as ferramentas modernas de impressão 3D. Essa é a próxima etapa lógica para qualquer proprietário de FlashForge que deseja obter o máximo de sua impressora.
 
 !!! perigo
-    *Se quiser instalar este mod no seu AD5M (Pro) / [AD5X] (/pt/AD5X/), esteja ciente de que você corre o risco de perder a garantia ou danificar a impressora. Prossiga por sua própria conta e risco se quiser experimentar este mod!
+    *Se quiser instalar este mod no seu AD5M (Pro) / [AD5X](/pt/AD5X/), esteja ciente de que você corre o risco de perder a garantia ou danificar a impressora. Prossiga por sua própria conta e risco se quiser experimentar este mod!
     
     Se você não sabe o que é isso, não entende por que precisa da página da Web do klipper ou está satisfeito com o estoque, não instale esse mod. Para todos os outros - **leia as instruções completas**!
     
-    Você instalou o mod. Você não quer entender nada - imprima como fez. Você não precisa ajustar ou alterar absolutamente nada. Decidiu que está pronto para seguir em frente - você segue em frente - lendo a [documentação] (https://ghzserg.github.io/).
+    Você instalou o mod. Você não quer entender nada - imprima como fez. Você não precisa ajustar ou alterar absolutamente nada. Decidiu que está pronto para seguir em frente - você segue em frente - lendo a [documentação](https://ghzserg.github.io/).
 
 ## Antes de começar
 
