@@ -17,6 +17,7 @@ body:
         **Important:** If you are using any plugins other than 'recommend', disable them.
         If the issue is caused by the 'g28_tenz' or 'nopoop' plugin, please mention it in the title.
         [If the error is in the 'bambufy' plugin, contact the author](https://github.com/function3d/bambufy).
+        [If the error is in the 'lessWaste' plugin, contact the author](https://github.com/Hrybmo/lessWaste).
 
         **One issue per ticket** - do not add multiple problems to one ticket; only one issue will be resolved per ticket.
 
