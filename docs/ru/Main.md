@@ -62,8 +62,27 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - [PRINT_LEVELING](/ru/Global/#print_leveling) - при каждой печати строить карту стола 0-нет, 1-да (0).
 - [USE_KAMP](/ru/Global/#use_kamp) - Где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0)
 - [DISABLE_PRIMING](/ru/Global/#disable_priming) - запретить очистку сопла выдавливанием 0-нет, 1-да (0)
-- [FORCE_MD5](/ru/Global/#force_md5) - если 1 (по умолчанию 1) - проверять MD5 сумму файла, при ошибке - удалять файл. *Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте  добавить право исполнения на файл `chmod +x addMD5.sh`) он лежит в mod. [Подробнее](/ru/System/#check_md5)
-Его надо скачать к себе  на компьютер, а потом в Orca прописать. Профиль процесса -> Прочее -> Скрипты пост обработки. ```С:\путь_до_файла\addMD5.bat;```
+- [FORCE_MD5](/ru/Global/#force_md5) - если 1 (по умолчанию 1) - проверять MD5 сумму файла, при ошибке - удалять файл.
+    1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
+
+    - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+    - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
+    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
+    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
+    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Универсальный Python. Не забудьте выполнить ```chmod +x zmod-preprocess.py```
+    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Не забудьте выполнить ```chmod +x zmod-preprocess.sh```
+
+    2. В Orca нужно прописать. `Профиль процесса` -> `Прочее` -> `Скрипты пост обработки`.
+
+    Вот варианты добавления:
+
+    - ```"С:\путь_до_файла\zmod_preprocess-windows-amd64.exe";```
+    - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
+    - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
+    - ```"/home/user/zmod-preprocess.py";```
+    - ```"/home/user/zmod_preprocess-darwin-amd64";```
+    - ```"/home/user/zmod_preprocess-darwin-arm64";```
+    - ```"/home/user/zmod_preprocess-linux-amd64";```
 
 - [DISABLE_SKEW](/ru/Global/#disable_skew) - 1 - запретить SKEW коррекцию, 0 - загрузить профиль `skew_profile`(будет вызван макрос `SKEW_PROFILE LOAD=skew_profile`) (1)
 - AUTO_REBOOT - автоматическая перезагрузка принтера после окончания печати 0-нет, 1-да, 2-FIRMWARE_RESTART(только в режиме без родного экрана, с экраном REBOOT) (0).

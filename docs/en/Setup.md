@@ -10,15 +10,15 @@
 3. Copy the appropriate file from the [Native firmware](/Native_FW/) to the USB root directory:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
-       - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
-       - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
+    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) for FF5m**Pro** версии 
+    - [AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz) for AD5X
 
 4. Power off the printer.
 5. Insert the usb drive into printer usb port.
 6. Power on the printer.
 7. Wait for the stock firmware installation to complete.
 8. Configure Wi-Fi or Lan *new beaver*
-9. Install the latest printer updates.
+9. Get the latest printer updates or install firmware 1.1.7 for AD5X, or 3.2.3 for [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) if you don't want the printer to [measure the bed center before each print](https://wiki.zmod.link/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed)
 
 ---
 
@@ -129,7 +129,7 @@
 
 20. [Enable MD5 verification](/Recomendations/#enable-md5-checksum-control)
 
-    <img width="307" height="131" alt="image" src="https://github.com/user-attachments/assets/c90c096e-ff42-4479-b094-9d57261e7f36" />
+    <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
 21. [Read the recommendations](/Recomendations/)
 22. [Read the FAQ](/FAQ/)

@@ -1,4 +1,4 @@
-site_name: zMod
+site_name: zMod - Firmware for AD5M / AD5MPro / AD5X
 site_description: Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications
 site_author: ghzserg
 repo_url: https://github.com/ghzserg/zmod
@@ -72,7 +72,7 @@ plugins:
 
             Begin: Начало
             Setup: Установка
-            SetupCalibrations: Первоначальная калибровка
+            Setup Calibrations: Первоначальная калибровка
             Recommendations: Рекомендации
 
             Configuration: Настройка
@@ -81,9 +81,8 @@ plugins:
             Telegram: Телеграм
 
             Help: Помощь 
-            FAQ: ЧаВо
+            FAQ: FAQ
 
-            
             Macros: Макросы
             List: Список
             Main: Основные
@@ -91,15 +90,92 @@ plugins:
             Start/Stop/Global: Старт/Стоп/Глобальные
             System: Система
             Filament: Филамент
-            
+
             Additional: Дополнительно
             Native firmware: Родная прошивка
             Changelog: История изменений
             Support: Поддержка
 
+            Social: Соцсети
             Download: Скачать
             Video: Видео
             TelegramBot: Телеграм бот
+            zModLink: zMod LINK
+        - locale: de
+          name: Deutsch
+          build: true
+          theme:
+            language: de
+          nav_translations:
+            Index: Startseite
+
+            Begin: Beginn
+            Setup: Einrichtung
+            Setup Calibrations: Ersteinrichtung Kalibrierung
+            Recommendations: Empfehlungen
+
+            Configuration: Konfiguration
+            Parameters: Parameter
+            Plugins: Plugins
+            Telegram: Telegram
+
+            Help: Hilfe
+            FAQ: FAQ
+
+            Macros: Makros
+            List: Liste
+            Main: Hauptfunktionen
+            Calibrations: Kalibrierungen
+            Start/Stop/Global: Start/Stopp/Globale
+            System: System
+            Filament: Filament
+
+            Additional: Zusätzlich
+            Native firmware: Native Firmware
+            Changelog: Änderungshistorie
+            Support: Support
+
+            Download: Herunterladen
+            Video: Video
+            TelegramBot: Telegram-Bot
+            zModLink: zMod LINK
+        - locale: pt
+          name: Português
+          build: true
+          theme:
+            language: pt
+          nav_translations:
+            Index: Página inicial
+
+            Begin: Início
+            Setup: Instalação
+            Setup Calibrations: Calibração inicial
+            Recommendations: Recomendações
+
+            Configuration: Configuração
+            Parameters: Parâmetros
+            Plugins: Plugins
+            Telegram: Telegram
+
+            Help: Ajuda
+            FAQ: Perguntas frequentes
+
+            Macros: Macros
+            List: Lista
+            Main: Principais
+            Calibrations: Calibrações
+            Start/Stop/Global: Iniciar/Parar/Global
+            System: Sistema
+            Filament: Filamento
+
+            Additional: Adicional
+            Native firmware: Firmware nativo
+            Changelog: Histórico de alterações
+            Support: Suporte
+
+            Download: Baixar
+            Video: Vídeo
+            TelegramBot: Bot do Telegram
             zModLink: zMod LINK
 
 nav:
@@ -117,7 +193,6 @@ nav:
 
   - Help:
       - FAQ: FAQ.md
-
       - Help: Help.md
 
   - Macros:
@@ -135,6 +210,7 @@ nav:
       - Changelog: Changelog.md
       - Support: Sponsor.md
 
+  - Social: Social.md
   - Download: https://github.com/ghzserg/zmod/releases/latest
   - Video: Video.md
   - zmod_help_bot: http://t.me/zmod_help_bot
@@ -147,11 +223,17 @@ extra:
       link: https://t.me/zmod_help_bot
       name: "Help Bot"
     - icon: fontawesome/brands/telegram
+      link: https://t.me/zmod_info
+      name: "Official Telegram Info Channel"
+    - icon: fontawesome/brands/telegram
       link: https://t.me/FF_5M_5M_Pro/408369
       name: "Official Telegram Group"
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/1526322885078508
       name: "Unofficial Facebook Group"
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/Cw4cT5C24q
+      name: "Unofficial Discord Server"
     - icon: fontawesome/brands/github
       link: https://github.com/ghzserg/zmod
       name: "GitHub Repository"

@@ -86,28 +86,30 @@ Add [CHECK_MD5](/System/#check_md5) to your workflow.
 
 It is recommended to use the [global parameter FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
-*Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
-[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](/ru/System/#check_md5)*
+1. Select and download the file for your architecture and operating system:
 
-You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
+- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
 
-- `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```
-- `addmd5-darwin-arm64` (MacOS Silicon). Don't forget to run ```chmod +x addmd5-darwin-arm64```
-- `addmd5-linux-amd64` (Linux). Don't forget to run ```chmod +x addmd5-linux-amd64```
-- `addmd5-windows-amd64.exe` (Windows)
-
-Download it to your computer and then add it to Orca. `Process Profile` -> `Other` -> `Post-Processing Scripts`.
+2. In Orca, you need to specify: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
 Here are the options for adding:
 
-- ```"С:\path_to_file\addMD5.bat";```
-- ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
-- ```"/home/user/addmd5-linux-amd64";```
+- ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
+- ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
+- ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod_preprocess-darwin-amd64";```
+- ```"/home/user/zmod_preprocess-darwin-arm64";```
+- ```"/home/user/zmod_preprocess-linux-amd64";```
 
 [Details](/System/#check_md5)
 
-<img width="472" height="549" alt="image" src="https://github.com/user-attachments/assets/b330fa6f-fffd-4b0d-95b0-4e879eabd0d3" />
+<img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
 *hamster*
 

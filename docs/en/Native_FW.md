@@ -21,6 +21,7 @@
 - [1.1.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.9-1.1.1-3.0.7-20251201-Factory.tgz)
 - [1.2.0](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.0-1.1.1-3.0.7-20251212-Factory.tgz)
 - [1.2.1](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.1-1.1.1-3.0.7-20251217-Factory.tgz)
+- [1.2.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.2-1.1.1-3.0.7-20260205.tgz)
 - [3.0.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.3-1.1.1-3.0.7-20260119.tgz)
 
 ## AD5M native firmware
@@ -44,6 +45,8 @@
 
 ## Installing full firmware on AD5X
 
+This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
+
 Installation takes a long time, up to an hour.
 
 Download to flash drive
@@ -53,6 +56,8 @@ Download to flash drive
 - After the update, if you need to reflash the MCU, install [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Installing full firmware on FF5M
+
+This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
 
 Installation takes a long time, up to an hour.
 
@@ -130,10 +135,9 @@ Backup IFS firmware
 
 ## MD5
 
-- [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat)
-- [addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh)
-- [addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py)
-- [addmd5-darwin-amd64](https://github.com/asd2003ru/addmd5/releases) (MacOS Intel)
-- [addmd5-darwin-arm64](https://github.com/asd2003ru/addmd5/releases) (MacOS Silicon)
-- [addmd5-linux-amd64](https://github.com/asd2003ru/addmd5/releases) (Linux)
-- [addmd5-windows-amd64.exe](https://github.com/asd2003ru/addmd5/releases) (Windows)
+- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```

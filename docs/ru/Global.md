@@ -109,11 +109,15 @@ WEIGHT - вес в граммах (1500)
 
 Эта настройка не может быть использована, если включен родной экран (native screen).
 
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+
 Пример: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
 Включает сканирование gcode-файлов для определения используемых команд смены инструмента (T0, T1 и т. д.), а также цветов и материалов, назначенных им в слайсере: 0 (выключено), 1 (включено), 2 (выключить полное сканирование, но искать данные, подготовленные скриптом слайсера).
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -130,10 +134,13 @@ WEIGHT - вес в граммах (1500)
 Эта настройка также применяется к заданиям, запущенным в тихом режиме. Вы можете настроить ее так, чтобы печать прерывалась при возникновении определенных ошибок автоназначения: 2 (прервать, если какой-либо материал не совпадает, но допускать несовпадение цветов), 30 (прервать при любых проблемах).
 
 Для настройки пользовательских значений условий ошибки в тихом режиме сложите следующие значения, чтобы получить нужный параметр:
+
 * 2 (Хотя бы один материал не совпадает; например, в gcode-файле указан ABS, а у вас загружен только PLA; или данные о материале не удалось загрузить)
 * 4 (Хотя бы один цвет не совпадает совсем, обычно из-за того, что сканирование файлов отключено или не удалось)
 * 8 (Хотя бы один цвет совпадает плохо)
 * 16 (Одна и та же физическая катушка была назначена более чем одному индексу инструмента в файле)
+
+[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -236,24 +243,26 @@ Igor Polunovskiy
 
 Проверять MD5 сумму файла, при ошибке - удалять файл. 0-не проверять, 1 - проверять (1)
 
-*Пропишите в скрипты постобработки вызов [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) или
-[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) для Mac/Linux*(не забудьте добавить право исполнения на файл `chmod +x addMD5.sh`) или
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) он лежит в mod. [Подробнее](/ru/System/#check_md5)
+1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
 
-Также можно использовать [бинарные файлы на Go собранные под основные архитектуры](https://github.com/asd2003ru/addmd5/releases/) от @asd2003ru:
+- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Универсальный Python. Не забудьте выполнить ```chmod +x zmod-preprocess.py```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Не забудьте выполнить ```chmod +x zmod-preprocess.sh```
 
-- `addmd5-darwin-amd64` (MacOS Intel). Не забудьте выполнить ```chmod +x addmd5-darwin-amd64```
-- `addmd5-darwin-arm64` (MacOS Silicon). Не забудьте выполнить ```chmod +x addmd5-darwin-arm64```
-- `addmd5-linux-amd64` (Linux). Не забудьте выполнить ```chmod +x addmd5-linux-amd64```
-- `addmd5-windows-amd64.exe` (Windows)
-
-Его надо скачать к себе на компьютер, а потом в Orca прописать. `Профиль процесса` -> `Прочее` -> `Скрипты пост обработки`.
+2. В Orca нужно прописать. `Профиль процесса` -> `Прочее` -> `Скрипты пост обработки`.
 
 Вот варианты добавления:
 
-- ```"С:\путь_до_файла\addMD5.bat";```
-- ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
-- ```"/home/user/addmd5-linux-amd64";```
+- ```"С:\путь_до_файла\zmod_preprocess-windows-amd64.exe";```
+- ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
+- ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod_preprocess-darwin-amd64";```
+- ```"/home/user/zmod_preprocess-darwin-arm64";```
+- ```"/home/user/zmod_preprocess-linux-amd64";```
 
 Пример: `SAVE_ZMOD_DATA FORCE_MD5=1`
 

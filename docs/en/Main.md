@@ -71,7 +71,26 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - `USE_KAMP` — use adaptive bed mesh (KAMP) where possible: `0` = disable, `1` = enable (default: `0`).
 - `DISABLE_PRIMING` — disable nozzle priming: `0` = enable, `1` = disable (default: `0`).
 - `FORCE_MD5` — verify file MD5 hashes (default: `1`).
-  *Use [`addMD5.bat`](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or [`addMD5.sh`](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) in post-processing scripts.*
+    1. Select and download the file for your architecture and operating system:
+
+    - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+    - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
+    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
+    
+    2. In Orca, you need to specify: `Process Profile` -> `Other` -> `Post Processing Scripts`.
+    
+    Here are the options for adding:
+    
+    - ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
+    - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
+    - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
+    - ```"/home/user/zmod-preprocess.py";```
+    - ```"/home/user/zmod_preprocess-darwin-amd64";```
+    - ```"/home/user/zmod_preprocess-darwin-arm64";```
+    - ```"/home/user/zmod_preprocess-linux-amd64";```
 
 - `DISABLE_SKEW` — disable skew correction: `1` = disable, `0` = load `skew_profile` (default: `1`).
 - `AUTO_REBOOT` — auto-reboot after print: `0` = disable, `1` = enable, `2` = firmware restart (default: `0`).

@@ -17,6 +17,7 @@ body:
         **Important:** If you are using any plugins other than 'recommend', disable them.
         If the issue is caused by the 'g28_tenz' or 'nopoop' plugin, please mention it in the title.
         [If the error is in the 'bambufy' plugin, contact the author](https://github.com/function3d/bambufy).
+        [If the error is in the 'lessWaste' plugin, contact the author](https://github.com/Hrybmo/lessWaste).
 
         **One issue per ticket** - do not add multiple problems to one ticket; only one issue will be resolved per ticket.
 
@@ -105,11 +106,11 @@ body:
   - type: textarea
     id: config_attachment
     attributes:
-      label: Attach config.tar.gz file
+      label: Attach config-*.tar.gz file
       description: |
-        **IMPORTANT:** The ticket will be automatically closed without the `config.tar.gz` file.
+        **IMPORTANT:** The ticket will be automatically closed without the `config-*.tar.gz` file.
         1. Click on the text area below.
-        2. Either drag & drop the `config.tar.gz` file directly into this area or use the paperclip icon in the corner to select it.
+        2. Either drag & drop the `config-*.tar.gz` file directly into this area or use the paperclip icon in the corner to select it.
         3. A link to the uploaded file will appear in the field. Please ensure it is present.
       placeholder: "Drag & drop a file here or click to browse..."
     validations:
@@ -132,7 +133,7 @@ body:
     attributes:
       value: |
         **Please verify before submitting:**
-        - I have attached the `config.tar.gz` file.
+        - I have attached the `config-*.tar.gz` file.
         - I have disabled all third-party plugins (except for 'recommend').
         - I have read the recommended materials.
         - **One issue per ticket** - do not add multiple problems to one ticket; only one issue will be resolved per ticket.

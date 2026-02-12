@@ -186,21 +186,30 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 To set how many tools are shown in the color selection window (if file cannot be scanned for this info), use the [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count) parameter.
 
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 To enable scanning gcode files for tool, color and material info, use the [SCAN_FILE_COLORS](/Global/#scan_file_colors) parameter. You can also set this to 2 to check for data prepared by the slicer script, but not attempt to scan entire files.
 
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-To attempt automatic mapping of colors in the gcode file to physical spools, use the [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors) parameter. You must enable file scanning for this to be useful. Using a value of 30 will abort silent mode prints if there is any issue with the auto-assignment. You can create custom values for when to abort in silent mode by adding together the following values:
+To attempt automatic mapping of colors in the gcode file to physical spools, use the [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors) parameter. You must enable file scanning for this to be useful. Using a value of 30 will abort silent mode prints if there is any issue with the auto-assignment. 
+
+You can create custom values for when to abort in silent mode by adding together the following values:
+
 * 2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)
 * 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

@@ -110,11 +110,15 @@ If zMod is able to successfully scan the file for used tools, this will be overr
 
 This setting cannot be used when the native screen is enabled.
 
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+
 Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
 Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -131,10 +135,13 @@ Determines whether to attempt automatic mapping of toolchange commands (T0, T1, 
 This setting will also apply to prints started in silent mode. You can configure it to abort the print if certain errors arise with the auto-assignment: 2 (abort if any materials cannot be matched, allow color mismatches), 30 (abort on any issues)
 
 For custom values for error conditions in silent mode, add the following values together to determine the right setting:
+
 * 2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)
 * 4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
+
+[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -232,24 +239,26 @@ Igor Polunovskiy
 
 Verify file MD5 hash and delete on mismatch: 0 (disable), 1 (enable) (1).
 
-*Add [addMD5.bat](https://github.com/ghzserg/FF/releases/download/R/addMD5.bat) or
-[addMD5.sh](https://github.com/ghzserg/FF/releases/download/R/addMD5.sh) for Mac/Linux to your post-processing scripts* (don't forget to add executable permissions to the file `chmod +x addMD5.sh`) or
-[addMD5.py](https://github.com/ghzserg/FF/releases/download/R/addMD5.py) it's located in mod. [More details](/ru/System/#check_md5)
+1. Select and download the file for your architecture and operating system:
 
-You can also use [Go binaries built for the main architectures](https://github.com/asd2003ru/addmd5/releases/) from @asd2003ru:
+- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
 
-- `addmd5-darwin-amd64` (MacOS Intel). Don't forget to run ```chmod +x addmd5-darwin-amd64```
-- `addmd5-darwin-arm64` (MacOS Silicon). Don't forget to run ```chmod +x addmd5-darwin-arm64```
-- `addmd5-linux-amd64` (Linux). Don't forget to run ```chmod +x addmd5-linux-amd64```
-- `addmd5-windows-amd64.exe` (Windows)
-
-Download it to your computer and then add it to Orca. `Process Profile` -> `Other` -> `Post-Processing Scripts`.
+2. In Orca, you need to specify: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
 Here are the options for adding:
 
-- ```"С:\path_to_file\addMD5.bat";```
-- ```"C:\python_folder\python.exe" "C:\Scripts\add_md5.py";```
-- ```"/home/user/addmd5-linux-amd64";```
+- ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
+- ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
+- ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod-preprocess.py";```
+- ```"/home/user/zmod_preprocess-darwin-amd64";```
+- ```"/home/user/zmod_preprocess-darwin-arm64";```
+- ```"/home/user/zmod_preprocess-linux-amd64";```
 
 Example: `SAVE_ZMOD_DATA FORCE_MD5=1`
 
