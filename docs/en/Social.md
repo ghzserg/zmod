@@ -22,7 +22,7 @@ Join our community! Here you'll find official support channels, discussion group
     - [Telegram Info Channel](https://t.me/zmod_info)
     - Official news and project updates
 
--   :fontawesome-brands-telegram: __Official Discussion Group__
+-   __Official Discussion Group__
     - [Telegram Group](https://t.me/FF_5M_5M_Pro/408369)
     - Community discussions and help
 </div>

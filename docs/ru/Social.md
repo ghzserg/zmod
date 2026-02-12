@@ -22,7 +22,7 @@ hide:
     - [Telegram Info Channel](https://t.me/zmod_info)
     - Официальные новости и обновления проекта
 
--   :fontawesome-brands-telegram: __Official Discussion Group__
+-   __Official Discussion Group__
     - [Telegram Group](https://t.me/FF_5M_5M_Pro/408369)
     - Обсуждение и помощь от сообщества
 </div>
