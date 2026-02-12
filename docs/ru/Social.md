@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+---
+
 # Community & Social Links
 
 Присоединяйтесь к нашему сообществу! Здесь вы найдете официальные каналы поддержки, группы обсуждений и ресурсы для взаимодействия с проектом.
@@ -6,14 +11,14 @@
 
 ### Help Bot
 <div class="grid cards" markdown>
--   :material-robot: __Help Bot__
+-   __Help Bot__
     - [Telegram Help Bot](https://t.me/zmod_help_bot)
     - Автоматизированная помощь и поддержка
 </div>
 
 ### Telegram Channels
 <div class="grid cards" markdown>
--   :fontawesome-brands-telegram: __Official Info Channel__
+-   __Official Info Channel__
     - [Telegram Info Channel](https://t.me/zmod_info)
     - Официальные новости и обновления проекта
 
@@ -26,11 +31,11 @@
 
 ### Unofficial Groups
 <div class="grid cards" markdown>
--   :fontawesome-brands-facebook: __Facebook Group__
+-   __Facebook Group__
     - [Facebook Community](https://www.facebook.com/groups/1526322885078508)
     - Неофициальная группа для обсуждений
 
--   :fontawesome-brands-discord: __Discord Server__
+-   __Discord Server__
     - [Discord Community](https://discord.gg/Cw4cT5C24q)
     - Неофиальный сервер для общения в реальном времени
 </div>
@@ -39,7 +44,7 @@
 
 ### GitHub Repository
 <div class="grid cards" markdown>
--   :fontawesome-brands-github: __Source Code__
+-   __Source Code__
     - [GitHub Repository](https://github.com/ghzserg/zmod)
     - Исходный код и документация проекта
 </div>
