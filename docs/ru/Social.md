@@ -16,7 +16,7 @@ hide:
     - Автоматизированная поддержка, бот за вас найдет данные в документации.
 </div>
 
-### Теоеграм канал
+### Телеграм канал
 <div class="grid cards" markdown>
 -   __Официальный канал zMod Info__
     - [Telegram Info Channel](https://t.me/zmod_info)
@@ -29,7 +29,7 @@ hide:
 
 ## 🌐 Community Resources
 
-### Unofficial Groups
+### Не официальные группы
 <div class="grid cards" markdown>
 -   __Facebook Group__
     - [Facebook Community](https://www.facebook.com/groups/1526322885078508)
