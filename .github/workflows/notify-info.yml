@@ -1,0 +1,116 @@
+name: Info Notification
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    name: Prepare Info Message
+    runs-on: ubuntu-latest
+    outputs:
+      ru_text: ${{ steps.parse.outputs.ru_text }}
+      en_text: ${{ steps.parse.outputs.en_text }}
+      has_info: ${{ steps.parse.outputs.has_info }}
+    steps:
+      - name: Parse commit message
+        id: parse
+        run: |
+          python - <<'PY'
+          import json
+          import os
+
+          event_path = os.environ.get("GITHUB_EVENT_PATH", "")
+          if not event_path or not os.path.exists(event_path):
+            msg = ""
+          else:
+            with open(event_path, "r", encoding="utf-8") as f:
+              payload = json.load(f)
+            msg = (payload.get("head_commit") or {}).get("message", "")
+
+          if "info_ru:" not in msg and "info_en:" not in msg:
+            out = os.environ.get("GITHUB_OUTPUT")
+            with open(out, "a", encoding="utf-8") as f:
+              f.write("has_info=false\n")
+            raise SystemExit(0)
+
+          def extract(start, end=None):
+            idx = msg.find(start)
+            if idx == -1:
+              return ""
+            idx += len(start)
+            if end:
+              end_idx = msg.find(end, idx)
+              if end_idx != -1:
+                return msg[idx:end_idx]
+            return msg[idx:]
+
+          ru = extract("info_ru:", "info_en:").strip()
+          en = extract("info_en:", None).strip()
+
+          out = os.environ.get("GITHUB_OUTPUT")
+          with open(out, "a", encoding="utf-8") as f:
+            f.write("ru_text<<EOF\n")
+            f.write(ru + "\n")
+            f.write("EOF\n")
+            f.write("en_text<<EOF\n")
+            f.write(en + "\n")
+            f.write("EOF\n")
+            f.write("has_info=true\n")
+          PY
+
+  notify-telegram:
+    name: Send Telegram Notification
+    needs: prepare
+    runs-on: ubuntu-latest
+    if: needs.prepare.outputs.has_info == 'true'
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+    steps:
+      - name: Send Telegram Notification about info
+        if: env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
+        run: |
+          RU_TEXT="${{ needs.prepare.outputs.ru_text }}"
+          EN_TEXT="${{ needs.prepare.outputs.en_text }}"
+
+          if [ -n "$RU_TEXT" ] && [ -n "$EN_TEXT" ]; then
+            MESSAGE=$(printf '%s\n\n%s' "$RU_TEXT" "$EN_TEXT")
+          elif [ -n "$RU_TEXT" ]; then
+            MESSAGE="$RU_TEXT"
+          else
+            MESSAGE="$EN_TEXT"
+          fi
+
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage" \
+            -d chat_id="${{ secrets.TELEGRAM_CHAT_ID }}" \
+            -d parse_mode="Markdown" \
+            -d disable_web_page_preview="true" \
+            --data-urlencode text="$MESSAGE"
+
+  notify-discord:
+    name: Send Discord Notification
+    needs: prepare
+    runs-on: ubuntu-latest
+    if: needs.prepare.outputs.has_info == 'true'
+    env:
+      DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+    steps:
+      - name: Send Discord Notification
+        if: env.DISCORD_WEBHOOK != ''
+        run: |
+          EN_TEXT="${{ needs.prepare.outputs.en_text }}"
+
+          if [ -z "$EN_TEXT" ]; then
+            echo "No info_en: found, skipping Discord."
+            exit 0
+          fi
+
+          JSON_PAYLOAD=$(jq -n --arg content "$EN_TEXT" '{content: $content, flags: 4}')
+
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" \
+            -H "Content-Type: application/json" \
+            -d "$JSON_PAYLOAD"
