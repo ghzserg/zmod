@@ -2,21 +2,21 @@
 
 ### Redefinir a impressora para as configurações padrão de fábrica (necessário para instalar o mod)
 
-0. [Uninstall KlipperMod] (https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) se ele tiver sido instalado
+0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) se ele tiver sido instalado
 1. Redefinir a impressora para as configurações padrão
 2. formatar o USB Flash para FAT/FAT16/FAT32
-3. Coloque o arquivo de [Native firmware] (/en/Native_FW/) na pasta raiz da unidade flash USB
+3. Coloque o arquivo de [Native firmware](/en/Native_FW/) na pasta raiz da unidade flash USB
 
     - Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) para FF5m
-       - Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) para a versão FF5m**Pro
-       - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
+    - Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) para a versão FF5m**Pro
+    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
 
 4. Desligue a impressora
 5. Insira o pendrive USB na impressora
 6. Ligue a impressora
 7. Aguarde até que o firmware nativo seja instalado
 8. Configure o WiFi ou a LAN *new beaver*
-9. Obtenha as atualizações mais recentes para a impressora
+9. Obtenha as atualizações mais recentes da impressora ou instale o firmware 1.1.7 para AD5X ou 3.2.3 para [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) se você não quiser que a impressora [meça o centro da mesa antes de cada impressão](https://wiki.zmod.link/pt/FAQ/#mede-a-tabela-centralizada-antes-de-cada-trabalho-de-impress%C3%A3o)
 
 ---
 
