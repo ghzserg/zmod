@@ -45,6 +45,8 @@
 
 ## Installing full firmware on AD5X
 
+This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
+
 Installation takes a long time, up to an hour.
 
 Download to flash drive
@@ -54,6 +56,8 @@ Download to flash drive
 - After the update, if you need to reflash the MCU, install [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Installing full firmware on FF5M
+
+This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
 
 Installation takes a long time, up to an hour.
 

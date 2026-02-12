@@ -45,6 +45,8 @@
 
 ## Installation der vollständigen Firmware auf dem AD5X
 
+Dies ist nicht die Original-Firmware, sondern eine Entbrickungs-/Wiederherstellungs-Firmware. Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht mehr startet.
+
 Die Installation kann bis zu einer Stunde dauern.
 
 Herunterladen auf einen USB-Stick
@@ -54,6 +56,8 @@ Herunterladen auf einen USB-Stick
 - Nach dem Update, wenn Sie die MCU flashen müssen, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Installation der vollständigen Firmware auf dem FF5M
+
+Dies ist nicht die Original-Firmware, sondern eine Entbrickungs-/Wiederherstellungs-Firmware. Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht mehr startet.
 
 Die Installation kann bis zu einer Stunde dauern.
 

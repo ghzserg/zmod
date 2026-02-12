@@ -45,6 +45,8 @@
 
 ## Instalação do firmware completo no AD5X
 
+Esta não é a firmware original, mas uma firmware de recuperação (para "desbrickar"). Deve ser instalada apenas se a impressora não ligar de forma alguma.
+
 A instalação leva muito tempo, até uma hora.
 
 Download em um pendrive USB
@@ -54,6 +56,8 @@ Download em um pendrive USB
 - Após a atualização, se você precisar atualizar o MCU, instale o [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Instalação do firmware completo no FF5M
+
+Esta não é a firmware original, mas uma firmware de recuperação (para "desbrickar"). Deve ser instalada apenas se a impressora não ligar de forma alguma.
 
 A instalação leva muito tempo, até uma hora.
 
