@@ -72,7 +72,7 @@ plugins:
 
             Begin: Начало
             Setup: Установка
-            SetupCalibrations: Первоначальная калибровка
+            Setup Calibrations: Первоначальная калибровка
             Recommendations: Рекомендации
 
             Configuration: Настройка
@@ -81,7 +81,7 @@ plugins:
             Telegram: Телеграм
 
             Help: Помощь 
-            FAQ: ЧаВо
+            FAQ: FAQ
 
             Macros: Макросы
             List: Список
@@ -110,7 +110,7 @@ plugins:
 
             Begin: Beginn
             Setup: Einrichtung
-            SetupCalibrations: Ersteinrichtung Kalibrierung
+            Setup Calibrations: Ersteinrichtung Kalibrierung
             Recommendations: Empfehlungen
 
             Configuration: Konfiguration
@@ -148,7 +148,7 @@ plugins:
 
             Begin: Início
             Setup: Instalação
-            SetupCalibrations: Calibração inicial
+            Setup Calibrations: Calibração inicial
             Recommendations: Recomendações
 
             Configuration: Configuração
