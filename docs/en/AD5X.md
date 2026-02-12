@@ -1,4 +1,4 @@
-### AD5X
+﻿### AD5X
 
 1. [Key Features](#1-key-features)
 2. [File Preparation in Orca](#2-how-to-prepare-a-file-in-orca)
@@ -155,9 +155,27 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
 To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
+* 0 - No pooping will occur; the print head will move directly back to the prime tower. Use together with "Purge in prime tower" and other purge options.
+* 1 - Poop will occur during color changes; two poops of length determined by filament_drop_length in your filament.json file will be produced upon changing color. After this the print head will return to the prime tower.
+* 2 - The print head will move to the trash chute but will not produce poop. The slicer is responsible for purge; this requires suitable filament change G-Code.
 
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
+```
+
+Leakage can occur from the nozzle while changing color at the prime tower, causing blobs. To reduce this on initial layers, use the [NOPOOP_TRASH_SKIP_HEIGHT](/Global/#nopoop_trash_skip_height) parameter. When enabled, the print head will still travel to the trash during no-poop color changes and attempt to strike any leakage off so it falls down the chute. Poop will not be produced.
+
+```gcode
+SAVE_ZMOD_DATA NOPOOP_TRASH_SKIP_HEIGHT=0.6
+```
+
+It is possible for custom start G-Code to include a check for whether the native screen is enabled or disabled, and which USE_TRASH_ON_PRINT and NOPOOP_TRASH_SKIP_HEIGHT settings are currently set. You can determine how the printer responds to this check failing, with the [validate_print_settings_auto_change](/Global/#validate_print_settings_auto_change) parameter.
+* 0 - If the parameters are incorrect, abort the print and display an error.
+* 1 - If the parameters are incorrect, automatically switch to the correct ones. (It is not possible to switch automatically between native screen enabled or disabled; this will still show an error and halt the print.)
+* 2 - If the parameters are incorrect, show a warning in the console and continue with the print.
+
+```gcode
+SAVE_ZMOD_DATA VALIDATE_PRINT_SETTINGS_AUTO_CHANGE=1
 ```
 
 To unload the filament after printing is complete, use the [REMOVE_FILAMENT](/Global/#remove_filament) parameter.

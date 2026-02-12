@@ -385,18 +385,46 @@ Determines whether or not to skip the color change process if the before and aft
 
 Example: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
+---
+
 ##### USE_TRASH_ON_PRINT
 
 AD5X only
 
 Only when running without the native display
 
-Use trash on color change during printing
+Use trash and produce poop on color change during printing
 
-- 0 - do not use
-- 1 - use (default)
+- 0 - do not use (return directly to prime tower)
+- 1 - use trash and produce poop
+- 2 - move to trash then return control to slicer, slicer is responsible for poop and returning to the prime tower
 
 Example: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
+
+---
+
+##### NOPOOP_TRASH_SKIP_HEIGHT
+
+AD5X only
+
+Only when running without the native display
+
+Specifies a height below which, even in nopoop mode (USE_TRASH_ON_PRINT = 0), the printer will go to the trash chute while unloading and loading filament, to attempt to prevent filament leakage from forming blobs on the prime tower on the lower layers.
+
+Example: `SAVE_ZMOD_DATA NOPOOP_TRASH_SKIP_HEIGHT=0.6`
+
+---
+
+##### VALIDATE_PRINT_SETTINGS_AUTO_CHANGE
+
+AD5X only
+
+Sets the behavior of the printer when a sliced gcode file's start gcode contains a native screen / use_trash_on_print check. Has no effect when printing gcode files without this check.
+- 0 - Abort the print and show an error if parameters are incorrect
+- 1 - Automatically change settings to match the parameters (cannot change native screen enabled / disabled)
+- 2 - Display a warning in the console and proceed with the print
+
+Example: `SAVE_ZMOD_DATA VALIDATE_PRINT_SETTINGS_AUTO_CHANGE=1`
 
 ---
 
