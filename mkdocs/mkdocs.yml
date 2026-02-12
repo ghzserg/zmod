@@ -209,6 +209,7 @@ nav:
       - Changelog: Changelog.md
       - Support: Sponsor.md
 
+  - Social: Social.md
   - Download: https://github.com/ghzserg/zmod/releases/latest
   - Video: Video.md
   - zmod_help_bot: http://t.me/zmod_help_bot
@@ -220,6 +221,9 @@ extra:
     - icon: material/robot
       link: https://t.me/zmod_help_bot
       name: "Help Bot"
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/zmod_info
+      name: "Official Telegram Info Channel"
     - icon: fontawesome/brands/telegram
       link: https://t.me/FF_5M_5M_Pro/408369
       name: "Official Telegram Group"
