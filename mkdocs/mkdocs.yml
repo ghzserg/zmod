@@ -54,6 +54,7 @@ site_dir: site
 plugins:
   - search
   - i18n:
+      search: true
       docs_structure: folder
       languages:
         - locale: en
