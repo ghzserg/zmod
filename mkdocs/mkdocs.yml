@@ -52,7 +52,6 @@ docs_dir: ../docs
 site_dir: site
 
 plugins:
-  - search
   - i18n:
       search: true
       docs_structure: folder
@@ -61,11 +60,13 @@ plugins:
           default: true
           name: English
           build: true
+          search: true
           theme:
             language: en
         - locale: ru
           name: Русский
           build: true
+          search: true
           theme:
             language: ru
           nav_translations:
@@ -105,6 +106,7 @@ plugins:
         - locale: de
           name: Deutsch
           build: true
+          search: true
           theme:
             language: de
           nav_translations:
@@ -143,6 +145,7 @@ plugins:
         - locale: pt
           name: Português
           build: true
+          search: true
           theme:
             language: pt
           nav_translations:
