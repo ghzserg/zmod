@@ -192,6 +192,7 @@ nav:
       - Recommendations: Recomendations.md
 
   - Configuration:
+      - Setup Calibrations: SetupCalibrations.md
       - AD5X: AD5X.md
       - Plugins: Plugin.md
       - Telegram: Telegram.md
