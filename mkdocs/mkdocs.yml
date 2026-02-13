@@ -54,20 +54,20 @@ site_dir: site
 plugins:
   - search
   - i18n:
-      search: true
+      reconfigure_material: true
       docs_structure: folder
       languages:
         - locale: en
           default: true
           name: English
           build: true
-          search: true
+          reconfigure_search: true
           theme:
             language: en
         - locale: ru
           name: Русский
           build: true
-          search: true
+          reconfigure_search: true
           theme:
             language: ru
           nav_translations:
@@ -107,7 +107,7 @@ plugins:
         - locale: de
           name: Deutsch
           build: true
-          search: true
+          reconfigure_search: true
           theme:
             language: de
           nav_translations:
