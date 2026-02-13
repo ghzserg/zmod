@@ -254,7 +254,7 @@ jobs:
               commentBody += '✅ **Отлично!** Файл `' + fileName + '` найден, доступен и имеет корректную структуру.\n\n';
               commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
               commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
-              commentBody += '\nhttps://wiki.zmod.link/ru/Help/\https://wiki.zmod.link/Help/';
+              commentBody += '\nhttps://wiki.zmod.link/ru/Help/\nhttps://wiki.zmod.link/Help/';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,
