@@ -264,6 +264,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 Для тех у кого принтер при включении повисает на заставке и не доступен по ЛАН кабелю.
 
 ![resized-image](https://github.com/user-attachments/assets/f63b16e6-2425-41c8-a166-226fb041f5ad)
+
 ![](../images/ff.jpg)
 
 Попробуйте восстановить прошивку, через установку полной прошивки:
