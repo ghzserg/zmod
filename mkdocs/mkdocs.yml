@@ -57,6 +57,44 @@ plugins:
       reconfigure_material: true
       docs_structure: folder
       languages:
+        - locale: cs
+          name: Čeština
+          build: true
+          theme:
+            language: cs
+          nav_translations:
+            Index: Domovská stránka
+
+            Begin: Začátek
+            Setup: Nastavení
+            SetupCalibrations: Prvotní nastavení kalibrace
+            Recommendations: Doporučení
+
+            Configuration: Konfigurace
+            Parameters: Parametry
+            Plugins: Pluginy
+            Telegram: Telegram
+
+            Help: Nápověda
+            FAQ: FAQ
+
+            Macros: Makra
+            List: Seznam
+            Main: Hlavní funkce
+            Calibrations: Kalibrace
+            Start/Stop/Global: Start/Stop/Globální
+            System: Systém
+            Filament: Filament
+
+            Additional: Dodatečné
+            Native firmware: Nativní firmware
+            Changelog: Historie změn
+            Support: Podpora
+
+            Download: Stáhnout
+            Video: Video
+            TelegramBot: Telegram bot
+            zModLink: zMod LINK
         - locale: en
           default: true
           name: English
@@ -64,6 +102,39 @@ plugins:
           reconfigure_search: true
           theme:
             language: en
+          nav_translations:
+            Index: Startseite
+
+            Begin: Beginn
+            Setup: Einrichtung
+            SetupCalibrations: Ersteinrichtung Kalibrierung
+            Recommendations: Empfehlungen
+
+            Configuration: Konfiguration
+            Parameters: Parameter
+            Plugins: Plugins
+            Telegram: Telegram
+
+            Help: Hilfe
+            FAQ: FAQ
+
+            Macros: Makros
+            List: Liste
+            Main: Hauptfunktionen
+            Calibrations: Kalibrierungen
+            Start/Stop/Global: Start/Stopp/Globale
+            System: System
+            Filament: Filament
+
+            Additional: Zusätzlich
+            Native firmware: Native Firmware
+            Changelog: Änderungshistorie
+            Support: Support
+
+            Download: Herunterladen
+            Video: Video
+            TelegramBot: Telegram-Bot
+            zModLink: zMod LINK
         - locale: ru
           name: Русский
           build: true
