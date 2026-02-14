@@ -1,0 +1,2807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../SetupCalibrations/">
+      
+      
+        <link rel="next" href="../Plugin/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../ru/AD5X/" hreflang="ru">
+        
+          <link rel="alternate" href="../de/AD5X/" hreflang="de">
+        
+          <link rel="alternate" href="../pt/AD5X/" hreflang="pt">
+        
+          <link rel="alternate" href="../cs/AD5X/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>AD5X - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ad5x" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AD5X
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../ru/AD5X/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../de/AD5X/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../pt/AD5X/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../cs/AD5X/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Begin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Macros
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Additional
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Begin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommendations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ad5x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Key Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-how-to-prepare-a-file-in-orca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. How to Prepare a File in Orca
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-to-use-the-color-selection-menu-macro-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. How to Use the Color Selection Menu (Macro COLOR)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-print-menu-macro-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Print Menu (Macro PRINT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Print Menu (Macro PRINT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ad5x-global-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X Global Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-to-manually-tell-the-printer-which-spool-is-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. How to Manually Tell the Printer Which Spool Is Loaded
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-how-to-configure-waste-filament-during-filament-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. How to Configure Waste Filament During Filament Change
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. How to Configure Waste Filament During Filament Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-parameters-most-frequently-adjusted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Parameters (Most Frequently Adjusted):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Parameters (Most Frequently Adjusted):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-do-not-adjust-if-unsure-of-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Do Not Adjust If Unsure of the Result):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-add-custom-filament-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Add custom filament types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-add-custom-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Add custom colors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-fixing-trash-bin-and-filament-cutting-knife-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Fixing Trash Bin and Filament Cutting Knife Operation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Fixing Trash Bin and Filament Cutting Knife Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trash-bin-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trash Bin Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knife-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knife Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-basket-on-the-ad5x-stock-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the basket on the AD5X stock firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-ifs-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. IFS commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ifs-firmware-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. IFS Firmware Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifs-sensor-error-serial-communication-error-read-failed-device-reports-readiness-to-read-but-returned-no-data-device-disconnected-or-multiple-access-on-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macros
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Macros
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Global
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ad5x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Key Features
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-how-to-prepare-a-file-in-orca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. How to Prepare a File in Orca
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-to-use-the-color-selection-menu-macro-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. How to Use the Color Selection Menu (Macro COLOR)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-print-menu-macro-print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Print Menu (Macro PRINT)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Print Menu (Macro PRINT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ad5x-global-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X Global Parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-to-manually-tell-the-printer-which-spool-is-loaded" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. How to Manually Tell the Printer Which Spool Is Loaded
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-how-to-configure-waste-filament-during-filament-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. How to Configure Waste Filament During Filament Change
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. How to Configure Waste Filament During Filament Change">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-parameters-most-frequently-adjusted" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Parameters (Most Frequently Adjusted):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Parameters (Most Frequently Adjusted):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-parameters-do-not-adjust-if-unsure-of-the-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced Parameters (Do Not Adjust If Unsure of the Result):
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-add-custom-filament-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Add custom filament types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-add-custom-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Add custom colors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-fixing-trash-bin-and-filament-cutting-knife-operation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Fixing Trash Bin and Filament Cutting Knife Operation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Fixing Trash Bin and Filament Cutting Knife Operation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trash-bin-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trash Bin Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#knife-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Knife Calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-the-basket-on-the-ad5x-stock-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setting up the basket on the AD5X stock firmware
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-ifs-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. IFS commands
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-ifs-firmware-recovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. IFS Firmware Recovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ifs-sensor-error-serial-communication-error-read-failed-device-reports-readiness-to-read-but-returned-no-data-device-disconnected-or-multiple-access-on-port" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/AD5X.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>AD5X</h1>
+
+<h3 id="ad5x">AD5X<a class="headerlink" href="#ad5x" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="#1-key-features">Key Features</a></li>
+<li><a href="#2-how-to-prepare-a-file-in-orca">File Preparation in Orca</a></li>
+<li><a href="#3-how-to-use-the-color-selection-menu-macro-color">Color Selection (<code>COLOR</code>)</a></li>
+<li><a href="#4-print-menu-macro-print">Print Menu (<code>PRINT</code>)</a><ul>
+<li><a href="#ad5x-global-parameters">AD5X Global Parameters</a></li>
+</ul>
+</li>
+<li><a href="#5-how-to-manually-tell-the-printer-which-spool-is-loaded">Manual Spool Selection</a></li>
+<li>
+<p><a href="#6-how-to-configure-waste-filament-during-filament-change">Waste Filament Configuration</a></p>
+<ul>
+<li>🔧 <a href="#basic-parameters-most-frequently-adjusted">Basic Parameters</a></li>
+<li>⚙️ <a href="#advanced-parameters-do-not-adjust-if-unsure-of-the-result">Advanced Parameters</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#7-add-custom-filament-types">Add custom filament types</a></p>
+</li>
+<li><a href="#8-add-custom-colors">Add custom colors</a></li>
+<li>
+<p><a href="#9-fixing-trash-bin-and-filament-cutting-knife-operation">Fixing Trash Bin and Filament Cutting Knife Operation</a></p>
+<ul>
+<li><a href="#setting-up-the-basket-on-the-ad5x-stock-firmware">Via the engineering menu on the stock firmware</a></li>
+<li><a href="/Setup/#ad5x-warning">Via a flash drive on the stock firmware</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#10-ifs-commands">IFS commands</a></p>
+</li>
+<li><a href="#11-ifs-firmware-recovery">IFS Firmware Recovery</a></li>
+</ol>
+<h3 id="plugins"><a href="https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md">Plugins</a><a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/function3d/bambufy"><strong>bambufy</strong></a> - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction</li>
+<li><a href="https://github.com/ghzserg/nopoop"><strong>nopoop</strong></a> - Maximum waste reduction by ninjamida</li>
+<li><a href="https://github.com/Hrybmo/lessWaste/">lessWaste</a> - форк bambufy</li>
+</ul>
+<hr />
+<h2 id="1-key-features"><strong>1. Key Features</strong><a class="headerlink" href="#1-key-features" title="Permanent link">&para;</a></h2>
+<p>Differences from AD5M:</p>
+<ul>
+<li>No <code>Entware</code> support</li>
+<li><strong>Always use</strong> <code>FAST_CLOSE_DIALOGS</code> (fast closing) instead of <code>CLOSE_DIALOGS</code> (slow closing).</li>
+<li>The <code>NEW_SAVE_CONFIG</code> macro <strong>does not work</strong>.</li>
+<li>To enable the camera, use <code>CAMERA_ON VIDEO=video3</code> or <code>CAMERA_ON VIDEO=video0</code> or <code>CAMERA_ON VIDEO=video99</code>.</li>
+<li>Klipper may crash. Solution: 'Process Profile' -&gt; 'Other' -&gt; 'Output G-code' -&gt; 'Exclude Models', uncheck.</li>
+</ul>
+<hr />
+<h2 id="2-how-to-prepare-a-file-in-orca"><strong>2. How to Prepare a File in Orca</strong><a class="headerlink" href="#2-how-to-prepare-a-file-in-orca" title="Permanent link">&para;</a></h2>
+<p><a href="/Recomendations/#send-files-via-octoklipper-for-printing">Send Files via "Octo/Klipper" for Printing</a></p>
+<p><strong>You must remove unused spools from the list in Orca.</strong></p>
+<p><strong>Example:</strong>
+The printer has 4 spools (№1, №2, №3, №4). Only spools №1 and №3 are needed for printing.</p>
+<ul>
+<li>In the file, they will be named <strong>T0</strong> (first color) and <strong>T1</strong> (second color).</li>
+<li>In the menu, you’ll need to select:<ul>
+<li><strong>T0</strong> → spool №1</li>
+<li><strong>T1</strong> → spool №3</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="3-how-to-use-the-color-selection-menu-macro-color"><strong>3. How to Use the Color Selection Menu (Macro <code>COLOR</code>)</strong><a class="headerlink" href="#3-how-to-use-the-color-selection-menu-macro-color" title="Permanent link">&para;</a></h2>
+<p><img width="874" height="286" alt="image" src="https://github.com/user-attachments/assets/c0538a17-88a9-4aee-a65c-cff4cc1773d0" /></p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29" /></p>
+<p><img width="563" height="550" alt="image" src="https://github.com/user-attachments/assets/cc0c951f-48c1-469d-8940-90832ad1d3f5" /></p>
+<p><img width="800" height="480" alt="color" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" /></p>
+<ul>
+<li><code>Extruder: 1 (PETG/Orange)</code> – This means the printer is currently loaded with orange PETG filament from spool №1.</li>
+<li><code>IFS: True</code> – The automatic filament feeding system is active.</li>
+</ul>
+<p><strong>Now select the spool you want to work with (e.g., spool 2):</strong></p>
+<p><img width="568" height="455" alt="image" src="https://github.com/user-attachments/assets/f7ea3ed0-28a5-48d5-99db-eade0a199e99" /></p>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" /></p>
+<p>You can perform four actions:</p>
+<ol>
+<li><strong>Change the color</strong> of the spool.</li>
+<li><strong>Change the material type</strong> (e.g., from PLA to PETG).</li>
+<li><strong>Load</strong> this filament into the printer.</li>
+<li><strong>Unload</strong> filament from the printer.</li>
+</ol>
+<p><strong>How to change color:</strong></p>
+<ol>
+<li>Click "Change Color".</li>
+<li><strong>Select a color from the list.</strong> This ensures the printer and native screen understand your selection.
+<img width="561" height="823" alt="image" src="https://github.com/user-attachments/assets/8dbff228-dfc0-4705-92f9-d94df80b7a4e" /></li>
+</ol>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" /></p>
+<ol start="3">
+<li>After selection, you’ll return to the menu, and the spool’s color <strong>should update</strong>.
+<img width="556" height="545" alt="image" src="https://github.com/user-attachments/assets/f32a9239-44c6-449d-bbf7-5f453f149ef7" /></li>
+</ol>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" /></p>
+<p><strong>If the color doesn’t change:</strong> Close the window with the "X" button and restart the <code>COLOR</code> macro. Sometimes the screen doesn’t refresh immediately.</p>
+<p><strong>How to change material type:</strong></p>
+<ol>
+<li>Click "Change Type".</li>
+<li><strong>Select a material type from the list.</strong>
+<img width="562" height="710" alt="image" src="https://github.com/user-attachments/assets/baf7b807-c4f5-4ab4-8bfd-2fc43bb448cd" /></li>
+</ol>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" /></p>
+<p><strong>If the type doesn’t change:</strong> Close the window with the "X" button and restart the <code>COLOR</code> macro. Sometimes the screen doesn’t refresh immediately.</p>
+<p><strong>Tip:</strong> If multiple spools are assigned the <strong>same color and material type</strong>, the printer will automatically switch to the next spool when the current one runs out. This is called <strong>"infinite spool mode"</strong>.</p>
+<hr />
+<h2 id="4-print-menu-macro-print"><strong>4. Print Menu (Macro <code>PRINT</code>)</strong><a class="headerlink" href="#4-print-menu-macro-print" title="Permanent link">&para;</a></h2>
+<p>This window opens <strong>automatically</strong> when you start printing.
+<img width="567" height="564" alt="image" src="https://github.com/user-attachments/assets/a046c089-22d3-474e-89b6-89815412d068" /></p>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f1ad0f49-e2bd-43c8-9301-7c58b9c05c22" /></p>
+<p><strong>How to interpret the display:</strong></p>
+<ul>
+<li><code>Cube.gcode</code> – The name of the file being printed.</li>
+<li><code>T0</code> – The first color in the file. Printed using <strong>spool №4</strong> (orange PLA).</li>
+<li><code>T1</code> – The second color. Printed using <strong>spool №3</strong> (black PLA).</li>
+<li><code>T2</code> – The third color. Printed using <strong>spool №2</strong> (green PLA).</li>
+<li><code>T3</code> – The fourth color. Also printed using <strong>spool №2</strong> (green PLA).</li>
+</ul>
+<p><strong>To change the spool for a color during printing:</strong></p>
+<ul>
+<li>Simply <strong>click the target T</strong> (e.g., T1) and select another spool from the list.
+<img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" /></li>
+</ul>
+<p><img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" /></p>
+<hr />
+<h3 id="ad5x-global-parameters">AD5X Global Parameters<a class="headerlink" href="#ad5x-global-parameters" title="Permanent link">&para;</a></h3>
+<p>To prevent the color selection dialog from appearing at the start of a print, use the global parameter <a href="/Global/#silent">SILENT</a>:</p>
+<ul>
+<li>0 – show dialog (default)</li>
+<li>1 – do not show dialog, use previously set colors</li>
+<li>2 – do not show dialog, do not use IFS</li>
+</ul>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA SILENT=1
+</code></pre></div>
+<p>To disable automatic filament insertion into the extruder, use the global parameter <a href="/Global/#autoinsert">AUTOINSERT</a>:</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA AUTOINSERT=0
+</code></pre></div>
+<p>To disable dumping of filament into the trash when printing, use the <a href="/Global/#use_trash_on_print">USE_TRASH_ON_PRINT</a> parameter.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
+</code></pre></div>
+<p>To unload the filament after printing is complete, use the <a href="/Global/#remove_filament">REMOVE_FILAMENT</a> parameter.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA REMOVE_FILAMENT=1
+</code></pre></div>
+<p>To set how many tools are shown in the color selection window (if file cannot be scanned for this info), use the <a href="/Global/#allowed_tool_count">ALLOWED_TOOL_COUNT</a> parameter.</p>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">See preprocessing</a></p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
+</code></pre></div>
+<p>To enable scanning gcode files for tool, color and material info, use the <a href="/Global/#scan_file_colors">SCAN_FILE_COLORS</a> parameter. You can also set this to 2 to check for data prepared by the slicer script, but not attempt to scan entire files.</p>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">See preprocessing</a></p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
+</code></pre></div>
+<p>To attempt automatic mapping of colors in the gcode file to physical spools, use the <a href="/Global/#auto_assign_colors">AUTO_ASSIGN_COLORS</a> parameter. You must enable file scanning for this to be useful. Using a value of 30 will abort silent mode prints if there is any issue with the auto-assignment. </p>
+<p>You can create custom values for when to abort in silent mode by adding together the following values:</p>
+<ul>
+<li>2 (At least one material cannot be matched; eg. the gcode file specifies ABS, but you only have PLA loaded; or material data could not be loaded)</li>
+<li>4 (At least one color cannot be matched at all, usually due to file scanning being disabled or failing)</li>
+<li>8 (At least one color is potentially a poor match)</li>
+<li>16 (At least one physical spool has been assigned to more than one tool index in the file)</li>
+</ul>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">See preprocessing</a></p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
+</code></pre></div>
+<p>When a color change command is encountered, if it indicates a switch to the already-loaded color, usually the change process would be skipped as it is pointless. If for some reason you wish to enable the full color change process, use the <a href="/Global/#always_full_color_change">ALWAYS_FULL_COLOR_CHANGE</a> parameter.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
+</code></pre></div>
+<hr />
+<h2 id="5-how-to-manually-tell-the-printer-which-spool-is-loaded"><strong>5. How to Manually Tell the Printer Which Spool Is Loaded</strong><a class="headerlink" href="#5-how-to-manually-tell-the-printer-which-spool-is-loaded" title="Permanent link">&para;</a></h2>
+<p>Sometimes you manually change the spool, but the printer doesn’t recognize it and displays outdated information.</p>
+<p>To fix this, use a dedicated command.</p>
+<p><strong>Type this phrase in the console:</strong></p>
+<div class="highlight"><pre><span></span><code>SET_EXTRUDER_SLOT SLOT=1
+</code></pre></div>
+<p><strong>What this means:</strong></p>
+<ul>
+<li><code>SET_EXTRUDER_SLOT</code> – Command telling the printer: "Remember this spool!"</li>
+<li><code>SLOT=1</code> – The spool number you just loaded. <strong>You can change this number!</strong></li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>If you loaded filament from spool №3: <code>SET_EXTRUDER_SLOT SLOT=3</code></li>
+<li>If from spool №2: <code>SET_EXTRUDER_SLOT SLOT=2</code></li>
+</ul>
+<p>After this command, the printer will know which spool is active and won’t mix up colors.</p>
+<hr />
+<h2 id="6-how-to-configure-waste-filament-during-filament-change"><strong>6. How to Configure Waste Filament During Filament Change</strong><a class="headerlink" href="#6-how-to-configure-waste-filament-during-filament-change" title="Permanent link">&para;</a></h2>
+<p>These settings help reduce plastic waste when switching spools. To adjust them, first <strong>disable the printer’s native screen</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<p>In screen-off mode, these sensors are enabled:</p>
+<ul>
+<li><code>Head Switch Sensor</code> – Detects filament presence in the extruder</li>
+<li><code>Ifs Motion Sensor</code> – Monitors filament movement in IFS</li>
+</ul>
+<p><strong>How to find these settings:</strong></p>
+<ol>
+<li>Open the <strong>"Configuration"</strong> tab.</li>
+<li>Navigate to the <strong><code>mod_data</code></strong> folder.</li>
+<li>Open the <strong><code>filament.json</code></strong> file.</li>
+</ol>
+<p><img alt="File Location" src="https://github.com/user-attachments/assets/109b0f0a-c87d-4f5c-9333-ebfbb8065b87" /></p>
+<p>In this file, each material type (PLA, ABS, PETG, etc.) has a list of values. Here’s what they mean:</p>
+<hr />
+<h4 id="basic-parameters-most-frequently-adjusted"><strong>Basic Parameters (Most Frequently Adjusted):</strong><a class="headerlink" href="#basic-parameters-most-frequently-adjusted" title="Permanent link">&para;</a></h4>
+<p>For these settings to work, you need to <strong>disable the printer's native display</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<ol>
+<li><strong><code>temp</code></strong> — Nozzle temperature for filament change. <strong>Default value depends on material type.</strong></li>
+<li>
+<p><strong><code>filament_drop_length</code> (Purge Length)</strong></p>
+<ul>
+<li><strong>In simple terms:</strong> How many millimeters of filament the printer will purge into the waste bin to <strong>clean the nozzle</strong> from the previous color.<ul>
+<li><strong>Tip:</strong> Increase this value if colors mix during spool changes. Decrease it to reduce waste.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>filament_drop_length_add</code> (Additional Purge)</strong></p>
+<ul>
+<li><strong>In simple terms:</strong> Extra purge length when switching <strong>material types</strong> (e.g., PLA to PETG), not just colors.<ul>
+<li><strong>Why it’s needed:</strong> Different materials don’t mix well, so deeper nozzle cleaning is required.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><code>nozzle_cleaning_length</code></strong> — The length (in mm) of filament pulled out of the extruder when cleaning the nozzle when the spool is no longer in use. <strong>Default: 60 mm.</strong></p>
+<ul>
+<li>If you have a newer 4-in-1 module, set this value to 70 or higher.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h5 id="advanced-parameters-do-not-adjust-if-unsure-of-the-result"><strong>Advanced Parameters (Do Not Adjust If Unsure of the Result):</strong><a class="headerlink" href="#advanced-parameters-do-not-adjust-if-unsure-of-the-result" title="Permanent link">&para;</a></h5>
+<p>For these settings to work, you need to <strong>disable the printer's native display</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<ul>
+<li><strong><code>filament_tube_length</code></strong> — Total PTFE tube length from IFS module to extruder. Useful for non-standard tubes. <strong>Default: 1000 mm.</strong></li>
+<li><strong><code>filament_unload_before_cutting</code></strong> — Filament lift distance <strong>before</strong> cutting. <strong>Default: 0 mm.</strong></li>
+<li><strong><code>filament_unload_after_cutting</code></strong> — Filament lift distance <strong>after</strong> cutting, before moving to the waste bin. <strong>Default: 5 mm.</strong></li>
+<li><strong><code>filament_unload_after_drop</code></strong> — Retraction distance after purging to prevent oozing. <strong>Default: 3 mm.</strong></li>
+<li><strong><code>filament_load_speed</code></strong> — Filament loading speed (mm/min). <strong>Default: 300 mm/min (5 mm/s).</strong></li>
+<li><strong><code>filament_unload_speed</code></strong> — Filament unloading speed (mm/min). IFS operates twice as fast. <strong>Default: 600 mm/min (10 mm/s).</strong></li>
+<li><strong><code>filament_fan_speed</code></strong> — Fan speed (0–255) during purging to cool oozing. <strong>Default: 102.</strong></li>
+<li><strong><code>filament_autoinsert_empty_length</code></strong> — Filament length pulled when auto-loading into an empty extruder. <strong>Default: 600 mm.</strong></li>
+<li><strong><code>filament_autoinsert_full_length</code></strong> — Filament length pulled when replacing existing filament. <strong>Default: 550 mm.</strong></li>
+<li><strong><code>filament_autoinsert_ret_length</code></strong> — Retraction distance after extruder sensor triggers (empty extruder only). <strong>Default: 90 mm.</strong></li>
+<li><strong><code>filament_autoinsert_speed</code></strong> — Auto-insertion speed (mm/min). <strong>Default: 1200 mm/min (20 mm/s).</strong></li>
+</ul>
+<p><strong>Warning!</strong> Modifying advanced parameters may cause printer malfunctions, filament jams, or hardware damage. Adjust only if you fully understand each parameter’s purpose and potential consequences.</p>
+<p><strong>Key takeaway:</strong> To reduce waste, start by decreasing <strong><code>filament_drop_length</code></strong> and <strong><code>filament_drop_length_add</code></strong> for your material. Don’t forget to save the file after changes!</p>
+<h2 id="7-add-custom-filament-types"><strong>7. Add custom filament types</strong><a class="headerlink" href="#7-add-custom-filament-types" title="Permanent link">&para;</a></h2>
+<p>For these settings to work, you need to <strong>disable the printer's native display</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<p>To add a new filament type, add the following to <code>mod_data/user.cfg</code>:
+<div class="highlight"><pre><span></span><code>[zmod_ifs]
+filament_NEWTYPE: 300
+</code></pre></div>
+Where NEWTYPE is replaced with the desired filament type (e.g., HIPS), and the number is the melting point of this filament.</p>
+<p><code>IFS_PRINT_DEFAULTS</code> - displays available filament types and their melting points</p>
+<hr />
+<h2 id="8-add-custom-colors"><strong>8. Add custom colors</strong><a class="headerlink" href="#8-add-custom-colors" title="Permanent link">&para;</a></h2>
+<p>For these settings to work, you need to <strong>disable the printer's native display</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<p>To add or rename a color, open <code>mod_data/colors/en.cfg</code> (use your language instead of en):</p>
+<p>Add a new color or rename an existing one.</p>
+<p>To display the color name, the color name must begin with an underscore <code>_</code></p>
+<p>Example:
+<div class="highlight"><pre><span></span><code>{
+&quot;ffffff&quot;: &quot;white&quot;,
+&quot;fffff1&quot;: &quot;_transparent&quot;,
+&quot;fef043&quot;: &quot;bright yellow&quot;,
+&quot;dcf478&quot;: &quot;light green&quot;,
+&quot;0acc38&quot;: &quot;green&quot;,
+&quot;067749&quot;: &quot;dark green&quot;,
+&quot;0c6283&quot;: &quot;blue-green&quot;,
+&quot;0de2a0&quot;: &quot;turquoise&quot;,
+&quot;75d9f3&quot;: &quot;cyan&quot;,
+&quot;45a8f9&quot;: &quot;blue&quot;,
+&quot;2750e0&quot;: &quot;dark blue&quot;,
+&quot;46328e&quot;: &quot;violet&quot;,
+&quot;a03cf7&quot;: &quot;bright violet&quot;,
+&quot;f330f9&quot;: &quot;purple&quot;,
+&quot;d4b0dc&quot;: &quot;lilac&quot;,
+&quot;f95d73&quot;: &quot;pink&quot;,
+&quot;f72224&quot;: &quot;red&quot;,
+&quot;7c4b00&quot;: &quot;brown&quot;,
+&quot;f98d33&quot;: &quot;orange&quot;,
+&quot;fdebd5&quot;: &quot;beige&quot;,
+&quot;d3c4a3&quot;: &quot;light brown&quot;,
+&quot;af7836&quot;: &quot;terracotta&quot;,
+&quot;898989&quot;: &quot;gray&quot;,
+&quot;bcbcbc&quot;: &quot;light gray&quot;,
+&quot;161616&quot;: &quot;black&quot;
+}
+</code></pre></div></p>
+<p>The text <code>_transparent</code> will be displayed on buttons.</p>
+<hr />
+<h2 id="9-fixing-trash-bin-and-filament-cutting-knife-operation">9. Fixing Trash Bin and Filament Cutting Knife Operation<a class="headerlink" href="#9-fixing-trash-bin-and-filament-cutting-knife-operation" title="Permanent link">&para;</a></h2>
+<p><a href="/Setup/#ad5x-warning">Alternative version of the instructions</a></p>
+<p>Different AD5X printers may have different coordinates for the trash bin and knife. Sometimes the difference can reach up to 4 mm.</p>
+<p>Because of this:</p>
+<ul>
+<li>Filament may not reach the trash bin;</li>
+<li>Knife does not cut the filament;</li>
+<li>Printer head may hit the wall.</li>
+</ul>
+<p>To fix this, you need to:</p>
+<ol>
+<li>Update zMod.</li>
+<li>Open the file <code>/rw/Adventurer5M.json</code>.</li>
+<li>Find these lines:
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;CutXOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;CutYOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">-0.20000001788139343</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;xOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;yOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">-0.20000001788139343</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;zOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;zProbeOffset&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mf">0.004999995231628418</span>
+<span class="p">},</span>
+</code></pre></div>
+<img width="504" height="241" alt="image" src="https://github.com/user-attachments/assets/8647b1fe-594c-4bb3-91ee-560cfe4a58fd  " /></li>
+</ol>
+<p>Replace <strong>only</strong> these values:
+<div class="highlight"><pre><span></span><code><span class="nt">&quot;CutXOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="nt">&quot;CutYOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+<span class="nt">&quot;yOffset&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span>
+</code></pre></div></p>
+<ol start="4">
+<li>Enter the command: <code>UPDATE_FF_OFFSET</code> (this will update the settings).</li>
+<li>Then enter: <code>_GOTO_TRASH</code> (this will move to the trash bin).</li>
+</ol>
+<hr />
+<h3 id="trash-bin-calibration">Trash Bin Calibration<a class="headerlink" href="#trash-bin-calibration" title="Permanent link">&para;</a></h3>
+<p><a href="/Setup/#ad5x-warning">Alternative version of the instructions</a></p>
+<ol>
+<li>Enter the command <code>_GOTO_TRASH</code> — the printer head will move to the trash bin.</li>
+<li>If the bin doesn't close. Сarefully move the head until the bin closes. You need use GCODE: <code>G1 Y230.2</code></li>
+<li>Check what <strong>Y</strong> coordinate you now have.</li>
+<li>Subtract 229 from this number. The result will be your <code>yOffset</code>.</li>
+</ol>
+<p>Examples:</p>
+<ul>
+<li>If Y = 230.2, then <code>yOffset = 230.2 - 229 = 1.2</code></li>
+<li>If Y = 228.4, then <code>yOffset = 228.4 - 229 = -0.6</code></li>
+<li>Formula: <code>yOffset = Y - 229</code></li>
+</ul>
+<p>Write this number to the file <code>/rw/Adventurer5M.json</code>. The bin is calibrated.</p>
+<ol start="5">
+<li>Enter the command: <code>UPDATE_FF_OFFSET</code> (this will update the settings).</li>
+<li>Then enter: <code>_GOTO_TRASH</code> (this will move to the trash bin).</li>
+</ol>
+<hr />
+<h3 id="knife-calibration">Knife Calibration<a class="headerlink" href="#knife-calibration" title="Permanent link">&para;</a></h3>
+<p><a href="/Setup/#ad5x-warning">Alternative version of the instructions</a></p>
+<ol>
+<li>Enter the command <code>_CUT_PRUTOK</code> — the head will move to the knife.</li>
+<li>You need use GCODE: <code>G1 Y-7.7</code> <code>G1 X-1.7</code>, move the head until the knife activates.</li>
+<li>Check what X and Y coordinates you have.</li>
+<li>
+<p>For <strong>Y</strong>:</p>
+<ul>
+<li>Subtract your Y-coordinate from <strong>7.5</strong> by absolute value.</li>
+<li>Example: if Y = -7.7, then <code>CutYOffset = 7.5 - 7.7 = -0.2</code></li>
+<li>Example: if Y = -5.9, then <code>CutYOffset = 7.5 - 5.9 = 1.6</code></li>
+<li>Formula: <code>CutYOffset = 7.5 + Y</code></li>
+</ul>
+</li>
+<li>
+<p>For <strong>X</strong>:</p>
+<ul>
+<li>Subtract your X-coordinate from <strong>2.5</strong> by absolute value.</li>
+<li>Example: if X = -1.7, then <code>CutXOffset = 2.5 - 1.7 = 0.8</code></li>
+<li>Example: if X = -2.8, then <code>CutXOffset = 2.5 - 2.8 = -0.3</code></li>
+<li>Formula: <code>CutXOffset = 2.5 + X</code></li>
+</ul>
+</li>
+</ol>
+<p>Write these numbers to the file <code>/rw/Adventurer5M.json</code>. The knife is calibrated.</p>
+<ol start="6">
+<li>Enter the command: <code>UPDATE_FF_OFFSET</code> (this will update the settings).</li>
+<li>Then enter: <code>_GOTO_TRASH</code> (this will move to the trash bin).</li>
+</ol>
+<p>Restart the printer — everything is ready.</p>
+<hr />
+<h2 id="setting-up-the-basket-on-the-ad5x-stock-firmware">Setting up the basket on the AD5X stock firmware<a class="headerlink" href="#setting-up-the-basket-on-the-ad5x-stock-firmware" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Go to the "i" tab and press the <code>Status</code> button</li>
+</ol>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" /></p>
+<ol start="2">
+<li>Go to the 6th tab</li>
+</ol>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" /></p>
+<ol start="3">
+<li>
+<p>Press and hold <code>Move the extruder to waste tray position</code> for 20 seconds
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" /></p>
+</li>
+<li>
+<p>Adjust the head position in the waste tray so that it closes. Using the control arrows, park the print head at the receiver in such a way that the print head sufficiently presses the shutter lever, the nozzle is behind the moving shutter, and the shutter itself is flush with the front surface of the receiver.</p>
+</li>
+</ol>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" /></p>
+<p>Press the <code>Set</code> button.</p>
+<ol start="5">
+<li>
+<p>Press and hold <code>Move the extruder to cutter striker position</code> for 20 seconds
+   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" /></p>
+</li>
+<li>
+<p>Adjust the cutter. Press <code>CutX</code> — the cutter should cut the filament without slipping or striking.</p>
+</li>
+</ol>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" /></p>
+<p>Press the <code>Set</code> button.</p>
+<hr />
+<h2 id="10-ifs-commands"><strong>10. IFS commands</strong><a class="headerlink" href="#10-ifs-commands" title="Permanent link">&para;</a></h2>
+<p>For these settings to work, you need to <strong>disable the printer's native display</strong> using the <code>DISPLAY_OFF</code> macro.</p>
+<ul>
+<li><code>IFS_F10</code> - Insert filament</li>
+<li><code>IFS_F11</code> - Remove filament</li>
+<li><code>IFS_F13</code> - IFS state</li>
+<li><code>IFS_F15</code> - Reset driver</li>
+<li><code>F18</code> - Filament purge everywhere</li>
+<li><code>F23</code> - Mark filament as inserted</li>
+<li><code>F24</code> - Filament clamp</li>
+<li><code>F39</code> - Filament purge</li>
+<li><code>F112</code> - Stop filament feed</li>
+<li><code>PURGE_PRUTOK_IFS</code> - Purge filament from IFS to the extruder</li>
+<li><code>REMOVE_PRUTOK_IFS</code> - Removes filament by filament number</li>
+<li><code>INSERT_PRUTOK_IFS</code> - Insert filament into IFS by filament number</li>
+<li><code>SET_CURRENT_PRUTOK</code> - Tell klipper which filament is currently active</li>
+<li><code>ANALOG_PRUTOK</code> - Load an analog rod</li>
+<li><code>IFS_MOTION</code> - Check if the filament has stopped or run out</li>
+</ul>
+<p>IFS module parameters:</p>
+<ul>
+<li>debug - debugging (True, <em>False</em>)</li>
+<li>silk_count - number of attempts to read a rod into IFS (<em>1</em>)</li>
+<li>stall_count - number of attempts to count a rod as stopped (<em>1</em>)</li>
+<li>retry_count - number of times to retry the command on error (<em>3</em>)</li>
+<li>filament_NEWFILEMENT - Add a new filament type. Parameter - replacement temperature for this type of plastic.</li>
+</ul>
+<p>Set via <code>mod_data/user.cfg</code>:
+<div class="highlight"><pre><span></span><code>[zmod_ifs]
+debug: True
+silk_count: 1
+stall_count: 1
+filament_NEWTYPE: 300
+</code></pre></div></p>
+<h2 id="11-ifs-firmware-recovery"><strong>11. IFS Firmware Recovery</strong><a class="headerlink" href="#11-ifs-firmware-recovery" title="Permanent link">&para;</a></h2>
+<p>To recover the IFS firmware, you need an <strong>ARM J-LINK V9</strong> programmer.</p>
+<p><img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" /></p>
+<p><img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" /></p>
+<p>Solder wires to the iFS board.</p>
+<p><img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" /></p>
+<p>Connect:</p>
+<ul>
+<li>CLK to SWCK</li>
+<li>DIO to SWIO</li>
+<li>VCC to 3.3</li>
+<li>GND to GND</li>
+</ul>
+<p><img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" /></p>
+<ul>
+<li>Target Device - <code>Nations N32G455RE</code></li>
+<li>Target interface: <code>SWD</code></li>
+<li>Speed: <code>4000</code></li>
+<li>Check the first checkbox.</li>
+<li>Uncheck the second checkbox.</li>
+</ul>
+<ol>
+<li>Connect.</li>
+<li>Select the <a href="/Native_FW/#5x-ifs">firmware file</a>. <strong>Don't forget to extract it</strong>.</li>
+<li>Press <strong>F7</strong> and wait for the device to be flashed.</li>
+</ol>
+<h2 id="ifs-sensor-error-serial-communication-error-read-failed-device-reports-readiness-to-read-but-returned-no-data-device-disconnected-or-multiple-access-on-port">IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)<a class="headerlink" href="#ifs-sensor-error-serial-communication-error-read-failed-device-reports-readiness-to-read-but-returned-no-data-device-disconnected-or-multiple-access-on-port" title="Permanent link">&para;</a></h2>
+<p>This error occurs when the native display and the mod access the IFS simultaneously.</p>
+<p>It's best to reduce the native display lifetime to 10 seconds: <code>SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/AD5X.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

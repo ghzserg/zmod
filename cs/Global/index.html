@@ -1,0 +1,3484 @@
+
+<!doctype html>
+<html lang="cs" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Calibrations/">
+      
+      
+        <link rel="next" href="../System/">
+      
+      
+        
+          <link rel="alternate" href="../../Global/" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/Global/" hreflang="ru">
+        
+          <link rel="alternate" href="../../de/Global/" hreflang="de">
+        
+          <link rel="alternate" href="../../pt/Global/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Start/Stop/Globální - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lang" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Start/Stop/Globální
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Zvolte jazyk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../Global/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/Global/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/Global/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/Global/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Karty" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Domovská stránka
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Začátek
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Konfigurace
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nápověda
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Makra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dodatečné
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Stáhnout
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domovská stránka
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Začátek
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Začátek
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nastavení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doporučení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurace
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfigurace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pluginy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nápověda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Makra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seznam
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hlavní funkce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalibrace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Globální
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Globální
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LANG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SET_TIMEZONE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nozzle_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOZZLE_CONTROL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_zmod_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET_ZMOD_DATA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GLOBAL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save_zmod_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_ZMOD_DATA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-nabídky-výběru-barvy-tisku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry nabídky výběru barvy tisku
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry nabídky výběru barvy tisku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowed_tool_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALLOWED_TOOL_COUNT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan_file_colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCAN_FILE_COLORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color_menu_1_based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COLOR_MENU_1_BASED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_assign_colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTO_ASSIGN_COLORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-startu-tiskumapování-podložky-start_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry startu tisku/mapování podložky [START_PRINT]:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry startu tisku/mapování podložky [START_PRINT]:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_START
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preclear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRECLEAR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_leveling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRINT_LEVELING
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_KAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MESH_TEST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force_md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_MD5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_skew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISABLE_SKEW
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_zoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOAD_ZOFFSET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_priming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISABLE_PRIMING
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLEAR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-koncezrušení-tisku-end_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry konce/zrušení tisku [END_PRINT]:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry konce/zrušení tisku [END_PRINT]:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi_end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_END
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close_dialogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLOSE_DIALOGS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOP_MOTOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTO_REBOOT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systémové-parametry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systémové parametry:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Systémové parametry:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion_sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOTION_SENSOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SILENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoinsert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTOINSERT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#always_full_color_change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALWAYS_FULL_COLOR_CHANGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_trash_on_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_TRASH_ON_PRINT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove_filament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVE_FILAMENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WIFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_e0011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_E0011
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_e0017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_E0017
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi_on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_save_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NEW_SAVE_CONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_SWAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#china_cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CHINA_CLOUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NICE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display_off_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISPLAY_OFF_TIMEOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pro_poweroff_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRO_POWEROFF_TIMEOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_moonraker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_MOONRAKER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_filament_sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_FILAMENT_SENSORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systém
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dodatečné
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dodatečné
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nativní firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historie změn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Podpora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stáhnout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LANG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SET_TIMEZONE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nozzle_control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOZZLE_CONTROL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_zmod_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET_ZMOD_DATA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GLOBAL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#save_zmod_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_ZMOD_DATA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-nabídky-výběru-barvy-tisku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry nabídky výběru barvy tisku
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry nabídky výběru barvy tisku">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allowed_tool_count" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALLOWED_TOOL_COUNT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scan_file_colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SCAN_FILE_COLORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color_menu_1_based" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COLOR_MENU_1_BASED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_assign_colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTO_ASSIGN_COLORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-startu-tiskumapování-podložky-start_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry startu tisku/mapování podložky [START_PRINT]:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry startu tisku/mapování podložky [START_PRINT]:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi_start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_START
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preclear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRECLEAR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#print_leveling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRINT_LEVELING
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_KAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mesh_test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MESH_TEST
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#force_md5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FORCE_MD5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_skew" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISABLE_SKEW
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load_zoffset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOAD_ZOFFSET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disable_priming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISABLE_PRIMING
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLEAR
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametry-koncezrušení-tisku-end_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametry konce/zrušení tisku [END_PRINT]:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametry konce/zrušení tisku [END_PRINT]:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#midi_end" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_END
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#close_dialogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLOSE_DIALOGS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop_motor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STOP_MOTOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auto_reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTO_REBOOT
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systémové-parametry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systémové parametry:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Systémové parametry:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#motion_sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MOTION_SENSOR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#silent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SILENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autoinsert" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AUTOINSERT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#always_full_color_change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ALWAYS_FULL_COLOR_CHANGE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_trash_on_print" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_TRASH_ON_PRINT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove_filament" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        REMOVE_FILAMENT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WIFI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_e0011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_E0011
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fix_e0017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIX_E0017
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LED
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#midi_on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MIDI_ON
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new_save_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NEW_SAVE_CONFIG
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use_swap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USE_SWAP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#china_cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CHINA_CLOUD
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NICE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display_off_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DISPLAY_OFF_TIMEOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pro_poweroff_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRO_POWEROFF_TIMEOUT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_moonraker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_MOONRAKER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save_filament_sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SAVE_FILAMENT_SENSORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/Global.md" title="Upravit tuto stránku" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 align="center">Globální parametry</h1>
+
+<p>Makro je malý program napsaný v jazyce Klipper/Gcode.</p>
+<p>Lze jej spustit z:</p>
+<ul>
+<li>Souboru GCODE</li>
+<li>Konzole Fluidd/Mainsail (stiskněte anglické písmeno <code>C</code> ve Fluidd)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Hodnota v závorkách je výchozí hodnota</em></p>
+</div>
+<hr />
+<h3 id="lang">LANG<a class="headerlink" href="#lang" title="Permanent link">&para;</a></h3>
+<p>Nastavte jazyk pro provoz ZMOD.</p>
+<ul>
+<li>LANG - jazyk: en (angličtina), ru (ruština), de (němčina), fr (francouzština), it (italština), es (španělština), zh (čínština), ja (japonština), ko (korejština), pt (portugalština), cs (čeština), tr (turečtina)</li>
+</ul>
+<p>Příklad:
+<div class="highlight"><pre><span></span><code>LANG LANG=en
+</code></pre></div></p>
+<hr />
+<h3 id="set_timezone">SET_TIMEZONE<a class="headerlink" href="#set_timezone" title="Permanent link">&para;</a></h3>
+<p>Změna časového pásma.</p>
+<ul>
+<li>ZONE - časové pásmo (např. Europe/Prague)</li>
+</ul>
+<hr />
+<h3 id="nozzle_control">NOZZLE_CONTROL<a class="headerlink" href="#nozzle_control" title="Permanent link">&para;</a></h3>
+<p>Kontrola kolize trysky s podložkou nebo oddělení dílu.</p>
+<p>Nouzové vypnutí, pokud hmotnost překročí nastavený limit.</p>
+<ul>
+<li>WEIGHT - hmotnost v gramech (1500)</li>
+</ul>
+<p>Nastavení přetrvávají i po restartu.</p>
+<p>Nastavte <code>NOZZLE_CONTROL WEIGHT=0</code> pro vypnutí této funkce.</p>
+<p><em>Kontrola je vypnutá, dokud není makro poprvé spuštěno.</em></p>
+<p>Při použití nativní obrazovky restartuje spuštění makra tiskárnu.</p>
+<p>Bez nativní obrazovky restartuje Klipper (jsou upraveny konfigurační soubory).</p>
+<p>Funguje automaticky, ale pro Gcode jsou k dispozici další makra:</p>
+<ul>
+<li><code>ZCONTROL_ON</code> - povolit kontrolu</li>
+<li><code>ZCONTROL_OFF</code> - zakázat kontrolu</li>
+<li><code>ZCONTROL_STATUS</code> - zkontrolovat stav</li>
+<li><code>ZCONTROL_PAUSE</code> - pozastavit při spuštění (pouze po vyprázdnění fronty příkazů; nepoužívejte na počátečních vrstvách)</li>
+<li><code>ZCONTROL_ABORT</code> - přerušit Klipper při spuštění</li>
+<li><code>ZCONTROL_AUTO</code> - Při spuštění zastaví Klipper (pokud je výška Z &lt; <code>ZCONTROL_Z</code>) nebo zavolá PAUSE, pokud je z &gt;= <code>ZCONTROL_Z</code></li>
+<li><code>ZCONTROL_Z Z=10</code> - Nastavit výšku Z.</li>
+<li><code>SAVE_ZMOD_DATA ZCONTROL_Z=10</code> - Uložit výšku Z. Pokud nechcete povolit pauzu, nastavte <code>SAVE_ZMOD_DATA ZCONTROL_Z=230</code></li>
+</ul>
+<p>Pro povolení kontroly trysky na počátečních vrstvách přidejte <code>ZCONTROL_PAUSE</code> ve sliceru na požadované vrstvě.</p>
+<hr />
+<h3 id="get_zmod_data">GET_ZMOD_DATA<a class="headerlink" href="#get_zmod_data" title="Permanent link">&para;</a></h3>
+<p>Získat globální parametry/příznaky ZMOD.
+Po spuštění se v konzoli zobrazí uložené parametry aplikované za běhu.</p>
+<p><code>Fluidd</code> -&gt; <code>Makra</code> -&gt; <code>Hlavní</code> -&gt; <code>ZMOD PARAMETRY</code></p>
+<hr />
+<h3 id="global">GLOBAL<a class="headerlink" href="#global" title="Permanent link">&para;</a></h3>
+<p>Zjednodušená správa globálních parametrů. K dispozici jsou pouze parametry, které lze změnit kliknutím na tlačítko. Parametry, které vyžadují zadání čísla, názvu souboru atd., nejsou tímto makrem ovládány.</p>
+<p>Po změně parametrů se doporučuje restartovat tiskárnu.</p>
+<hr />
+<h3 id="save_zmod_data">SAVE_ZMOD_DATA<a class="headerlink" href="#save_zmod_data" title="Permanent link">&para;</a></h3>
+<p>Uložit globální parametry/příznaky ZMOD (aplikují se při každém tisku).</p>
+<p>Nepřidávejte toto makro do startovního/koncového G-kódu nebo do souborů G-kódu. Spouštějte ho z konzole Fluidd/Mainsail. Parametry se ukládají do <code>mod_data/variables.cfg</code> po vypnutí (<strong>neupravujte ručně</strong>).</p>
+<p><strong>Pro úpravu parametrů:</strong></p>
+<ul>
+<li>Přejděte do <code>Fluidd</code> -&gt; <code>Makra</code> -&gt; <code>Systém</code> -&gt; <code>SAVE ZMOD PARAMETERS</code>, vyberte parametr, upravte ho a klikněte na <code>SEND</code>.</li>
+<li>Alternativně zadejte příkazy přímo do konzole Fluidd, např. <code>SAVE_ZMOD_DATA CLOSE_DIALOGS=2</code>.</li>
+</ul>
+<p><a href="#get_zmod_data">Zobrazit uložené parametry</a></p>
+<hr />
+<h3 id="parametry-nabídky-výběru-barvy-tisku">Parametry nabídky výběru barvy tisku<a class="headerlink" href="#parametry-nabídky-výběru-barvy-tisku" title="Permanent link">&para;</a></h3>
+<p><strong>Všechny parametry nabídky výběru barvy jsou pouze pro AD5X.</strong></p>
+<h5 id="allowed_tool_count">ALLOWED_TOOL_COUNT<a class="headerlink" href="#allowed_tool_count" title="Permanent link">&para;</a></h5>
+<p>Počet nástrojů, které se mají zobrazit v nabídce výběru barvy. Týká se to příkazů T0, T1 atd. v souboru gcode, nikoli fyzických cívek ve vašem IFS.</p>
+<p>Pokud zMod dokáže úspěšně prohledat soubor pro použité nástroje, toto bude přepsáno a zobrazí se nástroje použité v souboru.</p>
+<p>Toto nastavení nelze použít, když je povolena nativní obrazovka.</p>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">Viz předzpracování</a></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4</code></p>
+<h5 id="scan_file_colors">SCAN_FILE_COLORS<a class="headerlink" href="#scan_file_colors" title="Permanent link">&para;</a></h5>
+<p>Povolí prohledávání gcode souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (zakázat), 1 (povolit), 2 (zakázat úplné prohledávání, ale hledat data připravená skriptem sliceru)</p>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">Viz předzpracování</a></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA SCAN_FILE_COLORS=0</code></p>
+<h5 id="color_menu_1_based">COLOR_MENU_1_BASED<a class="headerlink" href="#color_menu_1_based" title="Permanent link">&para;</a></h5>
+<p>Určuje, zda se mají v nabídce výběru barvy zobrazovat popisky založené na 0 (T0, T1 atd.) nebo na 1 (Barva 1, Barva 2 atd.). Nemění to nic jiného než způsob označení tlačítek a je to čistě pro pohodlí: 0 (založené na 0), 1 (založené na 1)</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA COLOR_MENU_1_BASED=1</code></p>
+<h5 id="auto_assign_colors">AUTO_ASSIGN_COLORS<a class="headerlink" href="#auto_assign_colors" title="Permanent link">&para;</a></h5>
+<p>Určuje, zda se má pokusit o automatické mapování příkazů pro změnu nástroje (T0, T1 atd.) na fyzický filament vložený ve vašem IFS při zahájení tisku. Pokud jste nepovolili tichý režim, nabídka výběru barvy se stále objeví; toto nastavení ovlivňuje pouze výchozí výběry: 0 (zakázat), 1 (povolit)</p>
+<p>Toto nastavení se bude vztahovat i na tisky spuštěné v tichém režimu. Můžete ho nakonfigurovat tak, aby přerušil tisk, pokud se vyskytnou určité chyby s automatickým přiřazením: 2 (přerušit, pokud nelze spárovat žádný materiál, povolit nesoulad barev), 30 (přerušit při jakýchkoli problémech)</p>
+<p>Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následující hodnoty, abyste určili správné nastavení:</p>
+<ul>
+<li>2 (Alespoň jeden materiál nelze spárovat; např. gcode soubor specifikuje ABS, ale máte vložený pouze PLA; nebo data o materiálu nelze načíst)</li>
+<li>4 (Alespoň jednu barvu nelze vůbec spárovat, obvykle kvůli zakázanému nebo neúspěšnému prohledávání souborů)</li>
+<li>8 (Alespoň jedna barva je potenciálně špatně spárována)</li>
+<li>16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)</li>
+</ul>
+<p><a href="https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control">Viz předzpracování</a></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0</code></p>
+<h3 id="parametry-startu-tiskumapování-podložky-start_print">Parametry startu tisku/mapování podložky [START_PRINT]:<a class="headerlink" href="#parametry-startu-tiskumapování-podložky-start_print" title="Permanent link">&para;</a></h3>
+<h5 id="midi_start">MIDI_START<a class="headerlink" href="#midi_start" title="Permanent link">&para;</a></h5>
+<p>Přehrát MIDI při startu tisku (""), 0 pro zakázání.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid</code></p>
+<hr />
+<h5 id="preclear">PRECLEAR<a class="headerlink" href="#preclear" title="Permanent link">&para;</a></h5>
+<p>Povolit předčištění trysky v CLEAR_NOZZLE: 0 (ne), 1 (ano) (0).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA PRECLEAR=0</code></p>
+<hr />
+<h5 id="print_leveling">PRINT_LEVELING<a class="headerlink" href="#print_leveling" title="Permanent link">&para;</a></h5>
+<p>Vytvořit mesh podložky před každým tiskem (pomocí nativní obrazovky, pokud je povolena): 0 (ne), 1 (ano) (0).
+<em>Pro vyrovnávání podložky pomocí nativní obrazovky povolte "Pouze lokální síť" přes menu tiskárny: Nastavení -&gt; Ikona WiFi -&gt; Síťový režim.</em></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA PRINT_LEVELING=1</code></p>
+<hr />
+<h5 id="use_kamp">USE_KAMP<a class="headerlink" href="#use_kamp" title="Permanent link">&para;</a></h5>
+<p>Použít adaptivní mesh (KAMP) místo plného meshe podložky, kde je to možné: 0 (ne), 1 (ano) (0).
+Doporučuje se nastavit <code>SAVE_ZMOD_DATA CLEAR=LINE_PURGE</code>, aby se umístění čištění shodovalo s KAMP meshem.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA USE_KAMP=1</code></p>
+<hr />
+<h5 id="mesh_test">MESH_TEST<a class="headerlink" href="#mesh_test" title="Permanent link">&para;</a></h5>
+<p>Testovat mesh podložky před tiskem:</p>
+<ul>
+<li>0 - Ne</li>
+<li>1 - Test BEZ automatického ladění Z-Offsetu (výchozí)</li>
+<li>2 - Test BEZ automatického ladění Z-Offsetu, pokud se mesh neshoduje, spustí se KAMP</li>
+<li>3 - Test S automatickým laděním Z-Offsetu, s čištěním trysky</li>
+<li>4 - Test S automatickým laděním Z-Offsetu, s čištěním trysky, pokud se mesh neshoduje, spustí se KAMP</li>
+</ul>
+<p><strong>Automatické ladění Z-Offsetu</strong></p>
+<p>Algoritmus pro automatickou kalibraci Z-Offsetu:</p>
+<ol>
+<li><strong>Zdrojová data:</strong> V paměti tiskárny je uložen mesh podložky (obvykle 25 bodů) získaný při posledním vyrovnávání.</li>
+<li>
+<p><strong>Příprava:</strong></p>
+<ul>
+<li>Tryska je nahřátá na pracovní teplotu, otřena o podložku a ochlazena na 151°C.</li>
+</ul>
+</li>
+<li>
+<p><strong>Výběr měřicího bodu:</strong></p>
+<ul>
+<li>Použije se <strong>středový</strong> bod meshe.</li>
+</ul>
+</li>
+<li>
+<p><strong>Měření a porovnání:</strong></p>
+<ul>
+<li>Na vybraném bodě se provede nové měření sondou.<ul>
+<li>Získaná hodnota se porovná s hodnotou uloženou v meshi podložky.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Korekce offsetu:</strong></p>
+<ul>
+<li>Pokud je odchylka <strong>menší než 0,3 mm</strong>, rozdíl se přičte k aktuální hodnotě Z-Offsetu.<ul>
+<li>Pokud je odchylka <strong>větší nebo rovna 0,3 mm</strong>, systém považuje uložený mesh za zastaralý a, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Bez automatického ladění Z-Offsetu</strong></p>
+<p>Algoritmus validace meshe podložky:</p>
+<ol>
+<li><strong>Měření:</strong> Na aktuálním bodě se provede standardní měření sondou.</li>
+<li><strong>Validace:</strong> Získaná hodnota Z se zkontroluje na konzistenci s načteným meshem.</li>
+<li><strong>Kritérium:</strong> Hodnota musí být v rozsahu od (minimum meshe - 0,21 mm) do (maximum meshe + 0,21 mm).</li>
+<li>
+<p><strong>Výsledek:</strong></p>
+<ul>
+<li><strong>Úspěch:</strong> Mesh je považován za správný, tisk pokračuje.<ul>
+<li><strong>Neúspěch:</strong> Je vydáno varování a tisk se zastaví nebo, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Poznámky:</strong></p>
+<ul>
+<li>Tato kontrola je hrubý odhad. Je určena k detekci kritických chyb, například když je načten mesh pro PEI list pro tlusté sklo a naopak.</li>
+<li><strong>Nespoléhejte na tuto kontrolu jako na absolutní ochranu.</strong></li>
+<li>Při použití chytrého čištění (KAMP) se čekání na ohřev odehrává poblíž místa čištění, nikoli v rohu podložky.</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA MESH_TEST=0</code></p>
+<hr />
+<h5 id="force_md5">FORCE_MD5<a class="headerlink" href="#force_md5" title="Permanent link">&para;</a></h5>
+<p>Igor Polunovskiy</p>
+<p>Ověřit MD5 hash souboru a při neshodě smazat: 0 (zakázat), 1 (povolit) (1).</p>
+<ol>
+<li>Vyberte a stáhněte soubor pro vaši architekturu a operační systém:</li>
+</ol>
+<ul>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe">zmod_preprocess-windows-amd64.exe</a> - Windows</li>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64">zmod_preprocess-linux-amd64</a> - Linux. Nezapomeňte <code>chmod +x zmod_preprocess-linux-amd64</code></li>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64">zmod_preprocess-darwin-arm64</a> - MacOS (Apple Silicon). Nezapomeňte spustit <code>chmod +x zmod_preprocess-darwin-arm64</code></li>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64">zmod_preprocess-darwin-amd64</a> - MacOS (Intel). Nezapomeňte spustit <code>chmod +x zmod_preprocess-darwin-amd64</code></li>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py">zmod-preprocess.py</a> - Obecný Python. Nezapomeňte spustit <code>chmod +x zmod-preprocess.py</code></li>
+<li><a href="https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh">zmod-preprocess.sh</a> - Linux/MacOS Bash. Nezapomeňte spustit <code>chmod +x zmod-preprocess.sh</code></li>
+</ul>
+<ol start="2">
+<li>V Orce musíte specifikovat: <code>Process Profile</code> -&gt; <code>Other</code> -&gt; <code>Post Processing Scripts</code>.</li>
+</ol>
+<p>Zde jsou možnosti pro přidání:</p>
+<ul>
+<li><code>"C:\cesta_k_souboru\zmod_preprocess-windows-amd64.exe";</code></li>
+<li><code>"C:\složka_pythonu\python.exe" "C:\Skripty\zmod-preprocess.py";</code></li>
+<li><code>"/usr/bin/python3" "/home/user/zmod-preprocess.py";</code></li>
+<li><code>"/home/user/zmod-preprocess.py";</code></li>
+<li><code>"/home/user/zmod_preprocess-darwin-amd64";</code></li>
+<li><code>"/home/user/zmod_preprocess-darwin-arm64";</code></li>
+<li><code>"/home/user/zmod_preprocess-linux-amd64";</code></li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA FORCE_MD5=1</code></p>
+<hr />
+<h5 id="disable_skew">DISABLE_SKEW<a class="headerlink" href="#disable_skew" title="Permanent link">&para;</a></h5>
+<p>1 (zakázat korekci SKEW), 0 (načíst <code>skew_profile</code> přes <code>SKEW_PROFILE LOAD=skew_profile</code>) (1).</p>
+<p><a href="https://www.klipper3d.org/Skew_Correction.html">Detaily</a></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA DISABLE_SKEW=1</code></p>
+<hr />
+<h5 id="load_zoffset">LOAD_ZOFFSET<a class="headerlink" href="#load_zoffset" title="Permanent link">&para;</a></h5>
+<p>Načíst Z-offset z globálních parametrů uložených přes SET_GCODE_OFFSET: 1 (ano), 0 (ne) (1).</p>
+<p><a href="../FAQ/#how-does-z-offset-work">Jak funguje Z-Offset</a></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA LOAD_ZOFFSET=0</code></p>
+<hr />
+<h5 id="disable_priming">DISABLE_PRIMING<a class="headerlink" href="#disable_priming" title="Permanent link">&para;</a></h5>
+<p>Zakázat přípravu trysky extruzí: 0 (ne), 1 (ano) (0).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA DISABLE_PRIMING=0</code></p>
+<hr />
+<h5 id="clear">CLEAR<a class="headerlink" href="#clear" title="Permanent link">&para;</a></h5>
+<p>Vybrat algoritmus čištění trysky (LINE_PURGE):</p>
+<ul>
+<li>_CLEAR1 - styl Orca (může poškrábat podložku s KAMP)</li>
+<li>_CLEAR2 - styl skupiny FF (může poškrábat podložku s KAMP)</li>
+<li>_CLEAR3 - alternativa skupiny FF (může poškrábat podložku s KAMP)</li>
+<li>_CLEAR4 - kód Shreidera (zprava nahoře doprava dolů)</li>
+<li>_CLEAR_TRAP - Pro kartáče (zprava nahoře doprava dolů)</li>
+<li>LINE_PURGE - čištění KAMP</li>
+</ul>
+<p>Vlastní makra pro čištění lze přidat do <code>mod_data/user.cfg</code>.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA CLEAR=LINE_PURGE</code></p>
+<hr />
+<h3 id="parametry-koncezrušení-tisku-end_print">Parametry konce/zrušení tisku [END_PRINT]:<a class="headerlink" href="#parametry-koncezrušení-tisku-end_print" title="Permanent link">&para;</a></h3>
+<h5 id="midi_end">MIDI_END<a class="headerlink" href="#midi_end" title="Permanent link">&para;</a></h5>
+<p>Přehrát MIDI na konci tisku (""), 0 pro zakázání.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid</code></p>
+<hr />
+<h5 id="close_dialogs">CLOSE_DIALOGS<a class="headerlink" href="#close_dialogs" title="Permanent link">&para;</a></h5>
+<p>Automaticky zavřít dialogy po konci/zrušení tisku: 0 (ne), 1 (ano, pomalu), 2 (ano, rychle) (0).
+<em>Pro rychlé zavírání povolte "Pouze lokální síť" v menu tiskárny.</em></p>
+<p>Příklad: <code>SAVE_ZMOD_DATA CLOSE_DIALOGS=2</code></p>
+<hr />
+<h5 id="stop_motor">STOP_MOTOR<a class="headerlink" href="#stop_motor" title="Permanent link">&para;</a></h5>
+<p>Automaticky vypnout motory 25 sekund po konci/zrušení tisku: 0 (ne), 1 (ano) (1).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA STOP_MOTOR=1</code></p>
+<hr />
+<h5 id="auto_reboot">AUTO_REBOOT<a class="headerlink" href="#auto_reboot" title="Permanent link">&para;</a></h5>
+<p>Automaticky restartovat tiskárnu po dokončení tisku (0):</p>
+<ul>
+<li>0 - žádný restart</li>
+<li>1 - restartovat tiskárnu pomocí příkazu <code>REBOOT</code></li>
+<li>2 - bez nativní obrazovky: restartovat firmware pomocí <code>FIRMWARE_RESTART</code>; s obrazovkou: restartovat tiskárnu pomocí příkazu <code>REBOOT</code></li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA AUTO_REBOOT=0</code></p>
+<hr />
+<h3 id="systémové-parametry">Systémové parametry:<a class="headerlink" href="#systémové-parametry" title="Permanent link">&para;</a></h3>
+<h5 id="motion_sensor">MOTION_SENSOR<a class="headerlink" href="#motion_sensor" title="Permanent link">&para;</a></h5>
+<p>Použít <a href="https://aliexpress.ru/item/1005007480443587.html">senzor pohybu filamentu</a> místo senzoru přítomnosti filamentu (0):</p>
+<ul>
+<li>0 - ne</li>
+<li>1 - ano</li>
+</ul>
+<p>Při použití senzoru pohybu filamentu ho vypněte na nativní obrazovce; jinak se tisk pozastaví.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA MOTION_SENSOR=1</code></p>
+<hr />
+<h5 id="silent">SILENT<a class="headerlink" href="#silent" title="Permanent link">&para;</a></h5>
+<p>Pouze AD5X</p>
+<p>Nezobrazovat okno pro výběr barvy při spuštění tisku</p>
+<ul>
+<li>0 - zobrazit okno (výchozí)</li>
+<li>1 - nezobrazovat okno, použít dříve nastavené barvy</li>
+<li>2 - nezobrazovat okno, nepoužívat IFS</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA SILENT=0</code></p>
+<hr />
+<h5 id="autoinsert">AUTOINSERT<a class="headerlink" href="#autoinsert" title="Permanent link">&para;</a></h5>
+<p>Pouze AD5X</p>
+<p>Automaticky načíst filament</p>
+<ul>
+<li>0 - Automaticky nenačítat filament</li>
+<li>1 - Automaticky načíst filament (výchozí)</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA AUTOINSERT=0</code></p>
+<hr />
+<h5 id="always_full_color_change">ALWAYS_FULL_COLOR_CHANGE<a class="headerlink" href="#always_full_color_change" title="Permanent link">&para;</a></h5>
+<p>Pouze AD5X</p>
+<p>Určuje, zda přeskočit proces změny barvy, pokud jsou předchozí a následující barvy mapovány na stejnou fyzickou cívku.</p>
+<ul>
+<li>0 - přeskočit proces</li>
+<li>1 - nepřeskakovat proces</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0</code></p>
+<h5 id="use_trash_on_print">USE_TRASH_ON_PRINT<a class="headerlink" href="#use_trash_on_print" title="Permanent link">&para;</a></h5>
+<p>Pouze AD5X</p>
+<p>Pouze při běhu bez nativního displeje</p>
+<p>Použít koš při změně barvy během tisku</p>
+<ul>
+<li>0 - nepoužívat</li>
+<li>1 - používat (výchozí)</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0</code></p>
+<hr />
+<h5 id="remove_filament">REMOVE_FILAMENT<a class="headerlink" href="#remove_filament" title="Permanent link">&para;</a></h5>
+<p>Pouze AD5X</p>
+<p>Pouze při běhu bez nativního displeje</p>
+<p>Vysunout filament po dokončení tisku:</p>
+<ul>
+<li>0 — nevysunovat (výchozí)</li>
+<li>1 — vysunout</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA REMOVE_FILAMENT=1</code></p>
+<hr />
+<h5 id="fix_scv">FIX_SCV<a class="headerlink" href="#fix_scv" title="Permanent link">&para;</a></h5>
+<p>Opravit nesprávné SCV (<a href="https://www.klipper3d.org/Config_Reference.html#printer">square_corner_velocity</a>) při vykreslování grafů zrychlení a výpočtu input shaperů.</p>
+<ul>
+<li>0 - ponechat parametr jako v továrním nastavení (5)</li>
+<li>1 - použít <code>square_corner_velocity</code> z <code>mod_data/user.cfg</code> nebo <code>printer.base.cfg</code></li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA FIX_SCV=1</code></p>
+<p>V naší tiskárně je <code>square_corner_velocity: 25</code>, ale výpočty grafů shaperu a zrychlení jsou založeny na <code>SCV = 5</code>.</p>
+<p>To primárně ovlivňuje zobrazená zrychlení a vypočítané úrovně vyhlazování.
+<code>shaper_type_x</code>, <code>shaper_freq_x</code>, <code>shaper_type_y</code>, <code>shaper_freq_y</code> zůstávají nezměněny.</p>
+<p>Nicméně, se správnými výpočty klesnou výsledná zrychlení přibližně o polovinu.</p>
+<p>Doporučení: přidejte následující do <code>mod_data/user.cfg</code>:
+<div class="highlight"><pre><span></span><code>[printer]
+square_corner_velocity: 9
+</code></pre></div>
+To snižuje rychlosti v zatáčkách a obecně zlepšuje kvalitu tisku s mírným kompromisem v rychlosti.</p>
+<hr />
+<h5 id="wifi">WIFI<a class="headerlink" href="#wifi" title="Permanent link">&para;</a></h5>
+<p>Na některých verzích firmwaru se Wi-Fi občas nespustí.</p>
+<p>Pro opravu se připojte k Wi-Fi síti přes nativní obrazovku.</p>
+<p>Spusťte <code>SAVE_ZMOD_DATA WIFI=1</code></p>
+<p>Poté vypněte Wi-Fi na nativní obrazovce.</p>
+<ul>
+<li>0 — použít Wi-Fi z nativní obrazovky</li>
+<li>1 — použít Wi-Fi přes zMod</li>
+</ul>
+<hr />
+<h5 id="fix_e0011">FIX_E0011<a class="headerlink" href="#fix_e0011" title="Permanent link">&para;</a></h5>
+<p>Běžné příčiny chyby E0011 (Timer too close):</p>
+<ul>
+<li>Hostitel neodpověděl v daném čase (0.025 s)</li>
+<li>MCU neodpovědělo v daném čase (0.025 s)</li>
+</ul>
+<p>Specifické příčiny:</p>
+<ul>
+<li>Zamrzlá základní deska Nations MCU nebo eboard. <code>Ztracena komunikace s MCU 'mcu'</code>. Řešení: Restart. Vyměňte základní desku (<code>mcu</code>) nebo desku extruderu (<code>eboard</code>).</li>
+<li>Přetížení CPU hostitele (výpočty shaperu/vykreslování grafů).</li>
+<li>Přetížení EMMC (operace git, zálohování, nahrávání velkých souborů během tisku atd.).</li>
+<li>Nedostatek RAM. Řešení: Přepájejte CPU a upgradujte na 256MB RAM.</li>
+<li>Poškozený kabel extruderu. Řešení: Vyměňte/opravte kabel.</li>
+<li>Uvolněné připojení kabelu desky extruderu. Řešení: Vyměňte desku extruderu.</li>
+<li>Načítání dat SWAP (SWAP je na EMMC, která pracuje rychlostí 10 MB/s; data SWAP během výpočtů shaperu mohou dosáhnout 25MB). Řešení: Vypněte SWAP, pokud máte 256MB RAM pomocí <code>SAVE_ZMOD_DATA USE_SWAP=0</code>.</li>
+<li>Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí <a href="../Setup/#restoring-printer-to-factory-settings-required-for-mod-installation">továrního resetu</a> nebo použijte mod <a href="../System/#update_mcu">UPDATE_MCU</a>.</li>
+</ul>
+<p>Opravit chyby E0011 a <code>Communication timeout during homing</code>. Změna tohoto parametru restartuje tiskárnu. 0-ne, 1-ano (0):</p>
+<ul>
+<li>0 - ponechat tovární parametr (0.025)</li>
+<li>1 - nastavit parametr na 0.1</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA FIX_E0011=1</code></p>
+<p>Tato chyba se může také objevit:</p>
+<ul>
+<li>Velký objem vyloučení modelů: Řešení <code>Process profile</code> -&gt; <code>Other</code> -&gt; <code>Output G-cod</code> -&gt; zrušte zaškrtnutí <code>Exclude models</code>.</li>
+<li>Pokud jste vypnuli swap na FF5M/FF5MPro.</li>
+</ul>
+<p>Spusťte makro <code>MEM</code> a podívejte se, zda je swap a jakou má velikost.</p>
+<p>Povolte swap, pokud je vypnutý: <code>SAVE_ZMOD_DATA USE_SWAP=1</code></p>
+<ul>
+<li>Pokud používáte FF5M/FF5MPro, spusťte plný test. To zahrnuje kalibraci PID, odstranění mapy stolu a odstranění shaperů současně.</li>
+</ul>
+<p>Je lepší provést všechny kalibrace <a href="../SetupCalibrations/#printer-calibration-for-beginners">zde podle těchto pokynů</a></p>
+<p>Chyba <code>Communication timeout during homing</code> se může objevit kvůli vysoké latenci komunikace mezi hostitelem a MCU. Doba odezvy by měla konzistentně zůstat pod 10ms. Dočasné špičky latence mohou způsobit selhání homingu.</p>
+<p><code>TRSYNC_TIMEOUT</code> je parametr Klipperu (výchozí: 0.025 s), který kompenzuje systémové zpoždění.</p>
+<p>Tovární soubor <code>/opt/klipper/klippy/mcu.py</code> nastavuje <code>TRSYNC_TIMEOUT = 0.025</code>. Patch ho mění na <code>TRSYNC_TIMEOUT = 0.1</code>.</p>
+<p><strong>Jak opravit na továrním firmwaru:</strong></p>
+<ul>
+<li>Naformátujte USB disk jako FAT32.</li>
+<li>
+<p>Uložte soubor <code>flashforge_init.sh</code> na USB:</p>
+<ul>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz">Opravit parametr Adventurer5M</a></li>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz">Obnovit tovární parametr Adventurer5M</a></li>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz">Opravit parametr Adventurer5MPro</a></li>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz">Obnovit tovární parametr Adventurer5MPro</a></li>
+</ul>
+</li>
+<li>
+<p>Vypněte tiskárnu.</p>
+</li>
+<li>Vložte USB do tiskárny.</li>
+<li>Zapněte tiskárnu (bude hlasitě pípat).</li>
+<li>Počkejte na restart.</li>
+<li>Vyjměte USB.</li>
+<li>Znovu vytiskněte problematický soubor; E0011 by se již neměla objevit.</li>
+</ul>
+<p><strong>Ruční oprava na továrním firmwaru:</strong></p>
+<ul>
+<li>Nainstalujte <a href="https://wiki.zmod.link/Native_FW/#root">root</a>.</li>
+<li>Použijte <a href="https://winscp.net/eng/download.php">WinSCP</a> pro SSH do tiskárny.</li>
+<li>Upravte <code>/opt/klipper/klippy/mcu.py</code>.</li>
+<li>Najděte <code>TRSYNC_TIMEOUT = 0.025</code> a změňte ho na <code>TRSYNC_TIMEOUT = 0.1</code>.</li>
+<li>Uložte soubor a restartujte tiskárnu.</li>
+</ul>
+<hr />
+<h5 id="fix_e0017">FIX_E0017<a class="headerlink" href="#fix_e0017" title="Permanent link">&para;</a></h5>
+<p>Opravit chybu E0017. Změna tohoto parametru restartuje tiskárnu. 0-ne, 1-ano (1):</p>
+<p>V továrním souboru <code>/opt/klipper/klippy/toolhead.py</code> je <code>LOOKAHEAD_FLUSH_TIME = 0.5</code>. Původní Klipper používá <code>LOOKAHEAD_FLUSH_TIME = 0.250</code>. Náš mod funguje nejlépe s <code>LOOKAHEAD_FLUSH_TIME = 0.150</code>.</p>
+<ul>
+<li>0 - nastavit na tovární hodnotu</li>
+<li>1 - nastavit na 0.150</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA FIX_E0017=1</code></p>
+<p><strong>Jak opravit na továrním firmwaru:</strong></p>
+<ul>
+<li>Naformátujte USB disk jako FAT32.</li>
+<li>
+<p>Uložte příslušný soubor na USB:</p>
+<ul>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz">Adventurer5M-e0017-4.tgz</a> pro FlashForge 5M</li>
+<li><a href="https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz">Adventurer5MPro-e0017-4.tgz</a> pro FlashForge 5M Pro</li>
+</ul>
+</li>
+<li>
+<p>Vypněte tiskárnu.</p>
+</li>
+<li>Vložte USB do tiskárny.</li>
+<li>Zapněte tiskárnu (bude hlasitě pípat).</li>
+<li>Počkejte na restart.</li>
+<li>Vyjměte USB.</li>
+<li>Znovu vytiskněte problematický soubor; E0017 by se již neměla objevit.</li>
+</ul>
+<p><strong>Ruční oprava na továrním firmwaru:</strong></p>
+<ul>
+<li>Nainstalujte <a href="https://wiki.zmod.link/Native_FW/#root">root</a>.</li>
+<li>Použijte <a href="https://winscp.net/eng/download.php">WinSCP</a> pro SSH do tiskárny.</li>
+<li>Upravte <code>/opt/klipper/klippy/toolhead.py</code>.</li>
+<li>Najděte <code>LOOKAHEAD_FLUSH_TIME = 0.5</code> a změňte ho na <code>LOOKAHEAD_FLUSH_TIME = 0.150</code>.</li>
+<li>Uložte soubor a restartujte tiskárnu.</li>
+</ul>
+<hr />
+<h5 id="led">LED<a class="headerlink" href="#led" title="Permanent link">&para;</a></h5>
+<p>Jas LED při spuštění (50).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA LED=50</code></p>
+<hr />
+<h5 id="midi_on">MIDI_ON<a class="headerlink" href="#midi_on" title="Permanent link">&para;</a></h5>
+<p>Přehrát MIDI při spuštění (""). Použijte <code>0</code> pro zakázání.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid</code></p>
+<hr />
+<h5 id="new_save_config">NEW_SAVE_CONFIG<a class="headerlink" href="#new_save_config" title="Permanent link">&para;</a></h5>
+<p>Použít alternativní SAVE_CONFIG (vyvolá <code>SAVE_CONFIG</code> bez zamrznutí nativní obrazovky). <a href="../Main/#new_save_config">NEW_SAVE_CONFIG</a> pro kalibraci PID: 0-ne, 1-ano (0).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0</code></p>
+<hr />
+<h5 id="use_swap">USE_SWAP<a class="headerlink" href="#use_swap" title="Permanent link">&para;</a></h5>
+<p>Povolit SWAP (1):</p>
+<ul>
+<li>0 - ne (<em>Pouze pro upgradovanou 256MB RAM</em>)</li>
+<li>1 - ano, na EMMC</li>
+<li>2 - ano, preferovat USB FLASH</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA USE_SWAP=1</code></p>
+<hr />
+<h5 id="china_cloud">CHINA_CLOUD<a class="headerlink" href="#china_cloud" title="Permanent link">&para;</a></h5>
+<p>Povolit čínské cloudové služby: 0-ne, 1-ano (1).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA CHINA_CLOUD=0</code></p>
+<p><a href="../Recomendations/#disable-chinese-cloud-services">Zakázat čínské cloudy</a></p>
+<p>I když jsou všechny cloudové možnosti vypnuty přes obrazovku, tiskárna se stále snaží posílat fotky, videa a telemetrii na čínské servery.</p>
+<p>Nastavení tohoto parametru na 0 částečně zakáže tyto "funkce".</p>
+<p><strong>Pokud jsou čínské cloudy zakázány, tiskárna nebude kontrolovat aktualizace továrního firmwaru.</strong></p>
+<p>Pro aktualizaci továrního firmwaru povolte čínské cloudy pomocí <code>SAVE_ZMOD_DATA CHINA_CLOUD=1</code>, restartujte a pokračujte v aktualizaci.</p>
+<p>Místo toho můžete použít:</p>
+<ul>
+<li><a href="../Zmod/#zlink">zmod.link</a> - cloud, pro správu tiskáren přes Fluidd/Mainsail.</li>
+<li><a href="../Macros/">Telegram bot</a>.</li>
+</ul>
+<p><strong>Jak zakázat čínské cloudy na továrním firmwaru:</strong></p>
+<ul>
+<li>Naformátujte USB disk jako FAT32.</li>
+<li>Umístěte <a href="https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh">flashforge_init.sh</a> na USB.</li>
+<li>Vypněte tiskárnu.</li>
+<li>Vložte USB do tiskárny.</li>
+<li>Zapněte tiskárnu (jednou se restartuje).</li>
+<li>Vyjměte USB.</li>
+</ul>
+<p><strong>Jak povolit čínské cloudy na továrním firmwaru:</strong></p>
+<ul>
+<li>Naformátujte USB disk jako FAT32.</li>
+<li>Umístěte <a href="https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh">flashforge_init.sh</a> na USB.</li>
+<li>Postupujte stejně jako výše.</li>
+</ul>
+<hr />
+<h5 id="nice">NICE<a class="headerlink" href="#nice" title="Permanent link">&para;</a></h5>
+<p>Nastavit prioritu procesu Klipper: 1 (nejnižší) až 40 (nejvyšší) (20).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA NICE=20</code></p>
+<p>Vyšší priorita přiděluje více zdrojů Klipperu, ale může způsobit odpojení Moonrakeru a kamery.</p>
+<p>Pro uživatele Linuxu:
+<div class="highlight"><pre><span></span><code>NICE=20
+grep -q &quot;^nice = &quot; /opt/config/mod_data/variables.cfg &amp;&amp; NICE=$(grep &quot;^nice = &quot; /opt/config/mod_data/variables.cfg | cut -d &quot;=&quot; -f2| awk &#39;{print $1}&#39;)
+NICE=$((20-$NICE))
+[ $NICE -ge 20 ]  &amp;&amp; NICE=19
+[ $NICE -lt -20 ] &amp;&amp; NICE=-20
+renice $NICE $(ps |grep klippy.py| grep -v grep| awk &#39;{print $1}&#39;)
+</code></pre></div></p>
+<hr />
+<h5 id="display_off_timeout">DISPLAY_OFF_TIMEOUT<a class="headerlink" href="#display_off_timeout" title="Permanent link">&para;</a></h5>
+<p>Nastavit časový limit (v sekundách) pro vypnutí nativní obrazovky při nečinnosti. Výchozí: 180.</p>
+<p>Poznámka: Nativní obrazovka potřebuje alespoň 5 sekund na konfiguraci WiFi.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120</code></p>
+<hr />
+<h5 id="pro_poweroff_timeout">PRO_POWEROFF_TIMEOUT<a class="headerlink" href="#pro_poweroff_timeout" title="Permanent link">&para;</a></h5>
+<p>Nastavit časový limit (v minutách) pro automatické vypnutí FF5M Pro. Výchozí: 0 (zakázáno).</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10</code></p>
+<hr />
+<h5 id="save_moonraker">SAVE_MOONRAKER<a class="headerlink" href="#save_moonraker" title="Permanent link">&para;</a></h5>
+<ul>
+<li>0 - Načíst rozložení tlačítek maker ze ZMOD (výchozí).</li>
+<li>1 - Povolit ukládání změn tlačítek maker lokálně ve Fluidd/Moonraker.</li>
+</ul>
+<p>Lokálně uložená makra jsou uložena v samostatné sekci.</p>
+<p>Příklad: <code>SAVE_ZMOD_DATA SAVE_MOONRAKER=1</code></p>
+<hr />
+<h5 id="save_filament_sensors">SAVE_FILAMENT_SENSORS<a class="headerlink" href="#save_filament_sensors" title="Permanent link">&para;</a></h5>
+<ul>
+<li>0 - Neukládat stav senzorů filamentu po restartu; budou vždy povoleny (výchozí)</li>
+<li>1 - Uložit stav senzorů po restartu. Pokud senzor zakážete, bude zakázán i po restartu.</li>
+</ul>
+<p>Příklad: <code>SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/Global.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zpět na začátek
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

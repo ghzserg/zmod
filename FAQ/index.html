@@ -1,0 +1,3448 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Telegram/">
+      
+      
+        <link rel="next" href="../Help/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../ru/FAQ/" hreflang="ru">
+        
+          <link rel="alternate" href="../de/FAQ/" hreflang="de">
+        
+          <link rel="alternate" href="../pt/FAQ/" hreflang="pt">
+        
+          <link rel="alternate" href="../cs/FAQ/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>FAQ - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#faq" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../ru/FAQ/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../de/FAQ/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../pt/FAQ/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../cs/FAQ/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Begin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Macros
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Additional
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Begin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommendations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-peculiarities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Peculiarities:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenless-version-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenless Version Notes:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenless Version Notes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-is-zmod-different-from-klippermodnative-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is ZMOD different from KlipperMod/native firmware?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is ZMOD different from KlipperMod/native firmware?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-klippermod-but-not-in-zmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in KlipperMod but not in ZMOD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-zmod-but-not-in-klippermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in ZMOD but not in KlipperMod:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-zmod-but-not-in-native-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in ZMOD but not in native firmware:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-macro-how-to-run-download-and-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a MACRO? How to Run, Download, and Use It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-using-the-screen-version-i-send-a-file-to-print-but-the-screen-shows-temperature-0-0-and-printing-doesnt-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm using the screen version. I send a file to print, but the screen shows temperature 0 0 and printing doesn't start.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-change-anything-in-the-start-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do I need to change anything in the start code?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-z-offset-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Z-Offset work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-options-are-available-for-bed-leveling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What options are available for bed leveling?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What options are available for bed leveling?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-global-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via global parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-modifying-the-start-code-and-start_print-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By modifying the start code and START_PRINT macro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-macros-and-buttons-in-fluidd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via macros and buttons in Fluidd
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-animal-names-periodically-mentioned-in-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why are animal names periodically mentioned in the documentation?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-using-the-screen-and-without-the-native-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's the difference between using the screen and without the native screen?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-alternative-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is an alternative camera?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is an alternative camera?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I installed the printer, but ZMOD hid my camera! In Orca-FF I could see it, but now it's gone!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-2-cameras--how-to-disableturn-the-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I have 2 cameras / how to disable/turn the camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-update-mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Update MCU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-switched-the-web-interface-and-now-nothing-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I Switched the Web Interface, and Now Nothing Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-access-the-printer-via-orcabrowser-and-see-welcome-to-moonraker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I Access the Printer via Orca/Browser and See "Welcome to Moonraker"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-firmware-retraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Firmware Retraction?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-installing-zmod-my-screen-is-dead-and-not-responding-to-touches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After installing ZMOD, my screen is dead and not responding to touches.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-installed-the-latest-version-and-the-developer-says-you-need-to-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I have installed the latest version, and the developer says you need to update.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-remove-zmod---i-have-to-recalib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I want to remove ZMOD - I have to recalib?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entware-in-zmod-how-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entware in ZMOD: How to Use It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ad5x-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X Specifics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AD5X Specifics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ad5x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-contact-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Contact Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-the-boot-logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to change the boot logo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-trigger-on-probe-after-full-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No trigger on probe after full movement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weightvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WeightValue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcu-protocol-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCU Protocol error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filament-has-run-out-or-stopped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filament has run out or stopped
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-each-print-the-printer-measures-the-center-of-the-bed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before each print, the printer measures the center of the bed.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e0120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E0120
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macros
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Macros
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Global
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#frequently-asked-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frequently Asked Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Storage
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-peculiarities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known Peculiarities:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenless-version-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Screenless Version Notes:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screenless Version Notes:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-is-zmod-different-from-klippermodnative-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How is ZMOD different from KlipperMod/native firmware?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How is ZMOD different from KlipperMod/native firmware?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-klippermod-but-not-in-zmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in KlipperMod but not in ZMOD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-zmod-but-not-in-klippermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in ZMOD but not in KlipperMod:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-in-zmod-but-not-in-native-firmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's in ZMOD but not in native firmware:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-macro-how-to-run-download-and-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a MACRO? How to Run, Download, and Use It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#im-using-the-screen-version-i-send-a-file-to-print-but-the-screen-shows-temperature-0-0-and-printing-doesnt-start" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm using the screen version. I send a file to print, but the screen shows temperature 0 0 and printing doesn't start.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-i-need-to-change-anything-in-the-start-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do I need to change anything in the start code?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-does-z-offset-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How does Z-Offset work?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-options-are-available-for-bed-leveling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What options are available for bed leveling?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What options are available for bed leveling?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#via-global-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via global parameters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-modifying-the-start-code-and-start_print-macro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By modifying the start code and START_PRINT macro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#via-macros-and-buttons-in-fluidd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Via macros and buttons in Fluidd
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-are-animal-names-periodically-mentioned-in-the-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why are animal names periodically mentioned in the documentation?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-the-difference-between-using-the-screen-and-without-the-native-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's the difference between using the screen and without the native screen?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-an-alternative-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is an alternative camera?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is an alternative camera?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#camera-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Camera Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I installed the printer, but ZMOD hid my camera! In Orca-FF I could see it, but now it's gone!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-2-cameras--how-to-disableturn-the-camera" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I have 2 cameras / how to disable/turn the camera
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cannot-update-mcu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Update MCU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-switched-the-web-interface-and-now-nothing-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I Switched the Web Interface, and Now Nothing Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-access-the-printer-via-orcabrowser-and-see-welcome-to-moonraker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I Access the Printer via Orca/Browser and See "Welcome to Moonraker"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-firmware-retraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is Firmware Retraction?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#after-installing-zmod-my-screen-is-dead-and-not-responding-to-touches" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After installing ZMOD, my screen is dead and not responding to touches.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-have-installed-the-latest-version-and-the-developer-says-you-need-to-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I have installed the latest version, and the developer says you need to update.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-want-to-remove-zmod---i-have-to-recalib" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I want to remove ZMOD - I have to recalib?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entware-in-zmod-how-to-use-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entware in ZMOD: How to Use It
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#known-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Known features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ad5x-specifics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X Specifics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AD5X Specifics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ad5x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AD5X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Help
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-contact-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Contact Support
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-change-the-boot-logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to change the boot logo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-trigger-on-probe-after-full-movement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        No trigger on probe after full movement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weightvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        WeightValue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcu-protocol-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCU Protocol error
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filament-has-run-out-or-stopped" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filament has run out or stopped
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#before-each-print-the-printer-measures-the-center-of-the-bed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before each print, the printer measures the center of the bed.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e0120" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        E0120
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/FAQ.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="faq">FAQ<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h1>
+<h2 id="frequently-asked-questions">Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Installed the mod.</p>
+<p>Don't want to figure anything out - print as you did before.</p>
+<p>No need to configure or change anything anywhere.</p>
+<p>Decided you're ready to move forward - proceed by reading the documentation.</p>
+</div>
+<hr />
+<h2 id="configuration-storage">Configuration Storage<a class="headerlink" href="#configuration-storage" title="Permanent link">&para;</a></h2>
+<p>Access the <strong>mod_data</strong> folder via Fluidd web interface:
+<code>Configuration</code> → <code>Configuration Files</code> → <code>mod_data</code></p>
+<ul>
+<li>Custom Klipper settings go into <code>mod_data/user.cfg</code>, which can override/supplement <code>printer_base.cfg</code> and zMod files.</li>
+<li>Custom Moonraker settings go into <code>mod_data/user.moonraker.conf</code>.</li>
+<li>Custom MIDI files are stored in <code>mod_data/midi/</code>.</li>
+<li>Global mod settings are saved via the <a href="/Global/#save_zmod_data">SAVE_ZMOD_DATA</a> macro.</li>
+<li>Shutdown scripts are stored in <code>mod_data/power_off.sh</code>.</li>
+<li>Power on scripts are stored in <code>mod_data/power_on.sh</code>.</li>
+</ul>
+<p><strong>You cannot make changes to zmod and plugin files</strong>, as this will break the update system.</p>
+<p>Any function can be overridden in <code>mod_data/user.cfg</code> or <code>printer.cfg</code></p>
+<hr />
+<h2 id="known-peculiarities">Known Peculiarities:<a class="headerlink" href="#known-peculiarities" title="Permanent link">&para;</a></h2>
+<ul>
+<li>During actions like <code>M109</code> (extruder heating), <code>M190</code> (bed heating), PID calibration, or any gcode-pausing task, the stock screen freezes.</li>
+<li>Restarting Klipper freezes the stock screen (use <a href="/Main/#new_save_config">NEW_SAVE_CONFIG</a> for restarts).</li>
+<li>
+<p>After canceling a print, press "OK" on the stock screen (use <a href="/Main/#close_dialogs">CLOSE_DIALOGS</a> or <a href="/Main/#f
+ast_close_dialogs">FAST_CLOSE_DIALOGS</a>).</p>
+</li>
+<li>
+<p>The stock screen always loads the <code>DEFAULT_MESH</code> profile when starting a print and deletes the <code>Default</code> profile post-print.</p>
+</li>
+</ul>
+<hr />
+<h2 id="screenless-version-notes">Screenless Version Notes:<a class="headerlink" href="#screenless-version-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Remove all start gcode and use <a href="/Main/#start_print">START_PRINT</a> and <a href="/Main/#end_print">END_PRINT</a> macros.</li>
+<li>Stock camera disabled; use the alternative via <a href="https://github.com//Zmod/#camera_on">CAMERA_ON</a>.</li>
+<li>Manually set [Z_OFFSET] in <a href="/Main/#start_print">START_PRINT</a> or use <a href="/Global/#load_zoffset">LOAD_ZOFFSET</a> to load saved offsets.</li>
+<li>If you want to transfer z-offset from native screen to non-native screen mode, call the macro <code>LOAD_ZOFFSET_NATIVE</code> it will read the z-offset value from the native screen and apply it to non-native screen mode.</li>
+<li>Bed mesh <code>auto</code> loads automatically on startup.</li>
+<li>FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":<ul>
+<li>Protocol: <code>Octo/Klipper</code></li>
+<li>Hostname: <code>printer_IP:7125</code></li>
+<li>URL: <code>printer_IP</code> or <code>printer_IP:80</code></li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="how-is-zmod-different-from-klippermodnative-firmware">How is ZMOD different from KlipperMod/native firmware?<a class="headerlink" href="#how-is-zmod-different-from-klippermodnative-firmware" title="Permanent link">&para;</a></h3>
+<p>Differences between KlipperMod and ZMOD:</p>
+<ul>
+<li>KlipperMod uses pure Klipper with minimal Flashforge 5m (pro)-specific changes.</li>
+<li>ZMOD uses the standard Klipper from the native firmware, as well as Klipper 13.</li>
+<li>KlipperMod uses KlipperScreen as a printer screen.</li>
+<li>ZMOD uses the native screen or GuppyScreen instead of KlipperScreen.</li>
+<li>KlipperMod uses Moonraker-timelapse.</li>
+<li>ZMOD uses moonraker-telegram-bot on an EXTERNAL host with timelapse support and plugin timelapse</li>
+</ul>
+<p>Different philosophies:</p>
+<ul>
+<li>KlipperMod is essentially an alternative firmware implementation.</li>
+<li>ZMOD has minimal intervention in the native firmware. All native firmware features are preserved.</li>
+</ul>
+<p>This is why ZMOD won't include G17, G18, G19 - even though it's simple. There won't be updates to native Klipper, no renaming or changes to standard macros, settings, pin names, etc.</p>
+<p>ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses some macros and scripts from KlipperMod and incorporates some of its developments. Don't expect ZMOD to behave similarly to KlipperMod.</p>
+<p><strong>ZMOD is binary incompatible with KlipperMod.</strong></p>
+<h4 id="whats-in-klippermod-but-not-in-zmod">What's in KlipperMod but not in ZMOD:<a class="headerlink" href="#whats-in-klippermod-but-not-in-zmod" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://klipperscreen.readthedocs.io/en/latest/">KlipperScreen</a> - screen for the printer. In ZMOD, native screen or GuppyScreen is used instead of KlipperScreen</li>
+<li><a href="https://github.com/mainsail-crew/moonraker-timelapse">Moonraker-timelapse</a> - ZMOD uses Telegram bot and <a href="https://github.com/ghzserg/timelapse/">plugin Timelapse</a></li>
+<li>Network configuration via iwd/wpa_supplicant (in case of guppyscreen) - in ZMOD network configuration is done through the native screen, network startup is possible even without the native screen</li>
+</ul>
+<h4 id="whats-in-zmod-but-not-in-klippermod">What's in ZMOD but not in KlipperMod:<a class="headerlink" href="#whats-in-zmod-but-not-in-klippermod" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="/ru/AD5X/">AD5X</a> support</li>
+<li>Support for <a href="/Global/#lang">the following languages</a>: English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian</li>
+<li>Native screen support</li>
+<li><a href="/Zmod/#zrestore">Print recovery after power loss</a></li>
+<li><a href="/Calibrations/#zshaper">Shaper calibration with graphs</a> considering <a href="/Global/#fix_scv">SCV</a> (<a href="https://www.klipper3d.org/Config_Reference.html#printer">square_corner_velocity</a>)</li>
+<li><a href="/System/#check_system">File/permission/symlink check and repair for the native filesystem</a></li>
+<li>Automatic updates for <code>Fluidd</code>/<code>Mainsail</code>/<code>Moonraker</code> and ZMOD over the network</li>
+<li><a href="/FAQ/#entware-in-zmod-how-to-use-it">Entware</a></li>
+<li>Fixed <a href="/Global/#fix_e0017">E0017 error</a></li>
+<li>Additionally, GuppyScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling</li>
+<li>Fixed driver cooling fans operation. They automatically turn on when motors are running. On native firmware - only during printing.</li>
+<li>Adaptive bed leveling <a href="/Calibrations/#kamp">KAMP</a></li>
+<li>PID calibration for <a href="/Calibrations/#pid_tune_extruder">extruder</a> and <a href="/Calibrations/#pid_tune_bed">bed</a>, including via GuppyScreen</li>
+<li>Implemented <a href="/Filament/#coldpull">COLDPULL</a> (nozzle cleaning) without force. Implementation of <a href="https://t.me/FF_5M_5M_Pro/2836/447172">this algorithm</a></li>
+</ul>
+<h4 id="whats-in-zmod-but-not-in-native-firmware">What's in ZMOD but not in native firmware:<a class="headerlink" href="#whats-in-zmod-but-not-in-native-firmware" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Moonraker/Fluidd/Mainsail support</li>
+<li>Klipper 13 support</li>
+<li>Telegram bot support</li>
+<li>All features listed in the comparison with KlipperMod</li>
+<li><a href="https://github.com/FlashForge/Orca-Flashforge/issues/26">The native firmware sends a lot of data to Chinese servers</a>, this can be avoided by using zmod with GuppyScreen</li>
+</ul>
+<hr />
+<h3 id="what-is-a-macro-how-to-run-download-and-use-it">What is a MACRO? How to Run, Download, and Use It<a class="headerlink" href="#what-is-a-macro-how-to-run-download-and-use-it" title="Permanent link">&para;</a></h3>
+<p>A macro is a small program written in Klipper/Gcode.</p>
+<p>It can be called:</p>
+<ul>
+<li>From a GCODE file</li>
+<li>From the Fluidd/Mainsail console
+<em>hedgehog</em></li>
+</ul>
+<p><a href="/Macros/">List of macros</a></p>
+<hr />
+<h3 id="im-using-the-screen-version-i-send-a-file-to-print-but-the-screen-shows-temperature-0-0-and-printing-doesnt-start">I'm using the screen version. I send a file to print, but the screen shows temperature 0 0 and printing doesn't start.<a class="headerlink" href="#im-using-the-screen-version-i-send-a-file-to-print-but-the-screen-shows-temperature-0-0-and-printing-doesnt-start" title="Permanent link">&para;</a></h3>
+<p>Add these two lines at the very beginning of the start code:
+<div class="highlight"><pre><span></span><code>M190 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
+</code></pre></div></p>
+<p>Without these lines, the printer screen doesn't know the target temperatures for the nozzle and bed.
+<em>hippopotamus</em></p>
+<hr />
+<h3 id="do-i-need-to-change-anything-in-the-start-code">Do I need to change anything in the start code?<a class="headerlink" href="#do-i-need-to-change-anything-in-the-start-code" title="Permanent link">&para;</a></h3>
+<p>If using the native screen, no changes are needed.</p>
+<p>For operation without the native screen/Guppy (also recommended with the screen), replace the entire start code with:
+<div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+M190 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
+SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
+</code></pre></div></p>
+<p><code>START_PRINT EXTRUDER_TEMP=... BED_TEMP=...</code> should be written on one line</p>
+<p>And the end code with:
+<div class="highlight"><pre><span></span><code>END_PRINT
+</code></pre></div></p>
+<p>For correct layer counting in Fluidd, add to the before layer change code:
+<div class="highlight"><pre><span></span><code>SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
+</code></pre></div></p>
+<p>To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+</code></pre></div>
+Via the printer screen menu: <code>Settings</code> -&gt; <code>WiFi icon</code> -&gt; <code>Network Mode</code> -&gt; enable <code>Local Networks Only</code>.</p>
+<p>Read the documentation for <a href="/Main/#start_print">START_PRINT</a> and <a href="/Global/#save_zmod_data">SAVE_ZMOD_DATA</a> to utilize advanced ZMOD features.</p>
+<p>For firmware retraction, read <a href="/FAQ/#what-is-firmware-retraction">the documentation</a> and add to <code>Filament Profile</code> -&gt; <code>Advanced</code> -&gt; <code>Filament Start G-code</code>:
+<div class="highlight"><pre><span></span><code>SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
+</code></pre></div></p>
+<p><em>raccoon</em></p>
+<hr />
+<h3 id="how-does-z-offset-work">How does Z-Offset work?<a class="headerlink" href="#how-does-z-offset-work" title="Permanent link">&para;</a></h3>
+<p>When using the screen, the mod doesn't interfere with z-offset. The z-offset saved on the screen is used.</p>
+<p>The offset for native and non-native screens is not the same, and each has its own unique behavior and is configured separately.</p>
+<p>Use <code>LOAD_ZOFFSET_NATIVE</code> to copy the Z-offset from native screens to non-native screens.</p>
+<p>Z-offset adjustments via Fluidd/Mainsail/GuppyScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.</p>
+<p>Any <code>SET_GCODE_OFFSET</code> call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the <a href="/Global/#load_zoffset">LOAD_ZOFFSET</a> global parameter is enabled (disabled by default; enable with <code>SAVE_ZMOD_DATA LOAD_ZOFFSET=1</code>), native screen isn't used, and the <a href="/Main/#start_print">START_PRINT</a> macro is utilized.</p>
+<p>Z-offset can also be set via <a href="/Main/#start_print">START_PRINT</a> parameters:</p>
+<ul>
+<li>Z_OFFSET - Set Z offset (0.0)</li>
+</ul>
+<h3 id="what-options-are-available-for-bed-leveling">What options are available for bed leveling?<a class="headerlink" href="#what-options-are-available-for-bed-leveling" title="Permanent link">&para;</a></h3>
+<p>To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+</code></pre></div></p>
+<p>The native screen always uses:</p>
+<ul>
+<li><code>MESH_DATA</code> by default</li>
+<li><code>DEFAULT</code> if <code>leveling</code> is checked (bed leveling before print). <code>DEFAULT</code> is deleted after printing.</li>
+</ul>
+<p>Without the native screen, the <code>auto</code> mesh is auto-loaded on startup.</p>
+<p>To use another mesh, disable auto-leveling (<code>SAVE_ZMOD_DATA PRINT_LEVELING=0</code>):</p>
+<ul>
+<li>Specify via the <code>MESH</code> parameter in <a href="/Main/#start_print">START_PRINT</a>. E.g., <code>START_PRINT MESH=my_80_degree_mesh</code></li>
+<li>Load via <code>BED_MESH_PROFILE LOAD=my_80_degree_mesh</code> in filament profile. Ensure consistency between profile and <code>START_PRINT</code>, or disable nozzle cleaning in <code>START_PRINT</code>.</li>
+<li>Pre-level using <a href="/Calibrations/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a>. E.g., <code>AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh</code></li>
+</ul>
+<h4 id="via-global-parameters">Via global parameters<a class="headerlink" href="#via-global-parameters" title="Permanent link">&para;</a></h4>
+<p>Use <code>PRINT_LEVELING</code> and <code>USE_KAMP</code> parameters. Enable with:
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA USE_KAMP=1
+</code></pre></div></p>
+<hr />
+<h4 id="by-modifying-the-start-code-and-start_print-macro">By modifying the start code and START_PRINT macro<a class="headerlink" href="#by-modifying-the-start-code-and-start_print-macro" title="Permanent link">&para;</a></h4>
+<p>Examples:</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The parameter FORCE_LEVELING or FORCE_KAMP is not a separate macro, but a parameter of the Start Print Macro.</p>
+</div>
+<ul>
+<li>
+<p>Full leveling:
+  <div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
+</code></pre></div></p>
+</li>
+<li>
+<p>Adaptive leveling:
+  <div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
+</code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h4 id="via-macros-and-buttons-in-fluidd">Via macros and buttons in Fluidd<a class="headerlink" href="#via-macros-and-buttons-in-fluidd" title="Permanent link">&para;</a></h4>
+<p>Use:</p>
+<ul>
+<li><a href="/Calibrations/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a> (Fluidd button <code>BED LEVELING</code>)</li>
+<li><a href="/Calibrations/#kamp">KAMP</a></li>
+<li>Standard Klipper macros (<strong>not recommended</strong>)</li>
+</ul>
+<hr />
+<h3 id="why-are-animal-names-periodically-mentioned-in-the-documentation">Why are animal names periodically mentioned in the documentation?<a class="headerlink" href="#why-are-animal-names-periodically-mentioned-in-the-documentation" title="Permanent link">&para;</a></h3>
+<p>Documentation is often unread, though 90% of questions are answered here. To verify if someone actually read it, animal names are hidden in the text. If directed here, read the docs and mention the animal related to your question:</p>
+<ul>
+<li><a href="/FAQ/">FAQ</a></li>
+<li><a href="/Recomendations/">Recommendations</a></li>
+<li><a href="/Setup/">Setup/Update/Uninstall</a></li>
+<li><a href="/Macros/">Macros</a></li>
+<li><a href="#known-peculiarities">Known Issues</a></li>
+</ul>
+<hr />
+<h3 id="whats-the-difference-between-using-the-screen-and-without-the-native-screen">What's the difference between using the screen and without the native screen?<a class="headerlink" href="#whats-the-difference-between-using-the-screen-and-without-the-native-screen" title="Permanent link">&para;</a></h3>
+<p>The printer can operate in two modes:</p>
+<ul>
+<li>With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.</li>
+<li>Without the native screen - in this case, all features are controlled by zMod.
+This doesn't mean you need to turn off the screen or replace it with a different one.
+In the mode without the native screen, you can use the alternative software screen GuppyScreen or turn off the screen completely, so it will turn off.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros</p>
+</div>
+<p><strong>Disabling the screen saves RAM but changes print management (start/pause/resume/cancel/recovery). Modify start/end G-code accordingly.</strong> <em>elk</em></p>
+<p>Without the screen, Z-offset from the screen isn't applied. Use <a href="/Main/#start_print">START_PRINT</a> parameters or global settings. <a href="/FAQ/#how-does-z-offset-work">Details</a></p>
+<p>Read <a href="#screenless-version-notes">features of screenless operation</a>.</p>
+<hr />
+<h3 id="what-is-an-alternative-camera">What is an alternative camera?<a class="headerlink" href="#what-is-an-alternative-camera" title="Permanent link">&para;</a></h3>
+<p>The native camera, which is turned on from the screen, has a number of disadvantages.</p>
+<ul>
+<li>High RAM consumption</li>
+<li>Low image quality</li>
+<li>Only one connection to the camera. Having opened it in the orc, you will no longer see it in the browser</li>
+<li>Periodic image dumps</li>
+</ul>
+<p>The alternative camera, allows you to change the resolution, fps, allow multiple connections, does not overcompress the image, is easily restarted and is configured with a <a href="/Zmod/#camera_on">macro</a>. <em>hare</em></p>
+<ul>
+<li>Disable the native camera on the printer screen.</li>
+<li>Call the macro <a href="/Zmod/#camera_on">CAMERA_ON</a></li>
+</ul>
+<p>Read: <a href="/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone">I installed a printer, and ZMOD hid my camera!</a></p>
+<h4 id="camera-setup">Camera Setup<a class="headerlink" href="#camera-setup" title="Permanent link">&para;</a></h4>
+<p><strong>Basic Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WIDTH</code></td>
+<td>Image width</td>
+<td>640</td>
+</tr>
+<tr>
+<td><code>HEIGHT</code></td>
+<td>Image height</td>
+<td>480</td>
+</tr>
+<tr>
+<td><code>FPS</code></td>
+<td>Frames per second</td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>VIDEO</code></td>
+<td>Camera device</td>
+<td>video0</td>
+</tr>
+<tr>
+<td><code>FS</code></td>
+<td>Fix problematic cameras (1 – yes, 0 – no)</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>STREAMER</code></td>
+<td>Program for handling the camera stream</td>
+<td>auto</td>
+</tr>
+<tr>
+<td><code>FORMAT</code></td>
+<td>Image format (for ustreamer only)</td>
+<td>MJPEG</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What is a Streamer?</strong></p>
+<p>A streamer is a program that takes the image from the camera and displays it in a browser.</p>
+<p><strong>Two options are available:</strong></p>
+<ul>
+<li><strong>mjpg_streamer</strong> – a simple program, works only with MJPG cameras</li>
+<li><strong>ustreamer</strong> – more powerful but uses more memory; supports various cameras</li>
+</ul>
+<p>The <code>STREAMER=auto</code> parameter will automatically choose the suitable streamer.</p>
+<p><strong>Image Formats (for ustreamer only)</strong></p>
+<p>You can choose: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG.</p>
+<p>The default is MJPEG.</p>
+<p><strong>Command Examples</strong></p>
+<p>Simple start of camera video0 via mjpg_streamer:
+<div class="highlight"><pre><span></span><code>CAMERA_ON VIDEO=video0
+</code></pre></div></p>
+<p>Start camera video0 via ustreamer with custom settings:
+<div class="highlight"><pre><span></span><code>CAMERA_ON VIDEO=video0 STREAMER=ustreamer FORMAT=YUYV WIDTH=640 HEIGHT=480
+</code></pre></div></p>
+<p><strong>Where to View the Image?</strong></p>
+<p>Open in your browser: <code>http://printer_ip_address:8080</code></p>
+<p>There you can adjust brightness, contrast, and other settings.</p>
+<p><strong>Troubleshooting</strong></p>
+<p>Camera not detected?
+Run:
+<div class="highlight"><pre><span></span><code>CAMERA_ON VIDEO=video99
+</code></pre></div>
+The program will show a list of available cameras.</p>
+<p><strong>Logs (error records)</strong> are located in the folder: <code>log/cam/</code></p>
+<hr />
+<h4 id="i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone">I installed the printer, but ZMOD hid my camera! In Orca-FF I could see it, but now it's gone!<a class="headerlink" href="#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone" title="Permanent link">&para;</a></h4>
+<p>In Fluidd: <code>Settings</code> -&gt; <code>Cameras</code>. Create a new camera with:</p>
+<ul>
+<li>Stream URL: <code>http://your_IP:8080/?action=stream</code></li>
+<li>Snapshot URL: <code>http://your_IP:8080/?action=snapshot</code></li>
+</ul>
+<p>In versions up than <code>1.4.3</code>, you can also specify:</p>
+<ul>
+<li>Stream type: <code>MJPEG stream</code></li>
+<li>Stream URL: <code>/webcam/?action=stream</code></li>
+<li>Snapshot URL: <code>/webcam/?action=snapshot</code></li>
+</ul>
+<p>For advanced features, use <a href="/Zmod/#camera_on">alternative camera</a>. <em>mole</em></p>
+<p>Assign a static IP to the printer on your router.</p>
+<hr />
+<h4 id="i-have-2-cameras--how-to-disableturn-the-camera">I have 2 cameras / how to disable/turn the camera<a class="headerlink" href="#i-have-2-cameras--how-to-disableturn-the-camera" title="Permanent link">&para;</a></h4>
+<p>If you do not have a camera, or you are not satisfied with the settings of the automatic camera, then you need to open a file through Fluidd / Mainsal <code>mod_data/user.moonraker.conf</code>
+<code>Settings</code>
+And write:</p>
+<p>To disable the camera:
+<div class="highlight"><pre><span></span><code>[webcam video]
+    enabled: false
+</code></pre></div></p>
+<p>To turn the camera:
+<div class="highlight"><pre><span></span><code> [webcam video]
+    rotation: 90
+</code></pre></div></p>
+<hr />
+<h3 id="cannot-update-mcu">Cannot Update MCU<a class="headerlink" href="#cannot-update-mcu" title="Permanent link">&para;</a></h3>
+<p>After rebooting, the following error appears:
+<div class="highlight"><pre><span></span><code>!! Cannot update MCU &#39;eboard&#39; config as it is shutdown
+</code></pre></div></p>
+<p>Rebooting the printer is an abnormal operating mode.</p>
+<p>This is why, when installing the original firmware, you are asked to power off the printer and turn it back on.</p>
+<p>During a reboot, power is not removed from the MCU, meaning the program stored in the MCU continues running. This program attempts to communicate with Klipper, which is unavailable during the reboot, causing the MCU to freeze or disconnect.</p>
+<p>In this case, you have one option:</p>
+<ul>
+<li>Execute <code>FIRMWARE_RESTART</code> — this will freeze the original screen.</li>
+<li>Power off the printer and turn it back on.</li>
+</ul>
+<p>The difference between <code>REBOOT</code> and <code>FIRMWARE_RESTART</code> is that <code>REBOOT</code> restarts Linux and Klipper on the motherboard, while <code>FIRMWARE_RESTART</code> partially restarts Klipper and fully restarts the MCU.</p>
+<hr />
+<h3 id="i-switched-the-web-interface-and-now-nothing-works">I Switched the Web Interface, and Now Nothing Works<a class="headerlink" href="#i-switched-the-web-interface-and-now-nothing-works" title="Permanent link">&para;</a></h3>
+<p>If you switched the interface using the <a href="/System/#web">WEB</a> macro <em>выхухоль</em>:</p>
+<ol>
+<li>Press <code>Ctrl + F5</code> or <code>Ctrl + Shift + R</code> or <code>Option + Command + E</code></li>
+<li>If the issue persists in Orca, press <code>Ctrl + F5</code> or <code>Ctrl + Shift + R</code> or <code>Option + Command + E</code> again. <em>fox</em></li>
+<li>
+<p>For other browsers, clear the cache and cookies, then navigate to the printer’s IP without additional characters:
+   <code>http://PRINTER_IP/</code></p>
+</li>
+<li>
+<p>If still unresolved, try another browser (Firefox, Chrome, Yandex, Opera, etc.).</p>
+</li>
+</ol>
+<hr />
+<h3 id="i-access-the-printer-via-orcabrowser-and-see-welcome-to-moonraker">I Access the Printer via Orca/Browser and See "Welcome to Moonraker"<a class="headerlink" href="#i-access-the-printer-via-orcabrowser-and-see-welcome-to-moonraker" title="Permanent link">&para;</a></h3>
+<p>ZMOD uses the following ports:</p>
+<ul>
+<li><code>7125</code> — Moonraker</li>
+<li><code>8080</code> — Camera</li>
+<li><code>80</code> — Fluidd/Mainsail</li>
+</ul>
+<p>To access the printer, enter its IP address <strong>without specifying a port</strong>. <em>кролик</em></p>
+<p><a href="/Recomendations/#send-files-via-octoklipper-for-printing">How to configure in Orca</a></p>
+<hr />
+<h3 id="what-is-firmware-retraction">What is Firmware Retraction?<a class="headerlink" href="#what-is-firmware-retraction" title="Permanent link">&para;</a></h3>
+<p>In ZMOD, Fluidd/Mainsail has sliders to adjust firmware retraction speed and distance. These do not affect prints unless the G-code file is sliced with firmware retraction enabled.</p>
+<p>Firmware retraction allows adjusting retraction during printing without reslicing.</p>
+<p>Instead of commands like <code>G1 E-.5 F2100</code>, use <code>G10</code> for retraction and <code>G11</code> for unretraction.</p>
+<p><strong>To enable in Orca:</strong>
+<code>Printer Settings</code> -&gt; <code>General</code> -&gt; <code>Advanced</code> -&gt; Enable <code>Use Firmware Retraction</code>.</p>
+<p><strong>To modify default retraction settings:</strong>
+Edit <code>user.cfg</code> in Fluidd (<code>Configuration</code> -&gt; <code>mod_data</code> -&gt; <code>user.cfg</code>):
+<div class="highlight"><pre><span></span><code>[firmware_retraction]
+retract_length: 0.9
+retract_speed: 35
+unretract_extra_length: 0
+unretract_speed: 35
+</code></pre></div></p>
+<p><strong><code>SET_RETRACTION</code> parameters (configure per filament):</strong></p>
+<ul>
+<li><code>RETRACT_LENGTH</code>: Filament retract/unretract distance.</li>
+<li><code>RETRACT_SPEED</code>: Retraction speed.</li>
+<li><code>UNRETRACT_SPEED</code>: Unretraction speed (often lower).</li>
+<li><code>UNRETRACT_EXTRA_LENGTH</code>: Extra filament length during unretraction.</li>
+</ul>
+<p><strong>Example in Orca:</strong>
+<code>Filament Profile</code> -&gt; <code>Override Parameters</code> -&gt; <code>Retraction</code> -&gt; <code>Length</code>
+<code>Filament Profile</code> -&gt; <code>Advanced</code> -&gt; <code>Start G-code</code>:
+<div class="highlight"><pre><span></span><code>SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
+</code></pre></div></p>
+<p>Use <code>GET_RETRACTION</code> to view current settings.</p>
+<hr />
+<h3 id="after-installing-zmod-my-screen-is-dead-and-not-responding-to-touches">After installing ZMOD, my screen is dead and not responding to touches.<a class="headerlink" href="#after-installing-zmod-my-screen-is-dead-and-not-responding-to-touches" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="/Recomendations/#install-latest-native-firmware-and-zmod-updates">Install the latest native firmware and ZMOD updates</a></li>
+<li>Read <a href="#known-peculiarities">known peculiarities</a> <em>bison</em></li>
+<li>You might have disabled the screen. Enable it with the <a href="/System/#display_on">DISPLAY_ON</a> macro</li>
+</ul>
+<hr />
+<h3 id="i-have-installed-the-latest-version-and-the-developer-says-you-need-to-update">I have installed the latest version, and the developer says you need to update.<a class="headerlink" href="#i-have-installed-the-latest-version-and-the-developer-says-you-need-to-update" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Make sure you put the latest version from a flash drive</p>
+</li>
+<li>
+<p><strong>Go to the web interface</strong>.
+<div class="highlight"><pre><span></span><code>Settings-&gt; Software updates-&gt; Press Check for update
+</code></pre></div></p>
+</li>
+<li>
+<p>Update all components <em>tree climber</em></p>
+</li>
+<li>Reboot the printer</li>
+</ul>
+<p><img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" /></p>
+<hr />
+<h3 id="i-want-to-remove-zmod---i-have-to-recalib">I want to remove ZMOD - I have to recalib?<a class="headerlink" href="#i-want-to-remove-zmod---i-have-to-recalib" title="Permanent link">&para;</a></h3>
+<p>No - all settings are saved</p>
+<hr />
+<h3 id="entware-in-zmod-how-to-use-it">Entware in ZMOD: How to Use It<a class="headerlink" href="#entware-in-zmod-how-to-use-it" title="Permanent link">&para;</a></h3>
+<p><strong>Warning! There is no Entware in <a href="/ru/AD5X/">AD5X</a></strong></p>
+<ol>
+<li>SSH into the printer (<code>root</code>:<code>root</code>, port <code>22</code>).</li>
+<li>
+<p>Run:
+   <code>export PATH="$PATH:/opt/bin/:/opt/sbin/"</code></p>
+</li>
+<li>
+<p>Now you can use <code>mc</code> or <code>opkg</code>:</p>
+<ul>
+<li>Update package database: <code>opkg update</code></li>
+<li>Install a package: <code>opkg install mc</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Entware directories:</strong></p>
+<ul>
+<li><code>/opt/bin</code>, <code>/opt/sbin</code>, <code>/opt/etc</code>, <code>/opt/home</code>, <code>/opt/lib</code>, <code>/opt/libexec</code>, <code>/opt/root</code>, <code>/opt/share</code>, <code>/opt/tmp</code>, <code>/opt/usr</code>, <code>/opt/var</code></li>
+</ul>
+<hr />
+<h3 id="known-features">Known features<a class="headerlink" href="#known-features" title="Permanent link">&para;</a></h3>
+<p><a href="https://github.com/ghzserg/zmod#known-peculiarities">Known features</a></p>
+<hr />
+<h3 id="ad5x-specifics">AD5X Specifics<a class="headerlink" href="#ad5x-specifics" title="Permanent link">&para;</a></h3>
+<h4 id="ad5x">AD5X<a class="headerlink" href="#ad5x" title="Permanent link">&para;</a></h4>
+<p><a href="/ru/AD5X/">AD5X</a></p>
+<hr />
+<h3 id="help">Help<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
+<h3 id="how-to-contact-support">How to Contact Support<a class="headerlink" href="#how-to-contact-support" title="Permanent link">&para;</a></h3>
+<ol>
+<li><a href="/Setup/#updating-the-mod">Update ZMOD to the latest version and all plugins</a>.</li>
+<li>Translate the mod into Russian <code>LANG LANG=ru</code> or English <code>LANG LANG=en</code></li>
+<li>Describe the issue clearly (screenshots, photos, text).</li>
+<li>Run <a href="/System/#clear_emmc">CLEAR_EMMC</a> to clear logs.</li>
+<li><strong>Power off the printer.</strong></li>
+<li>Power it back on.</li>
+<li>Reproduce the issue.</li>
+<li>Run <a href="/Zmod/#tar_config">TAR_CONFIG</a> to save logs.</li>
+<li>Submit the issue with <code>config.tar.gz</code> and description.</li>
+<li><a href="https://github.com/ghzserg/zmod/issues">Open a GitHub issue</a>.</li>
+</ol>
+<hr />
+<h3 id="how-to-change-the-boot-logo">How to change the boot logo<a class="headerlink" href="#how-to-change-the-boot-logo" title="Permanent link">&para;</a></h3>
+<p>The logo is located in the folder <code>mod_data/logo</code>.</p>
+<p>Logo requirements:</p>
+<ul>
+<li>Size: 800×480, 24-bit color depth  </li>
+<li>AD5M: BMP format. File name: <code>bootlogo.bmp</code>  </li>
+<li>AD5X: JPG format. File name: <code>logo.jpeg</code></li>
+</ul>
+<p>Upload your logo to the folder <code>mod_data/logo</code>.</p>
+<p>Reboot the printer twice.</p>
+<p>Removing the mod will restore the original logo. If this doesn't happen on the AD5M:</p>
+<ul>
+<li>Install the mod</li>
+<li>Upload the <a href="https://github.com/ghzserg/FF/releases/download/R/boot.bmp">boot.bmp</a> file to the <code>mod_data/logo</code> folder</li>
+<li>Restart the printer</li>
+</ul>
+<hr />
+<h3 id="no-trigger-on-probe-after-full-movement">No trigger on probe after full movement<a class="headerlink" href="#no-trigger-on-probe-after-full-movement" title="Permanent link">&para;</a></h3>
+<p>This error usually occurs if the z-axis isn't raised enough during measurement.</p>
+<p>This can be fixed programmatically as follows:</p>
+<p>Add to <code>mod_data/user.cfg</code>
+<div class="highlight"><pre><span></span><code>[bed_mesh]
+horizontal_move_z: 5
+</code></pre></div></p>
+<p>Hardware - all screws must be adjusted and the bed must not be warped.</p>
+<hr />
+<h3 id="weightvalue">WeightValue<a class="headerlink" href="#weightvalue" title="Permanent link">&para;</a></h3>
+<p>WeightValue is the value on the load cells in grams. It is displayed in degrees, as it is implemented through the temperature sensor interface. Therefore, Fluidd and Mainsail display degrees.</p>
+<p>What is this sensor for?</p>
+<p>It can be used to measure zoffset via the <a href="https://github.com/ghzserg/g28_tenz">g28_tenz</a> plugin</p>
+<ul>
+<li>You can stop printing if the nozzle hits the part or the part is torn off. <a href="/ru/Global/#nozzle_control">NOZZLE_CONTROL</a></li>
+<li>Without resetting it, the table map will be measured incorrectly.</li>
+</ul>
+<hr />
+<h3 id="mcu-protocol-error">MCU Protocol error<a class="headerlink" href="#mcu-protocol-error" title="Permanent link">&para;</a></h3>
+<p>Here are some errors that depend on the MCU:</p>
+<ul>
+<li>MCU Protocol error</li>
+<li>Unknown temperature sensor flashforge_loadcell</li>
+<li>Required MCU command</li>
+<li>flashforge_loadcell: Required MCU command 'flashforge_loadcell_h1' is not available</li>
+</ul>
+<p>The essence of all these errors is that the Klipper version does not match the MCU version.</p>
+<p>You can view the MCU version in the System tab.</p>
+<p><img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="https://github.com/user-attachments/assets/80e6a573-b372-4620-a7bc-7cbf020bc874" /></p>
+<p><img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="https://github.com/user-attachments/assets/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a" /></p>
+<p>For example, you are running Klipper 13, but the MCU used is from Klipper 11 or 12.</p>
+<p>Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipper 13.</p>
+<p>If your MCU version starts with <code>?-20230317_182329-ubuntu20-virtual-machine</code>, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (Ad5M/Ad5mPro).</p>
+<p>Accordingly, zMod needs to load native Klipper.</p>
+<ul>
+<li>Go to <code>mod_data/variables.cfg</code> and delete the line <code>klipper13 = 1</code>.</li>
+<li>Save the file</li>
+<li>Turn the printer off and on (do not reboot!)</li>
+</ul>
+<p><img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/821eb1c7-8cba-4a22-951f-852b1cb6c8ef" /></p>
+<p>If this isn't the case and Klipper is working, run <code>UPDATE_MCU FORCE=13</code> - this command will install the latest MCU version.</p>
+<p>If all else fails and <strong>Klipper isn't working</strong>:</p>
+<ul>
+<li>Switch to the native Klipper as described above.</li>
+<li><a href="/Native_FW/#how-to-install-native-firmware">Install the native Factory firmware</a>, which will install the native MCU.</li>
+</ul>
+<hr />
+<h3 id="filament-has-run-out-or-stopped">Filament has run out or stopped<a class="headerlink" href="#filament-has-run-out-or-stopped" title="Permanent link">&para;</a></h3>
+<p>Filament runout or jam detected</p>
+<p>For AD5M, you need to calibrate the sensor steps by trial and error. Enter this in <code>mod_data/user.cfg</code></p>
+<p>Increase this number. The standard 8 is sufficient for some, but some sensors only work correctly at 17.
+<div class="highlight"><pre><span></span><code>[filament_motion_sensor e0_sensor]
+detection_length: 8
+</code></pre></div></p>
+<p>Filament jam detected (IFS)</p>
+<p>For AD5X, the IFS motion sensor step count must be calibrated manually. Add the following to <code>mod_data/user.cfg</code>:</p>
+<div class="highlight"><pre><span></span><code>[zmod_ifs_motion_sensor ifs_motion_sensor]
+detection_length: 8
+</code></pre></div>
+<p>Increase this value—some printers work fine with the default <code>10</code>, while others require up to <code>17</code> for stable IFS operation.</p>
+<p>Additionally, filament stoppage in IFS may be caused by:</p>
+<ul>
+<li>Extruder is loaded with spool 1, but spool 2 is being pulled out — use <a href="/AD5X/#5-how-to-manually-tell-the-printer-which-spool-is-loaded"><code>SET_EXTRUDER_SLOT</code></a> to sync the extruder’s current slot.</li>
+<li>New filament is being inserted, while old filament remains inside the extruder.</li>
+<li>The 4-in-1 modules and their tubes have different lengths, requiring adjustment of <code>nozzle_cleaning_length</code> in <code>mod_data/filament.json</code>. Set it to <strong>70 or higher</strong>.
+  ➜ <a href="/AD5X/#basic-parameters-most-frequently-adjusted">More details</a></li>
+</ul>
+<p>The issue may also stem from the <strong>inability to unlock the filament in the IFS channel</strong>.</p>
+<p>Mechanical causes include:</p>
+<ul>
+<li>Plastic shavings stuck on the pinch roller shaft.</li>
+<li>Spring disengaged from the IFS channel lever.</li>
+</ul>
+<p>Solution: Remove debris, disassemble the mechanism, and reinstall components correctly.</p>
+<p>After repairs, test printing and filament lock/unlock behavior using the <a href="/AD5X/#10-ifs-commands">IFS commands</a>.</p>
+<hr />
+<h3 id="before-each-print-the-printer-measures-the-center-of-the-bed">Before each print, the printer measures the center of the bed.<a class="headerlink" href="#before-each-print-the-printer-measures-the-center-of-the-bed" title="Permanent link">&para;</a></h3>
+<p>Before printing, the printer:</p>
+<ul>
+<li>heats the bed and nozzle.</li>
+<li>cleans the nozzle.</li>
+<li>Cools the nozzle</li>
+<li><strong>Measures the bed center</strong> (Starting manual Z probe. Use TESTZ to adjust position)</li>
+<li>Heats the nozzle</li>
+<li>Starts printing</li>
+</ul>
+<p>This is a feature of the native firmware starting with version:</p>
+<ul>
+<li><strong>1.1.8</strong> AD5X</li>
+<li><strong>3.2.4</strong> AD5M/AD5MPro</li>
+</ul>
+<p>Solution:</p>
+<ul>
+<li><a href="/Native_FW/">Roll back the native firmware</a> to version <strong>1.1.7</strong> for AD5X, <strong>3.2.3</strong> for FF5M/FF5MPro</li>
+<li><a href="/System/#display_off">Disable the native display</a></li>
+</ul>
+<hr />
+<h3 id="e0120">E0120<a class="headerlink" href="#e0120" title="Permanent link">&para;</a></h3>
+<p>This is a Klipper error.</p>
+<p>Most often it is corrected by the following simple actions:</p>
+<ul>
+<li>Turn off the power of the printer</li>
+<li>Wait 10 seconds</li>
+<li>Power on the printer</li>
+</ul>
+<p>To see what exactly is the error:</p>
+<ul>
+<li>Open Fluidd/Mainsail</li>
+<li>Go to the console and read the error text</li>
+<li>Open the Telegram bot <a href="http://t.me/zmod_help_bot">@zmod_help_bot</a> and enter the error text or look up the description in the documentation yourself</li>
+</ul>
+<p>If you can't fix it, <a href="/Help/">you need to create a ticket</a>.</p>
+<p><a href="https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/">Native configs</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/FAQ.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

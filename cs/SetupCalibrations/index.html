@@ -1,0 +1,2968 @@
+
+<!doctype html>
+<html lang="cs" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Recomendations/">
+      
+      
+        <link rel="next" href="../AD5X/">
+      
+      
+        
+          <link rel="alternate" href="../../SetupCalibrations/" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/SetupCalibrations/" hreflang="ru">
+        
+          <link rel="alternate" href="../../de/SetupCalibrations/" hreflang="de">
+        
+          <link rel="alternate" href="../../pt/SetupCalibrations/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Setup Calibrations - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kalibrace-printer-calibration-for-beginners" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup Calibrations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Zvolte jazyk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../SetupCalibrations/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/SetupCalibrations/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/SetupCalibrations/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/SetupCalibrations/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Karty" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Domovská stránka
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Začátek
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Konfigurace
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nápověda
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Makra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dodatečné
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Stáhnout
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domovská stránka
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Začátek
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Začátek
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nastavení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrace-tiskárny-pro-začátečníky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace tiskárny pro začátečníky
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace tiskárny pro začátečníky">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-extruderu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID extruderu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-podložky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID podložky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vyrovnání-podložky-pomocí-šroubů-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vyrovnání podložky pomocí šroubů (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#přesné-měření-mapy-podložky-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jak-použít-uloženou-mapu-podložky-při-tisku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak použít uloženou mapu podložky při tisku?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptivní-měření-podložky-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptivní měření podložky (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptivní měření podložky (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení KAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrnutí-jak-nastavit-kamp-pro-dokonalý-tisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shrnutí: Jak nastavit KAMP pro dokonalý tisk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-funguje-z-offset-na-vaší-tiskárně" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak funguje Z-offset na vaší tiskárně
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jak funguje Z-offset na vaší tiskárně">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-z-originální-obrazovky-tiskárny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu z originální obrazovky tiskárny
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-přes-fluidd--mainsail--guppyscreen-při-provozu-bez-originální-obrazovky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu bez originální obrazovky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-offset-jednoduše" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-offset jednoduše:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-input-shaperu-input-shaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace Input Shaperu (Input Shaper)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace Input Shaperu (Input Shaper)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#důležitá-poznámka-parametr-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Důležitá poznámka: parametr FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-používat-makro-zshaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak používat makro ZSHAPER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-číst-výsledky-a-rozhodnout-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak číst výsledky a rozhodnout se
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rychlý-postup-kalibrace-input-shaperu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rychlý postup kalibrace Input Shaperu:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doporučení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurace
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfigurace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrace-tiskárny-pro-začátečníky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace tiskárny pro začátečníky
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace tiskárny pro začátečníky">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-extruderu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID extruderu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-podložky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID podložky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vyrovnání-podložky-pomocí-šroubů-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vyrovnání podložky pomocí šroubů (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#přesné-měření-mapy-podložky-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jak-použít-uloženou-mapu-podložky-při-tisku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak použít uloženou mapu podložky při tisku?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptivní-měření-podložky-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptivní měření podložky (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptivní měření podložky (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení KAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrnutí-jak-nastavit-kamp-pro-dokonalý-tisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shrnutí: Jak nastavit KAMP pro dokonalý tisk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-funguje-z-offset-na-vaší-tiskárně" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak funguje Z-offset na vaší tiskárně
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jak funguje Z-offset na vaší tiskárně">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-z-originální-obrazovky-tiskárny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu z originální obrazovky tiskárny
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-přes-fluidd--mainsail--guppyscreen-při-provozu-bez-originální-obrazovky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu bez originální obrazovky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-offset-jednoduše" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-offset jednoduše:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-input-shaperu-input-shaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace Input Shaperu (Input Shaper)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace Input Shaperu (Input Shaper)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#důležitá-poznámka-parametr-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Důležitá poznámka: parametr FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-používat-makro-zshaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak používat makro ZSHAPER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-číst-výsledky-a-rozhodnout-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak číst výsledky a rozhodnout se
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rychlý-postup-kalibrace-input-shaperu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rychlý postup kalibrace Input Shaperu:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pluginy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nápověda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Makra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seznam
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hlavní funkce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalibrace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Globální
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systém
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dodatečné
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dodatečné
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nativní firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historie změn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Podpora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stáhnout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrace-tiskárny-pro-začátečníky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace tiskárny pro začátečníky
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace tiskárny pro začátečníky">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-extruderu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID extruderu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-pid-podložky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace PID podložky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vyrovnání-podložky-pomocí-šroubů-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vyrovnání podložky pomocí šroubů (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#přesné-měření-mapy-podložky-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jak-použít-uloženou-mapu-podložky-při-tisku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak použít uloženou mapu podložky při tisku?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptivní-měření-podložky-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptivní měření podložky (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptivní měření podložky (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení KAMP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shrnutí-jak-nastavit-kamp-pro-dokonalý-tisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Shrnutí: Jak nastavit KAMP pro dokonalý tisk
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-funguje-z-offset-na-vaší-tiskárně" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak funguje Z-offset na vaší tiskárně
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jak funguje Z-offset na vaší tiskárně">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-z-originální-obrazovky-tiskárny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu z originální obrazovky tiskárny
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nastavení-z-offsetu-přes-fluidd--mainsail--guppyscreen-při-provozu-bez-originální-obrazovky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu bez originální obrazovky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-offset-jednoduše" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-offset jednoduše:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kalibrace-input-shaperu-input-shaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrace Input Shaperu (Input Shaper)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kalibrace Input Shaperu (Input Shaper)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#důležitá-poznámka-parametr-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Důležitá poznámka: parametr FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-používat-makro-zshaper" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak používat makro ZSHAPER
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jak-číst-výsledky-a-rozhodnout-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jak číst výsledky a rozhodnout se
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rychlý-postup-kalibrace-input-shaperu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rychlý postup kalibrace Input Shaperu:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/SetupCalibrations.md" title="Upravit tuto stránku" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="kalibrace-printer-calibration-for-beginners">Kalibrace {#printer-calibration-for-beginners}<a class="headerlink" href="#kalibrace-printer-calibration-for-beginners" title="Permanent link">&para;</a></h1>
+<h2 id="kalibrace-tiskárny-pro-začátečníky">Kalibrace tiskárny pro začátečníky<a class="headerlink" href="#kalibrace-tiskárny-pro-začátečníky" title="Permanent link">&para;</a></h2>
+<p>Obecně není nutné nic kalibrovat, ale pokud chcete svou tiskárnu vyladit, čtěte dále:</p>
+<p>Pokud jste dokončili úvodní kalibrace:
+<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb" /></p>
+<p>Pak již máte:</p>
+<ul>
+<li>Nastavený Z-offset</li>
+<li>Mapa podložky <code>MESH_DATA</code> (získaná při 60 °C) – nemažte ji, pokud používáte originální obrazovku, protože ta ji načítá při každém tisku</li>
+<li>Kalibrace PID extruderu pro 240 °C</li>
+</ul>
+<p>Tyto hodnoty jsou však dost univerzální; málokdo tiskne při 240 °C na trysce a 60 °C na podložce.</p>
+<hr />
+<h3 id="kalibrace-pid-extruderu">Kalibrace PID extruderu<a class="headerlink" href="#kalibrace-pid-extruderu" title="Permanent link">&para;</a></h3>
+<p><strong>Proč je to potřeba?</strong>
+Představte si extruder jako troubu. Pokud teplota neustále „skáče“, vaše „jídlo“ (výtisk) se upeče nerovnoměrně. Kalibrace PID naučí tiskárnu udržovat přesnou teplotu bez výkyvů, což je zásadní pro kvalitu tisku.</p>
+<p><strong>Důležité před zahájením!</strong>
+Kalibrujte konkrétně pro podmínky, ve kterých běžně tisknete:</p>
+<ul>
+<li><strong>Teplota:</strong> Nastavte hodnotu, kterou nejčastěji používáte pro daný filament (např. 210 °C pro PLA nebo 255 °C pro PETG).</li>
+<li><strong>Chlazení:</strong> Ventilátor chlazení výtisku by měl běžet na stejný výkon jako při běžném tisku.</li>
+</ul>
+<p><strong>Jak kalibraci provést?</strong></p>
+<ul>
+<li>
+<p>Použijte speciální příkaz (makro) <a href="../Calibrations/#pid_tune_extruder">PID_TUNE_EXTRUDER</a></p>
+</li>
+<li>
+<p>Zadáte jej ručně do konzole, nebo použijete tlačítko v rozhraní, pokud je k dispozici:
+    <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" /></p>
+</li>
+</ul>
+<p>--   Příkaz vypadá takto (příklad!):
+    <div class="highlight"><pre><span></span><code>PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
+</code></pre></div>
+    <strong>Co to znamená:</strong></p>
+<div class="highlight"><pre><span></span><code>*   `TEMPERATURE=255` — kalibrace proběhne pro 255 °C. Nastavte svou požadovanou teplotu.
+*   `COOLER=80` — ventilátor chlazení výtisku běží na 80 % výkonu.
+</code></pre></div>
+<ul>
+<li><strong>Po dokončení:</strong><ul>
+<li>Tiskárna automaticky uloží nové hodnoty.</li>
+<li><strong>Nezapomeňte restartovat tiskárnu!</strong> Je to nutné pro aktualizaci systémových dat a prevenci zamrznutí.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="kalibrace-pid-podložky">Kalibrace PID podložky<a class="headerlink" href="#kalibrace-pid-podložky" title="Permanent link">&para;</a></h3>
+<p><strong>Proč je to potřeba?</strong>
+Tisková podložka musí stejně jako extruder přesně udržovat nastavenou teplotu. Pokud kolísá, může to způsobit špatnou přilnavost první vrstvy nebo deformace (zvedání rohů) výtisku. Kalibrace PID podložky ji naučí rychle a stabilně dosahovat cílové teploty bez překmitů.</p>
+<p><strong>Doporučení pro AD5X</strong></p>
+<p>Otevřete soubor <code>printer.cfg</code> a nastavte v sekci <code>heater_bed</code>:
+<div class="highlight"><pre><span></span><code>[heater_bed]
+max_power: 0.6
+</code></pre></div>
+To umožní rychlejší ohřev podložky a PID se správně nastaví.
+Po změně a uložení parametru je nutné tiskárnu restartovat.</p>
+<p>Nebo můžete povolit doporučovací plugin, který tento soubor upraví automaticky: <code>ENABLE_PLUGIN NAME=recommend</code></p>
+<p><strong>Důležité před zahájením!</strong>
+Stejně jako u extruderu platí: kalibrujte na teplotu, kterou nejčastěji používáte (např. 60 °C pro PLA nebo 110 °C pro ABS).</p>
+<p><strong>Jak kalibraci provést?</strong></p>
+<ul>
+<li>
+<p>Použijte makro <a href="../Calibrations/#pid_tune_bed">PID_TUNE_BED</a></p>
+</li>
+<li>
+<p>Zadáte jej do konzole nebo stisknete tlačítko v rozhraní (často vedle tlačítka pro kalibraci extruderu):</p>
+<p><img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" /></p>
+</li>
+<li>
+<p>Příkaz pro podložku je ještě jednodušší:
+    <div class="highlight"><pre><span></span><code>PID_TUNE_BED TEMPERATURE=80
+</code></pre></div>
+    <strong>Co to znamená:</strong></p>
+<ul>
+<li><code>TEMPERATURE=80</code> — kalibrace proběhne pro teplotu podložky 80 °C. Nastavte požadovanou hodnotu.</li>
+</ul>
+</li>
+<li>
+<p><strong>Po dokončení:</strong></p>
+<ul>
+<li>Nové hodnoty se automaticky uloží.</li>
+<li><strong>Nezapomeňte tiskárnu restartovat!</strong> Tím se nastavení plně aplikuje.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="vyrovnání-podložky-pomocí-šroubů-bed_level_screws_tune">Vyrovnání podložky pomocí šroubů (BED_LEVEL_SCREWS_TUNE)<a class="headerlink" href="#vyrovnání-podložky-pomocí-šroubů-bed_level_screws_tune" title="Permanent link">&para;</a></h3>
+<p><strong>Proč je to potřeba?</strong>
+Vaše podložka je uchycena několika šrouby. Pokud jsou dotaženy nestejně, podložka je nakloněná a vzdálenost mezi ní a tryskou není rovnoměrná. To způsobuje špatnou přilnavost v některých místech, jinde může tryska dokonce škrábat o výtisk. Tato kalibrace pomáhá dokonalému vyrovnání podložky pomocí čtyř montážních šroubů.</p>
+<p><strong>Jak to funguje:</strong></p>
+<ol>
+<li>Tiskárna postupně přesune trysku nad každý šroub.</li>
+<li>Změří vzdálenost k podložce a na displeji ukáže, kterým šroubem a jakým směrem otáčet.</li>
+<li>Podle pokynů šrouby upravíte.</li>
+<li>Proces se opakuje, dokud není podložka dokonale vyrovnaná.</li>
+</ol>
+<p><strong>Nastavení pro <a href="../Calibrations/#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a>:</strong></p>
+<ul>
+<li><code>EXTRUDER_TEMP=130</code> — teplota extruderu. Je potřeba kvůli tepelné roztažnosti trysky, která by jinak zkreslila měření. Nastavte teplotu, při které z trysky nevytéká filament.</li>
+<li><code>BED_TEMP=80</code> — teplota podložky. Podložka se také při ohřevu roztahuje, proto kalibrujte při teplotě, na kterou běžně tisknete.</li>
+</ul>
+<p>Před kalibrací očistěte trysku, jinak budou měření nepřesná!</p>
+<p><strong>Průběh kalibrace:</strong></p>
+<ul>
+<li>
+<p>Zadejte příkaz do konzole nebo stiskněte tlačítko:</p>
+<p><img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" /></p>
+<div class="highlight"><pre><span></span><code>BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
+</code></pre></div>
+</li>
+<li>
+<p><strong>Důležité:</strong></p>
+<ul>
+<li>Tiskárna zahřeje extruder i podložku na zadané teploty.</li>
+<li>Spustí proceduru a zobrazí, kterým šroubem a jak otáčet (např. „doprava“ nebo „doleva“).</li>
+</ul>
+<p><img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" /></p>
+</li>
+<li>
+<p>Po prvním kole tiskárna počká, až šrouby upravíte. Jakmile jsou všechny nastavené, <strong>stiskněte tlačítko pro opakování</strong> a tiskárna zkontroluje výsledek. Opakujte, dokud nejsou hodnoty perfektní.</p>
+</li>
+<li>
+<p><strong>Dokončení:</strong></p>
+<ul>
+<li>Po ukončení a opuštění režimu kalibrace tiskárna <strong>NEvypne</strong> teploty automaticky.</li>
+<li><strong>Nezapomeňte ručně nastavit teploty extruderu i podložky na nulu v ovládacím menu!</strong></li>
+<li><strong>Mapa podložky i Z-offset budou nyní neplatné</strong>. Spusťte vyrovnání podložky z <strong>originální obrazovky</strong>.</li>
+</ul>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" /></p>
+</li>
+</ul>
+<hr />
+<h3 id="přesné-měření-mapy-podložky-auto_full_bed_level">Přesné měření mapy podložky (AUTO_FULL_BED_LEVEL)<a class="headerlink" href="#přesné-měření-mapy-podložky-auto_full_bed_level" title="Permanent link">&para;</a></h3>
+<p><strong>Proč je to potřeba?</strong>
+I dokonale vyrovnaná podložka může mít drobné prohlubně nebo vyvýšeniny. Mapa podložky (nebo „mesh kalibrace“) je jako „topografická mapa“ vašeho lože. Tiskárna si tyto nerovnosti zapamatuje a během tisku jemně posouvá osu Z, aby tryska zůstala v ideální vzdálenosti od povrchu. To zajišťuje perfektní přilnavost první vrstvy v celé ploše.</p>
+<p><strong>Proč právě tento příkaz?</strong>
+Vestavěné nástroje ve Fluidd a Mainsail nejsou pro naše tiskárny vhodné, protože:</p>
+<ul>
+<li>Neumí pracovat s <strong>tenzometrem</strong> (zajišťuje přesnou detekci dotyku).</li>
+<li>Neprovádí <strong>čištění trysky</strong> před měřením, což může ovlivnit přesnost kvůli zbytkům plastu.</li>
+</ul>
+<p>Naše makro <a href="../Calibrations/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a> s těmito vlastnostmi počítá!</p>
+<p><strong>Důležitá nastavení:</strong>
+Mapu podložky je třeba vytvářet za stejných podmínek, za jakých tisknete – tedy na vyhřáté podložce a s horkým extruderem, protože kov se teplem mírně roztahuje. Mapa pořízená při 60 °C se výrazně liší od té při 110 °C.</p>
+<ul>
+<li><code>EXTRUDER_TEMP=255</code> — teplota extruderu. Plast v trysce musí být rozpuštěný, aby šla tryska před měřením očistit. Nastavte požadovanou hodnotu.</li>
+<li><code>BED_TEMP=80</code> — teplota podložky. Nastavte hodnotu, kterou používáte při tisku.</li>
+<li><code>PROFILE=auto</code> — název profilu, pod kterým bude mapa uložena. Nejlepší je pojmenovat podle teploty podložky, např. <code>80</code>.</li>
+</ul>
+<p><strong>Příklad příkazu:</strong>
+<div class="highlight"><pre><span></span><code>AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
+</code></pre></div></p>
+<p><img width="302" height="342" alt="image" src="https://github.com/user-attachments/assets/643b7bbc-992d-40cb-9404-1fed185ad0ea" /></p>
+<p>V tomto příkladu vytváříme mapu pro tisk na 80 °C a ukládáme ji pod názvem <code>80</code>.</p>
+<h4 id="jak-použít-uloženou-mapu-podložky-při-tisku">Jak použít uloženou mapu podložky při tisku?<a class="headerlink" href="#jak-použít-uloženou-mapu-podložky-při-tisku" title="Permanent link">&para;</a></h4>
+<p>Aby tiskárna automaticky načetla správnou mapu na začátku každého tisku, přidejte do <strong>Start G-code</strong> ve svém sliceru (OrcaSlicer) následující řádky:</p>
+<div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=80
+<span class="nb">M190 </span>S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
+<span class="nb">M104 </span>S[nozzle_temperature_initial_layer] ; Nastav teplotu trysky
+</code></pre></div>
+<p><strong>Co se zde děje:</strong></p>
+<ul>
+<li><a href="../Main/#start_print">START_PRINT</a> – hlavní startovací makro</li>
+<li>Řádek <code>START_PRINT... MESH=80</code> říká tiskárně: „Začni tisk a načti mapu podložky s názvem <code>80</code>“.</li>
+<li><code>[nozzle_temperature_initial_layer]</code> a <code>[bed_temperature_initial_layer_single]</code> jsou proměnné ze sliceru, které automaticky doplní vaše nastavené hodnoty pro první vrstvu.</li>
+<li>Důležité je, aby parametr <code>MESH=</code> odkazoval na stejný název profilu (v našem příkladu <code>80</code>), který jste použili v <code>AUTO_FULL_BED_LEVEL</code>.</li>
+</ul>
+<p>Ještě lepší je vytvořit několik map pro různé teploty (např. 60, 70, 80, 90, 100, 110) a použít tento startovací kód:
+<div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
+<span class="nb">M190 </span>S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
+<span class="nb">M104 </span>S[nozzle_temperature_initial_layer] ; Nastav teplotu trysky
+</code></pre></div></p>
+<p>V tomto případě se načte mapa odpovídající aktuální teplotě podložky.</p>
+<p><strong>Shrnutí postupu:</strong></p>
+<ol>
+<li>Vytvořte mapu podložky pomocí makra <code>AUTO_FULL_BED_LEVEL</code> pro vaši tiskovou teplotu.</li>
+<li>Přidejte do startovacího kódu sliceru příkaz <code>START_PRINT</code> s parametrem <code>MESH=...</code>, který odkazuje na váš profil.</li>
+<li>Nyní tiskárna při každém tisku automaticky použije správnou mapu nerovností!</li>
+</ol>
+<hr />
+<h3 id="adaptivní-měření-podložky-kamp">Adaptivní měření podložky (KAMP)<a class="headerlink" href="#adaptivní-měření-podložky-kamp" title="Permanent link">&para;</a></h3>
+<p><strong>Proč je to potřeba?</strong>
+<a href="../Calibrations/#kamp">KAMP</a> je chytrý systém, který nevytváří mapu podložky po celé ploše, ale jen v oblasti, kde se budou tisknout vaše modely! To výrazně urychluje přípravu tisku, zejména na velkých tiskárnách, a přitom zachovává všechny výhody přesné mapy podložky.</p>
+<p><strong>Jak to funguje:</strong></p>
+<ol>
+<li>Před zahájením tisku KAMP analyzuje umístění všech objektů na podložce.</li>
+<li>Místo celé sítě změří výšku pouze v potřebné oblasti.</li>
+<li>Šetří tak čas, aniž by utrpěla kvalita tisku.</li>
+<li>Síť je hustší, tedy přesnější.</li>
+</ol>
+<p><strong>Důležitý rys procesu:</strong>
+Při použití KAMP (a i plné kalibrace) tiskárna postupuje podle chytrého schématu pro maximální přesnost:</p>
+<ol>
+<li>Tryska se <strong>zahřeje na tiskovou teplotu</strong>.</li>
+<li>Proběhne <strong>čištění trysky</strong> kvůli odstranění zbytků plastu.</li>
+<li>Tryska <strong>zchladne na 120 °C</strong>. Je to nutné, aby při měření z čisté trysky neodkapával roztavený plast, což by zkreslilo výsledky.</li>
+<li><strong>Měření mapy podložky</strong> probíhá se studenou a čistou tryskou.</li>
+<li>Po měření se tryska <strong>opět zahřeje na tiskovou teplotu</strong> a začne tisk.</li>
+</ol>
+<h4 id="nastavení-kamp">Nastavení KAMP<a class="headerlink" href="#nastavení-kamp" title="Permanent link">&para;</a></h4>
+<p><strong>Kdy použít KAMP?</strong>
+Ve většině případů není nutné vytvářet mapu podložky před každým tiskem. Výjimkou je použití <strong>výměnných plátů s různou tloušťkou</strong> (např. PEI fólie a sklo), protože mohou mít rozdílnou výšku.</p>
+<p><strong>1. Povolení adaptivní kalibrace (KAMP)</strong></p>
+<p>Aktivujte tuto volbu, aby tiskárna používala KAMP, kde je to možné: <a href="../Global/#use_kamp">SAVE_ZMOD_DATA USE_KAMP=1</a>.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA USE_KAMP=1
+</code></pre></div>
+<p>Nastavte OrcaSlicer:</p>
+<ul>
+<li><code>Process Profile</code> -&gt; <code>Other</code> -&gt; <code>Custom G-code</code> -&gt; <code>Exclude objects</code> zaškrtněte</li>
+<li><code>Process Profile</code> -&gt; <code>Other</code> -&gt; <code>Custom G-code</code> -&gt; <code>Label objects</code> zaškrtněte</li>
+</ul>
+<p><img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" /></p>
+<p><strong>2. Povolení kalibrace před každým tiskem</strong></p>
+<p>Pokud chcete, aby tiskárna automaticky vytvářela mapu podložky před každým tiskem (např. při časté výměně plátů), aktivujte tuto funkci: <a href="../Global/#print_leveling">SAVE_ZMOD_DATA PRINT_LEVELING=1</a>.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA PRINT_LEVELING=1
+</code></pre></div>
+<p>Můžete použít startovací kód například takto:
+<div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+<span class="nb">M190 </span>S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
+<span class="nb">M104 </span>S[nozzle_temperature_initial_layer] ; Nastav teplotu trysky
+</code></pre></div></p>
+<p><strong>Důležité pro použití originální obrazovky:</strong> Pokud chcete spustit měření mapy podložky z originální obrazovky, musíte přejít do menu:
+<code>Nastavení</code> → <code>Ikona WiFi</code> → <code>Režim sítě</code> → povolte přepínač <code>Pouze místní sítě</code>.</p>
+<p><strong>3. Chytré čištění před tiskem</strong></p>
+<p>Přidejte toto nastavení, aby tiskárna použila stejnou oblast pro čištění trysky, kde právě změřila mapu podložky. Ušetříte místo i čas: <a href="../Global/#clear">SAVE_ZMOD_DATA CLEAR=LINE_PURGE</a>.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA CLEAR=LINE_PURGE
+</code></pre></div>
+<h4 id="shrnutí-jak-nastavit-kamp-pro-dokonalý-tisk">Shrnutí: Jak nastavit KAMP pro dokonalý tisk<a class="headerlink" href="#shrnutí-jak-nastavit-kamp-pro-dokonalý-tisk" title="Permanent link">&para;</a></h4>
+<p>Pro povolení chytrého měření mapy podložky před každým tiskem spusťte jednorázově tento příkaz:</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+</code></pre></div>
+<p>Nyní bude tiskárna před každým tiskem měřit mapu pouze v oblasti, kde se bude tisknout.</p>
+<hr />
+<h3 id="jak-funguje-z-offset-na-vaší-tiskárně">Jak funguje Z-offset na vaší tiskárně<a class="headerlink" href="#jak-funguje-z-offset-na-vaší-tiskárně" title="Permanent link">&para;</a></h3>
+<p><strong>Co je Z-offset?</strong>
+Jednoduše řečeno, je to <strong>přesná vzdálenost mezi špičkou trysky a podložkou</strong> ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnutá – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). <a href="../FAQ/#how-does-z-offset-work">Více zde</a></p>
+<p><strong>Nejdůležitější pravidlo:</strong>
+U této tiskárny <strong>má Z-offset smysl pouze BĚHEM tisku</strong>. Hodnoty, které vidíte na displeji nebo v rozhraní PŘED nebo PO tisku, jsou pouze orientační a neodpovídají skutečnosti.</p>
+<h4 id="nastavení-z-offsetu-z-originální-obrazovky-tiskárny">Nastavení Z-offsetu z originální obrazovky tiskárny<a class="headerlink" href="#nastavení-z-offsetu-z-originální-obrazovky-tiskárny" title="Permanent link">&para;</a></h4>
+<p>Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej spravuje a hodnoty se spolehlivě ukládají.</p>
+<p><strong>Aby tiskárna vybrala offset automaticky, spusťte měření mapy podložky z originální obrazovky.</strong></p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241" /></p>
+<p><strong>Jak upravit:</strong></p>
+<ol>
+<li>Úprava je možná <strong>pouze během tisku</strong>.</li>
+<li>
+<p>Stiskněte <strong>pravý dolní čtverec</strong> na dotykové obrazovce.</p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/ae62aced-07af-489f-99b1-ce91cd55027d" /></p>
+</li>
+<li>
+<p>Poté stiskněte ikonu <strong>tužky</strong> pro editaci hodnoty Z-offsetu.</p>
+<p><img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/7d185d47-6c60-4d57-8901-923971a9ee7f" /></p>
+</li>
+<li>
+<p>Upravujte podle kvality první vrstvy.</p>
+</li>
+</ol>
+<p><strong>Důležité vědět:</strong></p>
+<ul>
+<li>U tiskárny AD5M originální obrazovka vždy přičítá fixní hodnotu <strong>0,025 mm</strong> k vašemu nastavení.</li>
+<li>Proto hodnota Z-offsetu, kterou vidíte ve Fluidd nebo Mainsail, bude vždy <strong>o 0,025 mm VYŠŠÍ</strong> než ta, kterou nastavíte na obrazovce tiskárny. Je to v pořádku!</li>
+</ul>
+<p><strong>Druhé důležité pravidlo:</strong>
+<strong>Z-offset pro originální a neoriginální obrazovky je odlišný; každá má své vlastní nastavení. Použijte <code>LOAD_ZOFFSET_NATIVE</code> pro zkopírování Z-offsetu z originální obrazovky do režimu neoriginální obrazovky.</strong></p>
+<h4 id="nastavení-z-offsetu-přes-fluidd--mainsail--guppyscreen-při-provozu-bez-originální-obrazovky">Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu <em>bez originální obrazovky</em><a class="headerlink" href="#nastavení-z-offsetu-přes-fluidd--mainsail--guppyscreen-při-provozu-bez-originální-obrazovky" title="Permanent link">&para;</a></h4>
+<p><strong>Jak to funguje:</strong></p>
+<ol>
+<li>
+<p>Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen, je potřeba jednorázově aktivovat speciální nastavení <a href="../Global/#load_zoffset">SAVE_ZMOD_DATA LOAD_ZOFFSET=1</a>:
+    <div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA LOAD_ZOFFSET=1
+</code></pre></div>
+    <em>Tento příkaz říká systému: „Načítej Z-offset z uložených nastavení, neměň jej.“</em></p>
+</li>
+<li>
+<p>Po povolení této volby můžete Z-offset upravovat přímo během tisku ve Fluidd/Mainsail nebo v panelu úprav v GuppyScreen.</p>
+<p><img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" /></p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" /></p>
+</li>
+<li>
+<p>Pokud chcete přenést Z-offset z originální obrazovky do režimu neoriginální obrazovky, spusťte makro <code>LOAD_ZOFFSET_NATIVE</code>, které přečte hodnotu Z-offsetu z originální obrazovky a použije ji pro režim neoriginální obrazovky.</p>
+</li>
+</ol>
+<p><strong>Hlavní výhody:</strong></p>
+<ul>
+<li><strong>Automatické uložení.</strong> Bez ohledu na způsob úpravy (obrazovka nebo web rozhraní) se hodnota Z-offsetu automaticky uloží a použije při dalším tisku.</li>
+<li><strong>Žádné ruční příkazy nejsou potřeba.</strong> Není nutné používat příkazy <code>Z_OFFSET_APPLY_PROBE</code> ani <code>Z_OFFSET_APPLY_ENDSTOP</code>. Vše probíhá automaticky „na pozadí“.</li>
+</ul>
+<h4 id="z-offset-jednoduše">Z-offset jednoduše:<a class="headerlink" href="#z-offset-jednoduše" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Z-offset upravujte pouze během tisku první vrstvy.</strong></li>
+<li><strong>Při práci s originální obrazovkou upravujte Z-offset na ní.</strong></li>
+<li><strong>Při práci bez originální obrazovky</strong> nejprve spusťte příkaz <code>SAVE_ZMOD_DATA LOAD_ZOFFSET=1</code>.</li>
+<li>Systém vše uloží sám, nemusíte se o nic starat.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Nelze použít <code>Z_OFFSET_APPLY_ENDSTOP</code> na této tiskárně.</p>
+<p>Nelze měnit <code>[probe] z_offset:</code> v souborech <code>printer.cfg</code> nebo <code>printer.base.cfg</code>.</p>
+<p>Protože originální obrazovka i makro <code>START_PRINT</code> načítají offset na začátku tisku.</p>
+</div>
+<hr />
+<h3 id="kalibrace-input-shaperu-input-shaper">Kalibrace Input Shaperu (Input Shaper)<a class="headerlink" href="#kalibrace-input-shaperu-input-shaper" title="Permanent link">&para;</a></h3>
+<p><strong>Co je Input Shaper a proč je potřeba?</strong>
+Při rychlých pohybech tiskárny může docházet k vibracím, podobně jako auto na nerovné silnici. Tyto vibrace se projeví na výtisku jako „ghosting“ nebo „ringing“ na stěnách. Input Shaper jsou chytré algoritmy, které tyto vibrace „předpoví“ a potlačí, takže můžete tisknout rychleji bez ztráty kvality.</p>
+<p>Vaše tiskárna nastavila Input Shaper automaticky při první kalibraci, což pro většinu tisků stačí. Pokud ale chcete dosáhnout maximální kvality nebo chcete porozumět principu, můžete si prohlédnout grafy a nastavit parametry ručně.</p>
+<h4 id="důležitá-poznámka-parametr-fix_scv">Důležitá poznámka: parametr <code>FIX_SCV</code><a class="headerlink" href="#důležitá-poznámka-parametr-fix_scv" title="Permanent link">&para;</a></h4>
+<p><strong>V čem je problém?</strong>
+Grafy a výpočty Input Shaperu v Klipperu standardně používají hodnotu <code>square_corner_velocity = 5</code>. Ale u naší tiskárny je nastaveno <code>25</code>. Tento rozdíl způsobí, že vypočtené maximální hodnoty zrychlení na grafech jsou několikanásobně vyšší, než by měly být.</p>
+<p><strong>Co s tím?</strong></p>
+<ol>
+<li>
+<p><strong>Oprava výpočtů:</strong> Aktivujte opravu pro správné zobrazení grafů: <a href="../Global/#fix_scv">SAVE_ZMOD_DATA FIX_SCV=1</a>.
+    <div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA FIX_SCV=1
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Zlepšení kvality tisku (doporučeno):</strong> Přidejte do souboru <code>mod_data/user.cfg</code> řádek:
+    <div class="highlight"><pre><span></span><code><span class="k">[printer]</span>
+<span class="na">square_corner_velocity</span><span class="o">:</span><span class="w"> </span><span class="s">9</span>
+</code></pre></div></p>
+<ul>
+<li><strong>Co to udělá?</strong> Tiskárna mírně zpomalí v ostrých rozích. Tisk se nepatrně prodlouží, ale vibrace a neostré rohy výrazně zmizí.</li>
+</ul>
+</li>
+</ol>
+<p>Chcete to mít jednodušší? Zadejte do konzole: <code>ENABLE_PLUGIN name=recommend</code>. Tento příkaz aktivuje doporučovací plugin, který už má FIX_SCV aktivní a square_corner_velocity: 9 nastaveno.</p>
+<p>Nezapomeňte tiskárnu restartovat!</p>
+<h4 id="jak-používat-makro-zshaper">Jak používat makro <code>ZSHAPER</code><a class="headerlink" href="#jak-používat-makro-zshaper" title="Permanent link">&para;</a></h4>
+<p><a href="../Calibrations/#zshaper">ZSHAPER</a> – toto makro rozvibruje tiskárnu různými frekvencemi, změří odezvu a vytvoří grafy pro určení ideálních parametrů Input Shaperu pro osy X a Y.</p>
+<p><strong>Specifika pro tiskárny s malou pamětí (AD5M, AD5MPro):</strong>
+Aby nedošlo k přetížení systému, <strong>kalibrujte osy zvlášť</strong>.</p>
+<ul>
+<li><code>ZSHAPER</code> — kalibruje obě osy (X i Y).</li>
+<li><code>ZSHAPER X=1 Y=0</code> — kalibruje pouze osu X (rychlejší a méně náročné).</li>
+<li><code>ZSHAPER Y=1 X=0</code> — kalibruje pouze osu Y.</li>
+</ul>
+<p><strong>Příklad použití a výstupu:</strong></p>
+<ol>
+<li>
+<p>Zadejte do konzole příkaz pro kalibraci osy Y:
+    <div class="highlight"><pre><span></span><code>ZSHAPER Y=1 X=0
+</code></pre></div></p>
+</li>
+<li>
+<p>Po dokončení měření získáte zprávu např.:
+    <div class="highlight"><pre><span></span><code>// Recommended shaper is zv @ 53.2 Hz
+// Fitted shaper &#39;zv&#39; frequency = 53.2 Hz (vibrations = 0.9%, smoothing ~= 0.074)
+// To avoid too much smoothing with &#39;zv&#39;, suggested max_accel &lt;= 10200 mm/sec^2
+// Fitted shaper &#39;mzv&#39; frequency = 54.2 Hz (vibrations = 0.0%, smoothing ~= 0.080)
+// To avoid too much smoothing with &#39;mzv&#39;, suggested max_accel &lt;= 8700 mm/sec^2
+</code></pre></div></p>
+<ul>
+<li>Systém doporučí shaper <code>zv</code>, protože má nejmenší „vyhlazení“.</li>
+<li>Ale shaper <code>mzv</code> zcela potlačí vibrace (<code>0.0%</code>), i když vyžaduje nižší zrychlení.</li>
+</ul>
+</li>
+</ol>
+<h4 id="jak-číst-výsledky-a-rozhodnout-se">Jak číst výsledky a rozhodnout se<a class="headerlink" href="#jak-číst-výsledky-a-rozhodnout-se" title="Permanent link">&para;</a></h4>
+<p><strong>Kde najdete grafy?</strong>
+Po spuštění <code>ZSHAPER</code> se grafy a CSV soubory objeví na záložce <strong>"Configuration" -&gt; mod_data</strong> ve vašem webovém rozhraní (Fluidd/Mainsail).</p>
+<p><img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" /></p>
+<p><strong>Podrobný návod na čtení grafů:</strong> <a href="https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md">https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md</a></p>
+<p><strong>Možnost 1: Přijmout automatické nastavení</strong></p>
+<p>Pokud vám vše vyhovuje, stačí kliknout na <strong><code>SAVE CONFIG &amp; RESTART</code></strong> v rozhraní a tiskárna automaticky zapíše doporučené parametry.</p>
+<p><img width="324" height="68" alt="image" src="https://github.com/user-attachments/assets/9c76d5f7-0021-4e03-b495-6736f49dc1c9" /></p>
+<p><img width="745" height="389" alt="image" src="https://github.com/user-attachments/assets/b5b55e95-52af-4ee0-b34e-5bc6077d8d10" /></p>
+<p><strong>Možnost 2: Ruční nastavení</strong></p>
+<p>V příkladu výše je shaper <code>mzv</code> lepší, protože zcela eliminuje vibrace. Pokud jej chcete použít, přidejte tato nastavení do souboru <code>printer.cfg</code> (sekce <code>[input_shaper]</code>):</p>
+<div class="highlight"><pre><span></span><code><span class="k">[input_shaper]</span>
+<span class="na">shaper_type_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">mzv</span><span class="w">   </span><span class="c1">; Vybraný typ shaperu pro osu Y</span>
+<span class="na">shaper_freq_y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">54.2</span><span class="w">  </span><span class="c1">; Rezonanční frekvence pro osu Y</span>
+</code></pre></div>
+<p><strong>A nezapomeňte na zrychlení!</strong>
+Protože zvolený <code>mzv</code> shaper umožňuje maximální zrychlení pouze do 8700 mm/s², tuto hodnotu zapište do souboru <code>mod_data/user.cfg</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[printer]</span>
+<span class="na">max_accel</span><span class="o">:</span><span class="w"> </span><span class="s">8700</span><span class="w"> </span><span class="c1">; Maximální zrychlení pro osy X a Y</span>
+</code></pre></div>
+<h4 id="rychlý-postup-kalibrace-input-shaperu">Rychlý postup kalibrace Input Shaperu:<a class="headerlink" href="#rychlý-postup-kalibrace-input-shaperu" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Spusťte <code>SAVE_ZMOD_DATA FIX_SCV=1</code> pro správné výpočty.</li>
+<li>Přidejte <code>square_corner_velocity: 9</code> do <code>mod_data/user.cfg</code> pro lepší kvalitu.</li>
+<li>Spusťte kalibraci požadované osy, např. <code>ZSHAPER Y=1</code>.</li>
+<li>Prostudujte grafy a výstup v konzoli.</li>
+<li>Buď klikněte na <code>SAVE CONFIG</code>, nebo ručně zapište preferovaný <code>shaper_type</code> a <code>shaper_freq</code> do <code>printer.cfg</code> a také <code>max_accel</code> do <code>mod_data/user.cfg</code>.</li>
+<li>Restartujte tiskárnu.</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/SetupCalibrations.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zpět na začátek
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

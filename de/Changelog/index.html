@@ -1,0 +1,3281 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Native_FW/">
+      
+      
+        <link rel="next" href="../Sponsor/">
+      
+      
+        
+          <link rel="alternate" href="../../Changelog/" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/Changelog/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../pt/Changelog/" hreflang="pt">
+        
+          <link rel="alternate" href="../../cs/Changelog/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Änderungshistorie - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Änderungshistorie
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../Changelog/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/Changelog/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/Changelog/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/Changelog/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Beginn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Konfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hilfe
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Makros
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Zusätzlich
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Herunterladen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empfehlungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hilfe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hilfe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hilfe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makros
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Makros
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hauptfunktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalibrierungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stopp/Globale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusätzlich
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zusätzlich
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Änderungshistorie
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Änderungshistorie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versionsgeschichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionsgeschichte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versionsgeschichte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-166" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-165" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-164" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-154" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-153" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-140" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.3.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-130" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.3.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.2.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-0211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.1.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-009-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.0.9-fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.0.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herunterladen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#versionsgeschichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Versionsgeschichte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Versionsgeschichte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-166" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-165" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-164" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-160" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.6.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-154" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-153" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-150" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.5.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-143" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-142" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-141" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-140" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.4.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.3.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-130" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.3.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-110" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.1.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-105" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-104" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 1.0.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-024" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-022" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.2
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.2.2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-0211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-021" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-020" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.2.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.8
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Version 0.1.8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-017" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.7
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-016" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.6
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-015" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.5
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-014" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.4
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-013" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-011" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-009-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.0.9-fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-009" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version 0.0.9
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/de/Changelog.md" title="Seite editieren" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#version-history">Versionsgeschichte</a><ul>
+<li><a href="#version-166">Version 1.6.6</a></li>
+<li><a href="#version-165">Version 1.6.5</a></li>
+<li><a href="#version-164">Version 1.6.4</a></li>
+<li><a href="#Version-163">Version 1.6.3</a></li>
+<li><a href="#Version-162">Version 1.6.2</a></li>
+<li><a href="#Version-161">Version 1.6.1</a></li>
+<li><a href="#Version-160">Version 1.6.0</a></li>
+<li><a href="#Version-154">Version 1.5.4</a></li>
+<li><a href="#Version-153">Version 1.5.3</a></li>
+<li><a href="#Version-152">Version 1.5.2</a></li>
+<li><a href="#Version-151">Version 1.5.1</a></li>
+<li><a href="#Version-150">Version 1.5.0</a></li>
+<li><a href="#Version-143">Version 1.4.3</a></li>
+<li><a href="#Version-142">Version 1.4.2</a></li>
+<li><a href="#Version-141">Version 1.4.1</a></li>
+<li><a href="#Version-140">Version 1.4.0</a></li>
+<li><a href="#Version-131">Version 1.3.1</a></li>
+<li><a href="#Version-130">Version 1.3.0</a></li>
+<li><a href="#Version-112">Version 1.1.2</a></li>
+<li><a href="#Version-111">Version 1.1.1</a></li>
+<li><a href="#Version-110">Version 1.1.0</a></li>
+<li><a href="#Version-105">Version 1.0.5</a></li>
+<li><a href="#Version-104">Version 1.0.4</a></li>
+<li><a href="#Version-100">Version 1.0.0</a></li>
+<li><a href="#Version-024">Version 0.2.4</a></li>
+<li><a href="#Version-023">Version 0.2.3</a></li>
+<li><a href="#version-022">Version 0.2.2</a></li>
+<li><a href="#version-0211">Version 0.2.1.1</a></li>
+<li><a href="#version-021">Version 0.2.1</a></li>
+<li><a href="#version-020">Version 0.2.0</a></li>
+<li><a href="#version-018">Version 0.1.8</a></li>
+<li><a href="#version-017">Version 0.1.7</a></li>
+<li><a href="#version-016">Version 0.1.6</a></li>
+<li><a href="#Version-015">Version 0.1.5</a></li>
+<li><a href="#Version-014">Version 0.1.4</a></li>
+<li><a href="#Version-013">Version 0.1.3</a></li>
+<li><a href="#Version-011">Version 0.1.1</a></li>
+<li><a href="#version-009-fix">Version 0.0.9-fix</a></li>
+<li><a href="#version-009">Version 0.0.9</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="versionsgeschichte">Versionsgeschichte<a class="headerlink" href="#versionsgeschichte" title="Permanent link">&para;</a></h2>
+<h3 id="version-166">Version 1.6.6<a class="headerlink" href="#version-166" title="Permanent link">&para;</a></h3>
+<p>27.01.2026</p>
+<ul>
+<li>Aktualisiert Fluidd/Mainsail/Klipper</li>
+<li>Klipper, Fluidd, Mainsail, Moonraker Updates sind nicht von Mod-Updates abhängig</li>
+</ul>
+<h3 id="version-165">Version 1.6.5<a class="headerlink" href="#version-165" title="Permanent link">&para;</a></h3>
+<p>14.01.2026</p>
+<ul>
+<li>Fluidd/Mainsail/Klipper aktualisiert</li>
+<li>Zusätzliche Kameraeinstellungen sind verfügbar</li>
+<li>Auto Z-Offset</li>
+</ul>
+<h3 id="version-164">Version 1.6.4<a class="headerlink" href="#version-164" title="Permanent link">&para;</a></h3>
+<p>11.12.2025</p>
+<ul>
+<li>Verbesserte Benutzerfreundlichkeit bei der Einrichtung und Bedienung</li>
+<li>Aktualisierte Fluidd/Mainsail/Klipper</li>
+<li>Plugin für Benachrichtigungen</li>
+<li>IFS-Knistern entfernt</li>
+</ul>
+<h3 id="version-163">Version 1.6.3<a class="headerlink" href="#version-163" title="Permanent link">&para;</a></h3>
+<p>25.11.2025 - Jahr der Mod</p>
+<ul>
+<li><a href="https://zmod.link/link/">zmod.link</a> <a href="/de/Zmod/#zlink">ZLINK</a> - Fernverbindung zum Drucker über die Cloud</li>
+<li>Makro <a href="/de/System/#screen">SCREEN</a> - einen Screenshot des Druckerbildschirms erstellen</li>
+<li>Makro <a href="/Calibrations/#load_zoffset_native">LOAD_ZOFFSET_NATIVE</a> - Übertragung der Z-Offset-Einstellungen vom nativen Bildschirm in den Nicht-Bildschirm-Modus</li>
+<li><a href="/de/AD5X/">AD5X</a>: Globaler Parameter <a href="/de/Global/#remove_filament">REMOVE_FILAMENT</a> hinzugefügt - entfernt Filament nach dem Druck</li>
+<li>Plugin <a href="https://github.com/ghzserg/recommend">Empfohlene Einstellungen</a> hinzugefügt</li>
+<li>Tschechische Sprache hinzugefügt</li>
+<li>MCU-Versionskontrolle für Klipper 13 hinzugefügt</li>
+<li><a href="/de/AD5X/">AD5X</a>: Nivellierungsknopf hinzugefügt</li>
+<li><a href="/de/AD5X/">AD5X</a>: Korrekturen für Klipper 13</li>
+<li><a href="/de/AD5X/">AD5X</a>: Fix für Düsenreinigung</li>
+<li><a href="/de/AD5X/">AD5X</a>: IFS-Crunch entfernt</li>
+<li><code>`CAMERA_ON VIDEO=video99</code> - testet alle verfügbaren Kameras</li>
+<li>Prüfen auf Aktualisierungen nach Beendigung des Drucks</li>
+<li>Wenn die Tabelle über Fluidd/Mainsail entfernt wird, werden die Tensils zurückgesetzt. Es ist aber Sache des Benutzers, die Düse zu reinigen und den Tisch vorher aufzuwärmen.</li>
+<li>Fix PURGE_LINE, druckt nicht auf Stützen</li>
+<li>Behobener Kantenstoß beim Nachdrucken</li>
+<li>Behobene Skalen, wenn sie mehrere Tonnen anzeigen</li>
+<li>Behoben: Deaktivierung des Kammerlüfters nach Abschluss des Druckvorgangs</li>
+<li>Behobene Anzeige der verbleibenden Zeit in Guppies für nicht-russische Sprache</li>
+</ul>
+<h3 id="version-162">Version 1.6.2<a class="headerlink" href="#version-162" title="Permanent link">&para;</a></h3>
+<p>27.10.2025</p>
+<ul>
+<li><a href="https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md">Plugin-Unterstützung</a></li>
+<li><a href="https://github.com/ghzserg/g28_tenz">Plugin g28_tenz</a> - Parken der Z-Achse durch Wägezellen</li>
+<li><a href="https://github.com/function3d/bambufy">Plugin bambufy</a> - Kompatibel mit Bambu Studio und Orca Slicer, verbessert die Kontrolle des Zuführturms, bietet genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt schnelle Farbwechsel und erweiterte Druckfunktionen. Von @function3d.</li>
+<li><a href="https://github.com/ghzserg/nopoop">Plugin nopoop</a> - Maximierung der Abfallreduzierung von @ninjamida</li>
+<li>Fluidd: Farbunterstützung</li>
+<li>Mainsail: Colour Support Von @function3d, behebt 404-Fehlerproblem nach Seitenaktualisierung</li>
+<li>Guppy: Farbunterstützung. HA-Integration behoben.</li>
+<li>Automatisches Verbinden von Thumb Drives bei der Arbeit mit Guppy hinzugefügt</li>
+<li><a href="/de/Global/#wifi">WiFi</a> kann nun direkt aktiviert werden, ohne den nativen Bildschirm zu benutzen</li>
+<li><a href="/de/AD5X/">AD5X</a>: Korb- und Filamentabschneideproblem in neueren Revisionen behoben</li>
+<li><a href="/de/AD5X/">AD5X</a>: Farbunterstützung für Druckwiederherstellung</li>
+<li><a href="/de/AD5X/">AD5X</a>: Möglichkeit, <a href="/de/AD5X/#7-add-your-own-filament-types">eigene Filamenttypen und -farben</a> zu erstellen, wenn man ohne einen nativen Bildschirm arbeitet</li>
+<li>Klipper und Monnraker aktualisiert</li>
+<li>Unterstützung für ens160.py von @minicx hinzugefügt</li>
+<li>Portugiesische Sprache hinzugefügt</li>
+<li>Fehlerbehebungen</li>
+<li>Verbesserte Kompatibilität mit den neuesten Versionen der nativen Firmware</li>
+</ul>
+<h3 id="version-161">Version 1.6.1<a class="headerlink" href="#version-161" title="Permanent link">&para;</a></h3>
+<p>06.09.2025</p>
+<ul>
+<li><a href="/de/AD5X/">AD5X</a> - Unterstützung für Klipper 13. <a href="/de/System/#update_mcu">UPDATE_MCU</a></li>
+<li><a href="/de/AD5X/">AD5X</a> - Kopftemperatursensor</li>
+<li><a href="/de/AD5X/">AD5X</a> - Funktioniert ohne eigenen Bildschirm. IFS funktioniert vollständig mit der Einstellung reset amount</li>
+<li>Kleine Korrekturen</li>
+</ul>
+<h3 id="version-160">Version 1.6.0<a class="headerlink" href="#version-160" title="Permanent link">&para;</a></h3>
+<p>14.08.2025</p>
+<ul>
+<li>AD5M - Unterstützung für Klipper 13. <a href="/de/System/#update_mcu">UPDATE_MCU</a></li>
+<li>AD5M - Temperatursensor im Kopf</li>
+<li>Kleine Korrekturen</li>
+</ul>
+<p>Dank an <a href="https://github.com/darksimpson">@darksimpson</a> für die MCU-Unterstützung.</p>
+<p>Dank an <a href="https://github.com/loss-and-quick/">@minicx</a> für die Zehnerunterstützung</p>
+<h3 id="version-154">Version 1.5.4<a class="headerlink" href="#version-154" title="Permanent link">&para;</a></h3>
+<p>28.06.2025</p>
+<ul>
+<li>AD5X - Ton funktioniert</li>
+<li>AD5X - Wägezellen und Düsenaufprallkontrolle auf dem Tisch funktionieren</li>
+<li>AD5X - Telegramm-Bot funktioniert</li>
+<li>AD5X - Fadensensor funktioniert</li>
+<li>AD5X - PID-Einstellung des Prinetron-Tisches funktioniert</li>
+<li>AD5X - wiederhergestellte Düsenreinigung beim Entfernen der Tischkarte</li>
+<li>AD5X - getestete Mods funktionieren mit Firmware 1.0.9, 1.1.0, 1.1.1</li>
+<li>AD5X - erstellt <a href="/de/Native_FW/">Flash-Laufwerk zur Installation des Bildschirms Version 1.0.7 und alle anderen Module Version 1.1.1</a></li>
+<li>AD5x - erstellt <a href="/de/Native_FW/">Drucker-Reset-Stick</a></li>
+<li>AD5X - erstellt <a href="/de/Native_FW/">Mod-Aktivierungs-Stick, nach nativer Firmware-Aktualisierung</a></li>
+</ul>
+<h3 id="version-153">Version 1.5.3<a class="headerlink" href="#version-153" title="Permanent link">&para;</a></h3>
+<p>03.06.2025</p>
+<ul>
+<li>Fehler im Klipper <a href="https://github.com/ghzserg/zmod/issues/119">#119</a> behoben, der die Verwendung von <a href="/de/Recomendations/#don't-use-Russian-names-in-object-names">this</a> notwendig machte</li>
+<li>Die Düsensteuerung ist nun auch aktiviert, wenn vom Bildschirm aus auf einmal gedruckt wird</li>
+<li>Kleinere kosmetische Korrekturen</li>
+</ul>
+<h3 id="version-152">Version 1.5.2<a class="headerlink" href="#version-152" title="Permanent link">&para;</a></h3>
+<p>15.05.2025</p>
+<ul>
+<li>Aktualisierte Dokumentationsstruktur dank @TMTYD</li>
+<li>Neues Makro RESTORE_TAR_CONFIG</li>
+<li>Guppy-Anzeige behoben</li>
+<li><strong>AD5X</strong> HOME Fehlerbehebungen</li>
+<li>Moonraker-Update</li>
+<li>Parkbeschleunigung ändern</li>
+<li>Chinesische Wolken standardmäßig aktiviert</li>
+</ul>
+<h3 id="version-151">Version 1.5.1<a class="headerlink" href="#version-151" title="Permanent link">&para;</a></h3>
+<p>23.04.2025</p>
+<ul>
+<li><strong>AD5X</strong>: Unterstützung der Firmware AD5X-1.0.8-1.0.5-20250418</li>
+<li><strong>AD5X</strong>: Fix _LINE_PURGE</li>
+<li><strong>AD5X</strong>: Unterstützung für MCU IFS Update</li>
+<li><strong>AD5X</strong>: Fehlerbehebung MESH_TEST</li>
+<li><strong>AD5X</strong>: Fehlerbehebung _SMART_PARK</li>
+<li><strong>AD5X</strong>: Fehlerbehebung driver_fan</li>
+<li><strong>AD5X</strong>: korrigiert _HOME</li>
+<li>Kosmetische Korrekturen CHECK_MD5</li>
+<li>Rückgabe von chamber_fan an Moonraker</li>
+<li>Fix Objekt-Ausschluss</li>
+<li>Fix guppyscreen für verschiedene Sprachen</li>
+</ul>
+<h3 id="version-150">Version 1.5.0<a class="headerlink" href="#version-150" title="Permanent link">&para;</a></h3>
+<p>17.04.2025
+Unterstützung für Interface-Sprachen:</p>
+<ul>
+<li>ZMOD - Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Japanisch, Koreanisch</li>
+<li>GuppyScreen - Englisch, Deutsch, Französisch, Italienisch, Spanisch</li>
+</ul>
+<h3 id="version-143">Version 1.4.3<a class="headerlink" href="#version-143" title="Permanent link">&para;</a></h3>
+<p>23.03.2025</p>
+<ul>
+<li>Automatische Einstellung der Webkamera</li>
+<li>Wenn das WEB-Interface gewechselt wird, wird folgende Meldung angezeigt</li>
+<li>5X. Fehler beim schnellen Schließen von Dialogen behoben</li>
+<li>5X. Parken behoben</li>
+<li>Problem mit der Bildschirmabschaltung bei neuen Druckerrevisionen behoben</li>
+</ul>
+<h3 id="version-142">Version 1.4.2<a class="headerlink" href="#version-142" title="Permanent link">&para;</a></h3>
+<p>19.03.2025</p>
+<ul>
+<li>Verbesserte <a href="/de/Global/#nozzle_control">Düsenaufprallkontrolle</a> Funktionalität, Sie können nun <a href="/de/Global/#nozzle_control">Pause</a> verwenden, anstatt den Drucker abzuschalten. Aufgabe <a href="https://github.com/ghzserg/zmod/issues/23">#23</a></li>
+<li>Die Systemprüfungsfunktion wurde verbessert.</li>
+<li>Das Fluidd-Farbschema wurde geändert.</li>
+<li>Globaler Parameter <a href="/de/Macros/#save_moonraker">SAVE_MOONRAKER</a> hinzugefügt - erlaubt die Verwendung benutzerdefinierter Makro-Schaltflächen.</li>
+<li>GuppyScreen funktioniert in AD5X</li>
+<li>In AD5X neues Makro <a href="/de/Filament/#color">COLOR</a> Steuerung des Kunststofftyps, der Kunststofffarbe, des Ladens und Entladens des Filaments von farbigen Spulen.</li>
+<li>Geänderter Algorithmus für den Tabellentest vor dem Drucken, neuer globaler Parameter <a href="/de/Macros/#mesh_test">MESH_TEST</a> eingeführt</li>
+<li>Fehler <a href="https://github.com/ghzserg/zmod/issues/13">#13</a> behoben (Drucken in der Luft nach KAMP)</li>
+<li>Fehler <a href="https://github.com/ghzserg/zmod/issues/14">#14</a> behoben (Drucken auf nativem Bildschirm wiederherstellen)</li>
+<li>Fehler behoben <a href="https://github.com/ghzserg/zmod/issues/27">#31</a> (Einfrieren im GuppyScreen)</li>
+<li>Fehler <a href="https://github.com/ghzserg/zmod/issues/25">#25</a> behoben (AD5X. Tabellenkalibrierung funktioniert nicht richtig)</li>
+<li>Fehler <a href="https://github.com/ghzserg/zmod/issues/26">#26</a> behoben (AD5X. Kein Gürtelspektrogramm)</li>
+<li>Fehler <a href="https://github.com/ghzserg/zmod/issues/27">#27</a> behoben (AD5X. Installer-Fehler)</li>
+</ul>
+<h3 id="version-141">Version 1.4.1<a class="headerlink" href="#version-141" title="Permanent link">&para;</a></h3>
+<p>09.03.2025</p>
+<ul>
+<li>MD5-Summe der entpackten Dateien wird bei der Installation von zMod überprüft. Drucker beschädigt periodisch Dateien beim Kopieren von Dateien von einem Flash-Laufwerk in das Dateisystem.</li>
+<li>Das CHECK_SYSTEM-Makro hat eine Selbstüberprüfung des Systems eingeführt</li>
+<li>Die Schaltfläche zum Herunterfahren funktioniert in der Pro-Version</li>
+<li>Möglichkeit, nicht MJPEG-Kameras zu installieren</li>
+<li>
+<p>Alpha-Unterstützung für FF5X:
+  Bekannte Funktionen:</p>
+</li>
+<li>
+<p>Keine Entware, daher funktionieren NEW_SAVE_CONFIG und CLOSE_DIALOGS nicht</p>
+<ul>
+<li>Spielt keine Musik ab</li>
+<li>Keine PID-Tabellen-Kalibrierung, da es dort keine PID gibt</li>
+<li>Beim Aktivieren der Kamera muss VIDEO3 angegeben werden</li>
+<li>Keine Wägezellen, daher kein Tabellenschutz und keine Rückstellung der Wägezellen.</li>
+<li>Kein Filament-Bewegungssensor vom Clipper verfügbar</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-140">Version 1.4.0<a class="headerlink" href="#version-140" title="Permanent link">&para;</a></h3>
+<p>04.03.2025</p>
+<ul>
+<li>Moonraker, Fluidd, Python aktualisiert</li>
+<li><a href="/de/Zmod/#zrestore">Druck bei Stromausfall wiederherstellen</a></li>
+<li>Gürtel-Spektrogramm erstellen](/de/Macros/#belts_shaper_calibration)</li>
+<li>Überprüfung der geladenen Platte, prüft, ob die Tabelle ungefähr mit der aktuell geladenen Platte übereinstimmt</li>
+<li>Implementierte Arbeit mit <a href="/de/Macros/#motion_sensor">filament motion sensor</a></li>
+<li>GuppyScreen: Objektausschluss, Fehlerausgabe, Firmware-Rollback, PID-Kalibrierung, Gewichtsrücksetzung, Arbeit mit FF5M Pro</li>
+<li>Makro auf <a href="/de/Macros/#set_pause_next_layer">nächste Ebene</a>, oder <a href="/de/Macros/#set_pause_at_layer">auf einer bestimmten Ebene</a> ausführen</li>
+<li>Protokollierung aller nativen Bildschirmmeldungen an Klipper und Antworten auf diese Meldungen</li>
+<li>Geänderter Algorithmus der Shaper-Entfernung, Shaper-Graphen werden unter Berücksichtigung von SCV geplottet</li>
+<li>MUTE-Makro - Stummschaltung vor Neustart</li>
+<li>Neuer Parameter - <a href="/de/System/#display_off_timeout">Native screen off timeout</a></li>
+<li>Neue Datei <code>mod_data/power_off.sh</code> - ermöglicht das Schreiben von Code, der beim Ausschalten des Druckers ausgeführt wird</li>
+<li>Aktiviertes intelligentes Parken bei Verwendung von KAMP</li>
+<li>Fehler beim Entfernen von Mods, Deaktivieren von Mods und vollständigem Entfernen von Mods behoben</li>
+<li>Vorreinigung behoben</li>
+<li>Kontrolle des Auftreffens der Düse auf dem Tisch behoben. Funktioniert nur während des Druckens.</li>
+<li>Druckkopfbewegung mit Tasten in Fluid/GuppyScreen behoben</li>
+<li>Behobene Pause im nicht-nativen Bildschirmmodus</li>
+<li>KAMP-Betrieb behoben</li>
+</ul>
+<h3 id="version-131">Version 1.3.1<a class="headerlink" href="#version-131" title="Permanent link">&para;</a></h3>
+<ul>
+<li>GuppyScreen Verbesserungen: COLDPULL, PID-Steuerung, Firmware-Rückzüge, Shaper-Kalibrierung, Bandkalibrierung, kosmetische Korrekturen</li>
+<li>Die Düsensteuerung funktioniert jetzt nur noch beim Drucken</li>
+<li>RIEMEN_FORMGEBER_KALIBRIERUNG</li>
+<li>Verbesserte Bedienung ohne nativen Bildschirm</li>
+<li>Verbesserte Funktion des langsamen Fensterschließens und NEW_SAVE_CONFIG</li>
+</ul>
+<h3 id="version-130">Version 1.3.0<a class="headerlink" href="#version-130" title="Permanent link">&para;</a></h3>
+<p>08.02.2025</p>
+<ul>
+<li>Unterstützung <a href="/de/System/#display_off">GuppyScreen</a></li>
+<li>Klipper 12, <a href="/de/Macros/#update_mcu">im Testmodus</a> (standardmäßig deaktiviert). Es funktioniert nicht in ihm: Extruderheizung, Extrudertemperatur, Skalen.</li>
+<li>Ersetzte <code>dropbear</code> SSH-Client und SSH-Server mit der aktuellen Version.</li>
+<li>Ersetzte <code>mjpg_streamer</code> mit der Version mit Alexander-Patch, reduziert den Speicherverbrauch um 2-4 mal.</li>
+<li>Ausschluss von Objekten von Igor Polunovskiy behoben (jetzt wird die Unterstützung berücksichtigt).</li>
+<li>Shaper-Plotting unter Berücksichtigung von SCV (<a href="https://www.klipper3d.org/Config_Reference.html#printer">square_corner_velocity</a>) <a href="/de/Global/#fix_scv">FIX_SCV</a>.</li>
+<li>CHECK_SYSTEM](/de/System/#check_system) - Überprüfung von Datei- und Verzeichnisberechtigungen, Linkprüfung und Wiederherstellung hinzugefügt.</li>
+<li>Das Makro SOFT_REMOVE wurde entfernt.</li>
+<li>Moonraker, Fluidd, Mainsail aktualisiert.</li>
+</ul>
+<h3 id="version-112">Version 1.1.2<a class="headerlink" href="#version-112" title="Permanent link">&para;</a></h3>
+<p>03.02.2025</p>
+<ul>
+<li>Neues Makro <a href="/de/System/#check_system">CHECK_SYSTEM</a> - Überprüft das Drucker-Betriebssystem auf beschädigte Dateien.</li>
+<li>Neues Makro <a href="/de/Global/#nozzle_control">NOZZLE_CONTROL</a> - Notabschaltung des Druckers, wenn ein abreißendes Teil oder eine auf den Tisch auftreffende Düse erkannt wird.</li>
+<li>Neues Makro <a href="/de/Macros/#update_mcu">UPDATE_MCU</a> - Aktualisierung der MCU im Drucker.</li>
+<li>Neues globales Flag <a href="/de/Macros/#nice">NICE</a> - Setzt die Klipper-Prozesspriorität, 1 ist die niedrigste Priorität, 40 die höchste (20).</li>
+<li>Neues globales Flag <a href="/de/System/#fix_e0011">FIX_E0011</a> - Behebt den Fehler E0011 sowie <code>Communication timeout during homing</code>.</li>
+<li>Säubert das Drucker-Dateisystem von gelöschten Dateien, beschleunigt EMMC.</li>
+<li>Eine Reihe kleinerer Korrekturen</li>
+</ul>
+<h3 id="version-111">Version 1.1.1<a class="headerlink" href="#version-111" title="Permanent link">&para;</a></h3>
+<p>24.01.2025</p>
+<ul>
+<li>Problem mit der Reihenfolge behoben, wenn der Callback im Button-Handler <a href="https://github.com/Klipper3d/klipper/pull/6440">#6440</a> von <a href="https://github.com/drA1ex">Alexander K</a> blockiert ist - jetzt funktioniert <a href="/de/Macros/#load_cell_tare">LOAD_CELL_TARE</a> wie es sollte.</li>
+<li>Entfernte globale Parameter: <code>ALTER_CELL_TARE</code>, <code>IGNORE_CELL_TARE</code>, <code>CELL_WEIGHT</code>.</li>
+<li>Erhöhtes Timeout für zsend. Zusätzliche Meldungen werden angezeigt.</li>
+<li>G28 parkt jetzt zuerst Z, dann X und Y</li>
+<li>Neues Makro <a href="/de/Macros/#camera_restart">CAMERA_RESTART</a> - Neustart der alternativen Kamera-Implementierung</li>
+<li>Korrigierter Code zum Abbrechen des Drucks ohne nativen Bildschirm</li>
+<li>Implementierung von EXCLUDE_OBJECT_DEFINE von Igor Polunovskiy</li>
+<li>Bei wiederholtem Druck werden die Motoren nicht abgeschaltet und der Drucker wird nicht neu gestartet, auch wenn dies in den globalen Parametern angegeben ist</li>
+<li>Im Makro <a href="/de/Macros/#test_emmc">TEST_EMMC</a> wird der Verschleiß der EMMC-Karte angezeigt</li>
+<li>Deaktivierung der chinesischen Wolken behoben</li>
+</ul>
+<h3 id="version-110">Version 1.1.0<a class="headerlink" href="#version-110" title="Permanent link">&para;</a></h3>
+<p>15.01.2025</p>
+<ul>
+<li>Moonraker aktualisiert</li>
+<li>Moonraker Ladegeschwindigkeit deutlich erhöht</li>
+<li>Versteckte <code>level_h1</code>, <code>level_h2</code>, <code>level_h3</code>, <code>power_off</code>, <code>clear_power_off</code>, <code>level_clear</code>, <code>check_level_pin_alt</code>.</li>
+<li>Die Implementierung von Igor Polunovskiy wird verwendet, um Wägezellen im nicht-nativen Bildschirmmodus zurückzusetzen</li>
+<li>Zurücksetzen von Wägezellen, jetzt nur bei erwärmtem Tisch</li>
+<li>Neuer globaler Parameter <a href="/de/Macros/#alter_cell_tare">ALTER_CELL_TARE</a>. Ermöglicht die Umgehung von <a href="/de/FAQ/#alter_cell_tare error">Wägezellen-Reset-Fehler</a>.</li>
+<li>Neuer globaler Parameter <a href="/de/Macros/#cell_weight">CELL_WEIGHT</a> gibt an, bei welchem Gewicht die Wägezellen nicht kalibriert werden sollen</li>
+<li>Neuer globaler Parameter <a href="/de/Global/#china_cloud">CHINA_CLOUD</a> - erlaubt es, chinesische Wolken zu deaktivieren.</li>
+<li>Aktualisierung der Druckerkonfiguration neu geschrieben</li>
+<li>In der Pro-Version arbeiten die Gebläse nun korrekt. Die Standard-Winkel sind 165/105</li>
+<li>Die Kühlergeschwindigkeit wird jetzt während der Extruderkalibrierung eingestellt</li>
+<li>Zeit und Zeitzone in Moonraker stimmen jetzt mit der Klipperzeit überein</li>
+<li>Die Registerkarte "Systeminformationen" zeigt die native Firmware-Version an.</li>
+<li>Reduzierte Mod-Gesprächigkeit</li>
+</ul>
+<h3 id="version-105">Version 1.0.5<a class="headerlink" href="#version-105" title="Permanent link">&para;</a></h3>
+<p>13.01.2025</p>
+<ul>
+<li>Parameter zum Makro <a href="/de/Macros/#auto_reboot">AUTO_REBOOT</a> hinzugefügt, der einen Neustart der Firmware ermöglicht.</li>
+<li>G28 in Makros wird nur noch bei Bedarf aufgerufen</li>
+<li>Der MD5-Algorithmus wurde fast vollständig geändert. Jetzt funktioniert die MD5-Prüfung von überall und erfordert kein Aufheizen des Tisches oder des Extruders.</li>
+<li>Verbessertes Makro <a href="/de/Makros/#mem">MEM</a> gibt jetzt den Moonraker-, Klipper- und Shield-Speicher aus und wie SWAP verwendet wird</li>
+<li>Der Klipper-Prozess hat eine höhere Priorität als andere Prozesse</li>
+<li>Der globale Parameter <a href="/de/Global/#zshaper">PRINT_LEVELING</a> funktioniert nun auch in nicht-nativen Bildschirmen</li>
+<li>Das Makro <a href="/de/Calibrations/#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a> verwendet nun die Temperatur korrekt.</li>
+<li>Das Makro <a href="/de/Macros/#test_emmc">TEST_EMMC</a> kann EMMC, USB Flash und RAM testen.</li>
+<li>Swap kann nun auf USB-Flash platziert werden (muss aber nicht)</li>
+<li>Makro <a href="/de/System/#clear_emmc">CLEAR_EMMC</a> - löscht Logs und/oder GCODEs</li>
+<li>Fehlersuche <a href="/de/System/#fix_e0017">E0017</a></li>
+</ul>
+<h3 id="version-104">Version 1.0.4<a class="headerlink" href="#version-104" title="Permanent link">&para;</a></h3>
+<p>05.01.2025</p>
+<ul>
+<li>Unterstützung <a href="/de/FAQ/#what-is-rollback-firmware">Rollback von Firmware</a></li>
+<li>Fehlerbehebung <a href="/de/System/#fix_e0017">E0017</a></li>
+<li>Automatisches Einschalten des Treiberblasens, wenn die Motoren eingeschaltet werden. Löst das Problem des Entfernens von Shapern ohne Stock Blowing.</li>
+<li>Neues Makro <a href="/de/Macros/#test_emmc">TEST_EMMC</a> - Schreibt SIZE MB auf EMMC und die Schreib-Lese-Geschwindigkeit.</li>
+<li>Neues Makro <a href="/de/System/#clear_emmc">CLEAR_EMMC</a> - Löscht die EMMC.</li>
+<li>Automatischer <a href="/de/Macros/#zssh_on">Bot-Neustart bei Ausführung über SSH</a></li>
+<li><a href="https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml">Auto-clean</a> - Videos, die älter als 10 Tage sind, im Bot löschen.</li>
+<li>Setze <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml">gewünschte Zeitzone</a> im Bot</li>
+<li>Automatischer Wechsel von KAMP <a href="/de/Global/#clear">LINE_PURGE</a> zu _CLEAR2 wenn keine Objekte gefunden</li>
+<li>Korrigierte <a href="/de/Macros/#skip_zmod">SKIP_ZMOD</a> Operation</li>
+<li>Die Aktualisierung von fluidd/mainsail erfordert jetzt keinen Neustart mehr</li>
+<li>Der Wechsel von fluidd zu mainsail erfordert jetzt keinen Neustart mehr</li>
+<li>Zmod meldet Dateien, wenn darin Bögen verwendet werden</li>
+<li>Skript "adddMD5.sh" korrigiert</li>
+<li>Kühlungssteuerung des Treibers für nicht-native Bildschirmversionen korrigiert</li>
+<li>Automatisches Laden der Schreibtischkarte für nicht-native Bildschirmversionen beim Starten des Druckers</li>
+</ul>
+<h3 id="version-100">Version 1.0.0<a class="headerlink" href="#version-100" title="Permanent link">&para;</a></h3>
+<p>23.12.2024</p>
+<ul>
+<li>Neues Update- und Installationssystem, jetzt können fast alle Updates über das Netzwerk bezogen werden</li>
+<li>Neuer Makroparameter <a href="/de/Zmod/#camera_on">CAMERA_ON</a>, VIDEO - Videogerät (video0)</li>
+</ul>
+<h3 id="version-024">Version 0.2.4<a class="headerlink" href="#version-024" title="Permanent link">&para;</a></h3>
+<p>21.12.2024</p>
+<ul>
+<li>ZMOD schreibt automatisch, ob von einem Flash-Laufwerk aktualisiert werden soll - jetzt in roter Farbe</li>
+<li>Wenn die native Entfernung der Bildschirmtabelle verwendet wird (PRINT_LEVELING=1), werden die Parameter FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH in START_PRINT ignoriert</li>
+<li>Pause, auch beim Drucken vom Bildschirm in der äußersten rechten Ecke</li>
+<li>PRRECLEAR-Parameter, funktioniert jetzt auch beim Drucken mit Kartenaufbau vom Bildschirm aus</li>
+<li>Geänderter Installationsalgorithmus, nach erfolgreicher Installation ist es jetzt nicht mehr notwendig, den USB-Stick zu entfernen - der Drucker startet sich neu und löscht die Installationsdatei.</li>
+</ul>
+<h3 id="version-023">Version 0.2.3<a class="headerlink" href="#version-023" title="Permanent link">&para;</a></h3>
+<p>19.12.2024</p>
+<ul>
+<li>ZMOD schreibt automatisch, wenn ein Update von einem USB-Stick notwendig ist.</li>
+<li>Verbessertes Makro <a href="/de/Macros/#m600">M600</a> - ersetzt Filament durch eine Pause während des Druckens.</li>
+<li>Verbesserte MD5-Kontrolle - zeigt jetzt eine Meldung an, wenn MD5 nicht gefunden wird</li>
+</ul>
+<h3 id="version-022">Version 0.2.2<a class="headerlink" href="#version-022" title="Permanent link">&para;</a></h3>
+<p>17.12.2024</p>
+<ul>
+<li>Neues Makro <a href="/de/Macros/#fast_close_dialogs">FAST_CLOSE_DIALOGS</a> - Bewirkt das schnelle Schließen von Dialogen auf dem ursprünglichen Bildschirm. Wird verwendet, um ein Fenster zu schließen, wenn der Druckvorgang beendet ist oder abgebrochen wird. <em>Damit das schnelle Schließen von Dialogen funktioniert, müssen Sie auf der Registerkarte Einstellungen -&gt; WiFi-Symbol -&gt; Netzwerkmodus -&gt; den Schieberegler "Nur lokale Netzwerke" aktivieren </em>Implementierung über das Druckerbildschirmmenü: @darksimpson</li>
+<li>Neues Makro <a href="/de/Macros/#leveling_print_file">LEVELING_PRINT_FILE</a> - Druckt eine Datei mit Table-Map-Plotting vom nativen Bildschirm. <em>Für LEVELING_PRINT_FILE ist es notwendig, über das Menü des Druckerbildschirms auf die Registerkarte "Einstellungen" -&gt; "WiFi-Symbol" -&gt; "Netzwerkmodus" -&gt; den Schieberegler "Nur lokale Netzwerke "</em> einzuschalten.</li>
+<li>Neues Makro <a href="/de/Filament/#coldpull">COLDPULL</a> Coldpull (Düsenreinigung) ohne Gewalt. Implementierung von <a href="https://t.me/FF_5M_5M_Pro/2836/447172">dieser Algorithmus</a></li>
+<li>Neue Parameter <a href="/de/Global/#save_zmod_data">SAVE_ZMOD_DATA</a>:<ul>
+<li><a href="/de/Global/#save_zmod_data">PRINT_LEVELING</a> - Build Table Map mit nativem Bildschirm bedeutet 0-Nein, 1-Ja (0) bei jedem Druck. *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie auf die Registerkarte "Einstellungen" -&gt; "WiFi-Symbol" -&gt; "Netzwerkmodus" -&gt; schalten Sie den Schieberegler "Nur lokale Netzwerke" über das Menü des Druckerbildschirms ein.</li>
+<li>USE_KAMP](/de/Global/#save_zmod_data) - ermöglicht die Verwendung der adaptiven Desktopkarte (KAMP) anstelle der vollständigen Desktopkarte 0-nein, 1-ja (0). *Ermöglicht die Verwendung von KAMP, wenn eine Tabellenkarte über das Netzwerk vom nativen Bildschirm übernommen wird.</li>
+<li>CLOSE_DIALOGS](/de/Global/#save_zmod_data) - schließt Dialoge automatisch, wenn sie fertig sind und wenn der Druck abgebrochen wird 0-nein, 1-ja langsam, 2-ja schnell. <em>Damit das schnelle Schließen von Dialogen funktioniert, gehen Sie auf die Registerkarte "Einstellungen" -&gt; "WiFi-Symbol" -&gt; "Netzwerkmodus" -&gt; aktivieren Sie den Schieberegler "Nur lokale Netzwerke "</em> (0) über das Druckerbildschirmmenü.</li>
+<li>USE_SWAP](/de/Global/#save_zmod_data) - SWAP verwenden 0-nein, 1-ja (1). *Wenn Sie einen nicht gelöteten Prozessor haben, ist SWAP zwingend erforderlich.</li>
+</ul>
+</li>
+</ul>
+<h4 id="version-0211">Version 0.2.1.1<a class="headerlink" href="#version-0211" title="Permanent link">&para;</a></h4>
+<p>10.12.2024</p>
+<ul>
+<li>Asynchroner Algorithmus für die Wiedergabe von MIDI-Dateien</li>
+<li>Korrektur der Installation</li>
+<li>SHUTDOWN aus dem Hauptmenü behoben</li>
+<li>Neues Skript <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.4/addMD5.sh">addMD5.sh</a> - md5 Kontrolle für macOS/Linux - danke Alexander</li>
+<li>Neuer Parameter <a href="/de/Global/#save_zmod_data">STOP_MOTOR</a> - schaltet Motoren nach dem Drucken/Abbrechen nach 25 Sekunden automatisch ab.</li>
+<li>Neuer Parameter <a href="/de/Global/#save_zmod_data">AUTO_REBOOT</a> - automatischer Neustart des Druckers 1,5 Minuten nach dem Druck.</li>
+<li>Neuer Parameter <a href="/de/Global/#save_zmod_data">PRECLEAR</a> - verwendet die Düsenvorreinigung in START_PRINT</li>
+<li>Neue Musik: BattleCity, IndianaJones, WeWillRockYou von <a href="https://t.me/drmax_gc">@drmax_gc</a></li>
+</ul>
+<h3 id="version-021">Version 0.2.1<a class="headerlink" href="#version-021" title="Permanent link">&para;</a></h3>
+<p>10.12.2024</p>
+<ul>
+<li>Abrufen eines Shaper-Graphen direkt vom Drucker. Makro <a href="/de/Kalibrierungen/#zshaper">ZSHAPER</a></li>
+<li>Fehler beim Arbeiten ohne nativen Bildschirm behoben</li>
+</ul>
+<h3 id="version-020">Version 0.2.0<a class="headerlink" href="#version-020" title="Permanent link">&para;</a></h3>
+<p>09.12.2024</p>
+<ul>
+<li>Aktualisierung von fluidd/mainsauil</li>
+<li>Hinzufügen von mc, opkg, gdb</li>
+<li>Neustart über fluidd-Topmenü</li>
+<li>Fehlerbehebungen</li>
+<li>Große Überarbeitung des Makros <a href="/de/Main/#start_print">START_PRINT</a></li>
+<li>Makro <a href="/de/Macros/#new_save_config">NEW_SAVE_CONFIG</a> - speichert Änderungen/lädt den Clipper ohne Einfrieren des Bildschirms. @darksimpson's Implementierung</li>
+<li>Makro <a href="/de/Macros/#close_dialogs">CLOSE_DIALOGS</a> - schließt Fenster, wenn der Druck beendet ist und wenn der Druck abgebrochen wird. Implementierung durch @darksimpson</li>
+<li>Makro <a href="/de/Macros/#stop_zmod">STOP_ZMOD</a> - Moonraker abschalten</li>
+<li>Makro <a href="/de/Macros/#start_zmod">START_ZMOD</a> - Moonraker einschalten</li>
+<li>Makro <a href="/de/Global/#save_zmod_data">SAVE_ZMOD_DATA</a> - ZMOD-Parameter speichern.<ul>
+<li>CLOSE_DIALOGS - Dialoge automatisch schließen, wenn der Druckvorgang beendet ist und abgebrochen wird 0-nein, 1-ja (0)<ul>
+<li>NEW_SAVE_CONFIG - verwendet die Alternative NEW_SAVE_CONFIG bei der PID-Kalibrierung 0-nein, 1-ja (0)</li>
+<li>LED - LED-Helligkeit beim Einschalten (50)</li>
+<li>MIDI_ON - spielt MIDI beim Einschalten ("")</li>
+<li>MIDI_START - MIDI abspielen bei Druckbeginn ("")</li>
+<li>MIDI_END - Abspielen von MIDI am Ende des Drucks ("")</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="version-018">Version 0.1.8<a class="headerlink" href="#version-018" title="Permanent link">&para;</a></h3>
+<p>04.12.2024</p>
+<ul>
+<li>Unterstützung der Telegram-Bot-Verbindung</li>
+<li>Makro <a href="/de/Macros/#zssh_on">ZSSH_ON</a> - ZSSH_ON SSH_SERVER SSH_PORT SSH_USER VIDEO_PORT MOON_PORT</li>
+<li>Makro <a href="/de/Macros/#zssh_off">ZSSH_OFF</a> - SSH-Client ausschalten</li>
+<li>Makro <a href="/de/Macros/#zssh_restart">ZSSH_RESTART</a> - SSH-Client neu starten</li>
+</ul>
+<h4 id="version-017">Version 0.1.7<a class="headerlink" href="#version-017" title="Permanent link">&para;</a></h4>
+<p>03.12.2024</p>
+<ul>
+<li>Viele Makrokorrekturen</li>
+<li>Makro <a href="/de/Makros/#stop_zmod">STOP_ZMOD</a> - deaktiviert vorübergehend fluidd/mainstaill und moonraker</li>
+</ul>
+<h3 id="version-016">Version 0.1.6<a class="headerlink" href="#version-016" title="Permanent link">&para;</a></h3>
+<p>02.12.2024</p>
+<ul>
+<li>Speicherort der Logs korrigiert</li>
+<li>Makro <a href="/de/Macros/#load_cell_tare">LOAD_CELL_TARE</a> behoben</li>
+<li>Makro zur Kalibrierung von Extruder und Tisch-PID behoben</li>
+<li>Makro <a href="/de/Macros/#CLEAR_NOZZLE">CLEAR_NOZZLE</a> - Düsenreinigung wie in nativer Firmware</li>
+<li>Makros <a href="/de/Kalibrierungen/#kamp">KAMP</a> extruder_temp=[düse_temperatur_anfängliche_schicht] bed_temp=[bett_temperatur_anfängliche_schicht_single]. Adaptives Tabellenbild mit Düsenreinigung.</li>
+<li><a href="/de/Kalibrierungen/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a> - komplett neu geschriebenes Makro</li>
+</ul>
+<h3 id="version-015">Version 0.1.5<a class="headerlink" href="#version-015" title="Permanent link">&para;</a></h3>
+<p>30.11.2024</p>
+<ul>
+<li>Großsegel hinzugefügt. Schalten über WEB-Makro</li>
+<li>Makro STOP - schaltet Motoren aus, geschrieben im finalen gcod.</li>
+<li>Makro <a href="/de/Kalibrierungen/#zshaper">ZSHAPER</a> - kalibriert Shaper und lädt csv-Dateien nach /mod_data in Konfiguration. Weitere Analyse über (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)</li>
+<li>Makro <a href="/de/Makros/#load_cell_tare">LOAD_CELL_TARE</a> - Wägezellen zurücksetzen</li>
+<li>Feste Tischkalibrierung. Sie können jetzt Tisch- und Extrudertemperatur für die Kalibrierung einstellen. Standard 120/80</li>
+<li>Bildschirmabschaltung im nicht-nativen Bildschirmmodus behoben. Er schaltet sich nach 4 Minuten ab.</li>
+</ul>
+<h3 id="version-014">Version 0.1.4<a class="headerlink" href="#version-014" title="Permanent link">&para;</a></h3>
+<p>29.11.2024</p>
+<ul>
+<li>Kamerasteuerung über den Mod hinzugefügt. Erlaubt t Speicher. Und die Arbeit mit der Kamera mit dem Bildschirm aus. Sie können auch die Auflösung der Kamera ändern. (Die Implementierung ist von Pavel Mironov imitiert)</li>
+<li>Fehler im Installer behoben, der in der letzten Version [heater_bed] aus den Konfigurationsdateien löschen konnte</li>
+<li>Geänderte Bilder während der Installation. Implementiert <a href="https://t.me/drmax_gc">@drmax_gc</a></li>
+<li>Makros sind kategorisiert und ins Russische übersetzt</li>
+<li>Makro <a href="/de/Makros/#date_get">DATE_GET</a> - aktuelle Zeit anzeigen</li>
+<li>Makro <a href="/de/Makros/#date_set">DATE_SET</a> - aktuelle Zeit setzen</li>
+<li>Makro <a href="/de/Zmod/#camera_on">CAMERA_ON</a> - alternative Kamera-Implementierung verwenden</li>
+<li>Makro <a href="/de/Macros/#camera_off">CAMERA_OFF</a> - Alternative Kamera-Implementierung deaktivieren</li>
+</ul>
+<h3 id="version-013">Version 0.1.3<a class="headerlink" href="#version-013" title="Permanent link">&para;</a></h3>
+<p>28.11.2024</p>
+<ul>
+<li>MIDI-Wiedergabe hinzugefügt. Dateien werden in mod_data/midi gespeichert - Zugriff über die Konfigurationsregisterkarte. Dank an <a href="https://t.me/drmax_gc">@drmax_gc</a></li>
+<li>Makros <a href="/de/Makros/#play_midi">PLAY_MIDI</a>. Spielt die Melodie PLAY_MIDI FILE=Schmerz-Halt-deinen-Mund.mid</li>
+<li>Makro <a href="/de/Makros/#soft_remove">SOFT_REMOVE</a>. Entfernt nur zMod, lässt audio, md5, root</li>
+<li>Nach dem Update bleiben die Moonraker-Einstellungen erhalten</li>
+<li>Die Benutzereinstellungen für klipper werden nach mod_data/user.cfg verschoben.</li>
+<li>Benutzereinstellungen für moonraker werden nach mod_data/user.moonraker.conf verschoben</li>
+<li>Wenn der Bildschirm ausgeschaltet ist, wird der Text angezeigt, dass der Bildschirm ausgeschaltet ist. Danke @drmax_gc</li>
+<li>Fehler bei der Bettkalibrierung per Makro behoben. Das Bett wärmt sich jetzt auf.</li>
+<li>Fehler bei der Bettkalibrierung per Makro behoben. Das Bett wärmt sich jetzt auf.</li>
+</ul>
+<h3 id="version-011">Version 0.1.1<a class="headerlink" href="#version-011" title="Permanent link">&para;</a></h3>
+<p>27.11.2024</p>
+<ul>
+<li>Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Clipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und die Tabellenkarte aus dem Standardprofil wird geladen.</li>
+<li>Makros <a href="/de/Makros/#mem">MEM</a> - zeigt an, wie viel Speicher verwendet wird und von welcher Anwendung.</li>
+<li>Makro <a href="/de/System/#display_on">DISPLAY_ON</a> - setzt den Bildschirm in den Standardmodus zurück, der Drucker wird neu gestartet</li>
+<li>Makro <a href="/de/Makros/#led">LED</a> - schaltet die Hintergrundbeleuchtung bei 50% ein</li>
+<li>Makro <a href="/de/Makros/#led_on">LED_ON</a> - schaltet die Hintergrundbeleuchtung auf 100% ein.</li>
+<li>Makro <a href="/de/Macros/#led_off">LED_OFF</a> - schaltet die Hintergrundbeleuchtung aus</li>
+</ul>
+<h3 id="version-009-fix">Version 0.0.9-fix<a class="headerlink" href="#version-009-fix" title="Permanent link">&para;</a></h3>
+<p>25.11.2025</p>
+<ul>
+<li>Installationsfehler behoben.</li>
+</ul>
+<h3 id="version-009">Version 0.0.9<a class="headerlink" href="#version-009" title="Permanent link">&para;</a></h3>
+<p>25.11.2025</p>
+<ul>
+<li>Pause während des Druckens implementiert, wird über den nativen Bildschirm gehandhabt</li>
+<li>Wiederaufnahme des Druckvorgangs nach einer Pause implementiert, wird über den nativen Bildschirm gehandhabt</li>
+<li>Druckabbruch implementiert, wird über den nativen Bildschirm gehandhabt</li>
+<li>REBOOT](/de/Macros/#reboot) - Makro startet den Drucker neu</li>
+<li>SHUTDOWN](/de/Macros/#shutdown) - Makro zum Ausschalten des Druckers</li>
+<li>SKIP_ZMOD](/de/Macros/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten</li>
+<li>REMOVE_ZMOD](/de/Macros/#remove_zmod) - Makro zum Entfernen von Mods</li>
+<li>Fehler behoben: "Nach einer Pause aufgrund der Aktivierung des Filament-Bewegungssensors wird der Druckvorgang wieder aufgenommen, aber der Druck erfolgt in der Luft etwa 3 Zentimeter über der Stelle, an der er sein sollte".</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/de/Changelog.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2944 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Recomendations/">
+      
+      
+        <link rel="next" href="../AD5X/">
+      
+      
+        
+          <link rel="alternate" href="../../SetupCalibrations/" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/SetupCalibrations/" hreflang="ru">
+        
+          <link rel="alternate" href="./" hreflang="de">
+        
+          <link rel="alternate" href="../../pt/SetupCalibrations/" hreflang="pt">
+        
+          <link rel="alternate" href="../../cs/SetupCalibrations/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Ersteinrichtung Kalibrierung - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kalibrierung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ersteinrichtung Kalibrierung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sprache wechseln">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../SetupCalibrations/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/SetupCalibrations/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/SetupCalibrations/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/SetupCalibrations/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Hauptnavigation" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Startseite
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Beginn
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Konfiguration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Hilfe
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Makros
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Zusätzlich
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Herunterladen
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Startseite
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Beginn
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Beginn
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Einrichtung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drucker-kalibrierung-für-einsteiger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drucker-Kalibrierung für Einsteiger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extruder-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extruder PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelle-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabelle PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung-der-tischschrauben-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genaue-tabellenkarte-erstellen-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genaue Tabellenkarte erstellen (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-tabellenkalibrierung-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Tabellenkalibrierung (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptive Tabellenkalibrierung (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kamp-einrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KAMP einrichten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazit-wie-man-kamp-für-den-perfekten-druck-einrichtet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fazit: Wie man KAMP für den perfekten Druck einrichtet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktioniert-z-offset-auf-ihrem-drucker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie funktioniert Z-Offset auf Ihrem Drucker?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie funktioniert Z-Offset auf Ihrem Drucker?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anpassen-des-z-offsets-vom-nativen-bildschirm-des-druckers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einstellen-des-z-offsets-über-fluidd--mainsail--guppyscreen-beim-arbeiten-im-nicht-nativen-bildschirmmodus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten im nicht-nativen Bildschirmmodus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#über-z-offset-in-einfachen-worten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Über Z-Offset in einfachen Worten:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Shaper Kalibrierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input Shaper Kalibrierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wichtig-der-parameter-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtig: Der Parameter FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-das-makro-zshaper-benutzt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man das Makro ZSHAPER benutzt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-die-ergebnisse-interpretiert-und-eine-entscheidung-trifft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man die Ergebnisse interpretiert und eine Entscheidung trifft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurzer-algorithmus-der-aktionen-für-die-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurzer Algorithmus der Aktionen für die Shaper-Kalibrierung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Empfehlungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfiguration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfiguration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ersteinrichtung Kalibrierung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drucker-kalibrierung-für-einsteiger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drucker-Kalibrierung für Einsteiger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extruder-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extruder PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelle-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabelle PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung-der-tischschrauben-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genaue-tabellenkarte-erstellen-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genaue Tabellenkarte erstellen (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-tabellenkalibrierung-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Tabellenkalibrierung (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptive Tabellenkalibrierung (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kamp-einrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KAMP einrichten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazit-wie-man-kamp-für-den-perfekten-druck-einrichtet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fazit: Wie man KAMP für den perfekten Druck einrichtet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktioniert-z-offset-auf-ihrem-drucker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie funktioniert Z-Offset auf Ihrem Drucker?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie funktioniert Z-Offset auf Ihrem Drucker?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anpassen-des-z-offsets-vom-nativen-bildschirm-des-druckers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einstellen-des-z-offsets-über-fluidd--mainsail--guppyscreen-beim-arbeiten-im-nicht-nativen-bildschirmmodus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten im nicht-nativen Bildschirmmodus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#über-z-offset-in-einfachen-worten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Über Z-Offset in einfachen Worten:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Shaper Kalibrierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input Shaper Kalibrierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wichtig-der-parameter-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtig: Der Parameter FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-das-makro-zshaper-benutzt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man das Makro ZSHAPER benutzt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-die-ergebnisse-interpretiert-und-eine-entscheidung-trifft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man die Ergebnisse interpretiert und eine Entscheidung trifft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurzer-algorithmus-der-aktionen-für-die-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurzer Algorithmus der Aktionen für die Shaper-Kalibrierung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hilfe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hilfe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hilfe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makros
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Makros
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Liste
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hauptfunktionen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalibrierungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stopp/Globale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zusätzlich
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Zusätzlich
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native Firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Änderungshistorie
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Herunterladen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#drucker-kalibrierung-für-einsteiger" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drucker-Kalibrierung für Einsteiger
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extruder-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extruder PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabelle-pid-einstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabelle PID-Einstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kalibrierung-der-tischschrauben-bed_level_screws_tune" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genaue-tabellenkarte-erstellen-auto_full_bed_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genaue Tabellenkarte erstellen (AUTO_FULL_BED_LEVEL)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-tabellenkalibrierung-kamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive Tabellenkalibrierung (KAMP)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptive Tabellenkalibrierung (KAMP)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kamp-einrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        KAMP einrichten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazit-wie-man-kamp-für-den-perfekten-druck-einrichtet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fazit: Wie man KAMP für den perfekten Druck einrichtet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wie-funktioniert-z-offset-auf-ihrem-drucker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie funktioniert Z-Offset auf Ihrem Drucker?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wie funktioniert Z-Offset auf Ihrem Drucker?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anpassen-des-z-offsets-vom-nativen-bildschirm-des-druckers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#einstellen-des-z-offsets-über-fluidd--mainsail--guppyscreen-beim-arbeiten-im-nicht-nativen-bildschirmmodus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten im nicht-nativen Bildschirmmodus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#über-z-offset-in-einfachen-worten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Über Z-Offset in einfachen Worten:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input Shaper Kalibrierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Input Shaper Kalibrierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wichtig-der-parameter-fix_scv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtig: Der Parameter FIX_SCV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-das-makro-zshaper-benutzt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man das Makro ZSHAPER benutzt
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wie-man-die-ergebnisse-interpretiert-und-eine-entscheidung-trifft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wie man die Ergebnisse interpretiert und eine Entscheidung trifft
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurzer-algorithmus-der-aktionen-für-die-shaper-kalibrierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kurzer Algorithmus der Aktionen für die Shaper-Kalibrierung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/de/SetupCalibrations.md" title="Seite editieren" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Ersteinrichtung Kalibrierung</h1>
+
+<h3 id="kalibrierung"><a href="#kalibrieren-drucker-für-anfänger">Kalibrierung</a><a class="headerlink" href="#kalibrierung" title="Permanent link">&para;</a></h3>
+<h3 id="drucker-kalibrierung-für-einsteiger">Drucker-Kalibrierung für Einsteiger<a class="headerlink" href="#drucker-kalibrierung-für-einsteiger" title="Permanent link">&para;</a></h3>
+<p>Im Allgemeinen brauchen Sie nichts zu kalibrieren, aber wenn Sie Ihren Drucker besser einrichten wollen, lesen Sie weiter:</p>
+<p>Wenn Sie die Einsteigerkalibrierungen durchlaufen haben:
+<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb" /></p>
+<p>Dann haben Sie das bereits:</p>
+<ul>
+<li>Ein z-Offset ist eingerichtet</li>
+<li>Es gibt eine <code>MESH_DATA</code>-Tabelle (aufgenommen bei 60 Grad) - Sie können sie nicht löschen, wenn Sie den nativen Bildschirm verwenden, da sie bei jedem Druckvorgang geladen wird</li>
+<li>Es gibt eine Extruder-PID-Kalibrierung bei 240 Grad</li>
+</ul>
+<p>Aber diese Einstellungen sind ziemlich allgemein, nicht viele Leute drucken bei 240 Grad Düsentemperatur und 60 Grad Tischtemperatur.</p>
+<hr />
+<h3 id="extruder-pid-einstellung">Extruder PID-Einstellung<a class="headerlink" href="#extruder-pid-einstellung" title="Permanent link">&para;</a></h3>
+<p><strong>Warum ist dies notwendig?</strong>
+Stellen Sie sich einen Extruder wie einen Backofen vor. Wenn die Temperatur darin ständig "springt", wird das Gericht (Ihr Teil) möglicherweise nicht gleichmäßig gebacken. Durch die PID-Kalibrierung "lernt" Ihr Drucker, die richtige Temperatur ohne Sprünge zu halten. Dies ist entscheidend für die Qualität des Drucks.</p>
+<p><strong>Ein wichtiger Punkt, bevor Sie beginnen!</strong>
+Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:</p>
+<ul>
+<li><strong>Temperatur:</strong> Die Temperatur, die Sie am häufigsten für Ihren Kunststoff verwenden (z.B. 210°C für PLA oder 255°C für PETG).</li>
+<li><strong>Kühlung:</strong> Der Kühler sollte mit der gleichen Leistung wie beim normalen Druck arbeiten.</li>
+</ul>
+<p><strong>Wie wird die Kalibrierung durchgeführt?</strong></p>
+<ul>
+<li>
+<p>Verwenden Sie den speziellen Befehl (Makro) <a href="/de/Kalibrierungen/#pid_tune_extruder">PID_TUNE_EXTRUDER</a></p>
+</li>
+<li>
+<p>Sie können es manuell in der Konsole eingeben oder auf die Schaltfläche in der Schnittstelle klicken, wenn Sie sie haben:
+    <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" /></p>
+</li>
+<li>
+<p>Der Befehl selbst sieht wie folgt aus (dies ist ein Beispiel!):
+    <div class="highlight"><pre><span></span><code>PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
+</code></pre></div>
+    <strong>Was das bedeutet:</strong></p>
+<ul>
+<li>
+<ul>
+<li><code>TEMPERATURE=255</code> - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.</li>
+<li><code>COOLER=80</code> - die Kühlung erfolgt mit 80% Leistung.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Wenn Sie fertig sind:</strong>
+    <strong>Der Drucker speichert die neuen Einstellungen selbständig.</strong>
+        * Starten Sie den Drucker neu, um die Daten im System zu aktualisieren und ein Einfrieren zu vermeiden.</p>
+</li>
+</ul>
+<hr />
+<h3 id="tabelle-pid-einstellung">Tabelle PID-Einstellung<a class="headerlink" href="#tabelle-pid-einstellung" title="Permanent link">&para;</a></h3>
+<p><strong>Warum brauche ich das?</strong>
+Der Tisch Ihres Druckers muss, wie der Extruder, die Temperatur genau halten. Wenn er schwankt, kann es zu Problemen mit dem Anhaften der ersten Schicht oder sogar zum Verziehen (Ablösen) des Teils an den Kanten kommen. Durch die PID-Kalibrierung Ihres Tisches lernen Sie, dass er schnell und konstant die richtige Temperatur erreicht, ohne zu überhitzen.</p>
+<p>Empfehlung für AD5X</p>
+<p>Öffnen Sie die Datei <code>printer.cfg</code> und setzen Sie den Abschnitt <code>heater_bed</code> auf:
+<div class="highlight"><pre><span></span><code>[heater_bed].
+max_power: 0.6
+</code></pre></div>
+Dadurch heizt sich der Tisch schneller auf und der PID wird korrekt eingestellt.
+Nachdem Sie den Parameter geändert und gespeichert haben, müssen Sie den Drucker neu starten.</p>
+<p>Sie können auch das Empfehlungs-Plugin aktivieren, das diese Datei selbst korrigiert: <code>`ENABLE_PLUGIN NAME=Empfehlung</code>.</p>
+<p><strong>Ein wichtiger Punkt, bevor Sie beginnen!</strong>
+Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatur, die Sie beim Drucken am häufigsten verwenden werden (z.B. 60°C für PLA oder 110°C für ABS).</p>
+<p><strong>Wie kalibriert man?</strong></p>
+<ul>
+<li>
+<p>Verwenden Sie das Makro <a href="/de/Kalibrierungen/#pid_tune_bed">PID_TUNE_BED</a></p>
+</li>
+<li>
+<p>Es kann auch in die Konsole eingegeben oder über eine Schaltfläche in der Benutzeroberfläche aufgerufen werden (oft neben der Schaltfläche zum Kalibrieren des Extruders):</p>
+<p><img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" /></p>
+</li>
+<li>
+<p>Der Befehl für die Tabelle sieht noch einfacher aus:
+    <div class="highlight"><pre><span></span><code>PID_TUNE_BED TEMPERATURE=80
+</code></pre></div>
+    <strong>Was das bedeutet:</strong></p>
+<ul>
+<li><code>TEMPERATURE=80</code> - die Kalibrierung wird für eine Tischtemperatur von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.</li>
+</ul>
+</li>
+<li>
+<p><strong>Wenn Sie fertig sind:</strong> **</p>
+<ul>
+<li>Die neuen Einstellungen werden automatisch gespeichert.<ul>
+<li>Vergessen Sie nicht, den Drucker neu zu starten, damit die neuen Einstellungen vollständig übernommen werden.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h3 id="kalibrierung-der-tischschrauben-bed_level_screws_tune">Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)<a class="headerlink" href="#kalibrierung-der-tischschrauben-bed_level_screws_tune" title="Permanent link">&para;</a></h3>
+<p><strong>Warum dies tun?</strong>
+Ihr Tisch wird von mehreren Schrauben zusammengehalten. Wenn diese nicht gleichmäßig verschraubt sind, wird der Tisch falsch ausgerichtet und der Abstand zwischen dem Tisch und der Düse wird ungleichmäßig. Dies führt dazu, dass der Kunststoff schlecht haftet und die Düse das Modell trifft. Diese Kalibrierung hilft dabei, den Tisch perfekt auszurichten, indem die 4 Schrauben, die ihn festhalten, eingestellt werden.</p>
+<p><strong>Wie funktioniert sie?</strong></p>
+<ol>
+<li>Der Drucker bringt die Düse nacheinander in die Positionen über jeder Schraube.</li>
+<li>misst den Abstand zum Tisch und zeigt auf dem Bildschirm an, welche Schraube in welche Richtung zu drehen ist.</li>
+<li>Sie stellen die Schrauben ein, indem Sie den Aufforderungen folgen.</li>
+<li>Der Vorgang wird so lange wiederholt, bis der Tisch waagerecht ist.</li>
+</ol>
+<p><strong>Tuning-Parameter <a href="/de/Kalibrierungen/#bed_level_screws_tune">BED_LEVEL_SCREWS_TUNE</a>:</strong></p>
+<ul>
+<li><code>EXTRUDER_TEMP=130</code> - Extrudertemperatur. Wird benötigt, damit die thermische Ausdehnung der Düse die Messungen nicht verfälscht. Stellen Sie die Temperatur ein, bei der der Kunststoff noch nicht aus der Düse austritt.</li>
+<li><code>BED_TEMP=80</code> - Temperatur des Tisches. Der Tisch dehnt sich auch bei Erwärmung aus, daher sollte die Kalibrierung bei der Temperatur durchgeführt werden, bei der Sie drucken.</li>
+</ul>
+<p>Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nicht korrekt sind!</p>
+<p><strong>Kalibrierungsvorgang:</strong></p>
+<ul>
+<li>
+<p>Geben Sie einen Befehl in der Konsole ein oder drücken Sie die Taste:</p>
+<p><img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" /></p>
+<div class="highlight"><pre><span></span><code>BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
+</code></pre></div>
+</li>
+<li>
+<p><strong>Wichtig:</strong></p>
+<ul>
+<li>Der Drucker heizt den Extruder und den Tisch auf die eingestellten Temperaturen auf.<ul>
+<li>Er startet den Vorgang und zeigt Ihnen an, welche Schraube Sie um wie viel Grad drehen müssen (z.B. "clockwise" für im Uhrzeigersinn, "counter-clockwise" für gegen den Uhrzeigersinn).</li>
+</ul>
+</li>
+</ul>
+<p><img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" /></p>
+</li>
+<li>
+<p>Nach dem ersten Durchgang wartet der Drucker, bis Sie die Einstellung vorgenommen haben. Wenn alle Schrauben angezogen sind, <strong>drücken Sie die Wiederholungstaste</strong>, damit der Drucker das Ergebnis prüft. Wiederholen Sie den Vorgang, bis das Ergebnis perfekt ist.</p>
+</li>
+<li>
+<p><strong>Abschluss des Auftrags:</strong>
+    <strong>Wenn Sie den Kalibrierungsmodus beenden und verlassen, setzt der Drucker die Temperatur </strong>NICHT automatisch zurück<strong>.
+        </strong>Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!<strong>
+        * </strong>Die Tischkarte und der Z-Offset werden falsch<strong>. Führen Sie eine Füllstandskalibrierung über den </strong>eigenen Bildschirm** durch.</p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" /></p>
+</li>
+</ul>
+<hr />
+<h3 id="genaue-tabellenkarte-erstellen-auto_full_bed_level">Genaue Tabellenkarte erstellen (AUTO_FULL_BED_LEVEL)<a class="headerlink" href="#genaue-tabellenkarte-erstellen-auto_full_bed_level" title="Permanent link">&para;</a></h3>
+<p><strong>Warum ist dies notwendig?</strong>
+Selbst ein perfekt nivellierter Tisch kann kleine Vertiefungen oder Unebenheiten aufweisen. Eine Tischkarte (oder "Netzkalibrierung") ist wie eine "Höhenkarte" Ihres Tisches. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf der gesamten Tischfläche einwandfrei haftet.</p>
+<p><strong>Warum dieser Befehl?</strong>
+Die eingebauten Werkzeuge Fluidd und Mainsail sind für unsere Drucker nicht geeignet, weil sie:</p>
+<ul>
+<li>Sie können nicht mit dem <strong>Berührungssensor</strong> arbeiten (der bei uns für die genaue Berührungserkennung zuständig ist).</li>
+<li>Sie <strong>reinigen die Düse</strong> nicht, bevor Sie beginnen, um alle Kunststofftropfen zu entfernen, die die Genauigkeit der Messungen ruinieren können.</li>
+</ul>
+<p>Unser Makro <a href="/de/Kalibrierungen/#auto_full_bed_level">AUTO_FULL_BED_LEVEL</a> berücksichtigt diese beiden Eigenschaften!</p>
+<p><strong>Wichtige Einstellungen:</strong>
+Die Karte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch drucken - ein erwärmter Tisch und ein heißer Extruder, da sich das Metall durch die Temperatur leicht ausdehnt. Eine Tischkarte, die bei 60 Grad gedruckt wird, unterscheidet sich drastisch von einer Tischkarte, die bei 110 Grad gedruckt wird.</p>
+<ul>
+<li><code>EXTRUDER_TEMP=255</code> - Extrudertemperatur. Der Kunststoff in der Düse sollte geschmolzen sein, damit er vor der Messung gereinigt werden kann. Stellen Sie die von Ihnen gewünschte Temperatur ein.</li>
+<li><code>BED_TEMP=80</code> - Tischtemperatur. Geben Sie die Temperatur an, die Sie für den Druck verwenden. Stellen Sie die gewünschte Temperatur ein.</li>
+<li><code>PROFILE=auto</code> - Name des Profils, unter dem die Karte gespeichert werden soll. Es ist besser, es nach der Tabellentemperatur zu benennen, zum Beispiel <code>80</code>.</li>
+</ul>
+<p><strong>Beispielbefehl:</strong>
+``gcode
+AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
+<div class="highlight"><pre><span></span><code>&lt;img width=&quot;302&quot; height=&quot;342&quot; alt=&quot;image&quot; src=&quot;https://github.com/user-attachments/assets/643b7bbc-992d-40cb-9404-1fed185ad0ea&quot; /&gt;
+
+In diesem Beispiel erstellen wir eine Karte zum Drucken auf einem 80°C-Tisch und speichern sie unter dem Namen `80`.
+
+#### Wie kann ich die gespeicherte Karte beim Drucken verwenden?
+
+Damit der Drucker zu Beginn jedes Druckvorgangs automatisch das richtige Kennfeld lädt, fügen Sie die folgenden Zeilen in den **Start G-Code* Ihres OrcaSlicer ein:
+
+```gcode
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=80
+M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen der Tabelle
+M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
+</code></pre></div></p>
+<p><strong>Was ist hier los:</strong></p>
+<ul>
+<li><a href="/de/Main/#start_print">START_PRINT</a> ist das grundlegende Druckstartmakro</li>
+<li>Die Zeichenkette <code>START_PRINT.... MESH=80</code> weist den Drucker an, <code>den Druck zu starten und eine Tabellenkarte mit dem Namen</code>80` zu laden."</li>
+<li><code>[nozzle_temperature_initial_layer]</code> und <code>[bed_temperature_initial_layer_single]</code> sind Variablen aus dem Slicer, die automatisch die Temperaturen liefern, die Sie für die erste Schicht wünschen.</li>
+<li>Das Wichtigste ist, dass der Parameter <code>MESH=</code> auf denselben Profilnamen (in unserem Beispiel <code>80</code>) zeigt, den Sie in <code>AUTO_FULL_BED_LEVEL</code> verwendet haben.</li>
+</ul>
+<p>Noch besser ist es, mehrere Karten für jede Temperatur 60, 70, 80, 90, 100, 110 zu erstellen und diese Art von Startcode zu schreiben:
+<div class="highlight"><pre><span></span><code>START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
+<span class="nb">M190 </span>S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
+<span class="nb">M104 </span>S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
+</code></pre></div></p>
+<p>In diesem Fall wird die Tabellenkarte geladen, die der Temperatur der Tabelle entspricht.</p>
+<blockquote>
+<p>Hinweis:</p>
+<blockquote>
+<p>Wenn es keine gespeicherte Tabellenkarte für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Tabellenkarte und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.</p>
+</blockquote>
+</blockquote>
+<p><strong>Gesamte Reihenfolge der Operationen:</strong></p>
+<ol>
+<li>Erstellen Sie eine Tabellenkarte mit dem Makro <code>AUTO_FULL_BED_LEVEL</code> für Ihre Drucktemperatur.</li>
+<li>Fügen Sie den Befehl <code>START_PRINT</code> zum Startcode des Slicers hinzu, wobei der Parameter <code>MESH=...</code> auf Ihren Profilnamen verweist.
+(3) Der Drucker verwendet nun bei jedem Druckvorgang automatisch die richtige Bumpmap!</li>
+</ol>
+<hr />
+<h3 id="adaptive-tabellenkalibrierung-kamp">Adaptive Tabellenkalibrierung (KAMP)<a class="headerlink" href="#adaptive-tabellenkalibrierung-kamp" title="Permanent link">&para;</a></h3>
+<p><strong>Warum wird es benötigt?</strong>
+[KAMP (/de/Calibrations/#kamp) ist ein cleveres System, das eine Karte der Tischunregelmäßigkeiten nicht über die gesamte Fläche erstellt, sondern nur in dem Bereich, in dem sich Ihre Modelle befinden werden! Dadurch wird die Druckvorbereitung erheblich beschleunigt, insbesondere bei großen Druckern, wobei alle Vorteile einer genauen Tischkarte erhalten bleiben.</p>
+<p><strong>Wie funktioniert es?</strong></p>
+<ol>
+<li>Vor Druckbeginn analysiert KAMP die Lage aller Objekte auf dem Tisch.</li>
+<li>Anstatt ein komplettes Raster zu erstellen, misst er die Höhe des Tisches nur im gewünschten Bereich.
+3) Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.</li>
+<li>Die Karte wird dichter und damit genauer.</li>
+</ol>
+<p><strong>Ein wichtiges Merkmal des Verfahrens:</strong>
+Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:</p>
+<ol>
+<li>Die Düse wird <strong>auf Drucktemperatur</strong> erhitzt.</li>
+<li>Es erfolgt eine <strong>Reinigung der Düse</strong> von auslaufendem Kunststoff.</li>
+<li>Die Düse <strong>kühlt auf 120°C</strong> ab. Damit soll verhindert werden, dass geschmolzener Kunststoff während der Messungen aus der sauberen Düse tropft, was die Ergebnisse verfälschen könnte.</li>
+<li>Mit der kalten und sauberen Düse findet eine <strong>Entladung der Tischkarte</strong> statt.</li>
+<li>Nach der Messung wird die Düse <strong>auf Drucktemperatur</strong> aufgeheizt, um mit dem Druck zu beginnen.</li>
+</ol>
+<h4 id="kamp-einrichten">KAMP einrichten<a class="headerlink" href="#kamp-einrichten" title="Permanent link">&para;</a></h4>
+<p><strong>Wann sollte man KAMP verwenden?</strong>
+In den meisten Fällen ist es nicht notwendig, vor jedem Druck eine Tischkarte zu erstellen. Die Ausnahme ist, wenn Sie <strong>Wechselplatten mit unterschiedlichen Dicken</strong> (z.B. PEI-Platte und Glas) verwenden, da diese unterschiedliche Höhen haben können.</p>
+<p><strong>1. Aktivieren der adaptiven Kalibrierung (KAMP)</strong></p>
+<p>Aktivieren Sie diese Option, damit der Drucker nach Möglichkeit KAMP verwendet <a href="/de/Global/#use_kamp">SAVE_ZMOD_DATA USE_KAMP=1</a>.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA USE_KAMP=1
+</code></pre></div>
+<p>Orca anpassen:</p>
+<ul>
+<li><code>Prozessprofil</code> -&gt; <code>Andere</code> -&gt; <code>Output G-cod</code> -&gt; <code>Model Exclusion</code> das Häkchen setzen</li>
+<li><code>Prozessprofil</code> -&gt; <code>Andere</code> -&gt; <code>Output G-cod</code> -&gt; <code>Modelle ausschließen</code> aktivieren Sie das Kontrollkästchen</li>
+</ul>
+<p><img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" /></p>
+<p><strong>2. Aktivieren Sie die Kalibrierung vor jedem Druck</strong></p>
+<p>Wenn Sie möchten, dass der Drucker vor jedem Druckauftrag automatisch eine Tabellenkarte erstellt (z.B. bei häufigem Plattenwechsel), aktivieren Sie diese Funktion <a href="/de/Global/#print_leveling">SAVE_ZMOD_DATA PRINT_LEVELING=1</a>.</p>
+<div class="highlight"><pre><span></span><code>SAVE_ZMOD_DATA PRINT_LEVELING=1
+</code></pre></div>
+<p>Der Startcode kann wie folgt verwendet werden:
+<code>`gcode
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
+M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen</code></p>
+<p><strong>Wichtig für die Arbeit vom systemeigenen Bildschirm aus:</strong> Um das Entfernen der Tabellenkarte vom systemeigenen Bildschirm des Druckers aus zu initiieren, müssen Sie in das Bildschirmmenü gehen:
+<code>Einstellungen</code> → <code>Wifi-Symbol</code> → <code>Netzwerkmodus</code> → den Schieberegler <code>Nur lokale Netzwerke</code> aktivieren.</p>
+<p><strong>3. Intelligente Reinigung vor dem Drucken</strong></p>
+<p>Fügen Sie diese Einstellung hinzu, damit der Drucker den gleichen Bereich, in dem er gerade die Tischkarte abgeschöpft hat, zur Reinigung der Düse verwendet. Dies spart Platz und Zeit <a href="/de/Global/#clear">SAVE_ZMOD_DATA CLEAR=LINE_PURGE</a>.</p>
+<p>``gcode
+SAVE_ZMOD_DATA CLEAR=LINE_PURGE
+```</p>
+<h4 id="fazit-wie-man-kamp-für-den-perfekten-druck-einrichtet">Fazit: Wie man KAMP für den perfekten Druck einrichtet<a class="headerlink" href="#fazit-wie-man-kamp-für-den-perfekten-druck-einrichtet" title="Permanent link">&para;</a></h4>
+<p>Um die intelligente Tabellenerstellung vor jedem Druck zu aktivieren, führen Sie den Befehl einmal aus:</p>
+<p><code>gcode
+SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE</code></p>
+<p>Jetzt wird der Drucker vor jedem Druck die Tabelle map nehmen, nur wenn es Objekte gibt, die gedruckt werden sollen</p>
+<hr />
+<h3 id="wie-funktioniert-z-offset-auf-ihrem-drucker">Wie funktioniert Z-Offset auf Ihrem Drucker?<a class="headerlink" href="#wie-funktioniert-z-offset-auf-ihrem-drucker" title="Permanent link">&para;</a></h3>
+<p><strong>Was ist Z-Offset?</strong>
+Einfach ausgedrückt handelt es sich um den <strong>exakten Abstand zwischen der Düsenspitze und dem Tisch</strong> in dem Moment, in dem der Drucker denkt, dass sie sich "berühren". Ein korrekter Z-Offset gewährleistet, dass die erste Kunststoffschicht perfekt auf dem Tisch haftet - nicht zu niedrig (die Düse berührt den Tisch) und nicht zu hoch (der Kunststoff haftet nicht). <a href="/de/FAQ/#wie-z-offset-arbeitet">Mehr lesen</a></p>
+<p><strong>Wichtigste Regel:</strong>
+Bei unserem Drucker ist der <strong>Z-Offset NUR während des Drucks</strong> relevant. Die Werte, die Sie auf dem Bildschirm oder in der Schnittstelle VOR oder NACH dem Druck sehen, dienen nur als Referenz und spiegeln nicht das tatsächliche Bild wider.</p>
+<p><strong>Zweite wichtige Regel:</strong>
+<strong>Z-Offset bei der Arbeit mit einem nativen Bildschirm und bei der Arbeit im nicht-nativen Bildschirmmodus sind nicht dasselbe</strong> und jeder lebt sein eigenes Leben und wird separat konfiguriert. Verwenden Sie <code>`LOAD_ZOFFSET_NATIVE</code>, um den Z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirmmodus zu kopieren.</p>
+<h4 id="anpassen-des-z-offsets-vom-nativen-bildschirm-des-druckers">Anpassen des Z-Offsets vom nativen Bildschirm des Druckers<a class="headerlink" href="#anpassen-des-z-offsets-vom-nativen-bildschirm-des-druckers" title="Permanent link">&para;</a></h4>
+<p>Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Offsets. Er steuert automatisch den Offset und seine Einstellungen werden sicher gespeichert.</p>
+<p><strong>Damit der Drucker den Z-Offset automatisch einstellt, müssen Sie die Tabellenabbildung über den systemeigenen Bildschirm ausführen.</strong></p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7e5f1ba4-832e-493b-94be-14aadf67ad4e" /></p>
+<p><strong>Anpassen:</strong></p>
+<ol>
+<li>Die Einstellung ist <strong>nur während des Drucks</strong> möglich.</li>
+<li>
+<p>Drücken Sie auf dem Touchscreen auf das <strong>untere rechte Quadrat</strong>.</p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/ae62aced-07af-489f-99b1-ce91cd55027d" /></p>
+</li>
+<li>
+<p>Klicken Sie dann auf das <strong>Bleistiftsymbol</strong>, um den Z-Offset-Wert zu bearbeiten.</p>
+<p><img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/7d185d47-6c60-4d57-8901-923971a9ee7f" /></p>
+</li>
+<li>
+<p>Nehmen Sie Änderungen entsprechend der Legequalität der ersten Lage vor.</p>
+</li>
+</ol>
+<p><strong>Wichtig zu wissen:</strong></p>
+<ul>
+<li>Für den AD5M-Drucker wird auf dem nativen Bildschirm immer ein fester Wert von <strong>0,025mm</strong> zu Ihrem Wert hinzugefügt.</li>
+<li>Der Z-Offset, den Sie im Fluidd- oder Mainsail-Interface sehen, wird also immer <strong>0,025mm MEHR</strong> sein als der Wert, den Sie auf dem Druckerbildschirm eingestellt haben. Das ist normal!</li>
+</ul>
+<h4 id="einstellen-des-z-offsets-über-fluidd--mainsail--guppyscreen-beim-arbeiten-im-nicht-nativen-bildschirmmodus">Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten <strong>im nicht-nativen Bildschirmmodus</strong><a class="headerlink" href="#einstellen-des-z-offsets-über-fluidd--mainsail--guppyscreen-beim-arbeiten-im-nicht-nativen-bildschirmmodus" title="Permanent link">&para;</a></h4>
+<p><strong>Wie es funktioniert:</strong></p>
+<ol>
+<li>
+<p>Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen merkt, muss einmalig die spezielle Einstellung <a href="/de/Global/#load_zoffset">SAVE_ZMOD_DATA LOAD_ZOFFSET=1</a> aktiviert werden:
+    <code>gcode
+    SAVE_ZMOD_DATA LOAD_ZOFFSET=1</code>
+    *Dieser Befehl weist das System an, den Z-Offset aus den gespeicherten Einstellungen zu laden und nicht auf Null zu setzen.</p>
+</li>
+<li>
+<p>Sobald diese Option aktiviert ist, können Sie den Z-Offset direkt während des Drucks in Fluidd/Mainsail oder über das Einstellungsfeld in GuppyScreen anpassen.</p>
+<p><img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" /></p>
+<p><img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" /></p>
+</li>
+</ol>
+<p>Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertragen wollen, rufen Sie das Makro <code>LOAD_ZOFFSET_NATIVE</code> auf, es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirm-Modus an.</p>
+<p><strong>Schlüsselvorteile:</strong></p>
+<ul>
+<li><strong>Automatische Speicherung.</strong> Unabhängig von der Anpassungsmethode (Bildschirm oder Webinterface) wird der z-Offset-Wert automatisch gespeichert und beim nächsten Druckvorgang automatisch angewendet.
+<strong>Es sind keine manuellen Befehle erforderlich.</strong> Sie müssen NICHT die Befehle <code>Z_OFFSET_APPLY_PROBE</code> oder <code>Z_OFFSET_APPLY_ENDSTOP</code> verwenden. Die gesamte Arbeit findet "unter der Motorhaube" statt.</li>
+</ul>
+<h4 id="über-z-offset-in-einfachen-worten">Über Z-Offset in einfachen Worten:<a class="headerlink" href="#über-z-offset-in-einfachen-worten" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Z-Offset nur beim Drucken der ersten Ebene einstellen.
+</strong>Wenn Sie mit dem nativen Bildschirm arbeiten, passen Sie den Z-Offset auf dem nativen Bildschirm an.**</li>
+<li>** <strong>Wenn Sie im nicht-nativen Bildschirmmodus arbeiten</strong>, führen Sie zuerst den Befehl <code>SAVE_ZMOD_DATA LOAD_ZOFFSET=1</code> aus.</li>
+<li>Das System wird alles von selbst speichern. Sie brauchen sich um nichts zu kümmern.</li>
+</ul>
+<div class="admonition gefahr">
+<p class="admonition-title">Gefahr</p>
+<p>Sie können <code>Z_OFFSET_APPLY_ENDSTOP</code> auf diesem Drucker nicht verwenden.</p>
+<p>Und Sie können <code>`[probe] z_offset:</code> in <code>printer.cfg</code> oder <code>printer.base.cfg</code>.</p>
+<p>Denn der native Bildschirm und das <code>START_PRINT</code>-Makro laden den Offset zu Beginn des Drucks.</p>
+</div>
+<hr />
+<h3 id="input-shaper-kalibrierung">Input Shaper Kalibrierung<a class="headerlink" href="#input-shaper-kalibrierung" title="Permanent link">&para;</a></h3>
+<p><strong>Was sind Shaper und warum werden sie benötigt?</strong>
+Wenn sich der Drucker schnell bewegt, kann er wie eine Maschine mit hoher Geschwindigkeit vibrieren. Diese Vibrationen werden auf Ihrem Modell als "Wellen" oder "Geister" an den Wänden abgebildet. Shaper sind clevere Algorithmen, die diese Vibrationen "vorhersagen" und unterdrücken, so dass Sie schneller drucken können, ohne an Qualität zu verlieren.</p>
+<p>Ihr Drucker hat bei der ersten Kalibrierung bereits automatisch Shaper eingestellt, und das reicht für die meisten Aufgaben aus. Wenn Sie jedoch die Qualität maximieren oder die Funktionsweise Ihres Druckers besser verstehen möchten, können Sie sich die Diagramme ansehen und manuelle Einstellungen vornehmen.</p>
+<h4 id="wichtig-der-parameter-fix_scv">Wichtig: Der Parameter <code>FIX_SCV</code><a class="headerlink" href="#wichtig-der-parameter-fix_scv" title="Permanent link">&para;</a></h4>
+<p><strong>Wo liegt das Problem?</strong>
+Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_corner_velocity = 5". In unserem Drucker ist der Wert dieses Parameters jedoch mit "25" angegeben. Diese Diskrepanz führt dazu, dass die berechneten Werte der maximalen Beschleunigung auf den Diagrammen um ein Vielfaches überschätzt werden.</p>
+<p><strong>Was ist zu tun?</strong></p>
+<ol>
+<li>
+<p><strong>Korrektur der Berechnungen:</strong> Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen <a href="/de/Global/#fix_scv">SAVE_ZMOD_DATA FIX_SCV=1</a>.
+    ``gcode
+    SAVE_ZMOD_DATA FIX_SCV=1
+    ```</p>
+</li>
+<li>
+<p><strong>Verbesserung der Druckqualität (empfohlen):</strong> Fügen Sie die folgende Zeile in die Datei <code>mod_data/user.cfg</code> ein:
+    <code>ini
+    [printer].
+    square_corner_velocity: 9</code></p>
+<ul>
+<li>**Was bewirkt dies? ** Der Drucker wird in scharfen Ecken leicht verlangsamt. Dies erhöht die Druckzeit geringfügig, reduziert aber die Vibrationen und verbessert die Eckenschärfe.</li>
+</ul>
+</li>
+</ol>
+<p>Alternativ können Sie es auch einfach halten. Geben Sie <code>ENABLE_PLUGIN name=recommend</code> in die Konsole ein - dieser Befehl aktiviert das Empfehlungs-Plugin, das bereits <code>FIX_SCV</code> aktiviert und `square_corner_velocity: 9`` vorgegeben hat.</p>
+<p>Vergessen Sie nicht, den Drucker neu zu starten!</p>
+<h4 id="wie-man-das-makro-zshaper-benutzt">Wie man das Makro <code>ZSHAPER</code> benutzt<a class="headerlink" href="#wie-man-das-makro-zshaper-benutzt" title="Permanent link">&para;</a></h4>
+<p><a href="/de/Kalibrierungen/#zshaper">ZSHAPER</a> - dieses Makro lässt den Drucker bei verschiedenen Frequenzen vibrieren, misst die Reaktion und zeichnet die idealen Shaper-Parameter für die X- und Y-Achse auf.</p>
+<p><strong>Funktion für Drucker mit geringem Speicherplatz (AD5M, AD5MPro):</strong>
+Um eine Überlastung des Systems zu vermeiden, <strong>müssen die Achsen einzeln kalibriert werden</strong>.</p>
+<ul>
+<li><code>ZSHAPER</code> - kalibriert beide Achsen (X und Y).</li>
+<li><code>ZSHAPER X=1 Y=0</code> - kalibriert nur die X-Achse (schneller und weniger belastend).</li>
+<li><code>ZSHAPER Y=1 X=0</code> - kalibriert nur die Y-Achse.</li>
+</ul>
+<p><strong>Anwendungsbeispiel und Ausgabe:</strong></p>
+<ol>
+<li>
+<p>Geben Sie den Befehl zur Kalibrierung der Y-Achse in die Konsole ein:
+    <code>gcode
+    ZSHAPER Y=1 X=0</code></p>
+</li>
+<li>
+<p>Sobald die Messungen abgeschlossen sind, erhalten Sie einen Bericht wie diesen:
+    <code>// Empfohlener Shaper ist zv @ 53,2 Hz
+    // Angepasster Shaper 'zv' Frequenz = 53,2 Hz (Schwingungen = 0,9%, Glättung ~= 0,074)
+    // Um eine zu starke Glättung mit 'zv' zu vermeiden, wird max_accel &lt;= 10200 mm/sec^2 vorgeschlagen
+    // Angepasste Shaper 'mzv' Frequenz = 54.2 Hz (Vibrationen = 0.0%, Glättung ~= 0.080)
+    // Um eine zu starke Glättung mit 'mzv' zu vermeiden, wird max_accel &lt;= 8700 mm/sec^2 vorgeschlagen</code></p>
+<ul>
+<li>Das System empfiehlt den Shaper <code>zv</code>, weil er die geringste Glättung (<code>smoothing</code>) aufweist.<ul>
+<li>Der Shaper <code>mzv</code> hingegen unterdrückt die Vibrationen vollständig (<code>0.0%</code>), obwohl er etwas weniger Beschleunigung benötigt.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="wie-man-die-ergebnisse-interpretiert-und-eine-entscheidung-trifft">Wie man die Ergebnisse interpretiert und eine Entscheidung trifft<a class="headerlink" href="#wie-man-die-ergebnisse-interpretiert-und-eine-entscheidung-trifft" title="Permanent link">&para;</a></h4>
+<p><strong>Wo kann man die Graphen sehen?</strong>
+Nach dem Ausführen von <code>ZSHAPER</code> erscheinen die Graphen und CSV-Dateien in der Registerkarte <strong>"Konfiguration" -&gt; mod_data</strong> in Ihrem Webinterface (Fluidd/Mainsail).</p>
+<p><img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" /></p>
+<p><strong>Ausführliche Anleitung zum Lesen von Karten:</strong> <a href="https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md">https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md</a></p>
+<p><strong>Option 1: Automatische Einstellung akzeptieren</strong></p>
+<p>Wenn Sie mit allem zufrieden sind, klicken Sie einfach auf die Schaltfläche <strong>"KONFIG. SPEICHERN &amp; NEU STARTEN "</strong> in der Webschnittstelle, und der Drucker wird die empfohlenen Einstellungen selbständig speichern.</p>
+<p><img width="324" height="68" alt="image" src="https://github.com/user-attachments/assets/9c76d5f7-0021-4e03-b495-6736f49dc1c9" /></p>
+<p><img width="745" height="389" alt="image" src="https://github.com/user-attachments/assets/b5b55e95-52af-4ee0-b34e-5bc6077d8d10" /></p>
+<p><strong>Option 2: Manuelle Anpassung</strong></p>
+<p>Im obigen Beispiel fand ich den <code>mzv</code> Shaper besser, da er die Vibrationen vollständig beseitigt. Um ihn zu verwenden, müssen Sie die Einstellungen manuell in die Datei <code>printer.cfg</code> eintragen (im Abschnitt <code>[input_shaper]</code>):</p>
+<p>``ini
+[input_shaper].
+shaper_type_y = mzv ; Ausgewählter Shaper-Typ für die Y-Achse
+shaper_freq_y = 54.2 ; Resonanzfrequenz für die Y-Achse
+```</p>
+<p><strong>Und vergessen Sie nicht die Beschleunigung!</strong>
+Da der gewählte Shaper <code>mzv</code> eine Beschleunigung von nicht mehr als 8700 mm/s² erlaubt, sollte dieser Wert in die Datei <code>mod_data/user.cfg</code> geschrieben werden:</p>
+<p>`ini
+[printer].
+max_accel: 8700 ; Maximale Beschleunigung fuer X und Y Achsen
+```</p>
+<h4 id="kurzer-algorithmus-der-aktionen-für-die-shaper-kalibrierung">Kurzer Algorithmus der Aktionen für die Shaper-Kalibrierung:<a class="headerlink" href="#kurzer-algorithmus-der-aktionen-für-die-shaper-kalibrierung" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Ausführen von <code>SAVE_ZMOD_DATA FIX_SCV=1</code> für korrekte Berechnungen.</li>
+<li>Hinzufügen von <code>square_corner_velocity: 9</code> zu <code>mod_data/user.cfg</code> für bessere Qualität.</li>
+<li>Führen Sie die Kalibrierung der gewünschten Achse durch, z.B. <code>ZSHAPER Y=1</code>.</li>
+<li>prüfen Sie die Graphen und die Konsolenausgabe.</li>
+<li>Drücken Sie entweder <code>SAVE CONFIG</code>, oder schreiben Sie manuell die gewünschten Werte für <code>shaper_type</code> und <code>shaper_freq</code> in <code>printer.cfg</code> und <code>max_accel</code> in <code>mod_data/user.cfg</code>.</li>
+<li>Starten Sie den Drucker neu.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/de/SetupCalibrations.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

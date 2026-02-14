@@ -1,0 +1,2561 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+      
+        <link rel="prev" href="../Plugin/">
+      
+      
+        <link rel="next" href="../FAQ/">
+      
+      
+        
+          <link rel="alternate" href="../../Telegram/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="ru">
+        
+          <link rel="alternate" href="../../de/Telegram/" hreflang="de">
+        
+          <link rel="alternate" href="../../pt/Telegram/" hreflang="pt">
+        
+          <link rel="alternate" href="../../cs/Telegram/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Телеграм - zMod - Firmware for AD5M / AD5MPro / AD5X</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#telegram-bot" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-header__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            zMod - Firmware for AD5M / AD5MPro / AD5X
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Телеграм
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Выберите язык">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../Telegram/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/Telegram/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/Telegram/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../cs/Telegram/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Начало
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Настройка
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Помощь
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Макросы
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Native_FW/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Дополнительно
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Соцсети
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Скачать
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Видео
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zMod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="zMod - Firmware for AD5M / AD5MPro / AD5X" class="md-nav__button md-logo" aria-label="zMod - Firmware for AD5M / AD5MPro / AD5X" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    zMod - Firmware for AD5M / AD5MPro / AD5X
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Начало
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Начало
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Установка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Первоначальная калибровка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recomendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Рекомендации
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Настройка
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Настройка
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Первоначальная калибровка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Плагины
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Телеграм
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Телеграм
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telegram-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telegram Bot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Telegram Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#описание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Описание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#регистрация-бота" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация бота
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#развертывание-сервера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Развертывание сервера
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Развертывание сервера">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#установка-телеграмм-бота-одной-командой-на-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка телеграмм бота одной командой на Debian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-телеграмм-бота-по-шагам" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка телеграмм бота по шагам
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#добавление-ssh-ключей" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавление ssh ключей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#запуск-zssh-на-принтере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск ZSSH на принтере
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TimeZone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spoolman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoolman
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-и-настройка-для-armbian-от-noyhay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка и настройка для armbian (от noyhay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-бота-телеграмм-через-helm-в-kubernetes-от-aldiserg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка бота телеграмм через helm в kubernetes (от aldiserg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#решение-проблемы-с-подключением-принтера-к-серверу-через-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение проблемы с подключением принтера к серверу через SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решение проблемы с подключением принтера к серверу через SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#решение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-очистка-сохранённых-ключей-на-принтере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Очистка сохранённых ключей на принтере
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-пересоздание-пары-ssh-ключей-на-принтере-при-необходимости" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Пересоздание пары SSH-ключей на принтере (при необходимости)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-проверка-подключения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Проверка подключения
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Помощь
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Помощь
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Помощь
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Макросы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Макросы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Список
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Основные
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Калибровки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Старт/Стоп/Глобальные
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Система
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Филамент
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Дополнительно
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Дополнительно
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Родная прошивка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    История изменений
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Поддержка
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Соцсети
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Скачать
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Видео
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zMod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#telegram-bot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Telegram Bot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Telegram Bot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#описание" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Описание
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#регистрация-бота" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация бота
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#развертывание-сервера" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Развертывание сервера
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Развертывание сервера">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#установка-телеграмм-бота-одной-командой-на-debian" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка телеграмм бота одной командой на Debian
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-телеграмм-бота-по-шагам" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка телеграмм бота по шагам
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#добавление-ssh-ключей" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавление ssh ключей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#запуск-zssh-на-принтере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Запуск ZSSH на принтере
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timezone" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TimeZone
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spoolman" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spoolman
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-и-настройка-для-armbian-от-noyhay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка и настройка для armbian (от noyhay)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#установка-бота-телеграмм-через-helm-в-kubernetes-от-aldiserg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка бота телеграмм через helm в kubernetes (от aldiserg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#решение-проблемы-с-подключением-принтера-к-серверу-через-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение проблемы с подключением принтера к серверу через SSH
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решение проблемы с подключением принтера к серверу через SSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#решение" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Решение
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Решение">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-очистка-сохранённых-ключей-на-принтере" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Очистка сохранённых ключей на принтере
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-пересоздание-пары-ssh-ключей-на-принтере-при-необходимости" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Пересоздание пары SSH-ключей на принтере (при необходимости)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-проверка-подключения" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Проверка подключения
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/ru/Telegram.md" title="Редактировать страницу" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 align="center">Telegram Bot</h1>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Функция / Возможность</th>
+<th style="text-align: center;"><a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">Плагин Notify</a></th>
+<th style="text-align: center;"><a href="/ru/Telegram/">Moonraker Telegram Bot</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Требует внешний сервер</strong></td>
+<td style="text-align: center;">–</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Удалённое управление принтером</strong></td>
+<td style="text-align: center;">– (можно через <a href="https://zmod.link/link/">zmod.link</a>)</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Создание таймлапса</strong></td>
+<td style="text-align: center;">– (можно через <a href="https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md">timelapse</a>)</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Информация о событиях печати</strong> (старт, пауза, отмена, окончание)</td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Информация от датчика филамента</strong></td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Информация о прогрессе печати в процентах</strong></td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">+</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Работа с несколькими принтерами через одного бота</strong></td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">–</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Информировиние через другие сервисы</strong></td>
+<td style="text-align: center;">+</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Splooman</strong></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">+</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<h2 id="telegram-bot">Telegram Bot<a class="headerlink" href="#telegram-bot" title="Permanent link">&para;</a></h2>
+<h3 id="описание">Описание<a class="headerlink" href="#описание" title="Permanent link">&para;</a></h3>
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<p>Суть:
+У нас очень медленное  железо и очень мало памяти. Поэтому на железе запускать moonraker-telegram-bot нет смысла. 
+Но мы его можем запустить на внешнем сервере.
+Для этого нужен любой  сервер (реальный/виртуальный), до которого сможет достучаться принтер по SSH.</p>
+<p>Новая версия автоматом создает SSH ключи (они используются для авторизации без паролей).</p>
+<p>Ключи лежат тут:</p>
+<ul>
+<li><code>‎/mod_data/ssh.pub.txt</code> - это открытый ключ. Текст из него необходимо поместить на сервере в файл <code>~/.ssh/authorized_keys</code></li>
+<li><code>‎/mod_data/ssh.key</code> - закрытый ключ. Используется принтером для подключения к серверу.</li>
+</ul>
+<p>Сами ключи вам по сути не нужны.
+Вам достаточно вызвать макрос <a href="/ru/Zmod/#zssh_on">ZSSH_ON</a> передав следующие параметры:</p>
+<ul>
+<li>SSH_SERVER - ip или имя вашего сервера</li>
+<li>SSH_PORT - порт ssh на сервере - обычно 22</li>
+<li>SSH_USER - имя  пользователя на ssh сервере</li>
+<li>VIDEO_PORT - порт который будет использоваться на сервере для приема видеоданных с камеры (8080)</li>
+<li>MOON_PORT - порт который будет использоваться на сервере для приема данных от moonraker (7125).</li>
+<li>REMOTE_RUN - команда, которую нужно вызывать на удаленном сервере</li>
+</ul>
+<p>Запуск ssh съедает около 300 килобайт памяти.</p>
+<p><strong>Если принтер и сервер находятся в одной сети, то использовать SSH не обязательно. Читайте файл конфигурации <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf">telegram.conf</a></strong> <a href="https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config">Sample-config</a>
+Файл конфигурации можно скачать с принтера <code>mod/telegram/</code>.</p>
+<hr />
+<h3 id="регистрация-бота">Регистрация бота<a class="headerlink" href="#регистрация-бота" title="Permanent link">&para;</a></h3>
+<p>Как зарегистрировать свой бот</p>
+<ol>
+<li>Идете к <a href="https://t.me/BotFather">@BotFather</a></li>
+<li><code>/newbot</code></li>
+<li>Вводите любое имя, которое  вам нравится</li>
+<li>Вводите имя бота  ff5msuper_bot - обязательно _bot  в конце. </li>
+<li>Получаете  длинный ID - его нужно будет прописать в настройках бота в параметр bot_token</li>
+</ol>
+<hr />
+<h3 id="развертывание-сервера">Развертывание сервера<a class="headerlink" href="#развертывание-сервера" title="Permanent link">&para;</a></h3>
+<h4 id="установка-телеграмм-бота-одной-командой-на-debian">Установка телеграмм бота одной командой на Debian<a class="headerlink" href="#установка-телеграмм-бота-одной-командой-на-debian" title="Permanent link">&para;</a></h4>
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<p>Установка телеграмм бота <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh">одной командой</a> на Debian:</p>
+<p>Выполнять под пользователем <code>root</code>
+<div class="highlight"><pre><span></span><code>bash &lt;(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+</code></pre></div></p>
+<p>Если у вас нет wget
+<div class="highlight"><pre><span></span><code>apt update &amp;&amp; apt install wget -y
+</code></pre></div></p>
+<p>Этот скрипт:</p>
+<ol>
+<li>Установит docker</li>
+<li>Скачает <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml">docker-compose.yml</a> и <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf">telegram.conf</a>. <a href="https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config">Sample-config</a></li>
+<li>Создаст пользователя tbot</li>
+<li>Напишет инструкцию по регистрации телеграмм бота и запросит <code>bot_token</code></li>
+<li>Напишет инструкцию по получению <code>chat_id</code> и запросит <code>chat_id</code></li>
+<li>Установит <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh">ff5m.sh</a></li>
+</ol>
+<p>Добавить ssh ключ нужно будет самостоятельно</p>
+<hr />
+<h4 id="установка-телеграмм-бота-по-шагам">Установка телеграмм бота по шагам<a class="headerlink" href="#установка-телеграмм-бота-по-шагам" title="Permanent link">&para;</a></h4>
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<p>Берете файл <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml">docker-compose.yml</a> из <code>mod/telegram/</code> c принтера.</p>
+<p>Устанавливаете docker, далее инструкция для Debian
+<div class="highlight"><pre><span></span><code>apt update 
+apt upgrade -y
+apt install docker.io docker-compose docker apparmor -y
+</code></pre></div></p>
+<p>Создаете  каталог для бота.
+<div class="highlight"><pre><span></span><code>mkdir bot1
+cd bot1
+</code></pre></div></p>
+<p>Помещаете  туда  <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml">docker-compose.yml</a></p>
+<p>Создаете подкаталоги
+<div class="highlight"><pre><span></span><code>mkdir config log timelapse_finished timelapse
+chmod 777 config log timelapse_finished timelapse
+</code></pre></div></p>
+<p>В каталог config помещаете <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf">telegram.conf</a> из <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf">mod/telegram/</a> и правите его под себя.</p>
+<p><a href="https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config">Sample-config</a></p>
+<p>Больше информации о настройке бота можно почитать <a href="https://github.com/nlef/moonraker-telegram-bot/wiki">тут</a></p>
+<p>Из каталога bot1 запускаете
+<div class="highlight"><pre><span></span><code>docker-compose up -d
+</code></pre></div></p>
+<p>Добавляете пользователя и даем ему право самому запускать docker-compose
+<div class="highlight"><pre><span></span><code>useradd tbot
+usermod -a -G docker tbot
+</code></pre></div></p>
+<hr />
+<h4 id="добавление-ssh-ключей">Добавление ssh ключей<a class="headerlink" href="#добавление-ssh-ключей" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p>Заходим под пользователем <code>tbot</code>
+   <div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>tbot
+</code></pre></div></p>
+</li>
+<li>
+<p>Прописываем ssh ключи:
+   <div class="highlight"><pre><span></span><code>mkdir<span class="w">  </span>.ssh
+cat<span class="w"> </span>&gt;.ssh/authorized_keys
+</code></pre></div></p>
+</li>
+</ol>
+<p>Вводите открытый ключ из файла <code>mod_data/ssh.pub.txt</code>. Потом  <code>Ctrl + d</code> </p>
+<hr />
+<h4 id="запуск-zssh-на-принтере">Запуск ZSSH на принтере<a class="headerlink" href="#запуск-zssh-на-принтере" title="Permanent link">&para;</a></h4>
+<p>После этого запускаете на принтере <a href="/ru/Zmod/#zssh_on">ZSSH_ON</a> c необходимыми параметрами.</p>
+<p>После  каждой перезагрузки ssh, будет запускаться автоматически через 3 минуты.</p>
+<h4 id="timezone">TimeZone<a class="headerlink" href="#timezone" title="Permanent link">&para;</a></h4>
+<p>Отредактируйте файл <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml">docker-compose.yml</a></p>
+<p>Укажите  вашу временную зону. В примере файла указана <code>TZ=Asia/Yekaterinburg</code></p>
+<p><code>docker-compose down &amp;&amp; docker-compose up -d</code> или <code>docker compose down &amp;&amp; docker compose up -d</code></p>
+<h4 id="spoolman">Spoolman<a class="headerlink" href="#spoolman" title="Permanent link">&para;</a></h4>
+<p>Отредактируйте файл <a href="https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml">docker-compose.yml</a></p>
+<p>Добавьте:
+<div class="highlight"><pre><span></span><code>  spoolman:
+    image: ghcr.io/donkie/spoolman:latest
+    restart: unless-stopped
+    volumes:
+      - ./spoolman:/home/app/.local/share/spoolman
+    ports:
+      - &quot;7912:8000&quot;
+    environment:
+      - TZ=Asia/Yekaterinburg
+</code></pre></div></p>
+<p>Откройте порт в фаерволе если он у вас используется
+<code>iptables -I INPUT -p tcp --dport 7912 -j ACCEPT</code></p>
+<p>Создайте папку <code>spoolman</code>
+<div class="highlight"><pre><span></span><code>mkdir spoolman
+chmod 777 spoolman
+</code></pre></div></p>
+<p>Перезапустите docker:
+<code>docker-compose down &amp;&amp; docker-compose up -d</code> или <code>docker compose down &amp;&amp; docker compose up -d</code></p>
+<p>На принтере пропишите в <code>mod_data/user.moonraker.conf</code></p>
+<p><code>external_IP</code> - внешний ИП сервера на котором стоит docker</p>
+<p>У принтера ДОЛЖЕН быть доступ к этому IP</p>
+<div class="highlight"><pre><span></span><code>[spoolman]
+server: http://external_IP:7912
+sync_rate: 5
+</code></pre></div>
+<hr />
+<h4 id="установка-и-настройка-для-armbian-от-noyhay">Установка и настройка для armbian (от noyhay)<a class="headerlink" href="#установка-и-настройка-для-armbian-от-noyhay" title="Permanent link">&para;</a></h4>
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<p>Скачиваем Debian Minimal/IOT images with Armbian с сайта <a href="https://www.armbian.com/download/">https://www.armbian.com/download/</a></p>
+<p>Устанавливаем Armbian на sdcard с помощью balenaEtcher с сайта <a href="https://etcher.balena.io/">https://etcher.balena.io/</a></p>
+<p>Запускаем систему, создаем пароль root и нового пользователя</p>
+<p>В дальнейшем все делаем под пользователем root
+<div class="highlight"><pre><span></span><code>su - root
+</code></pre></div></p>
+<p>Настраиваем wi-fi, если не настроили после создания нового пользователя
+<div class="highlight"><pre><span></span><code>sudo armbian-config
+</code></pre></div></p>
+<p>Обновляем систему
+<div class="highlight"><pre><span></span><code>sudo apt update &amp;&amp; sudo apt upgrade -y
+</code></pre></div></p>
+<p>Устанавливаем apparmor модуль безопасности ядра Linux
+<div class="highlight"><pre><span></span><code>sudo apt install -y apparmor apparmor-utils
+</code></pre></div></p>
+<p>Устанавливаем бот telegram
+<div class="highlight"><pre><span></span><code>bash &lt;(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+</code></pre></div></p>
+<p>Добавление ssh ключей:
+Заходим из под пользователя root в пользователя tbot
+<div class="highlight"><pre><span></span><code>su - tbot
+</code></pre></div></p>
+<p>Прописываем ssh ключи:
+<div class="highlight"><pre><span></span><code>mkdir -p .ssh
+cat &gt;.ssh/authorized_keys
+</code></pre></div>
+Вводите открытый ключ из файла в системе корневой системе mod_data/ssh.pub.txt. Потом CTRL+D</p>
+<p>Перезагружаем систему
+<code>sudo reboot</code></p>
+<hr />
+<h4 id="установка-бота-телеграмм-через-helm-в-kubernetes-от-aldiserg">Установка бота телеграмм через helm в kubernetes (от aldiserg)<a class="headerlink" href="#установка-бота-телеграмм-через-helm-в-kubernetes-от-aldiserg" title="Permanent link">&para;</a></h4>
+<p>Если вам достаточно только уведомлений в Telegram - то <a href="https://github.com/ghzserg/notify/blob/main/Readme_ru.md">используйте плагин Notify</a></p>
+<p>Скачиваем helm и устанавливаем на компьютер <a href="https://helm.sh/docs/intro/install/">https://helm.sh/docs/intro/install/</a></p>
+<p>Клонируем репозиторий с helm чартом
+<div class="highlight"><pre><span></span><code>git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
+</code></pre></div>
+Изменяем:</p>
+<ol>
+<li>
+<p>persistence.enabled меняем на false если не планируется долговременно хранить таймлапсы</p>
+</li>
+<li>
+<p>persistence.volumes...storageClass если будем использовать внешний сторадж для таймлапсов</p>
+</li>
+<li>
+<p>configMapAsFile.data.telegram.conf - основной наш конфиг, тут нужно поменять поля:
+   <div class="highlight"><pre><span></span><code>[bot]
+server: 3D_printer_host:7125
+bot_token: 1111111111:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+chat_id: 111111111
+
+[camera]
+host: http://3D_printer_host:8080/?action=stream
+host_snapshot: http://3D_printer_host:8080/?action=snapshot
+</code></pre></div>
+Как получить bot_token и chat_id смотри <a href="/ru/Telegram/#регистрация-бота">тут</a></p>
+</li>
+</ol>
+<p>Установка:</p>
+<p>Команды должны выполняться из директории в которой находится чарт
+<div class="highlight"><pre><span></span><code>helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
+</code></pre></div></p>
+<hr />
+<h4 id="решение-проблемы-с-подключением-принтера-к-серверу-через-ssh">Решение проблемы с подключением принтера к серверу через SSH<a class="headerlink" href="#решение-проблемы-с-подключением-принтера-к-серверу-через-ssh" title="Permanent link">&para;</a></h4>
+<p>После переустановки ОС на сервере меняются <strong>SSH host-ключи</strong>, и принтер отказывается подключаться с ошибкой:
+<div class="highlight"><pre><span></span><code>ssh-ed25519 host key mismatch ...
+</code></pre></div></p>
+<h5 id="решение">Решение<a class="headerlink" href="#решение" title="Permanent link">&para;</a></h5>
+<h6 id="1-очистка-сохранённых-ключей-на-принтере">1. Очистка сохранённых ключей на принтере<a class="headerlink" href="#1-очистка-сохранённых-ключей-на-принтере" title="Permanent link">&para;</a></h6>
+<p>Подключитесь к принтеру по SSH:</p>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>root@&lt;IP_принтера&gt;<span class="w"> </span>-p<span class="w"> </span><span class="m">22</span>
+</code></pre></div>
+<p>Пароль по умолчанию:
+<div class="highlight"><pre><span></span><code>    root
+</code></pre></div></p>
+<p>Далее выполните команды:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/.ssh
+rm<span class="w"> </span>-f<span class="w"> </span>know*
+</code></pre></div>
+<p>Это удалит старые сохранённые host-ключи сервера.</p>
+<hr />
+<h6 id="2-пересоздание-пары-ssh-ключей-на-принтере-при-необходимости">2. Пересоздание пары SSH-ключей на принтере (при необходимости)<a class="headerlink" href="#2-пересоздание-пары-ssh-ключей-на-принтере-при-необходимости" title="Permanent link">&para;</a></h6>
+<p>Если требуется сгенерировать новую пару ключей, нужно удалить старые файлы:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~/mod_data
+rm<span class="w"> </span>-f<span class="w"> </span>ssh.pub.txt<span class="w"> </span>ssh.key
+</code></pre></div>
+<p>После перезапуска сервис автоматически создаст новые ключи.</p>
+<p>Публичный ключ (<code>ssh.pub.txt</code>) нужно будет снова добавить на сервер в файл:
+<div class="highlight"><pre><span></span><code>    ~/.ssh/authorized_keys
+</code></pre></div>
+для пользователя, через которого работает подключение (например, <code>tbot</code>).</p>
+<hr />
+<h6 id="3-проверка-подключения">3. Проверка подключения<a class="headerlink" href="#3-проверка-подключения" title="Permanent link">&para;</a></h6>
+<p>После очистки ключей на принтере и обновления <code>authorized_keys</code> на
+сервере --- запустите ZSSH макрос на принтере.
+Теперь соединение должно устанавливаться без ошибок.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/ru/Telegram.md" target="_blank" rel="noopener">Нашли ошибку или хотите дополнить? Отредактируйте эту страницу на GitHub</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/1526322885078508" target="_blank" rel="noopener" title="Unofficial Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>
