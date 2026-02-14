@@ -34,6 +34,7 @@ Available payment methods:
 > Example (approximate): at 1 BTC ≈ 4,200,000 RUB → 500 RUB ≈ **0.00012 BTC** per printer.
 
 **Limit expansion examples:**
+
 - 500 RUB / ~0.00012 BTC → +1 printer (total: 3 printers)
 - 1,000 RUB / ~0.00024 BTC → +2 printers (total: 4 printers)
 - 1,500 RUB / ~0.00036 BTC → +3 printers (total: 5 printers)
@@ -46,6 +47,7 @@ Available payment methods:
 Send an email to: **📧 [add@zmod.link](mailto:add@zmod.link)**
 
 Please include:
+
 - Your zmod.link **username**
 - Chosen support method (GitHub star / RUB donation / BTC donation)
 - For GitHub star — attach the screenshot
