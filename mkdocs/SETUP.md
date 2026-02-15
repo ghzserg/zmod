@@ -44,6 +44,7 @@ zmod/
 ├── mkdocs/
 │   ├── mkdocs.yml          # MkDocs configuration
 │   ├── prepare_docs.py     # Wiki → docs preprocessing
+│   ├── patch_material_bundle.py  # Auto-patch Material bundle (disable lazy search and mirror sitemap.xml)
 │   ├── requirements.txt    # Python dependencies
 │   └── overrides/
 │       ├── main.html       # Theme overrides
