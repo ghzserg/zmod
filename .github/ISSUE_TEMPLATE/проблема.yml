@@ -13,6 +13,7 @@ body:
         - [Рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
         - [Документацию по макросам](https://github.com/ghzserg/zmod/wiki/Macros)
         - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)
+        - Запустите CHECK_SYSTEM
 
         **Важно:** Если вы используете какие-либо плагины кроме recommend, то отключите их.
         Если проблема вызвана плагином g28_tenz или nopoop, укажите это в заголовке.

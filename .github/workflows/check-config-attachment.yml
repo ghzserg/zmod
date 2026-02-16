@@ -34,7 +34,7 @@ jobs:
 
             // Регулярное выражение для поиска любых файлов config*.tar.gz
             // Ищет ссылки вида [filename](url) где filename содержит config и заканчивается на .tar.gz
-            const markdownRegex = /\[(config[^\s\]]*\.tar\.gz)\]\((https?:\/\/[^\s)]+)\)/gi;
+            const markdownRegex = /\[(config[^\]]*\.tar\.gz)\]\((https?:\/\/[^\s)]+)\)/gi;
             const matches = [...issue.data.body.matchAll(markdownRegex)];
 
             if (matches && matches.length > 0) {
@@ -254,7 +254,7 @@ jobs:
               commentBody += '✅ **Отлично!** Файл `' + fileName + '` найден, доступен и имеет корректную структуру.\n\n';
               commentBody += `**Version Check / Проверка версии:** ${versionMessage}\n\n`;
               commentBody += 'The issue has been (re)opened and will be processed. / Тикет был (пере)открыт и будет обработан.';
-              commentBody += '\nhttps://wiki.zmod.link/ru/Help/\https://wiki.zmod.link/Help/';
+              commentBody += '\nhttps://wiki.zmod.link/ru/Help/\nhttps://wiki.zmod.link/Help/';
 
               await github.rest.issues.createComment({
                 issue_number: issueNumber,

@@ -13,6 +13,7 @@ body:
         - [Recommendations](https://github.com/ghzserg/zmod/wiki/Recomendations_en)
         - [Macros Documentation](https://github.com/ghzserg/zmod/wiki/Macros_en)
         - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X_en)
+        - Run CHECK_SYSTEM
 
         **Important:** If you are using any plugins other than 'recommend', disable them.
         If the issue is caused by the 'g28_tenz' or 'nopoop' plugin, please mention it in the title.

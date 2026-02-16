@@ -50,21 +50,27 @@ theme:
 
 docs_dir: ../docs
 site_dir: site
+hooks:
+  - patch_material_bundle.py
 
 plugins:
   - search
   - i18n:
+      reconfigure_material: true
+      reconfigure_search: true
       docs_structure: folder
       languages:
         - locale: en
           default: true
           name: English
           build: true
+          reconfigure_search: true
           theme:
             language: en
         - locale: ru
           name: Русский
           build: true
+          reconfigure_search: true
           theme:
             language: ru
           nav_translations:
@@ -104,6 +110,7 @@ plugins:
         - locale: de
           name: Deutsch
           build: true
+          reconfigure_search: true
           theme:
             language: de
           nav_translations:
@@ -142,6 +149,7 @@ plugins:
         - locale: pt
           name: Português
           build: true
+          reconfigure_search: true
           theme:
             language: pt
           nav_translations:
@@ -177,7 +185,45 @@ plugins:
             Video: Vídeo
             TelegramBot: Bot do Telegram
             zModLink: zMod LINK
+        - locale: cs
+          name: Čeština
+          build: true
+          reconfigure_search: true
+          theme:
+            language: cs
+          nav_translations:
+            Index: Domovská stránka
 
+            Begin: Začátek
+            Setup: Nastavení
+            SetupCalibrations: Prvotní nastavení kalibrace
+            Recommendations: Doporučení
+
+            Configuration: Konfigurace
+            Parameters: Parametry
+            Plugins: Pluginy
+            Telegram: Telegram
+
+            Help: Nápověda
+            FAQ: FAQ
+
+            Macros: Makra
+            List: Seznam
+            Main: Hlavní funkce
+            Calibrations: Kalibrace
+            Start/Stop/Global: Start/Stop/Globální
+            System: Systém
+            Filament: Filament
+
+            Additional: Dodatečné
+            Native firmware: Nativní firmware
+            Changelog: Historie změn
+            Support: Podpora
+
+            Download: Stáhnout
+            Video: Video
+            TelegramBot: Telegram bot
+            zModLink: zMod LINK
 nav:
   - Index: index.md
 
@@ -187,6 +233,7 @@ nav:
       - Recommendations: Recomendations.md
 
   - Configuration:
+      - Setup Calibrations: SetupCalibrations.md
       - AD5X: AD5X.md
       - Plugins: Plugin.md
       - Telegram: Telegram.md
@@ -240,7 +287,7 @@ extra:
 
 extra_javascript:
   - /assets/js/external-links.js
-  # - /assets/js/header-download.js
+  - /assets/js/search-language-filter.js
 
 markdown_extensions:
   - pymdownx.highlight:
