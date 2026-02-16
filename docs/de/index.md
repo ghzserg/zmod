@@ -25,7 +25,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### **1. Volle Fernsteuerung**
 
 **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
-* **ZMOD:** Sie erhalten **volle Kontrolle über Ihren Browser** auf Ihrem Computer oder Telefon.
+* **ZMOD:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
 
     * **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
     * **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
@@ -34,14 +34,14 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **2. Erweiterte Kalibrierungs- und Nivellierungssysteme**
 
-* **Native Firmware:** Einfache automatische Tischnivellierung (ABL).
+* **Native Firmware:** Einfache automatische Druckbettnivellierung (ABL).
 * **ZMOD:**
 
-    * **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Tischunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
-    * **PID-Kalibrierung:** Feineinstellung der Extruder- und Tischtemperatur für stabile Temperaturen ohne Schwankungen.
+    * **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Bedunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
+    * **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
     * **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Körperschwingungen, so dass Sie **schneller und ohne "Ringe "** an Modellen drucken können.
     * **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
-    * **Tischschraubenjustierung:** Ermöglicht es Ihnen, den Tisch in 10 Minuten zu nivellieren.
+    * **Tischschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
 
 #### **3. Intelligente Funktionen für Zuverlässigkeit**
 
@@ -50,13 +50,13 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
     * **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
     * **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
-    * **Firmware-Kontrolle:** Der Drucker kann Dateien selbst beschädigen, so dass der Drucker sowohl native Firmware-Dateien als auch zMod-Dateien kontrollieren kann.
+    * **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch ZMOD-Dateien auf Beschädigungen..
     * **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
 
 #### **4. Flexible Handhabung von Filamenten (speziell für AD5X)**
 
 **Native Firmware:** Spulensteuerung über Standardmenü.
-**ZMOD (für AD5X):**
+* **ZMOD (für AD5X):**
 
     * **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
     * **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
@@ -64,8 +64,8 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **5. Ökosystem und Integration**
 
-* **Native Firmware:**Geschlossenes System.
-**ZMOD:**
+**Native Firmware:** Geschlossenes System.
+* **ZMOD:**
 
     * **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
     * **Plugin-Unterstützung:** Installieren Sie zusätzliche Plugins (wie `bambufy` für eine bessere Kompatibilität mit Bambu Studio).
@@ -74,13 +74,13 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **6. Optimierung und Kontrolle**
 
-* **Native Firmware:**Eingeschränkte Einstellungen.
-**ZMOD:**
+**Native Firmware:** Eingeschränkte Einstellungen.
+* **ZMOD:**
 
     * **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
     * **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
     * **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
-    * **Firmware-Rückzug:** Einrichten von Rückzügen direkt während des Drucks ohne erneutes Schneiden.
+    * **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicing ist nicht erforderlich..
     * **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker ist jederzeit möglich
 
 #### **6. Klipper 13**
@@ -102,7 +102,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 **ZMOD setzt die native Firmware nicht außer Kraft,** sondern wird zu einem Add-on, das Ihnen die **Wahl** gibt, auf die alte Art zu arbeiten, über den Bildschirm, oder alle modernen 3D-Druck-Tools zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
 
 !!! Gefahr
-    *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers riskieren. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!
+    *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers **riskieren**. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!
     
     Wenn du nicht weißt, was das ist, nicht verstehst, warum du die Klipper-Webseite brauchst oder einfach nur mit der Standardversion zufrieden bist, installiere diesen Mod nicht, für alle anderen - **bitte lies die vollständige Anleitung**!
     
@@ -110,7 +110,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 ## Bevor Sie beginnen
 
-#### Sie brauchen die Mod nicht zu installieren, wenn Sie nur die folgenden Probleme mit der nativen Firmware beheben müssen
+#### Sie brauchen den Mod nicht zu installieren, wenn Sie nur die folgenden Probleme mit der nativen Firmware beheben müssen
 
 Diese Funktionen sind auf die Standard-Firmware portiert:
 
@@ -135,7 +135,7 @@ Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
 ## Mods installieren/aktualisieren/deinstallieren
 
-[Mods installieren/erweitern/deinstallieren](/de/Setup/)
+[Mods installieren/aktualisieren/deinstallieren](/de/Setup/)
  
 ## Häufig gestellte Fragen
 
