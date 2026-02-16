@@ -50,6 +50,8 @@ theme:
 
 docs_dir: ../docs
 site_dir: site
+hooks:
+  - patch_material_bundle.py
 
 plugins:
   - search
@@ -286,7 +288,6 @@ extra:
 extra_javascript:
   - /assets/js/external-links.js
   - /assets/js/search-language-filter.js
-  # - /assets/js/header-download.js
 
 markdown_extensions:
   - pymdownx.highlight:
