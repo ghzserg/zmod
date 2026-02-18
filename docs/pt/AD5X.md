@@ -255,16 +255,18 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 2.  ** `filament_drop_length` - A temperatura à qual o bocal é aquecido para a troca de filamentos.
 
     * **Simples:** Quantos milímetros de plástico a impressora espremerá na lixeira para **limpar o bocal** da cor antiga.
-        ** **Dica:** Se as cores forem misturadas quando você trocar os carretéis, aumente esse número. Se você quiser menos desperdício, diminua-o.
+    * **Dica:** Se as cores forem misturadas quando você trocar os carretéis, aumente esse número. Se você quiser menos desperdício, diminua-o.
 
-3.  **`filament_drop_length_add` (Reinicialização opcional)**
+3.  **`filament_drop_length_add`** (Reinicialização opcional)
 
     * Simplificando: quanto plástico a mais a impressora jogará na lixeira se você mudar não apenas a cor, mas o **tipo de material** (por exemplo, de PLA para PETG).
-        * Por que é necessário:** Materiais diferentes não se misturam bem, portanto, você precisa limpar melhor o bocal.
+    * Por que é necessário: Materiais diferentes não se misturam bem, portanto, você precisa limpar melhor o bocal.
 
-4.  **`nozzle_cleaning_length`** - O comprimento (em mm) que o filamento é puxado para fora da extrusora ao limpar o bocal quando o carretel não está mais em uso. **Padrão: 60 mm.
+4.  **`nozzle_cleaning_length`** - O comprimento (em mm) que o filamento é puxado para fora da extrusora ao limpar o bocal quando o carretel não está mais em uso. **Padrão: 60 mm.**
 
-    ** Se você tiver um módulo 4 em 1 mais recente, defina o valor como 70 ou mais.
+5.  **`filament_unload_into_tube`** — Quanto filamento descarregar do módulo 4 em 1 quando o extrusor não estiver mais em uso. **Padrão: 70 mm.**
+
+    *   Se você tiver um módulo 4 em 1 de nova versão, aumente `filament_unload_into_tube` ou, em último caso, aumente `nozzle_cleaning_length`
 
 ---
 
@@ -272,17 +274,17 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 
 Para que essas configurações funcionem, é necessário **desativar a tela nativa da impressora** usando a macro `DISPLAY_OFF`.
 
-* ** ** **`filament_tube_length`** - O comprimento total do tubo de Teflon do módulo IFS até a extrusora. Útil para tubos não padronizados. **Padrão: 1000 mm.
-**`filament_unload_before_cutting`** - Quantos milímetros levantar o filamento **antes** de cortá-lo. **Padrão: 0 mm. **Padrão: 0 mm.
+* **`filament_tube_length`** - O comprimento total do tubo de Teflon do módulo IFS até a extrusora. Útil para tubos não padronizados. **Padrão: 1000 mm.
+* **`filament_unload_before_cutting`** - Quantos milímetros levantar o filamento **antes** de cortá-lo. **Padrão: 0 mm. **Padrão: 0 mm.
 * ** `filament_unload_after_cutting`** - Quantos milímetros levantar o filamento **após** o corte, antes de começar a passar para a cesta. **Padrão: 5 mm.
-**`filament_unload_after_drop`** - Retrai (puxa) o filamento de volta para cima depois de deixá-lo cair no cesto antes da impressão. Necessário para evitar o gotejamento do bico. **Padrão: 3 mm.
-**`filament_load_speed`** - A velocidade (em mm/m) na qual o filamento é carregado na extrusora. ** Padrão: 300 mm/m (5 mm/seg.). ** ** ** **`filament_unload_speed`**
-* ** `filament_unload_speed`** - A velocidade (em mm/m) na qual o filamento é puxado para fora da extrusora. O módulo IFS é duas vezes mais rápido. **Padrão: 600 mm/m (10 mm/s).
-* ** ** **`filament_fan_speed`** - A velocidade do ventilador (0 a 255) ao despejar no cesto. Ele sopra ao redor do bocal para resfriar o fluxo inferior. **Padrão: 102.
-* ** ** **`filament_autoinsert_empty_length`** - Quantos milímetros de filamento são puxados durante a inserção automática se a extrusora estiver vazia. **``Padrão: 600 mm.
-** ** **`filament_autoinsert_full_length`** - Quantos milímetros de filamento são puxados durante o preenchimento automático se já houver outro filamento na extrusora. **Padrão: 550 mm.
-* ** `filament_autoinsert_ret_length`** - Quantos milímetros de filamento são retraídos se o sensor na extrusora for acionado (somente quando a extrusora estiver vazia). **Padrão: 90 mm.
-* ** `filament_autoinsert_speed`** - A velocidade (em mm/m) na qual o filamento é alimentado automaticamente na extrusora. ** **Padrão: 1200 mm/m (20 mm/s).
+* **`filament_unload_after_drop`** - Retrai (puxa) o filamento de volta para cima depois de deixá-lo cair no cesto antes da impressão. Necessário para evitar o gotejamento do bico. **Padrão: 3 mm.
+* **`filament_extruder_speed`** — Velocidade (em mm/min) na qual o filamento é carregado no extrusor. **Padrão: 300 mm/min (5 mm/s).**
+* **`filament_ifs_speed`** — Velocidade (em mm/min) na qual o módulo IFS opera. **Padrão: 12000 mm/min (20 mm/s).**
+* **`filament_fan_speed`** - A velocidade do ventilador (0 a 255) ao despejar no cesto. Ele sopra ao redor do bocal para resfriar o fluxo inferior. **Padrão: 102.
+* **`filament_autoinsert_empty_length`** - Quantos milímetros de filamento são puxados durante a inserção automática se a extrusora estiver vazia. **``Padrão: 600 mm.``**
+* **`filament_autoinsert_full_length`** - Quantos milímetros de filamento são puxados durante o preenchimento automático se já houver outro filamento na extrusora. **Padrão: 550 mm.**
+* ** `filament_autoinsert_ret_length`** - Quantos milímetros de filamento são retraídos se o sensor na extrusora for acionado (somente quando a extrusora estiver vazia). **Padrão: 90 mm.**
+* ** `filament_autoinsert_speed`** - A velocidade (em mm/m) na qual o filamento é alimentado automaticamente na extrusora. ** **Padrão: 1200 mm/m (20 mm/s).**
 
 **Alterar as configurações na seção avançada pode resultar em operação incorreta da impressora, atolamentos de filamentos ou falhas. Altere-as somente se você entender completamente o que cada parâmetro é responsável e quais podem ser as consequências.
 

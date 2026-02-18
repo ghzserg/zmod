@@ -159,7 +159,7 @@ Die Karte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch
 * `PROFILE=auto` - Name des Profils, unter dem die Karte gespeichert werden soll. Es ist besser, es nach der Tabellentemperatur zu benennen, zum Beispiel `80`.
 
 **Beispielbefehl:**
-``gcode
+```gcode
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 ```
 
@@ -267,7 +267,7 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 
 Fügen Sie diese Einstellung hinzu, damit der Drucker den gleichen Bereich, in dem er gerade die Tischkarte abgeschöpft hat, zur Reinigung der Düse verwendet. Dies spart Platz und Zeit [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/de/Global/#clear).
 
-``gcode
+```gcode
 SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 ```
 
