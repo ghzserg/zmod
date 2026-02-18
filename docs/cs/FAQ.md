@@ -683,7 +683,7 @@ Kromě toho může být zastavení filamentu v IFS způsobeno:
 
 - Extruder je nabitý cívkou 1, ale vytahuje se cívka 2 — použijte [`SET_EXTRUDER_SLOT`](AD5X.md#5-how-to-manually-tell-the-printer-which-spool-is-loaded) k synchronizaci aktuálního slotu extruderu.
 - Vkládá se nový filament, zatímco starý filament zůstává uvnitř extruderu.
-- Moduly 4 v 1 a jejich trubice mají různé délky, což vyžaduje úpravu `nozzle_cleaning_length` v `mod_data/filament.json`. Nastavte ji na **70 nebo vyšší**.
+- Moduly 4 v 1 a jejich trubice mají různé délky, což vyžaduje úpravu `filament_unload_into_tube` v `mod_data/filament.json`. Nastavte ji na **70 nebo vyšší**.
   ➜ [Více podrobností](AD5X.md#basic-parameters-most-frequently-adjusted)
 
 Problém může také pramenit z **nemožnosti odemknout filament v kanálu IFS**.

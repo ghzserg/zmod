@@ -91,12 +91,12 @@ Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SA
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64`'' auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64`` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64`` auszuführen
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py`` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ``chmod +x zmod-preprocess.sh`` auszuführen.
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
 
-2. In Orca muessen Sie schreiben. ``Prozessprofil`` -> ``Andere`` -> ``Nachverarbeitungsskripte``.
+2. In Orca muessen Sie schreiben. ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
 
 Wenn der Pfad Leerzeichen enthält, sollten Sie den vollständigen Pfad in Anführungszeichen setzen, aber es ist besser, keine Leerzeichen in Ordnern zu verwenden.
 
@@ -128,9 +128,9 @@ In Orca. Klicken Sie auf das Wifi-Symbol neben dem Drucker:
 - Host-Name: "IP_drucker_name:7125".
 - Url-Adresse des Hosts: "IP_drucker" oder "IP_drucker:80".
 
-Wenn Mainsail verwendet wird, dann geben Sie nur diese Miniaturgrößen an: ``140x110/PNG, 64x64/PNG``.
+Wenn Mainsail verwendet wird, dann geben Sie nur diese Miniaturgrößen an: ```140x110/PNG, 64x64/PNG```.
 
-In Orca, ``Druckerprofil`` -> ``Allgemeine Informationen`` -> ``Erweitert`` -> ``G-Code Thumbnails``.
+In Orca, ```Druckerprofil``` -> ```Allgemeine Informationen``` -> ```Erweitert``` -> ```G-Code Thumbnails```.
 
 Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
 

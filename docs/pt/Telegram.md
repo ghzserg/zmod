@@ -143,7 +143,7 @@ usermod -a -G docker tbot
 #### Adicionando chaves ssh
 
 1. Faça login como usuário `tbot`.
-   ``bash
+   ```bash
    su - tbot
    ```
 
@@ -153,7 +153,7 @@ usermod -a -G docker tbot
    cat >.ssh/authorised_keys
    ```
 
-   Digite a chave pública do arquivo ``mod_data/ssh.pub.txt``. Em seguida, ``Ctrl + d``
+   Digite a chave pública do arquivo ```mod_data/ssh.pub.txt```. Em seguida, ```Ctrl + d```
 
 ---
 
@@ -166,9 +166,9 @@ Depois de cada reinicialização, o ssh será iniciado automaticamente após 3 m
 
 Edite o arquivo [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
 
-Especifique seu fuso horário. O arquivo de exemplo especifica ```TZ=Asia/Yekaterinburg``.
+Especifique seu fuso horário. O arquivo de exemplo especifica ```TZ=Asia/Yekaterinburg```.
 
-``` ``docker-compose down && docker-compose up -d```` ou ````docker compose down && docker compose up -d````
+``` ```docker-compose down && docker-compose up -d```` ou ````docker compose down && docker compose up -d````
 
 #### Spoolman
 
@@ -198,9 +198,9 @@ chmod 777 spoolman
 ```
 
 Reinicie o docker:
-`````docker-compose down && docker-compose up -d```` ou ````docker compose down && docker compose up -d````
+``````docker-compose down && docker-compose up -d```` ou ````docker compose down && docker compose up -d````
 
-Na impressora, escreva em ``mod_data/user.moonraker.conf``
+Na impressora, escreva em ```mod_data/user.moonraker.conf```
 
 `external_IP` - o IP externo do servidor no qual o docker está sendo executado
 
@@ -263,7 +263,7 @@ cat >.ssh/authorised_keys
 Digite a chave pública do arquivo na raiz do sistema mod_data/ssh.pub.txt. Em seguida, pressione CTRL+D
 
 Reinicialize o sistema
-`````sudo reboot```
+``````sudo reboot```
 
 ---
 

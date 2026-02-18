@@ -70,9 +70,9 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-arm64```
     - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-amd64```
     - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Não se esqueça de executar ```chmod +x zmod-preprocess.py```
-    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ``chmod +x zmod-preprocess.sh``.
+    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ```chmod +x zmod-preprocess.sh```.
 
-    2. No Orca, você precisa escrever. ``Process Profile`` -> ``Other`` -> ``Post Processing Scripts``.
+    2. No Orca, você precisa escrever. ```Process Profile``` -> ```Other``` -> ```Post Processing Scripts```.
 
     Aqui estão as opções a serem adicionadas:
 

@@ -60,9 +60,9 @@ Alles funktioniert im automatischen Modus, aber die folgenden Makros sind auch v
 - ZCONTROL_ABORT` - stoppt Klipper, wenn ausgelöst
 - `ZCONTROL_AUTO` - stoppt Klipper (wenn Höhe z < `ZCONTROL_Z`), oder ruft PAUSE auf, wenn z >= `ZCONTROL_Z`.
 - `ZCONTROL_Z Z=10` - setzt die Höhe um Z.
-- SAVE_ZMOD_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ``SAVE_ZMOD_DATA ZCONTROL_Z=230``.
+- SAVE_ZMOD_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ```SAVE_ZMOD_DATA ZCONTROL_Z=230```.
 
-Wenn Sie die Düsensteuerung auf den ersten Schichten aktivieren wollen, dann fügen Sie ``ZCONTROL_PAUSE`` durch den Slicer auf der Schicht hinzu, auf der Sie die Pause anstelle der Unterbrechung verwenden wollen
+Wenn Sie die Düsensteuerung auf den ersten Schichten aktivieren wollen, dann fügen Sie ```ZCONTROL_PAUSE``` durch den Slicer auf der Schicht hinzu, auf der Sie die Pause anstelle der Unterbrechung verwenden wollen
 
 ---
 
@@ -247,12 +247,12 @@ Igor Polunovskiy
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64`'' auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64`` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64`` auszuführen
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py`` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ``chmod +x zmod-preprocess.sh`` auszuführen.
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
 
-2. In Orca muessen Sie schreiben. ``Prozessprofil`` -> ``Andere`` -> ``Nachverarbeitungsskripte``.
+2. In Orca muessen Sie schreiben. ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
 
 Hier sind die Optionen, die Sie hinzufügen müssen:
 
@@ -521,7 +521,7 @@ Der Fehler kann auch auftreten:
   
   Führen Sie das Makro `MEM` aus und sehen Sie nach, ob ein Swap vorhanden ist und wie groß er ist.
   
-  Aktivieren Sie SWAP, wenn es deaktiviert ist ``SAVE_ZMOD_DATA USE_SWAP=1``.
+  Aktivieren Sie SWAP, wenn es deaktiviert ist ```SAVE_ZMOD_DATA USE_SWAP=1```.
 
 - Wenn Sie FF5M/FF5MPro verwenden, machen Sie einen vollständigen Test. Nämlich die PID-Kalibrierung, das Entfernen der Table Map und das Entfernen des Shapers zur gleichen Zeit.
   

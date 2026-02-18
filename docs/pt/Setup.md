@@ -106,7 +106,7 @@
 
     O código final para este:
 
-    ```END_PRINT``
+    ```END_PRINT```
 
     <img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/0dfd8840-c183-4d33-92aa-46f882b8c32c" />
 
@@ -225,7 +225,7 @@ Recomenda-se **remover o mod por meio da macro `REMOVE_ZMOD`**; a remoção via 
 
 Atenção!
 
-- Se estiver usando o Klipper 13, é necessário executar o ``UPDATE_MCU``. Isso evitará a situação quando o MCU e o Klipper forem de versões diferentes.
+- Se estiver usando o Klipper 13, é necessário executar o ```UPDATE_MCU```. Isso evitará a situação quando o MCU e o Klipper forem de versões diferentes.
 - Se você tiver plug-ins ativados, primeiro deverá desativá-los ````DISABLE_PLUGIN name=g28_tenz````.
 
 Remova o mod completamente ```REMOVE_ZMOD FULL=1```.
@@ -244,9 +244,9 @@ Desinstalação do mod via pen drive:
 
 ## Como faço para atualizar o firmware padrão?
 
-1. desative todos os plug-ins ativos, exceto recommend, timelamse e notify (```DISABLE_PLUGIN name=plugin_name``).
-2. Se estiver usando o **Klipper 13**, execute o ```UPDATE_MCU`` antes de atualizar o firmware nativo. Isso evitará situações em que a MCU e o Klipper tenham versões diferentes.
-3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ``SAVE_ZMOD_DATA CHINA_CLOUD=1``.
+1. desative todos os plug-ins ativos, exceto recommend, timelamse e notify (```DISABLE_PLUGIN name=plugin_name```).
+2. Se estiver usando o **Klipper 13**, execute o ```UPDATE_MCU``` antes de atualizar o firmware nativo. Isso evitará situações em que a MCU e o Klipper tenham versões diferentes.
+3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
 
 Se a tela nativa não encontrar a atualização:
 
@@ -329,7 +329,7 @@ mount -o remount,rw /
 
 12. conserte o que está quebrado, por exemplo, `rm -f /etc/init.d/S01bad_script` ou `rm -f /opt/config/mod/.shell/S98camera` se não estiver conseguindo iniciar por causa da câmera.
 
-13. Você precisa salvar as alterações: ```sync``.
+13. Você precisa salvar as alterações: ```sync```.
 
-14. E reiniciar: ```reboot``.
+14. E reiniciar: ```reboot```.
 

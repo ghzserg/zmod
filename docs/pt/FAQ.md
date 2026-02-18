@@ -101,7 +101,7 @@ Qualquer função pode ser substituída em `mod_data/user.cfg` ou `printer.cfg`
 - É necessário remover todo o código de início e escrever [START_PRINT](/pt/Main/#start_print) e, no final, [END_PRINT](/pt/Main/#end_print)
 - A câmera não funciona, é necessário iniciar a câmera alternativa por meio da macro [CAMERA_ON](/pt/Zmod/#camera_on).
 - Se necessário, é preciso escrever manualmente o parâmetro `Z_OFFSET` na macro [START_PRINT](/pt/Main/#start_print) ou usar o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) que carrega o Z-offset dos parâmetros globais salvos anteriormente via SET_GCODE_OFFSET. *crot.
-- Se quiser transferir o z-offset da tela nativa para o modo de tela não nativa, chame a macro ``LOAD_ZOFFSET_NATIVE``, que lerá o valor do z-offset da tela nativa e o aplicará ao modo de tela não nativa.
+- Se quiser transferir o z-offset da tela nativa para o modo de tela não nativa, chame a macro ```LOAD_ZOFFSET_NATIVE```, que lerá o valor do z-offset da tela nativa e o aplicará ao modo de tela não nativa.
 - A impressora carrega automaticamente o mapa de mesa `auto` quando a impressora é ligada
 - O envio por meio do protocolo FlashForge não funciona, pois é controlado pela tela.
   Você precisa mudar para o protocolo Octo/Klipper:
@@ -172,7 +172,7 @@ M104 S[nozzle_temperature_initial_layer]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
-````START_PRINT EXTRUDER_TEMP= BED_TEMP=````` deve ser escrito em uma linha
+````START_PRINT EXTRUDER_TEMP= BED_TEMP=`````` deve ser escrito em uma linha
 
 E o código final está em:
 ```
@@ -193,7 +193,7 @@ No menu da tela da impressora, vá para `Settings` -> `Wifi icon` -> `Network mo
 Leia a documentação de [START_PRINT](/pt/Main/#start_print) e [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), isso permitirá que você utilize os recursos avançados e úteis do ZMOD
 
 Se você quiser usar a reversão do firmware, leia [documentation](/pt/FAQ/#what-is-rollback-from-firmware) e adicione
-``Perfil da barra`` -> ``Avançado`` -> ``Iniciar barra de código G``.
+```Perfil da barra``` -> ```Avançado``` -> ```Iniciar barra de código G```.
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -210,7 +210,7 @@ O mod não interfere no z-offset de forma alguma ao trabalhar com a tela.
 
 O deslocamento ao trabalhar com a tela nativa e ao trabalhar no modo de tela não nativa não é o mesmo e cada um tem sua própria vida e é configurado separadamente.
 
-Use ``LOAD_ZOFFSET_NATIVE`` para copiar o z-offset da tela nativa para o modo de tela não nativa.
+Use ```LOAD_ZOFFSET_NATIVE``` para copiar o z-offset da tela nativa para o modo de tela não nativa.
 
 O z-offset salvo na tela é usado.
 
@@ -231,7 +231,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 
 A tela nativa usa mapas (sempre, não é fixo, mesmo que não seja necessário):
 
-- ``MESH_DATA`` - padrão
+- ```MESH_DATA``` - padrão
 - `DEFAULT` - se a opção `leveling` (criação do mapa da tabela antes da impressão) estiver marcada e, após a impressão, o mapa `DEFAULT` sempre for excluído.
 
 Ao trabalhar em modo de tela não nativo, o mapa é usado:
@@ -252,11 +252,11 @@ Escolha uma das duas opções:
 
 - Especificar o nome do mapa da tabela no parâmetro `MESH` para a macro [START_PRINT](/pt/Main/#start_print).
  
-  `` ``START_PRINT MESH=moya_karta_na_80_gradusov``''
+  ``` ```START_PRINT MESH=moya_karta_na_80_gradusov```''
 
 - ou carregue o mapa da tabela em qualquer local conveniente (por exemplo, no perfil da barra) usando o comando
  
-  ```BED_MESH_PROFILE LOAD=moya_karta_na_80_gradusov``
+  ```BED_MESH_PROFILE LOAD=moya_karta_na_80_gradusov```
 
   Certifique-se de usar o mesmo cartão no perfil da barra e no `START_PRINT`, ou desative a limpeza de bicos no `START_PRINT` executando-o por meio do perfil da barra.
 
@@ -274,9 +274,9 @@ Parâmetro `PRINT_LEVELING`:
 
   Para ativar esse recurso, você precisa configurar uma vez a macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), o parâmetro [PRINT_LEVELING](/pt/Global/#zshaper)
 
-  ```SAVE_ZMOD_DATA PRINT_LEVELING=1`` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
 
-  *Para remover o mapa da área de trabalho da tela nativa, vá para ``Configurações`` -> ``Ícone Wifi`` -> `Modo de rede`` -> ative o controle deslizante ``Somente redes locais`` no menu da tela da impressora.
+  *Para remover o mapa da área de trabalho da tela nativa, vá para ```Configurações``` -> ```Ícone Wifi``` -> `Modo de rede``` -> ative o controle deslizante ```Somente redes locais``` no menu da tela da impressora.
 
   *Se essa opção estiver ativa, todos os parâmetros do START_PRINT relacionados à criação/utilização de um mapa de mesa serão ignorados (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
 
@@ -660,7 +660,7 @@ Exemplo de configuração de RETRACTION no Orca:
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
-``GET_RETRACTION``: consulta os parâmetros atuais usados na reversão e os exibe no terminal.
+```GET_RETRACTION```: consulta os parâmetros atuais usados na reversão e os exibe no terminal.
 
 Variante de substituição de retração de [@minicx](https://github.com/loss-and-quick/)
 ```
@@ -685,15 +685,15 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ### Como alterar o logotipo de inicialização
 
-O logotipo está na pasta ```mod_data/logo``.
+O logotipo está na pasta ```mod_data/logo```.
 
 Requisitos do logotipo:
 
 - Tamanho 800x480 profundidade de cor 24 bits
-- AD5M: formato BMP. Nome do arquivo: ``bootlogo.bmp``.
-- AD5X: Formato JPG. Nome do arquivo: ```logo.jpeg``.
+- AD5M: formato BMP. Nome do arquivo: ```bootlogo.bmp```.
+- AD5X: Formato JPG. Nome do arquivo: ```logo.jpeg```.
 
-Carregue seu logotipo na pasta ```mod_data/logo``.
+Carregue seu logotipo na pasta ```mod_data/logo```.
 
 Reinicie a impressora duas vezes.
 
@@ -711,7 +711,7 @@ O erro ocorre principalmente se a elevação do eixo z durante a sondagem for in
 
 Ele pode ser corrigido programaticamente da seguinte forma:
 
-Digite em ```mod_data/user.cfg``.
+Digite em ```mod_data/user.cfg```.
 ```
 [bed_mesh]
 horizontal_move_z: 5
@@ -754,17 +754,17 @@ Por exemplo, você tem o Klipper 13 em execução e está usando a MCU do Klippe
 
 Ou vice-versa. Você está executando um Klipper nativo, mas carregou o MCU para o Klipper 13.
 
-Se a versão do seu MCU começar com ```?-20230317_182329-ubuntu20-virtual-machine`` - isso significa que você carregou o MCU para o Klipper 12 (AD5X) ou Klipper 11 (Ad5M/Ad5mPro).
+Se a versão do seu MCU começar com ```?-20230317_182329-ubuntu20-virtual-machine``` - isso significa que você carregou o MCU para o Klipper 12 (AD5X) ou Klipper 11 (Ad5M/Ad5mPro).
 
 Portanto, você precisa do zMod para carregar o Klipper nativo.
 
-- Vá para ```mod_data/variables.cfg`` e exclua a linha ```klipper13 = 1```.
+- Vá para ```mod_data/variables.cfg``` e exclua a linha ```klipper13 = 1```.
 - Salve o arquivo
 - Desligue a impressora e ligue-a (não reinicie!).
 
 <img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
 
-Se esse não for o caso e o Klipper estiver em execução, execute ```UPDATE_MCU FORCE=13`` - esse comando instalará a versão atual da MCU
+Se esse não for o caso e o Klipper estiver em execução, execute ```UPDATE_MCU FORCE=13``` - esse comando instalará a versão atual da MCU
 
 Se nada ajudar e o **Klipper não funcionar**:
 
@@ -797,7 +797,7 @@ A interrupção do filamento no IFS também pode estar relacionada:
 
 - Há uma haste 1 na extrusora e uma haste 2 está sendo puxada para fora. Use [SET_EXTRUDER_SLOT](/pt/AD5X/#5-how-to-manually-indicate-to-the-printer-which-coil-is-now-filled-ad5x).
 - A extrusora tem uma haste inserida nela, mas já tem a haste antiga
-- Os módulos 4 em 1 e os tubos para eles têm comprimentos diferentes, portanto, você precisa ajustar o parâmetro ``nozzle_cleaning_length`` em ``mod_data/filament.json`` definindo-o como 70 ou mais. [Leia mais](/pt/AD5X/#most-important-settings-what-to-change-more-often-ad5x)
+- Os módulos 4 em 1 e os tubos para eles têm comprimentos diferentes, portanto, você precisa ajustar o parâmetro ```filament_unload_into_tube``` em ```mod_data/filament.json``` definindo-o como 70 ou mais. [Leia mais](/pt/AD5X/#most-important-settings-what-to-change-more-often-ad5x)
 
 Além disso, o problema pode ser causado por uma incapacidade de desbloquear a barra no canal IFS.
 

@@ -106,7 +106,7 @@
 
     Der endgültige Code zu diesem:
 
-    ``END_PRINT``
+    ```END_PRINT```
 
     <img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/0dfd8840-c183-4d33-92aa-46f882b8c32c" />
 
@@ -225,10 +225,10 @@ Es wird empfohlen, **die Mod über das Makro `REMOVE_ZMOD`** zu entfernen, die E
 
 Achtung!
 
-- Wenn Sie Klipper 13 benutzen, ist es notwendig, ``UPDATE_MCU`` auszuführen. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen haben.
+- Wenn Sie Klipper 13 benutzen, ist es notwendig, ```UPDATE_MCU``` auszuführen. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen haben.
 - Wenn Sie Plug-Ins aktiviert haben, müssen Sie diese zuerst deaktivieren ````DISABLE_PLUGIN name=g28_tenz````.
 
-Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1``.
+Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1```.
 
 Deinstallation des Mods über ein Flash-Laufwerk:
 
@@ -245,8 +245,8 @@ Deinstallation des Mods über ein Flash-Laufwerk:
 ## Wie aktualisiere ich die Standard-Firmware?
 
 1. deaktivieren Sie alle aktiven Plugins außer recommend, timelamse, notify (```DISABLE_PLUGIN name=plugin_name```).
-2. Wenn Sie **Klipper 13** benutzen, sollten Sie ```UPDATE_MCU`` durchführen, bevor Sie die native Firmware aktualisieren. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen sind.
-3. Aktivieren Sie die chinesische Wolke, wenn Sie das Update vom nativen Bildschirm aus durchführen wollen ```SAVE_ZMOD_DATA CHINA_CLOUD=1``.
+2. Wenn Sie **Klipper 13** benutzen, sollten Sie ```UPDATE_MCU``` durchführen, bevor Sie die native Firmware aktualisieren. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen sind.
+3. Aktivieren Sie die chinesische Wolke, wenn Sie das Update vom nativen Bildschirm aus durchführen wollen ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
 
 Wenn der native Bildschirm das Update nicht findet:
 
@@ -329,7 +329,7 @@ mount -o remount,rw /
 
 12. Reparieren Sie, was kaputt ist, z.B. `rm -f /etc/init.d/S01bad_script`, oder `rm -f /opt/config/mod/.shell/S98camera`, wenn Sie keinen Start wegen der Kamera bekommen.
 
-13. Sie müssen die Änderungen speichern: ```Sync``.
+13. Sie müssen die Änderungen speichern: ```Sync```.
 
-14. Und neu starten: ```reboot``.
+14. Und neu starten: ```reboot```.
 

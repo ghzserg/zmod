@@ -684,7 +684,7 @@ Additionally, filament stoppage in IFS may be caused by:
 
 - Extruder is loaded with spool 1, but spool 2 is being pulled out — use [`SET_EXTRUDER_SLOT`](/AD5X/#5-how-to-manually-tell-the-printer-which-spool-is-loaded) to sync the extruder’s current slot.
 - New filament is being inserted, while old filament remains inside the extruder.
-- The 4-in-1 modules and their tubes have different lengths, requiring adjustment of `nozzle_cleaning_length` in `mod_data/filament.json`. Set it to **70 or higher**.
+- The 4-in-1 modules and their tubes have different lengths, requiring adjustment of `filament_unload_into_tube` in `mod_data/filament.json`. Set it to **70 or higher**.
   ➜ [More details](/AD5X/#basic-parameters-most-frequently-adjusted)
 
 The issue may also stem from the **inability to unlock the filament in the IFS channel**.

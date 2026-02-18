@@ -61,7 +61,7 @@ git clone https://github.com/julianschill/klipper-led_effect.git
 
 No arquivo `mod_data/user.moonraker.conf`, adicione a seguinte seção:
 
-``ini
+```ini
 [update_manager led_effect].
 tipo: git_repo
 canal: stable
@@ -105,7 +105,7 @@ Exemplo de plug-in: https://github.com/ghzserg/g28_tenz
 ### Adicionando um plug-in
 
 No arquivo
-```mod_data/user.moonraker.conf``.
+```mod_data/user.moonraker.conf```.
 adicione uma seção:
 
 ```ini
@@ -158,7 +158,7 @@ RESPOND PREFIX="info" MSG="===Cortando o filamento==="
 
 As traduções são armazenadas no diretório `translate/` em arquivos com o formato `de.csv`:
 
-``csv
+```csv
 Cortar o filamento;Filament schneiden
 ```
 

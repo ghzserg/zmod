@@ -10,7 +10,7 @@ Wenn Sie die Einsteigerkalibrierungen durchlaufen haben:
 Dann haben Sie das bereits:
 
 - Ein z-Offset ist eingerichtet
-- Es gibt eine ``MESH_DATA``-Tabelle (aufgenommen bei 60 Grad) - Sie können sie nicht löschen, wenn Sie den nativen Bildschirm verwenden, da sie bei jedem Druckvorgang geladen wird
+- Es gibt eine ```MESH_DATA```-Tabelle (aufgenommen bei 60 Grad) - Sie können sie nicht löschen, wenn Sie den nativen Bildschirm verwenden, da sie bei jedem Druckvorgang geladen wird
 - Es gibt eine Extruder-PID-Kalibrierung bei 240 Grad
 
 Aber diese Einstellungen sind ziemlich allgemein, nicht viele Leute drucken bei 240 Grad Düsentemperatur und 60 Grad Tischtemperatur.
@@ -41,8 +41,8 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
     ```
     **Was das bedeutet:**
 
-    * * ``TEMPERATURE=255`` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
-        * ``COOLER=80`` - die Kühlung erfolgt mit 80% Leistung.
+    * * ```TEMPERATURE=255``` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
+        * ```COOLER=80``` - die Kühlung erfolgt mit 80% Leistung.
 
 - **Wenn Sie fertig sind:**
     **Der Drucker speichert die neuen Einstellungen selbständig.**
@@ -57,7 +57,7 @@ Der Tisch Ihres Druckers muss, wie der Extruder, die Temperatur genau halten. We
 
 Empfehlung für AD5X
 
-Öffnen Sie die Datei `printer.cfg` und setzen Sie den Abschnitt ``heater_bed`` auf:
+Öffnen Sie die Datei `printer.cfg` und setzen Sie den Abschnitt ```heater_bed``` auf:
 ```
 [heater_bed].
 max_power: 0.6
@@ -84,7 +84,7 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatu
     ```
     **Was das bedeutet:**
 
-    * ``TEMPERATURE=80`` - die Kalibrierung wird für eine Tischtemperatur von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.
+    * ```TEMPERATURE=80``` - die Kalibrierung wird für eine Tischtemperatur von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.
 
 - **Wenn Sie fertig sind:** **
     * Die neuen Einstellungen werden automatisch gespeichert.
@@ -240,8 +240,8 @@ SAVE_ZMOD_DATA USE_KAMP=1
 
 Orca anpassen:
 
-- ``Prozessprofil`` -> ``Andere`` -> ``Output G-cod`` -> ``Model Exclusion`` das Häkchen setzen
-- ``Prozessprofil`` -> ``Andere`` -> ``Output G-cod`` -> ``Modelle ausschließen`` aktivieren Sie das Kontrollkästchen
+- ```Prozessprofil``` -> ```Andere``` -> ```Output G-cod``` -> ```Model Exclusion``` das Häkchen setzen
+- ```Prozessprofil``` -> ```Andere``` -> ```Output G-cod``` -> ```Modelle ausschließen``` aktivieren Sie das Kontrollkästchen
 
 <img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
 
@@ -261,7 +261,7 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 ```
 
 **Wichtig für die Arbeit vom systemeigenen Bildschirm aus:** Um das Entfernen der Tabellenkarte vom systemeigenen Bildschirm des Druckers aus zu initiieren, müssen Sie in das Bildschirmmenü gehen:
-``Einstellungen`` → ``Wifi-Symbol`` → ``Netzwerkmodus`` → den Schieberegler ``Nur lokale Netzwerke`` aktivieren.
+```Einstellungen``` → ```Wifi-Symbol``` → ```Netzwerkmodus``` → den Schieberegler ```Nur lokale Netzwerke``` aktivieren.
 
 **3. Intelligente Reinigung vor dem Drucken**
 
@@ -292,7 +292,7 @@ Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düse
 Bei unserem Drucker ist der **Z-Offset NUR während des Drucks** relevant. Die Werte, die Sie auf dem Bildschirm oder in der Schnittstelle VOR oder NACH dem Druck sehen, dienen nur als Referenz und spiegeln nicht das tatsächliche Bild wider.
 
 **Zweite wichtige Regel:**
-**Z-Offset bei der Arbeit mit einem nativen Bildschirm und bei der Arbeit im nicht-nativen Bildschirmmodus sind nicht dasselbe** und jeder lebt sein eigenes Leben und wird separat konfiguriert. Verwenden Sie ```LOAD_ZOFFSET_NATIVE``, um den Z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirmmodus zu kopieren.
+**Z-Offset bei der Arbeit mit einem nativen Bildschirm und bei der Arbeit im nicht-nativen Bildschirmmodus sind nicht dasselbe** und jeder lebt sein eigenes Leben und wird separat konfiguriert. Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirmmodus zu kopieren.
 
 #### Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
 
@@ -336,7 +336,7 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertragen wollen, rufen Sie das Makro ``LOAD_ZOFFSET_NATIVE`` auf, es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirm-Modus an.
+Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf, es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirm-Modus an.
 
 **Schlüsselvorteile:**
 
@@ -347,15 +347,15 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertra
 
 * **Z-Offset nur beim Drucken der ersten Ebene einstellen.
 **Wenn Sie mit dem nativen Bildschirm arbeiten, passen Sie den Z-Offset auf dem nativen Bildschirm an.**
-* ** **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ``SAVE_ZMOD_DATA LOAD_ZOFFSET=1`` aus.
+* ** **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1``` aus.
 * Das System wird alles von selbst speichern. Sie brauchen sich um nichts zu kümmern.
 
 !!! Gefahr
     Sie können `Z_OFFSET_APPLY_ENDSTOP` auf diesem Drucker nicht verwenden.
     
-    Und Sie können ```[probe] z_offset: `` in ``printer.cfg`` oder ``printer.base.cfg``.
+    Und Sie können ```[probe] z_offset: ``` in ```printer.cfg``` oder ```printer.base.cfg```.
     
-    Denn der native Bildschirm und das ``START_PRINT``-Makro laden den Offset zu Beginn des Drucks.
+    Denn der native Bildschirm und das ```START_PRINT```-Makro laden den Offset zu Beginn des Drucks.
 
 ---
 
@@ -374,11 +374,11 @@ Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_cor
 **Was ist zu tun?**
 
 1.  **Korrektur der Berechnungen:** Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen [SAVE_ZMOD_DATA FIX_SCV=1](/de/Global/#fix_scv).
-    ``gcode
+    ```gcode
     SAVE_ZMOD_DATA FIX_SCV=1
     ```
 
-2.  **Verbesserung der Druckqualität (empfohlen):** Fügen Sie die folgende Zeile in die Datei ``mod_data/user.cfg`` ein:
+2.  **Verbesserung der Druckqualität (empfohlen):** Fügen Sie die folgende Zeile in die Datei ```mod_data/user.cfg``` ein:
     ```ini
     [printer].
     square_corner_velocity: 9
@@ -386,7 +386,7 @@ Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_cor
 
     * **Was bewirkt dies? ** Der Drucker wird in scharfen Ecken leicht verlangsamt. Dies erhöht die Druckzeit geringfügig, reduziert aber die Vibrationen und verbessert die Eckenschärfe.
 
-Alternativ können Sie es auch einfach halten. Geben Sie ```ENABLE_PLUGIN name=recommend``` in die Konsole ein - dieser Befehl aktiviert das Empfehlungs-Plugin, das bereits ``FIX_SCV`` aktiviert und `square_corner_velocity: 9`` vorgegeben hat.
+Alternativ können Sie es auch einfach halten. Geben Sie ```ENABLE_PLUGIN name=recommend``` in die Konsole ein - dieser Befehl aktiviert das Empfehlungs-Plugin, das bereits ```FIX_SCV``` aktiviert und `square_corner_velocity: 9``` vorgegeben hat.
 
 Vergessen Sie nicht, den Drucker neu zu starten!
 
@@ -441,7 +441,7 @@ Wenn Sie mit allem zufrieden sind, klicken Sie einfach auf die Schaltfläche **"
 
 Im obigen Beispiel fand ich den `mzv` Shaper besser, da er die Vibrationen vollständig beseitigt. Um ihn zu verwenden, müssen Sie die Einstellungen manuell in die Datei `printer.cfg` eintragen (im Abschnitt `[input_shaper]`):
 
-``ini
+```ini
 [input_shaper].
 shaper_type_y = mzv ; Ausgewählter Shaper-Typ für die Y-Achse
 shaper_freq_y = 54.2 ; Resonanzfrequenz für die Y-Achse

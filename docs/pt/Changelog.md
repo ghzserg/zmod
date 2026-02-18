@@ -78,7 +78,7 @@
 * [AD5X](/pt/AD5X/): Correções para o Klipper 13
 * [AD5X](/pt/AD5X/): Correção para limpeza do bocal
 * [AD5X](/pt/AD5X/): Remoção da trituração IFS
-* ```CAMERA_ON VIDEO=video99`` - teste todas as câmeras disponíveis
+* ```CAMERA_ON VIDEO=video99``` - teste todas as câmeras disponíveis
 * Verificação de atualizações após o término da impressão
 * Ao remover a tabela via Fluidd/Mainsail, os tensils são redefinidos. Mas cabe ao usuário limpar o bico e aquecer a mesa antes.
 * Correção do PURGE_LINE, não imprime em suportes

@@ -38,7 +38,7 @@ Unterschiede zum AD5M:
 * Keine `Entware`.
 * Anstelle des Makros `CLOSE_DILALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
 * Das Makro `NEW_SAVE_CONFIG` funktioniert **nicht**.
-* Um die Kamera einzuschalten, müssen Sie ``CAMERA_ON VIDEO=video3`` oder ``CAMERA_ON VIDEO=video0`` oder ``CAMERA_ON VIDEO=video99`` verwenden.
+* Um die Kamera einzuschalten, müssen Sie ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video99``` verwenden.
 * Klipper kann abstürzen. Lösung `Process Profile` -> `Other` -> `Output G-cod` -> `Model Exclusion` das Häkchen ausschalten.
 
 ---
@@ -295,14 +295,14 @@ Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildsch
 
 Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um einen neuen Filamenttyp hinzuzufügen, fügen Sie ```mod_data/user.cfg`` hinzu:
+Um einen neuen Filamenttyp hinzuzufügen, fügen Sie ```mod_data/user.cfg``` hinzu:
 ```
 [zmod_ifs].
 filament_NEWTYPE: 300
 ```
 Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und die Zahl ist der Schmelzpunkt des Filaments.
 
-``IFS_PRINT_DEFAULTS`` - gibt die verfügbaren Filamenttypen und deren Schmelztemperaturen aus
+```IFS_PRINT_DEFAULTS``` - gibt die verfügbaren Filamenttypen und deren Schmelztemperaturen aus
 
 ---
 
@@ -310,11 +310,11 @@ Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und di
 
 Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ``mod_data/colors/ru.cfg`` (verwenden Sie Ihre Sprache anstelle von ru):
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/colors/ru.cfg``` (verwenden Sie Ihre Sprache anstelle von ru):
 
-``und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
+```und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
 
-Um den Namen einer Farbe anzuzeigen, muss der Farbname mit einem Unterstrich ``_``` beginnen.
+Um den Namen einer Farbe anzuzeigen, muss der Farbname mit einem Unterstrich ```_``` beginnen.
 
 Beispiel:
 ```
@@ -347,7 +347,7 @@ Beispiel:
 }
 ```
 
-Die Aufschrift ```_transparent`` wird auf den Schaltflächen angezeigt
+Die Aufschrift ```_transparent``` wird auf den Schaltflächen angezeigt
 
 ---
 
@@ -368,7 +368,7 @@ Um dies zu beheben, müssen Sie:
 1. zMod aktualisieren.
 2. öffnen Sie die Datei `/rw/Adventurer5M.json`.
 3. finden Sie Zeilen wie:
-``json
+```json
 {
 	"CutXOffset" : 0.5,
 	"CutYOffset" : -0.20000001788139343,
@@ -397,7 +397,7 @@ Ersetze **nur** diese Werte:
 [Alternative Anweisungen](/de/Setup/#attention-ad5x)
 
 1. Geben Sie den Befehl `_GOTO_TRASH` ein - der Druckkopf fährt in den Papierkorb.
-2. Wenn sich der Mülleimer nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Mülleimer schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2``.
+2. Wenn sich der Mülleimer nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Mülleimer schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2```.
 3. Schauen Sie, welche **Y**-Koordinate Sie jetzt haben.
 4. 229 von dieser Zahl subtrahieren. Das Ergebnis ist Ihr "yOffset".
 
@@ -419,7 +419,7 @@ Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Korb ist eing
 [Alternative Version der Anleitung](/de/Setup/#attention-ad5x)
 
 1. Geben Sie den Befehl `_CUT_PRUTOK` ein - der Kopf wird zum Messer fahren.
-2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer ausgelöst wird. Sie müssen GCODE verwenden: ```G1 Y-7.7`` ```G1 X-1.7``.
+2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer ausgelöst wird. Sie müssen GCODE verwenden: ```G1 Y-7.7``` ```G1 X-1.7```.
 3. Schau nach, wie deine X- und Y-Koordinaten lauten.
 4. Für **Y**:
 

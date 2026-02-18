@@ -153,7 +153,7 @@ usermod -a -G docker tbot
    cat >.ssh/authorised_keys
    ```
 
-   Geben Sie den öffentlichen Schlüssel aus der Datei ``mod_data/ssh.pub.txt`` ein. Dann ``Strg + d``
+   Geben Sie den öffentlichen Schlüssel aus der Datei ```mod_data/ssh.pub.txt``` ein. Dann ```Strg + d```
 
 ---
 
@@ -166,9 +166,9 @@ Nach jedem Neustart wird ssh nach 3 Minuten automatisch gestartet.
 
 Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
 
-Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg`` angegeben.
+Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``` angegeben.
 
-``` ``docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
+``` ```docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
 
 #### Spoolman
 
@@ -198,9 +198,9 @@ chmod 777 spoolman
 ```
 
 Starten Sie Docker neu:
-`````docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
+``````docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
 
-Auf dem Drucker schreiben Sie in ``mod_data/user.moonraker.conf``
+Auf dem Drucker schreiben Sie in ```mod_data/user.moonraker.conf```
 
 `external_IP` - die externe IP des Servers, auf dem docker läuft
 
@@ -263,7 +263,7 @@ cat >.ssh/authorised_keys
 Geben Sie den öffentlichen Schlüssel aus der Datei im Systemstamm mod_data/ssh.pub.txt ein. Dann CTRL+D
 
 Starten Sie das System neu
-`````sudo reboot```
+``````sudo reboot```
 
 ---
 

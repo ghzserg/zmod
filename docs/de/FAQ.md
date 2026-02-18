@@ -101,7 +101,7 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 - Es ist notwendig, den gesamten Start-Gcode zu entfernen und [START_PRINT](/ru/Main/#start_print) zu schreiben, und im letzten [END_PRINT](/ru/Main/#end_print)
 - Wenn die Kamera nicht funktioniert, müssen Sie eine andere Kamera über das Makro [CAMERA_ON](/ru/Zmod/#camera_on) starten.
 - Gegebenenfalls ist es notwendig, den Parameter `Z_OFFSET` manuell in das Makro [START_PRINT](/ru/Main/#start_print) zu schreiben oder den globalen Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) zu verwenden, der den Z-Offset aus den globalen Parametern lädt, die zuvor über SET_GCODE_OFFSET gespeichert wurden. *crot.
-- Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den nicht-nativen Bildschirmmodus übertragen wollen, rufen Sie das Makro ``LOAD_ZOFFSET_NATIVE`` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirmmodus an.
+- Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den nicht-nativen Bildschirmmodus übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirmmodus an.
 - Der Drucker lädt automatisch die `auto` desk map, wenn der Drucker eingeschaltet wird.
 - Das Senden über das FlashForge-Protokoll funktioniert nicht, da es über den Bildschirm abgewickelt wird.
   Sie müssen auf das Octo/Klipper-Protokoll umschalten:
@@ -172,7 +172,7 @@ M104 S[düse_temperatur_anfangsschicht]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
-````START_PRINT EXTRUDER_TEMP= BED_TEMP=````` sollte in eine Zeile geschrieben werden
+````START_PRINT EXTRUDER_TEMP= BED_TEMP=`````` sollte in eine Zeile geschrieben werden
 
 Und der endgültige Code ist auf:
 ```
@@ -210,7 +210,7 @@ Der Mod stört den Z-Offset in keiner Weise bei der Arbeit mit dem Bildschirm.
 
 Offset bei der Arbeit mit dem nativen Bildschirm und bei der Arbeit im nicht-nativen Bildschirmmodus sind nicht dasselbe, und jeder führt sein eigenes Leben und wird separat konfiguriert.
 
-Verwenden Sie ``LOAD_ZOFFSET_NATIVE``, um den z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirm-Modus zu kopieren.
+Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirm-Modus zu kopieren.
 
 Es wird der auf dem Bildschirm gespeicherte z-Offset verwendet.
 
@@ -231,7 +231,7 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 
 Der native Bildschirm verwendet Karten (immer, es ist nicht fixiert, auch wenn man es nicht muss):
 
-- ``MESH_DATA`` - Voreinstellung
+- ```MESH_DATA``` - Voreinstellung
 - `DEFAULT` - wenn `Leveling` (Aufbau der Tabellenkarte vor dem Druck) angekreuzt ist, und nach dem Druck wird die `DEFAULT` Karte immer gelöscht.
 
 Bei der Arbeit im nicht-nativen Bildschirmmodus wird die Karte verwendet:
@@ -252,7 +252,7 @@ Wählen Sie eine der beiden Optionen:
 
 - Geben Sie den Namen der Tabellenkarte im Parameter `MESH` für das Makro [START_PRINT](/ru/Main/#start_print) an.
  
-  `` ``START_PRINT MESH=moya_karta_na_80_gradusov``''
+  ``` ```START_PRINT MESH=moya_karta_na_80_gradusov```''
 
 - oder laden Sie die Tabellenkarte an einer beliebigen Stelle (z.B. im Barprofil) mit dem Befehl
  
@@ -274,9 +274,9 @@ Parameter `PRINT_LEVELING`:
 
   Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/ru/Global/#zshaper)
 
-  ```SAVE_ZMOD_DATA PRINT_LEVELING=1`` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
 
-  *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu ``Einstellungen`` -> ``Wifi-Symbol`` -> ``Netzwerkmodus`` -> schalten Sie den Schieberegler ``Nur lokale Netzwerke`` über das Menü des Druckerbildschirms ein.
+  *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` -> ```Wifi-Symbol``` -> ```Netzwerkmodus``` -> schalten Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
 
   *Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Schreibtischkarte beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
 
@@ -660,7 +660,7 @@ Balkenprofil -> `Zusätzlich` -> `Start G-Code des Balkens`
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
-``GET_RETRACTION``: fragt die aktuellen Parameter ab, die beim Rollback verwendet werden und zeigt sie auf dem Terminal an.
+```GET_RETRACTION```: fragt die aktuellen Parameter ab, die beim Rollback verwendet werden und zeigt sie auf dem Terminal an.
 
 Retract Substitutionsvariante von [@minicx](https://github.com/loss-and-quick/)
 ```
@@ -685,15 +685,15 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ### Wie man das Bootlogo ändert
 
-Das Logo befindet sich im Ordner ```mod_data/logo``.
+Das Logo befindet sich im Ordner ```mod_data/logo```.
 
 Logo Anforderungen:
 
 - Größe 800x480 Farbtiefe 24 Bits
-- AD5M: BMP-Format. Dateiname: ``bootlogo.bmp``.
-- AD5X: JPG-Format. Dateiname: ``Logo.jpeg``.
+- AD5M: BMP-Format. Dateiname: ```bootlogo.bmp```.
+- AD5X: JPG-Format. Dateiname: ```Logo.jpeg```.
 
-Laden Sie Ihr Logo in den Ordner ```mod_data/logo`` hoch.
+Laden Sie Ihr Logo in den Ordner ```mod_data/logo``` hoch.
 
 Starten Sie den Drucker 2 mal neu.
 
@@ -711,7 +711,7 @@ Der Fehler tritt vor allem dann auf, wenn der Hub der Z-Achse während der Antas
 
 Er kann programmatisch wie folgt behoben werden:
 
-Geben Sie in ```mod_data/user.cfg`` ein.
+Geben Sie in ```mod_data/user.cfg``` ein.
 ```
 [bed_mesh]
 horizontal_move_z: 5
@@ -754,17 +754,17 @@ Du hast z.B. Klipper 13 laufen und verwendest die MCU von Klipper 11 oder 12.
 
 Oder andersherum. Du hast einen nativen Klipper laufen - aber du hast die MCU für Klipper 13 geladen.
 
-Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine`` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (Ad5M/Ad5mPro) geladen hast.
+Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (Ad5M/Ad5mPro) geladen hast.
 
 Sie brauchen also zMod, um native Klipper zu laden.
 
-- Gehen Sie zu ```mod_data/variables.cfg`` und löschen Sie die Zeile ```klipper13 = 1```.
+- Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klipper13 = 1```.
 - Speichern Sie die Datei
 - Schalten Sie den Drucker aus und schalten Sie ihn wieder ein (nicht neu starten!).
 
 <img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
 
-Wenn dies nicht der Fall ist und Klipper läuft, dann führen Sie ```UPDATE_MCU FORCE=13`` aus - dieser Befehl installiert die aktuelle MCU-Version
+Wenn dies nicht der Fall ist und Klipper läuft, dann führen Sie ```UPDATE_MCU FORCE=13``` aus - dieser Befehl installiert die aktuelle MCU-Version
 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 
@@ -797,7 +797,7 @@ Auch das Anhalten des Fadens in IFS kann damit zusammenhängen:
 
 - Es ist ein Stab 1 im Extruder, und ein Stab 2 wird herausgezogen. Verwenden Sie [SET_EXTRUDER_SLOT](/de/AD5X/#5-how-to-manually-indicate-to-the-printer-which-coil-is-now-filled-ad5x).
 - In den Extruder ist ein Stab eingesetzt, in dem sich aber bereits der alte Stab befindet
-- Die 4-in-1-Module und die Schläuche zu ihnen haben unterschiedliche Längen, daher müssen Sie den Parameter ``nozzle_cleaning_length`` in ``mod_data/filament.json`` anpassen, indem Sie ihn auf 70 oder mehr setzen. [Mehr lesen](/de/AD5X/#wichtigste-einstellungen-was-man-oft-ändern-muss-ad5x)
+- Die 4-in-1-Module und die Schläuche zu ihnen haben unterschiedliche Längen, daher müssen Sie den Parameter ```filament_unload_into_tube``` in ```mod_data/filament.json``` anpassen, indem Sie ihn auf 70 oder mehr setzen. [Mehr lesen](/de/AD5X/#wichtigste-einstellungen-was-man-oft-ändern-muss-ad5x)
 
 Das Problem kann auch dadurch verursacht werden, dass der Balken im IFS-Kanal nicht entsperrt werden kann.
 

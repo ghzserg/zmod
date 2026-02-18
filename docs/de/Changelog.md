@@ -78,7 +78,7 @@
 * [AD5X](/de/AD5X/): Korrekturen für Klipper 13
 * [AD5X](/de/AD5X/): Fix für Düsenreinigung
 * [AD5X](/de/AD5X/): IFS-Crunch entfernt
-* ```CAMERA_ON VIDEO=video99`` - testet alle verfügbaren Kameras
+* ```CAMERA_ON VIDEO=video99``` - testet alle verfügbaren Kameras
 * Prüfen auf Aktualisierungen nach Beendigung des Drucks
 * Wenn die Tabelle über Fluidd/Mainsail entfernt wird, werden die Tensils zurückgesetzt. Es ist aber Sache des Benutzers, die Düse zu reinigen und den Tisch vorher aufzuwärmen.
 * Fix PURGE_LINE, druckt nicht auf Stützen

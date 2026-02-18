@@ -104,9 +104,9 @@ Depois de executar a macro:
 - Você precisa pressionar `Ctrl + F5` ou `Ctrl + Shift + R` ou `Option + Command + E`.
 - Se tiver um problema no Orca, pressione `Ctrl + F5` ou `Ctrl + Shift + R` ou `Option + Command + E`.
 
-Se estiver usando o Mainsail, especifique apenas estes tamanhos de miniatura: ```140x110/PNG, 64x64/PNG``.
+Se estiver usando o Mainsail, especifique apenas estes tamanhos de miniatura: ```140x110/PNG, 64x64/PNG```.
 
-No Orca, ``Printer Profile`` -> ``General Information`` -> ``Advanced`` -> ``G-Code Thumbnails``.
+No Orca, ```Printer Profile``` -> ```General Information``` -> ```Advanced``` -> ```G-Code Thumbnails```.
 
 Observe que a tela nativa deixará de exibir miniaturas.
 
@@ -137,11 +137,11 @@ Verifique a soma MD5.
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Não se esqueça de executar ```chmod +x zmod_preprocess-linux-amd64`''
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-amd64``
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Não se esqueça de executar ```chmod +x zmod-preprocess.py`` ``
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ``chmod +x zmod-preprocess.sh``.
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Não se esqueça de executar ```chmod +x zmod-preprocess.py``` ```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ```chmod +x zmod-preprocess.sh```.
 
-2. No Orca, você precisa escrever. ``Process Profile`` -> ``Other`` -> ``Post Processing Scripts``.
+2. No Orca, você precisa escrever. ```Process Profile``` -> ```Other``` -> ```Post Processing Scripts```.
 
 Aqui estão as opções a serem adicionadas:
 
@@ -241,4 +241,4 @@ Se forem encontrados erros, vá para [link](https://github.com/ghzserg/zmod/tree
 
 Obtenha uma captura de tela da tela da impressora
 
-A captura de tela será salva em ``mod_data/screen.jpg``.
+A captura de tela será salva em ```mod_data/screen.jpg```.

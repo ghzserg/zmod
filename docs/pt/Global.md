@@ -60,9 +60,9 @@ Tudo funciona no modo automático, mas as seguintes macros também estão dispon
 - `ZCONTROL_ABORT` - interrompe o Klipper quando ele é acionado.
 - `ZCONTROL_AUTO` - interrompe o Klipper (se a altura z < `ZCONTROL_Z`), ou chama PAUSE se z >= `ZCONTROL_Z`.
 - `ZCONTROL_Z Z=10` - define a altura por Z.
-- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - salva a altura por Z. Se você não quiser ativar a pausa, defina ``SAVE_ZMOD_DATA ZCONTROL_Z=230`` ``
+- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - salva a altura por Z. Se você não quiser ativar a pausa, defina ```SAVE_ZMOD_DATA ZCONTROL_Z=230``` ```
 
-Se quiser ativar o controle do bocal nas primeiras camadas, adicione ``ZCONTROL_PAUSE`` por meio do fatiador na camada em que deseja usar a pausa em vez da operação de interrupção.
+Se quiser ativar o controle do bocal nas primeiras camadas, adicione ```ZCONTROL_PAUSE``` por meio do fatiador na camada em que deseja usar a pausa em vez da operação de interrupção.
 
 ---
 
@@ -248,11 +248,11 @@ Verifica a soma MD5 do arquivo e exclui o arquivo em caso de erro. 0 - não veri
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Não se esqueça de executar ```chmod +x zmod_preprocess-linux-amd64`''
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-amd64``
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Não se esqueça de executar ```chmod +x zmod-preprocess.py`` ``
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ``chmod +x zmod-preprocess.sh``.
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Não se esqueça de executar ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Não se esqueça de executar ```chmod +x zmod-preprocess.py``` ```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Lembre-se de executar ```chmod +x zmod-preprocess.sh```.
 
-2. No Orca, você precisa escrever. ``Process Profile`` -> ``Other`` -> ``Post Processing Scripts``.
+2. No Orca, você precisa escrever. ```Process Profile``` -> ```Other``` -> ```Post Processing Scripts```.
 
 Aqui estão as opções a serem adicionadas:
 
@@ -521,7 +521,7 @@ O erro também pode ocorrer:
   
   Execute a macro `MEM` e veja se há uma troca e qual é o tamanho dela.
   
-  Ative o SWAP se ele estiver desativado ``SAVE_ZMOD_DATA USE_SWAP=1``.
+  Ative o SWAP se ele estiver desativado ```SAVE_ZMOD_DATA USE_SWAP=1```.
 
 - Se estiver no FF5M/FF5MPro, faça um teste completo. Ou seja, calibração do PID, remoção do mapa da tabela e remoção do shaper ao mesmo tempo.
   

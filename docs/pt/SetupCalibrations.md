@@ -10,7 +10,7 @@ Se você já passou pelas calibrações iniciais:
 Então você já fez isso:
 
 - Um z-offset está configurado
-- Há um mapa de tabela ``MESH_DATA`` (obtido a 60 graus) - não é possível excluí-lo se você usar a tela nativa, pois ele é carregado sempre que você imprime
+- Há um mapa de tabela ```MESH_DATA``` (obtido a 60 graus) - não é possível excluí-lo se você usar a tela nativa, pois ele é carregado sempre que você imprime
 - Há uma calibração do PID da extrusora a 240 graus
 
 Mas essas configurações são bastante genéricas, não há muitas pessoas que imprimem a 240 graus de temperatura do bocal e 60 graus de temperatura da mesa.
@@ -41,8 +41,8 @@ Calibre para as condições exatas em que você está imprimindo:
     ```
     **O que isso significa:**
 
-    * * ``TEMPERATURE=255`` - a calibração é realizada para uma temperatura de 255°C. Defina a temperatura que você deseja.
-        * ``COOLER=80`` - o cooler sopra a 80% da potência.
+    * * ```TEMPERATURE=255``` - a calibração é realizada para uma temperatura de 255°C. Defina a temperatura que você deseja.
+        * ```COOLER=80``` - o cooler sopra a 80% da potência.
 
 - **Quando terminar:**
     **A impressora salvará as novas configurações sozinha.
@@ -57,7 +57,7 @@ A mesa da sua impressora, assim como a extrusora, precisa manter a temperatura c
 
 Recomendação para AD5X
 
-Abra o arquivo `printer.cfg` e defina a seção ``heater_bed`` como:
+Abra o arquivo `printer.cfg` e defina a seção ```heater_bed``` como:
 ```
 [heater_bed].
 max_power: 0.6
@@ -65,7 +65,7 @@ max_power: 0.6
 Isso permitirá que a mesa aqueça mais rapidamente e o PID se ajustará corretamente.
 Depois de alterar e salvar o parâmetro, você deve reiniciar a impressora.
 
-Ou você pode ativar o plug-in de recomendações e ele corrigirá esse arquivo sozinho: ````ENABLE_PLUGIN NAME=recommend``.
+Ou você pode ativar o plug-in de recomendações e ele corrigirá esse arquivo sozinho: ````ENABLE_PLUGIN NAME=recommend```.
 
 **Um ponto importante antes de começar!**
 A regra aqui é a mesma da extrusora: calibre para a temperatura que você planeja usar com mais frequência ao imprimir (por exemplo, 60 °C para PLA ou 110 °C para ABS).
@@ -84,7 +84,7 @@ A regra aqui é a mesma da extrusora: calibre para a temperatura que você plane
     ```
     **O que isso significa:**
 
-    * ``TEMPERATURE=80`` - a calibração é realizada para uma temperatura de mesa de 80°C. Defina a temperatura desejada.
+    * ```TEMPERATURE=80``` - a calibração é realizada para uma temperatura de mesa de 80°C. Defina a temperatura desejada.
 
 - Quando terminar:** ** **
     * As novas configurações serão salvas automaticamente.
@@ -240,7 +240,7 @@ SAVE_ZMOD_DATA USE_KAMP=1
 
 Personalizar o Orca:
 
-- ``Process Profile`` -> ``Other`` -> ``Output G-cod`` -> ``Model Exclusion`` para ativar a caixa de seleção
+- ```Process Profile``` -> ```Other``` -> ```Output G-cod``` -> ```Model Exclusion``` para ativar a caixa de seleção
 - `Process Profile` -> `Other` -> `Output G-cod` -> `Exclude models` para ativar a caixa de seleção
 
 <img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
@@ -261,7 +261,7 @@ M104 S[nozzle_temperature_initial_layer] ; Definir a temperatura do bocal
 ```
 
 **Importante para trabalhar na tela nativa:** Para iniciar a remoção do mapa da tabela na tela nativa da impressora, é necessário acessar o menu da tela:
-``Configurações`` → ``Ícone Wifi`` → ``Modo de rede`` → ative o controle deslizante ``Somente redes locais``.
+```Configurações``` → ```Ícone Wifi``` → ```Modo de rede``` → ative o controle deslizante ```Somente redes locais```.
 
 **3. Limpeza inteligente antes da impressão**
 
@@ -292,7 +292,7 @@ Simplificando, é a **distância exata entre a ponta do bico e a mesa** no momen
 Em nossa impressora, o **Z-Offset é relevante SOMENTE durante a impressão**. Os valores que você vê na tela ou na interface ANTES ou DEPOIS da impressão são apenas para referência e não refletem a imagem real.
 
 **Segunda regra importante
-**O deslocamento Z ao trabalhar com uma tela nativa e ao trabalhar no modo de tela não nativa não é o mesmo** e cada um tem sua própria vida e é configurado separadamente. Use ```LOAD_ZOFFSET_NATIVE`` para copiar o deslocamento Z da tela nativa para o modo de tela não nativa.
+**O deslocamento Z ao trabalhar com uma tela nativa e ao trabalhar no modo de tela não nativa não é o mesmo** e cada um tem sua própria vida e é configurado separadamente. Use ```LOAD_ZOFFSET_NATIVE``` para copiar o deslocamento Z da tela nativa para o modo de tela não nativa.
 
 #### Ajuste do deslocamento Z da tela nativa da impressora
 
@@ -336,7 +336,7 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-3. se desejar transferir o deslocamento z da tela nativa para o modo de tela não nativa, chame a macro ``LOAD_ZOFFSET_NATIVE``, que lerá o valor do deslocamento z da tela nativa e o aplicará ao modo de tela não nativa.
+3. se desejar transferir o deslocamento z da tela nativa para o modo de tela não nativa, chame a macro ```LOAD_ZOFFSET_NATIVE```, que lerá o valor do deslocamento z da tela nativa e o aplicará ao modo de tela não nativa.
 
 **Principais benefícios
 
@@ -347,15 +347,15 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
 * **Ajuste o Z-Offset somente durante a impressão da primeira camada.
 * Ao trabalhar com a tela nativa, ajuste o Z-Offset na tela nativa.
-* Ao trabalhar no modo de tela não nativa**, primeiro execute o comando ``SAVE_ZMOD_DATA LOAD_ZOFFSET=1``.
+* Ao trabalhar no modo de tela não nativa**, primeiro execute o comando ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
 * O sistema salvará tudo sozinho. Você não precisa se preocupar com nada.
 
 !!! perigo
     Você não pode usar `Z_OFFSET_APPLY_ENDSTOP` nessa impressora.
     
-    E você não pode alterar ```[probe] z_offset: ``` em ``printer.cfg`` ou ``printer.base.cfg``.
+    E você não pode alterar ```[probe] z_offset: ``` em ```printer.cfg``` ou ```printer.base.cfg```.
     
-    Porque a tela nativa e a macro ``START_PRINT`` carregam o offset no início da impressão.
+    Porque a tela nativa e a macro ```START_PRINT``` carregam o offset no início da impressão.
 
 ---
 
@@ -378,7 +378,7 @@ Os cálculos de gráficos e shapers no Klipper usam o valor padrão de `square_c
     SALVAR_ZMOD_DATA FIX_SCV=1
     ```
 
-2.  **Melhorar a qualidade de impressão (recomendado):** Adicione a seguinte linha ao arquivo ``mod_data/user.cfg``:
+2.  **Melhorar a qualidade de impressão (recomendado):** Adicione a seguinte linha ao arquivo ```mod_data/user.cfg```:
     ```ini
     [printer].
     square_corner_velocity: 9
@@ -386,7 +386,7 @@ Os cálculos de gráficos e shapers no Klipper usam o valor padrão de `square_c
 
     * O que isso faz? A impressora ficará um pouco mais lenta em cantos agudos. Isso aumentará um pouco o tempo de impressão, mas reduzirá significativamente as vibrações e melhorará a nitidez dos cantos.
 
-Como alternativa, você pode manter a simplicidade. Digite ```ENABLE_PLUGIN name=recommend`` no console - esse comando ativará o plug-in de recomendação, que já tem ``FIX_SCV`` ativado e `square_corner_velocity: 9`` prescrito.
+Como alternativa, você pode manter a simplicidade. Digite ```ENABLE_PLUGIN name=recommend``` no console - esse comando ativará o plug-in de recomendação, que já tem ```FIX_SCV``` ativado e `square_corner_velocity: 9``` prescrito.
 
 Não se esqueça de reiniciar a impressora!
 
@@ -441,7 +441,7 @@ Se estiver satisfeito com tudo, basta clicar no botão **`SAVE CONFIG & RESTART`
 
 No exemplo acima, achei o shaper `mzv` melhor, pois ele remove completamente as vibrações. Para usá-lo, é necessário adicionar manualmente as configurações ao arquivo `printer.cfg` (na seção `[input_shaper]`):
 
-``ini
+```ini
 [input_shaper].
 shaper_type_y = mzv ; Tipo de shaper selecionado para o eixo Y
 shaper_freq_y = 54.2 ; Frequência ressonante para o eixo Y
@@ -450,7 +450,7 @@ shaper_freq_y = 54.2 ; Frequência ressonante para o eixo Y
 **E não se esqueça da aceleração!
 Como o shaper selecionado `mzv` permite usar uma aceleração não superior a 8700 mm/s², esse valor deve ser gravado no arquivo `mod_data/user.cfg`:
 
-``ini
+```ini
 [printer].
 max_accel: 8700 ; Aceleração máxima para os eixos X e Y
 ```
