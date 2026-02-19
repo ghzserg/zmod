@@ -1,4 +1,4 @@
-### [Kalibrierung](#kalibrieren-drucker-für-anfänger)
+# [Kalibrierung](#drucker-kalibrierung-für-einsteiger)
 
 ### Drucker-Kalibrierung für Einsteiger
 
