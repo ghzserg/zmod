@@ -26,14 +26,14 @@ Stellen Sie sich einen Extruder wie einen Backofen vor. Wenn die Temperatur dari
 Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 
 * **Temperatur:** Die Temperatur, die Sie am häufigsten für Ihren Kunststoff verwenden (z.B. 210°C für PLA oder 255°C für PETG).
-* **Kühlung:** Der Kühler sollte mit der gleichen Leistung wie beim normalen Druck arbeiten.
+* **Kühlung:** Die Kühlung sollte mit der gleichen Leistung wie beim normalen Druck arbeiten.
 
 **Wie wird die Kalibrierung durchgeführt?**
 
-- Verwenden Sie den speziellen Befehl (Makro) [PID_TUNE_EXTRUDER](/de/Kalibrierungen/#pid_tune_extruder)
+- Verwenden Sie den speziellen Befehl (Makro) [PID_TUNE_EXTRUDER](/de/Calibrations/#pid_tune_extruder)
 
 - Sie können es manuell in der Konsole eingeben oder auf die Schaltfläche in der Schnittstelle klicken, wenn Sie sie haben:
-    <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
+  <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
 
 - Der Befehl selbst sieht wie folgt aus (dies ist ein Beispiel!):
     ```gcode
@@ -45,8 +45,8 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
         * ```COOLER=80``` - die Kühlung erfolgt mit 80% Leistung.
 
 - **Wenn Sie fertig sind:**
-    **Der Drucker speichert die neuen Einstellungen selbständig.**
-        * Starten Sie den Drucker neu, um die Daten im System zu aktualisieren und ein Einfrieren zu vermeiden.
+  *  **Der Drucker speichert die neuen Einstellungen selbständig.**
+        * **Starten Sie den Drucker unbedingt neu!** Dies ist erforderlich, um die Systemdaten zu aktualisieren und Abstürze zu verhindern.
 
 ---
 
