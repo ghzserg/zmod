@@ -9,7 +9,7 @@
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) für FF5m
     - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) für FF5m**Pro** Version
-    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) для AD5X
+    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz.gz) für AD5X
 
 4. Schalten Sie den Drucker aus
 5. Stecken Sie den USB-Stick in den Drucker
@@ -26,7 +26,7 @@
 
 1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zur-installation-von-mod-zuruecksetzen)** [Vorsicht AD5X](/de/Setup/#Vorsicht-ad5x)
 2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
-3. Legen Sie [file](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.
+3. Legen Sie die [Datei](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
        - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
@@ -41,7 +41,7 @@
    
    <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
    
-   Auf dem AD5X kann die Installation bis zu 40 Minuten dauern.
+   Auf dem AD5X kann die Installation bis zu **40 Minuten** dauern.
 
 8. Entfernen Sie den USB-Stick
 9. Schalten Sie den Drucker aus
@@ -50,25 +50,25 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) und [activate mod](/de/R//#ad5x-enable-zmodtgz) schreiben.
+    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) und [activate mod](de/Native_FW/#ad5x-enable-zmodtgz) installieren.
      
-12. Übersetzen Sie die Mod in Ihre Sprache.
+12. Übersetzen Sie den Mod in Ihrer Sprache.
     
     <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
     
-    Oder geben Sie in der Konsole ````LANG LANG=ru``` ein.
+    Oder geben Sie in der Konsole ````LANG LANG=ru``` für die passende Sprache ein.
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
 
-13. Konfigurieren Sie die Mod
+13. Konfigurieren Sie den Mod
     
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
     
-    Dies zeigt die Parameter, die am Anfang und am Ende verwendet werden, sowie die globalen Prameter. Es wird empfohlen, die Einstellungen nur zu lesen, sie aber nicht zu ändern. Die Werte der einzelnen Einstellungen können [hier](/de/Global/) eingesehen werden.
+    Dies zeigt die Parameter, die am Anfang und am Ende verwendet werden, sowie die globalen Parameter. Es wird empfohlen, die Einstellungen nur zu lesen, sie aber nicht zu ändern. Die Werte der einzelnen Einstellungen können [hier](/de/Global/) eingesehen werden.
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
 
-    Sie müssen zum letzten Bildschirm gelangen und auf "OK" oder "Neustart" drücken. Wenn du das nicht tust, wird dieses Fenster bei jedem Start erscheinen
+    Sie müssen zum letzten Bildschirm gelangen und auf "OK" oder "Neustart" drücken. Wenn Sie das nicht tun, wird dieses Fenster bei jedem Start erscheinen
 
     <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
 
@@ -84,7 +84,7 @@
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
-17. Aktivieren Sie [Empfehlungs-Plugin](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
+17. Aktivieren Sie das [Empfehlungs-Plugin](https://github.com/ghzserg/recommend/blob/main/Readme.md)
     
     <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
 
@@ -92,7 +92,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Orca anpassen](/de/Recomendations/#send-files-to-print-octoklipper)
+18. [Orca-Slicer anpassen](/de/Recomendations/#send-files-to-print-octoklipper)
     Der gesamte Startcode muss durch diesen ersetzt werden:
 
     ```
@@ -125,7 +125,7 @@
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
-19. [MD5-Kontrolle aktivieren](/de/Recomendations/#aktivieren-md5-kontrolle-md5)
+19. [MD5-Kontrolle aktivieren](de/Recomendations/#aktivieren-sie-die-md5-kontrolle))
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
@@ -138,12 +138,12 @@
 
 Nach der Installation der Native Firmware kann es vorkommen, dass der Druckkopf nicht richtig am Filamentempfänger geparkt ist (Unterklemmen des Empfängervorhangs, Herausdrücken des Filaments auf dem Tisch usw.).
 
-[Über das Engineering-Menü der nativen Firmware](/de/AD5X/#setup-basket-on-native-firmware-ad5x)
+[Über das Engineering-Menü der nativen Firmware][(/de/AD5X/#korb-setup-auf-nativer-ad5x-firmware)
 
 Wenn Sie auf diese Situation stoßen, müssen Sie das Parken mit Hilfe des folgenden Algorithmus kalibrieren:
 
 1. Laden Sie das Archiv [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) herunter und entpacken Sie es in das Stammverzeichnis des Flash-Laufwerks
-2. Stecken Sie das Flash-Laufwerk in den ausgeschalteten Drucker und schalten Sie ihn ein.
+2. Stecken Sie den USB-Stick in den ausgeschalteten Drucker und schalten Sie ihn ein.
 Die Kalibrierungsschnittstelle wird auf dem Bildschirm des Druckers angezeigt. Sie müssen auf Reset drücken.
 4. Verwenden Sie die Steuerpfeile, um den Druckkopf so am Empfänger zu parken, dass der Druckkopf genügend Druck auf den Verschlusshebel ausübt, die Düse hinter dem beweglichen Verschluss liegt und der Verschluss selbst mit der Vorderseite des Empfängers bündig ist.
 5. Sichern Sie das Kalibrierungsergebnis mit der Set-Taste.
@@ -159,7 +159,7 @@ Wenn der Mod sagt `Update zMOD vom Flash-Laufwerk`, müssen Sie zMod vom Flash-L
 
 **Der einfachste Weg, zMod von einem USB-Stick zu aktualisieren, ist die Verwendung des Makros [ZFLASH](/de/Zmod/#zflash)**.
 
-In diesem Fall müssen Sie den Stick in den Drucker stecken, den Drucker neu starten und das Makro "ZFLASH" aufrufen.
+In diesem Fall müssen Sie den USB-Stick in den Drucker stecken, den Drucker neu starten und das Makro "ZFLASH" aufrufen.
 
 - Das Makro sucht nach der letzten aktuellen Version
 - Laden Sie die neueste Version für Ihr Druckermodell herunter
@@ -190,8 +190,8 @@ Update über USB-Stick:
 2. Legen Sie [file](https://github.com/ghzserg/zmod/releases/) in den Stammordner des USB-Sticks.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
-       - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-       - für [AD5X](/de/AD5X/): AD5X-**zmod**-\*.tgz
+    - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
+    - für AD5X: AD5X-**zmod**-\*.tgz
 
 3. Schalten Sie den Drucker aus
 4. Stecken Sie den USB-Stick in den Drucker
@@ -221,7 +221,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 - [SKIP_ZMOD](/de/Zmod/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten
 - [REMOVE_ZMOD](/de/Zmod/#remove_zmod) - Makro zum Entfernen von Mods
 
-Es wird empfohlen, **die Mod über das Makro `REMOVE_ZMOD`** zu entfernen, die Entfernung über ein Flash-Laufwerk nur zu verwenden, wenn es keine Möglichkeit gibt, das Makro auszuführen.
+Es wird empfohlen, **den Mod über das Makro `REMOVE_ZMOD`** zu entfernen, die Entfernung über ein Flash-Laufwerk nur zu verwenden, wenn es keine Möglichkeit gibt, das Makro auszuführen.
 
 Achtung!
 
@@ -233,7 +233,7 @@ Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1```.
 Deinstallation des Mods über ein Flash-Laufwerk:
 
 - Formatiere das Flash-Laufwerk auf FAT/FAT16/FAT32
-- Lege die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) auf diesem Flash-Laufwerk ab
+- Kopiere die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) auf einen USB-Stick
 - Schalten Sie den Drucker aus
 - Stecken Sie den USB-Stick in den Drucker
 - Schalten Sie den Drucker ein
@@ -268,7 +268,7 @@ Für diejenigen, die einen Drucker haben, der beim Einschalten im Bildschirmscho
 Versuchen Sie, die Firmware über eine vollständige Firmware-Installation wiederherzustellen:
 
 - [FF5M](/de/Native_FW/#Vollständige-Firmware-auf-ff5m-installieren)
-- AD5X](/de/Native_FW/#Vollständige-Firmware-auf-Ad5x-installieren)
+- [AD5X](/de/Native_FW/#Vollständige-Firmware-auf-Ad5x-installieren)
 
 Wiederherstellungs-Algorithmus:
 
