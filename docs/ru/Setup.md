@@ -16,7 +16,8 @@
 6. Включить принтер
 7. Дождаться установки родной прошивки
 8. Настроить WiFi или Lan *новый бобер*
-9. Получить последние обновления для принтера или установить прошивку 1.1.7 для AD5X, или 3.2.3 для [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) если вы не хотите чтобы принтер [измерял стол перед каждой печатью](https://wiki.zmod.link/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру)
+9. Провести первоначальные калибровки
+10. Получить последние обновления для принтера или установить прошивку 1.1.7 для AD5X, или 3.2.3 для [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) если вы не хотите чтобы принтер [измерял стол перед каждой печатью](https://wiki.zmod.link/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру)
 
 ---
 
