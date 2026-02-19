@@ -27,67 +27,68 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
 * **ZMOD:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
 
-    * **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
-    * **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
-    * **Zugang zum Drucker-Webinterface über Internet** Cloud-Service [zmod.link](https://zmod.link)
-    * **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+    - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
+    - **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
+    - **Zugang zum Drucker-Webinterface über Internet** Cloud-Service [zmod.link](https://zmod.link)
+    - **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 #### **2. Erweiterte Kalibrierungs- und Nivellierungssysteme**
 
 * **Native Firmware:** Einfache automatische Druckbettnivellierung (ABL).
 * **ZMOD:**
 
-    * **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Bedunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
-    * **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
-    * **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Körperschwingungen, so dass Sie **schneller und ohne "Ringe "** an Modellen drucken können.
-    * **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
-    * **Tischschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
+    - **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Bedunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
+    - **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
+    - **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Körperschwingungen, so dass Sie **schneller und ohne "Ringe "** an Modellen drucken können.
+    - **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
+    - **Tischschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
 
 #### **3. Intelligente Funktionen für Zuverlässigkeit**
 
 **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
 * **ZMOD:**
 
-    * **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
-    * **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
-    * **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch ZMOD-Dateien auf Beschädigungen..
-    * **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
+    - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
+    - **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
+    - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch ZMOD-Dateien auf Beschädigungen..
+    - **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
 
 #### **4. Flexible Handhabung von Filamenten (speziell für AD5X)**
 
 **Native Firmware:** Spulensteuerung über Standardmenü.
 * **ZMOD (für AD5X):**
 
-    * **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
-    * **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
-    * **Feinabfall-Einstellung:** Sie können die Menge an Kunststoff, die der Drucker beim Farbwechsel ausspült, reduzieren und so Material sparen.
+    - **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
+    - **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
+    - **Feinabfall-Einstellung:** Sie können die Menge an Kunststoff, die der Drucker beim Farbwechsel ausspült, reduzieren und so Material sparen.
 
 #### **5. Ökosystem und Integration**
 
 **Native Firmware:** Geschlossenes System.
 * **ZMOD:**
 
-    * **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
-    * **Plugin-Unterstützung:** Installieren Sie zusätzliche Plugins (wie `bambufy` für eine bessere Kompatibilität mit Bambu Studio).
-    * **Alternative Kamera:** Passen Sie die Auflösung und die FPS an und reduzieren Sie die Speicherbelastung für stabiles Streaming.
-    * **Musikwiedergabe:** Spielt Musik, wenn der Druck beginnt oder endet
+    - **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
+    - **Plugin-Unterstützung:** Installieren Sie zusätzliche Plugins (wie `bambufy` für eine bessere Kompatibilität mit Bambu Studio).
+    - **Alternative Kamera:** Passen Sie die Auflösung und die FPS an und reduzieren Sie die Speicherbelastung für stabiles Streaming.
+    - **Musikwiedergabe:** Spielt Musik, wenn der Druck beginnt oder endet
 
 #### **6. Optimierung und Kontrolle**
 
 **Native Firmware:** Eingeschränkte Einstellungen.
 * **ZMOD:**
 
-    * **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
-    * **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
-    * **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
-    * **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicing ist nicht erforderlich..
-    * **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker ist jederzeit möglich
+    - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
+    - **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
+    - **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
+    - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicing ist nicht erforderlich..
+    - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker ist jederzeit möglich
 
-#### **6. Klipper 13**
+#### **7. Klipper 13**
 
 **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
 * **ZMOD:**
-    * Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version
+  
+    - Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version
 
 ---
 
