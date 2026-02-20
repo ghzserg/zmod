@@ -265,12 +265,12 @@ For these settings to work, you need to **disable the printer's native display**
 1.  **`temp`** — Nozzle temperature for filament change. **Default value depends on material type.**
 2.  **`filament_drop_length` (Purge Length)**
 
-    *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color.
+    *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
         *   **Tip:** Increase this value if colors mix during spool changes. Decrease it to reduce waste.
 
 3.  **`filament_drop_length_add` (Additional Purge)**
 
-    *   **In simple terms:** Extra purge length when switching **material types** (e.g., PLA to PETG), not just colors.
+    *   **In simple terms:** Extra purge length when switching **material types** (e.g., PLA to PETG), not just colors. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
         *   **Why it’s needed:** Different materials don’t mix well, so deeper nozzle cleaning is required.
 
 4.  **`nozzle_cleaning_length`** — The length (in mm) of filament pulled out of the extruder when cleaning the nozzle when the spool is no longer in use. **Default: 60 mm.**

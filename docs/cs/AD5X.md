@@ -265,12 +265,12 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 1.  **`temp`** — Teplota trysky pro výměnu filamentu. **Výchozí hodnota závisí na typu materiálu.**
 2.  **`filament_drop_length` (Délka čištění)**
 
-    *   **Jednoduše řečeno:** Kolik milimetrů filamentu tiskárna vytlačí do odpadní nádobky, aby **vyčistila trysku** od předchozí barvy.
+    *   **Jednoduše řečeno:** Kolik milimetrů filamentu tiskárna vytlačí do odpadní nádobky, aby **vyčistila trysku** od předchozí barvy. Toto platí při zavádění barev mimo tisk nebo před tiskem, nebo při změně barev, když je USE_TRASH_ON_PRINT nastaveno na 1.
     *   **Tip:** Zvyšte tuto hodnotu, pokud se barvy míchají při výměně cívek. Snižte ji, abyste snížili odpad.
 
 3.  **`filament_drop_length_add` (Dodatečné čištění)**
 
-    *   **Jednoduše řečeno:** Extra délka čištění při přechodu mezi **typy materiálů** (např. z PLA na PETG), nejen barvami.
+    *   **Jednoduše řečeno:** Extra délka čištění při přechodu mezi **typy materiálů** (např. z PLA na PETG), nejen barvami. Toto platí při zavádění barev mimo tisk nebo před tiskem, nebo při změně barev, když je USE_TRASH_ON_PRINT nastaveno na 1.
     *   **Proč je to potřeba:** Různé materiály se špatně mísí, proto je nutné hlubší čištění trysky.
 
 4.  **`nozzle_cleaning_length`** — Délka (v mm) filamentu vytaženého z extruderu při čištění trysky, když se cívka již nepoužívá. **Výchozí: 60 mm.**

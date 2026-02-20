@@ -258,12 +258,12 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 1.  ** `temp`** - A temperatura à qual o bocal de troca de filamento se aquece. **O valor padrão depende do tipo de material.
 2.  ** `filament_drop_length` - A temperatura à qual o bocal é aquecido para a troca de filamentos.
 
-    * **Simples:** Quantos milímetros de plástico a impressora espremerá na lixeira para **limpar o bocal** da cor antiga.
+    * **Simples:** Quantos milímetros de plástico a impressora espremerá na lixeira para **limpar o bocal** da cor antiga. Isso se aplica ao carregar cores fora da impressão ou antes de uma impressão, ou ao trocar de cor com USE_TRASH_ON_PRINT definido como 1.
     * **Dica:** Se as cores forem misturadas quando você trocar os carretéis, aumente esse número. Se você quiser menos desperdício, diminua-o.
 
 3.  **`filament_drop_length_add`** (Reinicialização opcional)
 
-    * Simplificando: quanto plástico a mais a impressora jogará na lixeira se você mudar não apenas a cor, mas o **tipo de material** (por exemplo, de PLA para PETG).
+    * Simplificando: quanto plástico a mais a impressora jogará na lixeira se você mudar não apenas a cor, mas o **tipo de material** (por exemplo, de PLA para PETG). Isso se aplica ao carregar cores fora da impressão ou antes de uma impressão, ou ao trocar de cor com USE_TRASH_ON_PRINT definido como 1.
     * Por que é necessário: Materiais diferentes não se misturam bem, portanto, você precisa limpar melhor o bocal.
 
 4.  **`nozzle_cleaning_length`** - O comprimento (em mm) que o filamento é puxado para fora da extrusora ao limpar o bocal quando o carretel não está mais em uso. **Padrão: 60 mm.**

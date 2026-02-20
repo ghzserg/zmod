@@ -258,12 +258,12 @@ Damit diese Einstellungen funktionieren, müssen Sie den **eigenen Bildschirm de
 1.  ** `temp`** - Die Temperatur, auf die sich die Filament-Wechsel-Düse aufheizt. **Der Standardwert hängt von der Materialart ab.
 2.  ** `filament_drop_length` - Die Temperatur, auf die die Düse für den Fadenwechsel aufgeheizt wird.
 
-    * **Einfach:** Wie viele Millimeter Plastik der Drucker in den Abfallbehälter drückt, um die Düse von alter Farbe zu **reinigen**.
+    * **Einfach:** Wie viele Millimeter Plastik der Drucker in den Abfallbehälter drückt, um die Düse von alter Farbe zu **reinigen**. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor einem Druck, oder beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
         ** **Tipp:** Wenn die Farben beim Wechseln der Spulen gemischt werden, erhöhen Sie diese Zahl. Wenn Sie weniger Abfall wünschen, verringern Sie diesen Wert.
 
 3.  **`Filament_drop_length_add` (Optional zurücksetzen)**
 
-    * **Einfach ausgedrückt:** Wie viel **mehr** Plastik der Drucker in den Müll wirft, wenn Sie nicht nur die Farbe, sondern auch den **Materialtyp** ändern (z. B. von PLA zu PETG).
+    * **Einfach ausgedrückt:** Wie viel **mehr** Plastik der Drucker in den Müll wirft, wenn Sie nicht nur die Farbe, sondern auch den **Materialtyp** ändern (z. B. von PLA zu PETG). Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor einem Druck, oder beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
         **Warum wird es benötigt:** Verschiedene Materialien lassen sich nicht gut mischen, daher muss die Düse besser gereinigt werden.
 
 4.  **`nozzle_cleaning_length`** - Die Länge (in mm), die das Filament beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr in Gebrauch ist. **Voreinstellung: 60 mm.
