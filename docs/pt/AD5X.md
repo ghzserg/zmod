@@ -294,6 +294,48 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 
 **Conclusão principal:** Se você quiser menos desperdício, comece reduzindo os números **`filament_drop_length`** e **`filament_drop_length_add`** do seu plástico. Não se esqueça de salvar o arquivo após as alterações!
 
+---
+
+#### **Purga controlada pelo fatiador**
+
+É possível fazer com que o fatiador controle a purga, usando outras configurações de USE_TRASH_ON_PRINT em vez do valor padrão (1).
+
+O repositório zmod_preprocess contém perfis do OrcaSlicer para uso com esses modos. Ao usar esses perfis, você pode alternar entre o modo nopoop e a purga controlada pelo fatiador.
+
+##### Modo Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
+
+Neste modo, nenhuma purga é realizada pela impressora durante as trocas de cor. A impressora cortará o filamento, retornará à torre de limpeza (prime tower) para descarregar e carregar o filamento e continuará imediatamente a partir daí.
+
+Na primeira camada, a impressora irá se deslocar até a rampa de descarte durante a troca de filamento, mas retornará à torre de limpeza em seguida sem produzir qualquer resíduo (poop).
+
+Para purgar adequadamente o filamento antigo neste modo, a abordagem recomendada é habilitar "Purge into prime tower" (Purgar na torre de limpeza) nas configurações do OrcaSlicer. Isso é encontrado nas configurações da impressora, na aba "Multimaterial". Você pode então usar a configuração "Flush Volumes" para ajustar as quantidades de purga. Se desejar adicionar uma quantidade fixa aos volumes de descarga calculados automaticamente, pode fazê-lo definindo o "Nozzle Volume" (Volume do bico) na aba "General" (Geral) das configurações da impressora.
+
+É normal que sua torre de limpeza seja consideravelmente maior que o normal ao usar esta opção, especialmente ao trabalhar com alturas de camada finas.
+
+Além disso, você pode usar opções como "Purge to infill" (Purgar no preenchimento), "Purge to this object" (Purgar neste objeto), etc., ao usar este modo, para reduzir a quantidade de resíduos purgados na torre de limpeza.
+
+##### Modo Purga Controlada pelo Fatiador (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+
+Neste modo, nenhuma purga é realizada pela impressora por conta própria durante as trocas de cor. A impressora cortará o filamento, se deslocará até a rampa de descarte e devolverá o controle ao fatiador.
+
+Este modo requer suporte adequado do perfil da impressora no fatiador; em particular, é necessário um gcode de troca de filamento que gerencie a purga e o retorno à torre de limpeza posteriormente. NÃO use este modo com nenhum arquivo gcode que não tenha sido fatiado especificamente para ele.
+
+Opções como "Purge to infill" não podem ser usadas neste modo. Este é um bug no OrcaSlicer e não pode ser corrigido pelo zMod.
+
+##### Perfis de impressora
+
+Perfis de impressora configurados para purga controlada pelo fatiador estão disponíveis no repositório zmod_preprocess. Esses perfis são próximos aos perfis padrão da AD5X, exceto por:
+- Todo o gcode personalizado do zMod adicionado, incluindo o gcode de troca de filamento apropriado para USE_TRASH_ON_PRINT=2
+- "Purge in prime tower" habilitado
+- Define automaticamente a configuração correta de USE_TRASH_ON_PRINT no início da impressão
+- Tipo de Z-Hop definido como Normal
+- Volume do bico definido como 144
+- Tempo de descarga do filamento definido para estimativas mais precisas (com base nas configurações padrão do filament.json)
+
+Ao usar esses perfis, você pode alternar entre o Modo Nopoop (padrão) e o Modo Purga Controlada pelo Fatiador simplesmente ligando ou desligando a opção "Purge in prime tower" nas configurações da impressora.
+
+**Se você realizar uma impressão a partir desses perfis no Modo Purga Controlada pelo Fatiador, certifique-se de alterar sua configuração de USE_TRASH_ON_PRINT de volta para 0 ou 1 antes de imprimir qualquer gcode multicolorido que não tenha sido fatiado com esses perfis.**
+
 ## **7. Adicione seus tipos de filamentos AD5X**
 
 Para que essas configurações funcionem, é necessário **desabilitar a tela nativa da impressora** usando a macro `DISPLAY_OFF`.
