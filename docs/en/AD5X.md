@@ -156,6 +156,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
 
+- 0 - No purge into the trash will occur. The print head will still travel to the trash chute during color changes on the first layer, to reduce blobs. If this is happening on every layer, check your start and layer change gcode!
+- 1 - Purge will occur into the trash chute during color changes. Two purges of length equal to `filament_drop_length` in filament.json (plus `filament_drop_length_add` if the materials are different) will occur on each color change.
+- 2 - After inserting the new color, the print head will travel to the trash chute then return control to the slicer from there. This should only be used together with a slicer profile designed for this mode.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```

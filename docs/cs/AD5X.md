@@ -156,6 +156,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Chcete-li zakázat vypouštění filamentu do koše při tisku, použijte parametr [USE_TRASH_ON_PRINT](Global.md#use_trash_on_print).
 
+- 0 - K čištění do odpadu nedojde. Tisková hlava přesto při změnách barvy v první vrstvě přejede k odpadnímu žlabu, aby se omezil výskyt shluků plastu. Pokud k tomu dochází v každé vrstvě, zkontrolujte svůj počáteční G-kód a G-kód pro změnu vrstvy!
+- 1 - Během změn barev dojde k vyčištění do odpadního žlabu. Při každé změně barvy proběhnou dvě čištění o délce rovné `filament_drop_length` ve filament.json (plus `filament_drop_length_add`, pokud jsou materiály odlišné).
+- 2 - Po zavedení nové barvy tisková hlava přejede k odpadnímu žlabu a odtud vrátí řízení sliceru. Toto by mělo být používáno pouze společně s profilem sliceru navrženým pro tento režim.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```

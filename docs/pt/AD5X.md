@@ -155,6 +155,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Para desativar o descarte de filamentos na lixeira durante a impressão, use o parâmetro [USE_TRASH_ON_PRINT](/pt/Global/#use_trash_on_print).
 
+- 0 - Não ocorrerá purga no descarte. O cabeçote de impressão ainda se deslocará até a rampa de descarte durante as trocas de cor na primeira camada para reduzir falhas (blobs). Se isso estiver acontecendo em todas as camadas, verifique seu gcode de início e de troca de camada!
+- 1 - A purga ocorrerá na rampa de descarte durante as trocas de cor. Duas purgas com comprimento igual a `filament_drop_length` no arquivo filament.json (mais `filament_drop_length_add` se os materiais forem diferentes) ocorrerão em cada troca de cor.
+- 2 - Após inserir a nova cor, o cabeçote de impressão se deslocará até a rampa de descarte e, a partir daí, devolverá o controle ao fatiador. Isso só deve ser usado em conjunto com um perfil de fatiador projetado para este modo.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```

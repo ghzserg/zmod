@@ -155,6 +155,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Um das Abladen von Filament in den Papierkorb beim Drucken zu deaktivieren, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
 
+- 0 - Es findet kein Auswurf in den Abwurfschacht statt. Der Druckkopf fährt bei Farbwechseln in der ersten Schicht dennoch zum Abwurfschacht, um Blobs zu reduzieren. Falls dies in jeder Schicht passiert, überprüfen Sie bitte Ihren Start- und Schichtwechsel-G-Code!
+- 1 - Bei Farbwechseln erfolgt ein Auswurf in den Abwurfschacht. Bei jedem Farbwechsel werden zwei Auswürfe mit der Länge `filament_drop_length` aus der filament.json (plus `filament_drop_length_add`, falls die Materialien unterschiedlich sind) durchgeführt.
+- 2 - Nach dem Einziehen der neuen Farbe fährt der Druckkopf zum Abwurfschacht und übergibt von dort aus die Steuerung wieder an den Slicer. Dies sollte nur zusammen mit einem speziell für diesen Modus entwickelten Slicer-Profil verwendet werden.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
