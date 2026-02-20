@@ -33,6 +33,7 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 - Verwenden Sie den speziellen Befehl (Makro) [PID_TUNE_EXTRUDER](/de/Calibrations/#pid_tune_extruder)
 
 - Sie können es manuell in der Konsole eingeben oder auf die Schaltfläche in der Schnittstelle klicken, wenn Sie sie haben:
+
   <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
 
 - Der Befehl selbst sieht wie folgt aus (dies ist ein Beispiel!):
@@ -53,7 +54,8 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 ### Tabelle PID-Einstellung
 
 **Warum brauche ich das?**
-Der Tisch Ihres Druckers muss, wie der Extruder, die Temperatur genau halten. Wenn er schwankt, kann es zu Problemen mit dem Anhaften der ersten Schicht oder sogar zum Verziehen (Ablösen) des Teils an den Kanten kommen. Durch die PID-Kalibrierung Ihres Tisches lernen Sie, dass er schnell und konstant die richtige Temperatur erreicht, ohne zu überhitzen.
+
+Das Heizbett Ihres Druckers muss, wie der Extruder und die Temperatur genau halten. Wenn er schwankt, kann es zu Problemen mit dem Anhaften der ersten Schicht oder sogar zum Verziehen (Ablösen) des Teils an den Kanten kommen. Durch die PID-Kalibrierung Ihres Heizbett lernen Sie, dass er schnell und konstant die richtige Temperatur erreicht, ohne zu überhitzen.
 
 Empfehlung für AD5X
 
@@ -62,17 +64,17 @@ Empfehlung für AD5X
 [heater_bed].
 max_power: 0.6
 ```
-Dadurch heizt sich der Tisch schneller auf und der PID wird korrekt eingestellt.
-Nachdem Sie den Parameter geändert und gespeichert haben, müssen Sie den Drucker neu starten.
+Dadurch heizt sich das Heizbett schneller auf und der PID wird korrekt eingestellt.
+Nachdem Sie den Parameter geändert und gespeichert haben, **müssen Sie den Drucker neu starten.**
 
 Sie können auch das Empfehlungs-Plugin aktivieren, das diese Datei selbst korrigiert: ````ENABLE_PLUGIN NAME=Empfehlung```.
 
 **Ein wichtiger Punkt, bevor Sie beginnen!**
-Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatur, die Sie beim Drucken am häufigsten verwenden werden (z.B. 60°C für PLA oder 110°C für ABS).
+Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie die Temperatur, die Sie beim Drucken am häufigsten verwenden werden (z.B. 60°C für PLA oder 110°C für ABS).
 
 **Wie kalibriert man?**
 
-- Verwenden Sie das Makro [PID_TUNE_BED](/de/Kalibrierungen/#pid_tune_bed)
+- Verwenden Sie das Makro [PID_TUNE_BED](/de/Calibrations/#pid_tune_bed)
 
 - Es kann auch in die Konsole eingegeben oder über eine Schaltfläche in der Benutzeroberfläche aufgerufen werden (oft neben der Schaltfläche zum Kalibrieren des Extruders):
 
@@ -84,30 +86,31 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie auf die Temperatu
     ```
     **Was das bedeutet:**
 
-    * ```TEMPERATURE=80``` - die Kalibrierung wird für eine Tischtemperatur von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.
+    * ```TEMPERATURE=80``` - die Kalibrierung wird für das Heizbett von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.
 
-- **Wenn Sie fertig sind:** **
+- **Wenn Sie fertig sind:**
     * Die neuen Einstellungen werden automatisch gespeichert.
-        * Vergessen Sie nicht, den Drucker neu zu starten, damit die neuen Einstellungen vollständig übernommen werden.
+        * **Vergessen Sie nicht, den Drucker neu zu starten**, damit die neuen Einstellungen vollständig übernommen werden.
 
 ---
 
-### Kalibrierung der Tischschrauben (BED_LEVEL_SCREWS_TUNE)
+### Kalibrierung der Heizbett (BED_LEVEL_SCREWS_TUNE)
 
-**Warum dies tun?**
-Ihr Tisch wird von mehreren Schrauben zusammengehalten. Wenn diese nicht gleichmäßig verschraubt sind, wird der Tisch falsch ausgerichtet und der Abstand zwischen dem Tisch und der Düse wird ungleichmäßig. Dies führt dazu, dass der Kunststoff schlecht haftet und die Düse das Modell trifft. Diese Kalibrierung hilft dabei, den Tisch perfekt auszurichten, indem die 4 Schrauben, die ihn festhalten, eingestellt werden.
+**Warum macht man das?**
+
+Das Heizbett wird von mehreren Schrauben zusammengehalten. Wenn diese nicht gleichmäßig verschraubt sind, wird das Heizbett falsch ausgerichtet und der Abstand zwischen dem Heizbett (Druckbett) und der Düse wird ungleichmäßig. Dies führt dazu, dass der Kunststoff schlecht haftet und die Düse das Modell trifft. Diese Kalibrierung hilft dabei, das Heizbett perfekt auszurichten, indem die 4 Schrauben, die ihn festhalten, eingestellt werden können.
 
 **Wie funktioniert sie?**
 
 1.  Der Drucker bringt die Düse nacheinander in die Positionen über jeder Schraube.
-2. misst den Abstand zum Tisch und zeigt auf dem Bildschirm an, welche Schraube in welche Richtung zu drehen ist.
+2.  misst den Abstand zum Druckbett und zeigt auf dem Bildschirm an, welche Schraube in welche Richtung zu drehen ist.
 3.  Sie stellen die Schrauben ein, indem Sie den Aufforderungen folgen.
 4.  Der Vorgang wird so lange wiederholt, bis der Tisch waagerecht ist.
 
-**Tuning-Parameter [BED_LEVEL_SCREWS_TUNE](/de/Kalibrierungen/#bed_level_screws_tune):**
+**Tuning-Parameter [BED_LEVEL_SCREWS_TUNE](/de/Calibrations/#bed_level_screws_tune):**
 
 * `EXTRUDER_TEMP=130` - Extrudertemperatur. Wird benötigt, damit die thermische Ausdehnung der Düse die Messungen nicht verfälscht. Stellen Sie die Temperatur ein, bei der der Kunststoff noch nicht aus der Düse austritt.
-* `BED_TEMP=80` - Temperatur des Tisches. Der Tisch dehnt sich auch bei Erwärmung aus, daher sollte die Kalibrierung bei der Temperatur durchgeführt werden, bei der Sie drucken.
+* `BED_TEMP=80` - Temperatur des Heizbett. Das Heizbett dehnt sich auch bei Erwärmung aus, daher sollte die Kalibrierung bei der Temperatur durchgeführt werden, bei der Sie drucken.
 
 Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nicht korrekt sind!
 
@@ -122,7 +125,7 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
     ```
 
 - **Wichtig:**
-    * Der Drucker heizt den Extruder und den Tisch auf die eingestellten Temperaturen auf.
+    * Der Drucker heizt den Extruder und das Heizbett auf die eingestellten Temperaturen auf.
         * Er startet den Vorgang und zeigt Ihnen an, welche Schraube Sie um wie viel Grad drehen müssen (z.B. "clockwise" für im Uhrzeigersinn, "counter-clockwise" für gegen den Uhrzeigersinn).
 
     <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
@@ -130,9 +133,9 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 - Nach dem ersten Durchgang wartet der Drucker, bis Sie die Einstellung vorgenommen haben. Wenn alle Schrauben angezogen sind, **drücken Sie die Wiederholungstaste**, damit der Drucker das Ergebnis prüft. Wiederholen Sie den Vorgang, bis das Ergebnis perfekt ist.
 
 - **Abschluss des Auftrags:**
-    **Wenn Sie den Kalibrierungsmodus beenden und verlassen, setzt der Drucker die Temperatur **NICHT automatisch zurück**.
-        **Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!**
-        * **Die Tischkarte und der Z-Offset werden falsch**. Führen Sie eine Füllstandskalibrierung über den **eigenen Bildschirm** durch.
+  *   Wenn Sie den Kalibrierungsmodus beenden und verlassen, setzt der Drucker die Temperatur **NICHT automatisch zurück.**
+  *    **Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!**
+  *    **Das Bettgitter und der Z-Offset werden ungültig.** Starten Sie die Nivellierungskalibrierung **vom Standardbildschirm** aus.
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
 
