@@ -223,7 +223,7 @@ Ativar o redirecionamento de SSH
 - SSH_USER - nome de usuário no servidor remoto
 - VIDEO_PORT - porta no servidor remoto a ser usada para vídeo (8080)
 - MOON_PORT - porta do servidor remoto a ser usada para moonraker (7125)
-- REMOTE_RUN - comando a ser chamado no servidor remoto ("NONE") para reiniciar o bot de telegrama. Você pode usar o script [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh) (ele está na impressora na pasta `mod/telegram/`), escrevendo-o assim `./ff5m.sh bot1`, onde bot1 é o diretório onde o bot está instalado.
+- REMOTE_RUN - comando a ser chamado no servidor remoto ("NONE") para reiniciar o bot de telegrama. Você pode usar o script [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh) (ele está na impressora na pasta `mod/telegram/`), escrevendo-o assim `./ff5m.sh bot1`, onde bot1 é o diretório onde o bot está instalado.
 O script pode ser instalado da seguinte maneira (se você não instalou o bot com um único comando)
 ```
 su - tbot # altere o usuário para o usuário sob o qual o serviço do bot é executado.

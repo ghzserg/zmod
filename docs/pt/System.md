@@ -64,7 +64,7 @@ Emite a porcentagem de desgaste do EMMC
 - RANDOM - usa números aleatórios para gravação. 1 - sim, 0 - não (0)
 
 No estoque:
-Baixe o arquivo [zfs.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/.shell/zfs.sh)
+Baixe o arquivo [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh)
 ```
 chmod +x zfs.sh
 ./zfs.sh 400 1

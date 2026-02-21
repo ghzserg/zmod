@@ -46,7 +46,7 @@
 
 Запуск ssh съедает около 300 килобайт памяти.
 
-**Если принтер и сервер находятся в одной сети, то использовать SSH не обязательно. Читайте файл конфигурации [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+**Если принтер и сервер находятся в одной сети, то использовать SSH не обязательно. Читайте файл конфигурации [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 Файл конфигурации можно скачать с принтера `mod/telegram/`.
 
 ---
@@ -69,7 +69,7 @@
 
 Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Установка телеграмм бота [одной командой](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) на Debian:
+Установка телеграмм бота [одной командой](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) на Debian:
 
 Выполнять под пользователем `root`
 ```
@@ -84,11 +84,11 @@ apt update && apt install wget -y
 Этот скрипт:
 
 1. Установит docker
-2. Скачает [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) и [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf). [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Скачает [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) и [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf). [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Создаст пользователя tbot
 4. Напишет инструкцию по регистрации телеграмм бота и запросит `bot_token`
 5. Напишет инструкцию по получению `chat_id` и запросит `chat_id`
-6. Установит [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Установит [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
 
 Добавить ssh ключ нужно будет самостоятельно
 
@@ -98,7 +98,7 @@ apt update && apt install wget -y
 
 Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Берете файл [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) из `mod/telegram/` c принтера.
+Берете файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) из `mod/telegram/` c принтера.
 
 Устанавливаете docker, далее инструкция для Debian
 ```
@@ -113,7 +113,7 @@ mkdir bot1
 cd bot1
 ```
 
-Помещаете  туда  [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Помещаете  туда  [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Создаете подкаталоги
 ```
@@ -121,7 +121,7 @@ mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-В каталог config помещаете [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) из [mod/telegram/](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) и правите его под себя.
+В каталог config помещаете [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) из [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) и правите его под себя.
 
 [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
@@ -164,7 +164,7 @@ usermod -a -G docker tbot
 
 #### TimeZone
 
-Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Укажите  вашу временную зону. В примере файла указана ```TZ=Asia/Yekaterinburg```
 
@@ -172,7 +172,7 @@ usermod -a -G docker tbot
 
 #### Spoolman
 
-Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Добавьте:
 ```

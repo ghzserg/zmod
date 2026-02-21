@@ -44,7 +44,7 @@ Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími paramet
 
 Použití SSH spotřebuje přibližně 300 KB paměti.
 
-**Pokud jsou tiskárna a server ve stejné síti, SSH není nutné. Viz konfigurační soubor [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf).**
+**Pokud jsou tiskárna a server ve stejné síti, SSH není nutné. Viz konfigurační soubor [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf).**
 Stáhněte konfigurační soubor z tiskárny na `mod/telegram/`. [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
 ---
@@ -64,7 +64,7 @@ Jak zaregistrovat svého bota:
 
 Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
 
-Nainstalujte Telegram bota [jedním příkazem](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) na Debian:
+Nainstalujte Telegram bota [jedním příkazem](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) na Debian:
 
 Spusťte jako uživatel `root`:
 ```bash
@@ -79,11 +79,11 @@ apt update && apt install wget -y
 Tento skript:
 
 1. Nainstaluje Docker
-2. Stáhne [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) a [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Stáhne [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) a [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Vytvoří uživatele `tbot`
 4. Provede vás registrací bota a požádá o `bot_token`
 5. Provede vás získáním `chat_id` a požádá o něj
-6. Nainstaluje [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Nainstaluje [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
 
 Přidejte SSH klíče ručně.
 
@@ -92,7 +92,7 @@ Přidejte SSH klíče ručně.
 
 Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
 
-1. Zkopírujte [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) z adresáře `mod/telegram/` na tiskárně.
+1. Zkopírujte [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) z adresáře `mod/telegram/` na tiskárně.
 2. Nainstalujte Docker (instrukce pro Debian):
 ```bash
 apt update 
@@ -106,7 +106,7 @@ mkdir bot1
 cd bot1
 ```
 
-4. Umístěte [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) sem.
+4. Umístěte [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) sem.
 
 5. Vytvořte podadresáře:
 ```bash
@@ -114,7 +114,7 @@ mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-6. Zkopírujte [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) z `mod/telegram/` do `config/` a upravte jej.
+6. Zkopírujte [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) z `mod/telegram/` do `config/` a upravte jej.
 
 [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
@@ -154,7 +154,7 @@ SSH se automaticky restartuje 3 minuty po každém restartu.
 
 #### Spoolman
 
-Upravte soubor [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml).
+Upravte soubor [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml).
 
 Přidejte:
 ```yaml
@@ -204,7 +204,7 @@ sync_rate: 5
 
 #### Časové pásmo
 
-Upravte soubor [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Upravte soubor [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Specifikujte své časové pásmo. Příklad souboru uvádí ```TZ=Asia/Yekaterinburg```
 

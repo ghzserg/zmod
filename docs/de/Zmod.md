@@ -223,7 +223,7 @@ SSH-Umleitung einschalten
 - SSH_USER - Benutzername auf dem entfernten Server
 - VIDEO_PORT - Port des entfernten Servers, der für Video verwendet werden soll (8080)
 - MOON_PORT - Port des entfernten Servers, der für Moonraker verwendet werden soll (7125)
-- REMOTE_RUN - Befehl, der auf dem Remote-Server aufgerufen werden soll ("NONE"), um den Telegrammbot neu zu starten. Sie können das Skript [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh) verwenden (es befindet sich auf dem Drucker im Ordner `mod/telegram/`), indem Sie es wie folgt schreiben: `./ff5m.sh bot1`, wobei bot1 das Verzeichnis ist, in dem der Bot installiert ist.
+- REMOTE_RUN - Befehl, der auf dem Remote-Server aufgerufen werden soll ("NONE"), um den Telegrammbot neu zu starten. Sie können das Skript [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh) verwenden (es befindet sich auf dem Drucker im Ordner `mod/telegram/`), indem Sie es wie folgt schreiben: `./ff5m.sh bot1`, wobei bot1 das Verzeichnis ist, in dem der Bot installiert ist.
 Das Skript kann auf folgende Weise installiert werden (wenn Sie den Bot nicht mit einem einzigen Befehl installiert haben)
 ```
 su - tbot # Ändern Sie den Benutzer in den Benutzer, unter dem der Bot-Dienst ausgeführt wird.

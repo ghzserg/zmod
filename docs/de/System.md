@@ -64,7 +64,7 @@ Gibt den prozentualen Verschleiß der EMMC aus
 - RANDOM - verwendet Zufallszahlen zum Schreiben. 1 - ja, 0 - nein (0)
 
 Auf dem Lager:
-Datei [zfs.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/.shell/zfs.sh) herunterladen
+Datei [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh) herunterladen
 ```
 chmod +x zfs.sh
 ./zfs.sh 400 1
