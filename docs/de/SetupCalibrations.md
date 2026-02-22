@@ -37,9 +37,10 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
   <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
 
 - Der Befehl selbst sieht wie folgt aus (dies ist ein Beispiel!):
-    ```gcode
-    PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
-    ```
+
+```gcode
+PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
+```
     **Was das bedeutet:**
 
     * * ```TEMPERATURE=255``` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
@@ -120,9 +121,9 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 
     <img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" />
 
-    ```gcode
-    BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
-    ```
+```gcode
+BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
+```
 
 - **Wichtig:**
     * Der Drucker heizt den Extruder und das Heizbett auf die eingestellten Temperaturen auf.
@@ -162,6 +163,7 @@ Die Karte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch
 * `PROFILE=auto` - Name des Profils, unter dem die Karte gespeichert werden soll. Es ist besser, es nach der Tabellentemperatur zu benennen, zum Beispiel `80`.
 
 **Beispielbefehl:**
+
 ```gcode
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 ```
@@ -188,6 +190,7 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 * Das Wichtigste ist, dass der Parameter `MESH=` auf denselben Profilnamen (in unserem Beispiel `80`) zeigt, den Sie in `AUTO_FULL_BED_LEVEL` verwendet haben.
 
 Noch besser: Erstellen Sie mehrere Netze für jede Temperatur (60, 70, 80, 90, 100, 110) und verwenden Sie den folgenden Startcode:
+
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
@@ -260,6 +263,7 @@ SAVE_ZMOD_DATA PRINT_LEVELING=1
 ```
 
 Der Startcode kann wie folgt verwendet werden:
+
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
@@ -339,9 +343,9 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 1.  Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen merkt, muss einmalig die spezielle Einstellung [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/de/Global/#load_zoffset) aktiviert werden:
    
-    ```gcode
-    SAVE_ZMOD_DATA LOAD_ZOFFSET=1
-    ```
+```gcode
+SAVE_ZMOD_DATA LOAD_ZOFFSET=1
+```
 *Dieser Befehl weist das System an, den Z-Offset aus den gespeicherten Einstellungen zu laden und nicht auf Null zu setzen.*
 
 2.  Sobald diese Option aktiviert ist, können Sie den Z-Offset direkt während des Drucks in Fluidd/Mainsail oder über das Einstellungsfeld in GuppyScreen anpassen.
@@ -393,18 +397,18 @@ Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_cor
 
 1.  **Korrektur der Berechnungen:** Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen [SAVE_ZMOD_DATA FIX_SCV=1](/de/Global/#fix_scv).
 
-    ```gcode
-    SAVE_ZMOD_DATA FIX_SCV=1
-    ```
+```gcode
+SAVE_ZMOD_DATA FIX_SCV=1
+```
 
 2.  **Verbesserung der Druckqualität (empfohlen):** Fügen Sie die folgende Zeile in die Datei ```mod_data/user.cfg``` ein:
 
-    ```ini
-    [printer].
-    square_corner_velocity: 9
-    ```
+```ini
+[printer].
+square_corner_velocity: 9
+```
 
-    * **Was bewirkt dies?** Der Drucker wird in scharfen Ecken leicht verlangsamt. Dies erhöht die Druckzeit geringfügig, reduziert aber die Vibrationen und verbessert die Eckenschärfe.
+  * **Was bewirkt dies?** Der Drucker wird in scharfen Ecken leicht verlangsamt. Dies erhöht die Druckzeit geringfügig, reduziert aber die Vibrationen und verbessert die Eckenschärfe.
 
 Sie können die Sache vereinfachen. Geben Sie in der Konsole ```ENABLE_PLUGIN name=recommend``` ein. Dieser Befehl aktiviert das Empfehlungs-Plugin, für das ```FIX_SCV``` bereits aktiviert und ```square_corner_velocity: 9``` gesetzt ist.
 
@@ -426,19 +430,19 @@ Um eine Überlastung des Systems zu vermeiden, **müssen die Achsen einzeln kali
 
 1.  Geben Sie den Befehl zur Kalibrierung der Y-Achse in die Konsole ein:
 
-    ```gcode
-    ZSHAPER Y=1 X=0
-    ```
+```gcode
+ZSHAPER Y=1 X=0
+```
 
 2.  Sobald die Messungen abgeschlossen sind, erhalten Sie einen Bericht wie diesen:
 
-    ```
-    // Empfohlener Shaper ist zv @ 53,2 Hz
-    // Angepasster Shaper 'zv' Frequenz = 53,2 Hz (Schwingungen = 0,9%, Glättung ~= 0,074)
-    // Um eine zu starke Glättung mit 'zv' zu vermeiden, wird max_accel <= 10200 mm/sec^2 vorgeschlagen
-    // Angepasste Shaper 'mzv' Frequenz = 54.2 Hz (Vibrationen = 0.0%, Glättung ~= 0.080)
-    // Um eine zu starke Glättung mit 'mzv' zu vermeiden, wird max_accel <= 8700 mm/sec^2 vorgeschlagen
-    ```
+```
+// Empfohlener Shaper ist zv @ 53,2 Hz
+// Angepasster Shaper 'zv' Frequenz = 53,2 Hz (Schwingungen = 0,9%, Glättung ~= 0,074)
+// Um eine zu starke Glättung mit 'zv' zu vermeiden, wird max_accel <= 10200 mm/sec^2 vorgeschlagen
+// Angepasste Shaper 'mzv' Frequenz = 54.2 Hz (Vibrationen = 0.0%, Glättung ~= 0.080)
+// Um eine zu starke Glättung mit 'mzv' zu vermeiden, wird max_accel <= 8700 mm/sec^2 vorgeschlagen
+```
 
     * Das System empfiehlt den Shaper `zv`, weil er die geringste Glättung (`smoothing`) aufweist.
         * Der Shaper `mzv` hingegen unterdrückt die Vibrationen vollständig (`0.0%`), obwohl er etwas weniger Beschleunigung benötigt.
