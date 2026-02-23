@@ -64,7 +64,7 @@ GuppyScreen - альтернативная реализация экрана:
 - RANDOM - использовать случайные числа  для записи. 1 - да, 0 - нет (0)
 
 На стоке:
-Скачать файл [zfs.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/.shell/zfs.sh)
+Скачать файл [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh)
 ```
 chmod +x zfs.sh
 ./zfs.sh 400 1

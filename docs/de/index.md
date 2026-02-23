@@ -24,7 +24,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **1. Volle Fernsteuerung**
 
-**Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
+* **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
 * **ZMOD:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
 
     - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
@@ -45,7 +45,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **3. Intelligente Funktionen für Zuverlässigkeit**
 
-**Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
+* **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
 * **ZMOD:**
 
     - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
@@ -55,7 +55,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **4. Flexible Handhabung von Filamenten (speziell für AD5X)**
 
-**Native Firmware:** Spulensteuerung über Standardmenü.
+* **Native Firmware:** Spulensteuerung über Standardmenü.
 * **ZMOD (für AD5X):**
 
     - **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
@@ -64,7 +64,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **5. Ökosystem und Integration**
 
-**Native Firmware:** Geschlossenes System.
+* **Native Firmware:** Geschlossenes System.
 * **ZMOD:**
 
     - **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
@@ -74,7 +74,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **6. Optimierung und Kontrolle**
 
-**Native Firmware:** Eingeschränkte Einstellungen.
+* **Native Firmware:** Eingeschränkte Einstellungen.
 * **ZMOD:**
 
     - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
@@ -85,7 +85,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 #### **7. Klipper 13**
 
-**Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
+* **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
 * **ZMOD:**
   
     - Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version

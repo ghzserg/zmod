@@ -44,7 +44,7 @@ Simply call the [ZSSH_ON](/Zmod/#zssh_on) macro with the following parameters:
 
 SSH usage consumes approximately 300 KB of memory.
 
-**If the printer and server are on the same network, SSH is optional. Refer to the [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) configuration file.**
+**If the printer and server are on the same network, SSH is optional. Refer to the [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) configuration file.**
 Download the configuration file from the printer at `mod/telegram/`. [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
 ---
@@ -63,7 +63,7 @@ How to register your bot:
 
 If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
 
-Install the Telegram bot with [one command](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) on Debian:
+Install the Telegram bot with [one command](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) on Debian:
 
 Execute as the `root` user:
 ```bash
@@ -78,11 +78,11 @@ apt update && apt install wget -y
 This script will:
 
 1. Install Docker
-2. Download [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) and [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Download [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) and [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Create a `tbot` user
 4. Guide you through bot registration and request the `bot_token`
 5. Guide you to obtain the `chat_id` and request it
-6. Install [ff5m.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Install [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
 
 Add SSH keys manually.
 
@@ -91,7 +91,7 @@ Add SSH keys manually.
 
 If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
 
-1. Copy [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) from the printer’s `mod/telegram/` directory.
+1. Copy [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) from the printer’s `mod/telegram/` directory.
 2. Install Docker (Debian instructions):
 ```bash
 apt update 
@@ -105,7 +105,7 @@ mkdir bot1
 cd bot1
 ```
 
-4. Place [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) here.
+4. Place [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) here.
 
 5. Create subdirectories:
 ```bash
@@ -113,7 +113,7 @@ mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-6. Copy [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) from `mod/telegram/` to `config/` and edit it.
+6. Copy [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) from `mod/telegram/` to `config/` and edit it.
 
 [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
@@ -153,7 +153,7 @@ SSH will automatically restart 3 minutes after each reboot.
 
 #### Spoolman
 
-Edit the [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) file.
+Edit the [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) file.
 
 Add:
 ```yaml
@@ -203,7 +203,7 @@ sync_rate: 5
 
 #### TimeZone
 
-Edit the file [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Edit the file [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Specify your time zone. The example file specifies ```TZ=Asia/Yekaterinburg```
 

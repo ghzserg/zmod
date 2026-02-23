@@ -46,7 +46,7 @@ Sie müssen nur das Makro [ZSSH_ON](/de/Zmod/#zssh_on) mit den folgenden Paramet
 
 Die Ausführung von ssh verbraucht etwa 300 Kilobyte Speicherplatz.
 
-**Wenn sich Drucker und Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die Konfigurationsdatei [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
+**Wenn sich Drucker und Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die Konfigurationsdatei [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
 Die Konfigurationsdatei kann vom Drucker `mod/telegram/` heruntergeladen werden.
 
 ---
@@ -69,7 +69,7 @@ Wie Sie Ihren Bot registrieren
 
 Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
 
-Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.sh) unter Debian:
+Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) unter Debian:
 
 Unter dem Benutzer `root` ausführen
 ```
@@ -84,11 +84,11 @@ apt update && apt install wget -y
 Dieses Skript:
 
 1. Docker installieren
-2. Laden Sie [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) und [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) herunter. [Beispielkonfiguration](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Laden Sie [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) und [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) herunter. [Beispielkonfiguration](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Legt den Benutzer tbot an
 4. Schreibt Anweisungen zur Registrierung des Telegram-Bots und fordert `bot_token` an
 5. Schreibt Anweisungen, um `chat_id` zu erhalten und fordert `chat_id` an
-6. Wird [ff5m.sh] installieren (https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Wird [ff5m.sh] installieren (https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
 
 Sie müssen den ssh-Schlüssel selbst hinzufügen
 
@@ -98,7 +98,7 @@ Sie müssen den ssh-Schlüssel selbst hinzufügen
 
 Wenn Sie nur Benachrichtigungen in Telegram benötigen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Nehmen Sie die Datei [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) aus `mod/telegram/` c printer.
+Nehmen Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) aus `mod/telegram/` c printer.
 
 Installieren Sie docker, dann folgen Sie den Anweisungen für Debian
 ```
@@ -113,7 +113,7 @@ mkdir bot1
 cd bot1
 ```
 
-Legen Sie [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml) dort ab.
+Legen Sie [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) dort ab.
 
 Unterverzeichnisse erstellen
 ```
@@ -121,7 +121,7 @@ mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-Legen Sie [telegram.conf](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) aus [mod/telegram/](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/telegram.conf) in das Konfigurationsverzeichnis und passen Sie es an Ihre Bedürfnisse an.
+Legen Sie [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) aus [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) in das Konfigurationsverzeichnis und passen Sie es an Ihre Bedürfnisse an.
 
 [Beispiel-Konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
@@ -164,7 +164,7 @@ Nach jedem Neustart wird ssh nach 3 Minuten automatisch gestartet.
 
 #### ZeitZone
 
-Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``` angegeben.
 
@@ -172,7 +172,7 @@ Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``
 
 #### Spoolman
 
-Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/zmod_ff5m/blob/1.6/telegram/docker-compose.yml)
+Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
 
 Hinzufügen:
 ```
