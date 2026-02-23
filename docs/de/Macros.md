@@ -85,7 +85,7 @@ Es kann aufgerufen werden:
 [GET_ZMOD_DATA](/de/Global/#get_zmod_data)
 
 ### KAMP
-[KAMP](/de/Kalibrierungen/#kamp)
+[KAMP](/de/Calibrations/#kamp)
 
 ### LANG
 [LANG](/de/Global/#lang)
