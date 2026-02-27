@@ -42,7 +42,8 @@ body:
       description: How do you interact with the printer?
       options:
         - I use the native/original screen
-        - I use Guppyscreen
+        - I use GuppyScreen
+        - I use HelixScreen
         - I run without a screen (headless)
     validations:
       required: true
