@@ -20,6 +20,7 @@ Zapne standardní obrazovku a restartuje tiskárnu.
 ### DISPLAY_OFF
 
 - `GUPPY`: `0` = vypnout GuppyScreen, `1` = zapnout GuppyScreen (výchozí: `1`)
+- `Helix`: `0` = vypnout HelixScreen, `1` = zapnout HelixScreen (výchozí: `0`)
 
 Vypne standardní obrazovku. Ušetří 13 MB RAM (20 MB u starších verzí firmwaru).
 
@@ -31,6 +32,8 @@ Vypne standardní obrazovku. Ušetří 13 MB RAM (20 MB u starších verzí firm
 - Doporučeno pro pracovní postupy bez nativní obrazovky.
 - Lepší obnova tisku po přerušeních.
 - Založeno na [tomto forku](https://github.com/ghzserg/guppyscreen_ff5m).
+
+**[HelixScreen](https://github.com/prestonbrown/helixscreen)** (alternativní implementace obrazovky):
 
 **Varování:**
 

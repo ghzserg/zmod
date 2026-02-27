@@ -168,39 +168,39 @@ Update firmware via network using a USB drive.
 
 ### STOP_ZMOD
 
-Unload guppy, moonraker, and fluidd/Mainsail from memory. The Telegram bot will also stop working.
+Unload guppy, helix, moonraker, and fluidd/Mainsail from memory. The Telegram bot will also stop working.
 
 Parameters:
 
-- GUPPY (0 - do not unload, 1 - unload)
+- SCREEN (0 - do not unload, 1 - unload)
 - MOONRAKER (0 - do not unload, 1 - unload)
 - HTTP (0 - do not unload, 1 - unload)
 
 Example:
 ```
-STOP_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-If this line is added to the start code, GUPPY will be unloaded from memory after the print starts.
+If this line is added to the start code, GUPPY/HELIX will be unloaded from memory after the print starts.
 
 ---
 
 ### START_ZMOD
 
-Re-enable guppy, moonraker, and fluidd/Mainsail after STOP_ZMOD.
+Re-enable guppy, helix, moonraker, and fluidd/Mainsail after STOP_ZMOD.
 
 Parameters:
 
-- GUPPY (0 - do not load, 1 - load)
+- SCREEN (0 - do not load, 1 - load)
 - MOONRAKER (0 - do not load, 1 - load)
 - HTTP (0 - do not load, 1 - load)
 
 Example:
 ```
-START_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-If this line is added to the end code, GUPPY will be launched after the print finishes.
+If this line is added to the end code, GUPPY/HELIX will be launched after the print finishes.
 
 ---
 ### ZSSH_ON

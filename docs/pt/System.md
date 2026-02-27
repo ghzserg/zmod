@@ -21,6 +21,7 @@ Ligue a tela padrão e reinicie a impressora.
 #### DISPLAY_OFF
 
 - GUPPY: 0 - não ativar o GuppyScreen, 1 - ativar o GuppyScreen (1)
+- Helix: 0 - não ativar o HelixScreen, 1 - ativar o HelixScreen (0)
 
 Desativa a tela padrão. Economiza 13 megabytes (20 megabytes em versões mais antigas do firmware nativo).
 
@@ -32,6 +33,8 @@ O GuppyScreen é uma implementação de tela alternativa:
 - Recomendado para uso em vez da tela nativa.
 - Melhor recuperação de impressão interrompida
 - Criado a partir do [fork](https://github.com/ghzserg/guppyscreen_ff5m), que é baseado no [repositório original](https://github.com/ballaswag/guppyscreen) e em outro [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
+
+O [HelixScreen](https://github.com/prestonbrown/helixscreen) é uma implementação de tela alternativa
 
 **Não desative a tela a menos que entenda claramente como funcionam o mapa da tabela, o z-offset e as macros START_PRINT e END_PRINT**
 

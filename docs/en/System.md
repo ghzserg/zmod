@@ -20,6 +20,7 @@ Enable the standard screen and reboot the printer.
 ### DISPLAY_OFF
 
 - `GUPPY`: `0` = disable GuppyScreen, `1` = enable GuppyScreen (default: `1`)
+- `Helix`: `0` = disable HelixScreen, `1` = enable HelixScreen (default: `1`)
 
 Disable the standard screen. Saves 13 MB of RAM (20 MB on older firmware versions).
 
@@ -31,6 +32,8 @@ Disable the standard screen. Saves 13 MB of RAM (20 MB on older firmware version
 - Recommended for non-native screen workflows.
 - Better print recovery after interruptions.
 - Based on [this fork](https://github.com/ghzserg/guppyscreen_ff5m).
+
+**[HelixScreen](https://github.com/prestonbrown/helixscreen)** (alternative screen implementation)
 
 **Warning:**
 

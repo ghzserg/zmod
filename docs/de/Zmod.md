@@ -178,39 +178,39 @@ Dieses Makro sucht die neueste verfügbare Version, lädt sie auf das Flash-Lauf
 
 ### STOP_ZMOD
 
-Entlade Guppy, Moonraker und Fluidd/Mainsail aus dem Speicher. Der Telegramm-Bot wird ebenfalls aufhören zu funktionieren.
+Entlade Guppy, Helix, Moonraker und Fluidd/Mainsail aus dem Speicher. Der Telegramm-Bot wird ebenfalls aufhören zu funktionieren.
 
 Parameter:
 
-- GUPPY (0 - nicht entladen, 1 - entladen)
+- SCREEN (0 - nicht entladen, 1 - entladen)
 - MOONRAKER (0 - nicht hochladen, 1 - hochladen)
 - HTTP (0 - nicht hochladen, 1 - hochladen)
 
 Beispiel:
 ```
-STOP_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Wenn diese Zeile in den Startcode geschrieben wird, wird GUPPY nach dem Druckstart aus dem Speicher entladen
+Wenn diese Zeile in den Startcode geschrieben wird, wird GUPPY/HELIX nach dem Druckstart aus dem Speicher entladen
 
 ---
 
 ### START_ZMOD
 
-Guppy, Moonraker und Fluidd/Mainsail nach STOP_ZMOD wieder einschalten.
+Guppy, Helix, Moonraker und Fluidd/Mainsail nach STOP_ZMOD wieder einschalten.
 
 Parameter:
 
-- GUPPY (0 - nicht laden, 1 - entladen)
+- SCREEN (0 - nicht laden, 1 - entladen)
 - MOONRAKER (0 - nicht laden, 1 - entladen)
 - HTTP (0 - nicht laden, 1 - entladen)
 
 Beispiel:
 ```
-START_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Wenn diese Zeile im endgültigen Code enthalten ist, wird GUPPY gestartet, nachdem der Druckvorgang beendet ist
+Wenn diese Zeile im endgültigen Code enthalten ist, wird GUPPY/HELIX gestartet, nachdem der Druckvorgang beendet ist
 
 ---
 

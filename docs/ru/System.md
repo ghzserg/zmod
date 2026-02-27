@@ -21,6 +21,7 @@
 ### DISPLAY_OFF
 
 - GUPPY: 0 - не включать GuppyScreen, 1 - включить GuppyScreen (1)
+- HELIX: 0 - не включать HelixScreen, 1 - включить HelixScreen (0)
 
 Выключить стандартный экран. Экономит 13 мегабайт (на старых версиях родной прошивки 20 мегабайт).
 
@@ -32,6 +33,8 @@ GuppyScreen - альтернативная реализация экрана:
 - Рекомендуется использовать вместо родного экрана.
 - Более качественное восстановление прерванной печати
 - Собирается из [форка](https://github.com/ghzserg/guppyscreen_ff5m), который базируется на [оригинальном репозитории](https://github.com/ballaswag/guppyscreen) и другом [форке](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
+
+[HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
 
 **Не отключайте экран, если вы четко не понимаете как работает карта стола, z-offset и макросы START_PRINT и END_PRINT**
 
