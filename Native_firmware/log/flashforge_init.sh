@@ -15,6 +15,7 @@ tar_config_ff5m()
         --exclude config.tar /opt/config/ /data/logFiles/
     VER=$(cat /opt/config/mod/version_5m.txt)
     mv /mnt/config.tar /mnt/config_${VER}.tar
+    gzip /mnt/config_${VER}.tar
     sync
 }
 
@@ -31,6 +32,7 @@ tar_config_ad5x()
         /usr/prog/config/ /usr/data/logs/ /usr/prog/app_startup.sh
     VER=$(cat /usr/data/config/mod/version_5x.txt)
     mv /mnt/config.tar /mnt/config_${VER}.tar
+    gzip /mnt/config_${VER}.tar
     sync
 }
 
