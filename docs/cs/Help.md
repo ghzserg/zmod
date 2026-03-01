@@ -12,7 +12,11 @@ Otevřete Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) a položte mu
 8. Odešlete **jeden** příspěvek s vaším popisem a generovaným souborem `config-1.6.6-28.tar.gz`. 1.6.6-28 - aktuální verze mod.
 9. [Otevřete problém zde](https://github.com/ghzserg/zmod/issues).
 
-Pokud `TAR_CONFIG` nelze spustit, připojte se k tiskárně přes SSH:
+Pokud nelze provést `TAR_CONFIG`:  
+- Stáhněte si [flashforge_init.s](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh) na USB flash disk. [Instrukce](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+- Zkopírujte z USB flash disku `config-1.6.6-28.tar.gz`, kde 1.6.6-28 je aktuální verze modu
+
+Nebo se připojte k tiskárně přes SSH:
 
 AD5M/AD5MPro:
 

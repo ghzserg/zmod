@@ -12,7 +12,11 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 8. Submit **one** post with your description and the generated `config-1.6.6-28.tar.gz` file. 1.6.6-28 - current version mod.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
-If `TAR_CONFIG` cannot be executed, connect to the printer via SSH:
+If it is impossible to execute `TAR_CONFIG`:  
+- Download [flashforge_init.s](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh) to a USB flash drive. [Instructions](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+- Copy `config-1.6.6-28.tar.gz` from the USB flash drive, where 1.6.6-28 is the current version of the mod
+
+Or connect to the printer via SSH:
 
 AD5M/AD5MPro:
 
