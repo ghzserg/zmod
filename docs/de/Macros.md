@@ -22,13 +22,13 @@ Es kann aufgerufen werden:
 [AIR_CIRCULATION_STOP](/de/Pro/#air_circulation_stop)
 
 ### AUTO_FULL_BED_LEVEL
-[AUTO_FULL_BED_LEVEL](/de/Kalibrierungen/#auto_full_bed_level)
+[AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level)
 
 ### BED_LEVEL_SCREWS_TUNE
-[BED_LEVEL_SCREWS_TUNE](/de/Kalibrierungen/#bed_level_screws_tune)
+[BED_LEVEL_SCREWS_TUNE](/de/Calibrations/#bed_level_screws_tune)
 
 ### RIEMEN_FORMER_KALIBRIERUNG
-[BELTS_SHAPER_CALIBRATION](/de/Kalibrierungen/#belts_shaper_calibration)
+[BELTS_SHAPER_CALIBRATION](/de/Calibrations/#belts_shaper_calibration)
 
 ### KAMERA_AUS
 [CAMERA_OFF](/de/Zmod/#camera_off)
@@ -52,10 +52,10 @@ Es kann aufgerufen werden:
 [CLEAR_EMMC](/de/System/#clear_emmc)
 
 ### CLEAR_NOZZLE
-[CLEAR_NOZZLE](/de/Hauptmenü/#clear_nozzle)
+[CLEAR_NOZZLE](/de/Main/#clear_nozzle)
 
 ### CLOSE_DIALOGS
-[CLOSE_DIALOGS](/de/Hauptmenü/#close_dialogs)
+[CLOSE_DIALOGS](/de/Main/#close_dialogs)
 
 ### COLDPULL
 [COLDPULL](/de/Filament/#coldpull)
@@ -76,7 +76,7 @@ Es kann aufgerufen werden:
 [DISPLAY_ON](/de/System/#display_on)
 
 ### END_PRINT
-[END_PRINT](/de/Haupt/#end_print)
+[END_PRINT](/de/Main/#end_print)
 
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/de/Main/#fast_close_dialogs)
@@ -94,13 +94,13 @@ Es kann aufgerufen werden:
 [LED](/de/Main/#led)
 
 ### LED_AUS
-[LED_OFF](/de/Haupt/#led_off)
+[LED_OFF](/de/Main/#led_off)
 
 ### LED_EIN
 [LED_ON](/de/Main/#led_on)
 
 ### LOAD_CELL_TARE
-[LOAD_CELL_TARE](/de/Kalibrierungen/#load_cell_tare)
+[LOAD_CELL_TARE](/de/Calibrations/#load_cell_tare)
 
 ### M600
 [M600](/de/Filament/#m600)
@@ -115,13 +115,13 @@ Es kann aufgerufen werden:
 [NOZZLE_CONTROL](/de/Global/#nozzle_control)
 
 ### PAUSE
-[PAUSE](/de/Haupt/#pause)
+[PAUSE](/de/Main/#pause)
 
 ### PID_TUNE_BED
-[PID_TUNE_BED](/de/Kalibrierungen/#pid_tune_bed)
+[PID_TUNE_BED](/de/Calibrations/#pid_tune_bed)
 
 ### PID_TUNE_EXTRUDER
-[PID_TUNE_EXTRUDER](/de/Kalibrierungen/#pid_tune_extruder)
+[PID_TUNE_EXTRUDER](/de/Calibrations/#pid_tune_extruder)
 
 ### PLAY_MIDI
 [PLAY_MIDI](/de/Main/#play_midi)
@@ -157,7 +157,7 @@ Es kann aufgerufen werden:
 [SKIP_ZMOD](/de/Zmod/#skip_zmod)
 
 ### START_PRINT
-[START_PRINT](/de/Haupt/#start_print)
+[START_PRINT](/de/Main/#start_print)
 
 ### START_ZMOD
 [START_ZMOD](/de/Zmod/#start_zmod)
@@ -184,7 +184,7 @@ Es kann aufgerufen werden:
 [ZRESTORE](/de/Zmod/#zrestore)
 
 ### ZSHAPER
-[ZSHAPER](/de/Kalibrierungen/#zshaper)
+[ZSHAPER](/de/Calibrations/#zshaper)
 
 ### ZSSH_OFF
 [ZSSH_OFF](/de/Zmod/#zssh_off)
