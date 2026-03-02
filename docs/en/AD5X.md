@@ -156,6 +156,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
 
+- 0 - No purge into the trash will occur. The print head will still travel to the trash chute during color changes on the first layer, to reduce blobs. If this is happening on every layer, check your start and layer change gcode!
+- 1 - Purge will occur into the trash chute during color changes. Two purges of length equal to `filament_drop_length` in filament.json (plus `filament_drop_length_add` if the materials are different) will occur on each color change.
+- 2 - After inserting the new color, the print head will travel to the trash chute then return control to the slicer from there. This should only be used together with a slicer profile designed for this mode.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
@@ -261,12 +265,12 @@ For these settings to work, you need to **disable the printer's native display**
 1.  **`temp`** — Nozzle temperature for filament change. **Default value depends on material type.**
 2.  **`filament_drop_length` (Purge Length)**
 
-    *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color.
+    *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
         *   **Tip:** Increase this value if colors mix during spool changes. Decrease it to reduce waste.
 
 3.  **`filament_drop_length_add` (Additional Purge)**
 
-    *   **In simple terms:** Extra purge length when switching **material types** (e.g., PLA to PETG), not just colors.
+    *   **In simple terms:** Extra purge length when switching **material types** (e.g., PLA to PETG), not just colors. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
         *   **Why it’s needed:** Different materials don’t mix well, so deeper nozzle cleaning is required.
 
 4.  **`nozzle_cleaning_length`** — The length (in mm) of filament pulled out of the extruder when cleaning the nozzle when the spool is no longer in use. **Default: 60 mm.**
@@ -296,6 +300,48 @@ For these settings to work, you need to **disable the printer's native display**
 **Warning!** Modifying advanced parameters may cause printer malfunctions, filament jams, or hardware damage. Adjust only if you fully understand each parameter’s purpose and potential consequences.
 
 **Key takeaway:** To reduce waste, start by decreasing **`filament_drop_length`** and **`filament_drop_length_add`** for your material. Don’t forget to save the file after changes!
+
+---
+
+#### **Slicer-controlled purge**
+
+It is possible to have the slicer control the purge instead by using other USE_TRASH_ON_PRINT settings, instead of the default value (1).
+
+The zmod_preprocess repo contains OrcaSlicer profiles for use with these modes. When using these profiles, you can switch between nopoop 
+
+##### Nopoop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
+
+In this mode, no purge is performed by the printer during color changes. The printer will cut the filament, then return to the prime tower to unload and load filament, then immediately continue from there.
+
+On the first layer, the printer will instead travel to the trash chute while changing filament, but will return to the prime tower afterwards without producing any poop.
+
+In order to properly purge the old filament when in this mode, the recommended approach is to enable "Purge into prime tower" in OrcaSlicer's settings. This is found in the printer settings under the "Multimaterial" tab. You can then use the Flush Volumes setting to adjust purge amounts. If you wish to add a fixed amount to the automatically calculated flush volumes, you can do so by setting the "Nozzle Volume" under the General tab of printer settings.
+
+It is normal for your prime tower to be considerably larger than usual when using this option, especially when working with thin layer heights.
+
+You can additionally use options like "Purge to infill", "Purge to this object", etc when using this mode, to reduce the amount of waste purged into the prime tower.
+
+##### Slicer-Controlled Poop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+
+In this mode, no purge is performed by the printer on its own during color changes. The printer will cut the filament, then travel to the trash chute, and return control to the slicer.
+
+This mode requires proper support from the printer profile in the slicer, in particular, filament change gcode that handles pooping and returning to the prime tower afterwards is necessary. Do NOT use this mode with any gcode file that is not specifically sliced for it.
+
+Options such as "Purge to infill" cannot be used in this mode. This is a bug in OrcaSlicer and cannot be fixed by zMod.
+
+##### Printer profiles
+
+Printer profiles set up for slicer-controlled purge are available in the zmod_preprocess repository. These profiles are close to the stock AD5X profiles except for:
+- All zMod custom gcode added, including appropriate filament change gcode for USE_TRASH_ON_PRINT=2
+- "Purge in prime tower" enabled
+- Automatically sets correct USE_TRASH_ON_PRINT setting at the start of printing
+- Z-Hop type set to Normal
+- Nozzle volume set to 144
+- Filament unload time set for more-accurate estimates (based on default filament.json settings)
+
+When using these profiles, you can switch between Nopoop Mode (default) and Slicer-Controlled Poop Mode simply by turning on or off the "Purge in prime tower" option under the printer settings.
+
+**If you do a print from these profiles in Slicer-Controlled Poop Mode, make sure to change your USE_TRASH_ON_PRINT setting back to 0 or 1 before printing any multicolor gcode that was not sliced with these profiles.**
 
 ## **7. Add custom filament types**
 

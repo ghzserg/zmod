@@ -155,6 +155,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Para desativar o descarte de filamentos na lixeira durante a impressão, use o parâmetro [USE_TRASH_ON_PRINT](/pt/Global/#use_trash_on_print).
 
+- 0 - Não ocorrerá purga no descarte. O cabeçote de impressão ainda se deslocará até a rampa de descarte durante as trocas de cor na primeira camada para reduzir falhas (blobs). Se isso estiver acontecendo em todas as camadas, verifique seu gcode de início e de troca de camada!
+- 1 - A purga ocorrerá na rampa de descarte durante as trocas de cor. Duas purgas com comprimento igual a `filament_drop_length` no arquivo filament.json (mais `filament_drop_length_add` se os materiais forem diferentes) ocorrerão em cada troca de cor.
+- 2 - Após inserir a nova cor, o cabeçote de impressão se deslocará até a rampa de descarte e, a partir daí, devolverá o controle ao fatiador. Isso só deve ser usado em conjunto com um perfil de fatiador projetado para este modo.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
@@ -254,12 +258,12 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 1.  ** `temp`** - A temperatura à qual o bocal de troca de filamento se aquece. **O valor padrão depende do tipo de material.
 2.  ** `filament_drop_length` - A temperatura à qual o bocal é aquecido para a troca de filamentos.
 
-    * **Simples:** Quantos milímetros de plástico a impressora espremerá na lixeira para **limpar o bocal** da cor antiga.
+    * **Simples:** Quantos milímetros de plástico a impressora espremerá na lixeira para **limpar o bocal** da cor antiga. Isso se aplica ao carregar cores fora da impressão ou antes de uma impressão, ou ao trocar de cor com USE_TRASH_ON_PRINT definido como 1.
     * **Dica:** Se as cores forem misturadas quando você trocar os carretéis, aumente esse número. Se você quiser menos desperdício, diminua-o.
 
 3.  **`filament_drop_length_add`** (Reinicialização opcional)
 
-    * Simplificando: quanto plástico a mais a impressora jogará na lixeira se você mudar não apenas a cor, mas o **tipo de material** (por exemplo, de PLA para PETG).
+    * Simplificando: quanto plástico a mais a impressora jogará na lixeira se você mudar não apenas a cor, mas o **tipo de material** (por exemplo, de PLA para PETG). Isso se aplica ao carregar cores fora da impressão ou antes de uma impressão, ou ao trocar de cor com USE_TRASH_ON_PRINT definido como 1.
     * Por que é necessário: Materiais diferentes não se misturam bem, portanto, você precisa limpar melhor o bocal.
 
 4.  **`nozzle_cleaning_length`** - O comprimento (em mm) que o filamento é puxado para fora da extrusora ao limpar o bocal quando o carretel não está mais em uso. **Padrão: 60 mm.**
@@ -289,6 +293,48 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 **Alterar as configurações na seção avançada pode resultar em operação incorreta da impressora, atolamentos de filamentos ou falhas. Altere-as somente se você entender completamente o que cada parâmetro é responsável e quais podem ser as consequências.
 
 **Conclusão principal:** Se você quiser menos desperdício, comece reduzindo os números **`filament_drop_length`** e **`filament_drop_length_add`** do seu plástico. Não se esqueça de salvar o arquivo após as alterações!
+
+---
+
+#### **Purga controlada pelo fatiador**
+
+É possível fazer com que o fatiador controle a purga, usando outras configurações de USE_TRASH_ON_PRINT em vez do valor padrão (1).
+
+O repositório zmod_preprocess contém perfis do OrcaSlicer para uso com esses modos. Ao usar esses perfis, você pode alternar entre o modo nopoop e a purga controlada pelo fatiador.
+
+##### Modo Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
+
+Neste modo, nenhuma purga é realizada pela impressora durante as trocas de cor. A impressora cortará o filamento, retornará à torre de limpeza (prime tower) para descarregar e carregar o filamento e continuará imediatamente a partir daí.
+
+Na primeira camada, a impressora irá se deslocar até a rampa de descarte durante a troca de filamento, mas retornará à torre de limpeza em seguida sem produzir qualquer resíduo (poop).
+
+Para purgar adequadamente o filamento antigo neste modo, a abordagem recomendada é habilitar "Purge into prime tower" (Purgar na torre de limpeza) nas configurações do OrcaSlicer. Isso é encontrado nas configurações da impressora, na aba "Multimaterial". Você pode então usar a configuração "Flush Volumes" para ajustar as quantidades de purga. Se desejar adicionar uma quantidade fixa aos volumes de descarga calculados automaticamente, pode fazê-lo definindo o "Nozzle Volume" (Volume do bico) na aba "General" (Geral) das configurações da impressora.
+
+É normal que sua torre de limpeza seja consideravelmente maior que o normal ao usar esta opção, especialmente ao trabalhar com alturas de camada finas.
+
+Além disso, você pode usar opções como "Purge to infill" (Purgar no preenchimento), "Purge to this object" (Purgar neste objeto), etc., ao usar este modo, para reduzir a quantidade de resíduos purgados na torre de limpeza.
+
+##### Modo Purga Controlada pelo Fatiador (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+
+Neste modo, nenhuma purga é realizada pela impressora por conta própria durante as trocas de cor. A impressora cortará o filamento, se deslocará até a rampa de descarte e devolverá o controle ao fatiador.
+
+Este modo requer suporte adequado do perfil da impressora no fatiador; em particular, é necessário um gcode de troca de filamento que gerencie a purga e o retorno à torre de limpeza posteriormente. NÃO use este modo com nenhum arquivo gcode que não tenha sido fatiado especificamente para ele.
+
+Opções como "Purge to infill" não podem ser usadas neste modo. Este é um bug no OrcaSlicer e não pode ser corrigido pelo zMod.
+
+##### Perfis de impressora
+
+Perfis de impressora configurados para purga controlada pelo fatiador estão disponíveis no repositório zmod_preprocess. Esses perfis são próximos aos perfis padrão da AD5X, exceto por:
+- Todo o gcode personalizado do zMod adicionado, incluindo o gcode de troca de filamento apropriado para USE_TRASH_ON_PRINT=2
+- "Purge in prime tower" habilitado
+- Define automaticamente a configuração correta de USE_TRASH_ON_PRINT no início da impressão
+- Tipo de Z-Hop definido como Normal
+- Volume do bico definido como 144
+- Tempo de descarga do filamento definido para estimativas mais precisas (com base nas configurações padrão do filament.json)
+
+Ao usar esses perfis, você pode alternar entre o Modo Nopoop (padrão) e o Modo Purga Controlada pelo Fatiador simplesmente ligando ou desligando a opção "Purge in prime tower" nas configurações da impressora.
+
+**Se você realizar uma impressão a partir desses perfis no Modo Purga Controlada pelo Fatiador, certifique-se de alterar sua configuração de USE_TRASH_ON_PRINT de volta para 0 ou 1 antes de imprimir qualquer gcode multicolorido que não tenha sido fatiado com esses perfis.**
 
 ## **7. Adicione seus tipos de filamentos AD5X**
 

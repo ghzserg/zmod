@@ -425,8 +425,9 @@ Nur bei Betrieb im nicht-nativen Bildschirmmodus
 
 Bei Farbwechsel während des Drucks Bin-Reset verwenden
 
-- 0 - nicht verwenden
-- 1 - verwenden (Standard)
+- 0 - kein Auswurf im Abwurfschacht
+- 1 - Auswurf im Abwurfschacht (Standard)
+- 2 - nach dem Farbwechsel zum Abwurfschacht fahren, aber nicht auswerfen
 
 Beispiel: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
