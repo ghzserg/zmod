@@ -142,7 +142,7 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 
 ---
 
-### Präzise Bettnetznivellierung (AUTO_FULL_BED_LEVEL)
+### Präzise Bettnivellierung (AUTO_FULL_BED_LEVEL)
 
 **Warum ist dies notwendig?**
 Selbst ein perfektes nivelliertes Druckbett kann kleine Vertiefungen oder Unebenheiten aufweisen. Ein Bettnetz (oder "Netzkalibrierung") ist wie eine "Höhenkarte" Ihres Druckbettes. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf dem gesamten Druckbett einwandfrei haftet.
@@ -210,7 +210,7 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 
 ---
 
-### Adaptive Tabellenkalibrierung (KAMP)
+### Adaptive Bettkalibrierung (KAMP)
 
 **Warum wird es benötigt?**
 [KAMP](/de/Calibrations/#kamp) ist ein intelligentes System, das ein Druckbettnetz nicht über die gesamte Fläche, sondern nur in dem Bereich aufbaut, in dem sich Ihre Modelle befinden! Dies beschleunigt die Druckvorbereitung erheblich, insbesondere bei großen Druckern, und erhält gleichzeitig alle Vorteile eines präzisen Druckbettnetzes.
@@ -222,10 +222,10 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 3.  Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.
 4.  Die Karte wird dichter und damit genauer.
 
-> [!IMPORTANT]
-> **Ein wichtiges Merkmal des Verfahrens:**
-> 
-> Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
+!!! danger inline end "Wichtig"
+
+**Ein wichtiges Merkmal des Verfahrens:**
+ Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
 
 1.  Die Düse wird **auf Drucktemperatur** erhitzt.
 2.  Es erfolgt eine **Reinigung der Düse** von auslaufendem Kunststoff.
