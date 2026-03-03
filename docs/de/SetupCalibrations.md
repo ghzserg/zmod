@@ -224,8 +224,7 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 3.  Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.
 4.  Die Karte wird dichter und damit genauer.
 
-!!! danger inline end "Wichtig"
-
+!!! danger inline "Wichtig"
 **Ein wichtiges Merkmal des Verfahrens:**
  Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
 
