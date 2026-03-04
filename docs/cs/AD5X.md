@@ -156,6 +156,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Chcete-li zakázat vypouštění filamentu do koše při tisku, použijte parametr [USE_TRASH_ON_PRINT](Global.md#use_trash_on_print).
 
+- 0 - K čištění do odpadu nedojde. Tisková hlava přesto při změnách barvy v první vrstvě přejede k odpadnímu žlabu, aby se omezil výskyt shluků plastu. Pokud k tomu dochází v každé vrstvě, zkontrolujte svůj počáteční G-kód a G-kód pro změnu vrstvy!
+- 1 - Během změn barev dojde k vyčištění do odpadního žlabu. Při každé změně barvy proběhnou dvě čištění o délce rovné `filament_drop_length` ve filament.json (plus `filament_drop_length_add`, pokud jsou materiály odlišné).
+- 2 - Po zavedení nové barvy tisková hlava přejede k odpadnímu žlabu a odtud vrátí řízení sliceru. Toto by mělo být používáno pouze společně s profilem sliceru navrženým pro tento režim.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
@@ -261,12 +265,12 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 1.  **`temp`** — Teplota trysky pro výměnu filamentu. **Výchozí hodnota závisí na typu materiálu.**
 2.  **`filament_drop_length` (Délka čištění)**
 
-    *   **Jednoduše řečeno:** Kolik milimetrů filamentu tiskárna vytlačí do odpadní nádobky, aby **vyčistila trysku** od předchozí barvy.
+    *   **Jednoduše řečeno:** Kolik milimetrů filamentu tiskárna vytlačí do odpadní nádobky, aby **vyčistila trysku** od předchozí barvy. Toto platí při zavádění barev mimo tisk nebo před tiskem, nebo při změně barev, když je USE_TRASH_ON_PRINT nastaveno na 1.
     *   **Tip:** Zvyšte tuto hodnotu, pokud se barvy míchají při výměně cívek. Snižte ji, abyste snížili odpad.
 
 3.  **`filament_drop_length_add` (Dodatečné čištění)**
 
-    *   **Jednoduše řečeno:** Extra délka čištění při přechodu mezi **typy materiálů** (např. z PLA na PETG), nejen barvami.
+    *   **Jednoduše řečeno:** Extra délka čištění při přechodu mezi **typy materiálů** (např. z PLA na PETG), nejen barvami. Toto platí při zavádění barev mimo tisk nebo před tiskem, nebo při změně barev, když je USE_TRASH_ON_PRINT nastaveno na 1.
     *   **Proč je to potřeba:** Různé materiály se špatně mísí, proto je nutné hlubší čištění trysky.
 
 4.  **`nozzle_cleaning_length`** — Délka (v mm) filamentu vytaženého z extruderu při čištění trysky, když se cívka již nepoužívá. **Výchozí: 60 mm.**
@@ -296,6 +300,51 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 **Varování!** Úprava pokročilých parametrů může způsobit poruchy tiskárny, ucpání filamentu nebo poškození hardwaru. Upravujte pouze tehdy, pokud plně rozumíte účelu a potenciálním následkům každého parametru.
 
 **Klíčový poznatek:** Chcete-li snížit odpad, začněte snížením **`filament_drop_length`** a **`filament_drop_length_add`** pro váš materiál. Nezapomeňte po změnách soubor uložit!
+
+---
+
+#### **Čištění řízené slicerem (Slicer-controlled purge)**
+
+Namísto výchozí hodnoty (1) je možné nechat slicer řídit čištění (purge) pomocí jiných nastavení USE_TRASH_ON_PRINT.
+
+##### Režim Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
+
+V tomto režimu tiskárna během výměny barev neprovádí žádné čištění. Tiskárna odstřihne filament, poté se vrátí k čistící věži (prime tower), aby vyjmula a zavedla filament, a následně odtud ihned pokračuje v tisku.
+
+V první vrstvě tiskárna při výměně filamentu namísto toho přejede k odpadní šachtě, ale poté se vrátí k čistící věži, aniž by vyprodukovala jakýkoli odpad (poop).
+
+Aby bylo možné v tomto režimu řádně vyčistit starý filament, doporučeným přístupem je povolit volbu „Čištění v čistící věži“ (Purge into prime tower) v nastavení OrcaSliceru. Toto nastavení naleznete v nastavení tiskárny pod záložkou „Multimaterial“. Poté můžete použít nastavení „Flush Volumes“ pro úpravu množství čištění. Pokud si přejete přidat fixní množství k automaticky vypočítaným objemům propláchnutí, můžete tak učinit nastavením „Objem trysky“ (Nozzle Volume) v záložce „Obecné“ (General) v nastavení tiskárny.
+
+Je normální, že vaše čistící věž bude při použití této volby výrazně větší než obvykle, zejména při práci s malou výškou vrstvy.
+
+V tomto režimu můžete navíc použít volby jako „Čištění do výplně“ (Purge to infill), „Čištění do tohoto objektu“ (Purge to this object) atd., abyste snížili množství odpadu vyčištěného do čistící věže.
+
+Tato volba je podporována pouze v OrcaSliceru; nelze ji použít v Bambu Studio kvůli absenci funkce „Čištění v čistící věži“.
+
+##### Režim odpadu řízený slicerem (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+
+V tomto režimu tiskárna během výměny barev sama neprovádí žádné čištění. Tiskárna odstřihne filament, přejede k odpadní šachtě a předá řízení zpět sliceru.
+
+Tento režim vyžaduje řádnou podporu ze strany profilu tiskárny ve sliceru, zejména je nutný gcode pro výměnu filamentu, který obstará vyhození odpadu a následný návrat k čistící věži. Nepoužívejte tento režim s žádným gcode souborem, který pro něj nebyl specificky připraven (sliced).
+
+Při použití OrcaSliceru nelze v tomto režimu použít volby jako „Čištění do výplně“. Jedná se o chybu v OrcaSliceru a nelze ji opravit pomocí zMod. V Bambu Studio tyto volby fungují správně.
+
+##### Profily tiskáren
+
+Profily tiskáren nastavené pro čištění řízené slicerem jsou k dispozici pro [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) a [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). Tyto profily se blíží výchozím profilům AD5X s výjimkou:
+- Přidány všechny vlastní gcode zMod, včetně příslušného gcode pro výměnu filamentu pro USE_TRASH_ON_PRINT=2
+- Povoleno „Čištění v čistící věži“ (pouze OrcaSlicer)
+- Automaticky nastaví správnou hodnotu USE_TRASH_ON_PRINT na začátku tisku
+- Typ Z-Hop nastaven na Normální (Normal)
+- Objem trysky nastaven na 144
+- Čas vyjmutí filamentu nastaven na 66 s pro přesnější odhady (na základě výchozího nastavení filament.json)
+- Čas rozběhu ventilátoru nastaven na 1,5 s a kickstart na 0,5 s (pouze OrcaSlicer)
+
+Při použití OrcaSliceru můžete přepínat mezi těmito dvěma režimy změnou nastavení „Čištění v čistící věži“. Pokud je povoleno, použije se režim nopoop. Pokud je zakázáno, použije se režim odpadu (poop mode). Profil pro vás na začátku tisku automaticky nastaví správnou hodnotu USE_TRASH_ON_PRINT.
+
+Při použití Bambu Studio je podporován pouze režim odpadu (poop mode).
+
+**Pokud tisknete z těchto profilů v režimu odpadu řízeném slicerem, nezapomeňte před tiskem jakéhokoli vícebarevného gcodu, který nebyl připraven pomocí těchto profilů, změnit nastavení USE_TRASH_ON_PRINT zpět na 0 nebo 1.**
 
 ## **7. Přidat vlastní typy filamentů**
 

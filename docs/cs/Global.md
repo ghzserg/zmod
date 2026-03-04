@@ -400,8 +400,9 @@ Pouze při běhu bez nativního displeje
 
 Použít koš při změně barvy během tisku
 
-- 0 - nepoužívat
-- 1 - používat (výchozí)
+- 0 - žádné čištění v odpadním žlabu
+- 1 - čištění v odpadním žlabu (výchozí)
+- 2 - přejezd k odpadnímu žlabu po změně barvy, ale bez čištění
 
 Příklad: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 

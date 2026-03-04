@@ -425,8 +425,9 @@ Somente quando estiver operando em modo de tela não nativa
 
 Use a redefinição do compartimento ao alterar a cor durante a impressão
 
-- 0 - não usar
-- 1 - usar (padrão)
+- 0 - sem purga na rampa de descarte
+- 1 - purga na rampa de descarte (padrão)
+- 2 - deslocar-se até a rampa de descarte após a troca de cor, mas não purgar
 
 Exemplo: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
