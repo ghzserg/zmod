@@ -331,10 +331,16 @@ When using OrcaSlicer, options such as "Purge to infill" cannot be used in this 
 
 ##### Printer profiles
 
-Printer profiles set up for slicer-controlled purge are available for [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) and [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). These profiles are close to the stock AD5X profiles except for:
-- All zMod custom gcode added, including appropriate filament change gcode for USE_TRASH_ON_PRINT=2
+Printer profiles set up for slicer-controlled purge are available for 
+
+- [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer)
+- [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio).
+
+These profiles are close to the stock AD5X profiles except for:
+  
+- All zMod custom gcode added, including appropriate filament change gcode for ```USE_TRASH_ON_PRINT=2```
 - "Purge in prime tower" enabled (OrcaSlicer only)
-- Automatically sets correct USE_TRASH_ON_PRINT setting at the start of printing
+- Automatically sets correct ```USE_TRASH_ON_PRINT``` setting at the start of printing
 - Z-Hop type set to Normal
 - Nozzle volume set to 144
 - Filament unload time set to 66s for more-accurate estimates (based on default filament.json settings)
