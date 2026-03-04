@@ -307,8 +307,6 @@ For these settings to work, you need to **disable the printer's native display**
 
 It is possible to have the slicer control the purge instead by using other USE_TRASH_ON_PRINT settings, instead of the default value (1).
 
-The zmod_preprocess repo contains OrcaSlicer profiles for use with these modes. When using these profiles, you can switch between nopoop 
-
 ##### Nopoop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
 In this mode, no purge is performed by the printer during color changes. The printer will cut the filament, then return to the prime tower to unload and load filament, then immediately continue from there.
@@ -321,25 +319,30 @@ It is normal for your prime tower to be considerably larger than usual when usin
 
 You can additionally use options like "Purge to infill", "Purge to this object", etc when using this mode, to reduce the amount of waste purged into the prime tower.
 
+This option is only supported in OrcaSlicer; it cannot be used with Bambu Studio due to the lack of "Purge in prime tower".
+
 ##### Slicer-Controlled Poop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
 In this mode, no purge is performed by the printer on its own during color changes. The printer will cut the filament, then travel to the trash chute, and return control to the slicer.
 
 This mode requires proper support from the printer profile in the slicer, in particular, filament change gcode that handles pooping and returning to the prime tower afterwards is necessary. Do NOT use this mode with any gcode file that is not specifically sliced for it.
 
-Options such as "Purge to infill" cannot be used in this mode. This is a bug in OrcaSlicer and cannot be fixed by zMod.
+When using OrcaSlicer, options such as "Purge to infill" cannot be used in this mode. This is a bug in OrcaSlicer and cannot be fixed by zMod. They work correctly when using Bambu Studio.
 
 ##### Printer profiles
 
-Printer profiles set up for slicer-controlled purge are available in the zmod_preprocess repository. These profiles are close to the stock AD5X profiles except for:
+Printer profiles set up for slicer-controlled purge are available for [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) and [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). These profiles are close to the stock AD5X profiles except for:
 - All zMod custom gcode added, including appropriate filament change gcode for USE_TRASH_ON_PRINT=2
-- "Purge in prime tower" enabled
+- "Purge in prime tower" enabled (OrcaSlicer only)
 - Automatically sets correct USE_TRASH_ON_PRINT setting at the start of printing
 - Z-Hop type set to Normal
 - Nozzle volume set to 144
-- Filament unload time set for more-accurate estimates (based on default filament.json settings)
+- Filament unload time set to 66s for more-accurate estimates (based on default filament.json settings)
+- Fan startup time set to 1.5s and kickstart to 0.5s (OrcaSlicer only)
 
-When using these profiles, you can switch between Nopoop Mode (default) and Slicer-Controlled Poop Mode simply by turning on or off the "Purge in prime tower" option under the printer settings.
+When using OrcaSlicer, you can switch between the two modes by altering the "Purge in prime tower" setting. When it is enabled, nopoop mode will be used. When it is disabled, poop mode will be used. The profile will automatically set the correct USE_TRASH_ON_PRINT value for you at the start of a print.
+
+When using Bambu Studio, only poop mode is supported.
 
 **If you do a print from these profiles in Slicer-Controlled Poop Mode, make sure to change your USE_TRASH_ON_PRINT setting back to 0 or 1 before printing any multicolor gcode that was not sliced with these profiles.**
 

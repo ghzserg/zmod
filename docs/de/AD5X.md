@@ -297,45 +297,48 @@ Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildsch
 
 ---
 
-#### **Slicer-gesteuerter Auswurf**
+#### **Slicer-gesteuerte Reinigung (Purge)**
 
-Es ist möglich, dem Slicer die Kontrolle über den Auswurf zu überlassen, indem andere USE_TRASH_ON_PRINT-Einstellungen anstelle des Standardwerts (1) verwendet werden.
-
-Das zmod_preprocess-Repo enthält OrcaSlicer-Profile für die Verwendung mit diesen Modi. Wenn Sie diese Profile verwenden, können Sie in den Nopoop-Modus wechseln.
+Es ist möglich, die Reinigung stattdessen vom Slicer steuern zu lassen, indem andere USE_TRASH_ON_PRINT-Einstellungen anstelle des Standardwerts (1) verwendet werden.
 
 ##### Nopoop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
-In diesem Modus führt der Drucker während des Farbwechsels keinen Auswurf durch. Der Drucker schneidet das Filament ab, kehrt dann zum Reinigungsturm (Prime Tower) zurück, um das Filament zu entladen und neu zu laden, und setzt den Druck von dort aus sofort fort.
+In diesem Modus wird vom Drucker während des Farbwechsels keine Reinigung durchgeführt. Der Drucker schneidet das Filament ab, kehrt zum Reinigungsturm (Prime Tower) zurück, um das Filament ent- und zu laden, und setzt den Druck dann sofort von dort aus fort.
 
-In der ersten Schicht fährt der Drucker beim Filamentwechsel stattdessen zum Abwurfschacht, kehrt aber danach zum Reinigungsturm zurück, ohne Abfall (Poop) zu produzieren.
+In der ersten Schicht fährt der Drucker während des Filamentwechsels stattdessen zum Abwurfschacht, kehrt aber danach zum Reinigungsturm zurück, ohne "Poop" (Abfall) zu produzieren.
 
-Um das alte Filament in diesem Modus ordnungsgemäß zu reinigen, empfiehlt es sich, in den Einstellungen von OrcaSlicer „In Reinigungsturm reinigen“ (Purge into prime tower) zu aktivieren. Dies finden Sie in den Druckereinstellungen unter dem Reiter „Multimaterial“. Sie können dann die Einstellung „Spülmengen“ (Flush Volumes) verwenden, um die Auswurfmenge anzupassen. Wenn Sie den automatisch berechneten Spülmengen einen festen Betrag hinzufügen möchten, können Sie dies tun, indem Sie das „Düsenvolumen“ (Nozzle Volume) unter dem Reiter „Allgemein“ in den Druckereinstellungen festlegen.
+Um das alte Filament in diesem Modus ordnungsgemäß zu reinigen, wird empfohlen, die Option "Reinigung im Reinigungsturm" (Purge into prime tower) in den Einstellungen von OrcaSlicer zu aktivieren. Diese finden Sie in den Druckereinstellungen unter dem Reiter "Multimaterial". Sie können dann die Einstellung "Flush Volumes" verwenden, um die Reinigungsmengen anzupassen. Wenn Sie den automatisch berechneten Spülmengen einen festen Betrag hinzufügen möchten, können Sie dies tun, indem Sie das "Düsenvolumen" (Nozzle Volume) unter dem Reiter "Allgemein" der Druckereinstellungen festlegen.
 
-Es ist normal, dass Ihr Reinigungsturm bei Verwendung dieser Option erheblich größer als üblich ist, insbesondere bei geringen Schichthöhen.
+Es ist normal, dass Ihr Reinigungsturm bei Verwendung dieser Option erheblich größer als gewöhnlich ist, insbesondere bei geringen Schichthöhen.
 
-Zusätzlich können Sie in diesem Modus Optionen wie „In Infill reinigen“ (Purge to infill), „In dieses Objekt reinigen“ (Purge to this object) usw. verwenden, um die in den Reinigungsturm abgegebene Abfallmenge zu reduzieren.
+Zusätzlich können Sie in diesem Modus Optionen wie "In Infill reinigen" (Purge to infill), "In dieses Objekt reinigen" (Purge to this object) usw. verwenden, um die Menge des in den Reinigungsturm gespülten Abfalls zu reduzieren.
 
-##### Slicer-gesteuerter Auswurf-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+Diese Option wird nur in OrcaSlicer unterstützt; sie kann in Bambu Studio aufgrund des Fehlens von "Reinigung im Reinigungsturm" nicht verwendet werden.
 
-In diesem Modus führt der Drucker während des Farbwechsels von sich aus keinen Auswurf durch. Der Drucker schneidet das Filament ab, fährt zum Abwurfschacht und übergibt die Steuerung an den Slicer.
+##### Slicer-gesteuerter Poop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
-Dieser Modus erfordert die entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Auswurf und die anschließende Rückkehr zum Reinigungsturm handhabt. Verwenden Sie diesen Modus NICHT mit G-Code-Dateien, die nicht speziell dafür gesliced wurden.
+In diesem Modus führt der Drucker während des Farbwechsels keine eigene Reinigung durch. Der Drucker schneidet das Filament ab, fährt zum Abwurfschacht und übergibt die Steuerung wieder an den Slicer.
 
-Optionen wie „In Infill reinigen“ können in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht von zMod behoben werden.
+Dieser Modus erfordert eine entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Abwurf (Pooping) und die anschließende Rückkehr zum Reinigungsturm verwaltet. Verwenden Sie diesen Modus NICHT mit einer G-Code-Datei, die nicht speziell dafür gesliced wurde.
+
+Bei der Verwendung von OrcaSlicer können Optionen wie "In Infill reinigen" in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht durch zMod behoben werden. In Bambu Studio funktionieren sie korrekt.
 
 ##### Druckerprofile
 
-Druckerprofile, die für den Slicer-gesteuerten Auswurf eingerichtet sind, sind im zmod_preprocess-Repository verfügbar. Diese Profile ähneln den Standard-AD5X-Profilen, mit folgenden Ausnahmen:
-- Alle benutzerdefinierten zMod-G-Codes wurden hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für USE_TRASH_ON_PRINT=2
-- „In Reinigungsturm reinigen“ ist aktiviert
-- Stellt zu Beginn des Druckvorgangs automatisch die korrekte USE_TRASH_ON_PRINT-Einstellung ein
-- Z-Hop-Typ auf „Normal“ eingestellt
+Druckerprofile, die für die Slicer-gesteuerte Reinigung eingerichtet sind, stehen für [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) und [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio) zur Verfügung. Diese Profile entsprechen weitgehend den Standard-AD5X-Profilen, mit folgenden Ausnahmen:
+- Alle benutzerdefinierten zMod-G-Codes hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für USE_TRASH_ON_PRINT=2
+- "Reinigung im Reinigungsturm" aktiviert (nur OrcaSlicer)
+- Automatische Einstellung des korrekten USE_TRASH_ON_PRINT-Wertes zu Beginn des Drucks
+- Z-Hop-Typ auf Normal eingestellt
 - Düsenvolumen auf 144 eingestellt
-- Filament-Entladezeit für genauere Schätzungen angepasst (basierend auf den Standardeinstellungen in filament.json)
+- Filament-Entladezeit auf 66s eingestellt für genauere Schätzungen (basierend auf den Standardeinstellungen der filament.json)
+- Lüfter-Anlaufzeit auf 1,5s und Kickstart auf 0,5s eingestellt (nur OrcaSlicer)
 
-Wenn Sie diese Profile verwenden, können Sie zwischen dem Nopoop-Modus (Standard) und dem Slicer-gesteuerten Auswurf-Modus wechseln, indem Sie einfach die Option „In Reinigungsturm reinigen“ in den Druckereinstellungen ein- oder ausschalten.
+In OrcaSlicer können Sie zwischen den beiden Modi wechseln, indem Sie die Einstellung "Reinigung im Reinigungsturm" ändern. Wenn diese aktiviert ist, wird der Nopoop-Modus verwendet. Wenn sie deaktiviert ist, wird der Poop-Modus verwendet. Das Profil stellt den korrekten USE_TRASH_ON_PRINT-Wert zu Beginn eines Drucks automatisch für Sie ein.
 
-**Wenn Sie einen Druck mit diesen Profilen im Slicer-gesteuerten Auswurf-Modus durchführen, stellen Sie sicher, dass Sie Ihre USE_TRASH_ON_PRINT-Einstellung wieder auf 0 oder 1 zurücksetzen, bevor Sie mehrfarbigen G-Code drucken, der nicht mit diesen Profilen gesliced wurde.**
+Bei der Verwendung von Bambu Studio wird nur der Poop-Modus unterstützt.
+
+**Wenn Sie einen Druck mit diesen Profilen im Slicer-gesteuerten Poop-Modus durchführen, stellen Sie sicher, dass Sie Ihre USE_TRASH_ON_PRINT-Einstellung wieder auf 0 oder 1 zurücksetzen, bevor Sie mehrfarbigen G-Code drucken, der nicht mit diesen Profilen gesliced wurde.**
 
 ## **7. Fügen Sie Ihre AD5X-Filamenttypen hinzu**
 

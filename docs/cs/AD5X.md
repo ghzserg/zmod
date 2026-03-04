@@ -303,45 +303,48 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 
 ---
 
-#### **Čištění řízené slicerem**
+#### **Čištění řízené slicerem (Slicer-controlled purge)**
 
-Čištění je možné nechat pod kontrolou sliceru použitím jiných nastavení USE_TRASH_ON_PRINT namísto výchozí hodnoty (1).
-
-Repozitář zmod_preprocess obsahuje profily pro OrcaSlicer určené pro tyto režimy. Při použití těchto profilů můžete přepínat mezi nopoop.
+Namísto výchozí hodnoty (1) je možné nechat slicer řídit čištění (purge) pomocí jiných nastavení USE_TRASH_ON_PRINT.
 
 ##### Režim Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
-V tomto režimu tiskárna během změn barev neprovádí žádné čištění. Tiskárna odřízne filament, vrátí se k čistící věži (prime tower) pro vybití a zavedení filamentu a poté odtud okamžitě pokračuje.
+V tomto režimu tiskárna během výměny barev neprovádí žádné čištění. Tiskárna odstřihne filament, poté se vrátí k čistící věži (prime tower), aby vyjmula a zavedla filament, a následně odtud ihned pokračuje v tisku.
 
-V první vrstvě tiskárna během výměny filamentu namísto toho přejede k odpadnímu žlabu, ale poté se vrátí k čistící věži, aniž by vyprodukovala jakýkoli odpad (poop).
+V první vrstvě tiskárna při výměně filamentu namísto toho přejede k odpadní šachtě, ale poté se vrátí k čistící věži, aniž by vyprodukovala jakýkoli odpad (poop).
 
-Aby bylo v tomto režimu starý filament řádně vyčištěn, doporučuje se v nastavení OrcaSliceru povolit volbu „Purge into prime tower“ (Čistit do čistící věže). Tuto volbu najdete v nastavení tiskárny pod záložkou „Multimaterial“. K úpravě množství čištění pak můžete použít nastavení „Flush Volumes“. Pokud si přejete přidat pevné množství k automaticky vypočteným objemům proplachu, můžete tak učinit nastavením „Nozzle Volume“ pod záložkou „General“ v nastavení tiskárny.
+Aby bylo možné v tomto režimu řádně vyčistit starý filament, doporučeným přístupem je povolit volbu „Čištění v čistící věži“ (Purge into prime tower) v nastavení OrcaSliceru. Toto nastavení naleznete v nastavení tiskárny pod záložkou „Multimaterial“. Poté můžete použít nastavení „Flush Volumes“ pro úpravu množství čištění. Pokud si přejete přidat fixní množství k automaticky vypočítaným objemům propláchnutí, můžete tak učinit nastavením „Objem trysky“ (Nozzle Volume) v záložce „Obecné“ (General) v nastavení tiskárny.
 
-Při použití této volby je normální, že vaše čistící věž bude výrazně větší než obvykle, zejména při práci s malými výškami vrstev.
+Je normální, že vaše čistící věž bude při použití této volby výrazně větší než obvykle, zejména při práci s malou výškou vrstvy.
 
-V tomto režimu můžete navíc použít možnosti jako „Purge to infill“ (Čistit do výplně), „Purge to this object“ (Čistit do tohoto objektu) atd., abyste snížili množství odpadu vyčištěného do čistící věže.
+V tomto režimu můžete navíc použít volby jako „Čištění do výplně“ (Purge to infill), „Čištění do tohoto objektu“ (Purge to this object) atd., abyste snížili množství odpadu vyčištěného do čistící věže.
 
-##### Režim čištění řízeného slicerem (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+Tato volba je podporována pouze v OrcaSliceru; nelze ji použít v Bambu Studio kvůli absenci funkce „Čištění v čistící věži“.
 
-V tomto režimu tiskárna sama o sobě neprovádí žádné čištění během změn barev. Tiskárna odřízne filament, přejede k odpadnímu žlabu a vrátí řízení sliceru.
+##### Režim odpadu řízený slicerem (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
-Tento režim vyžaduje náležitou podporu v profilu tiskárny ve sliceru, zejména G-kód pro výměnu filamentu, který zajistí vyčištění a následný návrat k čistící věži. NEPOUŽÍVEJTE tento režim s žádným G-kód souborem, který pro něj nebyl specificky připraven.
+V tomto režimu tiskárna během výměny barev sama neprovádí žádné čištění. Tiskárna odstřihne filament, přejede k odpadní šachtě a předá řízení zpět sliceru.
 
-V tomto režimu nelze použít možnosti jako „Purge to infill“. Jedná se o chybu v OrcaSliceru, kterou zMod nemůže opravit.
+Tento režim vyžaduje řádnou podporu ze strany profilu tiskárny ve sliceru, zejména je nutný gcode pro výměnu filamentu, který obstará vyhození odpadu a následný návrat k čistící věži. Nepoužívejte tento režim s žádným gcode souborem, který pro něj nebyl specificky připraven (sliced).
+
+Při použití OrcaSliceru nelze v tomto režimu použít volby jako „Čištění do výplně“. Jedná se o chybu v OrcaSliceru a nelze ji opravit pomocí zMod. V Bambu Studio tyto volby fungují správně.
 
 ##### Profily tiskáren
 
-Profily tiskáren nastavené pro čištění řízené slicerem jsou k dispozici v repozitáři zmod_preprocess. Tyto profily se blíží standardním profilům AD5X s výjimkou následujícího:
-- Přidán veškerý vlastní G-kód zMod, včetně příslušného G-kódu pro výměnu filamentu pro USE_TRASH_ON_PRINT=2
-- Povoleno „Purge in prime tower“
-- Na začátku tisku se automaticky nastaví správná hodnota USE_TRASH_ON_PRINT
-- Typ Z-Hop nastaven na „Normal“
-- Objem trysky (Nozzle volume) nastaven na 144
-- Čas vybití filamentu nastaven pro přesnější odhady (na základě výchozích nastavení ve filament.json)
+Profily tiskáren nastavené pro čištění řízené slicerem jsou k dispozici pro [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) a [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). Tyto profily se blíží výchozím profilům AD5X s výjimkou:
+- Přidány všechny vlastní gcode zMod, včetně příslušného gcode pro výměnu filamentu pro USE_TRASH_ON_PRINT=2
+- Povoleno „Čištění v čistící věži“ (pouze OrcaSlicer)
+- Automaticky nastaví správnou hodnotu USE_TRASH_ON_PRINT na začátku tisku
+- Typ Z-Hop nastaven na Normální (Normal)
+- Objem trysky nastaven na 144
+- Čas vyjmutí filamentu nastaven na 66 s pro přesnější odhady (na základě výchozího nastavení filament.json)
+- Čas rozběhu ventilátoru nastaven na 1,5 s a kickstart na 0,5 s (pouze OrcaSlicer)
 
-Při použití těchto profilů můžete přepínat mezi režimem Nopoop (výchozí) a režimem čištění řízeného slicerem jednoduše zapnutím nebo vypnutím volby „Purge in prime tower“ v nastavení tiskárny.
+Při použití OrcaSliceru můžete přepínat mezi těmito dvěma režimy změnou nastavení „Čištění v čistící věži“. Pokud je povoleno, použije se režim nopoop. Pokud je zakázáno, použije se režim odpadu (poop mode). Profil pro vás na začátku tisku automaticky nastaví správnou hodnotu USE_TRASH_ON_PRINT.
 
-**Pokud tisknete z těchto profilů v režimu čištění řízeného slicerem, nezapomeňte před tiskem jakéhokoli vícebarevného G-kódu, který nebyl těmito profily připraven, změnit nastavení USE_TRASH_ON_PRINT zpět na 0 nebo 1.**
+Při použití Bambu Studio je podporován pouze režim odpadu (poop mode).
+
+**Pokud tisknete z těchto profilů v režimu odpadu řízeném slicerem, nezapomeňte před tiskem jakéhokoli vícebarevného gcodu, který nebyl připraven pomocí těchto profilů, změnit nastavení USE_TRASH_ON_PRINT zpět na 0 nebo 1.**
 
 ## **7. Přidat vlastní typy filamentů**
 
