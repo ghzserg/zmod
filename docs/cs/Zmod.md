@@ -168,39 +168,39 @@ Aktualizuje firmware přes síť pomocí USB disku.
 
 ### STOP_ZMOD
 
-Vyčistí guppy, moonraker a fluidd/Mainsail z paměti. Telegram bot také přestane fungovat.
+Vyčistí guppy, helix, moonraker a fluidd/Mainsail z paměti. Telegram bot také přestane fungovat.
 
 Parametry:
 
-- GUPPY (0 - nevyčišťovat, 1 - vyčistit)
+- SCREEN (0 - nevyčišťovat, 1 - vyčistit)
 - MOONRAKER (0 - nevyčišťovat, 1 - vyčistit)
 - HTTP (0 - nevyčišťovat, 1 - vyčistit)
 
 Příklad:
 ```
-STOP_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Pokud je tento řádek přidán do startovacího kódu, bude GUPPY vyčištěn z paměti po zahájení tisku.
+Pokud je tento řádek přidán do startovacího kódu, bude GUPPY/HELIX vyčištěn z paměti po zahájení tisku.
 
 ---
 
 ### START_ZMOD
 
-Znovu zapne guppy, moonraker a fluidd/Mainsail po STOP_ZMOD.
+Znovu zapne guppy, helix, moonraker a fluidd/Mainsail po STOP_ZMOD.
 
 Parametry:
 
-- GUPPY (0 - nenačíst, 1 - načíst)
+- SCREEN (0 - nenačíst, 1 - načíst)
 - MOONRAKER (0 - nenačíst, 1 - načíst)
 - HTTP (0 - nenačíst, 1 - načíst)
 
 Příklad:
 ```
-START_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Pokud je tento řádek přidán do koncového kódu, bude GUPPY spuštěn po dokončení tisku.
+Pokud je tento řádek přidán do koncového kódu, bude GUPPY/HELIX spuštěn po dokončení tisku.
 
 ---
 ### ZSSH_ON

@@ -178,39 +178,39 @@ Essa macro procurará a versão mais recente disponível, fará o download para 
 
 ### STOP_ZMOD
 
-Descarregue o guppy, o moonraker e o fluidd/Mainsail da memória. O bot de telegrama também deixará de funcionar
+Descarregue o guppy, helix, o moonraker e o fluidd/Mainsail da memória. O bot de telegrama também deixará de funcionar
 
 Parâmetros:
 
-- GUPPY (0 - não descarregar, 1 - descarregar)
+- SCREEN (0 - não descarregar, 1 - descarregar)
 - MOONRAKER (0 - não carregar, 1 - carregar)
 - HTTP (0 - não carregar, 1 - carregar)
 
 Exemplo:
 ```
-STOP_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Se essa linha for escrita no código inicial, o GUPPY será descarregado da memória após o início da impressão
+Se essa linha for escrita no código inicial, o GUPPY/HELIX será descarregado da memória após o início da impressão
 
 ---
 
 ### START_ZMOD
 
-Ligue novamente o guppy, o moonraker e o fluidd/Mainsail após STOP_ZMOD.
+Ligue novamente o guppy, helix, o moonraker e o fluidd/Mainsail após STOP_ZMOD.
 
 Parâmetros:
 
-- GUPPY (0 - não carregar, 1 - descarregar)
+- SCREEN (0 - não carregar, 1 - descarregar)
 - MOONRAKER (0 - não carregar, 1 - descarregar)
 - HTTP (0 - não carregar, 1 - descarregar)
 
 Exemplo:
 ```
-START_ZMOD GUPPY=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Se essa linha for incluída no código final, o GUPPY será iniciado após o término da impressão
+Se essa linha for incluída no código final, o GUPPY/HELIX será iniciado após o término da impressão
 
 ---
 

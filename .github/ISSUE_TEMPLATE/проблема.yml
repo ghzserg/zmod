@@ -42,7 +42,8 @@ body:
       description: Как вы работаете с принтером?
       options:
         - Я работаю с родным экраном
-        - Я работаю с Guppyscreen
+        - Я работаю с GuppyScreen
+        - Я работаю с HelixScreen
         - Я работаю без экрана
     validations:
       required: true

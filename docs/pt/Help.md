@@ -10,10 +10,14 @@ Abra o bot do telegrama [@zmod_help_bot](http://t.me/zmod_help_bot) e faça sua 
 6. Ligue a impressora
 7. Gerar um problema
 8. Execute [TAR_CONFIG](/pt/Zmod/#tar_config) - salve os arquivos de registro
-9. Poste uma mensagem com a descrição e o arquivo `config.tar.gz
+9. Poste uma mensagem com a descrição e o arquivo `config.tar.gz`
 10. [Adicionar mensagem de erro](https://github.com/ghzserg/zmod/issues)
 
-Se o `TAR_CONFIG` não puder ser executado, conecte-se à impressora via SSH:
+Se não for possível executar `TAR_CONFIG`:
+- Baixe [flashforge_init.s](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh) para um pendrive. [Instruções](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+- Copie do pendrive o arquivo `config-1.6.6-28.tar.gz`, onde 1.6.6-28 é a versão atual do mod
+
+Ou conecte-se à impressora via SSH:
 
 AD5M/AD5MPro:
 

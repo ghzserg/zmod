@@ -13,7 +13,11 @@
 9. Выложить одно сообщение с описанием и файлом `config-1.6.6-28.tar.gz`, где 1.6.6-28 это текущая версия мода
 10. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
 
-Если невозможно выполнить `TAR_CONFIG`, подключитесь к принтеру по SSH:
+Если невозможно выполнить `TAR_CONFIG`:
+- Скачайте на флешку [flashforge_init.sh](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh). [Инструкция](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+- Скопируйте с флешки `config-1.6.6-28.tar.gz`, где 1.6.6-28 это текущая версия мода
+
+Или подключитесь к принтеру по SSH:
 
 AD5M/AD5MPro:
 

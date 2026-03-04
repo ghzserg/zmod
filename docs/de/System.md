@@ -21,6 +21,7 @@ Schalten Sie die Standardanzeige ein und starten Sie den Drucker neu.
 #### DISPLAY_OFF
 
 - GUPPY: 0 - GuppyScreen nicht aktivieren, 1 - GuppyScreen aktivieren (1)
+- Helix: 0 - HelixScreen nicht aktivieren, 1 - HelixScreen aktivieren (0)
 
 Schaltet den Standardbildschirm aus. Spart 13 Megabyte (20 Megabyte bei älteren Versionen der nativen Firmware).
 
@@ -32,6 +33,8 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 - Empfohlen für die Verwendung anstelle des nativen Bildschirms.
 - Bessere Wiederherstellung von unterbrochenen Druckvorgängen
 - Basiert auf [fork](https://github.com/ghzserg/guppyscreen_ff5m), das auf [original repository](https://github.com/ballaswag/guppyscreen) und einem weiteren [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m) basiert.
+
+[HelixScreen](https://github.com/prestonbrown/helixscreen) ist eine alternative Bildschirm-Implementierung
 
 **Deaktivieren Sie den Bildschirm nur, wenn Sie genau verstehen, wie die Tabellenabbildung, der z-Offset und die Makros START_PRINT und END_PRINT funktionieren**
 
