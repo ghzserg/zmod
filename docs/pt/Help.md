@@ -66,6 +66,8 @@ Nossa "frota" tem **mais de 100 configurações exclusivas**. Apenas o básico:
 
       - com GuppyScreen
 
+      - com HelixScreen
+
       - sem tela
 
 - Duas interfaces de controle principais**:

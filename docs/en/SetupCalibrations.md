@@ -321,13 +321,13 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 **How it Works:**
 
-1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen, you need to activate a special setting once [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/Global/#load_zoffset):
+1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen/HelixScreen, you need to activate a special setting once [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *This command tells the system: "Load the Z-Offset from the saved settings, don't reset it."*
 
-2.  After enabling this option, you can adjust the Z-Offset directly during printing in Fluidd/Mainsail or via the adjustment panel in GuppyScreen.
+2.  After enabling this option, you can adjust the Z-Offset directly during printing in Fluidd/Mainsail or via the adjustment panel in GuppyScreen/HelixScreen.
 
     <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
 

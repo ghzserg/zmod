@@ -70,6 +70,7 @@ Zde je, co získáte instalací ZMOD:
 
 - **Vypnutí továrního LCD**: Uvolňuje RAM (kritické na AD5M s pouze 128 MB).
 - **GuppyScreen**: Vylepšené náhradní UI pro displej tiskárny.
+- **HelixScreen**: Vylepšené náhradní UI pro displej tiskárny.
 - **Prohlížení logů**: Plné systémové logy pro diagnostiku.
 - **Firmwarová retrakce**: Upravujte parametry retrakce za chodu, není třeba znovu slicovat.
 - **Plný ROOT přístup**: Vždy je k dispozici plná kontrola nad systémem.

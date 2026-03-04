@@ -77,6 +77,7 @@ Veja o que você obtém ao instalar o ZMOD:
 **ZMOD:**
     * Desativar tela nativa: Para economizar RAM (relevante para modelos AD5M com 128 MB).
     * GuppyScreen:** Uma interface alternativa para a tela da impressora com recursos avançados.
+    * HelixScreen:** Uma interface alternativa para a tela da impressora com recursos avançados.
     * Visualizador de logs: informações completas sobre todos os processos para diagnosticar problemas.
     * Retração de firmware: configure a retração diretamente durante a impressão, sem necessidade de refazer o corte.
     * Acesso total ao ROOT:** O acesso total à impressora é sempre possível

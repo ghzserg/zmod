@@ -66,6 +66,8 @@ chroot /usr/data/.mod/.zmod/
 
       - с GuppyScreen
 
+      - с HelixScreen
+
       - вообще без экрана
 
 - **Два основных интерфейса управления**:

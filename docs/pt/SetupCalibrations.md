@@ -324,13 +324,13 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
 **Como funciona:**
 
-1.  Para que a impressora se lembre do Z-Offset da interface da Web e do GuppyScreen, a configuração especial [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/pt/Global/#load_zoffset) deve ser ativada uma vez:
+1.  Para que a impressora se lembre do Z-Offset da interface da Web e do GuppyScreen/HelixScreen, a configuração especial [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/pt/Global/#load_zoffset) deve ser ativada uma vez:
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *Esse comando informa ao sistema para "Carregar o Z-Offset a partir das configurações salvas, e não redefini-lo para zero".
 
-2.  Quando essa opção estiver ativada, você poderá ajustar o Z-Offset diretamente durante a impressão no Fluidd/Mainsail ou por meio do painel de ajuste no GuppyScreen.
+2.  Quando essa opção estiver ativada, você poderá ajustar o Z-Offset diretamente durante a impressão no Fluidd/Mainsail ou por meio do painel de ajuste no GuppyScreen/HelixScreen.
 
     <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
 

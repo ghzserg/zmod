@@ -341,14 +341,14 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 **Wie es funktioniert:**
 
-1.  Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen merkt, muss einmalig die spezielle Einstellung [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/de/Global/#load_zoffset) aktiviert werden:
+1.  Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen/HelixScreen merkt, muss einmalig die spezielle Einstellung [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/de/Global/#load_zoffset) aktiviert werden:
    
 ```gcode
 SAVE_ZMOD_DATA LOAD_ZOFFSET=1
 ```
 *Dieser Befehl weist das System an, den Z-Offset aus den gespeicherten Einstellungen zu laden und nicht auf Null zu setzen.*
 
-2.  Sobald diese Option aktiviert ist, können Sie den Z-Offset direkt während des Drucks in Fluidd/Mainsail oder über das Einstellungsfeld in GuppyScreen anpassen.
+2.  Sobald diese Option aktiviert ist, können Sie den Z-Offset direkt während des Drucks in Fluidd/Mainsail oder über das Einstellungsfeld in GuppyScreen/HelixScreen anpassen.
 
     <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
 

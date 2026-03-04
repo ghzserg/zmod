@@ -62,7 +62,7 @@ Differences between KlipperMod and ZMOD:
 - KlipperMod uses pure Klipper with minimal Flashforge 5m (pro)-specific changes.
 - ZMOD uses the standard Klipper from the native firmware, as well as Klipper 13.
 - KlipperMod uses KlipperScreen as a printer screen.
-- ZMOD uses the native screen or GuppyScreen instead of KlipperScreen.
+- ZMOD uses the native screen or GuppyScreen/HelixScreen instead of KlipperScreen.
 - KlipperMod uses Moonraker-timelapse.
 - ZMOD uses moonraker-telegram-bot on an EXTERNAL host with timelapse support and plugin timelapse
 
@@ -79,9 +79,9 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 
 #### What's in KlipperMod but not in ZMOD:
 
-*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In ZMOD, native screen or GuppyScreen is used instead of KlipperScreen
+*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In ZMOD, native screen or GuppyScreen/HelixScreen is used instead of KlipperScreen
 *   [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - ZMOD uses Telegram bot and [plugin Timelapse](https://github.com/ghzserg/timelapse/)
-*   Network configuration via iwd/wpa_supplicant (in case of guppyscreen) - in ZMOD network configuration is done through the native screen, network startup is possible even without the native screen
+*   Network configuration via iwd/wpa_supplicant (in case of GuppyScreen/HelixScreen) - in ZMOD network configuration is done through the native screen, network startup is possible even without the native screen
 
 #### What's in ZMOD but not in KlipperMod:
 
@@ -94,10 +94,10 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 *   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD over the network
 *   [Entware](/FAQ/#entware-in-zmod-how-to-use-it)
 *   Fixed [E0017 error](/Global/#fix_e0017)
-*   Additionally, GuppyScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling
+*   Additionally, GuppyScreen/HelixScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling
 *   Fixed driver cooling fans operation. They automatically turn on when motors are running. On native firmware - only during printing.
 *   Adaptive bed leveling [KAMP](/Calibrations/#kamp)
-*   PID calibration for [extruder](/Calibrations/#pid_tune_extruder) and [bed](/Calibrations/#pid_tune_bed), including via GuppyScreen
+*   PID calibration for [extruder](/Calibrations/#pid_tune_extruder) and [bed](/Calibrations/#pid_tune_bed), including via GuppyScreen/HelixScreen
 *   Implemented [COLDPULL](/Filament/#coldpull) (nozzle cleaning) without force. Implementation of [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 #### What's in ZMOD but not in native firmware:
@@ -106,7 +106,7 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 - Klipper 13 support
 - Telegram bot support
 - All features listed in the comparison with KlipperMod
-- [The native firmware sends a lot of data to Chinese servers](https://github.com/FlashForge/Orca-Flashforge/issues/26), this can be avoided by using zmod with GuppyScreen
+- [The native firmware sends a lot of data to Chinese servers](https://github.com/FlashForge/Orca-Flashforge/issues/26), this can be avoided by using zmod with GuppyScreen/HelixScreen
 
 ---
 
@@ -186,9 +186,9 @@ The offset for native and non-native screens is not the same, and each has its o
 
 Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from native screens to non-native screens.
 
-Z-offset adjustments via Fluidd/Mainsail/GuppyScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.
+Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.
 
-Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
+Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
 
 Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
@@ -269,7 +269,7 @@ The printer can operate in two modes:
 - With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
 - Without the native screen - in this case, all features are controlled by zMod.
 This doesn't mean you need to turn off the screen or replace it with a different one.
-In the mode without the native screen, you can use the alternative software screen GuppyScreen or turn off the screen completely, so it will turn off.
+In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen or turn off the screen completely, so it will turn off.
 
 !!! warning
     Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros

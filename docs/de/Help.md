@@ -66,6 +66,8 @@ Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlag
 
       - mit GuppyScreen
 
+      - mit HelixScreen
+
       - kein Bildschirm
 
 - **Zwei Hauptsteuerungsschnittstellen**:

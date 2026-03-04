@@ -68,6 +68,8 @@ Naši „flotilu" tvoří **přes 100 jedinečných konfigurací**. Jen podle hl
 
       - GuppyScreen
 
+      - HelixScreen
+
       - Bez obrazovky (headless)
 
 - **Primární uživatelská rozhraní**:

@@ -16,7 +16,7 @@
   - O KlipperMod usa o Klipper puro com um mínimo de alterações específicas do flashforge 5m(pro)
       - O ZMOD usa o Klipper padrão do firmware nativo, bem como o Klipper 13.
       - O KlipperMod usa o KlipperScreen como uma tela para a impressora.
-      - O ZMOD usa a tela nativa ou o GuppyScreen em vez do KlipperScreen
+      - O ZMOD usa a tela nativa ou o GuppyScreen/HelixScreen em vez do KlipperScreen
       - O KlipperMod usa o moonraker-timelapse
       - O ZMOD usa o moonraker-telegram-bot em um host EXTERNO que suporta timelapse ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
 
@@ -33,9 +33,9 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 
 #### O que está no KlipperMod e o que não está no ZMOD:
 
-- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - tela para impressora. No ZMOD, em vez de KlipperScreen, é uma tela nativa ou GuppyScreen
+- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - tela para impressora. No ZMOD, em vez de KlipperScreen, é uma tela nativa ou GuppyScreen/HelixScreen
 - [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - o ZMOD usa o bot do Telegram ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
-- Configuração de rede via iwd/wpa_supplicant (no caso de guppyscreen) - na configuração de rede do zMod via tela nativa, a inicialização da rede também é possível no modo de tela não nativa
+- Configuração de rede via iwd/wpa_supplicant (no caso de GuppyScreen/HelixScreen) - na configuração de rede do zMod via tela nativa, a inicialização da rede também é possível no modo de tela não nativa
 
 #### O que está no ZMOD e o que não está no KlipperMod:
 
@@ -48,10 +48,10 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 - Atualização automática do `Fluidd`/`Mainsail`/`Moonraker` e do ZMOD pela rede
 - [Entware](/pt/FAQ/#-zmod-entware-entware--how-to-use-it)
 - Bug corrigido [E0017](/pt/Sistema/#fix_e0017)
-- Além disso, o GuppyScreen suporta: calibração de PID, controle de flap, reversão de firmware, limpeza de bocal, redefinição de célula de carga, ajuste de parafuso, ColdPull, mapa de tabela finalizado
+- Além disso, o GuppyScreen/HelixScreen suporta: calibração de PID, controle de flap, reversão de firmware, limpeza de bocal, redefinição de célula de carga, ajuste de parafuso, ColdPull, mapa de tabela finalizado
 - Operação fixa dos ventiladores do soprador do driver. Eles são ligados automaticamente quando os motores estão funcionando. No firmware nativo - somente durante a impressão.
 - Remoção do mapa da tabela adaptável [KAMP](/pt/Calibrations/#kamp)
-- Calibração do PID do [extrusor](/pt/Calibrations/#pid_tune_extruder) e da [mesa](/pt/Calibrations/#pid_tune_bed), inclusive via GuppyScreen.
+- Calibração do PID do [extrusor](/pt/Calibrations/#pid_tune_extruder) e da [mesa](/pt/Calibrations/#pid_tune_bed), inclusive via GuppyScreen/HelixScreen.
 - Implementação do [COLDPULL/coldpull](/pt/Filament/#coldpull) (limpeza do bocal) sem violência. Realização de [este algoritmo](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
@@ -62,7 +62,7 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 - Suporte ao bot do Telegram
 - Suporte ao Klipper 13
 - Todos os recursos listados em comparação com o KlipperMod.
-- O firmware nativo envia muitos dados para servidores chineses (https://github.com/FlashForge/Orca-Flashforge/issues/26), o que pode ser evitado com o uso do zmod com o GuppyScreen.
+- O firmware nativo envia muitos dados para servidores chineses (https://github.com/FlashForge/Orca-Flashforge/issues/26), o que pode ser evitado com o uso do zmod com o GuppyScreen/HelixScreen.
 
 ---
 
@@ -119,7 +119,7 @@ A impressora pode ser operada em dois modos:
 - Com tela nativa - nesse caso, quase toda a lógica é controlada pela tela nativa e muitas coisas não podem ser alteradas.
 - Sem tela nativa - nesse caso, todos os recursos são controlados pelo zMod.
 Isso não significa que você precise desativar a tela por hardware ou alterá-la para outra.
-No modo de tela não nativa, você pode usar a tela alternativa do software GuppyScreen ou desligar a tela completamente e ela será desligada.
+No modo de tela não nativa, você pode usar a tela alternativa do software GuppyScreen/HelixScreen ou desligar a tela completamente e ela será desligada.
 
 **Não desative a tela a menos que entenda claramente como funcionam o mapa da tabela, o z-offset e as macros START_PRINT e END_PRINT**
 
@@ -214,9 +214,9 @@ Use ```LOAD_ZOFFSET_NATIVE``` para copiar o z-offset da tela nativa para o modo 
 
 O z-offset salvo na tela é usado.
 
-O deslocamento Z do Fluidd/Mainsail/GuppyScreen afeta **apenas até a reinicialização** e não deve ser alterado sem que se saiba para onde o bocal está se movendo.
+O deslocamento Z do Fluidd/Mainsail/GuppyScreen/HelixScreen afeta **apenas até a reinicialização** e não deve ser alterado sem que se saiba para onde o bocal está se movendo.
 
-Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
+Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen/HelixScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
 
 Você também pode usar os parâmetros [START_PRINT](/pt/Main/#start_print) para definir o deslocamento Z
 

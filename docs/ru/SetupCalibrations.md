@@ -324,13 +324,13 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 **Как это работает:**
 
-1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/ru/Global/#load_zoffset):
+1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen/HelixScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/ru/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *Эта команда говорит системе: "Загружай Z-Offset из сохраненных настроек, а не обнуляй его".*
 
-2.  После включения этой опции вы можете регулировать Z-Offset прямо во время печати в Fluidd/Mainsail или через панель регулировки в GuppyScreen.
+2.  После включения этой опции вы можете регулировать Z-Offset прямо во время печати в Fluidd/Mainsail или через панель регулировки в GuppyScreen/HelixScreen.
 
     <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
 

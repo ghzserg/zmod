@@ -16,7 +16,7 @@
   - KlipperMod verwendet reinen Klipper mit einem Minimum an flashforge 5m(pro) spezifischen Änderungen
       - ZMOD verwendet den Standard Klipper aus der nativen Firmware sowie Klipper 13.
       - KlipperMod verwendet KlipperScreen als Bildschirm für den Drucker.
-      - ZMOD verwendet den nativen Bildschirm oder GuppyScreen anstelle von KlipperScreen
+      - ZMOD verwendet den nativen Bildschirm oder GuppyScreen/HelixScreen anstelle von KlipperScreen
       - KlipperMod verwendet moonraker-Timelapse
       - ZMOD verwendet moonraker-telegram-bot auf einem EXTERNEN Host, der Timelapse oder [TimeLapse plugin](https://github.com/ghzserg/timelapse/) unterstützt.
 
@@ -33,9 +33,9 @@ ZMOD basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Da
 
 #### Was ist in KlipperMod und was ist nicht in ZMOD:
 
-- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - Bildschirm für Drucker. In ZMOD ist es statt des KlipperScreen ein nativer Bildschirm oder GuppyScreen
+- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - Bildschirm für Drucker. In ZMOD ist es statt des KlipperScreen ein nativer Bildschirm oder GuppyScreen/HelixScreen
 - [Moonraker-Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - ZMOD verwendet Telegram-Bot oder [TimeLapse-Plugin](https://github.com/ghzserg/timelapse/).
-- Netzwerkeinrichtung über iwd/wpa_supplicant (im Falle von guppyscreen) - im zMod erfolgt die Netzwerkeinrichtung über den nativen Bildschirm, der Netzwerkstart ist auch im nicht-nativen Bildschirm-Modus möglich
+- Netzwerkeinrichtung über iwd/wpa_supplicant (im Falle von GuppyScreen/HelixScreen) - im zMod erfolgt die Netzwerkeinrichtung über den nativen Bildschirm, der Netzwerkstart ist auch im nicht-nativen Bildschirm-Modus möglich
 
 #### Was ist in ZMOD und was ist nicht in KlipperMod:
 
@@ -48,10 +48,10 @@ ZMOD basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Da
 - Automatische Aktualisierung von `Fluidd`/`Mainsail`/`Moonraker` und ZMOD über das Netzwerk
 - Entware](/de/FAQ/#-zmod-entware-entware--how-to-use-it)
 - Fehler behoben [E0017](/de/System/#fix_e0017)
-- Zusätzlich unterstützt GuppyScreen: PID-Kalibrierung, Klappensteuerung, Rollback von Firmware, Düsenreinigung, Wägezellen-Reset, Schneckenjustierung, ColdPull, finalisierte Tabellenkarte
+- Zusätzlich unterstützt GuppyScreen/HelixScreen: PID-Kalibrierung, Klappensteuerung, Rollback von Firmware, Düsenreinigung, Wägezellen-Reset, Schneckenjustierung, ColdPull, finalisierte Tabellenkarte
 - Fester Betrieb von Treibergebläsen. Sie werden automatisch eingeschaltet, wenn die Motoren laufen. Bei nativer Firmware - nur beim Drucken.
 - Entfernung der adaptiven Tabellenkarte [KAMP](/de/Kalibrierungen/#kamp)
-- PID-Kalibrierung von [extruder](/ru/Kalibrierungen/#pid_tune_extruder) und [table](/ru/Kalibrierungen/#pid_tune_bed) einschließlich über GuppyScreen.
+- PID-Kalibrierung von [extruder](/ru/Kalibrierungen/#pid_tune_extruder) und [table](/ru/Kalibrierungen/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
 - Implementierung von [COLDPULL/coldpull](/ru/Filament/#coldpull) (Düsenreinigung) ohne Gewalt. Verwirklichung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
@@ -62,7 +62,7 @@ ZMOD basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Da
 - Telegram-Bot-Unterstützung
 - Klipper 13-Unterstützung
 - Alle Funktionen, die im Vergleich zu KlipperMod aufgeführt sind.
-- Die native Firmware sendet eine Menge Daten an chinesische Server (https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von zmod mit GuppyScreen vermieden werden.
+- Die native Firmware sendet eine Menge Daten an chinesische Server (https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von zmod mit GuppyScreen/HelixScreen vermieden werden.
 
 ---
 
@@ -119,7 +119,7 @@ Der Drucker kann in zwei Modi betrieben werden:
 - Mit nativem Bildschirm - in diesem Fall wird fast die gesamte Logik über den nativen Bildschirm gesteuert und viele Dinge können nicht geändert werden.
 - Ohne nativen Bildschirm - in diesem Fall werden alle Funktionen vom zMod gesteuert.
 Das bedeutet nicht, dass Sie den Bildschirm hardwaremäßig deaktivieren oder ihn durch einen anderen ersetzen müssen.
-Im nicht-nativen Bildschirmmodus können Sie den alternativen Software-Bildschirm von GuppyScreen verwenden oder den Bildschirm ganz ausschalten und er wird ausgeschaltet.
+Im nicht-nativen Bildschirmmodus können Sie den alternativen Software-Bildschirm von GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten und er wird ausgeschaltet.
 
 **Deaktivieren Sie den Bildschirm nicht, wenn Sie nicht genau wissen, wie die Tabellenzuordnung, der Z-Offset und die Makros START_PRINT und END_PRINT funktionieren**
 
@@ -214,9 +214,9 @@ Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den z-Offset vom nativen Bildschirm 
 
 Es wird der auf dem Bildschirm gespeicherte z-Offset verwendet.
 
-Der Z-Offset von Fluidd/Mainsail/GuppyScreen wirkt **nur bis zum Neustart** und sollte nicht verändert werden, ohne zu wissen, wohin sich die Düse bewegt.
+Der Z-Offset von Fluidd/Mainsail/GuppyScreen/HelixScreen wirkt **nur bis zum Neustart** und sollte nicht verändert werden, ohne zu wissen, wohin sich die Düse bewegt.
 
-Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) angegeben ist (der standardmäßig deaktiviert ist, um `SAVE_ZMOD_DATA LOAD_ZOFFSET=1` zu aktivieren), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/ru/Main/#start_print) verwendet wird.
+Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) angegeben ist (der standardmäßig deaktiviert ist, um `SAVE_ZMOD_DATA LOAD_ZOFFSET=1` zu aktivieren), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/ru/Main/#start_print) verwendet wird.
 
 Sie können auch die Parameter [START_PRINT](/ru/Main/#start_print) verwenden, um den Z-Offset zu setzen
 
