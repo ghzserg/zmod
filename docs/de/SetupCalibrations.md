@@ -41,14 +41,15 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 ```gcode
 PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
 ```
-    **Was das bedeutet:**
+* **Was das bedeutet:**
 
-    * * ```TEMPERATURE=255``` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
-        * ```COOLER=80``` - die Kühlung erfolgt mit 80% Leistung.
+  * ```TEMPERATURE=255``` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
+  * ```COOLER=80``` - die Kühlung erfolgt mit 80% Leistung.
 
-- **Wenn Sie fertig sind:**
-  *  **Der Drucker speichert die neuen Einstellungen selbständig.**
-        * **Starten Sie den Drucker unbedingt neu!** Dies ist erforderlich, um die Systemdaten zu aktualisieren und Abstürze zu verhindern.
+ * **Wenn Sie fertig sind:**
+ 
+   *  **Der Drucker speichert die neuen Einstellungen selbständig.**
+   * **Starten Sie den Drucker unbedingt neu!** Dies ist erforderlich, um die Systemdaten zu aktualisieren und Abstürze zu verhindern.
 
 ---
 
@@ -89,9 +90,10 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie die Temperatur, d
 
     * ```TEMPERATURE=80``` - die Kalibrierung wird für das Heizbett von 80°C durchgeführt. Stellen Sie die gewünschte Temperatur ein.
 
-- **Wenn Sie fertig sind:**
+* **Wenn Sie fertig sind:**
+  
     * Die neuen Einstellungen werden automatisch gespeichert.
-        * **Vergessen Sie nicht, den Drucker neu zu starten**, damit die neuen Einstellungen vollständig übernommen werden.
+    * **Vergessen Sie nicht, den Drucker neu zu starten**, damit die neuen Einstellungen vollständig übernommen werden.
 
 ---
 
@@ -125,9 +127,9 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 ```
 
-- **Wichtig:**
+* **Wichtig:**
     * Der Drucker heizt den Extruder und das Heizbett auf die eingestellten Temperaturen auf.
-        * Er startet den Vorgang und zeigt Ihnen an, welche Schraube Sie um wie viel Grad drehen müssen (z.B. "clockwise" für im Uhrzeigersinn, "counter-clockwise" für gegen den Uhrzeigersinn).
+    * Er startet den Vorgang und zeigt Ihnen an, welche Schraube Sie um wie viel Grad drehen müssen (z.B. "clockwise" für im Uhrzeigersinn, "counter-clockwise" für gegen den Uhrzeigersinn).
 
     <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
 
@@ -142,7 +144,7 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 
 ---
 
-### Präzise Bettnetznivellierung (AUTO_FULL_BED_LEVEL)
+### Präzise Bettnivellierung (AUTO_FULL_BED_LEVEL)
 
 **Warum ist dies notwendig?**
 Selbst ein perfektes nivelliertes Druckbett kann kleine Vertiefungen oder Unebenheiten aufweisen. Ein Bettnetz (oder "Netzkalibrierung") ist wie eine "Höhenkarte" Ihres Druckbettes. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf dem gesamten Druckbett einwandfrei haftet.
@@ -199,8 +201,8 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 
 In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle entspricht.
 
-> [!NOTE]
-> Wenn es keine gespeicherte Bettnetzkarte für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Bettnetzkarte und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.
+!!! info inline end "Info"
+    Wenn es keine gespeicherte Bettnetzkarte für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Bettnetzkarte und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.
 
 **Gesamte Reihenfolge der Operationen:**
 
@@ -210,7 +212,7 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 
 ---
 
-### Adaptive Tabellenkalibrierung (KAMP)
+### Adaptive Bettkalibrierung (KAMP)
 
 **Warum wird es benötigt?**
 [KAMP](/de/Calibrations/#kamp) ist ein intelligentes System, das ein Druckbettnetz nicht über die gesamte Fläche, sondern nur in dem Bereich aufbaut, in dem sich Ihre Modelle befinden! Dies beschleunigt die Druckvorbereitung erheblich, insbesondere bei großen Druckern, und erhält gleichzeitig alle Vorteile eines präzisen Druckbettnetzes.
@@ -222,10 +224,9 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 3.  Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.
 4.  Die Karte wird dichter und damit genauer.
 
-> [!IMPORTANT]
-> **Ein wichtiges Merkmal des Verfahrens:**
-> 
-> Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
+!!! danger inline "Wichtig"
+**Ein wichtiges Merkmal des Verfahrens:**
+ Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
 
 1.  Die Düse wird **auf Drucktemperatur** erhitzt.
 2.  Es erfolgt eine **Reinigung der Düse** von auslaufendem Kunststoff.

@@ -155,6 +155,10 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Um das Abladen von Filament in den Papierkorb beim Drucken zu deaktivieren, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
 
+- 0 - Es findet kein Auswurf in den Abwurfschacht statt. Der Druckkopf fährt bei Farbwechseln in der ersten Schicht dennoch zum Abwurfschacht, um Blobs zu reduzieren. Falls dies in jeder Schicht passiert, überprüfen Sie bitte Ihren Start- und Schichtwechsel-G-Code!
+- 1 - Bei Farbwechseln erfolgt ein Auswurf in den Abwurfschacht. Bei jedem Farbwechsel werden zwei Auswürfe mit der Länge `filament_drop_length` aus der filament.json (plus `filament_drop_length_add`, falls die Materialien unterschiedlich sind) durchgeführt.
+- 2 - Nach dem Einziehen der neuen Farbe fährt der Druckkopf zum Abwurfschacht und übergibt von dort aus die Steuerung wieder an den Slicer. Dies sollte nur zusammen mit einem speziell für diesen Modus entwickelten Slicer-Profil verwendet werden.
+
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
@@ -254,12 +258,12 @@ Damit diese Einstellungen funktionieren, müssen Sie den **eigenen Bildschirm de
 1.  ** `temp`** - Die Temperatur, auf die sich die Filament-Wechsel-Düse aufheizt. **Der Standardwert hängt von der Materialart ab.
 2.  ** `filament_drop_length` - Die Temperatur, auf die die Düse für den Fadenwechsel aufgeheizt wird.
 
-    * **Einfach:** Wie viele Millimeter Plastik der Drucker in den Abfallbehälter drückt, um die Düse von alter Farbe zu **reinigen**.
+    * **Einfach:** Wie viele Millimeter Plastik der Drucker in den Abfallbehälter drückt, um die Düse von alter Farbe zu **reinigen**. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor einem Druck, oder beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
         ** **Tipp:** Wenn die Farben beim Wechseln der Spulen gemischt werden, erhöhen Sie diese Zahl. Wenn Sie weniger Abfall wünschen, verringern Sie diesen Wert.
 
 3.  **`Filament_drop_length_add` (Optional zurücksetzen)**
 
-    * **Einfach ausgedrückt:** Wie viel **mehr** Plastik der Drucker in den Müll wirft, wenn Sie nicht nur die Farbe, sondern auch den **Materialtyp** ändern (z. B. von PLA zu PETG).
+    * **Einfach ausgedrückt:** Wie viel **mehr** Plastik der Drucker in den Müll wirft, wenn Sie nicht nur die Farbe, sondern auch den **Materialtyp** ändern (z. B. von PLA zu PETG). Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor einem Druck, oder beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
         **Warum wird es benötigt:** Verschiedene Materialien lassen sich nicht gut mischen, daher muss die Düse besser gereinigt werden.
 
 4.  **`nozzle_cleaning_length`** - Die Länge (in mm), die das Filament beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr in Gebrauch ist. **Voreinstellung: 60 mm.
@@ -290,6 +294,51 @@ Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildsch
 **WARNUNG!** Das Ändern der Einstellungen im erweiterten Bereich kann zu fehlerhaftem Betrieb des Druckers, Filamentstaus oder Ausfällen führen. Ändern Sie die Einstellungen nur, wenn Sie genau wissen, wofür die einzelnen Parameter verantwortlich sind und welche Folgen sie haben können.
 
 **Hauptgedanken:** Wenn Sie weniger Abfall haben wollen, beginnen Sie damit, die **`filament_drop_length`** und **`filament_drop_length_add`** Zahlen für Ihren Kunststoff zu reduzieren. Vergessen Sie nicht, die Datei nach den Änderungen zu speichern!
+
+---
+
+#### **Slicer-gesteuerte Reinigung (Purge)**
+
+Es ist möglich, die Reinigung stattdessen vom Slicer steuern zu lassen, indem andere USE_TRASH_ON_PRINT-Einstellungen anstelle des Standardwerts (1) verwendet werden.
+
+##### Nopoop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
+
+In diesem Modus wird vom Drucker während des Farbwechsels keine Reinigung durchgeführt. Der Drucker schneidet das Filament ab, kehrt zum Reinigungsturm (Prime Tower) zurück, um das Filament ent- und zu laden, und setzt den Druck dann sofort von dort aus fort.
+
+In der ersten Schicht fährt der Drucker während des Filamentwechsels stattdessen zum Abwurfschacht, kehrt aber danach zum Reinigungsturm zurück, ohne "Poop" (Abfall) zu produzieren.
+
+Um das alte Filament in diesem Modus ordnungsgemäß zu reinigen, wird empfohlen, die Option "Reinigung im Reinigungsturm" (Purge into prime tower) in den Einstellungen von OrcaSlicer zu aktivieren. Diese finden Sie in den Druckereinstellungen unter dem Reiter "Multimaterial". Sie können dann die Einstellung "Flush Volumes" verwenden, um die Reinigungsmengen anzupassen. Wenn Sie den automatisch berechneten Spülmengen einen festen Betrag hinzufügen möchten, können Sie dies tun, indem Sie das "Düsenvolumen" (Nozzle Volume) unter dem Reiter "Allgemein" der Druckereinstellungen festlegen.
+
+Es ist normal, dass Ihr Reinigungsturm bei Verwendung dieser Option erheblich größer als gewöhnlich ist, insbesondere bei geringen Schichthöhen.
+
+Zusätzlich können Sie in diesem Modus Optionen wie "In Infill reinigen" (Purge to infill), "In dieses Objekt reinigen" (Purge to this object) usw. verwenden, um die Menge des in den Reinigungsturm gespülten Abfalls zu reduzieren.
+
+Diese Option wird nur in OrcaSlicer unterstützt; sie kann in Bambu Studio aufgrund des Fehlens von "Reinigung im Reinigungsturm" nicht verwendet werden.
+
+##### Slicer-gesteuerter Poop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
+
+In diesem Modus führt der Drucker während des Farbwechsels keine eigene Reinigung durch. Der Drucker schneidet das Filament ab, fährt zum Abwurfschacht und übergibt die Steuerung wieder an den Slicer.
+
+Dieser Modus erfordert eine entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Abwurf (Pooping) und die anschließende Rückkehr zum Reinigungsturm verwaltet. Verwenden Sie diesen Modus NICHT mit einer G-Code-Datei, die nicht speziell dafür gesliced wurde.
+
+Bei der Verwendung von OrcaSlicer können Optionen wie "In Infill reinigen" in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht durch zMod behoben werden. In Bambu Studio funktionieren sie korrekt.
+
+##### Druckerprofile
+
+Druckerprofile, die für die Slicer-gesteuerte Reinigung eingerichtet sind, stehen für [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) und [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio) zur Verfügung. Diese Profile entsprechen weitgehend den Standard-AD5X-Profilen, mit folgenden Ausnahmen:
+- Alle benutzerdefinierten zMod-G-Codes hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für USE_TRASH_ON_PRINT=2
+- "Reinigung im Reinigungsturm" aktiviert (nur OrcaSlicer)
+- Automatische Einstellung des korrekten USE_TRASH_ON_PRINT-Wertes zu Beginn des Drucks
+- Z-Hop-Typ auf Normal eingestellt
+- Düsenvolumen auf 144 eingestellt
+- Filament-Entladezeit auf 66s eingestellt für genauere Schätzungen (basierend auf den Standardeinstellungen der filament.json)
+- Lüfter-Anlaufzeit auf 1,5s und Kickstart auf 0,5s eingestellt (nur OrcaSlicer)
+
+In OrcaSlicer können Sie zwischen den beiden Modi wechseln, indem Sie die Einstellung "Reinigung im Reinigungsturm" ändern. Wenn diese aktiviert ist, wird der Nopoop-Modus verwendet. Wenn sie deaktiviert ist, wird der Poop-Modus verwendet. Das Profil stellt den korrekten USE_TRASH_ON_PRINT-Wert zu Beginn eines Drucks automatisch für Sie ein.
+
+Bei der Verwendung von Bambu Studio wird nur der Poop-Modus unterstützt.
+
+**Wenn Sie einen Druck mit diesen Profilen im Slicer-gesteuerten Poop-Modus durchführen, stellen Sie sicher, dass Sie Ihre USE_TRASH_ON_PRINT-Einstellung wieder auf 0 oder 1 zurücksetzen, bevor Sie mehrfarbigen G-Code drucken, der nicht mit diesen Profilen gesliced wurde.**
 
 ## **7. Fügen Sie Ihre AD5X-Filamenttypen hinzu**
 

@@ -389,7 +389,7 @@ AD5X only
 
 Determines whether or not to skip the color change process if the before and after colors are mapped to the same physical spool.
 
-- 0 - skip the process
+- 0 - skip the process (default)
 - 1 - do not skip the process
 
 Example: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
@@ -402,8 +402,9 @@ Only when running without the native display
 
 Use trash on color change during printing
 
-- 0 - do not use
-- 1 - use (default)
+- 0 - no purge in trash chute
+- 1 - purge in trash chute (default)
+- 2 - travel to trash chute after color change but do not purge
 
 Example: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
