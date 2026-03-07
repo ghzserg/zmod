@@ -13,16 +13,19 @@ hide:
 
 Parabéns por sua compra de uma impressora FlashForge! O firmware nativo é ótimo para começar, mas se você quiser desbloquear o **potencial completo** do seu dispositivo, o ZMOD é uma solução poderosa e gratuita que transforma sua impressora de "personalizada" em "profissional".
 
-**O que é o ZMOD?
+### O que é o ZMOD?
+
 O ZMOD é um firmware personalizado (modificação) que é instalado sobre o software nativo. Ele não o substitui, mas o **amplia** adicionando um grande número de recursos conhecidos de impressoras avançadas, mantendo todos os benefícios e a conveniência da interface nativa.
+
+> **Por que "zMod"?** O autor é conhecido pelo apelido [zserg](https://zserg.ru/) há mais de 20 anos. Quando chegou a hora de nomear o mod, a resposta foi óbvia: primeira letra do apelido mais "mod". Sem significado oculto, sem simbolismo — é realmente tão simples quanto parece.
 
 ---
 
-### Principais vantagens do ZMOD sobre o firmware nativo**
+### Principais vantagens do ZMOD sobre o firmware nativo
 
 Veja o que você obtém ao instalar o ZMOD:
 
-#### **1. Controle remoto completo**
+#### 1. Controle remoto completo
 
 **Firmware nativo:** Você pode enviar arquivos por Wi-Fi, mas somente por meio do Orca FF ou do aplicativo FlashForge (que pode não estar disponível devido a problemas no servidor).
 **ZMOD:** Você obtém **controle total do seu navegador** no seu computador ou telefone.
@@ -32,7 +35,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * Acesso à interface da Web da impressora via serviço de nuvem da Internet** [zmod.link](https://zmod.link)
     * **Notificação para o Telegram e mais de 100 outros serviços** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-#### **2. Sistemas avançados de calibração e nivelamento**
+#### 2. Sistemas avançados de calibração e nivelamento
 
 **Firmware nativo:** Nivelamento automático básico da mesa (ABL).
 **ZMOD:**
@@ -43,7 +46,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * Espectrograma da correia:** Analisa a condição das correias da impressora para manutenção preventiva.
     * Ajuste do parafuso da mesa:** Permite que você nivele a mesa em 10 minutos.
 
-#### **3. Recursos inteligentes para confiabilidade**
+#### 3. Recursos inteligentes para confiabilidade
 
 * Firmware:** Sensores básicos de terminação de filamento. Não há controle sobre o firmware e os arquivos transferidos, o que resulta em falhas de impressão.
 **ZMOD:**
@@ -53,7 +56,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * Controle de firmware: A impressora pode corromper arquivos por si só, portanto, pode controlar tanto os arquivos de firmware nativos quanto os arquivos zMod.
     * Controle de arquivos transferidos para a impressora:** Controle de soma MD5 ao transferir arquivos.
 
-#### **4. Manuseio flexível de filamentos (especialmente para a AD5X)**
+#### 4. Manuseio flexível de filamentos (especialmente para a AD5X)
 
 **Firmware nativo:** Controle da bobina por meio do menu padrão.
 **ZMOD (para AD5X):**
@@ -62,7 +65,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * ** **"Endless Spool Mode":** Se você tiver vários carretéis do mesmo plástico, a impressora passará automaticamente para o próximo quando o primeiro acabar.
     * Configuração de desperdício fino:** Você pode reduzir a quantidade de plástico que a impressora purga ao trocar de cor, economizando material.
 
-#### **5. Ecossistema e integração**
+#### 5. Ecossistema e integração
 
 * **Firmware nativo:**Sistema fechado.
 **ZMOD:**
@@ -71,7 +74,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * Câmera alternativa: ajuste a resolução, o FPS e reduza a carga de memória para uma transmissão estável.
     * Reprodução de música:** Reproduz música quando a impressão começa ou termina
 
-#### **6. Otimização e controle**
+#### 6. Otimização e controle
 
 * **Firmware nativo:**Configurações limitadas.
 **ZMOD:**
@@ -82,7 +85,7 @@ Veja o que você obtém ao instalar o ZMOD:
     * Retração de firmware: configure a retração diretamente durante a impressão, sem necessidade de refazer o corte.
     * Acesso total ao ROOT:** O acesso total à impressora é sempre possível
 
-#### **6. Klipper 13**
+#### 7. Klipper 13
 
 **Firmware nativo:** O AD5M usa o Klipper 11 desatualizado, que tem muitos erros (E0011, E0017, exclusão de objeto incorreta, SCV incorreta, recuperação de impressão incorreta etc.).
 **ZMOD:**
@@ -92,15 +95,15 @@ Veja o que você obtém ao instalar o ZMOD:
 
 ### Currículo: para quem é o ZMOD?
 
-| Se você... | O ZMOD lhe dará... |
+| Se você… | O ZMOD lhe dará… |
 | :--- | :--- |
-| Controle remoto fácil e calibrações automáticas para uma qualidade consistente "certa na primeira vez".
-| Controle total sobre todos os aspectos da impressão, com recursos avançados para ajuste fino e experimentos com velocidade.
-| Proprietário da Ad5X** | O máximo em controle de impressão multicolorida e custos reduzidos de filamento.
+| **Iniciante** | Controle remoto fácil e calibrações automáticas para qualidade consistente na primeira tentativa. |
+| **Entusiasta** | Controle total sobre todos os aspectos da impressão, com recursos avançados para ajuste fino e experimentos de velocidade. |
+| **Proprietário do AD5X** | O máximo em controle de impressão multicolorida e custos reduzidos de filamento. |
 
 O **ZMOD não substitui o firmware nativo**, mas torna-se um complemento que lhe dá a **escolha** de trabalhar da maneira antiga, por meio da tela, ou usar todas as ferramentas modernas de impressão 3D. Essa é a próxima etapa lógica para qualquer proprietário de FlashForge que deseja obter o máximo de sua impressora.
 
-!!! perigo
+!!! danger
     *Se quiser instalar este mod no seu AD5M (Pro) / [AD5X](/pt/AD5X/), esteja ciente de que você corre o risco de perder a garantia ou danificar a impressora. Prossiga por sua própria conta e risco se quiser experimentar este mod!
     
     Se você não sabe o que é isso, não entende por que precisa da página da Web do klipper ou está satisfeito com o estoque, não instale esse mod. Para todos os outros - **leia as instruções completas**!

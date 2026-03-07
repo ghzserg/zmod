@@ -16,6 +16,8 @@ Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro z
 ### Co je ZMOD?
 ZMOD je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní.
 
+> **Proč „zMod"?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod". Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
+
 ### Klíčové výhody ZMOD oproti továrnímu firmwaru
 Zde je, co získáte instalací ZMOD:
 
@@ -93,7 +95,7 @@ Zde je, co získáte instalací ZMOD:
 
 ZMOD *nenahrazuje* tovární firmware — vylepšuje ho a dává vám na **výběr**: zůstat u známého dotykového UI, nebo využít moderní nástroje pro 3D tisk a získat z vaší FlashForge absolutní maximum. Je to logický další krok pro každého majitele FlashForge, který chce maximalizovat schopnosti své tiskárny.
 
-!!! Pozor
+!!! danger
     *Pokud chcete nainstalovat tento mod na svůj AD5M (Pro) / [AD5X](AD5X.md), mějte na paměti, že riskujete ztrátu záruky nebo poškození tiskárny. Pokud chcete tento mod vyzkoušet, postupujte na vlastní nebezpečí!*
     
     Pokud nevíte, co to je, nerozumíte, proč je potřeba webové rozhraní Klipper, nebo jste prostě spokojeni s továrním firmwarem, NENAINSTALUJTE tuto modifikaci. Pro všechny ostatní – **prosím, pečlivě si přečtěte celé pokyny!**
