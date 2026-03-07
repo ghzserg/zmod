@@ -1,0 +1,57 @@
+/* zMod Wiki custom styles */
+
+.edit-page-footer {
+  margin-top: 1.5rem;
+  padding: 0.75rem 0;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+
+.edit-page-footer:hover {
+  opacity: 1;
+}
+
+/* Header download button */
+.header-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.header-download-button .md-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.header-download-button .md-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #006400;
+  --md-typeset-a-color: #0a7a2a;
+}
+
+/* Slightly brighter hover for light theme links */
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: #0f9a3a;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #006400;
+  --md-typeset-a-color: #32CD32;
+}
