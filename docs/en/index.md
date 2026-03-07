@@ -16,6 +16,8 @@ Congratulations on your FlashForge printer purchase! The stock firmware is great
 ### What is ZMOD?
 ZMOD is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface.
 
+> **Why "zMod"?** The author has been known by the nickname [zserg](https://zserg.ru/) for over 20 years. When it came time to name the mod, the answer was obvious: take the first letter of the nickname and add "mod". No hidden meaning, no symbolism — it really is exactly as simple as it looks.
+
 ### Key Advantages of ZMOD vs. Stock Firmware
 Here’s what you gain by installing ZMOD:
 

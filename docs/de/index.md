@@ -13,16 +13,17 @@ hide:
 
 Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist ZMOD eine leistungsstarke und kostenlose Lösung, die Ihren Drucker von "benutzerdefiniert" auf "professionell" umstellt.
 
-**Was ist ZMOD?**
+### Was ist ZMOD?
+
 ZMOD ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
 
----
+> **Warum „zMod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
 
-### **Hauptvorteile von ZMOD gegenüber nativer Firmware**
+### Hauptvorteile von ZMOD gegenüber nativer Firmware
 
 Das erhalten Sie, wenn Sie ZMOD installieren:
 
-#### **1. Volle Fernsteuerung**
+#### 1. Volle Fernsteuerung
 
 * **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
 * **ZMOD:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
@@ -32,7 +33,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
     - **Zugang zum Drucker-Webinterface über Internet** Cloud-Service [zmod.link](https://zmod.link)
     - **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-#### **2. Erweiterte Kalibrierungs- und Nivellierungssysteme**
+#### 2. Erweiterte Kalibrierungs- und Nivellierungssysteme
 
 * **Native Firmware:** Einfache automatische Druckbettnivellierung (ABL).
 * **ZMOD:**
@@ -43,7 +44,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
     - **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
     - **Tischschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
 
-#### **3. Intelligente Funktionen für Zuverlässigkeit**
+#### 3. Intelligente Funktionen für Zuverlässigkeit
 
 * **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
 * **ZMOD:**
@@ -53,7 +54,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
     - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch ZMOD-Dateien auf Beschädigungen..
     - **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
 
-#### **4. Flexible Handhabung von Filamenten (speziell für AD5X)**
+#### 4. Flexible Handhabung von Filamenten (speziell für AD5X)
 
 * **Native Firmware:** Spulensteuerung über Standardmenü.
 * **ZMOD (für AD5X):**
@@ -62,7 +63,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
     - **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
     - **Feinabfall-Einstellung:** Sie können die Menge an Kunststoff, die der Drucker beim Farbwechsel ausspült, reduzieren und so Material sparen.
 
-#### **5. Ökosystem und Integration**
+#### 5. Ökosystem und Integration
 
 * **Native Firmware:** Geschlossenes System.
 * **ZMOD:**
@@ -72,18 +73,19 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
     - **Alternative Kamera:** Passen Sie die Auflösung und die FPS an und reduzieren Sie die Speicherbelastung für stabiles Streaming.
     - **Musikwiedergabe:** Spielt Musik, wenn der Druck beginnt oder endet
 
-#### **6. Optimierung und Kontrolle**
+#### 6. Optimierung und Kontrolle
 
 * **Native Firmware:** Eingeschränkte Einstellungen.
 * **ZMOD:**
 
     - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
     - **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
+    - **HelixScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
     - **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
     - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicing ist nicht erforderlich..
     - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker ist jederzeit möglich
 
-#### **7. Klipper 13**
+#### 7. Klipper 13
 
 * **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
 * **ZMOD:**
@@ -92,17 +94,17 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 
 ---
 
-### **Résumé: Für wen ist ZMOD?**
+### Résumé: Für wen ist ZMOD?
 
-| Wenn Sie... | ZMOD wird Ihnen... |
+| Wenn Sie… | ZMOD gibt Ihnen… |
 | :--- | :--- |
-| **Neueinsteiger** | Einfache Fernsteuerung und automatische Kalibrierungen für gleichbleibende Qualität "gleich beim ersten Mal". | |
-| **Ethusiast** | Volle Kontrolle über jeden Aspekt des Drucks, mit erweiterten Funktionen für die Feinabstimmung und das Experimentieren mit der Geschwindigkeit. | **Enthusiast** |
-| **Ad5X-Besitzer** | Die ultimative Kontrolle über den Mehrfarbendruck und reduzierte Filamentkosten. | |
+| **Einsteiger** | Einfache Fernsteuerung und automatische Kalibrierungen für gleichbleibende Qualität gleich beim ersten Mal. |
+| **Enthusiast** | Volle Kontrolle über jeden Aspekt des Drucks, mit erweiterten Funktionen für die Feinabstimmung und das Experimentieren mit der Geschwindigkeit. |
+| **AD5X-Besitzer** | Die ultimative Kontrolle über den Mehrfarbendruck und reduzierte Filamentkosten. |
 
 **ZMOD setzt die native Firmware nicht außer Kraft,** sondern wird zu einem Add-on, das Ihnen die **Wahl** gibt, auf die alte Art zu arbeiten, über den Bildschirm, oder alle modernen 3D-Druck-Tools zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
 
-!!! Gefahr
+!!! danger
     *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers **riskieren**. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!
     
     Wenn du nicht weißt, was das ist, nicht verstehst, warum du die Klipper-Webseite brauchst oder einfach nur mit der Standardversion zufrieden bist, installiere diesen Mod nicht, für alle anderen - **bitte lies die vollständige Anleitung**!
