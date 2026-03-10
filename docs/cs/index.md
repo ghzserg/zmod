@@ -142,6 +142,15 @@ Soubory nativního firmwaru se nacházejí [zde](Native_FW.md).
 
 zMod podporuje [Pluginy](Plugin.md)
 
+## Použité doplňky
+
+- Root je založen na implementaci [@darksimpson](https://t.me/darksimpson). Přihlašovací jméno a heslo: root. [Odkaz](https://t.me/c/2000598629/12695/186253)
+- Beeper je založen na implementaci [@drmax_gc](https://t.me/drmax_gc). M300. M356 Für Elise. [Odkaz](https://t.me/FF_5M_5M_Pro/1/333800)
+- Kontrola MD5 od Igora Polunovského. [Odkaz](https://t.me/FF_5M_5M_Pro/12695/272417)
+- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
+
+Mod využívá poznatky z [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), ale není jeho vývojem ani pokračováním a není s ním kompatibilní ani syntaxí maker, ani binárně.
+
 ## Podpořte vývoj
 
 Protože se lidé ptali, přijímám dary, ale pamatujte, že na zMod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.

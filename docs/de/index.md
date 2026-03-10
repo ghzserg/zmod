@@ -152,6 +152,15 @@ Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
 zMod unterstützt [Plugins](/de/Plugin/)
 
+## Verwendete Erweiterungen
+
+- Root basiert auf der Implementierung von [@darksimpson](https://t.me/darksimpson). Login und Passwort: root. [Link](https://t.me/c/2000598629/12695/186253)
+- Beeper basiert auf der Implementierung von [@drmax_gc](https://t.me/drmax_gc). M300. M356 Für Elise. [Link](https://t.me/FF_5M_5M_Pro/1/333800)
+- MD5-Prüfung von Igor Polunovskiy eingebunden. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
+- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
+
+Der Mod verwendet Entwicklungen von [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), ist jedoch keine Weiterentwicklung davon und auch nicht mit ihm kompatibel — weder in der Makrosyntax noch binär.
+
 ## Hilfe zur Entwicklung
 
 Da einige Leute danach gefragt haben, nehme ich Spenden an, aber bitte denken Sie daran, dass ich an zMod zum Spaß arbeite, nicht für Geld. Ich werde keine Spenden annehmen, um an bestimmten Fehlern oder Funktionen zu arbeiten.
