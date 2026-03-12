@@ -1,27 +1,27 @@
 ### AD5X
 
-1. [Wichtige Merkmale](#1-important-features-ad5x)
-2. [Wie man eine Datei in Orca vorbereitet](#2-how-to-prepare-a-file-in-orca-ad5x)
-3. [Farbauswahlmenü (`COLOR`)](#3-how-to-use-the-colour-selection-menu-macros-color-ad5x)
-4. [Menü Drucken (`PRINT`)](#4-print-menu-macro-print-ad5x)
-    - Globale AD5X-Parameter](#global-parameters-ad5x)
-5. [Manuelle Angabe der Spule](#5-how-to-manually-indicate-to-the-printer-whis-coil-is-now-filled-ad5x)
-6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-how-to-set-the-amount-of-waste-at-filament-change-ad5x)
+1. [Wichtige Merkmale](#1-wichtige-merkmale-von-ad5x)
+2. [Wie man eine Datei in Orca vorbereitet](#2-wie-wird-eine-datei-in-orca-ad5x-vorbereitet)
+3. [Farbauswahlmenü (`COLOR`)](#3-verwendung-des-farbauswahlmenüs-makro-color-ad5x)
+4. [Menü Drucken (`PRINT`)](#4-menü-drucken-makro-print-ad5x)
+    - [Globale AD5X-Parameter](#global-parameters-ad5x)
+5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-manuell-mitteilt-welcher-spool-gerade-mit-ad5x-gefüllt-ist)
+6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-einstellen-der-abfallmenge-beim-wechsel-des-ad5x-filaments)
 
-    - 🔧 [Grundeinstellungen](#most-important-settings-what-to-change-most-often-ad5x)
-       - ⚙️ [Erweiterte Einstellungen](#einstellungen-fuer-erweiterte-don't-change-if-you're-not-sure-of-the-result-ad5x)
+    - 🔧 [Grundeinstellungen](#6-einstellen-der-abfallmenge-beim-wechsel-des-ad5x-filaments)
+       - ⚙️ [Erweiterte Einstellungen](#erweiterte-einstellungen-nicht-ändern-wenn-sie-sich-des-ergebnisses-nicht-sicher-sind-ad5x)
 
-7. [Fügen Sie Ihre Filamenttypen hinzu](#7-add-your-filament-types-ad5x)
-8. [Fügen Sie Ihre Farben hinzu](#8-add-your-colours-ad5x)
-9. [Einparken im Korb und Schneiden des Filaments](#9-fix-working-with-basket-and-knife-to-cut-filament-ad5x)
+7. [Fügen Sie Ihre Filamenttypen hinzu](#7-fügen-sie-ihre-ad5x-filamenttypen-hinzu)
+8. [Fügen Sie Ihre Farben hinzu](#8-fügen-sie-ihre-ad5x-farben-hinzu)
+9. [Einparken im Korb und Schneiden des Filaments](#9-korrigiert-den-betrieb-mit-dem-korb-und-dem-filamentschneider-ad5x)
 
-    - Über das Engineering-Menü der nativen Firmware](#customise-the-basket-on-native-firmware-ad5x)
-       - Über Flash auf nativer Firmware](/de/Setup/#attention-ad5x)
+    - [Über das Engineering-Menü der nativen Firmware](#korb-setup-auf-nativer-ad5x-firmware)
+       - [Über Flash auf nativer Firmware](de/Setup/#achtung-ad5x)
 
-10. [IFS-Befehle](#10-ifs-commands)
-11. [IFS-Firmware wiederherstellen](#11-restore-firmware-ifs)
+10. [IFS-Befehle](#10-ifs-befehle)
+11. [IFS-Firmware wiederherstellen](#11-ifs-firmware-wiederherstellen)
 
-[Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md):
+[Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md):
 
 - [bambufy](https://github.com/function3d/bambufy) - Kompatibel mit Bambu Studio, verbessert die Steuerung des Zufuhrturms, bietet eine genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt Mainsail,
 schnelle Farbwechsel und erweiterte Druckfunktionen.
@@ -43,11 +43,11 @@ Unterschiede zum AD5M:
 
 ---
 
-## **2. Wie wird eine Datei in Orca AD5X vorbereitet?
+## **2. Wie wird eine Datei in Orca AD5X vorbereitet?**
 
-[Dateien zum Drucken über "Octo/Klipper" senden](/de/Recomendations/#Dateien-zum-Drucken-octoklipper-senden).
+[Dateien zum Drucken über "Octo/Klipper" senden](/de/Recomendations/#senden-sie-dateien-zum-drucken-über-octoklipper).
 
-**Sie müssen unbenutzte Spulen aus der Liste in Orca entfernen.**
+**Sie müssen die unbenutzte Spulen aus der Liste in Orca entfernen.**
 
 **Beispiel:**
 Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die Farben der Spulen Nr. 1 und Nr. 3 benötigt.
@@ -76,17 +76,17 @@ Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die F
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" />
 
-Sie können vier Maßnahmen ergreifen:
+Sie haben vier Optionen zur Auswahl:
 
 1.  **Die Farbe** der Spule ändern.
 2.  **Ändern Sie die Art** des Kunststoffs (z. B. von PLA zu PETG).
-3.  **Laden** Sie dieses Filament in den Drucker.
+3.  **Laden** Sie das Filament in den Drucker.
 4.  **Entladen** Sie das Filament aus dem Drucker.
 
 **Wie man die Farbe ändert:**
 
-1.  Drücken Sie "Farbe ändern".
-2.  **Wählen Sie eine Farbe aus der Liste aus.** Auf diese Weise wird der Drucker und der native Bildschirm Sie am besten verstehen.
+1.  Drücken Sie **"Farbe ändern"**.
+2.  **Wählen Sie eine Farbe aus der Liste aus.** Dadurch wird sichergestellt, dass Drucker und Bildschirm Ihre Farbauswahl erkennen.
 <img width="561" height="823" alt="image" src="https://github.com/user-attachments/assets/8dbff228-dfc0-4705-92f9-d94df80b7a4e" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
@@ -96,24 +96,26 @@ Sie können vier Maßnahmen ergreifen:
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" />
 
-**Wenn sich die Farbe nicht ändert:** schließen Sie das Fenster mit einem Kreuz und führen Sie das Makro `COLOR` erneut aus. Manchmal wird der Bildschirm nicht rechtzeitig aktualisiert.
+**Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Farbmakro `Color` neu. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
 **So ändern Sie den Typ:**
 
-1.  Klicken Sie auf "Typ ändern".
-2.  **Wählen Sie einen Typ aus der Liste aus.
+1.  Klicken Sie auf **"Typ ändern"**.
+2.  **Wählen Sie einen Typ aus der Liste aus.**
 
 <img width="562" height="710" alt="image" src="https://github.com/user-attachments/assets/baf7b807-c4f5-4ab4-8bfd-2fc43bb448cd" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
 
-**Wenn sich der Typ nicht ändert:** schließen Sie das Fenster mit einem Kreuz und führen Sie das Makro `COLOR` erneut aus. Manchmal wird der Bildschirm nicht rechtzeitig aktualisiert.
+**Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Farbmakro `Color` neu. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
-**Tipp:**Wenn Sie **die gleiche Farbe und den gleichen Typ** für mehrere Spulen angeben, wechselt der Drucker automatisch zur nächsten Spule, wenn die erste aufgebraucht ist. Dies wird als **"Endlosspulenmodus "** bezeichnet.
+!!! tip "**Tipp:**"
+	Wenn Sie **die gleiche Farbe und den gleichen Typ** für mehrere Spulen angeben, wechselt der Drucker automatisch zur nächsten Spule, wenn die erste aufgebraucht ist. 
+	Dies wird als **"Endlosspulenmodus "** bezeichnet.
 
 ---
 
-## **4. Menü "Drucken" (Makro "PRINT") AD5X**
+## **4. Menü "Drucken" (Makro `PRINT`) AD5X**
 
 Dieses Fenster öffnet sich **selbst**, wenn Sie den Druckvorgang starten.
 <img width="567" height="564" alt="image" src="https://github.com/user-attachments/assets/a046c089-22d3-474e-89b6-89815412d068" />
@@ -123,21 +125,21 @@ Dieses Fenster öffnet sich **selbst**, wenn Sie den Druckvorgang starten.
 **Wie ist das zu verstehen:**
 
 * `Cube.gcode` ist der Name der Datei, die gedruckt wird.
-* * "T0" ist die erste Farbe aus der Datei. Sie wird mit Filament von **Spule #4** (orangefarbenes PLA) gedruckt.
-* T1" ist die zweite Farbe. Sie wird mit dem Filament von **Spule #3** (schwarzes PLA) gedruckt.
-* T2" ist die dritte Farbe, sie wird aus der **Spule #2** (grünes PLA) gedruckt.
-* T3" ist die vierte Farbe, die ebenfalls von der **Spule #2** (grünes PLA) gedruckt wird.
+* `T0` ist die erste Farbe aus der Datei. Sie wird mit Filament von **Spule #4** (orangefarbenes PLA) gedruckt.
+* `T1` ist die zweite Farbe. Sie wird mit dem Filament von **Spule #3** (schwarzes PLA) gedruckt.
+* `T2` ist die dritte Farbe, sie wird aus der **Spule #2** (grünes PLA) gedruckt.
+* `T3` ist die vierte Farbe, die ebenfalls von der **Spule #2** (grünes PLA) gedruckt wird.
 
-**Wenn Sie während des Drucks die Farbspule wechseln müssen:**
+**So wechseln Sie die Farbspule während des Druckvorgangs:**
 
-**Drücken Sie einfach auf das gewünschte T** (z.B. T1) und wählen Sie eine andere Spule aus der Liste.
+**Klicken Sie einfach auf das gewünschte T** (z. B. T1) und wählen Sie eine andere Spule aus der Liste aus.
 <img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
 
 ### Globale AD5X-Parameter
 
-Verwenden Sie den globalen Parameter [SILENT](/de/Global/#silent), um zu verhindern, dass das Farbauswahlfenster beim Druckstart angezeigt wird.
+Verwenden Sie den globalen Parameter [SILENT](/de/Global/#stille), um zu verhindern, dass das Farbauswahlfenster beim Druckstart angezeigt wird.
 
 - 0 - Fenster anzeigen (Standard)
 - 1 - Fenster nicht anzeigen, vorher eingestellte Farben verwenden
@@ -147,17 +149,17 @@ Verwenden Sie den globalen Parameter [SILENT](/de/Global/#silent), um zu verhind
 SAVE_ZMOD_DATA SILENT=1
 ```
 
-Verwenden Sie den globalen Parameter [AUTOINSERT](/de/Global/#autoinsert), um das automatische Einsetzen der Stangen im Extruder zu deaktivieren
+Um die automatische Filamentzufuhr in den Extruder zu deaktivieren, verwenden Sie den globalen Parameter [AUTOINSERT](/de/Global/#autoinsert)
 
 ```gcode
 SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
-Um das Abladen von Filament in den Papierkorb beim Drucken zu deaktivieren, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
+Um zu verhindern, dass Filament während des Druckvorgangs in den Abfall entsorgt wird, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
 
-- 0 - Es findet kein Auswurf in den Abwurfschacht statt. Der Druckkopf fährt bei Farbwechseln in der ersten Schicht dennoch zum Abwurfschacht, um Blobs zu reduzieren. Falls dies in jeder Schicht passiert, überprüfen Sie bitte Ihren Start- und Schichtwechsel-G-Code!
-- 1 - Bei Farbwechseln erfolgt ein Auswurf in den Abwurfschacht. Bei jedem Farbwechsel werden zwei Auswürfe mit der Länge `filament_drop_length` aus der filament.json (plus `filament_drop_length_add`, falls die Materialien unterschiedlich sind) durchgeführt.
-- 2 - Nach dem Einziehen der neuen Farbe fährt der Druckkopf zum Abwurfschacht und übergibt von dort aus die Steuerung wieder an den Slicer. Dies sollte nur zusammen mit einem speziell für diesen Modus entwickelten Slicer-Profil verwendet werden.
+- 0 – Es findet keine Materialentnahme im Abfallbehälter statt. Der Druckkopf fährt während Farbwechseln der ersten Schicht weiterhin zum Abfallbehälter, um Klumpenbildung zu vermeiden. Falls dies bei jeder Schicht auftritt, überprüfen Sie bitte Ihren Start- und Schichtwechsel-G-Code!
+- 1 – Bei Farbwechseln erfolgt eine Materialentnahme im Abfallbehälter. Bei jedem Farbwechsel werden zwei Entnahmen mit einer Länge entsprechend der in filament.json festgelegten `filament_drop_length` (plus `filament_drop_length_add` bei unterschiedlichen Materialien) durchgeführt.
+- 2 – Nach dem Einbringen der neuen Farbe fährt der Druckkopf zum Abfallbehälter und übergibt die Steuerung anschließend wieder an den Slicer. Dieser Modus sollte nur mit einem für diesen Modus vorgesehenen Slicer-Profil verwendet werden.
 
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
@@ -169,50 +171,50 @@ Um das Filament nach Abschluss des Druckvorgangs zu entfernen, verwenden Sie den
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Mit dem Parameter [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count) kann die Anzahl der im Farbauswahlfenster angezeigten Werkzeuge eingestellt werden (wenn die Informationen nicht durch das Scannen der Datei ermittelt werden können).
+Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#erlaubte_werkzeug_anzahl).
 
-[Siehe Vorverarbeitungseinstellung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Mit dem Parameter [SCAN_FILE_COLORS](/Global/#scan_file_colors) können Sie gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
+Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-Mit dem Parameter [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
+Mit dem Parameter [AUTO_ASSIGN_COLORS](de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
 
 Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im stillen Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
 
 * 2 (Mindestens ein Material stimmt nicht überein, z. B. wenn in der gcode-Datei ABS angegeben ist, Sie aber nur PLA geladen haben, oder die Materialdaten nicht geladen werden konnten)
 * 4 (Mindestens eine Farbe stimmt überhaupt nicht überein, in der Regel weil das Scannen von Dateien deaktiviert oder fehlgeschlagen ist)
-* 8 (Mindestens eine Farbe stimmt nicht gut überein)
-* 16 (Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen)
+* 8 (Mindestens eine Farbe passt möglicherweise schlecht.)
+* 16 (Mindestens eine physische Spule wurde in der Datei mehr als einem Werkzeugindex zugeordnet.)
 
-[Siehe Vorverarbeitungseinstellung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
-Wenn der Farbwechselbefehl feststellt, dass die neue Farbe mit einer bereits geladenen Farbe übereinstimmt, wird der Wechselvorgang normalerweise als sinnlos übersprungen. Wenn Sie aus irgendeinem Grund wollen, dass der Farbwechselprozess immer vollständig durchgeführt wird, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change).
+Wird ein Befehl zum Farbwechsel aufgerufen und soll auf die bereits geladene Farbe zurückgegriffen werden, wird der Vorgang in der Regel übersprungen, da er sinnlos ist. Falls Sie den vollständigen Farbwechselvorgang aktivieren möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](de/Global/#always_full_color_change).
 
 ```gcode
 SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
 ```
 
-## **5. wie man dem Drucker manuell mitteilt, welcher Spool gerade mit AD5X gefüllt ist**
+## **5. Wie man dem Drucker (AD5X) manuell mitteilt, welche Spule eingelegt ist**
 
-Es kann vorkommen, dass Sie den Spool selbst geändert haben und der Drucker dies nicht bemerkt und die alte Information anzeigt.
+Manchmal wechselt man die Spule manuell, aber der Drucker erkennt sie nicht und zeigt veraltete Informationen an.
 
 Es gibt einen speziellen Befehl, um dies zu beheben.
 
-**Geben Sie einfach diesen Satz in die Konsole ein:**
+**Geben Sie einfach diesen Befehl in die Konsole ein:**
 
 ```
 SET_EXTRUDER_SLOT SLOT=1
@@ -221,14 +223,14 @@ SET_EXTRUDER_SLOT SLOT=1
 **Was das bedeutet:**
 
 * `SET_EXTRUDER_SLOT` ist ein Befehl, der sagt: "Drucker, speichere die Spule!
-* `SLOT=1` ist die Nummer der Spule, die Sie gerade nachgefüllt haben. **Die Nummer kann geändert werden!
+* `SLOT=1` ist die Nummer der Spule, die Sie gerade nachgefüllt haben. **Die Nummer kann geändert werden!**
 
 **Beispiele:**
 
 * Wenn Sie Filament von Spule Nummer 3 aufgefüllt haben, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=3`.
-* Wenn von Spule Nummer 2, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=2`.
+* Wenn von der Spule Nummer 2, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=2`.
 
-Nach diesem Befehl weiß der Drucker, welcher Spool gerade läuft und vermischt die Farben nicht mehr.
+Nach diesem Befehl weiß der Drucker, welche Spule aktiv ist, und verwechselt keine Farben mehr.
 
 ## **6. Einstellen der Abfallmenge beim Wechsel des AD5X**-Filaments
 
