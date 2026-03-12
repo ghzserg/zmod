@@ -142,6 +142,15 @@ Native firmware files are located [here](/Native_FW/).
 
 zMod support [Plugins](/Plugin/)
 
+## Credits
+
+- Root access based on [@darksimpson](https://t.me/darksimpson)'s work. Login and password: root. [Link](https://t.me/c/2000598629/12695/186253)
+- Beeper based on [@drmax_gc](https://t.me/drmax_gc)'s work. M300. M356 Für Elise. [Link](https://t.me/FF_5M_5M_Pro/1/333800)
+- MD5 verification by Igor Polunovskiy. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
+- [GuppyScreen](https://github.com/ballaswag/guppyscreen)
+
+The mod uses the developments of [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), but is not its development or continuation, and is not compatible with it either in macro syntax or binary.
+
 ## Support Development
 
 Since people have been asking, I accept donations but please remember that I work on zMod for fun and not for the money. I will not accept donations to work on specific bugs or features.

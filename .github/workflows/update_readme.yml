@@ -1,0 +1,39 @@
+name: Sync README from docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - docs/**
+  workflow_dispatch:
+
+concurrency:
+  group: sync-readme
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync README files from docs
+        run: python mkdocs/update_readme.py
+
+      - name: Commit README changes
+        run: |
+          if [[ -n "$(git status --porcelain)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md README_ru.md
+            git commit -m "chore: sync README from docs/*/index.md"
+            git push
+          fi
