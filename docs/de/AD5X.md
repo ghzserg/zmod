@@ -357,7 +357,7 @@ Bei der Verwendung von Bambu Studio wird nur der Poop-Modus unterstützt.
 
 Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um einen neuen Filamenttyp hinzuzufügen, fügen Sie ```mod_data/user.cfg``` hinzu:
+Um einen neuen Filamenttyp hinzuzufügen, fügen Sie Folgendes in der ```mod_data/user.cfg``` hinzu:
 ```
 [zmod_ifs].
 filament_NEWTYPE: 300
@@ -372,9 +372,9 @@ Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und di
 
 Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/colors/ru.cfg``` (verwenden Sie Ihre Sprache anstelle von ru):
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/color/de.json``` (verwenden Sie Ihre Sprache anstelle von ru):
 
-```und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
+und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
 
 Um den Namen einer Farbe anzuzeigen, muss der Farbname mit einem Unterstrich ```_``` beginnen.
 
@@ -385,7 +385,7 @@ Beispiel:
   "fffff1": "_transparent",
   "fef043": "hellgelb",
   "dcf478": "hellgrün",
-  "0acc38": { "green",
+  "0acc38": "green",
   "067749": "dunkelgrün",
   "0c6283": "blau-grün",
   "0de2a0": "türkis",
