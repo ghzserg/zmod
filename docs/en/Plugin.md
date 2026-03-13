@@ -156,7 +156,7 @@ RESPOND PREFIX="info" MSG="===Cutting the filament==="
 Translations are stored in the `translate/` directory in files like `de.csv`:
 
 ```csv
-Cutting the filament;Filament schneiden
+Cutting the filament;Schneiden des Filaments
 ```
 
 Format:
