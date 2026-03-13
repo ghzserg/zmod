@@ -1,16 +1,16 @@
 <h1 align="center">Telegramm-Bot</h1>
 
-| Funktion / Feature | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](/de/Telegram/) | [Moonraker Telegram Bot](/de/Telegram/) |
+| Funktion / Feature | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](/de/Telegram/) |
 | :--- | :---: | :---: |
 | **Erfordert externen Server** | - | + |
-| **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + | |
-| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) | + | |
-| **Ereignisinformationen drucken** (Start, Pause, Abbruch, Ende) | + | + | | + |
-| **Filamentsensor-Informationen** | + | + | + | | |
-| **Drucken von Fortschrittsinformationen in Prozent** | + | + | + | | |
-| **Arbeiten mit mehreren Druckern über einen Bot** | + | | - | |
-| **Informieren durch andere Dienste** | + | | - | |
-| **Splooman** | | - | + |
+| **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + |
+| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) | + |
+| **Ereignisinformationen drucken** (Start, Pause, Abbruch, Ende) | + | + |
+| **Filamentsensor-Informationen** | + | + |
+| **Drucken von Fortschrittsinformationen in Prozent** | + | + |
+| **Arbeiten mit mehreren Druckern über einen Bot** | + | - |
+| **Informieren durch andere Dienste** | + | - |
+| **Splooman** | - | + |
 
 ---
 
