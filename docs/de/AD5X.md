@@ -372,7 +372,7 @@ Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und di
 
 Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/color/de.json``` (verwenden Sie Ihre Sprache anstelle von ru):
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/color/de.json``` (verwenden Sie Ihre Sprache anstelle von de):
 
 und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
 
@@ -413,15 +413,15 @@ Die Aufschrift ```_transparent``` wird auf den Schaltflächen angezeigt
 
 ---
 
-## 9. Korrigiert den Betrieb mit dem Korb und dem Filamentschneider AD5X
+## 9. Korrigiert den Betrieb mit dem Abfallbehälter und dem Filamentschneider AD5X
 
-[Alternative Betriebsanleitung](/de/Setup/#attention-ad5x)
+[Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-Die Korb- und Messerkoordinaten können bei verschiedenen AD5X-Druckern unterschiedlich sein. Manchmal kann der Unterschied bis zu 4 mm betragen.
+Der Abfallbehälter und die Messerkoordinaten können bei verschiedenen AD5X-Druckern unterschiedlich sein. Manchmal kann der Unterschied bis zu 4 mm betragen.
 
 Dies ist der Grund dafür:
 
-- Das Filament gelangt möglicherweise nicht in den Korb;
+- Das Filament gelangt möglicherweise nicht in den Abfallbehälter;
 - Das Messer schneidet das Filament nicht;
 - Der Druckkopf kann gegen die Wand stoßen.
 
@@ -429,7 +429,7 @@ Um dies zu beheben, müssen Sie:
 
 1. zMod aktualisieren.
 2. öffnen Sie die Datei `/rw/Adventurer5M.json`.
-3. finden Sie Zeilen wie:
+3. finden Sie die Zeilen wie:
 ```json
 {
 	"CutXOffset" : 0.5,
@@ -442,7 +442,7 @@ Um dies zu beheben, müssen Sie:
 ```
 <img width="504" height="241" alt="image" src="https://github.com/user-attachments/assets/8647b1fe-594c-4bb3-91ee-560cfe4a58fd" />
 
-Ersetze **nur** diese Werte:
+Ersetzen Sie **nur** diese Werte:
 ```json
 "CutXOffset": 0.0,
 "CutYOffset": 0.0,
@@ -450,63 +450,63 @@ Ersetze **nur** diese Werte:
 ```
 
 4. Geben Sie den Befehl: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-5. Geben Sie dann ein: `_GOTO_TRASH` (dies bringt den Drucker zurück in den Papierkorb).
+5. Geben Sie dann ein: `_GOTO_TRASH` (der Drucker fährt zum Abfallbehälter).
 
 ---
 
-### Einstellung des AD5X-Papierkorbs
+### Einstellung des AD5X-Abfallbehälter
 
-[Alternative Anweisungen](/de/Setup/#attention-ad5x)
+[Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-1. Geben Sie den Befehl `_GOTO_TRASH` ein - der Druckkopf fährt in den Papierkorb.
-2. Wenn sich der Mülleimer nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Mülleimer schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2```.
+1. Geben Sie den Befehl `_GOTO_TRASH` ein - der Druckkopf fährt an den Abfallbehälter.
+2. Wenn sich der Abfallbehälter nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Abfallbehälter schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2```.
 3. Schauen Sie, welche **Y**-Koordinate Sie jetzt haben.
-4. 229 von dieser Zahl subtrahieren. Das Ergebnis ist Ihr "yOffset".
+4. Ziehen Sie 229 von dieser Zahl ab. Das Ergebnis ist Ihr "yOffset".
 
 Beispiele:
 
-- Wenn Y = 230,2, dann ist "yOffset = 230,2 - 229 = 1,2".
+- Wenn Y = 230,2, dann ist `yOffset = 230,2 - 229 = 1,2`.
 - Wenn Y = 228,4, dann ist `yOffset = 228,4 - 229 = -0,6`.
-- Formel: yAbweichung = Y - 229`.
+- Formel: yAbweichung = `Y - 229`.
 
-Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Korb ist eingerichtet.
+Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehälter ist eingerichtet.
 
 5. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-6. Geben Sie dann ein: `_GOTO_TRASH` (dies bringt den Drucker zurück in den Papierkorb).
+6. Geben Sie anschließend: `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
 
 ---
 
 ### Einrichten des AD5X-Messers
 
-[Alternative Version der Anleitung](/de/Setup/#attention-ad5x)
+[Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-1. Geben Sie den Befehl `_CUT_PRUTOK` ein - der Kopf wird zum Messer fahren.
-2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer ausgelöst wird. Sie müssen GCODE verwenden: ```G1 Y-7.7``` ```G1 X-1.7```.
-3. Schau nach, wie deine X- und Y-Koordinaten lauten.
+1. Geben Sie den Befehl `_CUT_PRUTOK` ein - der Druckkopf wird zur Position des Messers fahren.
+2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer aktiviert wird. Sie müssen GCODE verwenden: ```G1 Y-7.7``` ```G1 X-1.7```.
+3. Überprüfen Sie Ihre X- und Y-Koordinaten.
 4. Für **Y**:
 
-    - Subtrahiere von **7,5** deine Y-Koordinate modulo deiner Y-Koordinate.
+    - Subtrahieren Sie den Betrag von **7,5** von Ihrer Y-Koordinate.
        - Beispiel: Wenn Y = -7,7, dann ist `CutYOffset = 7,5 - 7,7 = -0,2`.
        - Beispiel: Wenn Y = -5,9, dann ist `CutYOffset = 7,5 - 5,9 = 1,6`.
        - Formel: CutYOffset = 7,5 + Y".
 
 5. Für **X**:
 
-    - Subtrahiere deine X-Koordinate modulo deiner X-Koordinate von **2.5**.
+    - Subtrahieren Sie den Betrag von **2,5** von Ihrer X-Koordinate.
        - Beispiel: Wenn X = -1,7, dann ist `CutXOffset = 2,5 - 1,7 = 0,8`.
        - Beispiel: Wenn X = -2,8, dann ist `CutXOffset = 2,5 - 2,8 = -0,3`.
        - Formel: CutXOffset = 2,5 + X".
 
-Schreibe diese Zahlen in die Datei `/rw/Adventurer5M.json`. Das Messer ist eingestellt.
+Schreiben Sie diese Werte in die Datei `/rw/Adventurer5M.json`. Das Messer ist kalibriert.
 
-6. Gib den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-7. Geben Sie dann ein: `_GOTO_TRASH` (dies bringt den Drucker zurück in den Papierkorb).
+6. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
+7. Geben Sie anschließend: `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
 
 Starten Sie den Drucker neu und Sie sind fertig.
 
 ---
 
-## Korb-Setup auf nativer AD5X-Firmware
+## Abfallbehälter-Setup auf nativer AD5X-Firmware
 
 1. Gehen Sie auf die Registerkarte "i" und drücken Sie die Schaltfläche "Status".
    
@@ -517,18 +517,20 @@ Starten Sie den Drucker neu und Sie sind fertig.
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
 
 3. Drücken Sie die Taste `Extruder in Abfallbehälterposition bringen` und halten Sie sie 20 Sekunden lang gedrückt.
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
 
-4- Stellen Sie die Position des Kopfes im Abfallbehälter so ein, dass er sich schließt. Verwenden Sie die Steuerpfeile, um den Druckkopf gegen den Empfänger zu parken, so dass der Druckkopf genügend Druck auf den Verschlusshebel ausübt, die Düse hinter dem beweglichen Verschluss liegt und der Verschluss selbst mit der Vorderseite des Empfängers bündig ist.
+	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+
+4. Positionieren Sie den Druckkopf im Abfallbehälter so, dass dieser sich schließt. Parken Sie den Druckkopf mithilfe der Steuerungspfeile so am Gehäuse, dass er den Verschlusshebel ausreichend betätigt, die Düse sich hinter dem beweglichen Verschluss befindet und der Verschluss bündig mit der Vorderseite des Gehäuses abschließt.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
    
    Drücken Sie die "Set"-Taste
 
 5. Drücken Sie `Move the extruder to cutter stiker position` und halten Sie die Taste für 20 Sekunden gedrückt.
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
 
-4- Stellen Sie das Messer ein. Drücken Sie `CutX` - das Messer sollte das Filament schneiden, ohne sich zu verschieben oder anzustoßen.
+	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+
+6. Stellen Sie den Schneidkopf ein. Drücken Sie `CutX` – der Schneidkopf sollte das Filament ohne Durchrutschen oder Anschlagen durchtrennen.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
    
@@ -540,34 +542,34 @@ Starten Sie den Drucker neu und Sie sind fertig.
 
 Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-- IFS_F10" - Leiste einfügen
-- IFS_F11" - Leiste entfernen
-- IFS_F13` - IFS-Status
+- `IFS_F10` - Filament einlegen
+- `IFS_F11` - Filament entfernen
+- `IFS_F13` - IFS-Status
 - `IFS_F15` - Treiber zurücksetzen
-- `F18` - Faden überall eindrücken
-- `F23` - Stange als eingefügt markieren
-- F24` - Faden einklemmen
-- F39` - Filament quetschen
-- F112` - Filamentzuführung stoppen
-- PURGE_PRUTOK_IFS` - Stange vom IFS zum Extruder freigeben
-- REMOVE_PRUTOK_IFS` - Entfernt Stange nach Stangennummer
-- INSERT_PRUTOK_IFS` - Fügt Stange in IFS nach Stangennummer ein
-- SET_CURRENT_PRUTOK` - Gibt dem Klipper an, welcher Stab gerade aktiv ist
-- `ANALOG_PRUTOK` - Lädt eine ähnliche Stange
-- IFS_MOTION` - Prüfen, ob das Filament angehalten hat oder ausgegangen ist
+- `F18` - Filament komplett spülen
+- `F23` - Filament als eingelegt markieren
+- `F24` - Filament-Halterung (Andruckhebel)
+- `F39` - Filament spülen
+- `F112` - Filamentzufuhr stoppen
+- `PURGE_PRUTOK_IFS` - Filament vom IFS zum Extruder spülen
+- `REMOVE_PRUTOK_IFS` - Filament anhand der Filamentnummer entfernen
+- `INSERT_PRUTOK_IFS` - Filament anhand der Filamentnummer in das IFS einlegen
+- `SET_CURRENT_PRUTOK` - Klipper mitteilen, welches Filament aktuell aktiv ist
+- `ANALOG_PRUTOK` - Lädt ein ähnliches Filament
+- `IFS_MOTION` - Prüfen, ob das Filament gestoppt hat oder ausgegangen ist
 
 Parameter des IFS-Moduls:
 
 - debug - Fehlersuche (True, *False*)
-- silk_count - ab welchem Versuch auszulesen, dass der Stab im IFS ist (*1*)
-- stall_count - ab welchem Versuch auszulesen, dass der Balken angehalten hat (*1*)
+- silk_count - ab welchem Versuch auszulesen, das dass Filament im IFS ist (*1*)
+- stall_count - ab welchem Versuch auszulesen, das dass Filament angehalten hat (*1*)
 - retry_count - wie oft soll der Befehl im Falle eines Fehlers wiederholt werden (*3*)
-- filament_NEWFILEMENT - Hinzufügen einer neuen Art von Filament Parameter - Temperatur des Ersatzes dieser Art von Kunststoff.
+- filament_NEWFILEMENT - Neuen Filamenttyp hinzufügen. Parameter - Austauschtemperatur für diesen Kunststofftyp.
 
 Eingestellt über `mod_data/user.cfg`:
 ```
 [zmod_ifs].
-debug: Wahr
+debug: True
 silk_count: 1
 stall_count: 1
 filament_NEWTYPE: 300
@@ -594,7 +596,7 @@ Anschließen:
 
 <img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
 
-- Zielgerät - "Nations N32G455RE".
+- Zielgerät - `Nations N32G455RE`.
 - Zielschnittstelle: `SWD`
 - Geschwindigkeit: `4000`
 - Kreuzen Sie das erste Kästchen an.
@@ -608,4 +610,4 @@ Anschließen:
 
 Dieser Fehler tritt auf, wenn der native Bildschirm und der Mod gleichzeitig auf den IFS zugreifen.
 
-Es ist am besten, die Lebensdauer des nativen Bildschirms auf 10 Sekunden zu reduzieren: ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```.
+Es empfiehlt sich, die native Display Ausschaltzeit auf 10 Sekunden zu reduzieren. ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```.
