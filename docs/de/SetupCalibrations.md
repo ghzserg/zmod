@@ -201,7 +201,7 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 
 In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle entspricht.
 
-!!! note inline "Info"
+!!! note **"Info"**
     Wenn es keine gespeicherte Bettnetzkarte für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Bettnetzkarte und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.
 
 **Gesamte Reihenfolge der Operationen:**
@@ -224,9 +224,9 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 3.  Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.
 4.  Die Karte wird dichter und damit genauer.
 
-!!! info inline "Wichtig"
-Ein wichtiges Merkmal des Verfahrens:
- Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
+!!! info **"Wichtig"**
+    Ein wichtiges Merkmal des Verfahrens:
+    Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
 
 1.  Die Düse wird **auf Drucktemperatur** erhitzt.
 2.  Es erfolgt eine **Reinigung der Düse** von auslaufendem Kunststoff.
