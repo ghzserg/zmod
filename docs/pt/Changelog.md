@@ -1,6 +1,7 @@
 # Registro de mudanças
 
 - Histórico da versão](#histórico-da-versão)
+    - [Versão 1.7.0](#versão-170)
     - [Versão 1.6.6](#versão-166)
       - [Versão 1.6.5](#versão-165)
       - [Versão 1.6.4](#versão-164)
@@ -42,6 +43,14 @@
       - [Versão 0.0.9](#versão-009)
 
 ## Histórico de versões
+
+### Versão 1.7.0
+15.03.2026
+
+* Fluidd/Mainsail/Klipper atualizados
+* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) por @ninjamida
+* HelixScreen - tela alternativa. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
+* @xyzroe prestou grande ajuda no lançamento desta versão
 
 ### Versão 1.6.6
 27.01.2026

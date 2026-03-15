@@ -1,6 +1,7 @@
 # Changelog
 
 - [Versionsgeschichte](#version-history)
+    - [Version 1.7.0](#version-170)
     - [Version 1.6.6](#version-166)
       - [Version 1.6.5](#version-165)
       - [Version 1.6.4](#version-164)
@@ -42,6 +43,14 @@
       - [Version 0.0.9](#version-009)
 
 ## Versionsgeschichte
+
+### Version 1.7.0
+15.03.2026
+
+* Fluidd/Mainsail/Klipper aktualisiert
+* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) von @ninjamida
+* HelixScreen - alternativer Bildschirm. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
+* Großer Dank für die Unterstützung bei dieser Version geht an @xyzroe
 
 ### Version 1.6.6
 27.01.2026

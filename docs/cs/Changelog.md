@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+    - [Verze 1.7.0](#verze-170)
     - [Verze 1.6.6](#verze-166)
       - [Verze 1.6.5](#verze-165)
       - [Verze 1.6.4](#verze-164)
@@ -44,6 +45,14 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.0
+15.03.2026
+
+* Aktualizováno Fluidd/Mainsail/Klipper
+* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) od @ninjamida
+* HelixScreen - alternativní obrazovka. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
+* Na vydání této verze se významně podílel @xyzroe
 
 ### Verze 1.6.6
 27.01.2026
