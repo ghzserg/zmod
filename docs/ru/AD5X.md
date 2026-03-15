@@ -144,13 +144,13 @@
 - 2 - не показывать окно, не использовать IFS
 
 ```gcode
-SAVE_Z-Mod_DATA SILENT=1
+SAVE_ZMOD_DATA SILENT=1
 ```
 
 Для отключения функции автоматической вставки прутка в экструдер используйте глобальный параметр [AUTOINSERT](/ru/Global/#autoinsert)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTOINSERT=0
+SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
 Чтобы отключить сброс филамента в корзину при печати, используйте параметр [USE_TRASH_ON_PRINT](/ru/Global/#use_trash_on_print).
@@ -160,13 +160,13 @@ SAVE_Z-Mod_DATA AUTOINSERT=0
 - 2 - После загрузки нового цвета печатающая головка переместится к лотку, после чего управление будет возвращено слайсеру. Это следует использовать только вместе с профилем слайсера, разработанным специально для этого режима.
 
 ```gcode
-SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0
+SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
 Чтобы извлечь пруток после окончания печати, используйте параметр [REMOVE_FILAMENT](/ru/Global/#remove_filament).
 
 ```gcode
-SAVE_Z-Mod_DATA REMOVE_FILAMENT=1
+SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
 Чтобы настроить количество инструментов, отображаемых в окне выбора цвета (если информацию не удается получить путем сканирования файла), используйте параметр [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count).
@@ -174,7 +174,7 @@ SAVE_Z-Mod_DATA REMOVE_FILAMENT=1
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=16
+SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 Чтобы включить сканирование gcode-файлов на наличие информации об инструментах, цветах и материалах, используйте параметр [SCAN_FILE_COLORS](/Global/#scan_file_colors). Вы также можете установить значение 2, чтобы проверять только данные, подготовленные скриптом слайсера, без сканирования файлов целиком.
@@ -182,7 +182,7 @@ SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=16
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA SCAN_FILE_COLORS=1
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
 Чтобы включить автоматическое сопоставление цветов из gcode-файла с физическими катушками, используйте параметр [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors). Для работы этой функции необходимо активировать сканирование файлов. Использование значения 30 приведет к прерыванию печати в тихом режиме, если возникнут любые проблемы с автоматическим назначением. 
@@ -197,13 +197,13 @@ SAVE_Z-Mod_DATA SCAN_FILE_COLORS=1
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=30
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 Если при выполнении команды смены цвета выясняется, что новый цвет совпадает с уже загруженным, процесс смены обычно пропускается как бессмысленный. Если по какой-то причине вы хотите, чтобы процесс смены цвета всегда выполнялся полностью, используйте параметр [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change).
 
 ```gcode
-SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0
+SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
 ```
 
 ## **5. Как вручную указать принтеру, какая катушка сейчас заправлена AD5X**
@@ -300,7 +300,7 @@ SET_EXTRUDER_SLOT SLOT=1
 
 Существует возможность передать управление очисткой слайсеру, используя другие значения параметра `USE_TRASH_ON_PRINT` вместо значения по умолчанию (1).
 
-##### Режим Nopoop (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`)
+##### Режим Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
 В этом режиме принтер не выполняет очистку во время смены цвета. Принтер обрезает филамент, возвращается к черновой башне (prime tower) для выгрузки и загрузки филамента, после чего сразу продолжает печать.
 
@@ -314,7 +314,7 @@ SET_EXTRUDER_SLOT SLOT=1
 
 Эта опция поддерживается только в OrcaSlicer; ее нельзя использовать в Bambu Studio из-за отсутствия функции «Очистка в черновой башне».
 
-##### Режим сброса под управлением слайсера (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=2`)
+##### Режим сброса под управлением слайсера (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
 В этом режиме принтер не выполняет очистку самостоятельно во время смены цвета. Принтер обрезает филамент, перемещается к лотку для отходов и передает управление слайсеру.
 
@@ -600,4 +600,4 @@ filament_NEWTYPE: 300
 
 Эта ошибка, возникает когда родной экран и мод одновременно обращаются к IFS.
 
-Лучше  всего уменьшить время жизни родного экрана до 10 секунд: ```SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=10```
+Лучше  всего уменьшить время жизни родного экрана до 10 секунд: ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```

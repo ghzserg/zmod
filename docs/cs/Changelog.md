@@ -341,7 +341,7 @@ Známé vlastnosti:
 - [FAST_CLOSE_DIALOGS](Macros.md#fast_close_dialogs).
 - [LEVELING_PRINT_FILE](Macros.md#leveling_print_file) nativní vyrovnávání podložky.
 - [COLDPULL](Filament.md#coldpull) čištění trysky.
-- Parametry [SAVE_Z-Mod_DATA](Global.md#save_zmod_data):
+- Parametry [SAVE_ZMOD_DATA](Global.md#save_zmod_data):
 - `PRINT_LEVELING`: Nativní vyrovnávání podložky.
 - `USE_KAMP`: Adaptivní mesh.
 - `CLOSE_DIALOGS`: Automatické zavírání dialogů.
@@ -363,7 +363,7 @@ Známé vlastnosti:
 
 - Aktualizace Fluidd/Mainsail.
 - [NEW_SAVE_CONFIG](Macros.md#new_save_config) ukládání bez zamrzání.
-- Parametry [SAVE_Z-Mod_DATA](Global.md#save_zmod_data):
+- Parametry [SAVE_ZMOD_DATA](Global.md#save_zmod_data):
 - Jas LED.
 - MIDI spouštěče.
 
@@ -375,7 +375,7 @@ Známé vlastnosti:
 ### Verze 0.1.7
 
 - Opravy stability maker.
-- [STOP_Z-Mod](Macros.md#stop_zmod) ovládání služby.
+- [STOP_ZMOD](Macros.md#stop_zmod) ovládání služby.
 
 ### Verze 0.1.6
 

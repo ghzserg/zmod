@@ -119,7 +119,7 @@ CAMERA_ON VIDEO=video99
 
 ---
 
-### REMOVE_Z-Mod
+### REMOVE_ZMOD
 
 Удалить Z-Mod.
 
@@ -129,11 +129,11 @@ CAMERA_ON VIDEO=video99
 
 В папке `/opt/config/mod_data` хранятся настройки `zmod`, `fluidd`, `moonraker`, `mainsail`. 
 
-Она не удаляется по умолчанию, т.к. часто люди по ошибке вызывают макрос `REMOVE_Z-Mod`
+Она не удаляется по умолчанию, т.к. часто люди по ошибке вызывают макрос `REMOVE_ZMOD`
 
 ---
 
-### SKIP_Z-Mod
+### SKIP_ZMOD
 
 Перезагрузка в оригинальную систему. Без запуска Z-Mod.
 
@@ -176,7 +176,7 @@ CAMERA_ON VIDEO=video99
 
 ---
 
-### STOP_Z-Mod
+### STOP_ZMOD
 
 Выгрузить из памяти guppy, helix, moonraker и fluidd/Mainsail. Телеграм бот тоже  перестанет работать
 
@@ -188,16 +188,16 @@ CAMERA_ON VIDEO=video99
 
 Пример:
 ```
-STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Если эту строку прописать в стартовый код, то после начала печати GUPPY/HELIX будет выгружен из памяти
 
 ---
 
-### START_Z-Mod
+### START_ZMOD
 
-Включить обратно guppy, helix, moonraker и fluidd/Mainsail после STOP_Z-Mod.
+Включить обратно guppy, helix, moonraker и fluidd/Mainsail после STOP_ZMOD.
 
 Параметры:
 
@@ -207,7 +207,7 @@ STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 
 Пример:
 ```
-START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Если эту строку прописать в конечный код, то после окончания печати GUPPY/HELIX будет запущен

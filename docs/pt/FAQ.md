@@ -75,7 +75,7 @@ Acesso à pasta **mod_data** por meio da interface da Web do fluidd.
 - As configurações personalizadas do klipper devem ser inseridas no arquivo `mod_data/user.cfg`; as configurações gravadas nesse arquivo podem substituir/adicionar as configurações dos arquivos `printer_base.cfg` e Z-Mod.
 - As configurações personalizadas do moonraker devem ser inseridas no arquivo `mod_data/user.moonraker.conf`
 - As músicas personalizadas são armazenadas em `mod_data/midi/`
-- As configurações globais do mod são armazenadas por meio da macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data) *nyuhler*
+- As configurações globais do mod são armazenadas por meio da macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) *nyuhler*
 - O código a ser executado quando a impressora é desligada é armazenado aqui `mod_data/power_off.sh`.
 - O código a ser executado quando a impressora é ligada é armazenado aqui `mod_data/power_on.sh`.
 
@@ -186,11 +186,11 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Se quiser ativar a calibração automática sempre que imprimir, digite Fluidd/Mainsail 1 vez no console
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 No menu da tela da impressora, vá para `Settings` -> `Wifi icon` -> `Network mode` -> ative o controle deslizante `Local networks only`.
 
-Leia a documentação de [START_PRINT](/pt/Main/#start_print) e [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data), isso permitirá que você utilize os recursos avançados e úteis do Z-Mod
+Leia a documentação de [START_PRINT](/pt/Main/#start_print) e [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), isso permitirá que você utilize os recursos avançados e úteis do Z-Mod
 
 Se você quiser usar a reversão do firmware, leia [documentation](/pt/FAQ/#what-is-rollback-from-firmware) e adicione
 ```Perfil da barra``` -> ```Avançado``` -> ```Iniciar barra de código G```.
@@ -216,7 +216,7 @@ O z-offset salvo na tela é usado.
 
 O deslocamento Z do Fluidd/Mainsail/GuppyScreen/HelixScreen afeta **apenas até a reinicialização** e não deve ser alterado sem que se saiba para onde o bocal está se movendo.
 
-Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen/HelixScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
+Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen/HelixScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
 
 Você também pode usar os parâmetros [START_PRINT](/pt/Main/#start_print) para definir o deslocamento Z
 
@@ -226,7 +226,7 @@ Você também pode usar os parâmetros [START_PRINT](/pt/Main/#start_print) para
 
 Se quiser ativar a calibração automática sempre que imprimir, digite fluidd/mainsail 1 vez no console:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 A tela nativa usa mapas (sempre, não é fixo, mesmo que não seja necessário):
@@ -242,7 +242,7 @@ Se você quiser usar um cartão diferente ao imprimir (por exemplo, `moya_karta_
 
 - Desative a calibração automática nos parâmetros globais
 
-  ````SAVE_Z-Mod_DATA PRINT_LEVELING=0````
+  ````SAVE_ZMOD_DATA PRINT_LEVELING=0````
 
 - Capture o mapa da tabela antecipadamente por meio da macro [AUTO_FULL_BED_LEVEL](/pt/FAQ/#chores-macros-and-buttons-in-fluidd).
  
@@ -269,12 +269,12 @@ Recomendo o uso de parâmetros globais, que são configurados uma vez e usados s
 Parâmetro `PRINT_LEVELING`:
 
 - Remove o mapa da tabela toda vez que você imprime
-- Se estiver trabalhando com a tela, o mapa da tabela será retirado da tela nativa, como seria se você tivesse selecionado um arquivo da tela e clicado na caixa de seleção `LEVELING`. Se o parâmetro for 1 `SAVE_Z-Mod_DATA PRINT_LEVELING=1`, quando você enviar arquivos por meio do Orca/Fluidd/Mainsail, a impressora presumirá que você selecionou o arquivo a ser impresso na tela nativa e marcou `Alignment`. Toda vez que você imprimir nesse caso, o mapa da tabela será capturado.
+- Se estiver trabalhando com a tela, o mapa da tabela será retirado da tela nativa, como seria se você tivesse selecionado um arquivo da tela e clicado na caixa de seleção `LEVELING`. Se o parâmetro for 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1`, quando você enviar arquivos por meio do Orca/Fluidd/Mainsail, a impressora presumirá que você selecionou o arquivo a ser impresso na tela nativa e marcou `Alignment`. Toda vez que você imprimir nesse caso, o mapa da tabela será capturado.
 - Se estiver trabalhando no modo de tela não nativa e usar a macro [START_PRINT](/pt/Main/#start_print) no código G inicial, o mapa da tabela também será apagado toda vez que você imprimir
 
-  Para ativar esse recurso, você precisa configurar uma vez a macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data), o parâmetro [PRINT_LEVELING](/pt/Global/#zshaper)
+  Para ativar esse recurso, você precisa configurar uma vez a macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), o parâmetro [PRINT_LEVELING](/pt/Global/#zshaper)
 
-  ```SAVE_Z-Mod_DATA PRINT_LEVELING=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
 
   *Para remover o mapa da área de trabalho da tela nativa, vá para ```Configurações``` -> ```Ícone Wifi``` -> `Modo de rede``` -> ative o controle deslizante ```Somente redes locais``` no menu da tela da impressora.
 
@@ -285,15 +285,15 @@ Parâmetro `USE_KAMP`:
 - A remoção adaptativa do mapa da mesa (KAMP) pode ser ativada, então nem toda a mesa será removida, mas apenas as partes com modelos imprimíveis.
   **Automatic table map skimming will not be triggered!**. Esse parâmetro indica que, se o skimming do mapa da tabela for acionado, o KAMP será executado em seu lugar.
 
-  Para ativar esse recurso, você precisa configurar a macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data) uma vez, parâmetro [USE_KAMP](/pt/Global/#zshaper)
+  Para ativar esse recurso, você precisa configurar a macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) uma vez, parâmetro [USE_KAMP](/pt/Global/#zshaper)
 
-  ```SAVE_Z-Mod_DATA USE_KAMP=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa de tabela adaptável será usado sempre que possível, inclusive ao capturar o mapa de tabela com a tela nativa pela rede.
+  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa de tabela adaptável será usado sempre que possível, inclusive ao capturar o mapa de tabela com a tela nativa pela rede.
 
 ---
 
 #### Por meio da alteração do código de início e da macro START_PRINT
 
-Se você não quiser usar os parâmetros globais *(SAVE_Z-Mod_DATA PRINT_LEVELING=0)*, os seguintes parâmetros da macro [START_PRINT](/pt/Main/#start_print), que é gravada no código G inicial, estarão disponíveis.
+Se você não quiser usar os parâmetros globais *(SAVE_ZMOD_DATA PRINT_LEVELING=0)*, os seguintes parâmetros da macro [START_PRINT](/pt/Main/#start_print), que é gravada no código G inicial, estarão disponíveis.
 
 - FORCE_LEVELING - força a criação de um mapa de tabela, True - criar, False - não criar (False)
 - FORCE_KAMP - iniciar a construção do mapa de tabela adaptável, True - sim, False - não (False).

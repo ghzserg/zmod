@@ -146,13 +146,13 @@ Verwenden Sie den globalen Parameter [SILENT](/de/Global/#stille), um zu verhind
 - 2 - Fenster nicht anzeigen, keine IFS-Farben verwenden
 
 ```gcode
-SAVE_Z-Mod_DATA SILENT=1
+SAVE_ZMOD_DATA SILENT=1
 ```
 
 Um die automatische Filamentzufuhr in den Extruder zu deaktivieren, verwenden Sie den globalen Parameter [AUTOINSERT](/de/Global/#autoinsert)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTOINSERT=0
+SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
 Um zu verhindern, dass Filament während des Druckvorgangs in den Abfall entsorgt wird, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
@@ -162,13 +162,13 @@ Um zu verhindern, dass Filament während des Druckvorgangs in den Abfall entsorg
 - 2 – Nach dem Einbringen der neuen Farbe fährt der Druckkopf zum Abfallbehälter und übergibt die Steuerung anschließend wieder an den Slicer. Dieser Modus sollte nur mit einem für diesen Modus vorgesehenen Slicer-Profil verwendet werden.
 
 ```gcode
-SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0
+SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
 Um das Filament nach Abschluss des Druckvorgangs zu entfernen, verwenden Sie den Parameter [REMOVE_FILAMENT](/de/Global/#remove_filament).
 
 ```gcode
-SAVE_Z-Mod_DATA REMOVE_FILAMENT=1
+SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
 Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#erlaubte_werkzeug_anzahl).
@@ -176,7 +176,7 @@ Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (fall
 [Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
-SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=16
+SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
@@ -184,7 +184,7 @@ Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie gc
 [Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
-SAVE_Z-Mod_DATA SCAN_FILE_COLORS=1
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
 Mit dem Parameter [AUTO_ASSIGN_COLORS](de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
@@ -199,13 +199,13 @@ Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im still
 [Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=30
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 Wird ein Befehl zum Farbwechsel aufgerufen und soll auf die bereits geladene Farbe zurückgegriffen werden, wird der Vorgang in der Regel übersprungen, da er sinnlos ist. Falls Sie den vollständigen Farbwechselvorgang aktivieren möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](de/Global/#always_full_color_change).
 
 ```gcode
-SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0
+SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
 ```
 
 ## **5. Wie man dem Drucker (AD5X) manuell mitteilt, welche Spule eingelegt ist**
@@ -308,7 +308,7 @@ Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildsch
 
 Es ist möglich, die Reinigung stattdessen vom Slicer steuern zu lassen, indem andere `USE_TRASH_ON_PRINT`-Einstellungen anstelle des Standardwerts `1` verwendet werden.
 
-##### Nopoop-Modus (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`)
+##### Nopoop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
 In diesem Modus wird vom Drucker während des Farbwechsels keine Reinigung durchgeführt. Der Drucker schneidet das Filament ab, kehrt zum Reinigungsturm (Prime Tower) zurück, um das Filament ent- und zuladen, und setzt den Druck dann sofort von dort aus fort.
 
@@ -322,7 +322,7 @@ Zusätzlich können Sie in diesem Modus Optionen wie **"Düse in der Stützstruk
 
 Diese Option wird nur in ***OrcaSlicer*** unterstützt; sie kann in ***Bambu Studio*** aufgrund des Fehlens von **"Reinigung im Reinigungsturm"** nicht verwendet werden.
 
-##### Slicer-gesteuerter Poop-Modus (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=2`)
+##### Slicer-gesteuerter Poop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
 In diesem Modus führt der Drucker während des Farbwechsels keine eigene Reinigung durch. Der Drucker schneidet das Filament ab, fährt zum Abwurfschacht und übergibt die Steuerung wieder an den Slicer.
 
@@ -610,4 +610,4 @@ Anschließen:
 
 Dieser Fehler tritt auf, wenn der native Bildschirm und der Mod gleichzeitig auf den IFS zugreifen.
 
-Es empfiehlt sich, die native Display Ausschaltzeit auf 10 Sekunden zu reduzieren. ```SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=10```.
+Es empfiehlt sich, die native Display Ausschaltzeit auf 10 Sekunden zu reduzieren. ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```.

@@ -144,13 +144,13 @@ Use o parâmetro global [SILENT](/en/Global/#silent) para evitar que a janela de
 - 2 - não mostrar a janela, não usar cores IFS
 
 ```gcode
-SAVE_Z-Mod_DATA SILENT=1
+SAVE_ZMOD_DATA SILENT=1
 ```
 
 Use o parâmetro global [AUTOINSERT](/pt/Global/#autoinsert) para desativar a função de inserção automática da haste na extrusora
 
 ```gcode
-SAVE_Z-Mod_DATA AUTOINSERT=0
+SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
 Para desativar o descarte de filamentos na lixeira durante a impressão, use o parâmetro [USE_TRASH_ON_PRINT](/pt/Global/#use_trash_on_print).
@@ -160,13 +160,13 @@ Para desativar o descarte de filamentos na lixeira durante a impressão, use o p
 - 2 - Após inserir a nova cor, o cabeçote de impressão se deslocará até a rampa de descarte e, a partir daí, devolverá o controle ao fatiador. Isso só deve ser usado em conjunto com um perfil de fatiador projetado para este modo.
 
 ```gcode
-SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0
+SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
 Para remover o filamento quando a impressão estiver concluída, use o parâmetro [REMOVE_FILAMENT](/pt/Global/#remove_filament).
 
 ```gcode
-SAVE_Z-Mod_DATA REMOVE_FILAMENT=1
+SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
 Para ajustar o número de ferramentas exibidas na janela de seleção de cores (se as informações não puderem ser obtidas pela varredura do arquivo), use o parâmetro [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count).
@@ -174,7 +174,7 @@ Para ajustar o número de ferramentas exibidas na janela de seleção de cores (
 [Consulte configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=16
+SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 Para permitir a varredura de arquivos gcode para obter informações sobre ferramentas, cores e materiais, use o parâmetro [SCAN_FILE_COLORS](/Global/#scan_file_colors). Você também pode definir o valor como 2 para verificar apenas os dados preparados pelo script do fatiador, sem verificar os arquivos inteiros.
@@ -182,7 +182,7 @@ Para permitir a varredura de arquivos gcode para obter informações sobre ferra
 [Consulte configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA SCAN_FILE_COLORS=1
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
 Para ativar o mapeamento automático de cores do arquivo gcode para as bobinas físicas, use o parâmetro [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors). A digitalização de arquivos deve estar ativada para que esse recurso funcione. O uso de um valor de 30 interromperá a impressão no modo silencioso se houver algum problema com a atribuição automática.
@@ -197,13 +197,13 @@ Você pode configurar seus próprios valores para interromper a impressão no mo
 [Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=30
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 Se o comando de alteração de cor descobrir que a nova cor corresponde a uma cor já carregada, o processo de alteração geralmente é ignorado por ser inútil. Se, por algum motivo, você quiser que o processo de alteração de cor seja sempre executado por completo, use o parâmetro [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change).
 
 ```gcode
-SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0
+SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
 ```
 
 ## Como informar manualmente à impressora qual spool está atualmente preenchido com AD5X**
@@ -300,7 +300,7 @@ Para que essas configurações funcionem, é necessário **desativar a tela nati
 
 É possível fazer com que o fatiador controle a purga, utilizando outras configurações de USE_TRASH_ON_PRINT em vez do valor padrão (1).
 
-##### Modo Nopoop (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`)
+##### Modo Nopoop (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
 Neste modo, nenhuma purga é realizada pela impressora durante as trocas de cor. A impressora cortará o filamento, retornará à torre de limpeza (prime tower) para descarregar e carregar o filamento e, em seguida, continuará imediatamente a partir dali.
 
@@ -314,7 +314,7 @@ Além disso, você pode usar opções como "Purgar no preenchimento" (Purge to i
 
 Esta opção é suportada apenas no OrcaSlicer; ela não pode ser usada com o Bambu Studio devido à falta da função "Purgar na torre de limpeza".
 
-##### Modo Poop Controlado pelo Fatiador (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=2`)
+##### Modo Poop Controlado pelo Fatiador (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
 Neste modo, nenhuma purga é realizada pela impressora por conta própria durante as trocas de cor. A impressora cortará o filamento, irá para o duto de descarte e devolverá o controle ao fatiador.
 
@@ -594,4 +594,4 @@ Conexão:
 
 Esse erro ocorre quando a tela nativa e o mod acessam o IFS ao mesmo tempo.
 
-É melhor reduzir o tempo de vida da tela nativa para 10 segundos: ```SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=10```.
+É melhor reduzir o tempo de vida da tela nativa para 10 segundos: ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```.

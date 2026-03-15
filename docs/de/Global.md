@@ -60,13 +60,13 @@ Alles funktioniert im automatischen Modus, aber die folgenden Makros sind auch v
 - ZCONTROL_ABORT` - stoppt Klipper, wenn ausgelöst
 - `ZCONTROL_AUTO` - stoppt Klipper (wenn Höhe z < `ZCONTROL_Z`), oder ruft PAUSE auf, wenn z >= `ZCONTROL_Z`.
 - `ZCONTROL_Z Z=10` - setzt die Höhe um Z.
-- SAVE_Z-Mod_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ```SAVE_Z-Mod_DATA ZCONTROL_Z=230```.
+- SAVE_ZMOD_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ```SAVE_ZMOD_DATA ZCONTROL_Z=230```.
 
 Wenn Sie die Düsensteuerung auf den ersten Schichten aktivieren wollen, dann fügen Sie ```ZCONTROL_PAUSE``` durch den Slicer auf der Schicht hinzu, auf der Sie die Pause anstelle der Unterbrechung verwenden wollen
 
 ---
 
-### GET_Z-Mod_DATA
+### GET_ZMOD_DATA
 
 Liefert die Werte der globalen Z-Mod-Parameter/Flags.
 Nach der Ausführung des Makros zeigt die Konsole die Daten an, die zuvor gespeichert und zum aktuellen Zeitpunkt angewendet wurden
@@ -83,7 +83,7 @@ Es wird empfohlen, den Drucker nach dem Ändern von Parametern neu zu starten
 
 ---
 
-### SAVE_Z-Mod_DATA
+### SAVE_ZMOD_DATA
 
 Speichert globale Z-Mod-Parameter/Flags, die bei jedem Druck angewendet werden.
 
@@ -91,7 +91,7 @@ Dieses Makro muss nicht in die Start-, Endcode- oder Gcode-Datei eingefügt werd
 
 **Um den gewünschten Parameter zu bearbeiten, gehe zu `Fluidd` -> `Makros` -> `System` -> `SAVE Z-Mod PARAMETERS`**, wähle den Parameter aus, den du ändern willst, trage ihn ein und drücke `SEND`. Sehen Sie, was in der Fluidd-Konsole angezeigt wird.
 
-Zweite Möglichkeit. Schreiben Sie in die Fluidd-Konsole den gewünschten Befehl, zum Beispiel: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`.
+Zweite Möglichkeit. Schreiben Sie in die Fluidd-Konsole den gewünschten Befehl, zum Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
 [Gespeicherte Parameter anzeigen](/de/Global/#get_zmod_data)
 
@@ -111,7 +111,7 @@ Diese Einstellung kann nicht verwendet werden, wenn der native Bildschirm aktivi
 
 [Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
 
-Beispiel: `SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=4`.
+Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 ##### SCAN_FILE_COLORS
 
@@ -119,13 +119,13 @@ Ermöglicht das Scannen von Gcode-Dateien, um die verwendeten Werkzeugwechselbef
 
 [Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
 
-Beispiel: `SAVE_Z-Mod_DATA SCAN_FILE_COLORS=0`.
+Beispiel: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`.
 
 ##### COLOUR_MENU_1_BASED
 
 Legt fest, welche Bezeichnungen im Farbauswahlmenü angezeigt werden sollen: beginnend mit 0 (T0, T1, etc) oder beginnend mit 1 (Farbe 1, Farbe 2, etc). Dies ändert nur die Namen der Schaltflächen und dient nur der Bequemlichkeit: 0 (von Null), 1 (von Eins).
 
-Beispiel: `SAVE_Z-Mod_DATA COLOUR_MENU_1_BASED=1`.
+Beispiel: `SAVE_ZMOD_DATA COLOUR_MENU_1_BASED=1`.
 
 ##### AUTO_ASSIGN_COLORS
 
@@ -142,7 +142,7 @@ Um benutzerdefinierte Werte für Fehlerbedingungen im stillen Modus einzustellen
 
 [Siehe Vorverarbeitungseinstellung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
 
-Beispiel: `SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=0`.
+Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
 ### Parameter für den Start des Drucks, Aufbau der Tabellenkarte [START_PRINT]:
 
@@ -150,7 +150,7 @@ Beispiel: `SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=0`.
 
 MIDI abspielen bei Druckbeginn (""), 0 zum Ausschalten
 
-Beispiel: `SAVE_Z-Mod_DATA MIDI_START=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_START=Schmerz-Halt-deinen-Mund.mid`.
 
 ---
 
@@ -158,7 +158,7 @@ Beispiel: `SAVE_Z-Mod_DATA MIDI_START=Schmerz-Halt-deinen-Mund.mid`.
 
 Düsenvorreinigung in CLEAR_NOZZLE verwenden 0-nein, 1-ja (0)
 
-Beispiel: `SAVE_Z-Mod_DATA PRECLEAR=0`.
+Beispiel: `SAVE_ZMOD_DATA PRECLEAR=0`.
 
 ---
 
@@ -166,7 +166,7 @@ Beispiel: `SAVE_Z-Mod_DATA PRECLEAR=0`.
 
 Erstellen Sie bei jedem Druck eine Tischkarte (über den nativen Bildschirm, wenn dieser aktiviert ist) 0-nein, 1-ja (0). *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> **aktivieren Sie den Schieberegler** "Nur lokale Netzwerke "* über das Menü des Druckerbildschirms.
 
-Beispiel: `SAVE_Z-Mod_DATA PRINT_LEVELING=1`.
+Beispiel: `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
 ---
 
@@ -174,11 +174,11 @@ Beispiel: `SAVE_Z-Mod_DATA PRINT_LEVELING=1`.
 
 Wenn es möglich ist, eine adaptive Tabellenkarte (KAMP) anstelle einer vollständigen Tabellenkarte zu verwenden 0-nein, 1-ja (0).
 
-Es wird auch empfohlen, `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` zu setzen, was es ermöglicht, den Bereinigungsraum zu verwenden, in dem die Tabellenkarte entfernt wird.
+Es wird auch empfohlen, `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, was es ermöglicht, den Bereinigungsraum zu verwenden, in dem die Tabellenkarte entfernt wird.
 
 *Ermöglicht die Verwendung von KAMP beim Leveln vom nativen Bildschirm über das Netzwerk.
 
-Beispiel: `SAVE_Z-Mod_DATA USE_KAMP=1`.
+Beispiel: `SAVE_ZMOD_DATA USE_KAMP=1`.
 
 ---
 
@@ -233,7 +233,7 @@ Algorithmus für die Überprüfung der Tabellenkarte:
 * ** ** Verlassen Sie sich nicht auf diese Prüfung als absolute Sicherheit.
 * Bei Verwendung der intelligenten Reinigung (KAMP) befindet sich die Wärmewarte in der Nähe des Reinigungsbereichs und nicht in der Ecke des Tisches.
 
-Beispiel: `SAVE_Z-Mod_DATA MESH_TEST=0`.
+Beispiel: `SAVE_ZMOD_DATA MESH_TEST=0`.
 
 ---
 
@@ -264,7 +264,7 @@ Hier sind die Optionen, die Sie hinzufügen müssen:
 - ````"/home/benutzer/zmod_preprocess-darwin-arm64";````
 - ````"/home/benutzer/zmod_preprocess-linux-amd64";````
 
-Beispiel: `SAVE_Z-Mod_DATA FORCE_MD5=1`.
+Beispiel: `SAVE_ZMOD_DATA FORCE_MD5=1`.
 
 ---
 
@@ -274,7 +274,7 @@ Beispiel: `SAVE_Z-Mod_DATA FORCE_MD5=1`.
 
 [Mehr lesen](https://www.klipper3d.org/Skew_Correction.html)
 
-Beispiel: `SAVE_Z-Mod_DATA DISABLE_SKEW=1`.
+Beispiel: `SAVE_ZMOD_DATA DISABLE_SKEW=1`.
 
 ---
 
@@ -284,7 +284,7 @@ Laden des Z-Offsets aus den zuvor über SET_GCODE_OFFSET gespeicherten globalen 
 
 [Wie funktioniert Z-Offset](/de/FAQ/#wie-z-offset-arbeitet)
 
-Beispiel: `SAVE_Z-Mod_DATA LOAD_ZOFFSET=0`.
+Beispiel: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`.
 
 ---
 
@@ -292,7 +292,7 @@ Beispiel: `SAVE_Z-Mod_DATA LOAD_ZOFFSET=0`.
 
 Deaktivieren der Düsenreinigung durch Zusammendrücken 0-no, 1-yes (0)
 
-Beispiel: `SAVE_Z-Mod_DATA DISABLE_PRIMING=0`.
+Beispiel: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`.
 
 ---
 
@@ -314,7 +314,7 @@ Wenn Sie `LINE_PURGE` verwenden, aber die Objektpartitionierung in Orca nicht ak
 Du kannst dein Aufräum-Makro zu 'mod_data/user.cfg' hinzufügen und es mit diesem Parameter benennen
 *behemoth
 
-Beispiel: `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`.
+Beispiel: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`.
 
 *5M/5MPro: Dies ist kein Ersatz für das native clean(CLEAR_NOZZLE), bei dem die Düse in der Mitte von oben in den Tisch stößt und dann das Plastik gegen den Tisch schabt. Dies ist eine Reinigung der Düse kurz vor dem Druck.
 
@@ -326,7 +326,7 @@ Beispiel: `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`.
 
 MIDI am Ende des Drucks abspielen (""), 0 für deaktivieren
 
-Beispiel: `SAVE_Z-Mod_DATA MIDI_END=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_END=Schmerz-Halt-deinen-Mund.mid`.
 
 ---
 
@@ -336,7 +336,7 @@ Dialoge automatisch schließen, wenn der Druckvorgang beendet ist und abgebroche
 
 *Um Dialoge schnell zu schließen, gehen Sie im Menü des Druckerbildschirms zu "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> **Schalten Sie den Schieberegler** "Nur lokales Netzwerk "* (0) ein.
 
-Beispiel: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`.
+Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
 ---
 
@@ -344,7 +344,7 @@ Beispiel: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`.
 
 Automatisches Abschalten der Motoren nach dem Drucken/Abbrechen nach 25 Sekunden 0-nein, 1-ja (1)
 
-Beispiel: `SAVE_Z-Mod_DATA STOP_MOTOR=1`.
+Beispiel: `SAVE_ZMOD_DATA STOP_MOTOR=1`.
 
 ---
 
@@ -356,7 +356,7 @@ Automatischer Neustart des Druckers nach Beendigung des Druckvorgangs (0):
 - 1 - Neustart des Druckers über den Befehl `REBOOT`
 - 2 - im Modus ohne eigenen Bildschirm - Neustart der Firmware über `FIRMWARE_RESTART`, mit Bildschirm - Neustart des Druckers über den Befehl `REBOOT`.
 
-Beispiel: `SAVE_Z-Mod_DATA AUTO_REBOOT=0`.
+Beispiel: `SAVE_ZMOD_DATA AUTO_REBOOT=0`.
 
 ---
 
@@ -373,7 +373,7 @@ Wenn Sie den Filament-Bewegungssensor verwenden, deaktivieren Sie ihn auf dem sy
 
 Wenn der Filamentsensor im nicht-nativen Bildschirmmodus verwendet wird, wird der folgende Satz angezeigt, wenn er ausgelöst wird: "Out of filament. Es wird in 30 Sekunden eine Pause eingelegt".
 
-Beispiel: `SAVE_Z-Mod_DATA MOTION_SENSOR=1`.
+Beispiel: `SAVE_ZMOD_DATA MOTION_SENSOR=1`.
 
 ---
 
@@ -387,7 +387,7 @@ Das Farbauswahlfenster wird bei Druckbeginn nicht angezeigt
 - 1 - Fenster nicht anzeigen, vorher eingestellte Farben verwenden
 - 2 - Fenster nicht anzeigen, IFS nicht verwenden
 
-Beispiel: `SAVE_Z-Mod_DATA SILENT=0`
+Beispiel: `SAVE_ZMOD_DATA SILENT=0`
 
 ---
 
@@ -400,7 +400,7 @@ Balken automatisch laden
 - 0 - Balken nicht automatisch laden
 - 1 - Balken automatisch laden (Standard)
 
-Beispiel: `SAVE_Z-Mod_DATA AUTOINSERT=0`
+Beispiel: `SAVE_ZMOD_DATA AUTOINSERT=0`
 
 ---
 
@@ -413,7 +413,7 @@ Legt fest, ob der Farbwechselvorgang übersprungen werden soll, wenn die vorheri
 - 0 - Überspringen des Prozesses
 - 1 - den Vorgang nicht überspringen
 
-Beispiel: `SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0`
+Beispiel: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
 ---
 
@@ -429,7 +429,7 @@ Bei Farbwechsel während des Drucks Bin-Reset verwenden
 - 1 - Auswurf im Abwurfschacht (Standard)
 - 2 - nach dem Farbwechsel zum Abwurfschacht fahren, aber nicht auswerfen
 
-Beispiel: `SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`
+Beispiel: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
 ---
 
@@ -444,7 +444,7 @@ Entfernen Sie den Balken nach Abschluss des Druckvorgangs
 - 0 - nicht auswerfen (Standard)
 - 1 - auswerfen
 
-Beispiel: `SAVE_Z-Mod_DATA REMOVE_FILAMENT=1`
+Beispiel: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
 
 ---
 
@@ -456,7 +456,7 @@ Behebt falsche SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Re
 - 0 belässt den Parameter wie in Stock 5
 - 1 verwendet `quare_corner_velocity` aus `mod_data/user.cfg` oder `printer.base.cfg`
 
-Beispiel: `SAVE_Z-Mod_DATA FIX_SCV=1`.
+Beispiel: `SAVE_ZMOD_DATA FIX_SCV=1`.
 
 In unserem Drucker ist `quare_corner_velocity: 25`, und die Berechnungen des Shaper- und Beschleunigungsgraphen werden für `SCV = 5` durchgeführt.
 
@@ -481,7 +481,7 @@ Bei einigen Firmwares startet das Wi-Fi gelegentlich nicht.
 
 Um dies zu beheben. Sie müssen eine Verbindung zum Wi-Fi-Netzwerk über den nativen Bildschirm herstellen.
 
-Rufen Sie `SAVE_Z-Mod_DATA WIFI=1` auf.
+Rufen Sie `SAVE_ZMOD_DATA WIFI=1` auf.
 
 Deaktivieren des WLANs auf dem nativen Bildschirm
 
@@ -505,7 +505,7 @@ Private Ursachen:
 - RAM-Knappheit. Lösung: den Prozessor neu anlöten und den Speicher auf 256 Megabyte aufstocken
 - Gebrochenes Kabel zum Extruder. Lösung: Ersetzen/Korrigieren des Kabels
 - Der Kabelstecker hat keinen Kontakt mit der Extruderkopf-Platine. Lösung: Ersetzen Sie die Extruderplatine
-- Herunterladen von Daten aus dem SWAP (SWAP befindet sich auf EMMC, das mit 10 MB/s läuft, die Datenmenge im SWAP beträgt bis zu 25 Megabyte, wenn Shaper gebaut werden). Lösung: SWAP deaktivieren, wenn Sie 256 MB RAM haben `SAVE_Z-Mod_DATA USE_SWAP=0`.
+- Herunterladen von Daten aus dem SWAP (SWAP befindet sich auf EMMC, das mit 10 MB/s läuft, die Datenmenge im SWAP beträgt bis zu 25 Megabyte, wenn Shaper gebaut werden). Lösung: SWAP deaktivieren, wenn Sie 256 MB RAM haben `SAVE_ZMOD_DATA USE_SWAP=0`.
 - MCU-Firmware-Fehler. Lösung: MCU neu flashen [über Reset](/de/Setup/#return-printer-to-factory-settings-needed-for-mod installation). MCU neu flashen von mod [UPDATE_MCU](/de/System/#update_mcu)
 
 Behebt den Fehler E0011 sowie `Communication timeout during homing`, eine Änderung des Parameters führt zu einem Neustart des Druckers. 0-Nein, 1-Ja (0)
@@ -513,7 +513,7 @@ Behebt den Fehler E0011 sowie `Communication timeout during homing`, eine Änder
 - 0 belässt den Parameter auf dem Standardwert 0,025
 - 1 setzt den Parameter auf 0,1
 
-Beispiel: `SAVE_Z-Mod_DATA FIX_E0011=1`.
+Beispiel: `SAVE_ZMOD_DATA FIX_E0011=1`.
 
 Der Fehler kann auch auftreten:
 
@@ -522,7 +522,7 @@ Der Fehler kann auch auftreten:
   
   Führen Sie das Makro `MEM` aus und sehen Sie nach, ob ein Swap vorhanden ist und wie groß er ist.
   
-  Aktivieren Sie SWAP, wenn es deaktiviert ist ```SAVE_Z-Mod_DATA USE_SWAP=1```.
+  Aktivieren Sie SWAP, wenn es deaktiviert ist ```SAVE_ZMOD_DATA USE_SWAP=1```.
 
 - Wenn Sie FF5M/FF5MPro verwenden, machen Sie einen vollständigen Test. Nämlich die PID-Kalibrierung, das Entfernen der Table Map und das Entfernen des Shapers zur gleichen Zeit.
   
@@ -571,7 +571,7 @@ In der Datei `/opt/klipper/klippy/toolhead.py` steht im Stack der Parameter `LOO
 - 0 setzt den Parameter auf Lager
 - 1 setzt den Parameter auf 0.150
 
-Beispiel: `SAVE_Z-Mod_DATA FIX_E0017=1`.
+Beispiel: `SAVE_ZMOD_DATA FIX_E0017=1`.
 
 Wie auf dem Lager zu beheben:
 
@@ -603,7 +603,7 @@ So beheben Sie den Fehler manuell auf dem Gerät:
 
 LED-Helligkeit im eingeschalteten Zustand (50)
 
-Beispiel: `SAVE_Z-Mod_DATA LED=50`
+Beispiel: `SAVE_ZMOD_DATA LED=50`
 
 ---
 
@@ -611,7 +611,7 @@ Beispiel: `SAVE_Z-Mod_DATA LED=50`
 
 Spielt MIDI, wenn es eingeschaltet ist (""), 0 zum Ausschalten
 
-Beispiel: `SAVE_Z-Mod_DATA MIDI_ON=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_ON=Schmerz-Halt-deinen-Mund.mid`.
 
 ---
 
@@ -619,7 +619,7 @@ Beispiel: `SAVE_Z-Mod_DATA MIDI_ON=Schmerz-Halt-deinen-Mund.mid`.
 
 Alternative SAVE_CONFIG verwenden (ruft `SAVE_CONFIG` auf, ohne den nativen Bildschirm aufzuhängen) [NEW_SAVE_CONFIG](/de/Main/#new_save_config) beim Kalibrieren von PID 0-nein, 1-ja (0)
 
-Beispiel: `SAVE_Z-Mod_DATA NEW_SAVE_CONFIG=0`.
+Beispiel: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`.
 
 ---
 
@@ -631,7 +631,7 @@ SWAP verwenden (1)
 - 1 - ja, auf EMMC
 - 2 - ja, wenn möglich auf USB FLASH
 
-Beispiel: `SAVE_Z-Mod_DATA USE_SWAP=1`.
+Beispiel: `SAVE_ZMOD_DATA USE_SWAP=1`.
 
 ---
 
@@ -639,7 +639,7 @@ Beispiel: `SAVE_Z-Mod_DATA USE_SWAP=1`.
 
 Chinesische Wolken einschalten 0 - nein, 1 - ja (1)
 
-Beispiel: `SAVE_Z-Mod_DATA CHINA_CLOUD=0`.
+Beispiel: `SAVE_ZMOD_DATA CHINA_CLOUD=0`.
 
 [Chinesische Wolken deaktivieren](/de/Recomendations/#disable-china-clouds)
 
@@ -654,7 +654,7 @@ Stattdessen können Sie verwenden:
 - [zmod.link](/de/Zmod/#zlink) - Cloud, für die Verwaltung von Druckern über Fluidd/Mainsail.
 - [Telegram bot](/de/Macros/).
 
-Wenn Sie die native Firmware aktualisieren möchten, müssen Sie die chinesische Cloud aktivieren, `SAVE_Z-Mod_DATA CHINA_CLOUD=1`, neu starten und die native Firmware aktualisieren.
+Wenn Sie die native Firmware aktualisieren möchten, müssen Sie die chinesische Cloud aktivieren, `SAVE_ZMOD_DATA CHINA_CLOUD=1`, neu starten und die native Firmware aktualisieren.
 
 So **deaktivieren** Sie chinesische Wolken auf der nativen Firmware:
 
@@ -682,7 +682,7 @@ So **aktivieren** Sie chinesische Wolken mit der Standard-Firmware:
 
 Legen Sie die Priorität des Klipper-Prozesses fest. 1 ist die niedrigste Priorität, 40 ist die höchste Priorität (20).
 
-Beispiel: `SAVE_Z-Mod_DATA NICE=20`.
+Beispiel: `SAVE_ZMOD_DATA NICE=20`.
 
 Je höher die Priorität von Klipper, desto mehr Ressourcen hat er, aber desto häufiger stürzen Moonraker und Kamera ab.
 
@@ -704,7 +704,7 @@ Legt die Zeit in Sekunden fest, nach der der native Bildschirm ausgeschaltet wir
 
 Beachten Sie, dass der native Bildschirm Zeit haben muss, um WiFi zu konfigurieren; die Mindestzeit beträgt 5 Sekunden.
 
-Beispiel: `SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=120`.
+Beispiel: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`.
 
 ---
 
@@ -712,7 +712,7 @@ Beispiel: `SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=120`.
 
 Legt die Zeit in Minuten fest, nach der der FF5m Pro abgeschaltet wird. (0)
 
-Beispiel: `SAVE_Z-Mod_DATA PRO_POWEROFF_TIMEOUT=10`.
+Beispiel: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`.
 
 ---
 
@@ -723,7 +723,7 @@ Beispiel: `SAVE_Z-Mod_DATA PRO_POWEROFF_TIMEOUT=10`.
 
 Wenn Makros lokal gespeichert werden, werden neue Makros in einem separaten Abschnitt abgelegt.
 
-Beispiel: `SAVE_Z-Mod_DATA SAVE_MOONRAKER=1`.
+Beispiel: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`.
 
 ---
 
@@ -732,4 +732,4 @@ Beispiel: `SAVE_Z-Mod_DATA SAVE_MOONRAKER=1`.
 - 0 - Den Zustand der Filamentsensoren nach dem Neuladen nicht speichern, sie werden immer aktiviert sein (Standard)
 - 1 - Zustand der Sensoren nach einem Neustart speichern. Wenn Sie einen Sensor deaktivieren, wird er auch nach dem Neustart deaktiviert.
 
-Beispiel: `SAVE_Z-Mod_DATA SAVE_FILAMENT_SENSORS=1`.
+Beispiel: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`.

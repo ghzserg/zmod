@@ -229,10 +229,10 @@ In most cases, there is no need to build a bed mesh before every print. The exce
 
 **1. Enabling Adaptive Calibration (KAMP)**
 
-Activate this option to make the printer use KAMP wherever possible [SAVE_Z-Mod_DATA USE_KAMP=1](/Global/#use_kamp).
+Activate this option to make the printer use KAMP wherever possible [SAVE_ZMOD_DATA USE_KAMP=1](/Global/#use_kamp).
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 Configure Orca:
@@ -244,10 +244,10 @@ Configure Orca:
 
 **2. Enabling Calibration Before Each Print**
 
-If you want the printer to automatically build a bed mesh before starting each job (e.g., when frequently changing plates), activate this function [SAVE_Z-Mod_DATA PRINT_LEVELING=1](/Global/#print_leveling).
+If you want the printer to automatically build a bed mesh before starting each job (e.g., when frequently changing plates), activate this function [SAVE_ZMOD_DATA PRINT_LEVELING=1](/Global/#print_leveling).
 
 ```gcode
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
 ```
 
 You can use a start code like this:
@@ -262,10 +262,10 @@ M104 S[nozzle_temperature_initial_layer] ; Set nozzle temperature
 
 **3. Smart Purge Before Print**
 
-Add this setting to make the printer use the same area for nozzle cleaning where it just took the bed mesh. This saves space and time [SAVE_Z-Mod_DATA CLEAR=LINE_PURGE](/Global/#clear).
+Add this setting to make the printer use the same area for nozzle cleaning where it just took the bed mesh. This saves space and time [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/Global/#clear).
 
 ```gcode
-SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 ```
 
 #### Summary: How to Set Up KAMP for Perfect Printing
@@ -273,7 +273,7 @@ SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
 To enable smart bed mesh leveling before each print, run the following command once:
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ```
 
 Now, before each print, the printer will take a bed mesh only where there are objects to print.
@@ -321,9 +321,9 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 **How it Works:**
 
-1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen/HelixScreen, you need to activate a special setting once [SAVE_Z-Mod_DATA LOAD_ZOFFSET=1](/Global/#load_zoffset):
+1.  To make the printer remember the Z-Offset from the web interface and GuppyScreen/HelixScreen, you need to activate a special setting once [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/Global/#load_zoffset):
     ```gcode
-    SAVE_Z-Mod_DATA LOAD_ZOFFSET=1
+    SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *This command tells the system: "Load the Z-Offset from the saved settings, don't reset it."*
 
@@ -344,7 +344,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 *   **Adjust Z-Offset only during the first layer printing.**
 *   **When working with the stock screen — adjust z-offset on it.**
-*   **When working without the stock screen**, first execute the command ```SAVE_Z-Mod_DATA LOAD_ZOFFSET=1```.
+*   **When working without the stock screen**, first execute the command ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
 *   The system will save everything itself. You have nothing to worry about.
 
 !!! danger
@@ -370,9 +370,9 @@ The graph and input shaper calculations in Klipper by default use the value `squ
 
 **What to Do?**
 
-1.  **Fix the Calculations:** Activate the fix for correct graph display [SAVE_Z-Mod_DATA FIX_SCV=1](/Global/#fix_scv).
+1.  **Fix the Calculations:** Activate the fix for correct graph display [SAVE_ZMOD_DATA FIX_SCV=1](/Global/#fix_scv).
     ```gcode
-    SAVE_Z-Mod_DATA FIX_SCV=1
+    SAVE_ZMOD_DATA FIX_SCV=1
     ```
 
 2.  **Improve Print Quality (Recommended):** Add the following line to the `mod_data/user.cfg` file:
@@ -454,7 +454,7 @@ max_accel: 8700 ; Maximum acceleration for X and Y axes
 
 #### Quick Action Algorithm for Input Shaper Calibration:
 
-1.  Execute `SAVE_Z-Mod_DATA FIX_SCV=1` for correct calculations.
+1.  Execute `SAVE_ZMOD_DATA FIX_SCV=1` for correct calculations.
 2.  Add `square_corner_velocity: 9` to `mod_data/user.cfg` for better quality.
 3.  Start calibration for the desired axis, e.g., `ZSHAPER Y=1`.
 4.  Study the graphs and console output.

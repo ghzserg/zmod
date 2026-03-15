@@ -202,10 +202,10 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 ## Removing or Temporarily Disabling the Mod
 
-- **[SKIP_Z-Mod](/Zmod/#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
-- **[REMOVE_Z-Mod](/Zmod/#remove_zmod)**: Fully uninstalls the mod.
+- **[SKIP_ZMOD](/Zmod/#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
+- **[REMOVE_ZMOD](/Zmod/#remove_zmod)**: Fully uninstalls the mod.
 
-**Recommended method:** Use the `REMOVE_Z-Mod` macro. Use USB removal only if macros are unavailable.
+**Recommended method:** Use the `REMOVE_ZMOD` macro. Use USB removal only if macros are unavailable.
 
 Attention!
 
@@ -231,7 +231,7 @@ Attention!
 
 2. If you are using **Klipper 13**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
-   ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```
+   ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
 **For [AD5X](/ru/AD5X/), [Z-Mod activation](/Native_FW/) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 

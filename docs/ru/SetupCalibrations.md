@@ -232,10 +232,10 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 
 **1. Включение адаптивной калибровки (KAMP)**
 
-Активируйте эту опцию, чтобы принтер использовал KAMP везде, где это возможно [SAVE_Z-Mod_DATA USE_KAMP=1](/ru/Global/#use_kamp).
+Активируйте эту опцию, чтобы принтер использовал KAMP везде, где это возможно [SAVE_ZMOD_DATA USE_KAMP=1](/ru/Global/#use_kamp).
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 Настроить Orca:
@@ -247,10 +247,10 @@ SAVE_Z-Mod_DATA USE_KAMP=1
 
 **2. Включение калибровки перед каждой печатью**
 
-Если вы хотите, чтобы принтер автоматически строил карту стола перед началом каждой работы (например, при частой смене пластин), активируйте эту функцию [SAVE_Z-Mod_DATA PRINT_LEVELING=1](/ru/Global/#print_leveling).
+Если вы хотите, чтобы принтер автоматически строил карту стола перед началом каждой работы (например, при частой смене пластин), активируйте эту функцию [SAVE_ZMOD_DATA PRINT_LEVELING=1](/ru/Global/#print_leveling).
 
 ```gcode
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
 ```
 
 Стартовый код можно использовать такой:
@@ -265,10 +265,10 @@ M104 S[nozzle_temperature_initial_layer] ; Установить температ
 
 **3. Умная очистка перед печатью**
 
-Добавьте эту настройку, чтобы принтер использовал для очистки сопла ту же область, где только что снимал карту стола. Это экономит место и время [SAVE_Z-Mod_DATA CLEAR=LINE_PURGE](/ru/Global/#clear).
+Добавьте эту настройку, чтобы принтер использовал для очистки сопла ту же область, где только что снимал карту стола. Это экономит место и время [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/ru/Global/#clear).
 
 ```gcode
-SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 ```
 
 #### Итог: как настроить KAMP для идеальной печати
@@ -276,7 +276,7 @@ SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
 Чтобы включить умное построение карты стола перед каждой печатью, выполните один раз команду:
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ```
 
 Теперь перед каждой печатью принтер будет снимать карту стола, только там где есть объекты для печати
@@ -324,9 +324,9 @@ SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 **Как это работает:**
 
-1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen/HelixScreen, нужно один раз активировать специальную настройку [SAVE_Z-Mod_DATA LOAD_ZOFFSET=1](/ru/Global/#load_zoffset):
+1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen/HelixScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/ru/Global/#load_zoffset):
     ```gcode
-    SAVE_Z-Mod_DATA LOAD_ZOFFSET=1
+    SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *Эта команда говорит системе: "Загружай Z-Offset из сохраненных настроек, а не обнуляй его".*
 
@@ -347,7 +347,7 @@ SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 *   **Регулируйте Z-Offset только во время печати первого слоя.**
 *   **При работе с родным экраном — регулируйте z-offset на нем.**
-*   **При работе в режиме без родного экрана**, сначала выполните команду ```SAVE_Z-Mod_DATA LOAD_ZOFFSET=1```.
+*   **При работе в режиме без родного экрана**, сначала выполните команду ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
 *   Система сама всё сохранит. Вам не о чем беспокоиться.
 
 !!! danger
@@ -373,9 +373,9 @@ SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 **Что делать?**
 
-1.  **Исправить расчеты:** Активируйте исправление для корректного отображения графиков [SAVE_Z-Mod_DATA FIX_SCV=1](/ru/Global/#fix_scv).
+1.  **Исправить расчеты:** Активируйте исправление для корректного отображения графиков [SAVE_ZMOD_DATA FIX_SCV=1](/ru/Global/#fix_scv).
     ```gcode
-    SAVE_Z-Mod_DATA FIX_SCV=1
+    SAVE_ZMOD_DATA FIX_SCV=1
     ```
 
 2.  **Улучшить качество печати (Рекомендуется):** Добавьте в файл `mod_data/user.cfg` следующую строку:
@@ -457,7 +457,7 @@ max_accel: 8700 ; Максимальное ускорение для осей X 
 
 #### Краткий алгоритм действий для калибровки шейперов:
 
-1.  Выполните `SAVE_Z-Mod_DATA FIX_SCV=1` для корректных расчетов.
+1.  Выполните `SAVE_ZMOD_DATA FIX_SCV=1` для корректных расчетов.
 2.  Добавьте `square_corner_velocity: 9` в `mod_data/user.cfg` для лучшего качества.
 3.  Запустите калибровку нужной оси, например, `ZSHAPER Y=1`.
 4.  Изучите графики и вывод в консоли.

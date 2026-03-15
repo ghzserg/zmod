@@ -218,17 +218,17 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 
 ## Löschen - vorübergehende Deaktivierung der Mod
 
-- [SKIP_Z-Mod](/de/Zmod/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten
-- [REMOVE_Z-Mod](/de/Zmod/#remove_zmod) - Makro zum Entfernen von Mods
+- [SKIP_ZMOD](/de/Zmod/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten
+- [REMOVE_ZMOD](/de/Zmod/#remove_zmod) - Makro zum Entfernen von Mods
 
-Es wird empfohlen, **den Mod über das Makro `REMOVE_Z-Mod`** zu entfernen, die Entfernung über ein Flash-Laufwerk nur zu verwenden, wenn es keine Möglichkeit gibt, das Makro auszuführen.
+Es wird empfohlen, **den Mod über das Makro `REMOVE_ZMOD`** zu entfernen, die Entfernung über ein Flash-Laufwerk nur zu verwenden, wenn es keine Möglichkeit gibt, das Makro auszuführen.
 
 Achtung!
 
 - Wenn Sie Klipper 13 benutzen, ist es notwendig, ```UPDATE_MCU``` auszuführen. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen haben.
 - Wenn Sie Plug-Ins aktiviert haben, müssen Sie diese zuerst deaktivieren ````DISABLE_PLUGIN name=g28_tenz````.
 
-Entfernen Sie die Mod komplett ```REMOVE_Z-Mod FULL=1```.
+Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1```.
 
 Deinstallation des Mods über ein Flash-Laufwerk:
 
@@ -246,7 +246,7 @@ Deinstallation des Mods über ein Flash-Laufwerk:
 
 1. deaktivieren Sie alle aktiven Plugins außer recommend, timelamse, notify (```DISABLE_PLUGIN name=plugin_name```).
 2. Wenn Sie **Klipper 13** benutzen, sollten Sie ```UPDATE_MCU``` durchführen, bevor Sie die native Firmware aktualisieren. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen sind.
-3. Aktivieren Sie die chinesische Wolke, wenn Sie das Update vom nativen Bildschirm aus durchführen wollen ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```.
+3. Aktivieren Sie die chinesische Wolke, wenn Sie das Update vom nativen Bildschirm aus durchführen wollen ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
 
 Wenn der native Bildschirm das Update nicht findet:
 

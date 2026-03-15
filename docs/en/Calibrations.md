@@ -104,7 +104,7 @@ Add as the first line:
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-**Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_Z-Mod_DATA PRINT_LEVELING=1 USE_KAMP=1` and `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` to utilize purge areas.
+**Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` and `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to utilize purge areas.
 
 [Bed leveling options](/FAQ/#what-options-are-available-for-bed-leveling)
 
@@ -125,7 +125,7 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
 
-**Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_Z-Mod_DATA PRINT_LEVELING=1`.
+**Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
 [Bed leveling options](/FAQ/#what-options-are-available-for-bed-leveling)
 

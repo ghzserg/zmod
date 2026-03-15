@@ -21,7 +21,7 @@ Substituindo o código g inicial nativo (se usado com uma tela, adicione M140 ou
 - MESH - nome do cartão da tabela a ser carregado; se não for especificado, nada será carregado; se não existir, será criado ("").
 - FORCE_LEVELING - força a criação de um mapa de tabela (False)
 - SKIP_LEVELING - não cria um mapa de tabela sob nenhuma condição. Mais forte do que FORCE_KAMP e FORCE_LEVELING (False)
-- FORCE_KAMP - Inicia a criação de um mapa de tabela adaptável (False) *Recomenda-se colocar também `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`, o que permitirá que você use o espaço de limpeza onde o mapa de tabela é removido.
+- FORCE_KAMP - Inicia a criação de um mapa de tabela adaptável (False) *Recomenda-se colocar também `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, o que permitirá que você use o espaço de limpeza onde o mapa de tabela é removido.
 - Z_OFFSET - Define o deslocamento Z (0,0)
 - INTERNAL - Para a versão PRO, ao trabalhar em modo de tela não nativa, 1 - ativa a recirculação interna (0)
 - EXTERNAL - Para a versão PRO no modo de tela não nativa, 1 - ativa a recirculação externa (0).
@@ -55,7 +55,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 # porcupine #
 
-#### Esses não são parâmetros START_PRINT, são sinalizadores/parâmetros globais que são definidos por meio de [SAVE_Z-Mod_DATA](/pt/Global/#start_print):
+#### Esses não são parâmetros START_PRINT, são sinalizadores/parâmetros globais que são definidos por meio de [SAVE_ZMOD_DATA](/pt/Global/#start_print):
 
 - [PRECLEAR](/pt/Global/#preclear) - usar preclear de bocal em [CLEAR_NOZZLE](/pt/Main/#CLEAR_NOZZLE) 0-no, 1-yes (0).
 - [CLEAR](/pt/Global/#clear) - Selecione o algoritmo de limpeza do bocal (LINE_PURGE)
@@ -107,7 +107,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Substituindo o código g final nativo
 
-#### Esses não são parâmetros END_PRINT, são sinalizadores/parâmetros globais que são definidos por meio de [SAVE_Z-Mod_DATA](/pt/Global/#end_print).
+#### Esses não são parâmetros END_PRINT, são sinalizadores/parâmetros globais que são definidos por meio de [SAVE_ZMOD_DATA](/pt/Global/#end_print).
 
 - AUTO_REBOOT - reinicialização automática da impressora após o fim da impressão 0-não, 1-sim, 2-FIRMWARE_RESTART (somente no modo sem tela nativa, com tela REBOOT) (0).
 - CLOSE_DIALOGS - Fecha automaticamente as caixas de diálogo quando a impressão é concluída e cancelada 0-não, 1-sim lentamente, 2-sim rapidamente *Para fechar rapidamente as caixas de diálogo, é necessário ir para "Settings" (Configurações) -> "WiFi icon" (Ícone WiFi) -> "Network mode" (Modo de rede) -> **ativar o controle deslizante** "Local networks only "* (0).
@@ -186,7 +186,7 @@ Limpando o bocal na mesa como no firmware nativo
 - BED_TEMP - temperatura da mesa (80)
 
 *PRECLEAR - usar a pré-limpeza do bocal em CLEAR_NOZZLE 0-não, 1-sim (0).
-Esse não é um parâmetro do CLEAR_NOZZLE, é um sinalizador global que é definido por meio de `SAVE_Z-Mod_DATA PRECLEAR=1`. Leia mais [aqui](/pt/Global/#preclear)*
+Esse não é um parâmetro do CLEAR_NOZZLE, é um sinalizador global que é definido por meio de `SAVE_ZMOD_DATA PRECLEAR=1`. Leia mais [aqui](/pt/Global/#preclear)*
 
 *O refinamento da macro `CLEAR_NOZZLE` em `mod_data/user.cfg` não alterará a limpeza nativa do bocal na tabela quando chamada diretamente da tela nativa, porque a tela nativa funciona bem sem o Z-Mod e, portanto, não usa macros Z-Mod*.
 

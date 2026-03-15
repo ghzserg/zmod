@@ -85,7 +85,7 @@ Igor Polunovskiy
 
 [CHECK_MD5](/ru/System/#check_md5)
 
-Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`
+Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
 

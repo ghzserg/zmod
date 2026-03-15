@@ -106,9 +106,9 @@ Fügen Sie die erste Zeile in Orca hinzu
 KAMP EXTRUDER_TEMP=[Düsentemperatur_Anfangsschicht] BED_TEMP=[Betttemperatur_Anfangsschicht_Einzel]
 ```
 
-Aber es ist besser, [START_PRINT](/de/Main/#start_print) und [SAVE_Z-Mod_DATA](/de/Global/#start_print) zu verwenden PRINT_LEVELING=1 USE_KAMP=1
+Aber es ist besser, [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#start_print) zu verwenden PRINT_LEVELING=1 USE_KAMP=1
 
-Es wird auch empfohlen, `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` zu setzen, was es Ihnen ermöglicht, den Aufräumraum zu nutzen, in dem die Tabellenkarte entfernt wird.
+Es wird auch empfohlen, `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, was es Ihnen ermöglicht, den Aufräumraum zu nutzen, in dem die Tabellenkarte entfernt wird.
 
 [Was sind die Optionen zum Entfernen der Tabellenkarte?](/de/FAQ/#what-are-the-options-for-removing-the-table-card)
 
@@ -129,7 +129,7 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[Düsentemperatur_Einstiegsschicht]
 ```
 
-Es ist jedoch besser, [START_PRINT](/de/Main/#start_print) und [SAVE_Z-Mod_DATA](/de/Goabal/#start_print) zu verwenden PRINT_LEVELING=1
+Es ist jedoch besser, [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Goabal/#start_print) zu verwenden PRINT_LEVELING=1
 
 [Was sind die Optionen zum Entfernen einer Tabellenkarte?](/de/FAQ/#what-are-the-options-for-removing-a-table-card)
 

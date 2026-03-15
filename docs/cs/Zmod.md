@@ -119,7 +119,7 @@ Vypne alternativní implementaci kamery.
 Restartuje alternativní implementaci kamery.
 
 ---
-### REMOVE_Z-Mod
+### REMOVE_ZMOD
 
 Odinstaluje Zmod.
 
@@ -131,7 +131,7 @@ Ve výchozím nastavení není smazán, aby se zabránilo náhodné ztrátě dat
 Varování! Sami deaktivujte všechny pluginy a přejděte na nativní Klipper.
 
 ---
-### SKIP_Z-Mod
+### SKIP_ZMOD
 
 Restartuje do původního systému bez Zmod.
 Deaktivuje konfigurace Zmod, Moonraker a Fluidd.
@@ -166,7 +166,7 @@ Aktualizuje firmware přes síť pomocí USB disku.
 
 ---
 
-### STOP_Z-Mod
+### STOP_ZMOD
 
 Vyčistí guppy, helix, moonraker a fluidd/Mainsail z paměti. Telegram bot také přestane fungovat.
 
@@ -178,16 +178,16 @@ Parametry:
 
 Příklad:
 ```
-STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Pokud je tento řádek přidán do startovacího kódu, bude GUPPY/HELIX vyčištěn z paměti po zahájení tisku.
 
 ---
 
-### START_Z-Mod
+### START_ZMOD
 
-Znovu zapne guppy, helix, moonraker a fluidd/Mainsail po STOP_Z-Mod.
+Znovu zapne guppy, helix, moonraker a fluidd/Mainsail po STOP_ZMOD.
 
 Parametry:
 
@@ -197,7 +197,7 @@ Parametry:
 
 Příklad:
 ```
-START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Pokud je tento řádek přidán do koncového kódu, bude GUPPY/HELIX spuštěn po dokončení tisku.

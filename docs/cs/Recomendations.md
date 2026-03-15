@@ -84,7 +84,7 @@ Igor Polunovskiy
 
 Přidejte [CHECK_MD5](System.md#check_md5) do svého pracovního postupu.
 
-Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`
+Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 1. Vyberte a stáhněte soubor pro vaši architekturu a operační systém:
 

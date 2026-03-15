@@ -20,7 +20,7 @@ Přístup do složky **mod_data** přes webové rozhraní Fluidd:
 - Vlastní nastavení Klipperu patří do `mod_data/user.cfg`, které může přepsat/doplnit `printer_base.cfg` a soubory Z-Mod.
 - Vlastní nastavení Moonrakeru patří do `mod_data/user.moonraker.conf`.
 - Vlastní MIDI soubory jsou uloženy v `mod_data/midi/`.
-- Globální nastavení modu se ukládají pomocí makra [SAVE_Z-Mod_DATA](Global.md#save_zmod_data).
+- Globální nastavení modu se ukládají pomocí makra [SAVE_ZMOD_DATA](Global.md#save_zmod_data).
 - Skripty pro vypnutí jsou uloženy v `mod_data/power_off.sh`.
 - Skripty pro zapnutí jsou uloženy v `mod_data/power_on.sh`.
 
@@ -162,11 +162,11 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Pro povolení automatického vyrovnávání pro každý tisk, zadejte jednou v konzoli Fluidd/Mainsail:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Přes menu obrazovky tiskárny: `Nastavení` -> `Ikona WiFi` -> `Síťový režim` -> povolit `Pouze lokální sítě`.
 
-Přečtěte si dokumentaci k [START_PRINT](Main.md#start_print) a [SAVE_Z-Mod_DATA](Global.md#save_zmod_data), abyste využili pokročilé funkce Z-Mod.
+Přečtěte si dokumentaci k [START_PRINT](Main.md#start_print) a [SAVE_ZMOD_DATA](Global.md#save_zmod_data), abyste využili pokročilé funkce Z-Mod.
 
 Pro firmwarovou retrakci si přečtěte [dokumentaci](FAQ.md#what-is-firmware-retraction) a přidejte do `Profilu filamentu` -> `Pokročilé` -> `Start G-kód filamentu`:
 ```
@@ -187,7 +187,7 @@ Použijte `LOAD_ZOFFSET_NATIVE` pro zkopírování Z-offsetu z nativních obrazo
 
 Úpravy Z-offsetu přes Fluidd/Mainsail/GuppyScreen/HelixScreen ovlivňují tisk pouze do restartu. Měnit ho bez porozumění pohybu trysky se nedoporučuje.
 
-Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluid/Mainsail/GuppyScreen/HelixScreen) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](Global.md#load_zoffset) (standardně vypnutý; povolte pomocí `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](Main.md#start_print).
+Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluid/Mainsail/GuppyScreen/HelixScreen) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](Global.md#load_zoffset) (standardně vypnutý; povolte pomocí `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](Main.md#start_print).
 
 Z-offset lze také nastavit pomocí parametrů [START_PRINT](Main.md#start_print):
 
@@ -197,7 +197,7 @@ Z-offset lze také nastavit pomocí parametrů [START_PRINT](Main.md#start_print
 
 Pro povolení automatického vyrovnávání pro každý tisk, zadejte jednou v konzoli Fluidd/Mainsail:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 Nativní obrazovka vždy používá:
@@ -207,7 +207,7 @@ Nativní obrazovka vždy používá:
 
 Bez nativní obrazovky se mesh `auto` načte automaticky při startu.
 
-Pro použití jiného meshe, vypněte automatické vyrovnávání (`SAVE_Z-Mod_DATA PRINT_LEVELING=0`):
+Pro použití jiného meshe, vypněte automatické vyrovnávání (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
 
 - Specifikujte pomocí parametru `MESH` v [START_PRINT](Main.md#start_print). Např. `START_PRINT MESH=my_80_degree_mesh`
 - Načtěte pomocí `BED_MESH_PROFILE LOAD=my_80_degree_mesh` v profilu filamentu. Zajistěte konzistenci mezi profilem a `START_PRINT`, nebo vypněte čištění trysky v `START_PRINT`.
@@ -216,8 +216,8 @@ Pro použití jiného meshe, vypněte automatické vyrovnávání (`SAVE_Z-Mod_D
 #### Přes globální parametry
 Použijte parametry `PRINT_LEVELING` a `USE_KAMP`. Povolte pomocí:
 ```
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 ---

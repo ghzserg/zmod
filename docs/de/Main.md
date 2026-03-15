@@ -21,7 +21,7 @@ Ersetzen des nativen anfänglichen g-Codes (wenn mit einem Bildschirm verwendet,
 - MESH - Name der zu ladenden Tabellenkarte, wenn nicht angegeben, wird nichts geladen, wenn sie nicht existiert, wird sie erstellt ("").
 - FORCE_LEVELING - zwingt zur Erstellung einer Tabellenkarte (False)
 - SKIP_LEVELING - baut unter keiner Bedingung eine Tabellenkarte auf. Stärker als FORCE_KAMP und FORCE_LEVELING (False)
-- FORCE_KAMP - Beginnt mit dem Aufbau einer adaptiven Tabellenabbildung (False) *Es wird empfohlen, auch `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` zu setzen, was es Ihnen ermöglicht, den Bereinigungsbereich zu nutzen, in dem die Tabellenabbildung entfernt wird.
+- FORCE_KAMP - Beginnt mit dem Aufbau einer adaptiven Tabellenabbildung (False) *Es wird empfohlen, auch `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, was es Ihnen ermöglicht, den Bereinigungsbereich zu nutzen, in dem die Tabellenabbildung entfernt wird.
 - Z_OFFSET - Z-Offset einstellen (0.0)
 - INTERNAL - Für die PRO-Version beim Arbeiten im nicht-nativen Bildschirmmodus, 1 - Aktivierung der internen Rückführung (0)
 - EXTERNAL - Für die PRO-Version im nicht-nativen Bildschirmmodus, 1 - Aktivierung der externen Rückführung (0).
@@ -55,7 +55,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={schicht_zahl + 1}
 
 # Stachelschwein #
 
-#### Dies sind keine START_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_Z-Mod_DATA](/de/Global/#start_print) gesetzt werden:
+#### Dies sind keine START_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_ZMOD_DATA](/de/Global/#start_print) gesetzt werden:
 
 - [PRECLEAR](/de/Global/#preclear) - Verwendung der Düsenvorreinigung in [CLEAR_NOZZLE](/de/Main/#CLEAR_NOZZLE) 0-nein, 1-ja (0).
 - [CLEAR](/de/Global/#clear) - Düsenreinigungsalgorithmus auswählen (LINE_PURGE)
@@ -107,7 +107,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={schicht_zahl + 1}
 
 Ersetzen des nativen End-G-Codes
 
-#### Dies sind keine END_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_Z-Mod_DATA](/de/Global/#end_print) gesetzt werden.
+#### Dies sind keine END_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_ZMOD_DATA](/de/Global/#end_print) gesetzt werden.
 
 - AUTO_REBOOT - automatischer Neustart des Druckers nach Beendigung des Druckvorgangs 0-nein, 1-ja,2-FIRMWARE_RESTART(nur im Modus ohne eigenen Bildschirm, mit REBOOT-Bildschirm) (0).
 - CLOSE_DIALOGS - schließt automatisch die Dialoge, wenn der Druckvorgang beendet und abgebrochen wird 0-nein, 1-ja langsam, 2-ja schnell *Für ein schnelles Schließen der Dialoge muss man zu "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> **den Schieberegler** "Nur lokale Netzwerke "* aktivieren (0).
@@ -186,7 +186,7 @@ Löschen der Düse auf dem Tisch wie in nativer Firmware
 - BED_TEMP - Tischtemperatur (80)
 
 *PRECLEAR - Düsenvorreinigung in CLEAR_NOZZLE verwenden 0-nein, 1-ja (0).
-Dies ist kein CLEAR_NOZZLE-Parameter, es ist ein globales Flag, das über `SAVE_Z-Mod_DATA PRECLEAR=1` gesetzt wird. Lesen Sie mehr [hier](/de/Global/#preclear)*
+Dies ist kein CLEAR_NOZZLE-Parameter, es ist ein globales Flag, das über `SAVE_ZMOD_DATA PRECLEAR=1` gesetzt wird. Lesen Sie mehr [hier](/de/Global/#preclear)*
 
 *Das Verfeinern des `CLEAR_NOZZLE`-Makros in `mod_data/user.cfg` wird die native Düsenbereinigung auf der Tabelle nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne Z-Mod funktioniert und daher keine Z-Mod-Makros verwendet*.
 

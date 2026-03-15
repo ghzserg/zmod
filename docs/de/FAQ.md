@@ -75,7 +75,7 @@ Konfiguration" -> "Konfigurationsdateien" -> "mod_data".
 - Benutzerdefinierte Klipper-Einstellungen sollten in die Datei `mod_data/user.cfg` eingetragen werden, Einstellungen, die in diese Datei geschrieben werden, können Einstellungen aus `printer_base.cfg` und Z-Mod-Dateien ersetzen/hinzufügen.
 - Benutzerdefinierte Moonraker-Einstellungen müssen in die Datei `mod_data/user.moonraker.conf` eingetragen werden.
 - Benutzerdefinierte Melodien werden in `mod_data/midi/` gespeichert.
-- Globale Mod-Einstellungen werden mit dem Makro [SAVE_Z-Mod_DATA](/de/Global/#save_zmod_data) gespeichert *nyuhler*
+- Globale Mod-Einstellungen werden mit dem Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data) gespeichert *nyuhler*
 - Der Code, der ausgeführt werden soll, wenn der Drucker ausgeschaltet wird, wird hier gespeichert: `mod_data/power_off.sh`.
 - Der Code, der beim Einschalten des Druckers ausgeführt werden soll, wird hier gespeichert: `mod_data/power_on.sh`.
 
@@ -186,11 +186,11 @@ SET_PRINT_STATS_INFO AKTUELLE_SCHICHT={Schicht_Zahl + 1}
 
 Wenn Sie die automatische Kalibrierung bei jedem Druckvorgang aktivieren wollen, geben Sie Fluidd/Mainsail 1 mal in die Konsole ein
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Gehen Sie im Bildschirmmenü des Druckers zu "Einstellungen" -> "WLAN-Symbol" -> "Netzwerkmodus" -> aktivieren Sie den Schieberegler "Nur lokale Netzwerke".
 
-Lesen Sie die Dokumentation zu [START_PRINT](/de/Main/#start_print) und [SAVE_Z-Mod_DATA](/de/Global/#save_zmod_data), damit Sie die erweiterten und nützlichen Funktionen von Z-Mod nutzen können
+Lesen Sie die Dokumentation zu [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), damit Sie die erweiterten und nützlichen Funktionen von Z-Mod nutzen können
 
 Wenn Sie Rollback von der Firmware verwenden wollen, lesen Sie [documentation](/ru/FAQ/#what-is-rollback-from-firmware) und fügen Sie
 Balkenprofil" -> "Erweitert" -> "G-Code-Balken starten".
@@ -216,7 +216,7 @@ Es wird der auf dem Bildschirm gespeicherte z-Offset verwendet.
 
 Der Z-Offset von Fluidd/Mainsail/GuppyScreen/HelixScreen wirkt **nur bis zum Neustart** und sollte nicht verändert werden, ohne zu wissen, wohin sich die Düse bewegt.
 
-Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) angegeben ist (der standardmäßig deaktiviert ist, um `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1` zu aktivieren), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/ru/Main/#start_print) verwendet wird.
+Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) angegeben ist (der standardmäßig deaktiviert ist, um `SAVE_ZMOD_DATA LOAD_ZOFFSET=1` zu aktivieren), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/ru/Main/#start_print) verwendet wird.
 
 Sie können auch die Parameter [START_PRINT](/ru/Main/#start_print) verwenden, um den Z-Offset zu setzen
 
@@ -226,7 +226,7 @@ Sie können auch die Parameter [START_PRINT](/ru/Main/#start_print) verwenden, u
 
 Wenn Sie die automatische Kalibrierung bei jedem Druckvorgang aktivieren wollen, geben Sie fluidd/mainsail 1 mal in die Konsole ein:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 Der native Bildschirm verwendet Karten (immer, es ist nicht fixiert, auch wenn man es nicht muss):
@@ -242,7 +242,7 @@ Wenn Sie beim Drucken eine andere Karte verwenden wollen (z.B. `moya_karta_na_80
 
 - Schalten Sie die automatische Kalibrierung in den globalen Parametern aus.
 
-  ````SAVE_Z-Mod_DATA PRINT_LEVELING=0````
+  ````SAVE_ZMOD_DATA PRINT_LEVELING=0````
 
 - Erfassen Sie die Tabellenkarte im Voraus über das Makro [AUTO_FULL_BED_LEVEL](/de/FAQ/#chores-macros-and-buttons-in-fluidd).
  
@@ -269,12 +269,12 @@ Ich empfehle die Verwendung globaler Parameter, die einmal konfiguriert und bei 
 Parameter `PRINT_LEVELING`:
 
 - Entfernt die Tabellenabbildung bei jedem Druckvorgang
-- Wenn Sie mit dem Bildschirm arbeiten, wird die Tabellenkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten. Wenn der Parameter 1 "SAVE_Z-Mod_DATA PRINT_LEVELING=1" lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird der Tabellenplan erfasst.
+- Wenn Sie mit dem Bildschirm arbeiten, wird die Tabellenkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten. Wenn der Parameter 1 "SAVE_ZMOD_DATA PRINT_LEVELING=1" lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird der Tabellenplan erfasst.
 - Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/ru/Main/#start_print) im anfänglichen G-Code verwenden, wird der Tabellenplan ebenfalls bei jedem Druckvorgang gelöscht
 
-  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_Z-Mod_DATA](/ru/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/ru/Global/#zshaper)
+  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/ru/Global/#zshaper)
 
-  ```SAVE_Z-Mod_DATA PRINT_LEVELING=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
 
   *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` -> ```Wifi-Symbol``` -> ```Netzwerkmodus``` -> schalten Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
 
@@ -285,15 +285,15 @@ Parameter `USE_KAMP`:
 - Adaptive table map removal (KAMP) kann aktiviert werden, dann wird nicht die gesamte Tabelle entfernt, sondern nur die Teile mit druckbaren Modellen.
   **Automatisches Table-Map-Skimming wird nicht ausgelöst!**. Dieser Parameter legt fest, dass bei Aufruf des Table Map Skimming stattdessen KAMP ausgeführt werden soll.
 
-  Um diese Funktion zu aktivieren, müssen Sie das Makro [SAVE_Z-Mod_DATA](/ru/Global/#save_zmod_data) einmal konfigurieren, Parameter [USE_KAMP](/ru/Global/#zshaper)
+  Um diese Funktion zu aktivieren, müssen Sie das Makro [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data) einmal konfigurieren, Parameter [USE_KAMP](/ru/Global/#zshaper)
 
-  ```SAVE_Z-Mod_DATA USE_KAMP=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die adaptive Tabellenkarte verwendet, wo immer dies möglich ist, auch wenn die Tabellenkarte mit dem nativen Bildschirm über das Netzwerk erfasst wird.
+  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die adaptive Tabellenkarte verwendet, wo immer dies möglich ist, auch wenn die Tabellenkarte mit dem nativen Bildschirm über das Netzwerk erfasst wird.
 
 ---
 
 #### Durch Änderung des Startcodes und des Makros START_PRINT
 
-Wenn Sie die globalen Parameter *(SAVE_Z-Mod_DATA PRINT_LEVELING=0)* nicht verwenden wollen, stehen Ihnen die folgenden Parameter des Makros [START_PRINT](/ru/Main/#start_print), das im Start-G-Code geschrieben wird, zur Verfügung.
+Wenn Sie die globalen Parameter *(SAVE_ZMOD_DATA PRINT_LEVELING=0)* nicht verwenden wollen, stehen Ihnen die folgenden Parameter des Makros [START_PRINT](/ru/Main/#start_print), das im Start-G-Code geschrieben wird, zur Verfügung.
 
 - FORCE_LEVELING - erzwingt den Aufbau einer Tabellenkarte, True - aufbauen, False - nicht aufbauen (False)
 - FORCE_KAMP - Start des Aufbaus der adaptiven Tabellenkarte, True - ja, False - nein (False).

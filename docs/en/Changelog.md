@@ -341,7 +341,7 @@ Known features:
 - [FAST_CLOSE_DIALOGS](/Macros/#fast_close_dialogs).
 - [LEVELING_PRINT_FILE](/Macros/#leveling_print_file) native bed leveling.
 - [COLDPULL](/Filament/#coldpull) nozzle cleaning.
-- [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) parameters:
+- [SAVE_ZMOD_DATA](/Global/#save_zmod_data) parameters:
 - `PRINT_LEVELING`: Native bed leveling.
 - `USE_KAMP`: Adaptive mesh.
 - `CLOSE_DIALOGS`: Auto-close dialogs.
@@ -363,7 +363,7 @@ Known features:
 
 - Fluidd/Mainsail update.
 - [NEW_SAVE_CONFIG](/Macros/#new_save_config) non-freezing saves.
-- [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) parameters:
+- [SAVE_ZMOD_DATA](/Global/#save_zmod_data) parameters:
 - LED brightness.
 - MIDI triggers.
 
@@ -375,7 +375,7 @@ Known features:
 ### Version 0.1.7
 
 - Macro stability fixes.
-- [STOP_Z-Mod](/Macros/#stop_zmod) service control.
+- [STOP_ZMOD](/Macros/#stop_zmod) service control.
 
 ### Version 0.1.6
 

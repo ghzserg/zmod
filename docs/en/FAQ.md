@@ -20,7 +20,7 @@ Access the **mod_data** folder via Fluidd web interface:
 - Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and Z-Mod files.
 - Custom Moonraker settings go into `mod_data/user.moonraker.conf`.
 - Custom MIDI files are stored in `mod_data/midi/`.
-- Global mod settings are saved via the [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) macro.
+- Global mod settings are saved via the [SAVE_ZMOD_DATA](/Global/#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
 - Power on scripts are stored in `mod_data/power_on.sh`.
 
@@ -163,11 +163,11 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Via the printer screen menu: `Settings` -> `WiFi icon` -> `Network Mode` -> enable `Local Networks Only`.
 
-Read the documentation for [START_PRINT](/Main/#start_print) and [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) to utilize advanced Z-Mod features.
+Read the documentation for [START_PRINT](/Main/#start_print) and [SAVE_ZMOD_DATA](/Global/#save_zmod_data) to utilize advanced Z-Mod features.
 
 For firmware retraction, read [the documentation](/FAQ/#what-is-firmware-retraction) and add to `Filament Profile` -> `Advanced` -> `Filament Start G-code`:
 ```
@@ -188,7 +188,7 @@ Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from native screens to non-na
 
 Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.
 
-Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
+Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
 
 Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
@@ -198,7 +198,7 @@ Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
 To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
 ```
-SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 The native screen always uses:
@@ -208,7 +208,7 @@ The native screen always uses:
 
 Without the native screen, the `auto` mesh is auto-loaded on startup.
 
-To use another mesh, disable auto-leveling (`SAVE_Z-Mod_DATA PRINT_LEVELING=0`):
+To use another mesh, disable auto-leveling (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
 
 - Specify via the `MESH` parameter in [START_PRINT](/Main/#start_print). E.g., `START_PRINT MESH=my_80_degree_mesh`
 - Load via `BED_MESH_PROFILE LOAD=my_80_degree_mesh` in filament profile. Ensure consistency between profile and `START_PRINT`, or disable nozzle cleaning in `START_PRINT`.
@@ -217,8 +217,8 @@ To use another mesh, disable auto-leveling (`SAVE_Z-Mod_DATA PRINT_LEVELING=0`):
 #### Via global parameters
 Use `PRINT_LEVELING` and `USE_KAMP` parameters. Enable with:
 ```
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 ---

@@ -85,7 +85,7 @@ Igor Polunovskiy
 
 [CHECK_MD5](/pt/Sistema/#check_md5)
 
-Recomenda-se usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`.
+Recomenda-se usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`.
 
 1. É necessário localizar e fazer download em seu computador de um arquivo para sua arquitetura e sistema operacional:
 

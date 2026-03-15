@@ -200,10 +200,10 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 ## Odstranění nebo dočasné vypnutí modu
 
-- **[SKIP_Z-Mod](Zmod.md#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
-- **[REMOVE_Z-Mod](Zmod.md#remove_zmod)**: Kompletně odinstaluje mod.
+- **[SKIP_ZMOD](Zmod.md#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
+- **[REMOVE_ZMOD](Zmod.md#remove_zmod)**: Kompletně odinstaluje mod.
 
-**Doporučená metoda:** Použijte makro `REMOVE_Z-Mod`. Odstranění přes USB použijte pouze v případě, že makra nejsou dostupná.
+**Doporučená metoda:** Použijte makro `REMOVE_ZMOD`. Odstranění přes USB použijte pouze v případě, že makra nejsou dostupná.
 
 Pozor!
 
@@ -229,7 +229,7 @@ Pozor!
 
 2. Pokud používáte **Klipper 13**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
 3. Povolení čínských cloudových služeb (pokud chcete aktualizovat přes nativní dotykový displej):
-   ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```
+   ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
 **U [AD5X](AD5X.md) je nutná aktivace modu [Z-Mod](Native_FW.md) pomocí `AD5X-ENABLE-zmod.tgz` z USB disku – po aktualizaci nativního firmwaru.**
 

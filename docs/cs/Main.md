@@ -25,7 +25,7 @@ Parametry:
 - `FORCE_LEVELING` — vynutit vyrovnání podložky (výchozí: `False`)
 - `SKIP_LEVELING` — úplně přeskočit vyrovnání podložky (přepíše `FORCE_KAMP`/`FORCE_LEVELING`, výchozí: `False`)
 - `FORCE_KAMP` — vytvořit adaptivní síť podložky (KAMP, výchozí: `False`).
-  *Doporučuje se přidat `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` pro použití čisticích oblastí pro KAMP.*
+  *Doporučuje se přidat `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` pro použití čisticích oblastí pro KAMP.*
 
 - `Z_OFFSET` — nastavit Z offset (výchozí: `0.0`)
 - `INTERNAL` - Pro verzi PRO při provozu bez nativní obrazovky, 1 - povolit vnitřní recirkulaci (0)
@@ -63,7 +63,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ---
 
-#### Globální příznaky (nastavte pomocí [`SAVE_Z-Mod_DATA`](Global.md#start_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#start_print)):
 
 - `PRECLEAR` — předčištění trysky v `CLEAR_NOZZLE`: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `CLEAR` — metoda čištění trysky (`LINE_PURGE`).
@@ -113,7 +113,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Nahradí výchozí koncový G-code.
 
-#### Globální příznaky (nastavte pomocí [`SAVE_Z-Mod_DATA`](Global.md#end_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#end_print)):
 
 - `AUTO_REBOOT` — automatický restart po tisku (stejné jako výše).
 - `CLOSE_DIALOGS` — automatické zavírání dialogů (stejné jako výše).
@@ -188,7 +188,7 @@ Parametry:
 - `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `230`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
-*`PRECLEAR` (nastaveno pomocí `SAVE_Z-Mod_DATA PRECLEAR=1`) povoluje předčištění. [Zjistit více](Global.md#save_zmod_data).*
+*`PRECLEAR` (nastaveno pomocí `SAVE_ZMOD_DATA PRECLEAR=1`) povoluje předčištění. [Zjistit více](Global.md#save_zmod_data).*
 
 ---
 ### LED_ON

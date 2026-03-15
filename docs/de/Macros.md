@@ -81,8 +81,8 @@ Es kann aufgerufen werden:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/de/Main/#fast_close_dialogs)
 
-### GET_Z-Mod_DATA
-[GET_Z-Mod_DATA](/de/Global/#get_zmod_data)
+### GET_ZMOD_DATA
+[GET_ZMOD_DATA](/de/Global/#get_zmod_data)
 
 ### KAMP
 [KAMP](/de/Calibrations/#kamp)
@@ -129,8 +129,8 @@ Es kann aufgerufen werden:
 ### REBOOT
 [REBOOT](/de/Main/#reboot)
 
-### REMOVE_Z-Mod
-[REMOVE_Z-Mod](/de/Zmod/#remove_zmod)
+### REMOVE_ZMOD
+[REMOVE_ZMOD](/de/Zmod/#remove_zmod)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](/de/Zmod/#restore_tar_config)
@@ -138,8 +138,8 @@ Es kann aufgerufen werden:
 ### RESUME
 [RESUME](/de/Main/#resume)
 
-### SAVE_Z-Mod_DATA
-[SAVE_Z-Mod_DATA](/de/Global/#save_zmod_data)
+### SAVE_ZMOD_DATA
+[SAVE_ZMOD_DATA](/de/Global/#save_zmod_data)
 
 ### SET_PAUSE_AM_LAYER
 [SET_PAUSE_AT_LAYER](/de/Filament/#set_pause_at_layer)
@@ -153,17 +153,17 @@ Es kann aufgerufen werden:
 ### SHUTDOWN
 [SHUTDOWN](/de/Main/#shutdown)
 
-### SKIP_Z-Mod
-[SKIP_Z-Mod](/de/Zmod/#skip_zmod)
+### SKIP_ZMOD
+[SKIP_ZMOD](/de/Zmod/#skip_zmod)
 
 ### START_PRINT
 [START_PRINT](/de/Main/#start_print)
 
-### START_Z-Mod
-[START_Z-Mod](/de/Zmod/#start_zmod)
+### START_ZMOD
+[START_ZMOD](/de/Zmod/#start_zmod)
 
-### STOP_Z-Mod
-[STOP_Z-Mod](/de/Zmod/#stop_zmod)
+### STOP_ZMOD
+[STOP_ZMOD](/de/Zmod/#stop_zmod)
 
 ### TAR_CONFIG
 [TAR_CONFIG](/de/Zmod/#tar_config)

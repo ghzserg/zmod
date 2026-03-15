@@ -347,7 +347,7 @@ Unterstützung für Interface-Sprachen:
 - [Auto-clean](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) - Videos, die älter als 10 Tage sind, im Bot löschen.
 - Setze [gewünschte Zeitzone](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) im Bot
 - Automatischer Wechsel von KAMP [LINE_PURGE](/de/Global/#clear) zu _CLEAR2 wenn keine Objekte gefunden
-- Korrigierte [SKIP_Z-Mod](/de/Macros/#skip_zmod) Operation
+- Korrigierte [SKIP_ZMOD](/de/Macros/#skip_zmod) Operation
 - Die Aktualisierung von fluidd/mainsail erfordert jetzt keinen Neustart mehr
 - Der Wechsel von fluidd zu mainsail erfordert jetzt keinen Neustart mehr
 - Zmod meldet Dateien, wenn darin Bögen verwendet werden
@@ -383,7 +383,7 @@ Unterstützung für Interface-Sprachen:
 - Neues Makro [FAST_CLOSE_DIALOGS](/de/Macros/#fast_close_dialogs) - Bewirkt das schnelle Schließen von Dialogen auf dem ursprünglichen Bildschirm. Wird verwendet, um ein Fenster zu schließen, wenn der Druckvorgang beendet ist oder abgebrochen wird. *Damit das schnelle Schließen von Dialogen funktioniert, müssen Sie auf der Registerkarte Einstellungen -> WiFi-Symbol -> Netzwerkmodus -> den Schieberegler "Nur lokale Netzwerke" aktivieren *Implementierung über das Druckerbildschirmmenü: @darksimpson
 - Neues Makro [LEVELING_PRINT_FILE](/de/Macros/#leveling_print_file) - Druckt eine Datei mit Table-Map-Plotting vom nativen Bildschirm. *Für LEVELING_PRINT_FILE ist es notwendig, über das Menü des Druckerbildschirms auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> den Schieberegler "Nur lokale Netzwerke "* einzuschalten.
 - Neues Makro [COLDPULL](/de/Filament/#coldpull) Coldpull (Düsenreinigung) ohne Gewalt. Implementierung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
-- Neue Parameter [SAVE_Z-Mod_DATA](/de/Global/#save_zmod_data):
+- Neue Parameter [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data):
     - [PRINT_LEVELING](/de/Global/#save_zmod_data) - Build Table Map mit nativem Bildschirm bedeutet 0-Nein, 1-Ja (0) bei jedem Druck. *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> schalten Sie den Schieberegler "Nur lokale Netzwerke" über das Menü des Druckerbildschirms ein.
       - USE_KAMP](/de/Global/#save_zmod_data) - ermöglicht die Verwendung der adaptiven Desktopkarte (KAMP) anstelle der vollständigen Desktopkarte 0-nein, 1-ja (0). *Ermöglicht die Verwendung von KAMP, wenn eine Tabellenkarte über das Netzwerk vom nativen Bildschirm übernommen wird.
       - CLOSE_DIALOGS](/de/Global/#save_zmod_data) - schließt Dialoge automatisch, wenn sie fertig sind und wenn der Druck abgebrochen wird 0-nein, 1-ja langsam, 2-ja schnell. *Damit das schnelle Schließen von Dialogen funktioniert, gehen Sie auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> aktivieren Sie den Schieberegler "Nur lokale Netzwerke "* (0) über das Druckerbildschirmmenü.
@@ -417,9 +417,9 @@ Unterstützung für Interface-Sprachen:
 - Große Überarbeitung des Makros [START_PRINT](/de/Main/#start_print)
 - Makro [NEW_SAVE_CONFIG](/de/Macros/#new_save_config) - speichert Änderungen/lädt den Clipper ohne Einfrieren des Bildschirms. @darksimpson's Implementierung
 - Makro [CLOSE_DIALOGS](/de/Macros/#close_dialogs) - schließt Fenster, wenn der Druck beendet ist und wenn der Druck abgebrochen wird. Implementierung durch @darksimpson
-- Makro [STOP_Z-Mod](/de/Macros/#stop_zmod) - Moonraker abschalten
-- Makro [START_Z-Mod](/de/Macros/#start_zmod) - Moonraker einschalten
-- Makro [SAVE_Z-Mod_DATA](/de/Global/#save_zmod_data) - Z-Mod-Parameter speichern.
+- Makro [STOP_ZMOD](/de/Macros/#stop_zmod) - Moonraker abschalten
+- Makro [START_ZMOD](/de/Macros/#start_zmod) - Moonraker einschalten
+- Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data) - Z-Mod-Parameter speichern.
     - CLOSE_DIALOGS - Dialoge automatisch schließen, wenn der Druckvorgang beendet ist und abgebrochen wird 0-nein, 1-ja (0)
         - NEW_SAVE_CONFIG - verwendet die Alternative NEW_SAVE_CONFIG bei der PID-Kalibrierung 0-nein, 1-ja (0)
         - LED - LED-Helligkeit beim Einschalten (50)
@@ -439,7 +439,7 @@ Unterstützung für Interface-Sprachen:
 03.12.2024
 
 - Viele Makrokorrekturen
-- Makro [STOP_Z-Mod](/de/Makros/#stop_zmod) - deaktiviert vorübergehend fluidd/mainstaill und moonraker
+- Makro [STOP_ZMOD](/de/Makros/#stop_zmod) - deaktiviert vorübergehend fluidd/mainstaill und moonraker
 
 ### Version 0.1.6
 02.12.2024
@@ -509,6 +509,6 @@ Unterstützung für Interface-Sprachen:
 - Druckabbruch implementiert, wird über den nativen Bildschirm gehandhabt
 - REBOOT](/de/Macros/#reboot) - Makro startet den Drucker neu
 - SHUTDOWN](/de/Macros/#shutdown) - Makro zum Ausschalten des Druckers
-- SKIP_Z-Mod](/de/Macros/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten
-- REMOVE_Z-Mod](/de/Macros/#remove_zmod) - Makro zum Entfernen von Mods
+- SKIP_ZMOD](/de/Macros/#skip_zmod) - Makro zum Neustart ohne Moonraker und Fluidd zu starten
+- REMOVE_ZMOD](/de/Macros/#remove_zmod) - Makro zum Entfernen von Mods
 - Fehler behoben: "Nach einer Pause aufgrund der Aktivierung des Filament-Bewegungssensors wird der Druckvorgang wieder aufgenommen, aber der Druck erfolgt in der Luft etwa 3 Zentimeter über der Stelle, an der er sein sollte".

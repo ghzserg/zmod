@@ -232,10 +232,10 @@ Na maioria dos casos, não é necessário criar um mapa de tabela antes de cada 
 
 **1. Ativação da calibração adaptativa (KAMP)**
 
-Ative essa opção para que a impressora use o KAMP sempre que possível [SAVE_Z-Mod_DATA USE_KAMP=1](/pt/Global/#use_kamp).
+Ative essa opção para que a impressora use o KAMP sempre que possível [SAVE_ZMOD_DATA USE_KAMP=1](/pt/Global/#use_kamp).
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 Personalizar o Orca:
@@ -247,10 +247,10 @@ Personalizar o Orca:
 
 **2. Ative a calibração antes de cada impressão**
 
-Se você quiser que a impressora crie automaticamente um mapa de tabela antes de cada trabalho (por exemplo, ao trocar as chapas com frequência), ative essa função [SAVE_Z-Mod_DATA PRINT_LEVELING=1](/pt/Global/#print_leveling).
+Se você quiser que a impressora crie automaticamente um mapa de tabela antes de cada trabalho (por exemplo, ao trocar as chapas com frequência), ative essa função [SAVE_ZMOD_DATA PRINT_LEVELING=1](/pt/Global/#print_leveling).
 
 ```gcode
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
 ```
 
 O código inicial pode ser usado desta forma:
@@ -265,10 +265,10 @@ M104 S[nozzle_temperature_initial_layer] ; Definir a temperatura do bocal
 
 **3. Limpeza inteligente antes da impressão**
 
-Adicione essa configuração para que a impressora use a mesma área em que acabou de passar o cartão de mesa para limpar o bico. Isso economiza espaço e tempo [SAVE_Z-Mod_DATA CLEAR=LINE_PURGE](/pt/Global/#clear).
+Adicione essa configuração para que a impressora use a mesma área em que acabou de passar o cartão de mesa para limpar o bico. Isso economiza espaço e tempo [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/pt/Global/#clear).
 
 ```gcode
-SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 ```
 
 #### Conclusão: como configurar o KAMP para uma impressão perfeita
@@ -276,7 +276,7 @@ SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
 Para ativar a criação inteligente de mapas de tabelas antes de cada impressão, execute o comando uma vez:
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ```
 
 Agora, antes de cada impressão, a impressora pegará o mapa da tabela antes de cada impressão, somente onde houver objetos a serem impressos
@@ -324,9 +324,9 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
 **Como funciona:**
 
-1.  Para que a impressora se lembre do Z-Offset da interface da Web e do GuppyScreen/HelixScreen, a configuração especial [SAVE_Z-Mod_DATA LOAD_ZOFFSET=1](/pt/Global/#load_zoffset) deve ser ativada uma vez:
+1.  Para que a impressora se lembre do Z-Offset da interface da Web e do GuppyScreen/HelixScreen, a configuração especial [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/pt/Global/#load_zoffset) deve ser ativada uma vez:
     ```gcode
-    SAVE_Z-Mod_DATA LOAD_ZOFFSET=1
+    SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *Esse comando informa ao sistema para "Carregar o Z-Offset a partir das configurações salvas, e não redefini-lo para zero".
 
@@ -347,7 +347,7 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
 * **Ajuste o Z-Offset somente durante a impressão da primeira camada.
 * Ao trabalhar com a tela nativa, ajuste o Z-Offset na tela nativa.
-* Ao trabalhar no modo de tela não nativa**, primeiro execute o comando ```SAVE_Z-Mod_DATA LOAD_ZOFFSET=1```.
+* Ao trabalhar no modo de tela não nativa**, primeiro execute o comando ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
 * O sistema salvará tudo sozinho. Você não precisa se preocupar com nada.
 
 !!! perigo
@@ -373,9 +373,9 @@ Os cálculos de gráficos e shapers no Klipper usam o valor padrão de `square_c
 
 **O que fazer?
 
-1.  **Corrija os cálculos:** Ative a correção para exibir os gráficos corretamente [SAVE_Z-Mod_DATA FIX_SCV=1](/pt/Global/#fix_scv).
+1.  **Corrija os cálculos:** Ative a correção para exibir os gráficos corretamente [SAVE_ZMOD_DATA FIX_SCV=1](/pt/Global/#fix_scv).
     ```gcode
-    SALVAR_Z-Mod_DATA FIX_SCV=1
+    SAVE_ZMOD_DATA FIX_SCV=1
     ```
 
 2.  **Melhorar a qualidade de impressão (recomendado):** Adicione a seguinte linha ao arquivo ```mod_data/user.cfg```:
@@ -457,7 +457,7 @@ max_accel: 8700 ; Aceleração máxima para os eixos X e Y
 
 #### Algoritmo resumido de ações para calibração do shaper:
 
-1.  Execute `SAVE_Z-Mod_DATA FIX_SCV=1` para obter cálculos corretos.
+1.  Execute `SAVE_ZMOD_DATA FIX_SCV=1` para obter cálculos corretos.
 2.  Adicione `square_corner_velocity: 9` ao `mod_data/user.cfg` para obter melhor qualidade.
 3.  Execute a calibração do eixo desejado, por exemplo, `ZSHAPER Y=1`.
 4. examine os gráficos e a saída do console.

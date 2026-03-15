@@ -145,13 +145,13 @@ To prevent the color selection dialog from appearing at the start of a print, us
 - 2 – do not show dialog, do not use IFS
 
 ```gcode
-SAVE_Z-Mod_DATA SILENT=1
+SAVE_ZMOD_DATA SILENT=1
 ```
 
 To disable automatic filament insertion into the extruder, use the global parameter [AUTOINSERT](/Global/#autoinsert):
 
 ```gcode
-SAVE_Z-Mod_DATA AUTOINSERT=0
+SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
 To disable dumping of filament into the trash when printing, use the [USE_TRASH_ON_PRINT](/Global/#use_trash_on_print) parameter.
@@ -161,13 +161,13 @@ To disable dumping of filament into the trash when printing, use the [USE_TRASH_
 - 2 - After inserting the new color, the print head will travel to the trash chute then return control to the slicer from there. This should only be used together with a slicer profile designed for this mode.
 
 ```gcode
-SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0
+SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
 To unload the filament after printing is complete, use the [REMOVE_FILAMENT](/Global/#remove_filament) parameter.
 
 ```gcode
-SAVE_Z-Mod_DATA REMOVE_FILAMENT=1
+SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
 To set how many tools are shown in the color selection window (if file cannot be scanned for this info), use the [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count) parameter.
@@ -175,7 +175,7 @@ To set how many tools are shown in the color selection window (if file cannot be
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=16
+SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
 To enable scanning gcode files for tool, color and material info, use the [SCAN_FILE_COLORS](/Global/#scan_file_colors) parameter. You can also set this to 2 to check for data prepared by the slicer script, but not attempt to scan entire files.
@@ -183,7 +183,7 @@ To enable scanning gcode files for tool, color and material info, use the [SCAN_
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA SCAN_FILE_COLORS=1
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
 To attempt automatic mapping of colors in the gcode file to physical spools, use the [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors) parameter. You must enable file scanning for this to be useful. Using a value of 30 will abort silent mode prints if there is any issue with the auto-assignment. 
@@ -198,13 +198,13 @@ You can create custom values for when to abort in silent mode by adding together
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
-SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=30
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 When a color change command is encountered, if it indicates a switch to the already-loaded color, usually the change process would be skipped as it is pointless. If for some reason you wish to enable the full color change process, use the [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change) parameter.
 
 ```gcode
-SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0
+SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
 ```
 
 
@@ -307,7 +307,7 @@ For these settings to work, you need to **disable the printer's native display**
 
 It is possible to have the slicer control the purge instead by using other USE_TRASH_ON_PRINT settings, instead of the default value (1).
 
-##### Nopoop Mode (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`)
+##### Nopoop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
 In this mode, no purge is performed by the printer during color changes. The printer will cut the filament, then return to the prime tower to unload and load filament, then immediately continue from there.
 
@@ -321,7 +321,7 @@ You can additionally use options like "Purge to infill", "Purge to this object",
 
 This option is only supported in OrcaSlicer; it cannot be used with Bambu Studio due to the lack of "Purge in prime tower".
 
-##### Slicer-Controlled Poop Mode (`SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=2`)
+##### Slicer-Controlled Poop Mode (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=2`)
 
 In this mode, no purge is performed by the printer on its own during color changes. The printer will cut the filament, then travel to the trash chute, and return control to the slicer.
 
@@ -607,4 +607,4 @@ Connect:
 
 This error occurs when the native display and the mod access the IFS simultaneously.
 
-It's best to reduce the native display lifetime to 10 seconds: ```SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=10```
+It's best to reduce the native display lifetime to 10 seconds: ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```

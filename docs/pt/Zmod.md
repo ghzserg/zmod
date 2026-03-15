@@ -119,7 +119,7 @@ Reinicie a implementação da câmera alternativa
 
 ---
 
-### REMOVE_Z-Mod
+### REMOVE_ZMOD
 
 Remover Z-Mod.
 
@@ -129,11 +129,11 @@ Atenção! Desative todos os plug-ins e mude para o Klipper nativo.
 
 A pasta `/opt/config/mod_data` contém as configurações `zmod`, `fluidd`, `moonraker` e `mainsail`.
 
-Ela não é excluída por padrão, pois as pessoas costumam chamar a macro `REMOVE_Z-Mod` por engano
+Ela não é excluída por padrão, pois as pessoas costumam chamar a macro `REMOVE_ZMOD` por engano
 
 ---
 
-### SKIP_Z-Mod
+### SKIP_ZMOD
 
 Reinicialização no sistema original. Sem executar o Z-Mod.
 
@@ -176,7 +176,7 @@ Essa macro procurará a versão mais recente disponível, fará o download para 
 
 ---
 
-### STOP_Z-Mod
+### STOP_ZMOD
 
 Descarregue o guppy, helix, o moonraker e o fluidd/Mainsail da memória. O bot de telegrama também deixará de funcionar
 
@@ -188,16 +188,16 @@ Parâmetros:
 
 Exemplo:
 ```
-STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Se essa linha for escrita no código inicial, o GUPPY/HELIX será descarregado da memória após o início da impressão
 
 ---
 
-### START_Z-Mod
+### START_ZMOD
 
-Ligue novamente o guppy, helix, o moonraker e o fluidd/Mainsail após STOP_Z-Mod.
+Ligue novamente o guppy, helix, o moonraker e o fluidd/Mainsail após STOP_ZMOD.
 
 Parâmetros:
 
@@ -207,7 +207,7 @@ Parâmetros:
 
 Exemplo:
 ```
-START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
+START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Se essa linha for incluída no código final, o GUPPY/HELIX será iniciado após o término da impressão

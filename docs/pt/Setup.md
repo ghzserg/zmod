@@ -218,17 +218,17 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 
 ## Deleting - desativar temporariamente o mod
 
-- [SKIP_Z-Mod](/pt/Zmod/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
-- [REMOVE_Z-Mod](/pt/Zmod/#remove_zmod) - macro para remover mods
+- [SKIP_ZMOD](/pt/Zmod/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
+- [REMOVE_ZMOD](/pt/Zmod/#remove_zmod) - macro para remover mods
 
-Recomenda-se **remover o mod por meio da macro `REMOVE_Z-Mod`**; a remoção via pen drive deve ser usada somente se não houver possibilidade de executar a macro.
+Recomenda-se **remover o mod por meio da macro `REMOVE_ZMOD`**; a remoção via pen drive deve ser usada somente se não houver possibilidade de executar a macro.
 
 Atenção!
 
 - Se estiver usando o Klipper 13, é necessário executar o ```UPDATE_MCU```. Isso evitará a situação quando o MCU e o Klipper forem de versões diferentes.
 - Se você tiver plug-ins ativados, primeiro deverá desativá-los ````DISABLE_PLUGIN name=g28_tenz````.
 
-Remova o mod completamente ```REMOVE_Z-Mod FULL=1```.
+Remova o mod completamente ```REMOVE_ZMOD FULL=1```.
 
 Desinstalação do mod via pen drive:
 
@@ -246,7 +246,7 @@ Desinstalação do mod via pen drive:
 
 1. desative todos os plug-ins ativos, exceto recommend, timelamse e notify (```DISABLE_PLUGIN name=plugin_name```).
 2. Se estiver usando o **Klipper 13**, execute o ```UPDATE_MCU``` antes de atualizar o firmware nativo. Isso evitará situações em que a MCU e o Klipper tenham versões diferentes.
-3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```.
+3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
 
 Se a tela nativa não encontrar a atualização:
 

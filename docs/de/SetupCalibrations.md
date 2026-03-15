@@ -242,10 +242,10 @@ In den meisten Fällen ist es nicht notwendig, vor jedem Druck ein Bettnetz zu e
 
 **1. Aktivieren der adaptiven Kalibrierung (KAMP)**
 
-Aktivieren Sie diese Option, damit der Drucker nach Möglichkeit KAMP verwendet [SAVE_Z-Mod_DATA USE_KAMP=1](/de/Global/#use_kamp).
+Aktivieren Sie diese Option, damit der Drucker nach Möglichkeit KAMP verwendet [SAVE_ZMOD_DATA USE_KAMP=1](/de/Global/#use_kamp).
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1
+SAVE_ZMOD_DATA USE_KAMP=1
 ```
 
 Orca anpassen:
@@ -257,10 +257,10 @@ Orca anpassen:
 
 **2. Aktivieren Sie die Kalibrierung vor jedem Druck**
 
-Wenn Sie möchten, dass der Drucker vor jedem Druckauftrag automatisch eine Bettnetzkarte erstellt (z.B. bei häufigem Plattenwechsel), aktivieren Sie diese Funktion [SAVE_Z-Mod_DATA PRINT_LEVELING=1](/de/Global/#print_leveling).
+Wenn Sie möchten, dass der Drucker vor jedem Druckauftrag automatisch eine Bettnetzkarte erstellt (z.B. bei häufigem Plattenwechsel), aktivieren Sie diese Funktion [SAVE_ZMOD_DATA PRINT_LEVELING=1](/de/Global/#print_leveling).
 
 ```gcode
-SAVE_Z-Mod_DATA PRINT_LEVELING=1
+SAVE_ZMOD_DATA PRINT_LEVELING=1
 ```
 
 Der Startcode kann wie folgt verwendet werden:
@@ -279,10 +279,10 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 
 **3. Intelligente Reinigung vor dem Drucken**
 
-Fügen Sie diese Einstellung hinzu, damit der Drucker für die Düsenreinigung denselben Bereich verwendet, in dem er zuvor das Druckbettnetz erstellt hat. Dies spart Platz und Zeit. [SAVE_Z-Mod_DATA CLEAR=LINE_PURGE](/de/Global/#clear).
+Fügen Sie diese Einstellung hinzu, damit der Drucker für die Düsenreinigung denselben Bereich verwendet, in dem er zuvor das Druckbettnetz erstellt hat. Dies spart Platz und Zeit. [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/de/Global/#clear).
 
 ```gcode
-SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 ```
 
 #### Fazit: Wie man KAMP für den perfekten Druck einrichtet
@@ -290,7 +290,7 @@ SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
 Um die intelligente Bettnivellierung vor jedem Druckvorgang zu aktivieren, führen Sie folgenden Befehl einmalig aus:
 
 ```gcode
-SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ```
 
 Vor jedem Druckvorgang nimmt der Drucker nun nur dort ein Bettnetz auf, wo Objekte gedruckt werden sollen.
@@ -342,10 +342,10 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 **Wie es funktioniert:**
 
-1.  Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen/HelixScreen merkt, muss einmalig die spezielle Einstellung [SAVE_Z-Mod_DATA LOAD_ZOFFSET=1](/de/Global/#load_zoffset) aktiviert werden:
+1.  Damit sich der Drucker den Z-Offset aus dem Webinterface und GuppyScreen/HelixScreen merkt, muss einmalig die spezielle Einstellung [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/de/Global/#load_zoffset) aktiviert werden:
    
 ```gcode
-SAVE_Z-Mod_DATA LOAD_ZOFFSET=1
+SAVE_ZMOD_DATA LOAD_ZOFFSET=1
 ```
 *Dieser Befehl weist das System an, den Z-Offset aus den gespeicherten Einstellungen zu laden und nicht auf Null zu setzen.*
 
@@ -366,7 +366,7 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertra
 
 * **Z-Offset nur beim Drucken der ersten Ebene einstellen.**
 * **Wenn Sie mit dem nativen Bildschirm arbeiten, passen Sie den Z-Offset auf dem nativen Bildschirm an.**
-* **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ```SAVE_Z-Mod_DATA LOAD_ZOFFSET=1``` aus.
+* **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1``` aus.
 * Das System wird alles von selbst speichern. Sie brauchen sich um nichts zu kümmern.
 
 > [!WARNING]
@@ -396,10 +396,10 @@ Graph- und Shaper-Berechnungen in Klipper verwenden den Standardwert "square_cor
 
 **Was ist zu tun?**
 
-1.  **Korrektur der Berechnungen:** Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen [SAVE_Z-Mod_DATA FIX_SCV=1](/de/Global/#fix_scv).
+1.  **Korrektur der Berechnungen:** Aktivieren Sie den Fix, um die Diagramme korrekt anzuzeigen [SAVE_ZMOD_DATA FIX_SCV=1](/de/Global/#fix_scv).
 
 ```gcode
-SAVE_Z-Mod_DATA FIX_SCV=1
+SAVE_ZMOD_DATA FIX_SCV=1
 ```
 
 2.  **Verbesserung der Druckqualität (empfohlen):** Fügen Sie die folgende Zeile in die Datei ```mod_data/user.cfg``` ein:
@@ -486,7 +486,7 @@ max_accel: 8700 ; Maximale Beschleunigung fuer X und Y Achsen
 
 #### Kurzer Algorithmus der Aktionen für die Shaper-Kalibrierung:
 
-1.  Ausführen von `SAVE_Z-Mod_DATA FIX_SCV=1` für korrekte Berechnungen.
+1.  Ausführen von `SAVE_ZMOD_DATA FIX_SCV=1` für korrekte Berechnungen.
 2.  Hinzufügen von `square_corner_velocity: 9` zu `mod_data/user.cfg` für bessere Qualität.
 3.  Führen Sie die Kalibrierung der gewünschten Achse durch, z.B. `ZSHAPER Y=1`.
 4. prüfen Sie die Graphen und die Konsolenausgabe.
