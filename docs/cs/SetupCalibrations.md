@@ -229,10 +229,10 @@ Ve většině případů není nutné vytvářet mapu podložky před každým t
 
 **1. Povolení adaptivní kalibrace (KAMP)**
 
-Aktivujte tuto volbu, aby tiskárna používala KAMP, kde je to možné: [SAVE_ZMOD_DATA USE_KAMP=1](Global.md#use_kamp).
+Aktivujte tuto volbu, aby tiskárna používala KAMP, kde je to možné: [SAVE_Z-Mod_DATA USE_KAMP=1](Global.md#use_kamp).
 
 ```gcode
-SAVE_ZMOD_DATA USE_KAMP=1
+SAVE_Z-Mod_DATA USE_KAMP=1
 ```
 
 Nastavte OrcaSlicer:
@@ -244,10 +244,10 @@ Nastavte OrcaSlicer:
 
 **2. Povolení kalibrace před každým tiskem**
 
-Pokud chcete, aby tiskárna automaticky vytvářela mapu podložky před každým tiskem (např. při časté výměně plátů), aktivujte tuto funkci: [SAVE_ZMOD_DATA PRINT_LEVELING=1](Global.md#print_leveling).
+Pokud chcete, aby tiskárna automaticky vytvářela mapu podložky před každým tiskem (např. při časté výměně plátů), aktivujte tuto funkci: [SAVE_Z-Mod_DATA PRINT_LEVELING=1](Global.md#print_leveling).
 
 ```gcode
-SAVE_ZMOD_DATA PRINT_LEVELING=1
+SAVE_Z-Mod_DATA PRINT_LEVELING=1
 ```
 
 Můžete použít startovací kód například takto:
@@ -262,10 +262,10 @@ M104 S[nozzle_temperature_initial_layer] ; Nastav teplotu trysky
 
 **3. Chytré čištění před tiskem**
 
-Přidejte toto nastavení, aby tiskárna použila stejnou oblast pro čištění trysky, kde právě změřila mapu podložky. Ušetříte místo i čas: [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](Global.md#clear).
+Přidejte toto nastavení, aby tiskárna použila stejnou oblast pro čištění trysky, kde právě změřila mapu podložky. Ušetříte místo i čas: [SAVE_Z-Mod_DATA CLEAR=LINE_PURGE](Global.md#clear).
 
 ```gcode
-SAVE_ZMOD_DATA CLEAR=LINE_PURGE
+SAVE_Z-Mod_DATA CLEAR=LINE_PURGE
 ```
 
 #### Shrnutí: Jak nastavit KAMP pro dokonalý tisk
@@ -273,7 +273,7 @@ SAVE_ZMOD_DATA CLEAR=LINE_PURGE
 Pro povolení chytrého měření mapy podložky před každým tiskem spusťte jednorázově tento příkaz:
 
 ```gcode
-SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
+SAVE_Z-Mod_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 ```
 
 Nyní bude tiskárna před každým tiskem měřit mapu pouze v oblasti, kde se bude tisknout.
@@ -321,9 +321,9 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 
 **Jak to funguje:**
 
-1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen, je potřeba jednorázově aktivovat speciální nastavení [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](Global.md#load_zoffset):
+1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen, je potřeba jednorázově aktivovat speciální nastavení [SAVE_Z-Mod_DATA LOAD_ZOFFSET=1](Global.md#load_zoffset):
     ```gcode
-    SAVE_ZMOD_DATA LOAD_ZOFFSET=1
+    SAVE_Z-Mod_DATA LOAD_ZOFFSET=1
     ```
     *Tento příkaz říká systému: „Načítej Z-offset z uložených nastavení, neměň jej.“*
 
@@ -344,7 +344,7 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 
 *   **Z-offset upravujte pouze během tisku první vrstvy.**
 *   **Při práci s originální obrazovkou upravujte Z-offset na ní.**
-*   **Při práci bez originální obrazovky** nejprve spusťte příkaz ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
+*   **Při práci bez originální obrazovky** nejprve spusťte příkaz ```SAVE_Z-Mod_DATA LOAD_ZOFFSET=1```.
 *   Systém vše uloží sám, nemusíte se o nic starat.
 
 !!! danger
@@ -370,9 +370,9 @@ Grafy a výpočty Input Shaperu v Klipperu standardně používají hodnotu `squ
 
 **Co s tím?**
 
-1.  **Oprava výpočtů:** Aktivujte opravu pro správné zobrazení grafů: [SAVE_ZMOD_DATA FIX_SCV=1](Global.md#fix_scv).
+1.  **Oprava výpočtů:** Aktivujte opravu pro správné zobrazení grafů: [SAVE_Z-Mod_DATA FIX_SCV=1](Global.md#fix_scv).
     ```gcode
-    SAVE_ZMOD_DATA FIX_SCV=1
+    SAVE_Z-Mod_DATA FIX_SCV=1
     ```
 
 2.  **Zlepšení kvality tisku (doporučeno):** Přidejte do souboru `mod_data/user.cfg` řádek:
@@ -454,7 +454,7 @@ max_accel: 8700 ; Maximální zrychlení pro osy X a Y
 
 #### Rychlý postup kalibrace Input Shaperu:
 
-1.  Spusťte `SAVE_ZMOD_DATA FIX_SCV=1` pro správné výpočty.
+1.  Spusťte `SAVE_Z-Mod_DATA FIX_SCV=1` pro správné výpočty.
 2.  Přidejte `square_corner_velocity: 9` do `mod_data/user.cfg` pro lepší kvalitu.
 3.  Spusťte kalibraci požadované osy, např. `ZSHAPER Y=1`.
 4.  Prostudujte grafy a výstup v konzoli.

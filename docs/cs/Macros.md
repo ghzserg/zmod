@@ -1,4 +1,4 @@
-<h1 align="center">Seznam maker ZMOD</h1>
+<h1 align="center">Seznam maker Z-Mod</h1>
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
@@ -81,8 +81,8 @@ Lze jej vyvolat z:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](Main.md#fast_close_dialogs)
 
-### GET_ZMOD_DATA
-[GET_ZMOD_DATA](Global.md#get_zmod_data)
+### GET_Z-Mod_DATA
+[GET_Z-Mod_DATA](Global.md#get_zmod_data)
 
 ### KAMP
 [KAMP](Calibrations.md#kamp)
@@ -129,8 +129,8 @@ Lze jej vyvolat z:
 ### REBOOT
 [REBOOT](Main.md#reboot)
 
-### REMOVE_ZMOD
-[REMOVE_ZMOD](Zmod.md#remove_zmod)
+### REMOVE_Z-Mod
+[REMOVE_Z-Mod](Zmod.md#remove_zmod)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](Zmod.md#restore_tar_config)
@@ -138,8 +138,8 @@ Lze jej vyvolat z:
 ### RESUME
 [RESUME](Main.md#resume)
 
-### SAVE_ZMOD_DATA
-[SAVE_ZMOD_DATA](Global.md#save_zmod_data)
+### SAVE_Z-Mod_DATA
+[SAVE_Z-Mod_DATA](Global.md#save_zmod_data)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](Filament.md#set_pause_at_layer)
@@ -153,17 +153,17 @@ Lze jej vyvolat z:
 ### SHUTDOWN
 [SHUTDOWN](Main.md#shutdown)
 
-### SKIP_ZMOD
-[SKIP_ZMOD](Zmod.md#skip_zmod)
+### SKIP_Z-Mod
+[SKIP_Z-Mod](Zmod.md#skip_zmod)
 
 ### START_PRINT
 [START_PRINT](Main.md#start_print)
 
-### START_ZMOD
-[START_ZMOD](Zmod.md#start_zmod)
+### START_Z-Mod
+[START_Z-Mod](Zmod.md#start_zmod)
 
-### STOP_ZMOD
-[STOP_ZMOD](Zmod.md#stop_zmod)
+### STOP_Z-Mod
+[STOP_Z-Mod](Zmod.md#stop_zmod)
 
 ### TAR_CONFIG
 [TAR_CONFIG](Zmod.md#tar_config)

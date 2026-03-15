@@ -20,7 +20,7 @@ Access the **mod_data** folder via Fluidd web interface:
 - Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and Z-Mod files.
 - Custom Moonraker settings go into `mod_data/user.moonraker.conf`.
 - Custom MIDI files are stored in `mod_data/midi/`.
-- Global mod settings are saved via the [SAVE_ZMOD_DATA](/Global/#save_zmod_data) macro.
+- Global mod settings are saved via the [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) macro.
 - Shutdown scripts are stored in `mod_data/power_off.sh`.
 - Power on scripts are stored in `mod_data/power_on.sh`.
 
@@ -55,35 +55,35 @@ ast_close_dialogs)).
 
 ---
 
-### How is ZMOD different from KlipperMod/native firmware?
+### How is Z-Mod different from KlipperMod/native firmware?
 
-Differences between KlipperMod and ZMOD:
+Differences between KlipperMod and Z-Mod:
 
 - KlipperMod uses pure Klipper with minimal Flashforge 5m (pro)-specific changes.
-- ZMOD uses the standard Klipper from the native firmware, as well as Klipper 13.
+- Z-Mod uses the standard Klipper from the native firmware, as well as Klipper 13.
 - KlipperMod uses KlipperScreen as a printer screen.
-- ZMOD uses the native screen or GuppyScreen/HelixScreen instead of KlipperScreen.
+- Z-Mod uses the native screen or GuppyScreen/HelixScreen instead of KlipperScreen.
 - KlipperMod uses Moonraker-timelapse.
-- ZMOD uses moonraker-telegram-bot on an EXTERNAL host with timelapse support and plugin timelapse
+- Z-Mod uses moonraker-telegram-bot on an EXTERNAL host with timelapse support and plugin timelapse
 
 Different philosophies:
 
 - KlipperMod is essentially an alternative firmware implementation.
-- ZMOD has minimal intervention in the native firmware. All native firmware features are preserved.
+- Z-Mod has minimal intervention in the native firmware. All native firmware features are preserved.
 
-This is why ZMOD won't include G17, G18, G19 - even though it's simple. There won't be updates to native Klipper, no renaming or changes to standard macros, settings, pin names, etc.
+This is why Z-Mod won't include G17, G18, G19 - even though it's simple. There won't be updates to native Klipper, no renaming or changes to standard macros, settings, pin names, etc.
 
-ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses some macros and scripts from KlipperMod and incorporates some of its developments. Don't expect ZMOD to behave similarly to KlipperMod.
+Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses some macros and scripts from KlipperMod and incorporates some of its developments. Don't expect Z-Mod to behave similarly to KlipperMod.
 
-**ZMOD is binary incompatible with KlipperMod.**
+**Z-Mod is binary incompatible with KlipperMod.**
 
-#### What's in KlipperMod but not in ZMOD:
+#### What's in KlipperMod but not in Z-Mod:
 
-*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In ZMOD, native screen or GuppyScreen/HelixScreen is used instead of KlipperScreen
-*   [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - ZMOD uses Telegram bot and [plugin Timelapse](https://github.com/ghzserg/timelapse/)
-*   Network configuration via iwd/wpa_supplicant (in case of GuppyScreen/HelixScreen) - in ZMOD network configuration is done through the native screen, network startup is possible even without the native screen
+*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In Z-Mod, native screen or GuppyScreen/HelixScreen is used instead of KlipperScreen
+*   [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - Z-Mod uses Telegram bot and [plugin Timelapse](https://github.com/ghzserg/timelapse/)
+*   Network configuration via iwd/wpa_supplicant (in case of GuppyScreen/HelixScreen) - in Z-Mod network configuration is done through the native screen, network startup is possible even without the native screen
 
-#### What's in ZMOD but not in KlipperMod:
+#### What's in Z-Mod but not in KlipperMod:
 
 *   [AD5X](/ru/AD5X/) support
 *   Support for [the following languages](/Global/#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
@@ -91,7 +91,7 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 *   [Print recovery after power loss](/Zmod/#zrestore)
 *   [Shaper calibration with graphs](/Calibrations/#zshaper) considering [SCV](/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
 *   [File/permission/symlink check and repair for the native filesystem](/System/#check_system)
-*   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and ZMOD over the network
+*   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and Z-Mod over the network
 *   [Entware](/FAQ/#entware-in-zmod-how-to-use-it)
 *   Fixed [E0017 error](/Global/#fix_e0017)
 *   Additionally, GuppyScreen/HelixScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling
@@ -100,7 +100,7 @@ ZMOD is NOT based on KlipperMod and is NOT its evolution. However, ZMOD uses som
 *   PID calibration for [extruder](/Calibrations/#pid_tune_extruder) and [bed](/Calibrations/#pid_tune_bed), including via GuppyScreen/HelixScreen
 *   Implemented [COLDPULL](/Filament/#coldpull) (nozzle cleaning) without force. Implementation of [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
 
-#### What's in ZMOD but not in native firmware:
+#### What's in Z-Mod but not in native firmware:
 
 - Moonraker/Fluidd/Mainsail support
 - Klipper 13 support
@@ -163,11 +163,11 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
 ```
-SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Via the printer screen menu: `Settings` -> `WiFi icon` -> `Network Mode` -> enable `Local Networks Only`.
 
-Read the documentation for [START_PRINT](/Main/#start_print) and [SAVE_ZMOD_DATA](/Global/#save_zmod_data) to utilize advanced ZMOD features.
+Read the documentation for [START_PRINT](/Main/#start_print) and [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) to utilize advanced Z-Mod features.
 
 For firmware retraction, read [the documentation](/FAQ/#what-is-firmware-retraction) and add to `Filament Profile` -> `Advanced` -> `Filament Start G-code`:
 ```
@@ -188,7 +188,7 @@ Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from native screens to non-na
 
 Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen only affect until reboot. Changing it without understanding nozzle movement is not recommended.
 
-Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
+Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluid/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
 
 Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
@@ -198,7 +198,7 @@ Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
 To enable auto-leveling for every print, enter once in Fluidd/Mainsail console:
 ```
-SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 The native screen always uses:
@@ -208,7 +208,7 @@ The native screen always uses:
 
 Without the native screen, the `auto` mesh is auto-loaded on startup.
 
-To use another mesh, disable auto-leveling (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
+To use another mesh, disable auto-leveling (`SAVE_Z-Mod_DATA PRINT_LEVELING=0`):
 
 - Specify via the `MESH` parameter in [START_PRINT](/Main/#start_print). E.g., `START_PRINT MESH=my_80_degree_mesh`
 - Load via `BED_MESH_PROFILE LOAD=my_80_degree_mesh` in filament profile. Ensure consistency between profile and `START_PRINT`, or disable nozzle cleaning in `START_PRINT`.
@@ -217,8 +217,8 @@ To use another mesh, disable auto-leveling (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
 #### Via global parameters
 Use `PRINT_LEVELING` and `USE_KAMP` parameters. Enable with:
 ```
-SAVE_ZMOD_DATA PRINT_LEVELING=1
-SAVE_ZMOD_DATA USE_KAMP=1
+SAVE_Z-Mod_DATA PRINT_LEVELING=1
+SAVE_Z-Mod_DATA USE_KAMP=1
 ```
 
 ---
@@ -296,7 +296,7 @@ The alternative camera, allows you to change the resolution, fps, allow multiple
 - Disable the native camera on the printer screen.
 - Call the macro [CAMERA_ON](/Zmod/#camera_on)
 
-Read: [I installed a printer, and ZMOD hid my camera!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+Read: [I installed a printer, and Z-Mod hid my camera!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 #### Camera Setup
 
@@ -360,7 +360,7 @@ The program will show a list of available cameras.
 
 ---
 
-#### I installed the printer, but ZMOD hid my camera! In Orca-FF I could see it, but now it's gone!
+#### I installed the printer, but Z-Mod hid my camera! In Orca-FF I could see it, but now it's gone!
 
 In Fluidd: `Settings` -> `Cameras`. Create a new camera with:
 
@@ -436,7 +436,7 @@ If you switched the interface using the [WEB](/System/#web) macro *выхухо�
 
 ### I Access the Printer via Orca/Browser and See "Welcome to Moonraker"
 
-ZMOD uses the following ports:
+Z-Mod uses the following ports:
 
 - `7125` — Moonraker
 - `8080` — Camera
@@ -450,7 +450,7 @@ To access the printer, enter its IP address **without specifying a port**. *кр
 
 ### What is Firmware Retraction?
 
-In ZMOD, Fluidd/Mainsail has sliders to adjust firmware retraction speed and distance. These do not affect prints unless the G-code file is sliced with firmware retraction enabled.
+In Z-Mod, Fluidd/Mainsail has sliders to adjust firmware retraction speed and distance. These do not affect prints unless the G-code file is sliced with firmware retraction enabled.
 
 Firmware retraction allows adjusting retraction during printing without reslicing.
 
@@ -487,9 +487,9 @@ Use `GET_RETRACTION` to view current settings.
 
 ---
 
-### After installing ZMOD, my screen is dead and not responding to touches.
+### After installing Z-Mod, my screen is dead and not responding to touches.
 
-- [Install the latest native firmware and ZMOD updates](/Recomendations/#install-latest-native-firmware-and-zmod-updates)
+- [Install the latest native firmware and Z-Mod updates](/Recomendations/#install-latest-native-firmware-and-zmod-updates)
 - Read [known peculiarities](#known-peculiarities) *bison*
 - You might have disabled the screen. Enable it with the [DISPLAY_ON](/System/#display_on) macro
 
@@ -511,13 +511,13 @@ Settings-> Software updates-> Press Check for update
 
 ---
 
-### I want to remove ZMOD - I have to recalib?
+### I want to remove Z-Mod - I have to recalib?
 
 No - all settings are saved
 
 ---
 
-### Entware in ZMOD: How to Use It
+### Entware in Z-Mod: How to Use It
 
 **Warning! There is no Entware in [AD5X](/ru/AD5X/)**
 
@@ -553,7 +553,7 @@ No - all settings are saved
 ### Help
 ### How to Contact Support
 
-1. [Update ZMOD to the latest version and all plugins](/Setup/#updating-the-mod).
+1. [Update Z-Mod to the latest version and all plugins](/Setup/#updating-the-mod).
 2. Translate the mod into Russian ```LANG LANG=ru``` or English ```LANG LANG=en```
 3. Describe the issue clearly (screenshots, photos, text).
 4. Run [CLEAR_EMMC](/System/#clear_emmc) to clear logs.

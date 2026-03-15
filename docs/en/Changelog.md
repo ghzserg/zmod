@@ -76,7 +76,7 @@
 * IFS crackling noise removed
 
 ### Version 1.6.3
-**25.11.2025 — ZMOD’s Birthday!**
+**25.11.2025 — Z-Mod’s Birthday!**
 
 * [zmod.link](https://zmod.link/link/) | [ZLINK](/ru/Zmod/#zlink) — remote printer access via cloud
 * Macro [SCREEN](/ru/System/#screen) — capture a screenshot of the printer’s display
@@ -181,7 +181,7 @@ Thanks for tenz support [@minicx](https://github.com/loss-and-quick/)
 ### Version 1.5.0
 Interface language support:
 
-- ZMOD - English, German, French, Italian, Spanish, Chinese, Japanese, Korean
+- Z-Mod - English, German, French, Italian, Spanish, Chinese, Japanese, Korean
 - GuppyScreen - English, German, French, Italian, Spanish
 
 ### Version 1.4.3
@@ -341,7 +341,7 @@ Known features:
 - [FAST_CLOSE_DIALOGS](/Macros/#fast_close_dialogs).
 - [LEVELING_PRINT_FILE](/Macros/#leveling_print_file) native bed leveling.
 - [COLDPULL](/Filament/#coldpull) nozzle cleaning.
-- [SAVE_ZMOD_DATA](/Global/#save_zmod_data) parameters:
+- [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) parameters:
 - `PRINT_LEVELING`: Native bed leveling.
 - `USE_KAMP`: Adaptive mesh.
 - `CLOSE_DIALOGS`: Auto-close dialogs.
@@ -363,7 +363,7 @@ Known features:
 
 - Fluidd/Mainsail update.
 - [NEW_SAVE_CONFIG](/Macros/#new_save_config) non-freezing saves.
-- [SAVE_ZMOD_DATA](/Global/#save_zmod_data) parameters:
+- [SAVE_Z-Mod_DATA](/Global/#save_zmod_data) parameters:
 - LED brightness.
 - MIDI triggers.
 
@@ -375,7 +375,7 @@ Known features:
 ### Version 0.1.7
 
 - Macro stability fixes.
-- [STOP_ZMOD](/Macros/#stop_zmod) service control.
+- [STOP_Z-Mod](/Macros/#stop_zmod) service control.
 
 ### Version 0.1.6
 

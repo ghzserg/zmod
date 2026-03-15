@@ -44,7 +44,7 @@ Spotřeba RAM pro základní kamery:
 !!! poznámka
 
     - [Co je alternativní kamera?](FAQ.md#what-is-an-alternative-camera)
-        - [Nainstaloval jsem tiskárnu a ZMOD skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+        - [Nainstaloval jsem tiskárnu a Z-Mod skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - tato zpráva se zobrazí, pokud stream kamery není ještě k dispozici. Kamera se spustí po spuštění Klipperu během zobrazení informací o globálních nastaveních.
 
@@ -119,7 +119,7 @@ Vypne alternativní implementaci kamery.
 Restartuje alternativní implementaci kamery.
 
 ---
-### REMOVE_ZMOD
+### REMOVE_Z-Mod
 
 Odinstaluje Zmod.
 
@@ -131,7 +131,7 @@ Ve výchozím nastavení není smazán, aby se zabránilo náhodné ztrátě dat
 Varování! Sami deaktivujte všechny pluginy a přejděte na nativní Klipper.
 
 ---
-### SKIP_ZMOD
+### SKIP_Z-Mod
 
 Restartuje do původního systému bez Zmod.
 Deaktivuje konfigurace Zmod, Moonraker a Fluidd.
@@ -166,7 +166,7 @@ Aktualizuje firmware přes síť pomocí USB disku.
 
 ---
 
-### STOP_ZMOD
+### STOP_Z-Mod
 
 Vyčistí guppy, helix, moonraker a fluidd/Mainsail z paměti. Telegram bot také přestane fungovat.
 
@@ -178,16 +178,16 @@ Parametry:
 
 Příklad:
 ```
-STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Pokud je tento řádek přidán do startovacího kódu, bude GUPPY/HELIX vyčištěn z paměti po zahájení tisku.
 
 ---
 
-### START_ZMOD
+### START_Z-Mod
 
-Znovu zapne guppy, helix, moonraker a fluidd/Mainsail po STOP_ZMOD.
+Znovu zapne guppy, helix, moonraker a fluidd/Mainsail po STOP_Z-Mod.
 
 Parametry:
 
@@ -197,7 +197,7 @@ Parametry:
 
 Příklad:
 ```
-START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Pokud je tento řádek přidán do koncového kódu, bude GUPPY/HELIX spuštěn po dokončení tisku.

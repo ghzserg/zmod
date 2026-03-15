@@ -166,7 +166,7 @@ Nesse caso, você precisa inserir o pendrive na impressora, reiniciar a impresso
 - Verifica as somas de verificação
 - Reinicializa a impressora
 - A nova versão será instalada automaticamente após a reinicialização (não há necessidade de remover o pendrive, você pode deixá-lo na impressora para futuras atualizações).
-- Em seguida, vá para a guia `Settings` -> `Software Update`. Clique em `Check for updates` e instale as atualizações mais recentes do `ZMOD`.
+- Em seguida, vá para a guia `Settings` -> `Software Update`. Clique em `Check for updates` e instale as atualizações mais recentes do `Z-Mod`.
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -182,7 +182,7 @@ Você pode ver a versão atual do sistema operacional do mod na guia "System" ->
 
 A versão atual do Z-Mod (guia Settings (Configurações) -> Update (Atualização) -> "ffm5/zmod"), **deve corresponder** aos dois primeiros dígitos da versão da guia System (Sistema).
 
-<u>Se não corresponder, o mod **não funcionará corretamente** e, nesse caso, não reclame do ZMOD</u>.
+<u>Se não corresponder, o mod **não funcionará corretamente** e, nesse caso, não reclame do Z-Mod</u>.
 
 Atualização via pendrive USB:
 
@@ -202,7 +202,7 @@ Atualização via pendrive USB:
 9. Retire o pendrive USB
 10. Desligue a impressora
 11. Ligue a impressora
-12. Vá para a guia `Settings` -> `Software Update` no Fluidd/Mainsail. Clique em `Check for updates` e instale as atualizações mais recentes do `ZMOD`.
+12. Vá para a guia `Settings` -> `Software Update` no Fluidd/Mainsail. Clique em `Check for updates` e instale as atualizações mais recentes do `Z-Mod`.
 
 ---
 
@@ -218,17 +218,17 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 
 ## Deleting - desativar temporariamente o mod
 
-- [SKIP_ZMOD](/pt/Zmod/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
-- [REMOVE_ZMOD](/pt/Zmod/#remove_zmod) - macro para remover mods
+- [SKIP_Z-Mod](/pt/Zmod/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
+- [REMOVE_Z-Mod](/pt/Zmod/#remove_zmod) - macro para remover mods
 
-Recomenda-se **remover o mod por meio da macro `REMOVE_ZMOD`**; a remoção via pen drive deve ser usada somente se não houver possibilidade de executar a macro.
+Recomenda-se **remover o mod por meio da macro `REMOVE_Z-Mod`**; a remoção via pen drive deve ser usada somente se não houver possibilidade de executar a macro.
 
 Atenção!
 
 - Se estiver usando o Klipper 13, é necessário executar o ```UPDATE_MCU```. Isso evitará a situação quando o MCU e o Klipper forem de versões diferentes.
 - Se você tiver plug-ins ativados, primeiro deverá desativá-los ````DISABLE_PLUGIN name=g28_tenz````.
 
-Remova o mod completamente ```REMOVE_ZMOD FULL=1```.
+Remova o mod completamente ```REMOVE_Z-Mod FULL=1```.
 
 Desinstalação do mod via pen drive:
 
@@ -246,7 +246,7 @@ Desinstalação do mod via pen drive:
 
 1. desative todos os plug-ins ativos, exceto recommend, timelamse e notify (```DISABLE_PLUGIN name=plugin_name```).
 2. Se estiver usando o **Klipper 13**, execute o ```UPDATE_MCU``` antes de atualizar o firmware nativo. Isso evitará situações em que a MCU e o Klipper tenham versões diferentes.
-3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
+3. Ative as nuvens chinesas se quiser atualizar a partir da tela nativa ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```.
 
 Se a tela nativa não encontrar a atualização:
 

@@ -14,7 +14,7 @@ It can be called from:
 
 ### LANG
 
-Set the language for ZMOD operation.
+Set the language for Z-Mod operation.
 
 - LANG - language: en (English), ru (Russian), de (German), fr (French), it (Italian), es (Spanish), zh (Chinese), ja (Japanese), ko (Korean), pt (Portugal), cs (Czech), tr(Turkish)
 
@@ -58,18 +58,18 @@ Works automatically, but additional macros are available for Gcode:
 - `ZCONTROL_ABORT` - abort Klipper on trigger
 - `ZCONTROL_AUTO` - On trigger, stop Klipper (if Z height < `ZCONTROL_Z`) or call PAUSE if z >= `ZCONTROL_Z`
 - `ZCONTROL_Z Z=10` - Set Z height.
-- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - Save Z height. If you don't want to enable pause, set ```SAVE_ZMOD_DATA ZCONTROL_Z=230```
+- `SAVE_Z-Mod_DATA ZCONTROL_Z=10` - Save Z height. If you don't want to enable pause, set ```SAVE_Z-Mod_DATA ZCONTROL_Z=230```
 
 To enable nozzle control on initial layers, add `ZCONTROL_PAUSE` in the slicer at the desired layer.
 
 ---
 
-### GET_ZMOD_DATA
+### GET_Z-Mod_DATA
 
-Retrieve ZMOD global parameters/flags.
+Retrieve Z-Mod global parameters/flags.
 After execution, the console displays saved parameters applied at runtime.
 
-`Fluidd` -> `Macros` -> `Main` -> `ZMOD PARAMETERS`
+`Fluidd` -> `Macros` -> `Main` -> `Z-Mod PARAMETERS`
 
 ---
 
@@ -81,18 +81,18 @@ After changing parameters, it is recommended to restart the printer.
 
 ---
 
-### SAVE_ZMOD_DATA
+### SAVE_Z-Mod_DATA
 
-Save ZMOD global parameters/flags (applied during every print).
+Save Z-Mod global parameters/flags (applied during every print).
 
 Do not add this macro to start/end Gcode or Gcode files. Call it from the Fluidd/Mainsail console. Parameters are saved to `mod_data/variables.cfg` after shutdown (**do not edit manually**).
 
 **To edit parameters:**
 
-- Go to `Fluidd` -> `Macros` -> `System` -> `SAVE ZMOD PARAMETERS`, select the parameter, modify it, and click `SEND`.
-- Alternatively, enter commands directly in the Fluidd console, e.g., `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
+- Go to `Fluidd` -> `Macros` -> `System` -> `SAVE Z-Mod PARAMETERS`, select the parameter, modify it, and click `SEND`.
+- Alternatively, enter commands directly in the Fluidd console, e.g., `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`.
 
-Second option. Write the required command in the Fluidd console, for example: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
+Second option. Write the required command in the Fluidd console, for example: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`
 
 [View saved parameters](/Global/#get_zmod_data)
 
@@ -112,7 +112,7 @@ This setting cannot be used when the native screen is enabled.
 
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
-Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
+Example: `SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
@@ -120,13 +120,13 @@ Enables scanning gcode files for which toolchange commands (T0, T1, etc) are use
 
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
-Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
+Example: `SAVE_Z-Mod_DATA SCAN_FILE_COLORS=0`
 
 ##### COLOR_MENU_1_BASED
 
 Determines whether to show 0-based (T0, T1, etc) or 1-based (Color 1, Color 2, etc) labels in the color selection menu. This does not change anything other than how the buttons are labelled and is purely for convenience: 0 (0-based), 1 (1-based)
 
-Example: `SAVE_ZMOD_DATA COLOR_MENU_1_BASED=1`
+Example: `SAVE_Z-Mod_DATA COLOR_MENU_1_BASED=1`
 
 ##### AUTO_ASSIGN_COLORS
 
@@ -143,7 +143,7 @@ For custom values for error conditions in silent mode, add the following values 
 
 [See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
 
-Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
+Example: `SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=0`
 
 ### Print start/bed mapping parameters [START_PRINT]:
 
@@ -151,14 +151,14 @@ Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
 Play MIDI on print start (""), 0 to disable.
 
-Example: `SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid`
+Example: `SAVE_Z-Mod_DATA MIDI_START=Pain-Shut-your-mouth.mid`
 
 ---
 ##### PRECLEAR
 
 Enable nozzle pre-clearing in CLEAR_NOZZLE: 0 (no), 1 (yes) (0).
 
-Example: `SAVE_ZMOD_DATA PRECLEAR=0`
+Example: `SAVE_Z-Mod_DATA PRECLEAR=0`
 
 ---
 ##### PRINT_LEVELING
@@ -166,15 +166,15 @@ Example: `SAVE_ZMOD_DATA PRECLEAR=0`
 Build bed mesh before each print (using native screen if enabled): 0 (no), 1 (yes) (0).
 *For native screen bed leveling, enable "Local Network Only" via the printer menu: Settings -> WiFi icon -> Network Mode.*
 
-Example: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
+Example: `SAVE_Z-Mod_DATA PRINT_LEVELING=1`
 
 ---
 ##### USE_KAMP
 
 Use Adaptive Mesh (KAMP) instead of full bed mesh where possible: 0 (no), 1 (yes) (0).
-Recommended to set `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to align purge location with KAMP mesh.
+Recommended to set `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` to align purge location with KAMP mesh.
 
-Example: `SAVE_ZMOD_DATA USE_KAMP=1`
+Example: `SAVE_Z-Mod_DATA USE_KAMP=1`
 
 ---
 
@@ -229,7 +229,7 @@ Bed mesh validation algorithm:
 *   **Do not rely on this check as absolute protection.**
 *   When using smart cleaning (KAMP), the heating wait occurs near the cleaning location, not in the corner of the bed.
 
-Example: `SAVE_ZMOD_DATA MESH_TEST=0`
+Example: `SAVE_Z-Mod_DATA MESH_TEST=0`
 
 ---
 
@@ -260,7 +260,7 @@ Here are the options for adding:
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-Example: `SAVE_ZMOD_DATA FORCE_MD5=1`
+Example: `SAVE_Z-Mod_DATA FORCE_MD5=1`
 
 ---
 ##### DISABLE_SKEW
@@ -269,7 +269,7 @@ Example: `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 [Details](https://www.klipper3d.org/Skew_Correction.html)
 
-Example: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
+Example: `SAVE_Z-Mod_DATA DISABLE_SKEW=1`
 
 ---
 ##### LOAD_ZOFFSET
@@ -278,14 +278,14 @@ Load Z-offset from global parameters saved via SET_GCODE_OFFSET: 1 (yes), 0 (no)
 
 [How Z-Offset Works](/FAQ/#how-does-z-offset-work)
 
-Example: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
+Example: `SAVE_Z-Mod_DATA LOAD_ZOFFSET=0`
 
 ---
 ##### DISABLE_PRIMING
 
 Disable nozzle priming via extrusion: 0 (no), 1 (yes) (0).
 
-Example: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`
+Example: `SAVE_Z-Mod_DATA DISABLE_PRIMING=0`
 
 ---
 ##### CLEAR
@@ -301,7 +301,7 @@ Select nozzle purge algorithm (LINE_PURGE):
 
 Custom purge macros can be added to `mod_data/user.cfg`.
 
-Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
+Example: `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`
 
 ---
 
@@ -311,7 +311,7 @@ Example: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
 
 Play MIDI on print end (""), 0 to disable.
 
-Example: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`
+Example: `SAVE_Z-Mod_DATA MIDI_END=Pain-Shut-your-mouth.mid`
 
 ---
 ##### CLOSE_DIALOGS
@@ -319,14 +319,14 @@ Example: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`
 Automatically close dialogs after print end/cancel: 0 (no), 1 (yes, slow), 2 (yes, fast) (0).
 *For fast closing, enable "Local Network Only" via the printer menu.*
 
-Example: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
+Example: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`
 
 ---
 ##### STOP_MOTOR
 
 Automatically disable motors 25 seconds after print end/cancel: 0 (no), 1 (yes) (1).
 
-Example: `SAVE_ZMOD_DATA STOP_MOTOR=1`
+Example: `SAVE_Z-Mod_DATA STOP_MOTOR=1`
 
 ---
 ##### AUTO_REBOOT
@@ -337,7 +337,7 @@ Automatically reboot the printer after printing completes (0):
 - 1 - reboot the printer via the `REBOOT` command
 - 2 - without the native screen: reboot the firmware via `FIRMWARE_RESTART`; with the screen: reboot the printer via the `REBOOT` command
 
-Example: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
+Example: `SAVE_Z-Mod_DATA AUTO_REBOOT=0`
 
 ---
 
@@ -352,7 +352,7 @@ Use a [filament motion sensor](https://aliexpress.ru/item/1005007480443587.html)
 
 When using the filament motion sensor, disable it on the native screen; otherwise, printing will pause.
 
-Example: `SAVE_ZMOD_DATA MOTION_SENSOR=1`
+Example: `SAVE_Z-Mod_DATA MOTION_SENSOR=1`
 
 ---
 
@@ -366,7 +366,7 @@ Do not show the color selection window when starting printing
 - 1 - do not show the window, use previously set colors
 - 2 - do not show the window, do not use IFS
 
-Example: `SAVE_ZMOD_DATA SILENT=0`
+Example: `SAVE_Z-Mod_DATA SILENT=0`
 
 ---
 
@@ -379,7 +379,7 @@ Automatically Load Filament
 - 0 - Do not automatically load filament
 - 1 - Automatically load filament (default)
 
-Example: `SAVE_ZMOD_DATA AUTOINSERT=0`
+Example: `SAVE_Z-Mod_DATA AUTOINSERT=0`
 
 ---
 
@@ -392,7 +392,7 @@ Determines whether or not to skip the color change process if the before and aft
 - 0 - skip the process (default)
 - 1 - do not skip the process
 
-Example: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
+Example: `SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
 ##### USE_TRASH_ON_PRINT
 
@@ -406,7 +406,7 @@ Use trash on color change during printing
 - 1 - purge in trash chute (default)
 - 2 - travel to trash chute after color change but do not purge
 
-Example: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
+Example: `SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`
 
 ---
 
@@ -421,7 +421,7 @@ Unload filament after print completion:
 - 0 — do not unload (default)
 - 1 — unload
 
-Example: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
+Example: `SAVE_Z-Mod_DATA REMOVE_FILAMENT=1`
 
 ---
 
@@ -432,7 +432,7 @@ Fix incorrect SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Ref
 - 0 - keep the parameter as in stock (5)
 - 1 - use `square_corner_velocity` from `mod_data/user.cfg` or `printer.base.cfg`
 
-Example: `SAVE_ZMOD_DATA FIX_SCV=1`
+Example: `SAVE_Z-Mod_DATA FIX_SCV=1`
 
 In our printer, `square_corner_velocity: 25`, but shaper graph calculations and accelerations are based on `SCV = 5`.
 
@@ -456,7 +456,7 @@ On some firmware versions, Wi-Fi occasionally fails to start.
 
 To fix this, connect to a Wi-Fi network via the native screen.
 
-Execute `SAVE_ZMOD_DATA WIFI=1`
+Execute `SAVE_Z-Mod_DATA WIFI=1`
 
 Then disable Wi-Fi on the native screen.
 
@@ -480,7 +480,7 @@ Specific causes:
 - Insufficient RAM. Solution: Re-solder the CPU and upgrade to 256MB RAM.
 - Damaged extruder cable. Solution: Replace/fix the cable.
 - Loose extruder board cable connection. Solution: Replace the extruder board.
-- SWAP data loading (SWAP resides on EMMC, which operates at 10 MB/s; SWAP data during shaper calculations can reach 25MB). Solution: Disable SWAP if you have 256MB RAM via `SAVE_ZMOD_DATA USE_SWAP=0`.
+- SWAP data loading (SWAP resides on EMMC, which operates at 10 MB/s; SWAP data during shaper calculations can reach 25MB). Solution: Disable SWAP if you have 256MB RAM via `SAVE_Z-Mod_DATA USE_SWAP=0`.
 - MCU firmware crash. Solution: Reflash the MCU via [factory reset](/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation) or use the [UPDATE_MCU](/System/#update_mcu) mod.
 
 Fix E0011 and `Communication timeout during homing` errors. Changing this parameter will reboot the printer. 0-no, 1-yes (0):
@@ -488,7 +488,7 @@ Fix E0011 and `Communication timeout during homing` errors. Changing this parame
 - 0 - keep the stock parameter (0.025)
 - 1 - set the parameter to 0.1
 
-Example: `SAVE_ZMOD_DATA FIX_E0011=1`
+Example: `SAVE_Z-Mod_DATA FIX_E0011=1`
 
 This error may also occur:
 
@@ -497,7 +497,7 @@ This error may also occur:
 
   Run the `MEM` macro and see if there is swap and what size it is.
 
-  Enable swap if it is disabled: ```SAVE_ZMOD_DATA USE_SWAP=1```
+  Enable swap if it is disabled: ```SAVE_Z-Mod_DATA USE_SWAP=1```
 
 - If you are using FF5M/FF5MPro, run a full test. This includes PID calibration, removing the table map, and removing shapers simultaneously.
 
@@ -543,7 +543,7 @@ In the stock file `/opt/klipper/klippy/toolhead.py`, `LOOKAHEAD_FLUSH_TIME = 0.5
 - 0 - set to stock value
 - 1 - set to 0.150
 
-Example: `SAVE_ZMOD_DATA FIX_E0017=1`
+Example: `SAVE_Z-Mod_DATA FIX_E0017=1`
 
 **How to fix on stock firmware:**
 
@@ -572,21 +572,21 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 LED brightness at startup (50).
 
-Example: `SAVE_ZMOD_DATA LED=50`
+Example: `SAVE_Z-Mod_DATA LED=50`
 
 ---
 ##### MIDI_ON
 
 Play MIDI at startup (""). Use `0` to disable.
 
-Example: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
+Example: `SAVE_Z-Mod_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
 
 ---
 ##### NEW_SAVE_CONFIG
 
 Use alternative SAVE_CONFIG (invokes `SAVE_CONFIG` without freezing the native screen). [NEW_SAVE_CONFIG](/Main/#new_save_config) for PID calibration: 0-no, 1-yes (0).
 
-Example: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
+Example: `SAVE_Z-Mod_DATA NEW_SAVE_CONFIG=0`
 
 ---
 ##### USE_SWAP
@@ -597,14 +597,14 @@ Enable SWAP (1):
 - 1 - yes, on EMMC
 - 2 - yes, prefer USB FLASH
 
-Example: `SAVE_ZMOD_DATA USE_SWAP=1`
+Example: `SAVE_Z-Mod_DATA USE_SWAP=1`
 
 ---
 ##### CHINA_CLOUD
 
 Enable Chinese cloud services: 0-no, 1-yes (1).
 
-Example: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
+Example: `SAVE_Z-Mod_DATA CHINA_CLOUD=0`
 
 [Disable Chinese clouds](/Recomendations/#disable-chinese-cloud-services)
 
@@ -614,7 +614,7 @@ Setting this parameter to 0 partially disables these "features."
 
 **If Chinese clouds are disabled, the printer will not check for stock firmware updates.**
 
-To update stock firmware, enable Chinese clouds via `SAVE_ZMOD_DATA CHINA_CLOUD=1`, reboot, and proceed with the update.
+To update stock firmware, enable Chinese clouds via `SAVE_Z-Mod_DATA CHINA_CLOUD=1`, reboot, and proceed with the update.
 
 Instead, you can use:
 
@@ -641,7 +641,7 @@ Instead, you can use:
 
 Set Klipper process priority: 1 (lowest) to 40 (highest) (20).
 
-Example: `SAVE_ZMOD_DATA NICE=20`
+Example: `SAVE_Z-Mod_DATA NICE=20`
 
 Higher priority allocates more resources to Klipper but may cause Moonraker and camera disconnections.
 
@@ -662,25 +662,25 @@ Set the timeout (in seconds) to turn off the native screen when not in use. Defa
 
 Note: The native screen needs at least 5 seconds to configure WiFi.
 
-Example: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
+Example: `SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
 ##### PRO_POWEROFF_TIMEOUT
 
 Set the timeout (in minutes) for FF5M Pro to auto-power off. Default: 0 (disabled).
 
-Example: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
+Example: `SAVE_Z-Mod_DATA PRO_POWEROFF_TIMEOUT=10`
 
 ---
 
 ##### SAVE_MOONRAKER
 
-- 0 - Load macro button layouts from ZMOD (default).
+- 0 - Load macro button layouts from Z-Mod (default).
 - 1 - Allow saving macro button changes locally in Fluidd/Moonraker.
 
 Locally saved macros are stored in a separate section.
 
-Example: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
+Example: `SAVE_Z-Mod_DATA SAVE_MOONRAKER=1`
 
 ---
 
@@ -689,4 +689,4 @@ Example: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 - 0 - Do not save the state of filament sensors after a reboot; they will always be enabled (default)
 - 1 - Save the state of the sensors after a reboot. If you disable a sensor, it will also be disabled after a reboot.
 
-Example: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
+Example: `SAVE_Z-Mod_DATA SAVE_FILAMENT_SENSORS=1`

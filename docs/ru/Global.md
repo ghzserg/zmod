@@ -60,18 +60,18 @@ WEIGHT - вес в граммах (1500)
 - `ZCONTROL_ABORT` - при сработке останавливать Klipper
 - `ZCONTROL_AUTO` - при сработке останавливать Klipper(если высота z < `ZCONTROL_Z`), или вызывать PAUSE при z >= `ZCONTROL_Z`
 - `ZCONTROL_Z Z=10` - установить высоту по Z.
-- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - сохранить высоту по Z. Если не хотите включать паузу, то установите ```SAVE_ZMOD_DATA ZCONTROL_Z=230```
+- `SAVE_Z-Mod_DATA ZCONTROL_Z=10` - сохранить высоту по Z. Если не хотите включать паузу, то установите ```SAVE_Z-Mod_DATA ZCONTROL_Z=230```
 
 Если вы хотите включить контроль сопла  на первых слоях, то добавьте через слайсер `ZCONTROL_PAUSE` на том слое, где нужно использовать паузу вместо прерывания работы
 
 ---
 
-### GET_ZMOD_DATA
+### GET_Z-Mod_DATA
 
-Получить значения глобальных параметров/флагов ZMOD.
+Получить значения глобальных параметров/флагов Z-Mod.
 После выполнения макроса в консоли будут выведены данные, которые были сохранены ранее и применены в текущий момент
 
-`Fluidd` -> `Макросы` -> `Основное` -> `ПАРАМЕТРЫ ZMOD`
+`Fluidd` -> `Макросы` -> `Основное` -> `ПАРАМЕТРЫ Z-Mod`
 
 ---
 
@@ -83,15 +83,15 @@ WEIGHT - вес в граммах (1500)
 
 ---
 
-### SAVE_ZMOD_DATA
+### SAVE_Z-Mod_DATA
 
-Сохранить глобальные параметры/флаги ZMOD, применяются при каждой печати.
+Сохранить глобальные параметры/флаги Z-Mod, применяются при каждой печати.
 
 Этот макрос не надо добавлять в стартовый, конечный код или в файл с gcode. Макрос вызывается из консоли fluidd/mainsail. После выключения принтера  параметры сохраняются в памяти принтера в файл `mod_data/variables.cfg` (**редактировать файл руками нельзя - запорите  работу клиппера или мода**) и каждый раз их вводить не надо.
 
-**Чтобы  отредактировать нужный параметр прейдите `Fluidd` -> `Макросы` -> `Система` -> `СОХРАНИТЬ ПАРАМЕТРЫ ZMOD`**, выбирайте параметр который хотите  поменять, заполняйте  его и нажмите `ОТПРАВИТЬ`. Смотрите  что выведет в консоли  fluidd.
+**Чтобы  отредактировать нужный параметр прейдите `Fluidd` -> `Макросы` -> `Система` -> `СОХРАНИТЬ ПАРАМЕТРЫ Z-Mod`**, выбирайте параметр который хотите  поменять, заполняйте  его и нажмите `ОТПРАВИТЬ`. Смотрите  что выведет в консоли  fluidd.
 
-Второй вариант. Написать в консоли Fluidd нужную команду например: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
+Второй вариант. Написать в консоли Fluidd нужную команду например: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`
 
 [Просмотр сохраненных параметров](/ru/Global/#get_zmod_data)
 
@@ -111,7 +111,7 @@ WEIGHT - вес в граммах (1500)
 
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
-Пример: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
+Пример: `SAVE_Z-Mod_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
@@ -119,13 +119,13 @@ WEIGHT - вес в граммах (1500)
 
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
-Пример: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
+Пример: `SAVE_Z-Mod_DATA SCAN_FILE_COLORS=0`
 
 ##### COLOR_MENU_1_BASED
 
 Определяет, какие метки отображать в меню выбора цвета: начинающиеся с 0 (T0, T1 и т. д.) или начинающиеся с 1 (Color 1, Color 2 и т. д.). Это меняет только названия кнопок и служит исключительно для удобства: 0 (с нуля), 1 (с единицы).
 
-Пример: `SAVE_ZMOD_DATA COLOR_MENU_1_BASED=1`
+Пример: `SAVE_Z-Mod_DATA COLOR_MENU_1_BASED=1`
 
 ##### AUTO_ASSIGN_COLORS
 
@@ -142,7 +142,7 @@ WEIGHT - вес в граммах (1500)
 
 [Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
 
-Пример: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
+Пример: `SAVE_Z-Mod_DATA AUTO_ASSIGN_COLORS=0`
 
 ### Параметры начала печати, построения карты стола [START_PRINT]:
 
@@ -150,7 +150,7 @@ WEIGHT - вес в граммах (1500)
 
 Играть MIDI при запуске печати (""), 0 - для отключения
 
-Пример: `SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid`
+Пример: `SAVE_Z-Mod_DATA MIDI_START=Pain-Shut-your-mouth.mid`
 
 ---
 
@@ -158,7 +158,7 @@ WEIGHT - вес в граммах (1500)
 
 Использовать пред очистку сопла в CLEAR_NOZZLE 0-нет, 1-да (0)
 
-Пример: `SAVE_ZMOD_DATA PRECLEAR=0`
+Пример: `SAVE_Z-Mod_DATA PRECLEAR=0`
 
 ---
 
@@ -166,7 +166,7 @@ WEIGHT - вес в граммах (1500)
 
 При каждой печати строить карту стола (средствами родного экрана, если включен экран) 0-нет, 1-да (0). *Для работы снятия карты стола с родного экрана необходимо, через меню экрана принтера перейти на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> **включить ползунок** "Только локальные сети"*
 
-Пример: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
+Пример: `SAVE_Z-Mod_DATA PRINT_LEVELING=1`
 
 ---
 
@@ -174,11 +174,11 @@ WEIGHT - вес в граммах (1500)
 
 Где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0).
 
-Рекомендуется также поставить `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
+Рекомендуется также поставить `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
 
 *Позволяет использовать KAMP при leveling с родного экрана по сети*
 
-Пример: `SAVE_ZMOD_DATA USE_KAMP=1`
+Пример: `SAVE_Z-Mod_DATA USE_KAMP=1`
 
 ---
 
@@ -233,7 +233,7 @@ WEIGHT - вес в граммах (1500)
 *   **Не следует полагаться на эту проверку как на абсолютную защиту.**
 *   При использовании умной очистки (KAMP) ожидание нагрева происходит рядом с местом очистки, а не в углу стола.
 
-Пример: `SAVE_ZMOD_DATA MESH_TEST=0`
+Пример: `SAVE_Z-Mod_DATA MESH_TEST=0`
 
 ---
 
@@ -264,7 +264,7 @@ Igor Polunovskiy
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-Пример: `SAVE_ZMOD_DATA FORCE_MD5=1`
+Пример: `SAVE_Z-Mod_DATA FORCE_MD5=1`
 
 ---
 
@@ -274,7 +274,7 @@ Igor Polunovskiy
 
 [Подробнее](https://www.klipper3d.org/Skew_Correction.html)
 
-Пример: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
+Пример: `SAVE_Z-Mod_DATA DISABLE_SKEW=1`
 
 ---
 
@@ -284,7 +284,7 @@ Igor Polunovskiy
 
 [Как работает Z-Offset](/ru/FAQ/#как-работает-z-offset)
 
-Пример: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
+Пример: `SAVE_Z-Mod_DATA LOAD_ZOFFSET=0`
 
 ---
 
@@ -292,7 +292,7 @@ Igor Polunovskiy
 
 Запретить очистку сопла выдавливанием 0-нет, 1-да (0)
 
-Пример: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`
+Пример: `SAVE_Z-Mod_DATA DISABLE_PRIMING=0`
 
 ---
 
@@ -314,7 +314,7 @@ Igor Polunovskiy
 Можно добавить свой макрос очистки в 'mod_data/user.cfg' и прописать его имя в этом параметре
 *бегемот*
 
-Пример: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
+Пример: `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`
 
 *5M/5MPro: Это не замена родной очистки(CLEAR_NOZZLE), когда сопло тыкается в стол по середине сверху, а потом счищает пластик о стол. Эта очистка сопла непосредственно перед печатью.*
 
@@ -326,7 +326,7 @@ Igor Polunovskiy
 
 Играть MIDI в конце печати (""), 0 - для отключения
 
-Пример: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`
+Пример: `SAVE_Z-Mod_DATA MIDI_END=Pain-Shut-your-mouth.mid`
 
 ---
 
@@ -336,7 +336,7 @@ Igor Polunovskiy
 
 *Для работы быстрого закрытия диалогов необходимо через меню экрана принтера перейти  на вкладку "Настройки" -> "Иконка WiFi" -> "Сетевой режим" -> **включить ползунок** "Только локальные сети"* (0).
 
-Пример: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`
+Пример: `SAVE_Z-Mod_DATA CLOSE_DIALOGS=2`
 
 ---
 
@@ -344,7 +344,7 @@ Igor Polunovskiy
 
 Автоматически выключать моторы после печати/отмены печати через 25 секунд 0-нет, 1-да (1)
 
-Пример: `SAVE_ZMOD_DATA STOP_MOTOR=1`
+Пример: `SAVE_Z-Mod_DATA STOP_MOTOR=1`
 
 ---
 
@@ -356,7 +356,7 @@ Igor Polunovskiy
 - 1 - перезагрузка принтера через команду `REBOOT`
 - 2 - в режиме без родного экрана - перезагрузка прошивки через `FIRMWARE_RESTART`, с экраном перезагрузка принтера через команду `REBOOT`
 
-Пример: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
+Пример: `SAVE_Z-Mod_DATA AUTO_REBOOT=0`
 
 ---
 
@@ -373,7 +373,7 @@ Igor Polunovskiy
 
 Если используется датчик наличия филамента в режиме без родного экрана, то при сработке Выводится фраза: "Кончился филамент. Через 30 секунд будет пауза"
 
-Пример: `SAVE_ZMOD_DATA MOTION_SENSOR=1`
+Пример: `SAVE_Z-Mod_DATA MOTION_SENSOR=1`
 
 ---
 
@@ -387,7 +387,7 @@ Igor Polunovskiy
 - 1 - не показывать окно, использовать ранее заданные цвета
 - 2 - не показывать окно, не использовать IFS
 
-Пример: `SAVE_ZMOD_DATA SILENT=0`
+Пример: `SAVE_Z-Mod_DATA SILENT=0`
 
 ---
 
@@ -400,7 +400,7 @@ Igor Polunovskiy
 - 0 - не загружать пруток автоматически
 - 1 - автоматически загружать пруток (по умолчанию)
 
-Пример: `SAVE_ZMOD_DATA AUTOINSERT=0`
+Пример: `SAVE_Z-Mod_DATA AUTOINSERT=0`
 
 ---
 
@@ -413,7 +413,7 @@ Igor Polunovskiy
 - 0 - пропускать процесс
 - 1 - не пропускать процесс
 
-Пример: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
+Пример: `SAVE_Z-Mod_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
 ---
 
@@ -429,7 +429,7 @@ Igor Polunovskiy
 - 1 - сброс в лоток (по умолчанию)
 - 2 - переход к лотку после смены цвета без сброса пластика
 
-Пример: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
+Пример: `SAVE_Z-Mod_DATA USE_TRASH_ON_PRINT=0`
 
 ---
 
@@ -444,7 +444,7 @@ Igor Polunovskiy
 - 0 - не извлекать (по умолчанию)
 - 1 - извлечь
 
-Пример: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
+Пример: `SAVE_Z-Mod_DATA REMOVE_FILAMENT=1`
 
 ---
 
@@ -456,7 +456,7 @@ Igor Polunovskiy
 - 0 оставляет параметр как в стоке 5
 - 1 использовать `square_corner_velocity` из `mod_data/user.cfg` или `printer.base.cfg`
 
-Пример: `SAVE_ZMOD_DATA FIX_SCV=1`
+Пример: `SAVE_Z-Mod_DATA FIX_SCV=1`
 
 В нашем принтере `square_corner_velocity: 25`, а расчеты графика шейперов и ускорений ведутся для `SCV = 5`.
 
@@ -481,7 +481,7 @@ square_corner_velocity: 9
 
 Чтобы это исправить. Нужно подключиться к сети wifi через родной экран.
 
-Вызывать `SAVE_ZMOD_DATA WIFI=1`
+Вызывать `SAVE_Z-Mod_DATA WIFI=1`
 
 Отключить WiFi на родном экране
 
@@ -505,7 +505,7 @@ square_corner_velocity: 9
 - Нехватка оперативной памяти. Решение: перепайка процессора и увеличения размера памяти до 256 мегабайт
 - Битый кабель к экструдеру. Решение: замена/поправка кабеля
 - Неконтакт разъема кабеля с платой в голове экструдера. Решение: Замена платы экструдера
-- Загрузка данных из SWAP (SWAP находится на EMMC, которая работает со скорость 10 МБ/с, объем данных в SWAP при построении шейперов доходит до 25 мегабайт). Решение: отключение SWAP если у вас 256 мегабайт оперативной памяти `SAVE_ZMOD_DATA USE_SWAP=0`
+- Загрузка данных из SWAP (SWAP находится на EMMC, которая работает со скорость 10 МБ/с, объем данных в SWAP при построении шейперов доходит до 25 мегабайт). Решение: отключение SWAP если у вас 256 мегабайт оперативной памяти `SAVE_Z-Mod_DATA USE_SWAP=0`
 - Сбой прошивки MCU. Решение: перешивка MCU [через сброс настроек](/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода). Перешивка MCU из мода [UPDATE_MCU](/ru/System/#update_mcu)
 
 Исправить ошибку E0011, а также `Communication timeout during homing`, при изменении параметра принтер перезагрузится. 0-нет, 1-да (0)
@@ -513,7 +513,7 @@ square_corner_velocity: 9
 - 0 оставляет параметр как в стоке 0.025
 - 1 ставит параметр в 0.1
 
-Пример: `SAVE_ZMOD_DATA FIX_E0011=1`
+Пример: `SAVE_Z-Mod_DATA FIX_E0011=1`
 
 Ошибка также может возникать:
 
@@ -522,7 +522,7 @@ square_corner_velocity: 9
   
   Запустите макрос `MEM` и посмотрите есть ли swap и какого он размера.
   
-  Включите SWAP, если он выключен ```SAVE_ZMOD_DATA USE_SWAP=1```
+  Включите SWAP, если он выключен ```SAVE_Z-Mod_DATA USE_SWAP=1```
 
 - Если на FF5M/FF5MPro проводите полный тест. А именно, калибровку PID, снятие карты стола и снятие шейперов одновременно.
   
@@ -571,7 +571,7 @@ square_corner_velocity: 9
 - 0 ставит параметр как в стоке
 - 1 ставит параметр 0.150
 
-Пример: `SAVE_ZMOD_DATA FIX_E0017=1`
+Пример: `SAVE_Z-Mod_DATA FIX_E0017=1`
 
 Как исправить на стоке:
 
@@ -603,7 +603,7 @@ square_corner_velocity: 9
 
 Яркость LED при включении (50)
 
-Пример: `SAVE_ZMOD_DATA LED=50`
+Пример: `SAVE_Z-Mod_DATA LED=50`
 
 ---
 
@@ -611,7 +611,7 @@ square_corner_velocity: 9
 
 Играть MIDI при включении (""), 0 - для отключения
 
-Пример: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
+Пример: `SAVE_Z-Mod_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
 
 ---
 
@@ -619,7 +619,7 @@ square_corner_velocity: 9
 
 Использовать альтернативный SAVE_CONFIG(вызывает `SAVE_CONFIG` без зависания родного экрана) [NEW_SAVE_CONFIG](/ru/Main/#new_save_config) при калибровке PID 0-нет, 1-да (0)
 
-Пример: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
+Пример: `SAVE_Z-Mod_DATA NEW_SAVE_CONFIG=0`
 
 ---
 
@@ -631,7 +631,7 @@ square_corner_velocity: 9
 - 1 - да, на EMMC
 - 2 - да, по возможности на USB FLASH
 
-Пример: `SAVE_ZMOD_DATA USE_SWAP=1`
+Пример: `SAVE_Z-Mod_DATA USE_SWAP=1`
 
 ---
 
@@ -639,7 +639,7 @@ square_corner_velocity: 9
 
 Включить китайские облака 0 - нет, 1 - да (1)
 
-Пример: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
+Пример: `SAVE_Z-Mod_DATA CHINA_CLOUD=0`
 
 [Отключите китайские облака](/ru/Recomendations/#отключите-китайские-облака)
 
@@ -654,7 +654,7 @@ square_corner_velocity: 9
 - [zmod.link](/ru/Zmod/#zlink) - облако, для управления принтерами через Fluidd/Mainsail.
 - [Телеграм бот](/ru/Macros/).
 
-Если вы хотите обновить родную прошивку, то нужно разрешить использование китайских облаков, `SAVE_ZMOD_DATA CHINA_CLOUD=1`, перезагрузиться и обновить родную прошивку.
+Если вы хотите обновить родную прошивку, то нужно разрешить использование китайских облаков, `SAVE_Z-Mod_DATA CHINA_CLOUD=1`, перезагрузиться и обновить родную прошивку.
 
 Для **отключения** китайских облаков на родной прошивке:
 
@@ -682,7 +682,7 @@ square_corner_velocity: 9
 
 Установить приоритет процесса Klipper, 1 - минимальный приоритет, 40 - максимальный (20).
 
-Пример: `SAVE_ZMOD_DATA NICE=20`
+Пример: `SAVE_Z-Mod_DATA NICE=20`
 
 Чем выше приоритет у Klipper, тем больше у него ресурсов, но тем чаще отваливается Moonraker и камера.
 
@@ -704,7 +704,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 Учтите, что родной экран должен успеть настроить WiFi, минимальное время 5 секунд.
 
-Пример: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
+Пример: `SAVE_Z-Mod_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
 
@@ -712,18 +712,18 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 Устанавливает время в минутах, через которое FF5m Pro отключит питание. (0)
 
-Пример: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
+Пример: `SAVE_Z-Mod_DATA PRO_POWEROFF_TIMEOUT=10`
 
 ---
 
 ##### SAVE_MOONRAKER
 
-- 0 - Загружает расположение кнопок макросов из ZMOD (по умолчанию)
+- 0 - Загружает расположение кнопок макросов из Z-Mod (по умолчанию)
 - 1 - Разрешает локально сохранять изменения кнопок макросов в Fluidd/Moonraker.
 
 При локальном сохранении макросов, новые макросы попадают в отдельный раздел.
 
-Пример: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
+Пример: `SAVE_Z-Mod_DATA SAVE_MOONRAKER=1`
 
 ---
 
@@ -732,4 +732,4 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 - 0 - Не сохранаять состояние датчиков филамента после перезагрузки, они всегда будут включены (по умолчанию)
 - 1 - Созраняться состояние датчиков после перезагрузки. Если отключить датчик, то после перезагрузки он также будет отключен.
 
-Пример: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
+Пример: `SAVE_Z-Mod_DATA SAVE_FILAMENT_SENSORS=1`

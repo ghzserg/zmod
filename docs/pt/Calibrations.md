@@ -106,9 +106,9 @@ Adicione a primeira linha no Orca
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-Mas é melhor usar [START_PRINT](/pt/Main/#start_print) e [SAVE_ZMOD_DATA](/pt/Global/#start_print) PRINT_LEVELING=1 USE_KAMP=1
+Mas é melhor usar [START_PRINT](/pt/Main/#start_print) e [SAVE_Z-Mod_DATA](/pt/Global/#start_print) PRINT_LEVELING=1 USE_KAMP=1
 
-Também é recomendável colocar `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, o que permitirá que você use o espaço de limpeza onde o mapa da tabela é removido.
+Também é recomendável colocar `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`, o que permitirá que você use o espaço de limpeza onde o mapa da tabela é removido.
 
 [Quais são as opções para remover o cartão de tabela?](/pt/FAQ/#what-are-the-options-for-removing-the-table-card)
 
@@ -129,7 +129,7 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
 
-Mas é melhor usar [START_PRINT](/pt/Main/#start_print) e [SAVE_ZMOD_DATA](/pt/Goabal/#start_print) PRINT_LEVELING=1
+Mas é melhor usar [START_PRINT](/pt/Main/#start_print) e [SAVE_Z-Mod_DATA](/pt/Goabal/#start_print) PRINT_LEVELING=1
 
 [Quais são as opções para remover um cartão de mesa?](/pt/FAQ/#what-are-the-options-for-removing-a-table-card)
 

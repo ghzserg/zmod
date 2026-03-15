@@ -3,27 +3,27 @@ hide:
   - navigation
 ---
 
-# FF5M / FF5M Pro / AD5X ZMOD
+# FF5M / FF5M Pro / AD5X Z-Mod
 
 <img width="698" height="291" alt="zmod logo" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
 [Z-Mod LINK is available at this link ->](https://zmod.link/link/)
 
-### **ZMOD for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer**
+### **Z-Mod for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer**
 
-Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, ZMOD is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
+Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, Z-Mod is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
 
-### What is ZMOD?
-ZMOD is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface.
+### What is Z-Mod?
+Z-Mod is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface.
 
 > **Why "Z-Mod"?** The author has been known by the nickname [zserg](https://zserg.ru/) for over 20 years. When it came time to name the mod, the answer was obvious: take the first letter of the nickname and add "mod". No hidden meaning, no symbolism — it really is exactly as simple as it looks.
 
-### Key Advantages of ZMOD vs. Stock Firmware
-Here’s what you gain by installing ZMOD:
+### Key Advantages of Z-Mod vs. Stock Firmware
+Here’s what you gain by installing Z-Mod:
 
 #### 1. Full Remote Control
 **Stock firmware**: You can send files over Wi-Fi, but only via Orca FF or the FlashForge app (both may be unavailable due to server issues).
-**ZMOD**: Complete browser-based control from your PC or phone:
+**Z-Mod**: Complete browser-based control from your PC or phone:
 
 - **Fluidd / Mainsail**: Intuitive web interfaces showing live print stats, temperatures, fan speed control, axis movement, and full console access.
 - **Octo/Klipper-style file upload**: Seamless integration with Orca Slicer and other slicers for direct G-code file transfers.
@@ -32,7 +32,7 @@ Here’s what you gain by installing ZMOD:
 
 #### 2. Advanced Calibration & Bed Leveling
 **Stock firmware**: Basic automatic bed leveling (ABL).
-**ZMOD**:
+**Z-Mod**:
 
 - **Adaptive Mesh (KAMP)**: The printer generates a mesh map only over the area where your model is located — saving time and improving accuracy.
 - **PID Tuning**: Precise calibration of extruder and bed thermal behavior for stable, oscillation-free temperatures.
@@ -42,16 +42,16 @@ Here’s what you gain by installing ZMOD:
 
 #### 3. Intelligent Reliability Features
 **Stock firmware**: Basic filament-runout detection. No firmware or file integrity checks → print hangs possible.
-**ZMOD**:
+**Z-Mod**:
 
 - **Nozzle Collision Detection**: Uses strain gauges to detect nozzle collisions with the print or bed — and automatically pauses to prevent damage.
 - **Power-loss Recovery**: Remembers the last print position and resumes after power is restored.
-- **Firmware Integrity Check**: Validates both stock firmware and ZMOD files to prevent corruption.
+- **Firmware Integrity Check**: Validates both stock firmware and Z-Mod files to prevent corruption.
 - **G-code File Integrity Check**: Verifies MD5 checksums during file transfer.
 
 #### 4. Flexible Filament Handling (Especially for AD5X)
 **Stock firmware**: Standard spool selection via UI menu.
-**ZMOD (for AD5X)**:
+**Z-Mod (for AD5X)**:
 
 - **Smart COLOR Menu**: Visually select spools, color changes, and material types directly from the web UI.
 - **Infinite Spool Mode**: If multiple spools use the same material, the printer automatically switches to the next one when the current runs out.
@@ -59,7 +59,7 @@ Here’s what you gain by installing ZMOD:
 
 #### 5. Ecosystem & Integration
 **Stock firmware**: Closed system.
-**ZMOD**:
+**Z-Mod**:
 
 - **Telegram Bot**: Get real-time notifications and camera snapshots in Telegram for print start/completion.
 - **Plugin Support**: Extend functionality via modules (e.g., `bambufy` for better Bambu Studio compatibility).
@@ -68,7 +68,7 @@ Here’s what you gain by installing ZMOD:
 
 #### 6. Optimization & Low-level Control
 **Stock firmware**: Limited configurability.
-**ZMOD**:
+**Z-Mod**:
 
 - **Stock LCD Disable**: Frees up RAM (critical on AD5M with only 128 MB).
 - **GuppyScreen**: Enhanced replacement UI for the printer’s display.
@@ -79,21 +79,21 @@ Here’s what you gain by installing ZMOD:
 
 #### 7. Klipper 13
 **Stock firmware**: AD5M runs outdated Klipper v11, plagued by bugs (E0011, E0017, incorrect object exclusion, broken SCV, faulty resume, etc.).
-**ZMOD**:
+**Z-Mod**:
 
 - Fixes known Klipper bugs and enables a modern, stable version.
 
 ---
 
-### Summary: Who Is ZMOD For?
+### Summary: Who Is Z-Mod For?
 
-| If you are… | ZMOD gives you… |
+| If you are… | Z-Mod gives you… |
 |-------------|-----------------|
 | A **beginner** | Easy remote control and automated calibrations for reliable “first-try” quality. |
 | An **enthusiast** | Full control over every printing parameter, advanced tuning tools, and speed experimentation. |
 | An **AD5X owner** | The most convenient multi-color workflow and reduced filament waste. |
 
-ZMOD doesn’t *replace* the stock firmware — it enhances it, giving you the **choice**: stick with the familiar touchscreen UI, or leverage modern 3D printing tools to get the absolute most from your FlashForge. It’s the logical next step for any FlashForge owner aiming to maximize their printer’s capabilities.
+Z-Mod doesn’t *replace* the stock firmware — it enhances it, giving you the **choice**: stick with the familiar touchscreen UI, or leverage modern 3D printing tools to get the absolute most from your FlashForge. It’s the logical next step for any FlashForge owner aiming to maximize their printer’s capabilities.
 
 !!! danger
     *If you want to install this mod on your AD5M (Pro) / [AD5X](/AD5X/), be aware that you risk voiding the warranty or damaging the printer. Proceed at your own risk if you wish to try this mod!*

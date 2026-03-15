@@ -41,7 +41,7 @@ Consumo de RAM na câmera padrão:
 *Muitas câmeras de Ali/Ozon/Wildberries sempre consomem 18 MiB.
 
 - [O que é uma câmera alternativa?](/pt/FAQ/#what-is-an-alternative-camera)
-- Instalei uma impressora e o ZMOD escondeu minha câmera! Eu a vi no Orca-FF e agora ela sumiu!](/pt/FAQ/#I-installed-a-printer-and-ZMOD-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
+- Instalei uma impressora e o Z-Mod escondeu minha câmera! Eu a vi no Orca-FF e agora ela sumiu!](/pt/FAQ/#I-installed-a-printer-and-Z-Mod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
 
 `Camera Off Waiting...` - essa mensagem é exibida se o fluxo da câmera ainda não estiver disponível. A câmera inicia depois que o Klipper inicia - enquanto as informações sobre os parâmetros globais estão sendo exibidas
 
@@ -119,7 +119,7 @@ Reinicie a implementação da câmera alternativa
 
 ---
 
-### REMOVE_ZMOD
+### REMOVE_Z-Mod
 
 Remover Z-Mod.
 
@@ -129,15 +129,15 @@ Atenção! Desative todos os plug-ins e mude para o Klipper nativo.
 
 A pasta `/opt/config/mod_data` contém as configurações `zmod`, `fluidd`, `moonraker` e `mainsail`.
 
-Ela não é excluída por padrão, pois as pessoas costumam chamar a macro `REMOVE_ZMOD` por engano
+Ela não é excluída por padrão, pois as pessoas costumam chamar a macro `REMOVE_Z-Mod` por engano
 
 ---
 
-### SKIP_ZMOD
+### SKIP_Z-Mod
 
 Reinicialização no sistema original. Sem executar o Z-Mod.
 
-Os arquivos de configuração ZMOD, Moonraker e Fluidd são desativados.
+Os arquivos de configuração Z-Mod, Moonraker e Fluidd são desativados.
 
 Atenção! Desative você mesmo todos os plug-ins e mude para o Klipper nativo
 
@@ -176,7 +176,7 @@ Essa macro procurará a versão mais recente disponível, fará o download para 
 
 ---
 
-### STOP_ZMOD
+### STOP_Z-Mod
 
 Descarregue o guppy, helix, o moonraker e o fluidd/Mainsail da memória. O bot de telegrama também deixará de funcionar
 
@@ -188,16 +188,16 @@ Parâmetros:
 
 Exemplo:
 ```
-STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Se essa linha for escrita no código inicial, o GUPPY/HELIX será descarregado da memória após o início da impressão
 
 ---
 
-### START_ZMOD
+### START_Z-Mod
 
-Ligue novamente o guppy, helix, o moonraker e o fluidd/Mainsail após STOP_ZMOD.
+Ligue novamente o guppy, helix, o moonraker e o fluidd/Mainsail após STOP_Z-Mod.
 
 Parâmetros:
 
@@ -207,7 +207,7 @@ Parâmetros:
 
 Exemplo:
 ```
-START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Se essa linha for incluída no código final, o GUPPY/HELIX será iniciado após o término da impressão

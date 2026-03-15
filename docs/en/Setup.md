@@ -155,7 +155,7 @@ If you encounter this issue, you need to calibrate the print head position using
 
 ## Updating the Mod
 
-If the mod displays ("Update ZMOD via USB"), you must update via USB, even if recently updated.
+If the mod displays ("Update Z-Mod via USB"), you must update via USB, even if recently updated.
 
 **Updating via USB preserves all data.**
 
@@ -170,7 +170,7 @@ If the mod displays ("Update ZMOD via USB"), you must update via USB, even if re
 After installation:
 
 1. Go to Fluidd/Mainsail → `Settings` → `Software Update`.
-2. Click `Check Updates` and install the latest ZMOD updates.
+2. Click `Check Updates` and install the latest Z-Mod updates.
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -184,7 +184,7 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 **Version Compatibility:**
 
-- The OS version (under `System` → `Distribution`) must match the first two digits of the ZMOD version (`Settings` → `Updates` → `ffm5/zmod`).
+- The OS version (under `System` → `Distribution`) must match the first two digits of the Z-Mod version (`Settings` → `Updates` → `ffm5/zmod`).
 - **Mismatched versions cause instability.**
 
 **Manual USB Update:**
@@ -202,10 +202,10 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 ## Removing or Temporarily Disabling the Mod
 
-- **[SKIP_ZMOD](/Zmod/#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
-- **[REMOVE_ZMOD](/Zmod/#remove_zmod)**: Fully uninstalls the mod.
+- **[SKIP_Z-Mod](/Zmod/#skip_zmod)**: Reboots without starting Moonraker/Fluidd.
+- **[REMOVE_Z-Mod](/Zmod/#remove_zmod)**: Fully uninstalls the mod.
 
-**Recommended method:** Use the `REMOVE_ZMOD` macro. Use USB removal only if macros are unavailable.
+**Recommended method:** Use the `REMOVE_Z-Mod` macro. Use USB removal only if macros are unavailable.
 
 Attention!
 
@@ -231,7 +231,7 @@ Attention!
 
 2. If you are using **Klipper 13**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
-   ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
+   ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```
 
 **For [AD5X](/ru/AD5X/), [Z-Mod activation](/Native_FW/) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 

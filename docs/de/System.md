@@ -129,7 +129,7 @@ Zeitzone ändern
 
 Igor Polunovskiy
 
-Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1` zu verwenden.
+Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1` zu verwenden.
 
 MD5-Summe prüfen.
 

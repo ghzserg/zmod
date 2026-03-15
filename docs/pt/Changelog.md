@@ -187,7 +187,7 @@ Para suporte a tens, obrigado a [@minicx](https://github.com/loss-and-quick/)
 17.04.2025
 Suporte para idiomas de interface:
 
-- ZMOD - inglês, alemão, francês, italiano, espanhol, chinês, japonês, japonês, coreano
+- Z-Mod - inglês, alemão, francês, italiano, espanhol, chinês, japonês, japonês, coreano
 - GuppyScreen - inglês, alemão, francês, italiano, espanhol
 
 ### Versão 1.4.3
@@ -347,7 +347,7 @@ Suporte para idiomas de interface:
 - [Auto-clean](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) - vídeos com mais de 10 dias no bot.
 - Definir [fuso horário desejado](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) no bot
 - Alternar automaticamente de KAMP [LINE_PURGE](/pt/Global/#clear) para _CLEAR2 se nenhum objeto for encontrado
-- Correção da operação [SKIP_ZMOD](/pt/Macros/#skip_zmod)
+- Correção da operação [SKIP_Z-Mod](/pt/Macros/#skip_zmod)
 - A atualização do fluidd/mainsail agora não requer reinicialização
 - A alteração de fluidd para mainsail agora não requer reinicialização
 - O Zmod reporta arquivos se forem usados arcos neles
@@ -364,7 +364,7 @@ Suporte para idiomas de interface:
 ### Versão 0.2.4
 21.12.2024
 
-- O ZMOD grava automaticamente se deseja atualizar a partir do pen drive - agora na cor vermelha
+- O Z-Mod grava automaticamente se deseja atualizar a partir do pen drive - agora na cor vermelha
 - Se a remoção nativa do mapa da tabela da tela for usada (PRINT_LEVELING=1), os parâmetros FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH em START_PRINT serão ignorados
 - Pausa, mesmo ao imprimir a partir da tela no canto direito
 - O parâmetro PRRECLEAR agora também funciona ao imprimir com a construção do mapa a partir da tela
@@ -373,7 +373,7 @@ Suporte para idiomas de interface:
 ### Versão 0.2.3
 19.12.2024
 
-- O ZMOD grava automaticamente se for necessário atualizar a partir de um pendrive USB.
+- O Z-Mod grava automaticamente se for necessário atualizar a partir de um pendrive USB.
 - Macro [M600](/pt/Macros/#m600) aprimorada - substitui o filamento com uma pausa durante a impressão.
 - Controle MD5 aprimorado - agora exibe mensagem se o MD5 não for encontrado
 
@@ -383,7 +383,7 @@ Suporte para idiomas de interface:
 - Nova macro [FAST_CLOSE_DIALOGS](/pt/Macros/#fast_close_dialogs) - Faz com que as caixas de diálogo sejam fechadas rapidamente na tela nativa. Usado para fechar uma janela quando a impressão é concluída ou quando a impressão é cancelada. *Para que as caixas de diálogo de fechamento rápido funcionem, vá para a guia Configurações -> Ícone WiFi -> Modo de rede -> ative o controle deslizante "Somente redes locais": @darksimpson
 - Nova macro [LEVELING_PRINT_FILE](/pt/Macros/#leveling_print_file) - Imprime um arquivo com plotagem de mapa de tabela a partir da tela nativa. *Para LEVELING_PRINT_FILE, é necessário ir para a guia "Settings" (Configurações) -> "WiFi icon" (Ícone WiFi) -> "Network mode" (Modo de rede) -> ative o controle deslizante "Local networks only" (Somente redes locais) por meio do menu da tela da impressora.
 - Nova macro [COLDPULL](/pt/Filamento/#coldpull) Coldpull (limpeza do bico) sem violência. Implementação de [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
-- Novos parâmetros [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data):
+- Novos parâmetros [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data):
     - [PRINT_LEVELING](/pt/Global/#save_zmod_data) - construir mapa de mesa com tela nativa significa 0-não, 1-sim (0) em cada impressão. *Para remover o mapa da área de trabalho da tela nativa, vá para a guia "Configurações" -> "Ícone WiFi" -> "Modo de rede" -> ative o controle deslizante "Somente redes locais" por meio do menu da tela da impressora.
       - [USE_KAMP](/pt/Global/#save_zmod_data) - onde é possível usar o mapa adaptável da área de trabalho (KAMP) em vez do mapa completo da área de trabalho 0-não, 1-sim (0). *Permite usar o KAMP ao obter um mapa de tabela pela rede a partir da tela nativa.
       - CLOSE_DIALOGS](/pt/Global/#save_zmod_data) - fecha automaticamente as caixas de diálogo quando terminadas e quando a impressão é cancelada 0-não, 1-sim lento, 2-sim rápido. *Para que o fechamento rápido das caixas de diálogo funcione, vá para a guia "Settings" (Configurações) -> "WiFi icon" (Ícone WiFi) -> "Network mode" (Modo de rede) -> ative o controle deslizante "Local networks only" (Apenas redes locais)* (0) por meio do menu da tela da impressora.
@@ -417,9 +417,9 @@ Suporte para idiomas de interface:
 - Grande reformulação da macro [START_PRINT](/pt/Main/#start_print)
 - Macro [NEW_SAVE_CONFIG](/pt/Macros/#new_save_config) - salvar alterações/recarregar o clipper sem congelamento de tela nativo. Implementação de @darksimpson
 - Macro [CLOSE_DIALOGS](/pt/Macros/#close_dialogs) - fecha janelas quando a impressão é concluída e quando a impressão é cancelada. Implementação por @darksimpson
-- Macro [STOP_ZMOD](/pt/Macros/#stop_zmod) - desativa o moonraker
-- Macro [START_ZMOD](/pt/Macros/#start_zmod) - ativa o moonraker
-- Macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) - salva os parâmetros do ZMOD.
+- Macro [STOP_Z-Mod](/pt/Macros/#stop_zmod) - desativa o moonraker
+- Macro [START_Z-Mod](/pt/Macros/#start_zmod) - ativa o moonraker
+- Macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data) - salva os parâmetros do Z-Mod.
     - CLOSE_DIALOGS - fecha automaticamente as caixas de diálogo quando a impressão é concluída e cancelada 0-não, 1-sim (0)
         - NEW_SAVE_CONFIG - usar NEW_SAVE_CONFIG alternativo ao calibrar o PID 0-não, 1-sim (0)
         - LED - brilho do LED quando ligado (50)
@@ -439,7 +439,7 @@ Suporte para idiomas de interface:
 03.12.2024
 
 - Várias correções de macro
-- Macro [STOP_ZMOD](/pt/Macros/#stop_zmod) - desativa temporariamente o fluidd/mainstaill e o moonraker
+- Macro [STOP_Z-Mod](/pt/Macros/#stop_zmod) - desativa temporariamente o fluidd/mainstaill e o moonraker
 
 ### Versão 0.1.6
 02.12.2024
@@ -509,6 +509,6 @@ Suporte para idiomas de interface:
 - Cancelamento de impressão implementado, tratado por meio da tela nativa
 - [REBOOT](/pt/Macros/#reboot) - macro reinicia a impressora
 - SHUTDOWN](/pt/Macros/#shutdown) - macro para desligar a impressora
-- SKIP_ZMOD](/pt/Macros/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
-- [REMOVE_ZMOD](/pt/Macros/#remove_zmod) - macro para remover mods
+- SKIP_Z-Mod](/pt/Macros/#skip_zmod) - macro para reiniciar sem iniciar o moonraker e o fluidd
+- [REMOVE_Z-Mod](/pt/Macros/#remove_zmod) - macro para remover mods
 - Corrigido o bug: "Após uma pausa devido à ativação do sensor de movimento do filamento, ele restaura a impressão, mas imprime no ar cerca de 3 centímetros acima do local onde deveria estar".

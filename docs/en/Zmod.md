@@ -44,7 +44,7 @@ RAM usage for stock cameras:
 !!! note
 
     - [What is an Alternative Camera?](/FAQ/#what-is-an-alternative-camera)
-        - [I installed the printer, and ZMOD hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
@@ -119,7 +119,7 @@ Disable alternative camera implementation.
 Restart the alternative camera implementation.
 
 ---
-### REMOVE_ZMOD
+### REMOVE_Z-Mod
 
 Uninstall Zmod.
 
@@ -131,7 +131,7 @@ It is not deleted by default to prevent accidental data loss.
 Warning! Disable all plugins yourself and switch to the native Klipper.
 
 ---
-### SKIP_ZMOD
+### SKIP_Z-Mod
 
 Reboot into the original system without Zmod.
 Disables Zmod, Moonraker, and Fluidd configurations.
@@ -166,7 +166,7 @@ Update firmware via network using a USB drive.
 
 ---
 
-### STOP_ZMOD
+### STOP_Z-Mod
 
 Unload guppy, helix, moonraker, and fluidd/Mainsail from memory. The Telegram bot will also stop working.
 
@@ -178,16 +178,16 @@ Parameters:
 
 Example:
 ```
-STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 If this line is added to the start code, GUPPY/HELIX will be unloaded from memory after the print starts.
 
 ---
 
-### START_ZMOD
+### START_Z-Mod
 
-Re-enable guppy, helix, moonraker, and fluidd/Mainsail after STOP_ZMOD.
+Re-enable guppy, helix, moonraker, and fluidd/Mainsail after STOP_Z-Mod.
 
 Parameters:
 
@@ -197,7 +197,7 @@ Parameters:
 
 Example:
 ```
-START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 If this line is added to the end code, GUPPY/HELIX will be launched after the print finishes.

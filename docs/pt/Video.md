@@ -12,5 +12,5 @@ ocultar:
 </div>
 
 <div class="video-embed">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/IcCHZ4knZJM" title="O ZMOD corrigiu minha frustração número 1 com o flashforge! Agora temos todo o acesso 😏" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/IcCHZ4knZJM" title="O Z-Mod corrigiu minha frustração número 1 com o flashforge! Agora temos todo o acesso 😏" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>

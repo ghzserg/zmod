@@ -9,35 +9,35 @@
 >
 > Se você decidir que está pronto para seguir em frente, siga em frente lendo a documentação.
 
-### Como o ZMOD difere do KlipperMod/firmware nativo
+### Como o Z-Mod difere do KlipperMod/firmware nativo
 
-   A diferença entre o KlipperMod e o ZMOD:
+   A diferença entre o KlipperMod e o Z-Mod:
 
   - O KlipperMod usa o Klipper puro com um mínimo de alterações específicas do flashforge 5m(pro)
-      - O ZMOD usa o Klipper padrão do firmware nativo, bem como o Klipper 13.
+      - O Z-Mod usa o Klipper padrão do firmware nativo, bem como o Klipper 13.
       - O KlipperMod usa o KlipperScreen como uma tela para a impressora.
-      - O ZMOD usa a tela nativa ou o GuppyScreen/HelixScreen em vez do KlipperScreen
+      - O Z-Mod usa a tela nativa ou o GuppyScreen/HelixScreen em vez do KlipperScreen
       - O KlipperMod usa o moonraker-timelapse
-      - O ZMOD usa o moonraker-telegram-bot em um host EXTERNO que suporta timelapse ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
+      - O Z-Mod usa o moonraker-telegram-bot em um host EXTERNO que suporta timelapse ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
 
 Filosofia diferente.
 
 * O KlipperMod é essencialmente uma implementação de firmware alternativa.
-* ZMOD é uma interferência mínima com o firmware nativo. Todas as funções do firmware nativo são preservadas.
+* Z-Mod é uma interferência mínima com o firmware nativo. Todas as funções do firmware nativo são preservadas.
 
-É por isso que não haverá G17, G18, G19 no ZMOD - embora isso seja fácil. Não haverá atualizações para o clipper nativo, nem renomeação ou alteração de macros padrão, configurações, nomes de pinos, etc.
+É por isso que não haverá G17, G18, G19 no Z-Mod - embora isso seja fácil. Não haverá atualizações para o clipper nativo, nem renomeação ou alteração de macros padrão, configurações, nomes de pinos, etc.
 
-O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o ZMOD usa algumas macros e scripts do KlipperMod, e também usa desenvolvimentos do KlipperMod. Mas você não deve esperar do ZMOD um comportamento semelhante ao do KlipperMod.
+O Z-Mod NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o Z-Mod usa algumas macros e scripts do KlipperMod, e também usa desenvolvimentos do KlipperMod. Mas você não deve esperar do Z-Mod um comportamento semelhante ao do KlipperMod.
 
-**O ZMOD é binário incompatível com o KlipperMod.
+**O Z-Mod é binário incompatível com o KlipperMod.
 
-#### O que está no KlipperMod e o que não está no ZMOD:
+#### O que está no KlipperMod e o que não está no Z-Mod:
 
-- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - tela para impressora. No ZMOD, em vez de KlipperScreen, é uma tela nativa ou GuppyScreen/HelixScreen
-- [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - o ZMOD usa o bot do Telegram ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
+- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - tela para impressora. No Z-Mod, em vez de KlipperScreen, é uma tela nativa ou GuppyScreen/HelixScreen
+- [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - o Z-Mod usa o bot do Telegram ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
 - Configuração de rede via iwd/wpa_supplicant (no caso de GuppyScreen/HelixScreen) - na configuração de rede do Z-Mod via tela nativa, a inicialização da rede também é possível no modo de tela não nativa
 
-#### O que está no ZMOD e o que não está no KlipperMod:
+#### O que está no Z-Mod e o que não está no KlipperMod:
 
 - Suporte [AD5X](/pt/AD5X/)
 - Suporte para [os seguintes idiomas](/pt/Global/#lang): inglês, alemão, francês, italiano, espanhol, chinês, japonês, coreano.
@@ -45,7 +45,7 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 - [Restauração de impressão por falha de energia](/pt/Zmod/#zrestore)
 - [Remoção de shaper com geração de gráfico](/pt/Calibrations/#zshaper) levando em conta [SCV](/pt/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
 - [Verificar e restaurar arquivos/direitos/ligações simbólicas do sistema de arquivos nativo](/pt/System/#check_system)
-- Atualização automática do `Fluidd`/`Mainsail`/`Moonraker` e do ZMOD pela rede
+- Atualização automática do `Fluidd`/`Mainsail`/`Moonraker` e do Z-Mod pela rede
 - [Entware](/pt/FAQ/#-zmod-entware-entware--how-to-use-it)
 - Bug corrigido [E0017](/pt/Sistema/#fix_e0017)
 - Além disso, o GuppyScreen/HelixScreen suporta: calibração de PID, controle de flap, reversão de firmware, limpeza de bocal, redefinição de célula de carga, ajuste de parafuso, ColdPull, mapa de tabela finalizado
@@ -56,7 +56,7 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 
 ---
 
-#### O que está no ZMOD e o que não está no firmware nativo:
+#### O que está no Z-Mod e o que não está no firmware nativo:
 
 - Suporte a Moonraker/Fluidd/Mainsail
 - Suporte ao bot do Telegram
@@ -75,7 +75,7 @@ Acesso à pasta **mod_data** por meio da interface da Web do fluidd.
 - As configurações personalizadas do klipper devem ser inseridas no arquivo `mod_data/user.cfg`; as configurações gravadas nesse arquivo podem substituir/adicionar as configurações dos arquivos `printer_base.cfg` e Z-Mod.
 - As configurações personalizadas do moonraker devem ser inseridas no arquivo `mod_data/user.moonraker.conf`
 - As músicas personalizadas são armazenadas em `mod_data/midi/`
-- As configurações globais do mod são armazenadas por meio da macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) *nyuhler*
+- As configurações globais do mod são armazenadas por meio da macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data) *nyuhler*
 - O código a ser executado quando a impressora é desligada é armazenado aqui `mod_data/power_off.sh`.
 - O código a ser executado quando a impressora é ligada é armazenado aqui `mod_data/power_on.sh`.
 
@@ -152,9 +152,9 @@ Sem essas linhas, a tela da impressora não sabe a que temperatura aquecer o bic
 
 ---
 
-#### Depois de instalar o ZMOD, minha tela está inoperante e não responde às teclas digitadas.
+#### Depois de instalar o Z-Mod, minha tela está inoperante e não responde às teclas digitadas.
 
-- Instale a atualização mais recente do firmware nativo e do ZMOD](/pt/Recomendations/#install-last-update-native-firmware-and-zmod)
+- Instale a atualização mais recente do firmware nativo e do Z-Mod](/pt/Recomendations/#install-last-update-native-firmware-and-zmod)
 - Leia [recursos operacionais](#conhecer-recursos)
 - Você pode ter desligado a tela. Ligue-a com a macro [DISPLAY_ON](/pt/System/#display_on)
 
@@ -186,11 +186,11 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Se quiser ativar a calibração automática sempre que imprimir, digite Fluidd/Mainsail 1 vez no console
 ```
-SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 No menu da tela da impressora, vá para `Settings` -> `Wifi icon` -> `Network mode` -> ative o controle deslizante `Local networks only`.
 
-Leia a documentação de [START_PRINT](/pt/Main/#start_print) e [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), isso permitirá que você utilize os recursos avançados e úteis do ZMOD
+Leia a documentação de [START_PRINT](/pt/Main/#start_print) e [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data), isso permitirá que você utilize os recursos avançados e úteis do Z-Mod
 
 Se você quiser usar a reversão do firmware, leia [documentation](/pt/FAQ/#what-is-rollback-from-firmware) e adicione
 ```Perfil da barra``` -> ```Avançado``` -> ```Iniciar barra de código G```.
@@ -216,7 +216,7 @@ O z-offset salvo na tela é usado.
 
 O deslocamento Z do Fluidd/Mainsail/GuppyScreen/HelixScreen afeta **apenas até a reinicialização** e não deve ser alterado sem que se saiba para onde o bocal está se movendo.
 
-Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen/HelixScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
+Qualquer chamada para `SET_GCODE_OFFSET` (que é chamada automaticamente ao alterar o deslocamento Z do Fluid/Mainsail/GuppyScreen/HelixScreen) salva o deslocamento Z atual nos parâmetros globais do mod. Mas esse valor salvo só será usado se o parâmetro global [LOAD_ZOFFSET](/pt/Global/#load_zoffset) for especificado (o que é desativado por padrão, para ativar `SAVE_Z-Mod_DATA LOAD_ZOFFSET=1`), a tela nativa não for usada e a macro [START_PRINT](/pt/Main/#start_print) for usada.
 
 Você também pode usar os parâmetros [START_PRINT](/pt/Main/#start_print) para definir o deslocamento Z
 
@@ -226,7 +226,7 @@ Você também pode usar os parâmetros [START_PRINT](/pt/Main/#start_print) para
 
 Se quiser ativar a calibração automática sempre que imprimir, digite fluidd/mainsail 1 vez no console:
 ```
-SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
+SAVE_Z-Mod_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
 A tela nativa usa mapas (sempre, não é fixo, mesmo que não seja necessário):
@@ -242,7 +242,7 @@ Se você quiser usar um cartão diferente ao imprimir (por exemplo, `moya_karta_
 
 - Desative a calibração automática nos parâmetros globais
 
-  ````SAVE_ZMOD_DATA PRINT_LEVELING=0````
+  ````SAVE_Z-Mod_DATA PRINT_LEVELING=0````
 
 - Capture o mapa da tabela antecipadamente por meio da macro [AUTO_FULL_BED_LEVEL](/pt/FAQ/#chores-macros-and-buttons-in-fluidd).
  
@@ -269,12 +269,12 @@ Recomendo o uso de parâmetros globais, que são configurados uma vez e usados s
 Parâmetro `PRINT_LEVELING`:
 
 - Remove o mapa da tabela toda vez que você imprime
-- Se estiver trabalhando com a tela, o mapa da tabela será retirado da tela nativa, como seria se você tivesse selecionado um arquivo da tela e clicado na caixa de seleção `LEVELING`. Se o parâmetro for 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1`, quando você enviar arquivos por meio do Orca/Fluidd/Mainsail, a impressora presumirá que você selecionou o arquivo a ser impresso na tela nativa e marcou `Alignment`. Toda vez que você imprimir nesse caso, o mapa da tabela será capturado.
+- Se estiver trabalhando com a tela, o mapa da tabela será retirado da tela nativa, como seria se você tivesse selecionado um arquivo da tela e clicado na caixa de seleção `LEVELING`. Se o parâmetro for 1 `SAVE_Z-Mod_DATA PRINT_LEVELING=1`, quando você enviar arquivos por meio do Orca/Fluidd/Mainsail, a impressora presumirá que você selecionou o arquivo a ser impresso na tela nativa e marcou `Alignment`. Toda vez que você imprimir nesse caso, o mapa da tabela será capturado.
 - Se estiver trabalhando no modo de tela não nativa e usar a macro [START_PRINT](/pt/Main/#start_print) no código G inicial, o mapa da tabela também será apagado toda vez que você imprimir
 
-  Para ativar esse recurso, você precisa configurar uma vez a macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data), o parâmetro [PRINT_LEVELING](/pt/Global/#zshaper)
+  Para ativar esse recurso, você precisa configurar uma vez a macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data), o parâmetro [PRINT_LEVELING](/pt/Global/#zshaper)
 
-  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
+  ```SAVE_Z-Mod_DATA PRINT_LEVELING=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa será removido a cada impressão.
 
   *Para remover o mapa da área de trabalho da tela nativa, vá para ```Configurações``` -> ```Ícone Wifi``` -> `Modo de rede``` -> ative o controle deslizante ```Somente redes locais``` no menu da tela da impressora.
 
@@ -285,15 +285,15 @@ Parâmetro `USE_KAMP`:
 - A remoção adaptativa do mapa da mesa (KAMP) pode ser ativada, então nem toda a mesa será removida, mas apenas as partes com modelos imprimíveis.
   **Automatic table map skimming will not be triggered!**. Esse parâmetro indica que, se o skimming do mapa da tabela for acionado, o KAMP será executado em seu lugar.
 
-  Para ativar esse recurso, você precisa configurar a macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) uma vez, parâmetro [USE_KAMP](/pt/Global/#zshaper)
+  Para ativar esse recurso, você precisa configurar a macro [SAVE_Z-Mod_DATA](/pt/Global/#save_zmod_data) uma vez, parâmetro [USE_KAMP](/pt/Global/#zshaper)
 
-  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa de tabela adaptável será usado sempre que possível, inclusive ao capturar o mapa de tabela com a tela nativa pela rede.
+  ```SAVE_Z-Mod_DATA USE_KAMP=1``` *(deve ser inserido no console do Fluidd/Mainsail)*. Nesse caso, o mapa de tabela adaptável será usado sempre que possível, inclusive ao capturar o mapa de tabela com a tela nativa pela rede.
 
 ---
 
 #### Por meio da alteração do código de início e da macro START_PRINT
 
-Se você não quiser usar os parâmetros globais *(SAVE_ZMOD_DATA PRINT_LEVELING=0)*, os seguintes parâmetros da macro [START_PRINT](/pt/Main/#start_print), que é gravada no código G inicial, estarão disponíveis.
+Se você não quiser usar os parâmetros globais *(SAVE_Z-Mod_DATA PRINT_LEVELING=0)*, os seguintes parâmetros da macro [START_PRINT](/pt/Main/#start_print), que é gravada no código G inicial, estarão disponíveis.
 
 - FORCE_LEVELING - força a criação de um mapa de tabela, True - criar, False - não criar (False)
 - FORCE_KAMP - iniciar a construção do mapa de tabela adaptável, True - sim, False - não (False).
@@ -384,7 +384,7 @@ Se você foi direcionado para cá. Leia a documentação e diga o nome do animal
 
 ---
 
-### Quero excluir o ZMOD - tenho que recalibrar tudo?
+### Quero excluir o Z-Mod - tenho que recalibrar tudo?
 
 Não - todas as configurações são mantidas
 
@@ -402,7 +402,7 @@ Câmera alternativa, permite alterar a resolução, os fps, permite várias cone
 - Desative a câmera nativa na tela da impressora.
 - Chame a macro [CAMERA_ON](/pt/Zmod/#camera_on)
 
-Leia: [Instalei uma impressora e o ZMOD escondeu a minha câmera!](#I-installed-a-printer-and-zmod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
+Leia: [Instalei uma impressora e o Z-Mod escondeu a minha câmera!](#I-installed-a-printer-and-zmod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
 
 #### Configuração da câmera
 
@@ -466,7 +466,7 @@ Os **Logs (registros de erros)** estão localizados na pasta: `log/cam/`.
 
 ---
 
-### Instalei uma impressora e o ZMOD escondeu minha câmera! Eu podia vê-la no Orca-FF, mas agora ela sumiu!
+### Instalei uma impressora e o Z-Mod escondeu minha câmera! Eu podia vê-la no Orca-FF, mas agora ela sumiu!
  
 Na interface da Web (fluidd), vá para `Settings` -> `Video Cameras`.
 
@@ -560,7 +560,7 @@ Ela pode ser chamada:
 
 ### Vou até a impressora via Orca/navegador e vejo Welcome to Moonraker
 
-Então, quais portas o ZMOD usa:
+Então, quais portas o Z-Mod usa:
 
 - `7125` - é onde está o Moonraker.
 - 8080 - é onde está a câmera.
@@ -586,7 +586,7 @@ Se isso não ajudar, use outro navegador: Firefox, Chrome, Yandex, Opera, etc.
 
 ---
 
-### O ZMOD inclui o Entware - como usá-lo?
+### O Z-Mod inclui o Entware - como usá-lo?
 
 **AVISO! Não há Entware** no [AD5X](/pt/AD5X/)
 
@@ -620,7 +620,7 @@ Catálogos que são criados e usados pelo entware:
 
 ### O que é reversão do firmware?
 
-No ZMOD, em Fluidd/Mainsail, há controles deslizantes para controlar a velocidade e a quantidade de reversão do firmware.
+No Z-Mod, em Fluidd/Mainsail, há controles deslizantes para controlar a velocidade e a quantidade de reversão do firmware.
 
 Eles não afetam a impressão se o arquivo de código g for cortado sem usar os parâmetros de reversão do firmware.
 

@@ -25,7 +25,7 @@ Parameters:
 - `FORCE_LEVELING` — force bed leveling (default: `False`)
 - `SKIP_LEVELING` — skip bed leveling entirely (overrides `FORCE_KAMP`/`FORCE_LEVELING`, default: `False`)
 - `FORCE_KAMP` — build an adaptive bed mesh (KAMP, default: `False`).
-  *Recommended to add `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to use purge areas for KAMP.*
+  *Recommended to add `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE` to use purge areas for KAMP.*
 
 - `Z_OFFSET` — set Z offset (default: `0.0`)
 - INTERNAL - For the PRO version when operating without the native screen, 1 - enable internal recirculation (0)
@@ -63,7 +63,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ---
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#start_print)):
+#### Global flags (set via [`SAVE_Z-Mod_DATA`](/Global/#start_print)):
 
 - `PRECLEAR` — pre-nozzle cleaning in `CLEAR_NOZZLE`: `0` = disable, `1` = enable (default: `0`).
 - `CLEAR` — nozzle cleaning method (`LINE_PURGE`).
@@ -113,7 +113,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Replaces the default end G-code.
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#end_print)):
+#### Global flags (set via [`SAVE_Z-Mod_DATA`](/Global/#end_print)):
 
 - `AUTO_REBOOT` — auto-reboot after print (same as above).
 - `CLOSE_DIALOGS` — auto-close dialogs (same as above).
@@ -188,7 +188,7 @@ Parameters:
 - `EXTRUDER_TEMP` — extruder temperature (default: `230`)
 - `BED_TEMP` — bed temperature (default: `80`)
 
-*`PRECLEAR` (set via `SAVE_ZMOD_DATA PRECLEAR=1`) enables pre-cleaning. [Learn more](/Global/#save_zmod_data).*
+*`PRECLEAR` (set via `SAVE_Z-Mod_DATA PRECLEAR=1`) enables pre-cleaning. [Learn more](/Global/#save_zmod_data).*
 
 ---
 ### LED_ON

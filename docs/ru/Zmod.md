@@ -41,7 +41,7 @@
 *Многие камеры с Ali/Ozon/Wildberries всегда потребляют 18 MiB*
 
 - [Что такое альтернативная камера?](/ru/FAQ/#что-такое-альтернативная-камера)
-- [Я установил принтер, а ZMOD спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](/ru/FAQ/#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
+- [Я установил принтер, а Z-Mod спрятал мою камеру! В Orca-FF я ее видел, а теперь она пропала!](/ru/FAQ/#я-установил-принтер-а-zmod-спрятал-мою-камеру-в-orca-ff-я-ее-видел-а-теперь-она-пропала)
 
 `Camera Off Waiting...` - эта надпись выводится, если поток камеры еще недоступен. Камера запускается после запуска Klipper - во время вывода информации о глобальных параметрах
 
@@ -119,7 +119,7 @@ CAMERA_ON VIDEO=video99
 
 ---
 
-### REMOVE_ZMOD
+### REMOVE_Z-Mod
 
 Удалить Z-Mod.
 
@@ -129,15 +129,15 @@ CAMERA_ON VIDEO=video99
 
 В папке `/opt/config/mod_data` хранятся настройки `zmod`, `fluidd`, `moonraker`, `mainsail`. 
 
-Она не удаляется по умолчанию, т.к. часто люди по ошибке вызывают макрос `REMOVE_ZMOD`
+Она не удаляется по умолчанию, т.к. часто люди по ошибке вызывают макрос `REMOVE_Z-Mod`
 
 ---
 
-### SKIP_ZMOD
+### SKIP_Z-Mod
 
 Перезагрузка в оригинальную систему. Без запуска Z-Mod.
 
-Отключаются файлы конфигурации ZMOD, Moonraker, Fluidd.
+Отключаются файлы конфигурации Z-Mod, Moonraker, Fluidd.
 
 Внимаение! Отключите  сами все плагины и перейдите на родной Klipper
 
@@ -176,7 +176,7 @@ CAMERA_ON VIDEO=video99
 
 ---
 
-### STOP_ZMOD
+### STOP_Z-Mod
 
 Выгрузить из памяти guppy, helix, moonraker и fluidd/Mainsail. Телеграм бот тоже  перестанет работать
 
@@ -188,16 +188,16 @@ CAMERA_ON VIDEO=video99
 
 Пример:
 ```
-STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Если эту строку прописать в стартовый код, то после начала печати GUPPY/HELIX будет выгружен из памяти
 
 ---
 
-### START_ZMOD
+### START_Z-Mod
 
-Включить обратно guppy, helix, moonraker и fluidd/Mainsail после STOP_ZMOD.
+Включить обратно guppy, helix, moonraker и fluidd/Mainsail после STOP_Z-Mod.
 
 Параметры:
 
@@ -207,7 +207,7 @@ STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 
 Пример:
 ```
-START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Если эту строку прописать в конечный код, то после окончания печати GUPPY/HELIX будет запущен

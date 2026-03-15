@@ -1,7 +1,7 @@
 # Doporučení
 ## Doporučení ke zlepšení stability tiskárny
 
-Tato doporučení se vztahují na původní firmware i ZMOD.
+Tato doporučení se vztahují na původní firmware i Z-Mod.
 
 ---
 
@@ -16,11 +16,11 @@ Povolte vyloučení objektů v Orce:
 
 ---
 
-### Nainstalujte nejnovější standardní firmware a aktualizace ZMOD.
+### Nainstalujte nejnovější standardní firmware a aktualizace Z-Mod.
 
-Aktivně podporována je pouze nejnovější verze ZMOD.
+Aktivně podporována je pouze nejnovější verze Z-Mod.
 
-Vývojář nemá dostatek zdrojů na údržbu starších verzí, proto [nainstalujte nejnovější standardní firmware a aktualizace ZMOD](Setup.md).
+Vývojář nemá dostatek zdrojů na údržbu starších verzí, proto [nainstalujte nejnovější standardní firmware a aktualizace Z-Mod](Setup.md).
 
 ---
 
@@ -52,7 +52,7 @@ Vestavěná kamera spotřebovává příliš mnoho paměti a nabízí nízkou kv
 Poté spusťte makro [CAMERA_ON](Zmod.md#camera_on).
 
 - [Co je alternativní kamera?](FAQ.md#what-is-an-alternative-camera)
-- [Nainstaloval jsem ZMOD a moje kamera zmizela! Fungovala v Orca-FF!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+- [Nainstaloval jsem Z-Mod a moje kamera zmizela! Fungovala v Orca-FF!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 ---
 
@@ -84,7 +84,7 @@ Igor Polunovskiy
 
 Přidejte [CHECK_MD5](System.md#check_md5) do svého pracovního postupu.
 
-Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`
 
 1. Vyberte a stáhněte soubor pro vaši architekturu a operační systém:
 

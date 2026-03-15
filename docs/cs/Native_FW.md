@@ -71,7 +71,7 @@ Stáhněte soubory na USB disk:
 
 ## AD5X-ENABLE-zmod.tgz
 
-Povolení ZMODu na AD5X po aktualizaci nativního firmwaru vám umožní aktivovat modifikaci bez nutnosti její kompletní přeinstalace.
+Povolení Z-Modu na AD5X po aktualizaci nativního firmwaru vám umožní aktivovat modifikaci bez nutnosti její kompletní přeinstalace.
 
 [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
 

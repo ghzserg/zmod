@@ -3,30 +3,30 @@ hide:
   - navigation
 ---
 
-# FF5M / FF5M Pro / AD5X ZMOD
+# FF5M / FF5M Pro / AD5X Z-Mod
 
 <img width="698" height="291" alt="logo zmod" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
 [Z-Mod LINK verfügbar unter diesem Link ->](https://zmod.link/link/)
 
-### **ZMOD für FlashForge AD5M/PRO/AD5X: Volle Kontrolle über Ihren Drucker**
+### **Z-Mod für FlashForge AD5M/PRO/AD5X: Volle Kontrolle über Ihren Drucker**
 
-Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist ZMOD eine leistungsstarke und kostenlose Lösung, die Ihren Drucker von "benutzerdefiniert" auf "professionell" umstellt.
+Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist Z-Mod eine leistungsstarke und kostenlose Lösung, die Ihren Drucker von "benutzerdefiniert" auf "professionell" umstellt.
 
-### Was ist ZMOD?
+### Was ist Z-Mod?
 
-ZMOD ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
+Z-Mod ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
 
 > **Warum „Z-Mod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
 
-### Hauptvorteile von ZMOD gegenüber nativer Firmware
+### Hauptvorteile von Z-Mod gegenüber nativer Firmware
 
-Das erhalten Sie, wenn Sie ZMOD installieren:
+Das erhalten Sie, wenn Sie Z-Mod installieren:
 
 #### 1. Volle Fernsteuerung
 
 * **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
-* **ZMOD:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
+* **Z-Mod:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
 
     - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
     - **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
@@ -36,7 +36,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### 2. Erweiterte Kalibrierungs- und Nivellierungssysteme
 
 * **Native Firmware:** Einfache automatische Druckbettnivellierung (ABL).
-* **ZMOD:**
+* **Z-Mod:**
 
     - **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Bedunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
     - **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
@@ -47,17 +47,17 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### 3. Intelligente Funktionen für Zuverlässigkeit
 
 * **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
-* **ZMOD:**
+* **Z-Mod:**
 
     - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
     - **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
-    - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch ZMOD-Dateien auf Beschädigungen..
+    - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch Z-Mod-Dateien auf Beschädigungen..
     - **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
 
 #### 4. Flexible Handhabung von Filamenten (speziell für AD5X)
 
 * **Native Firmware:** Spulensteuerung über Standardmenü.
-* **ZMOD (für AD5X):**
+* **Z-Mod (für AD5X):**
 
     - **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
     - **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
@@ -66,7 +66,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### 5. Ökosystem und Integration
 
 * **Native Firmware:** Geschlossenes System.
-* **ZMOD:**
+* **Z-Mod:**
 
     - **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
     - **Plugin-Unterstützung:** Installieren Sie zusätzliche Plugins (wie `bambufy` für eine bessere Kompatibilität mit Bambu Studio).
@@ -76,7 +76,7 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### 6. Optimierung und Kontrolle
 
 * **Native Firmware:** Eingeschränkte Einstellungen.
-* **ZMOD:**
+* **Z-Mod:**
 
     - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
     - **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
@@ -88,21 +88,21 @@ Das erhalten Sie, wenn Sie ZMOD installieren:
 #### 7. Klipper 13
 
 * **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
-* **ZMOD:**
+* **Z-Mod:**
   
     - Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version
 
 ---
 
-### Résumé: Für wen ist ZMOD?
+### Résumé: Für wen ist Z-Mod?
 
-| Wenn Sie… | ZMOD gibt Ihnen… |
+| Wenn Sie… | Z-Mod gibt Ihnen… |
 | :--- | :--- |
 | **Einsteiger** | Einfache Fernsteuerung und automatische Kalibrierungen für gleichbleibende Qualität gleich beim ersten Mal. |
 | **Enthusiast** | Volle Kontrolle über jeden Aspekt des Drucks, mit erweiterten Funktionen für die Feinabstimmung und das Experimentieren mit der Geschwindigkeit. |
 | **AD5X-Besitzer** | Die ultimative Kontrolle über den Mehrfarbendruck und reduzierte Filamentkosten. |
 
-**ZMOD setzt die native Firmware nicht außer Kraft,** sondern wird zu einem Add-on, das Ihnen die **Wahl** gibt, auf die alte Art zu arbeiten, über den Bildschirm, oder alle modernen 3D-Druck-Tools zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
+**Z-Mod setzt die native Firmware nicht außer Kraft,** sondern wird zu einem Add-on, das Ihnen die **Wahl** gibt, auf die alte Art zu arbeiten, über den Bildschirm, oder alle modernen 3D-Druck-Tools zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
 
 !!! danger
     *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers **riskieren**. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!

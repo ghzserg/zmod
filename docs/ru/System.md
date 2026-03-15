@@ -129,7 +129,7 @@ chmod +x zfs.sh
 
 Igor Polunovskiy
 
-Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`
 
 Проверить MD5 сумму.
 

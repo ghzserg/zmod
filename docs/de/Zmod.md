@@ -41,7 +41,7 @@ RAM-Verbrauch der Standard-Kamera:
 *Viele Kameras von Ali/Ozon/Wildberries verbrauchen immer 18 MiB.
 
 - [Was ist eine alternative Kamera?](/de/FAQ/#Was-ist-eine-alternative-Kamera)
-- Ich habe einen Drucker installiert und ZMOD hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen und jetzt ist sie weg!](/de/FAQ/#Ich habe einen Drucker installiert und ZMOD hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
+- Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen und jetzt ist sie weg!](/de/FAQ/#Ich habe einen Drucker installiert und Z-Mod hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
 
 `Camera Off Waiting...` - diese Meldung wird angezeigt, wenn der Kamerastream noch nicht verfügbar ist. Die Kamera startet nach dem Start von Klipper - während die Informationen über globale Parameter angezeigt werden
 
@@ -119,7 +119,7 @@ Neustart der alternativen Kamera-Implementierung
 
 ---
 
-### REMOVE_ZMOD
+### REMOVE_Z-Mod
 
 Z-Mod entfernen.
 
@@ -129,15 +129,15 @@ Achtung! Deaktivieren Sie alle Plugins und wechseln Sie zum nativen Klipper.
 
 Der Ordner `/opt/config/mod_data` enthält Einstellungen für `zmod`, `fluidd`, `moonraker`, `mainsail`.
 
-Er wird nicht standardmäßig gelöscht, da Leute oft versehentlich das Makro `REMOVE_ZMOD` aufrufen
+Er wird nicht standardmäßig gelöscht, da Leute oft versehentlich das Makro `REMOVE_Z-Mod` aufrufen
 
 ---
 
-### SKIP_ZMOD
+### SKIP_Z-Mod
 
 Neustart zum ursprünglichen System. Ohne Z-Mod auszuführen.
 
-ZMOD, Moonraker, Fluidd Konfigurationsdateien sind deaktiviert.
+Z-Mod, Moonraker, Fluidd Konfigurationsdateien sind deaktiviert.
 
 Achtung! Deaktivieren Sie alle Plugins selbst und wechseln Sie zu nativen Klipper
 
@@ -176,7 +176,7 @@ Dieses Makro sucht die neueste verfügbare Version, lädt sie auf das Flash-Lauf
 
 ---
 
-### STOP_ZMOD
+### STOP_Z-Mod
 
 Entlade Guppy, Helix, Moonraker und Fluidd/Mainsail aus dem Speicher. Der Telegramm-Bot wird ebenfalls aufhören zu funktionieren.
 
@@ -188,16 +188,16 @@ Parameter:
 
 Beispiel:
 ```
-STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+STOP_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Wenn diese Zeile in den Startcode geschrieben wird, wird GUPPY/HELIX nach dem Druckstart aus dem Speicher entladen
 
 ---
 
-### START_ZMOD
+### START_Z-Mod
 
-Guppy, Helix, Moonraker und Fluidd/Mainsail nach STOP_ZMOD wieder einschalten.
+Guppy, Helix, Moonraker und Fluidd/Mainsail nach STOP_Z-Mod wieder einschalten.
 
 Parameter:
 
@@ -207,7 +207,7 @@ Parameter:
 
 Beispiel:
 ```
-START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
+START_Z-Mod SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
 Wenn diese Zeile im endgültigen Code enthalten ist, wird GUPPY/HELIX gestartet, nachdem der Druckvorgang beendet ist

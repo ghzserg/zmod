@@ -1,4 +1,4 @@
-<h1 align="center">ZMOD Macro List</h1>
+<h1 align="center">Z-Mod Macro List</h1>
 
 A macro is a small program written in Klipper/Gcode.
 
@@ -81,8 +81,8 @@ It can be called from:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/Main/#fast_close_dialogs)
 
-### GET_ZMOD_DATA
-[GET_ZMOD_DATA](/Global/#get_zmod_data)
+### GET_Z-Mod_DATA
+[GET_Z-Mod_DATA](/Global/#get_zmod_data)
 
 ### KAMP
 [KAMP](/Calibrations/#kamp)
@@ -129,8 +129,8 @@ It can be called from:
 ### REBOOT
 [REBOOT](/Main/#reboot)
 
-### REMOVE_ZMOD
-[REMOVE_ZMOD](/Zmod/#remove_zmod)
+### REMOVE_Z-Mod
+[REMOVE_Z-Mod](/Zmod/#remove_zmod)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](/Zmod/#restore_tar_config)
@@ -138,8 +138,8 @@ It can be called from:
 ### RESUME
 [RESUME](/Main/#resume)
 
-### SAVE_ZMOD_DATA
-[SAVE_ZMOD_DATA](/Global/#save_zmod_data)
+### SAVE_Z-Mod_DATA
+[SAVE_Z-Mod_DATA](/Global/#save_zmod_data)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](/Filament/#set_pause_at_layer)
@@ -153,17 +153,17 @@ It can be called from:
 ### SHUTDOWN
 [SHUTDOWN](/Main/#shutdown)
 
-### SKIP_ZMOD
-[SKIP_ZMOD](/Zmod/#skip_zmod)
+### SKIP_Z-Mod
+[SKIP_Z-Mod](/Zmod/#skip_zmod)
 
 ### START_PRINT
 [START_PRINT](/Main/#start_print)
 
-### START_ZMOD
-[START_ZMOD](/Zmod/#start_zmod)
+### START_Z-Mod
+[START_Z-Mod](/Zmod/#start_zmod)
 
-### STOP_ZMOD
-[STOP_ZMOD](/Zmod/#stop_zmod)
+### STOP_Z-Mod
+[STOP_Z-Mod](/Zmod/#stop_zmod)
 
 ### TAR_CONFIG
 [TAR_CONFIG](/Zmod/#tar_config)

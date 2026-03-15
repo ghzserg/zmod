@@ -153,7 +153,7 @@ Pokud se setkáte s tímto problémem, musíte kalibrovat polohu tiskové hlavy 
 
 ## Aktualizace modu
 
-Pokud se zobrazí hlášení („Aktualizujte ZMOD přes USB“), musíte provést aktualizaci přes USB, i když jste ji nedávno provedli.
+Pokud se zobrazí hlášení („Aktualizujte Z-Mod přes USB“), musíte provést aktualizaci přes USB, i když jste ji nedávno provedli.
 
 **Aktualizace přes USB zachová všechna data.**
 
@@ -168,7 +168,7 @@ Pokud se zobrazí hlášení („Aktualizujte ZMOD přes USB“), musíte prové
 Po instalaci:
 
 1. Přejděte do Fluidd/Mainsail → „Nastavení“ → „Aktualizace softwaru“.
-2. Klikněte na „Zkontrolovat aktualizace“ a nainstalujte nejnovější aktualizace ZMOD.
+2. Klikněte na „Zkontrolovat aktualizace“ a nainstalujte nejnovější aktualizace Z-Mod.
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -182,7 +182,7 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 **Kompatibilita verzí:**
 
-- Verze operačního systému (v menu `System` → `Distribution`) musí odpovídat prvním dvěma číslicím verze ZMOD (v menu `Settings` → `Updates` → `ffm5/zmod`).
+- Verze operačního systému (v menu `System` → `Distribution`) musí odpovídat prvním dvěma číslicím verze Z-Mod (v menu `Settings` → `Updates` → `ffm5/zmod`).
 - **Nesoulad verzí způsobuje nestabilitu.**
 
 **Manuální aktualizace přes USB:**
@@ -200,10 +200,10 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 ## Odstranění nebo dočasné vypnutí modu
 
-- **[SKIP_ZMOD](Zmod.md#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
-- **[REMOVE_ZMOD](Zmod.md#remove_zmod)**: Kompletně odinstaluje mod.
+- **[SKIP_Z-Mod](Zmod.md#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
+- **[REMOVE_Z-Mod](Zmod.md#remove_zmod)**: Kompletně odinstaluje mod.
 
-**Doporučená metoda:** Použijte makro `REMOVE_ZMOD`. Odstranění přes USB použijte pouze v případě, že makra nejsou dostupná.
+**Doporučená metoda:** Použijte makro `REMOVE_Z-Mod`. Odstranění přes USB použijte pouze v případě, že makra nejsou dostupná.
 
 Pozor!
 
@@ -229,7 +229,7 @@ Pozor!
 
 2. Pokud používáte **Klipper 13**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
 3. Povolení čínských cloudových služeb (pokud chcete aktualizovat přes nativní dotykový displej):
-   ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
+   ```SAVE_Z-Mod_DATA CHINA_CLOUD=1```
 
 **U [AD5X](AD5X.md) je nutná aktivace modu [Z-Mod](Native_FW.md) pomocí `AD5X-ENABLE-zmod.tgz` z USB disku – po aktualizaci nativního firmwaru.**
 

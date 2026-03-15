@@ -129,7 +129,7 @@ Alterar o fuso horário
 
 Igor Polunovskiy
 
-É recomendável usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`.
+É recomendável usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`.
 
 Verifique a soma MD5.
 

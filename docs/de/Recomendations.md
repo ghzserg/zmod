@@ -1,7 +1,7 @@
 ## Empfehlungen
 ## Empfehlungen zur Verbesserung der Druckerstabilität
 
-Die Empfehlungen gelten sowohl für native als auch für ZMOD-Firmware.
+Die Empfehlungen gelten sowohl für native als auch für Z-Mod-Firmware.
 
 ---
 
@@ -16,11 +16,11 @@ Aktivieren Sie den Modellausschluss in Orca:
 
 ---
 
-### Installieren Sie die neueste native Firmware und das ZMOD-Update
+### Installieren Sie die neueste native Firmware und das Z-Mod-Update
 
 Nur die neueste Version des Mods wird unterstützt.
 
-Der Autor hat nicht die Ressourcen, um alle Versionen zu unterstützen, also [installiere die neueste native Firmware und das ZMOD-Update](/de/Setup/).
+Der Autor hat nicht die Ressourcen, um alle Versionen zu unterstützen, also [installiere die neueste native Firmware und das Z-Mod-Update](/de/Setup/).
 
 ### Ersetzen Sie Spiral/Automatic Z-Hop.
 
@@ -49,7 +49,7 @@ Auf dem Bildschirm des Druckers. Einstellungen" -> Registerkarte "Kamera" -> Dea
 Führen Sie dann das Makro [CAMERA_ON](/de/Zmod/#camera_on)
 
 - Was ist eine alternative Kamera?](/de/FAQ/#Was-ist-eine-alternative-Kamera)
-- Ich habe einen Drucker installiert und ZMOD hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen, und jetzt ist sie weg](/de/FAQ/#Ich habe einen Drucker installiert und ZMOD hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
+- Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen, und jetzt ist sie weg](/de/FAQ/#Ich habe einen Drucker installiert und Z-Mod hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
 
 ---
 
@@ -85,7 +85,7 @@ Igor Polunovskiy
 
 [CHECK_MD5](/de/System/#check_md5)
 
-Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1` zu verwenden.
+Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1` zu verwenden.
 
 1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem finden und auf Ihren Computer herunterladen:
 

@@ -1,7 +1,7 @@
 ## Recomendações
 ## Recomendações para melhorar a estabilidade da impressora
 
-As recomendações se aplicam tanto ao firmware nativo quanto ao ZMOD.
+As recomendações se aplicam tanto ao firmware nativo quanto ao Z-Mod.
 
 ---
 
@@ -16,11 +16,11 @@ Ativar a exclusão de modelos no Orca:
 
 ---
 
-### Instale o firmware nativo mais recente e a atualização do ZMOD
+### Instale o firmware nativo mais recente e a atualização do Z-Mod
 
 Somente a versão mais recente do mod é compatível.
 
-O autor não tem os recursos para oferecer suporte a todas as versões, portanto, [instale o firmware nativo mais recente e a atualização do ZMOD](/en/Setup/).
+O autor não tem os recursos para oferecer suporte a todas as versões, portanto, [instale o firmware nativo mais recente e a atualização do Z-Mod](/en/Setup/).
 
 ### Substituir Spiral/Automatic Z-Hop.
 
@@ -49,7 +49,7 @@ Na tela da impressora. `Configurações` -> `Aba da câmera` -> Desmarque `Câme
 Em seguida, execute a macro [CAMERA_ON](/pt/Zmod/#camera_on)
 
 - [O que é uma câmera alternativa?](/pt/FAQ/#what-is-an-alternate-camera)
-- Instalei uma impressora e o ZMOD escondeu minha câmera! Eu a vi no Orca-FF e agora ela sumiu!](/pt/FAQ/#I-installed-a-printer-and-ZMOD-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
+- Instalei uma impressora e o Z-Mod escondeu minha câmera! Eu a vi no Orca-FF e agora ela sumiu!](/pt/FAQ/#I-installed-a-printer-and-Z-Mod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
 
 ---
 
@@ -85,7 +85,7 @@ Igor Polunovskiy
 
 [CHECK_MD5](/pt/Sistema/#check_md5)
 
-Recomenda-se usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`.
+Recomenda-se usar o [parâmetro global FORCE_MD5](/pt/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`.
 
 1. É necessário localizar e fazer download em seu computador de um arquivo para sua arquitetura e sistema operacional:
 

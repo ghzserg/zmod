@@ -106,9 +106,9 @@ SPECTROGRAM - 0 - не строить спектрограмму, 1 - строи
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-Но лучше использовать [START_PRINT](/ru/Main/#start_print) и [SAVE_ZMOD_DATA](/ru/Global/#start_print) PRINT_LEVELING=1 USE_KAMP=1
+Но лучше использовать [START_PRINT](/ru/Main/#start_print) и [SAVE_Z-Mod_DATA](/ru/Global/#start_print) PRINT_LEVELING=1 USE_KAMP=1
 
-Рекомендуется также поставить `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
+Рекомендуется также поставить `SAVE_Z-Mod_DATA CLEAR=LINE_PURGE`, что позволит использовать место для очистки, там где снята карта стола.
 
 [Какие есть варианты снятия карты стола?](/ru/FAQ/#какие-есть-варианты-снятия-карты-стола)
 
@@ -129,7 +129,7 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
 ```
 
-Но лучше  использовать [START_PRINT](/ru/Main/#start_print) и [SAVE_ZMOD_DATA](/ru/Goabal/#start_print) PRINT_LEVELING=1
+Но лучше  использовать [START_PRINT](/ru/Main/#start_print) и [SAVE_Z-Mod_DATA](/ru/Goabal/#start_print) PRINT_LEVELING=1
 
 [Какие есть варианты снятия карты стола?](/ru/FAQ/#какие-есть-варианты-снятия-карты-стола)
 

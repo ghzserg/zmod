@@ -1,7 +1,7 @@
 # Recommendations
 ## Recommendations to Improve Printer Stability
 
-These recommendations apply to both stock firmware and ZMOD.
+These recommendations apply to both stock firmware and Z-Mod.
 
 ---
 
@@ -16,11 +16,11 @@ Enable object exclusion in Orca:
 
 ---
 
-### Install the Latest Stock Firmware and ZMOD Updates
+### Install the Latest Stock Firmware and Z-Mod Updates
 
-Only the latest version of ZMOD is actively supported.
+Only the latest version of Z-Mod is actively supported.
 
-The developer lacks resources to maintain older versions, so [install the latest stock firmware and ZMOD updates](/Setup/).
+The developer lacks resources to maintain older versions, so [install the latest stock firmware and Z-Mod updates](/Setup/).
 
 ---
 
@@ -52,7 +52,7 @@ The built-in camera consumes excessive memory and offers poor image quality. Use
 Then, run the [CAMERA_ON](/Zmod/#camera_on) macro.
 
 - [What is an alternative camera?](/FAQ/#what-is-an-alternative-camera)
-- [I installed ZMOD, and my camera disappeared! It worked in Orca-FF!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+- [I installed Z-Mod, and my camera disappeared! It worked in Orca-FF!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 ---
 
@@ -84,7 +84,7 @@ Igor Polunovskiy
 
 Add [CHECK_MD5](/System/#check_md5) to your workflow.
 
-It is recommended to use the [global parameter FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+It is recommended to use the [global parameter FORCE_MD5](/ru/Global/#force_md5) `SAVE_Z-Mod_DATA FORCE_MD5=1`
 
 1. Select and download the file for your architecture and operating system:
 
