@@ -28,7 +28,7 @@ def remove_front_matter(text: str) -> str:
 
 
 def replace_logo_link(text: str, lang_link: str = "") -> str:
-    """After the logo <img>, replace the [zMod LINK...](zmod.link/link/) line
+    """After the logo <img>, replace the [Z-Mod LINK...](zmod.link/link/) line
     with the language switch link (if any) and the two standard README links."""
     replacement = (f"{lang_link}\n\n" if lang_link else "") + README_LINKS
     return re.sub(

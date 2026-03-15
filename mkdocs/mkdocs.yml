@@ -1,4 +1,4 @@
-site_name: zMod - Firmware for AD5M / AD5MPro / AD5X
+site_name: Z-Mod - Firmware for AD5M / AD5MPro / AD5X
 site_description: Complete documentation for ZMOD - FF5M / FF5M Pro / AD5X firmware modifications
 site_author: ghzserg
 repo_url: https://github.com/ghzserg/zmod
@@ -106,7 +106,7 @@ plugins:
             Download: Скачать
             Video: Видео
             TelegramBot: Телеграм бот
-            zModLink: zMod LINK
+            Z-ModLink: Z-Mod LINK
         - locale: de
           name: Deutsch
           build: true
@@ -145,7 +145,7 @@ plugins:
             Download: Herunterladen
             Video: Video
             TelegramBot: Telegram-Bot
-            zModLink: zMod LINK
+            Z-ModLink: Z-Mod LINK
         - locale: pt
           name: Português
           build: true
@@ -184,7 +184,7 @@ plugins:
             Download: Baixar
             Video: Vídeo
             TelegramBot: Bot do Telegram
-            zModLink: zMod LINK
+            Z-ModLink: Z-Mod LINK
         - locale: cs
           name: Čeština
           build: true
@@ -223,7 +223,7 @@ plugins:
             Download: Stáhnout
             Video: Video
             TelegramBot: Telegram bot
-            zModLink: zMod LINK
+            Z-ModLink: Z-Mod LINK
 nav:
   - Index: index.md
 
@@ -261,7 +261,7 @@ nav:
   - Download: https://github.com/ghzserg/zmod/releases/latest
   - Video: Video.md
   - zmod_help_bot: http://t.me/zmod_help_bot
-  - zMod LINK: https://zmod.link/link/
+  - Z-Mod LINK: https://zmod.link/link/
 
 extra:
   generator: false
@@ -308,4 +308,4 @@ markdown_extensions:
   - codehilite
 
 
-copyright: Copyright &copy; 2024-2026 zMod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+copyright: Copyright &copy; 2024-2026 Z-Mod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
