@@ -327,7 +327,7 @@ In this mode, no purge is performed by the printer on its own during color chang
 
 This mode requires proper support from the printer profile in the slicer, in particular, filament change gcode that handles pooping and returning to the prime tower afterwards is necessary. Do NOT use this mode with any gcode file that is not specifically sliced for it.
 
-When using OrcaSlicer, options such as "Purge to infill" cannot be used in this mode. This is a bug in OrcaSlicer and cannot be fixed by zMod. They work correctly when using Bambu Studio.
+When using OrcaSlicer, options such as "Purge to infill" cannot be used in this mode. This is a bug in OrcaSlicer and cannot be fixed by Z-Mod. They work correctly when using Bambu Studio.
 
 ##### Printer profiles
 
@@ -338,7 +338,7 @@ Printer profiles set up for slicer-controlled purge are available for
 
 These profiles are close to the stock AD5X profiles except for:
   
-- All zMod custom gcode added, including appropriate filament change gcode for ```USE_TRASH_ON_PRINT=2```
+- All Z-Mod custom gcode added, including appropriate filament change gcode for ```USE_TRASH_ON_PRINT=2```
 - "Purge in prime tower" enabled (OrcaSlicer only)
 - Automatically sets correct ```USE_TRASH_ON_PRINT``` setting at the start of printing
 - Z-Hop type set to Normal
@@ -426,7 +426,7 @@ Because of this:
 
 To fix this, you need to:
 
-1. Update zMod.
+1. Update Z-Mod.
 2. Open the file `/rw/Adventurer5M.json`.
 3. Find these lines:
 ```json

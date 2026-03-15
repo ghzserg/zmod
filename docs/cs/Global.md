@@ -104,7 +104,7 @@ Nepřidávejte toto makro do startovního/koncového G-kódu nebo do souborů G-
 
 Počet nástrojů, které se mají zobrazit v nabídce výběru barvy. Týká se to příkazů T0, T1 atd. v souboru gcode, nikoli fyzických cívek ve vašem IFS.
 
-Pokud zMod dokáže úspěšně prohledat soubor pro použité nástroje, toto bude přepsáno a zobrazí se nástroje použité v souboru.
+Pokud Z-Mod dokáže úspěšně prohledat soubor pro použité nástroje, toto bude přepsáno a zobrazí se nástroje použité v souboru.
 
 Toto nastavení nelze použít, když je povolena nativní obrazovka.
 
@@ -459,7 +459,7 @@ Spusťte `SAVE_ZMOD_DATA WIFI=1`
 Poté vypněte Wi-Fi na nativní obrazovce.
 
 - 0 — použít Wi-Fi z nativní obrazovky
-- 1 — použít Wi-Fi přes zMod
+- 1 — použít Wi-Fi přes Z-Mod
 
 ---
 

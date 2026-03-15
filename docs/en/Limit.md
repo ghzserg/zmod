@@ -16,7 +16,7 @@ Every registered user gets **2 printers for free**.
 Need more than 2 printers? You can expand your limit using one of two support options:
 
 #### Option 1: Support the Project ⭐
-- Give a ⭐ **star** to the [zMod](https://github.com/ghzserg/zmod) repository on GitHub
+- Give a ⭐ **star** to the [Z-Mod](https://github.com/ghzserg/zmod) repository on GitHub
 - Take a screenshot as proof
 - One star grants you **+1 additional printer**
 

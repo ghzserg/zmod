@@ -121,7 +121,7 @@ Reinicie a implementação da câmera alternativa
 
 ### REMOVE_ZMOD
 
-Remover zMod.
+Remover Z-Mod.
 
 - FULL: 0 - deixa a pasta `/opt/config/mod_data`, 1 - exclui a pasta `/opt/config/mod_data` (0)
 
@@ -135,7 +135,7 @@ Ela não é excluída por padrão, pois as pessoas costumam chamar a macro `REMO
 
 ### SKIP_ZMOD
 
-Reinicialização no sistema original. Sem executar o zMod.
+Reinicialização no sistema original. Sem executar o Z-Mod.
 
 Os arquivos de configuração ZMOD, Moonraker e Fluidd são desativados.
 

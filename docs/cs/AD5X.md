@@ -327,12 +327,12 @@ V tomto režimu tiskárna během výměny barev sama neprovádí žádné čišt
 
 Tento režim vyžaduje řádnou podporu ze strany profilu tiskárny ve sliceru, zejména je nutný gcode pro výměnu filamentu, který obstará vyhození odpadu a následný návrat k čistící věži. Nepoužívejte tento režim s žádným gcode souborem, který pro něj nebyl specificky připraven (sliced).
 
-Při použití OrcaSliceru nelze v tomto režimu použít volby jako „Čištění do výplně“. Jedná se o chybu v OrcaSliceru a nelze ji opravit pomocí zMod. V Bambu Studio tyto volby fungují správně.
+Při použití OrcaSliceru nelze v tomto režimu použít volby jako „Čištění do výplně“. Jedná se o chybu v OrcaSliceru a nelze ji opravit pomocí Z-Mod. V Bambu Studio tyto volby fungují správně.
 
 ##### Profily tiskáren
 
 Profily tiskáren nastavené pro čištění řízené slicerem jsou k dispozici pro [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) a [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). Tyto profily se blíží výchozím profilům AD5X s výjimkou:
-- Přidány všechny vlastní gcode zMod, včetně příslušného gcode pro výměnu filamentu pro USE_TRASH_ON_PRINT=2
+- Přidány všechny vlastní gcode Z-Mod, včetně příslušného gcode pro výměnu filamentu pro USE_TRASH_ON_PRINT=2
 - Povoleno „Čištění v čistící věži“ (pouze OrcaSlicer)
 - Automaticky nastaví správnou hodnotu USE_TRASH_ON_PRINT na začátku tisku
 - Typ Z-Hop nastaven na Normální (Normal)
@@ -420,7 +420,7 @@ Kvůli tomu:
 
 K nápravě je třeba:
 
-1. Aktualizovat zMod.
+1. Aktualizovat Z-Mod.
 2. Otevřít soubor `/rw/Adventurer5M.json`.
 3. Najít tyto řádky:
 ```json

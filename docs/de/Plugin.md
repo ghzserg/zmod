@@ -1,8 +1,8 @@
-# Plugins in zMod
+# Plugins in Z-Mod
 
 Jeder Benutzer kann sein eigenes Plugin erstellen und mit dem **zmod** verbinden.
 
-In zMod enthaltene Plugins:
+In Z-Mod enthaltene Plugins:
 
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme.md) - Einstellungen, deren Verwendung unmittelbar nach der Installation der Mod empfohlen wird
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme.md) - Parken der Z-Achse durch Wägezellen
@@ -10,12 +10,12 @@ In zMod enthaltene Plugins:
 5. [Zeitraffer](https://github.com/ghzserg/timelapse/blob/main/Readme.md) - Moonraker Zeitraffer
 6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme.md) - Erhalten Sie Benachrichtigungen auf Telegram und über 100 anderen Diensten.
 
-Externe Plugins, die nicht vom Autor von zMod entwickelt wurden.
+Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Futterturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
 
-Um das Repository für externe Plugins zu aktivieren, die nicht vom zMod-Autor entwickelt wurden, führen Sie den Befehl `ENABLE_EXTRA_PLUGINS` aus.
+Um das Repository für externe Plugins zu aktivieren, die nicht vom Z-Mod-Autor entwickelt wurden, führen Sie den Befehl `ENABLE_EXTRA_PLUGINS` aus.
 
 ---
 

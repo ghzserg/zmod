@@ -153,11 +153,11 @@ Die Kalibrierungsschnittstelle wird auf dem Bildschirm des Druckers angezeigt. S
 
 ## Aktualisieren Sie die Mod
 
-Wenn der Mod sagt `Update zMOD vom Flash-Laufwerk`, müssen Sie zMod vom Flash-Laufwerk aktualisieren, auch wenn Sie es kürzlich aktualisiert haben.
+Wenn der Mod sagt `Update zMOD vom Flash-Laufwerk`, müssen Sie Z-Mod vom Flash-Laufwerk aktualisieren, auch wenn Sie es kürzlich aktualisiert haben.
 
 **Wenn Sie von einem USB-Stick aktualisieren, werden alle Daten gespeichert.**
 
-**Der einfachste Weg, zMod von einem USB-Stick zu aktualisieren, ist die Verwendung des Makros [ZFLASH](/de/Zmod/#zflash)**.
+**Der einfachste Weg, Z-Mod von einem USB-Stick zu aktualisieren, ist die Verwendung des Makros [ZFLASH](/de/Zmod/#zflash)**.
 
 In diesem Fall müssen Sie den USB-Stick in den Drucker stecken, den Drucker neu starten und das Makro "ZFLASH" aufrufen.
 
@@ -180,7 +180,7 @@ Sie müssen auf "Nach Updates suchen" klicken. Und die Plug-ins nacheinander wie
 
 Sie können die aktuelle Version des Betriebssystems des Mods unter der Registerkarte "System" -> "Verteilung" einsehen
 
-Die aktuelle Version von zMod (Registerkarte "Einstellungen" -> "Update" -> "ffm5/zmod"), **muss** in den ersten beiden Ziffern mit der Version auf der Registerkarte "System" übereinstimmen.
+Die aktuelle Version von Z-Mod (Registerkarte "Einstellungen" -> "Update" -> "ffm5/zmod"), **muss** in den ersten beiden Ziffern mit der Version auf der Registerkarte "System" übereinstimmen.
 
 <u>Wenn sie nicht übereinstimmen, wird die Mod **nicht richtig funktionieren**, in diesem Fall beschweren Sie sich nicht über ZMOD</u>.
 
@@ -253,7 +253,7 @@ Wenn der native Bildschirm das Update nicht findet:
 - Ihre Seriennummer wurde noch nicht von der Update-Verteilung getroffen
 - [Installieren Sie das native Firmware-Update von einem USB-Stick](/de/Native_FW/)
 
-**Für [AD5X](/de/AD5X/) erfordert [Aktivieren Sie zMod](/de/Native_FW/) über `AD5X-ENABLE-zmod.tgz` von einem USB-Stick, nach dem Stock-Update**.
+**Für [AD5X](/de/AD5X/) erfordert [Aktivieren Sie Z-Mod](/de/Native_FW/) über `AD5X-ENABLE-zmod.tgz` von einem USB-Stick, nach dem Stock-Update**.
 
 ---
 

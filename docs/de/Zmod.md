@@ -121,7 +121,7 @@ Neustart der alternativen Kamera-Implementierung
 
 ### REMOVE_ZMOD
 
-zMod entfernen.
+Z-Mod entfernen.
 
 - FULL: 0 - Ordner `/opt/config/mod_data` belassen, 1 - Ordner `/opt/config/mod_data` löschen (0)
 
@@ -135,7 +135,7 @@ Er wird nicht standardmäßig gelöscht, da Leute oft versehentlich das Makro `R
 
 ### SKIP_ZMOD
 
-Neustart zum ursprünglichen System. Ohne zMod auszuführen.
+Neustart zum ursprünglichen System. Ohne Z-Mod auszuführen.
 
 ZMOD, Moonraker, Fluidd Konfigurationsdateien sind deaktiviert.
 

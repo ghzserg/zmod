@@ -219,7 +219,7 @@ Suporte para idiomas de interface:
 ### Versão 1.4.1
 09.03.2025
 
-- A soma MD5 dos arquivos descompactados é verificada durante a instalação do zMod. A impressora corrompe periodicamente os arquivos ao copiar arquivos de uma unidade flash para o sistema de arquivos.
+- A soma MD5 dos arquivos descompactados é verificada durante a instalação do Z-Mod. A impressora corrompe periodicamente os arquivos ao copiar arquivos de uma unidade flash para o sistema de arquivos.
 - A macro CHECK_SYSTEM introduziu a autoverificação do sistema
 - O botão de desligamento funciona na versão Pro
 - Possibilidade de instalar câmeras não MJPEG
@@ -478,7 +478,7 @@ Suporte para idiomas de interface:
 
 - Adicionada a reprodução de MIDI. Os arquivos são armazenados em mod_data/midi - acesso pela guia de configuração. Agradecimentos a [@drmax_gc](https://t.me/drmax_gc)
 - Macros [PLAY_MIDI](/pt/Macros/#play_midi). Reproduz a melodia PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
-- Macro [SOFT_REMOVE](/pt/Macros/#soft_remove). Remove apenas o zMod, deixa áudio, md5, root
+- Macro [SOFT_REMOVE](/pt/Macros/#soft_remove). Remove apenas o Z-Mod, deixa áudio, md5, root
 - Após a atualização, as configurações do moonraker são preservadas
 - As configurações do usuário para o klipper são movidas para mod_data/user.cfg.
 - As configurações do usuário para o moonraker são movidas para mod_data/user.moonraker.conf

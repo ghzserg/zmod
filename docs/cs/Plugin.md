@@ -1,8 +1,8 @@
-# Pluginy v zModu
+# Pluginy v Z-Modu
 
 Každý uživatel může vytvořit a připojit svůj vlastní plugin do **zmod**.
 
-Pluginy obsažené v zMod:
+Pluginy obsažené v Z-Mod:
 
 1. [Recommend](https://github.com/ghzserg/recommend) - Doporučená nastavení k okamžitému použití po instalaci modu.
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz) – Parkování osy Z pomocí tenzometrů.
@@ -10,12 +10,12 @@ Pluginy obsažené v zMod:
 4. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse.
 5. [Notify](https://github.com/ghzserg/notify) - Přijímání oznámení v Telegramu a více než 100 dalších službách.
 
-Externí pluginy, které nevyvíjí autor zMod.
+Externí pluginy, které nevyvíjí autor Z-Mod.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Kompatibilní s Bambu Studio, vylepšuje správu čisticí věže, poskytuje přesné odhady doby tisku a spotřeby materiálu, snižuje odpad, podporuje Mainsail, rychlé změny barev a pokročilé tiskařské funkce. NELZE POUŽÍT S NATIVNÍ OBRAZOVKOU.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - fork pluginu BamBufy.
 
-Chcete-li povolit repozitář externích pluginů, které nevyvíjí autor zMod, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
+Chcete-li povolit repozitář externích pluginů, které nevyvíjí autor Z-Mod, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
 
 ---
 
@@ -119,7 +119,7 @@ primary_branch: main
 - **Cesta k pluginu**: `/root/printer_data/config/mod_data/plugins/g28_tenz`
 - **Zdroj**: `https://github.com/ghzserg/g28_tenz.git`
 
-> Stabilní pluginy mohou být zahrnuty v distribuci zMod, ale jsou aktualizovány a udržovány jejich příslušnými autory.
+> Stabilní pluginy mohou být zahrnuty v distribuci Z-Mod, ale jsou aktualizovány a udržovány jejich příslušnými autory.
 
 ---
 

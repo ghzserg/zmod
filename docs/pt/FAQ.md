@@ -35,7 +35,7 @@ O ZMOD NÃO é baseado no KlipperMod e NÃO é uma evolução dele. Dito isso, o
 
 - [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - tela para impressora. No ZMOD, em vez de KlipperScreen, é uma tela nativa ou GuppyScreen/HelixScreen
 - [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - o ZMOD usa o bot do Telegram ou [TimeLapse plugin](https://github.com/ghzserg/timelapse/).
-- Configuração de rede via iwd/wpa_supplicant (no caso de GuppyScreen/HelixScreen) - na configuração de rede do zMod via tela nativa, a inicialização da rede também é possível no modo de tela não nativa
+- Configuração de rede via iwd/wpa_supplicant (no caso de GuppyScreen/HelixScreen) - na configuração de rede do Z-Mod via tela nativa, a inicialização da rede também é possível no modo de tela não nativa
 
 #### O que está no ZMOD e o que não está no KlipperMod:
 
@@ -72,7 +72,7 @@ Acesso à pasta **mod_data** por meio da interface da Web do fluidd.
 
 `Configuration` -> `Configuration files` -> `mod_data`.
 
-- As configurações personalizadas do klipper devem ser inseridas no arquivo `mod_data/user.cfg`; as configurações gravadas nesse arquivo podem substituir/adicionar as configurações dos arquivos `printer_base.cfg` e zMod.
+- As configurações personalizadas do klipper devem ser inseridas no arquivo `mod_data/user.cfg`; as configurações gravadas nesse arquivo podem substituir/adicionar as configurações dos arquivos `printer_base.cfg` e Z-Mod.
 - As configurações personalizadas do moonraker devem ser inseridas no arquivo `mod_data/user.moonraker.conf`
 - As músicas personalizadas são armazenadas em `mod_data/midi/`
 - As configurações globais do mod são armazenadas por meio da macro [SAVE_ZMOD_DATA](/pt/Global/#save_zmod_data) *nyuhler*
@@ -117,7 +117,7 @@ Qualquer função pode ser substituída em `mod_data/user.cfg` ou `printer.cfg`
 A impressora pode ser operada em dois modos:
 
 - Com tela nativa - nesse caso, quase toda a lógica é controlada pela tela nativa e muitas coisas não podem ser alteradas.
-- Sem tela nativa - nesse caso, todos os recursos são controlados pelo zMod.
+- Sem tela nativa - nesse caso, todos os recursos são controlados pelo Z-Mod.
 Isso não significa que você precise desativar a tela por hardware ou alterá-la para outra.
 No modo de tela não nativa, você pode usar a tela alternativa do software GuppyScreen/HelixScreen ou desligar a tela completamente e ela será desligada.
 
@@ -756,7 +756,7 @@ Ou vice-versa. Você está executando um Klipper nativo, mas carregou o MCU para
 
 Se a versão do seu MCU começar com ```?-20230317_182329-ubuntu20-virtual-machine``` - isso significa que você carregou o MCU para o Klipper 12 (AD5X) ou Klipper 11 (Ad5M/Ad5mPro).
 
-Portanto, você precisa do zMod para carregar o Klipper nativo.
+Portanto, você precisa do Z-Mod para carregar o Klipper nativo.
 
 - Vá para ```mod_data/variables.cfg``` e exclua a linha ```klipper13 = 1```.
 - Salve o arquivo

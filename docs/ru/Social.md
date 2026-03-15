@@ -18,7 +18,7 @@ hide:
 
 ### Телеграм канал
 <div class="grid cards" markdown>
--   __Официальный канал zMod Info__
+-   __Официальный канал Z-Mod Info__
     - [Telegram Info Channel](https://t.me/zmod_info)
     - Официальные новости и обновления проекта
 

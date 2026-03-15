@@ -1,6 +1,6 @@
 # Apoiar o desenvolvimento
 
-Como as pessoas pediram, estou aceitando doações, mas lembre-se de que estou trabalhando no zMod por diversão, não por dinheiro. Não aceitarei doações para trabalhar em bugs ou recursos específicos.
+Como as pessoas pediram, estou aceitando doações, mas lembre-se de que estou trabalhando no Z-Mod por diversão, não por dinheiro. Não aceitarei doações para trabalhar em bugs ou recursos específicos.
 
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">Para o desenvolvimento do zmod: SBP, cartão bancário, T-pay</a> | Suporte ao desenvolvimento do mod: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` | | |
 | :----: | :----: |

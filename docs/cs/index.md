@@ -7,7 +7,7 @@ hide:
 
 <img width="698" height="291" alt="zmod logo" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
-[zMod LINK je k dispozici na tomto odkazu ->](https://zmod.link/link/)
+[Z-Mod LINK je k dispozici na tomto odkazu ->](https://zmod.link/link/)
 
 ### **ZMOD pro FlashForge AD5M/PRO/AD5X: Plná kontrola nad vaší tiskárnou**
 
@@ -16,7 +16,7 @@ Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro z
 ### Co je ZMOD?
 ZMOD je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní.
 
-> **Proč „zMod"?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod". Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
+> **Proč „Z-Mod"?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod". Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
 
 ### Klíčové výhody ZMOD oproti továrnímu firmwaru
 Zde je, co získáte instalací ZMOD:
@@ -140,7 +140,7 @@ Soubory nativního firmwaru se nacházejí [zde](Native_FW.md).
 
 ## Pluginy
 
-zMod podporuje [Pluginy](Plugin.md)
+Z-Mod podporuje [Pluginy](Plugin.md)
 
 ## Použité doplňky
 
@@ -153,6 +153,6 @@ Mod využívá poznatky z [KlipperMod](https://github.com/xblax/flashforge_ad5m_
 
 ## Podpořte vývoj
 
-Protože se lidé ptali, přijímám dary, ale pamatujte, že na zMod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.
+Protože se lidé ptali, přijímám dary, ale pamatujte, že na Z-Mod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.
 
 Dostupné metody podpory najdete na samostatné [stránce](Sponsor.md)

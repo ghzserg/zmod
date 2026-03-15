@@ -14,7 +14,7 @@ Ela pode ser chamada por:
 
 ### LANG
 
-Define o idioma a ser usado pelo zMod.
+Define o idioma a ser usado pelo Z-Mod.
 
 - LANG - idioma, en - inglês, ru - russo, de - alemão, fr - francês, it - italiano, es - espanhol, zh - chinês, ja - japonês, ko - coreano, pt - português, cs - tcheco, tr - turco
 
@@ -105,7 +105,7 @@ Segunda opção. Escreva no console do Fluidd o comando desejado, por exemplo: `
 
 O número de ferramentas exibidas no menu de seleção de cores. Isso se refere aos comandos T0, T1, etc. no arquivo gcode, e não às bobinas físicas no IFS.
 
-Se o zMod escanear com êxito o arquivo em busca de instrumentos em uso, esse valor será substituído e somente os instrumentos usados no arquivo serão mostrados.
+Se o Z-Mod escanear com êxito o arquivo em busca de instrumentos em uso, esse valor será substituído e somente os instrumentos usados no arquivo serão mostrados.
 
 Essa configuração não poderá ser usada se a tela nativa estiver ativada.
 
@@ -486,7 +486,7 @@ Chame `SAVE_ZMOD_DATA WIFI=1`.
 Desativar o Wi-Fi na tela nativa
 
 - 0 usar WiFi na tela nativa
-- 1 usar WiFi via zMod
+- 1 usar WiFi via Z-Mod
 
 ---
 

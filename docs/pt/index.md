@@ -7,7 +7,7 @@ hide:
 
 <img width="698" height="291" alt="logo zmod" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
-[LINK do zMod disponível neste link ->](https://zmod.link/link/)
+[LINK do Z-Mod disponível neste link ->](https://zmod.link/link/)
 
 ### **ZMOD para FlashForge AD5M/PRO/AD5X: controle total da sua impressora**
 
@@ -17,7 +17,7 @@ Parabéns por sua compra de uma impressora FlashForge! O firmware nativo é óti
 
 O ZMOD é um firmware personalizado (modificação) que é instalado sobre o software nativo. Ele não o substitui, mas o **amplia** adicionando um grande número de recursos conhecidos de impressoras avançadas, mantendo todos os benefícios e a conveniência da interface nativa.
 
-> **Por que "zMod"?** O autor é conhecido pelo apelido [zserg](https://zserg.ru/) há mais de 20 anos. Quando chegou a hora de nomear o mod, a resposta foi óbvia: primeira letra do apelido mais "mod". Sem significado oculto, sem simbolismo — é realmente tão simples quanto parece.
+> **Por que "Z-Mod"?** O autor é conhecido pelo apelido [zserg](https://zserg.ru/) há mais de 20 anos. Quando chegou a hora de nomear o mod, a resposta foi óbvia: primeira letra do apelido mais "mod". Sem significado oculto, sem simbolismo — é realmente tão simples quanto parece.
 
 ---
 
@@ -53,7 +53,7 @@ Veja o que você obtém ao instalar o ZMOD:
 
     * Controle de bico: O sistema, usando células de carga, pode detectar que o bico atingiu uma peça impressa ou uma mesa e **interromper automaticamente a impressão**, evitando quebras.
     * Recuperação de falha de energia:** A impressora se lembrará do local da falha de energia e poderá continuar a imprimir depois que a energia for ligada.
-    * Controle de firmware: A impressora pode corromper arquivos por si só, portanto, pode controlar tanto os arquivos de firmware nativos quanto os arquivos zMod.
+    * Controle de firmware: A impressora pode corromper arquivos por si só, portanto, pode controlar tanto os arquivos de firmware nativos quanto os arquivos Z-Mod.
     * Controle de arquivos transferidos para a impressora:** Controle de soma MD5 ao transferir arquivos.
 
 #### 4. Manuseio flexível de filamentos (especialmente para a AD5X)
@@ -149,7 +149,7 @@ O firmware nativo está disponível [aqui](/en/Native_FW/).
 
 ## Plug-ins
 
-O zMod suporta [Plug-ins](/pt/Plugin/)
+O Z-Mod suporta [Plug-ins](/pt/Plugin/)
 
 ## Componentes utilizados
 
@@ -162,6 +162,6 @@ O mod utiliza os desenvolvimentos do [KlipperMod](https://github.com/xblax/flash
 
 ## Ajuda ao desenvolvimento
 
-Como as pessoas pediram, eu aceito doações, mas lembre-se de que estou trabalhando no zMod por diversão, não por dinheiro. Não aceitarei doações para trabalhar em bugs ou recursos específicos.
+Como as pessoas pediram, eu aceito doações, mas lembre-se de que estou trabalhando no Z-Mod por diversão, não por dinheiro. Não aceitarei doações para trabalhar em bugs ou recursos específicos.
 
 As formas de apoio disponíveis podem ser encontradas em uma [página] separada (/en/Sponsor/)

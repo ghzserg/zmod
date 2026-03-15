@@ -231,7 +231,7 @@ Pozor!
 3. Povolení čínských cloudových služeb (pokud chcete aktualizovat přes nativní dotykový displej):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**U [AD5X](AD5X.md) je nutná aktivace modu [zMod](Native_FW.md) pomocí `AD5X-ENABLE-zmod.tgz` z USB disku – po aktualizaci nativního firmwaru.**
+**U [AD5X](AD5X.md) je nutná aktivace modu [Z-Mod](Native_FW.md) pomocí `AD5X-ENABLE-zmod.tgz` z USB disku – po aktualizaci nativního firmwaru.**
 
 ---
 

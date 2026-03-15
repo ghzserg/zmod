@@ -17,7 +17,7 @@
 Access the **mod_data** folder via Fluidd web interface:
 `Configuration` → `Configuration Files` → `mod_data`
 
-- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and zMod files.
+- Custom Klipper settings go into `mod_data/user.cfg`, which can override/supplement `printer_base.cfg` and Z-Mod files.
 - Custom Moonraker settings go into `mod_data/user.moonraker.conf`.
 - Custom MIDI files are stored in `mod_data/midi/`.
 - Global mod settings are saved via the [SAVE_ZMOD_DATA](/Global/#save_zmod_data) macro.
@@ -267,7 +267,7 @@ Documentation is often unread, though 90% of questions are answered here. To ver
 The printer can operate in two modes:
 
 - With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
-- Without the native screen - in this case, all features are controlled by zMod.
+- Without the native screen - in this case, all features are controlled by Z-Mod.
 This doesn't mean you need to turn off the screen or replace it with a different one.
 In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen or turn off the screen completely, so it will turn off.
 
@@ -640,7 +640,7 @@ Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipp
 
 If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (Ad5M/Ad5mPro).
 
-Accordingly, zMod needs to load native Klipper.
+Accordingly, Z-Mod needs to load native Klipper.
 
 - Go to ```mod_data/variables.cfg``` and delete the line ```klipper13 = 1```.
 - Save the file

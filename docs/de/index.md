@@ -7,7 +7,7 @@ hide:
 
 <img width="698" height="291" alt="logo zmod" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
-[zMod LINK verfügbar unter diesem Link ->](https://zmod.link/link/)
+[Z-Mod LINK verfügbar unter diesem Link ->](https://zmod.link/link/)
 
 ### **ZMOD für FlashForge AD5M/PRO/AD5X: Volle Kontrolle über Ihren Drucker**
 
@@ -17,7 +17,7 @@ Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware 
 
 ZMOD ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
 
-> **Warum „zMod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
+> **Warum „Z-Mod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
 
 ### Hauptvorteile von ZMOD gegenüber nativer Firmware
 
@@ -150,7 +150,7 @@ Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
 ## Plug-ins
 
-zMod unterstützt [Plugins](/de/Plugin/)
+Z-Mod unterstützt [Plugins](/de/Plugin/)
 
 ## Verwendete Erweiterungen
 
@@ -163,6 +163,6 @@ Der Mod verwendet Entwicklungen von [KlipperMod](https://github.com/xblax/flashf
 
 ## Hilfe zur Entwicklung
 
-Da einige Leute danach gefragt haben, nehme ich Spenden an, aber bitte denken Sie daran, dass ich an zMod zum Spaß arbeite, nicht für Geld. Ich werde keine Spenden annehmen, um an bestimmten Fehlern oder Funktionen zu arbeiten.
+Da einige Leute danach gefragt haben, nehme ich Spenden an, aber bitte denken Sie daran, dass ich an Z-Mod zum Spaß arbeite, nicht für Geld. Ich werde keine Spenden annehmen, um an bestimmten Fehlern oder Funktionen zu arbeiten.
 
 Verfügbare Möglichkeiten zur Unterstützung finden sich auf einer separaten [Seite](/de/Sponsor/)

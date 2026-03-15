@@ -233,7 +233,7 @@ Attention!
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**For [AD5X](/ru/AD5X/), [zMod activation](/Native_FW/) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
+**For [AD5X](/ru/AD5X/), [Z-Mod activation](/Native_FW/) is required via `AD5X-ENABLE-zmod.tgz` from a USB drive—after updating the stock firmware.**
 
 ---
 

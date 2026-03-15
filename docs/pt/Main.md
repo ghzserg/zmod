@@ -188,7 +188,7 @@ Limpando o bocal na mesa como no firmware nativo
 *PRECLEAR - usar a pré-limpeza do bocal em CLEAR_NOZZLE 0-não, 1-sim (0).
 Esse não é um parâmetro do CLEAR_NOZZLE, é um sinalizador global que é definido por meio de `SAVE_ZMOD_DATA PRECLEAR=1`. Leia mais [aqui](/pt/Global/#preclear)*
 
-*O refinamento da macro `CLEAR_NOZZLE` em `mod_data/user.cfg` não alterará a limpeza nativa do bocal na tabela quando chamada diretamente da tela nativa, porque a tela nativa funciona bem sem o zMod e, portanto, não usa macros zMod*.
+*O refinamento da macro `CLEAR_NOZZLE` em `mod_data/user.cfg` não alterará a limpeza nativa do bocal na tabela quando chamada diretamente da tela nativa, porque a tela nativa funciona bem sem o Z-Mod e, portanto, não usa macros Z-Mod*.
 
 ---
 

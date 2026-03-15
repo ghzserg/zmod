@@ -219,7 +219,7 @@ Unterstützung für Interface-Sprachen:
 ### Version 1.4.1
 09.03.2025
 
-- MD5-Summe der entpackten Dateien wird bei der Installation von zMod überprüft. Drucker beschädigt periodisch Dateien beim Kopieren von Dateien von einem Flash-Laufwerk in das Dateisystem.
+- MD5-Summe der entpackten Dateien wird bei der Installation von Z-Mod überprüft. Drucker beschädigt periodisch Dateien beim Kopieren von Dateien von einem Flash-Laufwerk in das Dateisystem.
 - Das CHECK_SYSTEM-Makro hat eine Selbstüberprüfung des Systems eingeführt
 - Die Schaltfläche zum Herunterfahren funktioniert in der Pro-Version
 - Möglichkeit, nicht MJPEG-Kameras zu installieren
@@ -478,7 +478,7 @@ Unterstützung für Interface-Sprachen:
 
 - MIDI-Wiedergabe hinzugefügt. Dateien werden in mod_data/midi gespeichert - Zugriff über die Konfigurationsregisterkarte. Dank an [@drmax_gc](https://t.me/drmax_gc)
 - Makros [PLAY_MIDI](/de/Makros/#play_midi). Spielt die Melodie PLAY_MIDI FILE=Schmerz-Halt-deinen-Mund.mid
-- Makro [SOFT_REMOVE](/de/Makros/#soft_remove). Entfernt nur zMod, lässt audio, md5, root
+- Makro [SOFT_REMOVE](/de/Makros/#soft_remove). Entfernt nur Z-Mod, lässt audio, md5, root
 - Nach dem Update bleiben die Moonraker-Einstellungen erhalten
 - Die Benutzereinstellungen für klipper werden nach mod_data/user.cfg verschoben.
 - Benutzereinstellungen für moonraker werden nach mod_data/user.moonraker.conf verschoben

@@ -328,7 +328,7 @@ In diesem Modus führt der Drucker während des Farbwechsels keine eigene Reinig
 
 Dieser Modus erfordert eine entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Abwurf (Pooping) und die anschließende Rückkehr zum Reinigungsturm verwaltet. Verwenden Sie diesen Modus NICHT mit einer G-Code-Datei, die nicht speziell dafür gesliced wurde.
 
-Bei der Verwendung von OrcaSlicer können Optionen wie **"In Infill reinigen"** in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht durch zMod behoben werden. In Bambu Studio funktionieren sie korrekt.
+Bei der Verwendung von OrcaSlicer können Optionen wie **"In Infill reinigen"** in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht durch Z-Mod behoben werden. In Bambu Studio funktionieren sie korrekt.
 
 ##### Druckerprofile
 
@@ -339,7 +339,7 @@ Druckerprofile, die für die Slicer-gesteuerte Reinigung eingerichtet sind, steh
 
 Diese Profile entsprechen weitgehend den Standard-AD5X-Profilen, mit folgenden Ausnahmen:
 
-- Alle benutzerdefinierten zMod-G-Codes hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für ```USE_TRASH_ON_PRINT=2```
+- Alle benutzerdefinierten Z-Mod-G-Codes hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für ```USE_TRASH_ON_PRINT=2```
 - **"Reinigung im Reinigungsturm"** aktiviert (nur OrcaSlicer)
 - Automatische Einstellung des korrekten ```USE_TRASH_ON_PRINT``` Wertes zu Beginn des Drucks.
 - Z-Hop-Typ auf Normal eingestellt
@@ -427,7 +427,7 @@ Dies ist der Grund dafür:
 
 Um dies zu beheben, müssen Sie:
 
-1. zMod aktualisieren.
+1. Z-Mod aktualisieren.
 2. öffnen Sie die Datei `/rw/Adventurer5M.json`.
 3. finden Sie die Zeilen wie:
 ```json

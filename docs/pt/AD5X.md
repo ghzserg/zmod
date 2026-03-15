@@ -320,12 +320,12 @@ Neste modo, nenhuma purga é realizada pela impressora por conta própria durant
 
 Este modo requer suporte adequado do perfil da impressora no fatiador; em particular, é necessário um gcode de troca de filamento que gerencie o descarte (pooping) e o retorno à torre de limpeza posterior. NÃO use este modo com nenhum arquivo gcode que não tenha sido fatiado especificamente para ele.
 
-Ao usar o OrcaSlicer, opções como "Purgar no preenchimento" não podem ser usadas neste modo. Este é um bug no OrcaSlicer e não pode ser corrigido pelo zMod. Elas funcionam corretamente ao usar o Bambu Studio.
+Ao usar o OrcaSlicer, opções como "Purgar no preenchimento" não podem ser usadas neste modo. Este é um bug no OrcaSlicer e não pode ser corrigido pelo Z-Mod. Elas funcionam corretamente ao usar o Bambu Studio.
 
 ##### Perfis de impressora
 
 Perfis de impressora configurados para purga controlada pelo fatiador estão disponíveis para [OrcaSlicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/orcaslicer) e [Bambu Studio](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/bambustudio). Estes perfis são próximos aos perfis padrão da AD5X, exceto por:
-- Todo o gcode personalizado do zMod adicionado, incluindo o gcode de troca de filamento apropriado para USE_TRASH_ON_PRINT=2
+- Todo o gcode personalizado do Z-Mod adicionado, incluindo o gcode de troca de filamento apropriado para USE_TRASH_ON_PRINT=2
 - "Purgar na torre de limpeza" ativado (apenas OrcaSlicer)
 - Define automaticamente a configuração correta de USE_TRASH_ON_PRINT no início da impressão
 - Tipo de Z-Hop definido como Normal
@@ -413,7 +413,7 @@ Por esse motivo:
 
 Para corrigir isso, você precisa:
 
-1. atualizar o zMod.
+1. atualizar o Z-Mod.
 2. abrir o arquivo `/rw/Adventurer5M.json`.
 3. encontrar linhas como
 ```json

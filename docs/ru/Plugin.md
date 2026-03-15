@@ -1,8 +1,8 @@
-# Плагины в zMod
+# Плагины в Z-Mod
 
 Любой пользователь может создать и подключить свой плагин к **zmod**.
 
-Плагины включенные в поставку zMod:
+Плагины включенные в поставку Z-Mod:
 
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) - Настройки, которые рекомендуется использовать сразу после установки мода
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme_ru.md) - Парковка оси Z по тензодатчикам
@@ -10,12 +10,12 @@
 5. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Moonraker TimeLapse
 6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Получение уведомлений в телеграм и еще более 100 различных сервисов
 
-Внешние плагины, не разрабатываемых автором zMod.
+Внешние плагины, не разрабатываемых автором Z-Mod.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк BamBufy
 
-Чтобы включить репозиторий внешних плагинов, не разрабатываемых автором zMod, выполните команду `ENABLE_EXTRA_PLUGINS`.
+Чтобы включить репозиторий внешних плагинов, не разрабатываемых автором Z-Mod, выполните команду `ENABLE_EXTRA_PLUGINS`.
 
 ---
 

@@ -1,4 +1,4 @@
-# Installing and Running MkDocs for zMod Wiki
+# Installing and Running MkDocs for Z-Mod Wiki
 
 ## 1. Install dependencies
 

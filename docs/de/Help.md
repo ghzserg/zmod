@@ -2,7 +2,7 @@
 
 Öffnen Sie den Telegrammbot [@zmod_help_bot](http://t.me/zmod_help_bot) und stellen Sie ihm Ihre Frage, er kennt die gesamte Dokumentation.
 
-1. [Aktualisieren Sie zMod und alle Plugins auf die neueste Version](/de/Setup/#update-mod)
+1. [Aktualisieren Sie Z-Mod und alle Plugins auf die neueste Version](/de/Setup/#update-mod)
 2. Übersetze den Mod ins Russische ```LANG LANG=ru```.
 3. Beschreibe das Problem deutlich. Bildschirme, Fotos, Textbeschreibung.
 4. Rufe [CLEAR_EMMC](/de/System/#clear_emmc) auf, um die Logs zu löschen
@@ -121,7 +121,7 @@ Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles na
 
 > ✅ Gut:
 
-> _"Nach der Aktualisierung von zMod auf Version X.Y.Z beim Drücken von "Drucken" auf dem ursprünglichen Bildschirm:
+> _"Nach der Aktualisierung von Z-Mod auf Version X.Y.Z beim Drücken von "Drucken" auf dem ursprünglichen Bildschirm:
 
 > > - heizt sich der Tisch auf,
 

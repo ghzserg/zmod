@@ -2,7 +2,7 @@
 
 Otevřete Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) a položte mu svou otázku. Zná celou dokumentaci.
 
-1. [Aktualizujte zMod a všechny pluginy na nejnovější verzi](Setup.md#updating-the-mod)
+1. [Aktualizujte Z-Mod a všechny pluginy na nejnovější verzi](Setup.md#updating-the-mod)
 2. Jasně popište problém: uveďte snímky obrazovky, fotografie a podrobné textové vysvětlení.
 3. Spusťte [CLEAR_EMMC](System.md#clear_emmc) pro vyčištění předchozích protokolů.
 4. **Zcela vypněte tiskárnu.**
@@ -118,7 +118,7 @@ Abyste mi pomohli **přeskočit hádání a začít opravovat**, postupujte pros
 
 > ✅ Dobře:
 
-> _„Po aktualizaci zMod na v.X.Y.Z, při spuštění tisku z tovární obrazovky:
+> _„Po aktualizaci Z-Mod na v.X.Y.Z, při spuštění tisku z tovární obrazovky:
 
 > — podložka se nahřeje,
 

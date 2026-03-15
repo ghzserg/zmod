@@ -1,6 +1,6 @@
 # Support Development
 
-Since people have been asking, I accept donations but please remember that I work on zMod for fun and not for the money. I will not accept donations to work on specific bugs or features.
+Since people have been asking, I accept donations but please remember that I work on Z-Mod for fun and not for the money. I will not accept donations to work on specific bugs or features.
 
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">For the development of zmod: SBP, Bank card, T-pay</a> | Support Mod Development: BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` |
 | :----: | :----: |

@@ -1,8 +1,8 @@
-# Plug-ins no zMod
+# Plug-ins no Z-Mod
 
 Qualquer usuário pode criar e conectar seu próprio plug-in ao **zmod**.
 
-Plug-ins incluídos no zMod:
+Plug-ins incluídos no Z-Mod:
 
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) - Configurações que são recomendadas para uso imediatamente após a instalação do mod
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme_ru.md) - Estacionamento do eixo Z por células de carga
@@ -10,12 +10,12 @@ Plug-ins incluídos no zMod:
 5. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Lapso de tempo do Moonraker
 6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Receba notificações no Telegram e em mais de 100 outros serviços diferentes
 
-Plug-ins externos, não desenvolvidos pelo autor do zMod.
+Plug-ins externos, não desenvolvidos pelo autor do Z-Mod.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Compatível com o Bambu Studio, melhora o controle da torre de alimentação, fornece estimativa precisa do tempo e do consumo de material, reduz o desperdício, oferece suporte ao Mainsail, troca rápida de cores e recursos avançados de impressão. NÃO PODE SER USADO COM A TELA NATIVA.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) é uma bifurcação do BamBufy
 
-Para ativar o repositório de plug-ins externos não desenvolvidos pelo autor do zMod, execute o comando `ENABLE_EXTRA_PLUGINS`.
+Para ativar o repositório de plug-ins externos não desenvolvidos pelo autor do Z-Mod, execute o comando `ENABLE_EXTRA_PLUGINS`.
 
 ---
 

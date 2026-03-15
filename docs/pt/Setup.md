@@ -153,11 +153,11 @@ Se você se deparar com essa situação, precisará calibrar o estacionamento us
 
 ## Atualize o mod
 
-Se o mod disser `Update zMOD from flash drive`, você precisará atualizar o zMod a partir da unidade flash, mesmo que o tenha atualizado recentemente.
+Se o mod disser `Update zMOD from flash drive`, você precisará atualizar o Z-Mod a partir da unidade flash, mesmo que o tenha atualizado recentemente.
 
 **Ao atualizar a partir de uma unidade USB, todos os dados são salvos.
 
-**A maneira mais fácil de atualizar o zMod a partir de uma unidade USB é usar a macro [ZFLASH](/pt/Zmod/#zflash)**.
+**A maneira mais fácil de atualizar o Z-Mod a partir de uma unidade USB é usar a macro [ZFLASH](/pt/Zmod/#zflash)**.
 
 Nesse caso, você precisa inserir o pendrive na impressora, reiniciar a impressora e chamar a macro `ZFLASH`.
 
@@ -180,7 +180,7 @@ Você precisa pressionar `Check for updates`. E restaurar e atualizar os plug-in
 
 Você pode ver a versão atual do sistema operacional do mod na guia "System" -> "Distribution"
 
-A versão atual do zMod (guia Settings (Configurações) -> Update (Atualização) -> "ffm5/zmod"), **deve corresponder** aos dois primeiros dígitos da versão da guia System (Sistema).
+A versão atual do Z-Mod (guia Settings (Configurações) -> Update (Atualização) -> "ffm5/zmod"), **deve corresponder** aos dois primeiros dígitos da versão da guia System (Sistema).
 
 <u>Se não corresponder, o mod **não funcionará corretamente** e, nesse caso, não reclame do ZMOD</u>.
 
@@ -253,7 +253,7 @@ Se a tela nativa não encontrar a atualização:
 - Seu número de série ainda não foi atingido pela distribuição da atualização
 - Instale a atualização do firmware nativo a partir de um pendrive](/en/Native_FW/)
 
-**Para o [AD5X](/pt/AD5X/), é necessário [Ativar o zMod](/pt/Native_FW/) por meio do `AD5X-ENABLE-zmod.tgz` de uma unidade flash, após a atualização de estoque**.
+**Para o [AD5X](/pt/AD5X/), é necessário [Ativar o Z-Mod](/pt/Native_FW/) por meio do `AD5X-ENABLE-zmod.tgz` de uma unidade flash, após a atualização de estoque**.
 
 ---
 

@@ -2,7 +2,7 @@
 
 Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it your question. It knows all the documentation.
 
-1. [Update zMod and all plugins to the latest version](/ru/Setup/#updating-the-mod)
+1. [Update Z-Mod and all plugins to the latest version](/ru/Setup/#updating-the-mod)
 2. Clearly describe the issue: provide screenshots, photos, and a detailed textual explanation.
 3. Run [CLEAR_EMMC](/System/#clear_emmc) to clear previous logs.
 4. **Power off the printer completely.**
@@ -118,7 +118,7 @@ To help me **skip the guessing and start fixing**, please follow this checklist:
 
 > ✅ Good:
 
-> _“After updating zMod to v.X.Y.Z, when starting a print from the stock screen:
+> _“After updating Z-Mod to v.X.Y.Z, when starting a print from the stock screen:
 
 > — the bed heats up,
 

@@ -2,7 +2,7 @@
 
 Abra o bot do telegrama [@zmod_help_bot](http://t.me/zmod_help_bot) e faça sua pergunta a ele, pois ele conhece toda a documentação.
 
-1. [Atualize o zMod e todos os plug-ins para a versão mais recente](/en/Setup/#update-mod)
+1. [Atualize o Z-Mod e todos os plug-ins para a versão mais recente](/en/Setup/#update-mod)
 2. Traduza o mod para o russo ```LANG LANG=ru```.
 3. indique claramente o problema. Telas, fotos, descrição de texto.
 4. Chame [CLEAR_EMMC](/pt/System/#clear_emmc) para limpar os registros
@@ -121,7 +121,7 @@ Para que eu **não adivinhe, mas o ajude imediatamente**, faça tudo de acordo c
 
 > ✅ Bom:
 
-> _"Depois de atualizar o zMod para a versão X.Y.Z, ao pressionar "Imprimir" na tela nativa:
+> _"Depois de atualizar o Z-Mod para a versão X.Y.Z, ao pressionar "Imprimir" na tela nativa:
 
 > > - a mesa esquenta,
 

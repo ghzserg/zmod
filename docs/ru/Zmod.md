@@ -121,7 +121,7 @@ CAMERA_ON VIDEO=video99
 
 ### REMOVE_ZMOD
 
-Удалить zMod.
+Удалить Z-Mod.
 
 - FULL: 0 - оставить папку `/opt/config/mod_data`, 1 - удалить папку `/opt/config/mod_data` (0)
 
@@ -135,7 +135,7 @@ CAMERA_ON VIDEO=video99
 
 ### SKIP_ZMOD
 
-Перезагрузка в оригинальную систему. Без запуска zMod.
+Перезагрузка в оригинальную систему. Без запуска Z-Mod.
 
 Отключаются файлы конфигурации ZMOD, Moonraker, Fluidd.
 

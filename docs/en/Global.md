@@ -106,7 +106,7 @@ Second option. Write the required command in the Fluidd console, for example: `S
 
 Number of tools to show in the color selection menu. This refers to the T0, T1, etc commands in the gcode file, not the physical spools in your IFS.
 
-If zMod is able to successfully scan the file for used tools, this will be overridden and the tools used in the file will be shown.
+If Z-Mod is able to successfully scan the file for used tools, this will be overridden and the tools used in the file will be shown.
 
 This setting cannot be used when the native screen is enabled.
 
@@ -461,7 +461,7 @@ Execute `SAVE_ZMOD_DATA WIFI=1`
 Then disable Wi-Fi on the native screen.
 
 - 0 — use Wi-Fi from the native screen
-- 1 — use Wi-Fi through zMod
+- 1 — use Wi-Fi through Z-Mod
 
 ---
 

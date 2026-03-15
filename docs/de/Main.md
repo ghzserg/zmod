@@ -188,7 +188,7 @@ Löschen der Düse auf dem Tisch wie in nativer Firmware
 *PRECLEAR - Düsenvorreinigung in CLEAR_NOZZLE verwenden 0-nein, 1-ja (0).
 Dies ist kein CLEAR_NOZZLE-Parameter, es ist ein globales Flag, das über `SAVE_ZMOD_DATA PRECLEAR=1` gesetzt wird. Lesen Sie mehr [hier](/de/Global/#preclear)*
 
-*Das Verfeinern des `CLEAR_NOZZLE`-Makros in `mod_data/user.cfg` wird die native Düsenbereinigung auf der Tabelle nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne zMod funktioniert und daher keine zMod-Makros verwendet*.
+*Das Verfeinern des `CLEAR_NOZZLE`-Makros in `mod_data/user.cfg` wird die native Düsenbereinigung auf der Tabelle nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne Z-Mod funktioniert und daher keine Z-Mod-Makros verwendet*.
 
 ---
 
