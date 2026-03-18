@@ -4,7 +4,7 @@
 2. [Wie man eine Datei in Orca vorbereitet](#2-wie-wird-eine-datei-in-orca-ad5x-vorbereitet)
 3. [Farbauswahlmenü (`COLOR`)](#3-verwendung-des-farbauswahlmenüs-makro-color-ad5x)
 4. [Menü Drucken (`PRINT`)](#4-menü-drucken-makro-print-ad5x)
-    - [Globale AD5X-Parameter](#global-parameters-ad5x)
+    - [Globale AD5X-Parameter](#globale-ad5x-parameter)
 5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-manuell-mitteilt-welcher-spool-gerade-mit-ad5x-gefüllt-ist)
 6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-einstellen-der-abfallmenge-beim-wechsel-des-ad5x-filaments)
 

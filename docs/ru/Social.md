@@ -27,6 +27,14 @@ hide:
     - Обсуждение и помощь от сообщества
 </div>
 
+### MAX
+<div class="grid cards" markdown>
+-   __Официальная группаа Z-Mod в MAX__
+    - [MAX Group](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k)
+    - Обсуждение и помощь от сообщества
+</div>
+
+
 ## 🌐 Community Resources
 
 ### Не официальные группы
