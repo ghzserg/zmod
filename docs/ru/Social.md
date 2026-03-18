@@ -30,7 +30,7 @@ hide:
 ### MAX
 <div class="grid cards" markdown>
 -   __Официальная группаа Z-Mod в MAX__
-    - [MAX Group]([https://t.me/FF_5M_5M_Pro/408369](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k))
+    - [MAX Group](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k)
     - Обсуждение и помощь от сообщества
 </div>
 
