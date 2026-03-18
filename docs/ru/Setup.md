@@ -51,7 +51,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](/ru/R//#ad5x-enable-zmodtgz).
+    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](/ru/Native_FW/#ad5x-enable-zmodtgz).
      
 12. Переведите мод на ваш язык.
     
