@@ -5,18 +5,18 @@
 3. [Farbauswahlmenü (`COLOR`)](#3-verwendung-des-farbauswahlmenüs-makro-color-ad5x)
 4. [Menü Drucken (`PRINT`)](#4-menü-drucken-makro-print-ad5x)
     - [Globale AD5X-Parameter](#globale-ad5x-parameter)
-5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-manuell-mitteilt-welcher-spool-gerade-mit-ad5x-gefüllt-ist)
-6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-einstellen-der-abfallmenge-beim-wechsel-des-ad5x-filaments)
+5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist)
+6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-so-konfigurieren-sie-das-abfallfilament-beim-filamentwechsel)
 
-    - 🔧 [Grundeinstellungen](#6-einstellen-der-abfallmenge-beim-wechsel-des-ad5x-filaments)
+    - 🔧 [Grundeinstellungen](#wichtigste-einstellungen-was-am-häufigsten-zu-ändern-ist-ad5x)
        - ⚙️ [Erweiterte Einstellungen](#erweiterte-einstellungen-nicht-ändern-wenn-sie-sich-des-ergebnisses-nicht-sicher-sind-ad5x)
 
 7. [Fügen Sie Ihre Filamenttypen hinzu](#7-fügen-sie-ihre-ad5x-filamenttypen-hinzu)
 8. [Fügen Sie Ihre Farben hinzu](#8-fügen-sie-ihre-ad5x-farben-hinzu)
-9. [Einparken im Korb und Schneiden des Filaments](#9-korrigiert-den-betrieb-mit-dem-korb-und-dem-filamentschneider-ad5x)
+9. [Einparken im Korb und Schneiden des Filaments](#9-korrigiert-den-betrieb-mit-dem-abfallbehälter-und-dem-filamentschneider-ad5x)
 
-    - [Über das Engineering-Menü der nativen Firmware](#korb-setup-auf-nativer-ad5x-firmware)
-       - [Über Flash auf nativer Firmware](de/Setup/#achtung-ad5x)
+    - [Über das Engineering-Menü der nativen Firmware](#abfallbehälter-setup-auf-nativer-ad5x-firmware)
+       - [Über Flash auf nativer Firmware](Setup/#achtung-ad5x)
 
 10. [IFS-Befehle](#10-ifs-befehle)
 11. [IFS-Firmware wiederherstellen](#11-ifs-firmware-wiederherstellen)
