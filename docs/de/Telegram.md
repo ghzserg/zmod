@@ -4,7 +4,7 @@
 | :--- | :---: | :---: |
 | **Erfordert externen Server** | - | + |
 | **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + |
-| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) | + |
+| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme.md) | + |
 | **Ereignisinformationen drucken** (Start, Pause, Abbruch, Ende) | + | + |
 | **Filamentsensor-Informationen** | + | + |
 | **Drucken von Fortschrittsinformationen in Prozent** | + | + |
@@ -13,21 +13,16 @@
 | **Splooman** | - | + |
 
 ---
-
-Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+!!! info
+    Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md).
 
 ## Telegram Bot
 
 ### Beschreibung
 
-Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Grundidee: Unsere Hardware ist sehr langsam und verfügt über begrenzten Speicher. Daher ist es unpraktisch, den Moonraker-Telegram-Bot direkt auf der Hardware auszuführen. Wir können ihn jedoch auf einem externen Server betreiben. Dazu benötigen wir einen beliebigen Server (physisch oder virtuell), den der Drucker per SSH erreichen kann.
 
-Das Wesentliche:
-Wir haben sehr langsame Eisen und sehr wenig Speicher. Es macht also keinen Sinn, moonraker-telegram-bot auf der Hardware laufen zu lassen.
-Aber wir können ihn auf einem externen Server laufen lassen.
-Zu diesem Zweck benötigen wir einen beliebigen Server (real/virtuell), auf den der Drucker über SSH zugreifen kann.
-
-Die neue Version erzeugt automatisch SSH-Schlüssel (sie werden zur Autorisierung ohne Passwörter verwendet).
+Die neue Version generiert automatisch SSH-Schlüssel (für die passwortlose Authentifizierung).
 
 Die Schlüssel können hier gefunden werden:
 
@@ -46,7 +41,7 @@ Sie müssen nur das Makro [ZSSH_ON](/de/Zmod/#zssh_on) mit den folgenden Paramet
 
 Die Ausführung von ssh verbraucht etwa 300 Kilobyte Speicherplatz.
 
-**Wenn sich Drucker und Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die Konfigurationsdatei [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
+**Wenn sich Drucker und der Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die Konfigurationsdatei [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
 Die Konfigurationsdatei kann vom Drucker `mod/telegram/` heruntergeladen werden.
 
 ---
