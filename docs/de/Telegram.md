@@ -41,7 +41,7 @@ Sie müssen nur das Makro [ZSSH_ON](/de/Zmod/#zssh_on) mit den folgenden Paramet
 
 Die Ausführung von ssh verbraucht etwa 300 Kilobyte Speicherplatz.
 
-**Wenn sich Drucker und der Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die Konfigurationsdatei [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
+**Wenn sich Drucker und der Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) Konfigurationsdatei** Hier ist eine [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
 Die Konfigurationsdatei kann vom Drucker `mod/telegram/` heruntergeladen werden.
 
 ---
@@ -51,10 +51,10 @@ Die Konfigurationsdatei kann vom Drucker `mod/telegram/` heruntergeladen werden.
 Wie Sie Ihren Bot registrieren
 
 1. gehen Sie zu [@BotFather](https://t.me/BotFather).
-2. `/Neuer Bot`.
+2. `/newbot`.
 3. Gib einen beliebigen Namen ein
-4. Geben Sie den Bot-Namen ff5msuper_bot ein - achten Sie darauf, dass am Ende _bot steht.
-5. Geben Sie eine lange ID ein - diese muss in den Bot-Einstellungen im Parameter bot_token eingetragen werden
+4. Geben Sie den Namen des Bot ein (muss auf `_bot` enden, z. B. `ff5msuper_bot`)
+5. Sie erhalten eine lange ID — tragen Sie diese in den Einstellungen beim Parameter `bot_token` des Bots ein.
 
 ---
 
@@ -62,7 +62,7 @@ Wie Sie Ihren Bot registrieren
 
 #### Telegram Bot mit einem Befehl unter Debian installieren
 
-Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md).
+Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md).
 
 Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) unter Debian:
 
@@ -79,55 +79,54 @@ apt update && apt install wget -y
 Dieses Skript:
 
 1. Docker installieren
-2. Laden Sie [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) und [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) herunter. [Beispielkonfiguration](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
-3. Legt den Benutzer tbot an
-4. Schreibt Anweisungen zur Registrierung des Telegram-Bots und fordert `bot_token` an
-5. Schreibt Anweisungen, um `chat_id` zu erhalten und fordert `chat_id` an
-6. Wird [ff5m.sh] installieren (https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
+2. Laden Sie [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) und [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) herunter. [Beispielkonfiguration](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+3. Erstellt einen `tbot`-Benutzer
+4. Führt Sie durch die Bot-Registrierung und fragt den `bot_token` ab
+5. Hilft Ihnen, die `chat_id` zu ermitteln und fragt diese ab
+6. Wird [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh) installieren.
 
-Sie müssen den ssh-Schlüssel selbst hinzufügen
+Sie müssen den **ssh-Schlüssel** selbst hinzufügen.
 
 ---
 
 #### Telegram Bot schrittweise installieren
 
-Wenn Sie nur Benachrichtigungen in Telegram benötigen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Sie nur Benachrichtigungen in Telegram benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/)
 
-Nehmen Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) aus `mod/telegram/` c printer.
-
-Installieren Sie docker, dann folgen Sie den Anweisungen für Debian
-```
-apt update
+1. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) aus dem Verzeichnis `mod/telegram/` des Druckers.
+2. Installieren Sie Docker (Anleitung für Debian):
+```bash
+apt update 
 apt upgrade -y
 apt install docker.io docker-compose docker apparmor -y
 ```
 
-Erstellen Sie ein Verzeichnis für den Bot.
+3. Erstellen Sie ein Verzeichnis für den Bot:
 ```
 mkdir bot1
 cd bot1
 ```
 
-Legen Sie [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) dort ab.
+4. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) in das erstellte Verzeichniss.
 
-Unterverzeichnisse erstellen
+5. Erstellen Sie die Unterverzeichnisse:
 ```
 mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-Legen Sie [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) aus [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) in das Konfigurationsverzeichnis und passen Sie es an Ihre Bedürfnisse an.
+6. Kopieren Sie die **telegram.conf** aus dem Ordner [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) in das Konfigurationsverzeichnis und passen Sie es an Ihre Bedürfnisse an.
 
 [Beispiel-Konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
 Weitere Informationen zur Konfiguration des Bots können Sie [hier](https://github.com/nlef/moonraker-telegram-bot/wiki) nachlesen.
 
-Führen Sie im Verzeichnis bot1 Folgendes aus
+7. Starten Sie den Bot:
 ```
 docker-compose up -d
 ```
 
-Fügen Sie einen Benutzer hinzu und geben Sie ihm das Recht, docker-compose selbst auszuführen.
+8. Erstellen Sie einen Benutzer und vergeben Sie Berechtigungen:
 ```
 useradd tbot
 usermod -a -G docker tbot
@@ -138,17 +137,17 @@ usermod -a -G docker tbot
 #### Hinzufügen von ssh-Schlüsseln
 
 1. Melden Sie sich als Benutzer `tbot` an.
-   `bash
+   ```bash
    su - tbot
    ```
 
-2. Ssh-Schlüssel schreiben:
+2. SSH-Schlüssel hinzufügen:
    ```bash
    mkdir .ssh
    cat >.ssh/authorised_keys
    ```
 
-   Geben Sie den öffentlichen Schlüssel aus der Datei ```mod_data/ssh.pub.txt``` ein. Dann ```Strg + d```
+   Fügen Sie den öffentlichen Schlüssel (Public Key) aus ```mod_data/ssh.pub.txt``` ein und drücken Sie anschließend ```Strg + D```.
 
 ---
 
@@ -157,45 +156,45 @@ Führen Sie dann [ZSSH_ON](/de/Zmod/#zssh_on) auf dem Drucker mit den notwendige
 
 Nach jedem Neustart wird ssh nach 3 Minuten automatisch gestartet.
 
-#### ZeitZone
-
-Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
-
-Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``` angegeben.
-
-``` ```docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
-
 #### Spoolman
 
-Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
+Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
 
 Hinzufügen:
-```
+```yaml
   spoolman:
     image: ghcr.io/donkie/spoolman:latest
-    Neustart: wenn nicht gestoppt
-    Volumes:
+    restart: unless-stopped
+    volumes:
       - ./spoolman:/home/app/.local/share/spoolman
-    Ports:
+    ports:
       - "7912:8000"
-    Umgebung:
-      - TZ=Asien/Jekaterinburg
+    environment:
+      - TZ=Asia/Yekaterinburg
 
 ```
 
 Öffnen Sie den Port in Ihrer Firewall, wenn Sie diese verwenden.
-````iptables -I INPUT -p tcp --dport 7912 -j ACCEPT```
+```
+iptables -I INPUT -p tcp --dport 7912 -j ACCEPT
+```
 
-Erstellen Sie einen `spoolman` Ordner.
+Erstellen Sie das `spoolman`-Verzeichnis:
 ```
 mkdir spoolman
 chmod 777 spoolman
 ```
 
 Starten Sie Docker neu:
-``````docker-compose down && docker-compose up -d```` oder ````docker compose down && docker compose up -d````
+```
+docker-compose down && docker-compose up -d
+```
+oder
+```
+docker compose down && docker compose up -d
+```
 
-Auf dem Drucker schreiben Sie in ```mod_data/user.moonraker.conf```
+Fügen Sie auf dem Drucker in der Datei `mod_data/user.moonraker.conf` Folgendes hinzu:
 
 `external_IP` - die externe IP des Servers, auf dem docker läuft
 
@@ -203,8 +202,22 @@ Der Drucker MUSS Zugriff auf diese IP haben.
 
 ```
 [spoolman]
-Server: http://external_IP:7912
+server: http://external_IP:7912
 sync_rate: 5
+```
+
+#### Zeitzone
+
+Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
+
+Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``` angegeben.
+
+```
+docker-compose down && docker-compose up -d
+```
+oder
+```
+docker compose down && docker compose up -d
 ```
 
 ---
