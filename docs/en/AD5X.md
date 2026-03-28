@@ -45,7 +45,7 @@ Differences from AD5M:
 
 [Send Files via "Octo/Klipper" for Printing](/Recomendations/#send-files-via-octoklipper-for-printing)
 
-**You must remove unused spools from the list in Orca.**
+**You must remove unused spools from the list in Orca if using native display.**
 
 **Example:**
 The printer has 4 spools (№1, №2, №3, №4). Only spools №1 and №3 are needed for printing.
