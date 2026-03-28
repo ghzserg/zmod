@@ -14,6 +14,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Kompatibilní s Bambu Studio, vylepšuje správu čisticí věže, poskytuje přesné odhady doby tisku a spotřeby materiálu, snižuje odpad, podporuje Mainsail, rychlé změny barev a pokročilé tiskařské funkce. NELZE POUŽÍT S NATIVNÍ OBRAZOVKOU.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - fork pluginu BamBufy.
+3. [Dryer](https://github.com/pantata/dryer) - Dryer
 
 Chcete-li povolit repozitář externích pluginů, které nevyvíjí autor Z-Mod, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
 

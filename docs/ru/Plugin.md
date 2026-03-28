@@ -14,6 +14,7 @@
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк BamBufy
+3. [Dryer](https://github.com/pantata/dryer) - сушка филамента
 
 Чтобы включить репозиторий внешних плагинов, не разрабатываемых автором Z-Mod, выполните команду `ENABLE_EXTRA_PLUGINS`.
 

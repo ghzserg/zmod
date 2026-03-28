@@ -14,6 +14,7 @@ External plugins not developed by the Z-Mod author.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Compatible with Bambu Studio, improves feed tower control, provides accurate time and material consumption estimates, reduces waste, supports Mainsail, quick color changes, and advanced printing features. CANNOT BE USED WITH THE NATIVE SCREEN.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - a fork of BamBufy
+3. [Dryer](https://github.com/pantata/dryer) - Dryer
 
 To enable the repository of external plugins not developed by the Z-Mod author, run the command `ENABLE_EXTRA_PLUGINS`.
 

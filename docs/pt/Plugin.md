@@ -14,6 +14,7 @@ Plug-ins externos, não desenvolvidos pelo autor do Z-Mod.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Compatível com o Bambu Studio, melhora o controle da torre de alimentação, fornece estimativa precisa do tempo e do consumo de material, reduz o desperdício, oferece suporte ao Mainsail, troca rápida de cores e recursos avançados de impressão. NÃO PODE SER USADO COM A TELA NATIVA.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) é uma bifurcação do BamBufy
+3. [Dryer](https://github.com/pantata/dryer) - Dryer
 
 Para ativar o repositório de plug-ins externos não desenvolvidos pelo autor do Z-Mod, execute o comando `ENABLE_EXTRA_PLUGINS`.
 
