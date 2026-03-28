@@ -32,8 +32,7 @@ Pause and filament change.
 
 *AD5X only*
 
-Manage filament type, color, and load/unload from colored spools.
-Works only in native screen mode.
+Manage filament type, color, and loading/unloading of spools.
 
 ---
 
