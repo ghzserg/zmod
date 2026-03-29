@@ -142,3 +142,39 @@ Backup IFS firmware
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
+
+## CONFIG
+### Native configuration files
+
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ad5x)
+- [AD5M/Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ff5m)
+
+## FIX_LOOP
+### Boot Recovery
+
+Removes leftover links from autostart
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_loop.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_loop.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_loop.tgz)
+
+## FIX_UPDATE_MCU
+### Fix for Persistent MCU Updates
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_update_mcu.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_update_mcu.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_update_mcu.tgz)
+
+## LOG
+### Allows retrieving log files if Klipper is not working
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-log.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-log.tgz)
+
+## REM_ZMOD
+### Remove ZMOD
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-rem_zmod.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-rem_zmod.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-rem_zmod.tgz)

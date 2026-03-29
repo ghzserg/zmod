@@ -142,3 +142,39 @@ Záloha firmwaru IFS
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS (Apple Silicon). Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Obecný Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
+
+## CONFIG
+### Naturní konfigurační soubory
+
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ad5x)
+- [AD5M/Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ff5m)
+
+## FIX_LOOP
+### Obnovení zavádění
+
+Odstraňuje zbytky odkazů z automatického spouštění
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_loop.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_loop.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_loop.tgz)
+
+## FIX_UPDATE_MCU
+### Oprava neustálých aktualizací MCU
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_update_mcu.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_update_mcu.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_update_mcu.tgz)
+
+## LOG
+### Umožňuje získat soubory protokolu, pokud Klipper nefunguje
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-log.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-log.tgz)
+
+## REM_ZMOD
+### Odstranit ZMOD
+
+- [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-rem_zmod.tgz)
+- [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-rem_zmod.tgz)
+- [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-rem_zmod.tgz)

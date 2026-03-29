@@ -13,8 +13,8 @@
 9. Poste eine Nachricht mit Beschreibung und `config-1.6.28-15.tar.gz`-Datei.
 10. [Fehlermeldung hinzufügen](https://github.com/ghzserg/zmod/issues)
 
-Falls `TAR_CONFIG` nicht ausgeführt werden kann:  
-- Laden Sie [flashforge_init.s](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh) auf einen USB-Stick herunter. [Anleitung](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+Falls `TAR_CONFIG` nicht ausgeführt werden kann:
+- Laden Sie [log](https://wiki.zmod.link/cs/Native_FW/#log)
 - Kopieren Sie `config-1.6.6-28.tar.gz` vom USB-Stick, wobei 1.6.6-28 die aktuelle Version des Mods ist
 
 Oder verbinden Sie sich per SSH mit dem Drucker:

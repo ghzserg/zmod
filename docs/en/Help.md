@@ -13,7 +13,7 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
 If it is impossible to execute `TAR_CONFIG`:  
-- Download [flashforge_init.s](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log/flashforge_init.sh) to a USB flash drive. [Instructions](https://github.com/ghzserg/zmod/tree/main/Native_firmware/log)
+- Download [log](https://wiki.zmod.link/cs/Native_FW/#log)
 - Copy `config-1.6.6-28.tar.gz` from the USB flash drive, where 1.6.6-28 is the current version of the mod
 
 Or connect to the printer via SSH:
