@@ -12,7 +12,8 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 8. Submit **one** post with your description and the generated `config-1.6.6-28.tar.gz` file. 1.6.6-28 - current version mod.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
-If it is impossible to execute `TAR_CONFIG`:  
+If it is impossible to execute `TAR_CONFIG`:
+
 - Download [log](https://wiki.zmod.link/cs/Native_FW/#log)
 - Copy `config-1.6.6-28.tar.gz` from the USB flash drive, where 1.6.6-28 is the current version of the mod
 

@@ -14,6 +14,7 @@
 10. [Добавить сообщение об ошибке](https://github.com/ghzserg/zmod/issues)
 
 Если невозможно выполнить `TAR_CONFIG`:
+
 - Скачайте на флешку [log](https://wiki.zmod.link/cs/Native_FW/#log)
 - Скопируйте с флешки `config-1.6.6-28.tar.gz`, где 1.6.6-28 это текущая версия мода
 

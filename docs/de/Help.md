@@ -14,6 +14,7 @@
 10. [Fehlermeldung hinzufügen](https://github.com/ghzserg/zmod/issues)
 
 Falls `TAR_CONFIG` nicht ausgeführt werden kann:
+
 - Laden Sie [log](https://wiki.zmod.link/cs/Native_FW/#log)
 - Kopieren Sie `config-1.6.6-28.tar.gz` vom USB-Stick, wobei 1.6.6-28 die aktuelle Version des Mods ist
 

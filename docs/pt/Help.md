@@ -14,6 +14,7 @@ Abra o bot do telegrama [@zmod_help_bot](http://t.me/zmod_help_bot) e faça sua 
 10. [Adicionar mensagem de erro](https://github.com/ghzserg/zmod/issues)
 
 Se não for possível executar `TAR_CONFIG`:
+
 - Baixe [log](https://wiki.zmod.link/cs/Native_FW/#log) para um pendrive.
 - Copie do pendrive o arquivo `config-1.6.6-28.tar.gz`, onde 1.6.6-28 é a versão atual do mod
 
