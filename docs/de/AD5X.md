@@ -173,7 +173,7 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#erlaubte_werkzeug_anzahl).
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
@@ -181,7 +181,7 @@ SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 
 Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -196,7 +196,7 @@ Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im still
 * 8 (Mindestens eine Farbe passt möglicherweise schlecht.)
 * 16 (Mindestens eine physische Spule wurde in der Datei mehr als einem Werkzeugindex zugeordnet.)
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

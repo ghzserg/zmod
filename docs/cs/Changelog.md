@@ -50,7 +50,7 @@
 15.03.2026
 
 * Aktualizováno Fluidd/Mainsail/Klipper
-* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) od @ninjamida
+* [NoPoop 2](/AD5X/#slicer-controlled-purge) od @ninjamida
 * HelixScreen - alternativní obrazovka. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
 * Na vydání této verze se významně podílel @xyzroe
 
@@ -100,7 +100,7 @@
 
 ### Verze 1.6.2
 
-* [Podpora pluginů](https://wiki.zmod.link/Plugin/)
+* [Podpora pluginů](/Plugin/)
 * [Plugin g28_tenz](https://github.com/ghzserg/g28_tenz) - Parkování osy Z pomocí tenzometrů
 * [Plugin bambufy](https://github.com/function3d/bambufy) - Kompatibilní s Bambu Studio a Orca Slicer, zlepšuje ovládání věže, poskytuje přesné odhady času a spotřeby materiálu, snižuje odpad, podporuje rychlé změny barev a nabízí pokročilé funkce tisku. Od @function3d
 * [Plugin nopoop](https://github.com/ghzserg/nopoop) - Maximální snížení odpadu od @ninjamida

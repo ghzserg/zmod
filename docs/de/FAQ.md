@@ -756,6 +756,8 @@ Oder andersherum. Du hast einen nativen Klipper laufen - aber du hast die MCU f�
 
 Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (Ad5M/Ad5mPro) geladen hast.
 
+[Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
+
 Sie brauchen also Z-Mod, um native Klipper zu laden.
 
 - Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klipper13 = 1```.
@@ -768,7 +770,7 @@ Wenn dies nicht der Fall ist und Klipper läuft, dann führen Sie ```UPDATE_MCU 
 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 
-- Wechsle zu nativem Klipper wie oben beschrieben.
+- [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
 - Installiere die native Werks-Firmware](/de/Native_FW/#how-to-install-native-firmware), was die native MCU installieren wird.
 
 ---

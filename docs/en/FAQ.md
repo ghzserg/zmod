@@ -640,6 +640,8 @@ Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipp
 
 If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (Ad5M/Ad5mPro).
 
+[Switch to Native Klipper](/en/Native_FW/#fix_klipper)
+
 Accordingly, Z-Mod needs to load native Klipper.
 
 - Go to ```mod_data/variables.cfg``` and delete the line ```klipper13 = 1```.
@@ -652,7 +654,7 @@ If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - t
 
 If all else fails and **Klipper isn't working**:
 
-- Switch to the native Klipper as described above.
+- [Switch to Native Klipper](/en/Native_FW/#fix_klipper)
 - [Install the native Factory firmware](/Native_FW/#how-to-install-native-firmware), which will install the native MCU.
 
 ---

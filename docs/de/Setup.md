@@ -16,7 +16,7 @@
 6. Schalten Sie den Drucker ein
 7. Warten Sie, bis die native Firmware installiert ist.
 8. WiFi oder Lan einrichten *neuer Biber*
-9. Holen Sie sich die neuesten Drucker-Updates oder installieren Sie die Firmware 1.1.7 für AD5X bzw. 3.2.3 für [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), wenn Sie nicht möchten, dass der Drucker [vor jedem Druckauftrag die Mitte des Druckbetts misst](https://wiki.zmod.link/de/FAQ/#misst-die-tabelle-vor-jedem-druckauftrag-zentriert)
+9. Holen Sie sich die neuesten Drucker-Updates oder installieren Sie die Firmware 1.1.7 für AD5X bzw. 3.2.3 für [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), wenn Sie nicht möchten, dass der Drucker [vor jedem Druckauftrag die Mitte des Druckbetts misst](/de/FAQ/#misst-die-tabelle-vor-jedem-druckauftrag-zentriert)
 
 ---
 

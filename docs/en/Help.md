@@ -14,7 +14,7 @@ Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it you
 
 If it is impossible to execute `TAR_CONFIG`:
 
-- Download [log](https://wiki.zmod.link/en/Native_FW/#log)
+- Download [log](/en/Native_FW/#log)
 - Copy `config-1.6.6-28.tar.gz` from the USB flash drive, where 1.6.6-28 is the current version of the mod
 
 Or connect to the printer via SSH:

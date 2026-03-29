@@ -50,7 +50,7 @@
 15.03.2026
 
 * Updated Fluidd/Mainsail/Klipper
-* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) by @ninjamida
+* [NoPoop 2](/AD5X/#slicer-controlled-purge) by @ninjamida
 * HelixScreen - alternative screen. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
 * Special thanks to @xyzroe for their great help with this release
 
@@ -100,7 +100,7 @@
 
 ### Version 1.6.2
 
-* [Plugin Support](https://wiki.zmod.link/Plugin/)
+* [Plugin Support](/Plugin/)
 * [g28_tenz Plugin](https://github.com/ghzserg/g28_tenz) - Z-Axis Parking Using Load Cells
 * [bambufy Plugin](https://github.com/function3d/bambufy) - Compatible with Bambu Studio and Orca Slicer, improves turret control, provides accurate time and material consumption estimates, reduces waste, supports quick color changes, and offers advanced printing features. From @function3d
 * [nopoop Plugin](https://github.com/ghzserg/nopoop) - Maximum Waste Reduction by @ninjamida

@@ -171,7 +171,7 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 Para ajustar o número de ferramentas exibidas na janela de seleção de cores (se as informações não puderem ser obtidas pela varredura do arquivo), use o parâmetro [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count).
 
-[Consulte configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
@@ -179,7 +179,7 @@ SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 
 Para permitir a varredura de arquivos gcode para obter informações sobre ferramentas, cores e materiais, use o parâmetro [SCAN_FILE_COLORS](/Global/#scan_file_colors). Você também pode definir o valor como 2 para verificar apenas os dados preparados pelo script do fatiador, sem verificar os arquivos inteiros.
 
-[Consulte configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -194,7 +194,7 @@ Você pode configurar seus próprios valores para interromper a impressão no mo
 * 8 (Pelo menos uma cor não corresponde bem)
 * 16 (A mesma bobina física foi atribuída a mais de um índice de ferramenta no arquivo)
 
-[Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte a configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

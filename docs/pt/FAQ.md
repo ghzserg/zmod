@@ -756,6 +756,8 @@ Ou vice-versa. Você está executando um Klipper nativo, mas carregou o MCU para
 
 Se a versão do seu MCU começar com ```?-20230317_182329-ubuntu20-virtual-machine``` - isso significa que você carregou o MCU para o Klipper 12 (AD5X) ou Klipper 11 (Ad5M/Ad5mPro).
 
+[Ir para o Klipper nativo](/pt/Native_FW/#fix_klipper)
+
 Portanto, você precisa do Z-Mod para carregar o Klipper nativo.
 
 - Vá para ```mod_data/variables.cfg``` e exclua a linha ```klipper13 = 1```.
@@ -768,7 +770,7 @@ Se esse não for o caso e o Klipper estiver em execução, execute ```UPDATE_MCU
 
 Se nada ajudar e o **Klipper não funcionar**:
 
-- Mude para o Klipper nativo conforme descrito acima.
+- [Ir para o Klipper nativo](/pt/Native_FW/#fix_klipper)
 - [Install native Factory firmware](/pt/Native_FW/#how-to-install-native-firmware), que instalará a MCU nativa.
 
 ---

@@ -18,7 +18,7 @@
 6. Power on the printer.
 7. Wait for the stock firmware installation to complete.
 8. Configure Wi-Fi or Lan *new beaver*
-9. Get the latest printer updates or install firmware 1.1.7 for AD5X, or 3.2.3 for [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) if you don't want the printer to [measure the bed center before each print](https://wiki.zmod.link/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed)
+9. Get the latest printer updates or install firmware 1.1.7 for AD5X, or 3.2.3 for [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) if you don't want the printer to [measure the bed center before each print](/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed)
 
 ---
 

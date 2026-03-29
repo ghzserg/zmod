@@ -16,7 +16,7 @@
 6. Ligue a impressora
 7. Aguarde até que o firmware nativo seja instalado
 8. Configure o WiFi ou a LAN *new beaver*
-9. Obtenha as atualizações mais recentes da impressora ou instale o firmware 1.1.7 para AD5X ou 3.2.3 para [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) se você não quiser que a impressora [meça o centro da mesa antes de cada impressão](https://wiki.zmod.link/pt/FAQ/#mede-a-tabela-centralizada-antes-de-cada-trabalho-de-impress%C3%A3o)
+9. Obtenha as atualizações mais recentes da impressora ou instale o firmware 1.1.7 para AD5X ou 3.2.3 para [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz) se você não quiser que a impressora [meça o centro da mesa antes de cada impressão](/pt/FAQ/#mede-a-tabela-centralizada-antes-de-cada-trabalho-de-impress%C3%A3o)
 
 ---
 

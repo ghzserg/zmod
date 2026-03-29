@@ -110,7 +110,7 @@ If Z-Mod is able to successfully scan the file for used tools, this will be over
 
 This setting cannot be used when the native screen is enabled.
 
-[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -118,7 +118,7 @@ Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
 
-[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -141,7 +141,7 @@ For custom values for error conditions in silent mode, add the following values 
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
 
-[See preprocessing](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recomendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -527,7 +527,7 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 
 **Manual fix on stock firmware:**
 
-- Install [root](https://wiki.zmod.link/Native_FW/#root).
+- Install [root](/Native_FW/#root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/mcu.py`.
 - Locate `TRSYNC_TIMEOUT = 0.025` and change it to `TRSYNC_TIMEOUT = 0.1`.
@@ -561,7 +561,7 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Manual fix on stock firmware:**
 
-- Install [root](https://wiki.zmod.link/Native_FW/#root).
+- Install [root](/Native_FW/#root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/toolhead.py`.
 - Locate `LOOKAHEAD_FLUSH_TIME = 0.5` and change it to `LOOKAHEAD_FLUSH_TIME = 0.150`.

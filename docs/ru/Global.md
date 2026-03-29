@@ -109,7 +109,7 @@ WEIGHT - вес в граммах (1500)
 
 Эта настройка не может быть использована, если включен родной экран (native screen).
 
-[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -117,7 +117,7 @@ WEIGHT - вес в граммах (1500)
 
 Включает сканирование gcode-файлов для определения используемых команд смены инструмента (T0, T1 и т. д.), а также цветов и материалов, назначенных им в слайсере: 0 (выключено), 1 (включено), 2 (выключить полное сканирование, но искать данные, подготовленные скриптом слайсера).
 
-[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -140,7 +140,7 @@ WEIGHT - вес в граммах (1500)
 * 8 (Хотя бы один цвет совпадает плохо)
 * 16 (Одна и та же физическая катушка была назначена более чем одному индексу инструмента в файле)
 
-[Смотри настройку препроцессинга](https://wiki.zmod.link/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 

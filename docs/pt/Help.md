@@ -15,7 +15,7 @@ Abra o bot do telegrama [@zmod_help_bot](http://t.me/zmod_help_bot) e faça sua 
 
 Se não for possível executar `TAR_CONFIG`:
 
-- Baixe [log](https://wiki.zmod.link/pt/Native_FW/#log) para um pendrive.
+- Baixe [log](/pt/Native_FW/#log) para um pendrive.
 - Copie do pendrive o arquivo `config-1.6.6-28.tar.gz`, onde 1.6.6-28 é a versão atual do mod
 
 Ou conecte-se à impressora via SSH:

@@ -48,7 +48,7 @@
 15.03.2026
 
 * Обновлен Fluidd/Mainsail/Klipper
-* [NoPoop 2](https://wiki.zmod.link/AD5X/#slicer-controlled-purge) от @ninjamida
+* [NoPoop 2](/AD5X/#slicer-controlled-purge) от @ninjamida
 * HelixScreen - альтернативный экран. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
 * В выпуске этой версии большую помощь оказал @xyzroe
 

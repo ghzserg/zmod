@@ -108,7 +108,7 @@ Pokud Z-Mod dokáže úspěšně prohledat soubor pro použité nástroje, toto 
 
 Toto nastavení nelze použít, když je povolena nativní obrazovka.
 
-[Viz předzpracování](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -116,7 +116,7 @@ Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 Povolí prohledávání gcode souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (zakázat), 1 (povolit), 2 (zakázat úplné prohledávání, ale hledat data připravená skriptem sliceru)
 
-[Viz předzpracování](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -139,7 +139,7 @@ Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následujíc
 * 8 (Alespoň jedna barva je potenciálně špatně spárována)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](https://wiki.zmod.link/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -525,7 +525,7 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](https://wiki.zmod.link/Native_FW/#root).
+- Nainstalujte [root](/Native_FW/#root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/mcu.py`.
 - Najděte `TRSYNC_TIMEOUT = 0.025` a změňte ho na `TRSYNC_TIMEOUT = 0.1`.
@@ -559,7 +559,7 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](https://wiki.zmod.link/Native_FW/#root).
+- Nainstalujte [root](/Native_FW/#root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/toolhead.py`.
 - Najděte `LOOKAHEAD_FLUSH_TIME = 0.5` a změňte ho na `LOOKAHEAD_FLUSH_TIME = 0.150`.

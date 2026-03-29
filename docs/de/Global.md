@@ -109,7 +109,7 @@ Wenn Z-Mod die Datei erfolgreich nach verwendeten Instrumenten durchsucht, wird 
 
 Diese Einstellung kann nicht verwendet werden, wenn der native Bildschirm aktiviert ist.
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#enable-md5-checksum-control)
 
 Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
@@ -117,7 +117,7 @@ Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 Ermöglicht das Scannen von Gcode-Dateien, um die verwendeten Werkzeugwechselbefehle (T0, T1 usw.) und die ihnen im Slicer zugewiesenen Farben und Materialien zu ermitteln: 0 (aus), 1 (an), 2 (schaltet das vollständige Scannen aus, sucht aber nach vom Slicer-Skript vorbereiteten Daten).
 
-[Siehe Einstellung für die Vorverarbeitung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#enable-md5-checksum-control)
 
 Beispiel: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`.
 
@@ -140,7 +140,7 @@ Um benutzerdefinierte Werte für Fehlerbedingungen im stillen Modus einzustellen
 * 8 (Mindestens eine Farbe stimmt nicht gut überein)
 * 16 (Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen)
 
-[Siehe Vorverarbeitungseinstellung](https://wiki.zmod.link/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Vorverarbeitungseinstellung](/de/Recomendations/#enable-md5-checksum-control)
 
 Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 

@@ -109,7 +109,7 @@ Se o Z-Mod escanear com êxito o arquivo em busca de instrumentos em uso, esse v
 
 Essa configuração não poderá ser usada se a tela nativa estiver ativada.
 
-[Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte a configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 Exemplo: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
@@ -117,7 +117,7 @@ Exemplo: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 Permite a varredura de arquivos gcode para determinar os comandos de troca de ferramenta usados (T0, T1 etc.) e as cores e os materiais atribuídos a eles no fatiador: 0 (desativado), 1 (ativado), 2 (desativa a varredura completa, mas procura dados preparados pelo script do fatiador).
 
-[Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte a configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 Exemplo: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`.
 
@@ -140,7 +140,7 @@ Para definir valores personalizados para as condições de erro no modo silencio
 * 8 (Pelo menos uma cor não corresponde bem)
 * 16 (A mesma bobina física foi atribuída a mais de um índice de ferramenta no arquivo)
 
-[Consulte a configuração de pré-processamento](https://wiki.zmod.link/pt/Recomendations/#enable-md5-checksum-control)
+[Consulte a configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
 Exemplo: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
