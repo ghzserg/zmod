@@ -21,7 +21,7 @@
 ### DISPLAY_OFF
 
 - GUPPY: 0 - не включать GuppyScreen, 1 - включить GuppyScreen (1)
-- HELIX: 0 - не включать HelixScreen, 1 - включить HelixScreen (0)
+- HELIX: 0 - не включать HelixScreen, 1 - включить HelixScreen (0) + `ENABLE_EXTRA_PLUGINS`
 
 Выключить стандартный экран. Экономит 13 мегабайт (на старых версиях родной прошивки 20 мегабайт).
 

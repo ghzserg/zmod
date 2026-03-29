@@ -21,7 +21,7 @@ Schalten Sie die Standardanzeige ein und starten Sie den Drucker neu.
 #### DISPLAY_OFF
 
 - GUPPY: 0 - GuppyScreen nicht aktivieren, 1 - GuppyScreen aktivieren (1)
-- Helix: 0 - HelixScreen nicht aktivieren, 1 - HelixScreen aktivieren (0)
+- Helix: 0 - HelixScreen nicht aktivieren, 1 - HelixScreen aktivieren (0) + `ENABLE_EXTRA_PLUGINS`
 
 Schaltet den Standardbildschirm aus. Spart 13 Megabyte (20 Megabyte bei älteren Versionen der nativen Firmware).
 

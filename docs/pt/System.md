@@ -21,7 +21,7 @@ Ligue a tela padrão e reinicie a impressora.
 #### DISPLAY_OFF
 
 - GUPPY: 0 - não ativar o GuppyScreen, 1 - ativar o GuppyScreen (1)
-- Helix: 0 - não ativar o HelixScreen, 1 - ativar o HelixScreen (0)
+- Helix: 0 - não ativar o HelixScreen, 1 - ativar o HelixScreen (0) + `ENABLE_EXTRA_PLUGINS`
 
 Desativa a tela padrão. Economiza 13 megabytes (20 megabytes em versões mais antigas do firmware nativo).
 

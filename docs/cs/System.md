@@ -20,7 +20,7 @@ Zapne standardní obrazovku a restartuje tiskárnu.
 ### DISPLAY_OFF
 
 - `GUPPY`: `0` = vypnout GuppyScreen, `1` = zapnout GuppyScreen (výchozí: `1`)
-- `Helix`: `0` = vypnout HelixScreen, `1` = zapnout HelixScreen (výchozí: `0`)
+- `Helix`: `0` = vypnout HelixScreen, `1` = zapnout HelixScreen (výchozí: `0`) + `ENABLE_EXTRA_PLUGINS`
 
 Vypne standardní obrazovku. Ušetří 13 MB RAM (20 MB u starších verzí firmwaru).
 
