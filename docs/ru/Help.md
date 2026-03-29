@@ -15,7 +15,7 @@
 
 Если невозможно выполнить `TAR_CONFIG`:
 
-- Скачайте на флешку [log](https://wiki.zmod.link/cs/Native_FW/#log)
+- Скачайте на флешку [log](https://wiki.zmod.link/ru/Native_FW/#log)
 - Скопируйте с флешки `config-1.6.6-28.tar.gz`, где 1.6.6-28 это текущая версия мода
 
 Или подключитесь к принтеру по SSH:
