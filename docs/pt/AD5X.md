@@ -169,7 +169,7 @@ Para remover o filamento quando a impressão estiver concluída, use o parâmetr
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Para ajustar o número de ferramentas exibidas na janela de seleção de cores (se as informações não puderem ser obtidas pela varredura do arquivo), use o parâmetro [ALLOWED_TOOL_COUNT](/Global/#allowed_tool_count).
+Para ajustar o número de ferramentas exibidas na janela de seleção de cores (se as informações não puderem ser obtidas pela varredura do arquivo), use o parâmetro [ALLOWED_TOOL_COUNT](/pt/Global/#allowed_tool_count).
 
 [Consulte configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
@@ -177,7 +177,7 @@ Para ajustar o número de ferramentas exibidas na janela de seleção de cores (
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Para permitir a varredura de arquivos gcode para obter informações sobre ferramentas, cores e materiais, use o parâmetro [SCAN_FILE_COLORS](/Global/#scan_file_colors). Você também pode definir o valor como 2 para verificar apenas os dados preparados pelo script do fatiador, sem verificar os arquivos inteiros.
+Para permitir a varredura de arquivos gcode para obter informações sobre ferramentas, cores e materiais, use o parâmetro [SCAN_FILE_COLORS](/pt/Global/#scan_file_colors). Você também pode definir o valor como 2 para verificar apenas os dados preparados pelo script do fatiador, sem verificar os arquivos inteiros.
 
 [Consulte configuração de pré-processamento](/pt/Recomendations/#enable-md5-checksum-control)
 
@@ -185,7 +185,7 @@ Para permitir a varredura de arquivos gcode para obter informações sobre ferra
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-Para ativar o mapeamento automático de cores do arquivo gcode para as bobinas físicas, use o parâmetro [AUTO_ASSIGN_COLORS](/Global/#auto_assign_colors). A digitalização de arquivos deve estar ativada para que esse recurso funcione. O uso de um valor de 30 interromperá a impressão no modo silencioso se houver algum problema com a atribuição automática.
+Para ativar o mapeamento automático de cores do arquivo gcode para as bobinas físicas, use o parâmetro [AUTO_ASSIGN_COLORS](/pt/Global/#auto_assign_colors). A digitalização de arquivos deve estar ativada para que esse recurso funcione. O uso de um valor de 30 interromperá a impressão no modo silencioso se houver algum problema com a atribuição automática.
 
 Você pode configurar seus próprios valores para interromper a impressão no modo silencioso somando os números a seguir:
 
@@ -200,7 +200,7 @@ Você pode configurar seus próprios valores para interromper a impressão no mo
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
-Se o comando de alteração de cor descobrir que a nova cor corresponde a uma cor já carregada, o processo de alteração geralmente é ignorado por ser inútil. Se, por algum motivo, você quiser que o processo de alteração de cor seja sempre executado por completo, use o parâmetro [ALWAYS_FULL_COLOR_CHANGE](/Global/#always_full_color_change).
+Se o comando de alteração de cor descobrir que a nova cor corresponde a uma cor já carregada, o processo de alteração geralmente é ignorado por ser inútil. Se, por algum motivo, você quiser que o processo de alteração de cor seja sempre executado por completo, use o parâmetro [ALWAYS_FULL_COLOR_CHANGE](/pt/Global/#always_full_color_change).
 
 ```gcode
 SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
