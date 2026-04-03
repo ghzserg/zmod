@@ -179,7 +179,7 @@ Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (fall
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
+Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie die gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
 
 [Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
