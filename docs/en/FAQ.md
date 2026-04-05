@@ -55,6 +55,26 @@ ast_close_dialogs)).
 
 ---
 
+### What's the difference between using the screen and without the native screen?
+
+The printer can operate in two modes:
+
+- With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
+- Without the native screen - in this case, all features are controlled by Z-Mod.
+This doesn't mean you need to turn off the screen or replace it with a different one.
+In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen or turn off the screen completely, so it will turn off.
+
+!!! warning
+    Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros
+
+**Disabling the screen saves RAM but changes print management (start/pause/resume/cancel/recovery). Modify start/end G-code accordingly.** *elk*
+
+Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](/Main/#start_print) parameters or global settings. [Details](/FAQ/#how-does-z-offset-work)
+
+Read [features of screenless operation](#screenless-version-notes).
+
+---
+
 ### How is Z-Mod different from KlipperMod/native firmware?
 
 Differences between KlipperMod and Z-Mod:
@@ -85,14 +105,14 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 
 #### What's in Z-Mod but not in KlipperMod:
 
-*   [AD5X](/ru/AD5X/) support
+*   [AD5X](/AD5X/) support
 *   Support for [the following languages](/Global/#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
 *   Native screen support
 *   [Print recovery after power loss](/Zmod/#zrestore)
-*   [Shaper calibration with graphs](/Calibrations/#zshaper) considering [SCV](/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
+*   [Shaper calibration with graphs](de/Calibrations/#zshaper) considering [SCV](/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
 *   [File/permission/symlink check and repair for the native filesystem](/System/#check_system)
 *   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and Z-Mod over the network
-*   [Entware](/FAQ/#entware-in-zmod-how-to-use-it)
+*   [Entware](/FAQ/#entware-in-z-mod-how-to-use-it)
 *   Fixed [E0017 error](/Global/#fix_e0017)
 *   Additionally, GuppyScreen/HelixScreen supports: PID calibration, damper control, firmware rollback, nozzle cleaning, strain gauge reset, screw adjustment, ColdPull, enhanced bed leveling
 *   Fixed driver cooling fans operation. They automatically turn on when motors are running. On native firmware - only during printing.
@@ -259,26 +279,6 @@ Documentation is often unread, though 90% of questions are answered here. To ver
 - [Setup/Update/Uninstall](/Setup/)
 - [Macros](/Macros/)
 - [Known Issues](#known-peculiarities)
-
----
-
-### What's the difference between using the screen and without the native screen?
-
-The printer can operate in two modes:
-
-- With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
-- Without the native screen - in this case, all features are controlled by Z-Mod.
-This doesn't mean you need to turn off the screen or replace it with a different one.
-In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen or turn off the screen completely, so it will turn off.
-
-!!! warning
-    Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros
-
-**Disabling the screen saves RAM but changes print management (start/pause/resume/cancel/recovery). Modify start/end G-code accordingly.** *elk*
-
-Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](/Main/#start_print) parameters or global settings. [Details](/FAQ/#how-does-z-offset-work)
-
-Read [features of screenless operation](#screenless-version-notes).
 
 ---
 
