@@ -1,6 +1,6 @@
 <h1 align="center">Telegramm-Bot</h1>
 
-| Funktion / Feature | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](/de/Telegram/) |
+| Funktion / Feature | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/de/Telegram/) |
 | :--- | :---: | :---: |
 | **Erfordert externen Server** | - | + |
 | **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + |
@@ -268,16 +268,18 @@ Schreibe ssh-Schlüssel:
 mkdir -p .ssh
 cat >.ssh/authorised_keys
 ```
-Geben Sie den öffentlichen Schlüssel aus der Datei im Systemstamm mod_data/ssh.pub.txt ein. Dann CTRL+D
+Geben Sie den öffentlichen Schlüssel aus der Datei im Systemstamm ```mod_data/ssh.pub.txt``` ein. Dann CTRL+D
 
 Starten Sie das System neu
-``````sudo reboot```
+```
+sudo reboot
+```
 
 ---
 
-#### Installation des Telegram-Bots über helm in Kubernetes (von aldiserg)
+#### Telegram-Bot-Installation auf Kubernetes via Helm (von aldiserg)
 
-Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md)
 
 Laden Sie helm herunter und installieren Sie es auf Ihrem Computer [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
@@ -285,13 +287,13 @@ Klonen Sie das Repository mit helm chart
 ```
 git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
-Ändern:
+- Änderungen:
 
-1. persistence.enabled auf false ändern, wenn Sie nicht vorhaben, Zeitraffer für eine lange Zeit zu speichern
+    * Ändern Sie `persistence.enabled` auf „false“, wenn Sie keine Zeitraffer speichern möchten.
 
-2. persistence.volumes...storageClass, wenn wir einen externen Speicher für Zeitraffer verwenden wollen
+    * Ändern Sie `persistence.volumes...storageClass`, wenn Sie externen Speicher verwenden.
 
-2. configMapAsFile.data.telegram.conf - unsere Hauptkonfiguration, hier müssen wir die Felder ändern:
+    * Die Datei `configMapAsFile.data.telegram.conf` ist die Hauptkonfigurationsdatei und sollte um einige Zeilen angepasst werden.
    ```
    [bot]
    server: 3D_printer_host:7125
@@ -302,11 +304,11 @@ git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
    Gastgeber: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-Wie man bot_token und chat_id erhält siehe [hier](/de/Telegram/#register-bot)
+Wie man bot_token und chat_id erhält siehe [hier](/de/Telegram/#registrieren-sie-den-bot)
 
 Installation:
 
-Die Befehle müssen aus dem Verzeichnis ausgeführt werden, in dem sich die Karte befindet
+Sie müssen sich im Helm-Chart-Ordner befinden, um den Befehl „install“ oder „upgrade“ auszuführen.
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
@@ -321,24 +323,24 @@ ssh-ed25519 host key mismatch ...
 
 ##### Lösung
 
-###### 1. Löschen der gespeicherten Tasten auf dem Drucker
+###### 1. Löschen der gespeicherten Schlüssel auf dem Drucker
 
 Verbinden Sie sich über SSH mit dem Drucker:
 
-```` bash
+``` bash
 ssh root@<<IP_drucker> -p 22
 ```
 
 Standard-Passwort:
 ```
-    root
+root
 ```
 
-Führen Sie als nächstes die Befehle aus:
+Führen Sie als nächstes den Befehle aus:
 
-```` bash
+```bash
 cd ~/.ssh
-rm -f wissen
+rm -f know*
 ```
 
 Damit werden die alten gespeicherten Hostschlüssel des Servers entfernt.
@@ -349,14 +351,14 @@ Damit werden die alten gespeicherten Hostschlüssel des Servers entfernt.
 
 Wenn Sie ein neues Schlüsselpaar erzeugen wollen, müssen Sie die alten Dateien löschen:
 
-```` bash
+```bash
 cd ~/mod_data
 rm -f ssh.pub.txt ssh.key
 ```
 
 Nach dem Neustart wird der Dienst automatisch neue Schlüssel erstellen.
 
-Der oeffentliche Schluessel (`ssh.pub.txt`) muss in einer Datei auf dem Server zurueckgelegt werden:
+Der öffentliche Schlüssel (ssh.pub.txt) muss der Serverdatei ~/.ssh/authorized_keys hinzugefügt werden:
 ```
     ~/.ssh/authorised_keys
 ```
@@ -364,8 +366,6 @@ für den Benutzer, über den die Verbindung läuft (z.B. `tbot`).
 
 ------------------------------------------------------------------------
 
-###### 3. Prüfen der Verbindung
+###### 3. Verbindung testen
 
-Nach dem Löschen der Schlüssel auf dem Drucker und dem Aktualisieren der `authorised_keys` auf dem
-Server --- führen Sie das ZSSH-Makro auf dem Drucker aus.
-Die Verbindung sollte nun ohne Fehler aufgebaut werden.
+Nachdem Sie die Schlüssel auf dem Drucker gelöscht und die Datei authorized_keys auf dem Server aktualisiert haben, führen Sie das ZSSH-Makro auf dem Drucker aus. Die Verbindung sollte nun fehlerfrei hergestellt werden.
