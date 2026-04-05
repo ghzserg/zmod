@@ -1,14 +1,15 @@
-## FAQ
+# FAQ
 ## Häufig gestellte Fragen
 
-> Ich habe einen Mod installiert.
->
-> Sie wollen nichts verstehen - drucken Sie, wie Sie es getan haben.
->
-> Sie müssen nichts anpassen oder ändern.
->
-> Wenn Sie beschließen, dass Sie weitergehen wollen, lesen Sie die Dokumentation.
+!!! note
+    Die Mod wurde installiert.
 
+    Sie möchten nichts weiter ausprobieren – drucken Sie einfach wie gewohnt.
+
+    Es ist nichts zu konfigurieren oder zu ändern.
+
+    Sie sind bereit, fortzufahren? Lesen Sie dazu die Dokumentation.
+    
 ### Wie sich Z-Mod von KlipperMod/nativer Firmware unterscheidet
 
    Der Unterschied zwischen KlipperMod und Z-Mod:
@@ -39,20 +40,20 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 
 #### Was ist in Z-Mod und was ist nicht in KlipperMod:
 
-- Unterstützung [AD5X](/ru/AD5X/)
-- Unterstützung für [die folgenden Sprachen](/ru/Global/#lang): Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Koreanisch.
+- Unterstützung [AD5X](/de/AD5X/)
+- Unterstützung für [die folgenden Sprachen](de/Global/#lang): Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Koreanisch.
 - Native Bildschirmfunktion
 - [Stromausfall Druckwiederherstellung](/de/Zmod/#zrestore)
-- [Shaper-Entfernung mit Diagrammerstellung](/ru/Kalibrierungen/#zshaper) unter Berücksichtigung von [SCV](/ru/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
-- [Überprüfung und Wiederherstellung nativer Dateisystemdateien/Rechte/symbolischer Links](/ru/System/#check_system)
+- [Shaper-Entfernung mit Diagrammerstellung](/de/Calibrations/#zshaper) unter Berücksichtigung von [SCV](/de/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
+- [Überprüfung und Wiederherstellung nativer Dateisystemdateien/Rechte/symbolischer Links](/de/System/#check_system)
 - Automatische Aktualisierung von `Fluidd`/`Mainsail`/`Moonraker` und Z-Mod über das Netzwerk
-- Entware](/de/FAQ/#-zmod-entware-entware--how-to-use-it)
-- Fehler behoben [E0017](/de/System/#fix_e0017)
-- Zusätzlich unterstützt GuppyScreen/HelixScreen: PID-Kalibrierung, Klappensteuerung, Rollback von Firmware, Düsenreinigung, Wägezellen-Reset, Schneckenjustierung, ColdPull, finalisierte Tabellenkarte
-- Fester Betrieb von Treibergebläsen. Sie werden automatisch eingeschaltet, wenn die Motoren laufen. Bei nativer Firmware - nur beim Drucken.
-- Entfernung der adaptiven Tabellenkarte [KAMP](/de/Kalibrierungen/#kamp)
-- PID-Kalibrierung von [extruder](/ru/Kalibrierungen/#pid_tune_extruder) und [table](/ru/Kalibrierungen/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
-- Implementierung von [COLDPULL/coldpull](/ru/Filament/#coldpull) (Düsenreinigung) ohne Gewalt. Verwirklichung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
+- [Entware](/de/FAQ/#z-mod-enthält-entware---wie-benutzt-man-es)
+- Fehler behoben [E0017](/de/Global/#fix_e0017)
+- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rollback, Düsenreinigung, Dehnungsmessstreifen-Reset,        Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
+- Feste Lüftersteuerung für die Motorkühlung. Die Lüfter schalten sich automatisch ein, sobald die Motoren laufen. Bei der Standard-Firmware nur während des   Druckvorgangs.
+- Adaptive Bettnivellierung [KAMP](de/Calibrations/#kamp)
+- PID-Kalibrierung von [Extruder](de/Calibrations/#pid_tune_extruder) und [BED](de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
+- Implementierung von [COLDPULL/coldpull](de/Filament/#coldpull) (Düsenreinigung) ohne Kraftaufwand. Durchführung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
 
@@ -62,24 +63,23 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 - Telegram-Bot-Unterstützung
 - Klipper 13-Unterstützung
 - Alle Funktionen, die im Vergleich zu KlipperMod aufgeführt sind.
-- Die native Firmware sendet eine Menge Daten an chinesische Server (https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von zmod mit GuppyScreen/HelixScreen vermieden werden.
+- Die native Firmware sendet eine Menge Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von zmod mit GuppyScreen/HelixScreen vermieden werden.
 
 ---
 
 ## Speichern von Einstellungen
 
 Zugriff auf den Ordner **mod_data** über die fluidd-Weboberfläche.
+`Konfiguration` -> `Konfigurationsdateien` -> `mod_data`
 
-Konfiguration" -> "Konfigurationsdateien" -> "mod_data".
-
-- Benutzerdefinierte Klipper-Einstellungen sollten in die Datei `mod_data/user.cfg` eingetragen werden, Einstellungen, die in diese Datei geschrieben werden, können Einstellungen aus `printer_base.cfg` und Z-Mod-Dateien ersetzen/hinzufügen.
+- Benutzerdefinierte Klipper-Einstellungen werden in `mod_data/user.cfg` gespeichert, wodurch `printer_base.cfg` und Z-Mod-Dateien überschrieben/ergänzt werden können.
 - Benutzerdefinierte Moonraker-Einstellungen müssen in die Datei `mod_data/user.moonraker.conf` eingetragen werden.
 - Benutzerdefinierte Melodien werden in `mod_data/midi/` gespeichert.
 - Globale Mod-Einstellungen werden mit dem Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data) gespeichert *nyuhler*
 - Der Code, der ausgeführt werden soll, wenn der Drucker ausgeschaltet wird, wird hier gespeichert: `mod_data/power_off.sh`.
 - Der Code, der beim Einschalten des Druckers ausgeführt werden soll, wird hier gespeichert: `mod_data/power_on.sh`.
 
-**Die zmod- und Plugin-Dateien dürfen nicht verändert werden**, da dies das Aktualisierungssystem stört.
+**Die zmod- und Plugin-Dateien dürfen nicht verändert werden**, da dies das Update-System beeinträchtigen würde.
 
 Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werden.
 
@@ -87,28 +87,24 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 
 ## Bekannte Funktionen:
 
-- Wenn der Drucker eine Aktion "M109" (Aufwärmen des Extruders), "M190" (Aufwärmen des Tisches), PID-Kalibrierung - im Grunde jede Aktion, die eine Pause von gcod verursacht - ausführt, dann friert der native Bildschirm ein
-- Wenn der Klipper neu gestartet wird (nach dem Speichern von Table Map, PID, Shaper, etc.), friert der native Bildschirm ein (benutzen Sie den Neustart über [NEW_SAVE_CONFIG](/ru/Main/#new_save_config).
-- Nachdem der Druck abgebrochen wurde, muss der native Bildschirm auf Ok klicken (verwenden Sie das Makro [CLOSE_DIALOGS](/ru/Main/#close_dialogs) oder [FAST_CLOSE_DIALOGS](https://github.com/ghzserg
-/zmod/wiki/Main_de/Main_de#fast_close_dialogs))
-
-- Der native Bildschirm lädt immer das `DEFAULT_MESH`-Profil, wenn der Druck geladen wird, und löscht immer das `Default`-Profil, wenn der Druck beendet ist
+- Bei Aktionen wie `M109` (Extruderheizung), `M190` (Bettheizung), PID-Kalibrierung oder jeglichem G-Code-Pausieren friert der Standardbildschirm ein.
+- Beim Neustart von Klipper wird der Standardbildschirm eingefroren (nach dem Speichern von Table Map, PID, Shaper, etc.), verwenden Sie [NEW_SAVE_CONFIG](/de/Main/#new_save_config) für den Neustart.
+- Nach dem Abbrechen eines Druckvorgangs drücken Sie auf dem nativen Bildschirm "OK" (verwenden Sie [CLOSE_DIALOGS](/de/Main/#close_dialogs) oder [FAST_CLOSE_DIALOGS](/de/Main/#fast_close_dialogs)).
+- Der Standardbildschirm lädt beim Starten eines Druckvorgangs immer das Profil `DEFAULT_MESH` und löscht das `DEFAULT` Profil nach dem Druckvorgang.
 
 ---
 
 ## Merkmale der Version ohne nativen Bildschirm
 
-- Es ist notwendig, den gesamten Start-Gcode zu entfernen und [START_PRINT](/ru/Main/#start_print) zu schreiben, und im letzten [END_PRINT](/ru/Main/#end_print)
-- Wenn die Kamera nicht funktioniert, müssen Sie eine andere Kamera über das Makro [CAMERA_ON](/ru/Zmod/#camera_on) starten.
-- Gegebenenfalls ist es notwendig, den Parameter `Z_OFFSET` manuell in das Makro [START_PRINT](/ru/Main/#start_print) zu schreiben oder den globalen Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) zu verwenden, der den Z-Offset aus den globalen Parametern lädt, die zuvor über SET_GCODE_OFFSET gespeichert wurden. *crot.
+- Entfernen Sie den gesamten Start-G-Code und verwenden Sie die Makros [START_PRINT](/de/Main/#start_print) und [END_PRINT](/de/Main/#end_print).
+- Die Standardkamera ist deaktiviert; verwenden Sie die Alternative über [CAMERA_ON](/de/Zmod/#camera_on) starten.
+- Gegebenenfalls ist es notwendig, den Parameter `Z_OFFSET` manuell in das Makro [START_PRINT](/de/Main/#start_print) zu schreiben oder den globalen Parameter [LOAD_ZOFFSET](/de/Global/#load_zoffset) zu verwenden, der den Z-Offset aus den globalen Parametern lädt, die zuvor über SET_GCODE_OFFSET gespeichert wurden. *crot*.
 - Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den nicht-nativen Bildschirmmodus übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirmmodus an.
-- Der Drucker lädt automatisch die `auto` desk map, wenn der Drucker eingeschaltet wird.
-- Das Senden über das FlashForge-Protokoll funktioniert nicht, da es über den Bildschirm abgewickelt wird.
-  Sie müssen auf das Octo/Klipper-Protokoll umschalten:
-
-  - Protokoll: `Octo/Klipper`.
-      - Hostname: "IP-Druckername:7125".
-      - Url-Adresse des Hosts: `IP_printer` oder `IP_printer:80`.
+- Das Bettnetz wird beim Start automatisch geladen.
+- Das FlashForge-Protokoll wird nicht unterstützt (wird vom nativen Bildschirm verarbeitet). Verwenden Sie "Octo/Klipper".
+   - Protokoll: `Octo/Klipper`.
+     - Hostname: `IP-Adresse(vom Drucker):7125`.
+     - Url-Adresse des Hosts: `IP_printer` oder `IP_printer:80`.
 
 ---
 
@@ -121,21 +117,21 @@ Der Drucker kann in zwei Modi betrieben werden:
 Das bedeutet nicht, dass Sie den Bildschirm hardwaremäßig deaktivieren oder ihn durch einen anderen ersetzen müssen.
 Im nicht-nativen Bildschirmmodus können Sie den alternativen Software-Bildschirm von GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten und er wird ausgeschaltet.
 
-**Deaktivieren Sie den Bildschirm nicht, wenn Sie nicht genau wissen, wie die Tabellenzuordnung, der Z-Offset und die Makros START_PRINT und END_PRINT funktionieren**
-
+!!! warning Warnung
+    Deaktivieren Sie den Bildschirm nur, wenn Sie die Funktionen Bettnivellierung, Z-Offset und die Makros START_PRINT/END_PRINT vollständig verstehen.
+    
 Unser Drucker hat 128 Megabyte Arbeitsspeicher, von denen die Hälfte vom System belegt wird und 13 Megabyte (20 in älteren Versionen der nativen Firmware) von der nativen Bildschirmsteuerung belegt werden.
 
-Wenn wir den nativen Bildschirm deaktivieren (/ru/System/#display_off), sparen wir Speicher.
+Wenn wir den nativen Bildschirm deaktivieren [DISPLAY_OFF](/de/System/#display_off), sparen wir Speicher.
 
-Aber in diesem Fall arbeiten die eingebauten Druckwerkzeuge anders (Druck starten, anhalten, wiederherstellen, abbrechen, Druck beenden, Dateien zum Druck senden, Wiederherstellung nach Stromausfall).
+**Das Deaktivieren des Bildschirms spart RAM, ändert aber die Druckverwaltung (Start/Pause/Fortsetzen/Abbrechen/Wiederherstellung). Passen Sie den Start-/End-G-Code entsprechend an.** *elk*
 
-Deshalb ist es notwendig, den Start- und End-G-Code zu ändern. *war.
+!!! info
+    Deshalb ist es notwendig, den Start- und End-G-Code zu ändern. *war*.
 
-Außerdem setzt der Drucker bei Betrieb im nicht-nativen Bildschirmmodus den auf dem Bildschirm aufgezeichneten Z-Offset nicht und muss als Parameter an [START_PRINT](/ru/Main/#start_print) oder über globale Parameter übergeben werden. [Mehr lesen](/de/FAQ/#how-z-offset-works)
+Ohne Bildschirm wird der Z-Offset des Bildschirms nicht angewendet, und muss als Parameter an [START_PRINT](/de/Main/#start_print) oder über globale Parameter übergeben werden. [Mehr lesen](/de/FAQ/#how-z-offset-works)
 
-Lesen Sie [features of the non-native screen version](#features-of-the-native-screen version).
-
-Und wechseln Sie zum Octo/Klipper-Protokoll
+Lesen Sie [Merkmale der Version ohne nativen Bildschirm](#merkmale-der-version-ohne-nativen-bildschirm).
 
 ---
 
