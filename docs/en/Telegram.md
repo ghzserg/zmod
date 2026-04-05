@@ -1,6 +1,6 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](/Telegram/) |
+| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/Telegram/) |
 | :--- | :---: | :---: |
 | **Requires external server** | – | + |
 | **Remote printer control** | – (possible via [zmod.link](https://zmod.link/link/)) | + |
@@ -13,13 +13,12 @@
 | **Splooman** | - | + |
 
 ---
-
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+!!! info
+    If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md)
 
 ## Telegram Bot
-### Description
 
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+### Description
 
 Core Idea:
 Our hardware is very slow and has limited memory. Therefore, running the moonraker-telegram-bot directly on the hardware is impractical.
@@ -299,3 +298,56 @@ You should be in helm chart folder to run install/upgrade command
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
+
+#### Solution to a Problem Connecting the Printer to the Server via SSH
+
+After reinstalling the operating system on the server, the **SSH host keys** were changed, and the printer refused to connect with the following error message:
+
+```
+ssh-ed25519 host key mismatch ...
+```
+### Solution
+
+!!! info inline end "Important"
+    The default password for the printer's root access is usually `root`.
+
+!!! abstract "Step 1: Delete stored keys on the printer"
+    Connect to the printer via SSH:
+    
+    ```bash
+    ssh root@<printer_IP> -p 22
+    ```
+    
+    Then, execute the following commands to remove the old stored host keys:
+    
+    ```bash
+    cd ~/.ssh
+    rm -f know*
+    ```
+
+---
+
+!!! abstract "Step 2: Regenerate the SSH key pair (if required)"
+    If you need to generate a new key pair, you must first delete the existing files:
+    
+    ```bash
+    cd ~/mod_data
+    rm -f ssh.pub.txt ssh.key
+    ```
+    
+    After a **reboot**, the service will automatically generate new keys.
+    
+    The new public key (`ssh.pub.txt`) must be added to the server's `authorized_keys` file:
+    
+    ```text
+    ~/.ssh/authorized_keys
+    ```
+    Make sure to add it for the specific user running the connection (e.g., `tbot`).
+
+---
+
+!!! success "Step 3: Test the connection"
+    Once you have cleared the keys on the printer and updated the `authorized_keys` on the server, run the **ZSSH macro** on the printer. The connection         should now be established without errors.
+
+
+
