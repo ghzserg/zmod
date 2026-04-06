@@ -1,7 +1,7 @@
 # FAQ
 ## Häufig gestellte Fragen
 
-!!! note
+!!! note "Info"
     Die Mod wurde installiert.
 
     Sie möchten nichts weiter ausprobieren – drucken Sie einfach wie gewohnt.
@@ -41,7 +41,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 #### Was ist in Z-Mod und was ist nicht in KlipperMod:
 
 - Unterstützung [AD5X](/de/AD5X/)
-- Unterstützung für [die folgenden Sprachen](de/Global/#lang): Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Koreanisch.
+- Unterstützung für [die folgenden Sprachen](/de/Global/#lang): Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Koreanisch.
 - Native Bildschirmfunktion
 - [Stromausfall Druckwiederherstellung](/de/Zmod/#zrestore)
 - [Shaper-Entfernung mit Diagrammerstellung](/de/Calibrations/#zshaper) unter Berücksichtigung von [SCV](/de/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)).
@@ -51,9 +51,9 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 - Fehler behoben [E0017](/de/Global/#fix_e0017)
 - Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rollback, Düsenreinigung, Dehnungsmessstreifen-Reset,        Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
 - Feste Lüftersteuerung für die Motorkühlung. Die Lüfter schalten sich automatisch ein, sobald die Motoren laufen. Bei der Standard-Firmware nur während des   Druckvorgangs.
-- Adaptive Bettnivellierung [KAMP](de/Calibrations/#kamp)
-- PID-Kalibrierung von [Extruder](de/Calibrations/#pid_tune_extruder) und [BED](de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
-- Implementierung von [COLDPULL/coldpull](de/Filament/#coldpull) (Düsenreinigung) ohne Kraftaufwand. Durchführung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
+- Adaptive Bettnivellierung [KAMP](/de/Calibrations/#kamp)
+- PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [BED](/de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
+- Implementierung von [COLDPULL/coldpull](/de/Filament/#coldpull) (Düsenreinigung) ohne Kraftaufwand. Durchführung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
 
@@ -117,7 +117,7 @@ Der Drucker kann in zwei Modi betrieben werden:
 Das bedeutet nicht, dass Sie den Bildschirm hardwaremäßig deaktivieren oder ihn durch einen anderen ersetzen müssen.
 Im nicht-nativen Bildschirmmodus können Sie den alternativen Software-Bildschirm von GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten und er wird ausgeschaltet.
 
-!!! warning Warnung
+!!! warning "Warnung"
     Deaktivieren Sie den Bildschirm nur, wenn Sie die Funktionen Bettnivellierung, Z-Offset und die Makros START_PRINT/END_PRINT vollständig verstehen.
     
 Unser Drucker hat 128 Megabyte Arbeitsspeicher, von denen die Hälfte vom System belegt wird und 13 Megabyte (20 in älteren Versionen der nativen Firmware) von der nativen Bildschirmsteuerung belegt werden.
@@ -129,29 +129,43 @@ Wenn wir den nativen Bildschirm deaktivieren [DISPLAY_OFF](/de/System/#display_o
 !!! info
     Deshalb ist es notwendig, den Start- und End-G-Code zu ändern. *war*.
 
-Ohne Bildschirm wird der Z-Offset des Bildschirms nicht angewendet, und muss als Parameter an [START_PRINT](/de/Main/#start_print) oder über globale Parameter übergeben werden. [Mehr lesen](/de/FAQ/#how-z-offset-works)
+Ohne Bildschirm wird der Z-Offset des Bildschirms nicht angewendet, und muss als Parameter an [START_PRINT](/de/Main/#start_print) oder über globale Parameter übergeben werden. [Mehr lesen](/de/FAQ/#so-funktioniert-der-z-offset)
 
 Lesen Sie [Merkmale der Version ohne nativen Bildschirm](#merkmale-der-version-ohne-nativen-bildschirm).
 
 ---
 
-### Ich verwende die Bildschirmoption. Ich sende eine Datei zum Drucken und der Bildschirm zeigt eine Temperatur von 0 0 0 und keinen Druck an.
+### Was ist MACROS? Wie man es ausführt, herunterlädt und benutzt.
 
-Fügen Sie 2 Zeilen zum Startcode ganz am Anfang des Codes hinzu
+Ein Makro ist ein kleines Programm in der Klipper/Gcode-Sprache.
+
+Es kann aufgerufen werden:
+
+- Aus einer GCODE-Datei
+- Von der Fluidd/Mainstaill-Konsole aus
+*Igel*
+
+[Makro-Liste](/de/Macros/)
+
+---
+
+### Ich verwende die Bildschirmversion. Ich sende eine Datei zum Drucken, aber auf dem Bildschirm wird eine Temperatur von 0 °C angezeigt und der Druckvorgang startet nicht.
+
+Fügen Sie diese beiden Zeilen ganz am Anfang des Startcodes in den Einstellung vom Drucker unter Maschinen G-Code ein:
 ```
 M190 S[bed_temperature_initial_layer_single]
 M104 S[Düsentemperatur_Anfang_Schicht]
 ```
 
-Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die Düse und der Tisch erwärmt werden sollen.
-*```
+Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die Düse und das Bed erwärmt werden sollen.
+*hippopotamus*
 
 ---
 
 #### Nach der Installation von Z-Mod ist mein Bildschirm tot und reagiert nicht mehr auf Tastendrucke.
 
-- Installieren Sie das letzte Update der nativen Firmware und Z-Mod](/de/Recomendations/#install-last-update-native-firmware-and-zmod)
-- Lesen Sie [Betriebsfunktionen](#known-features)
+- Installieren Sie das letzte Update der nativen [Firmware und Z-Mod](/de/Recomendations/#installieren-sie-die-neueste-native-firmware-und-das-z-mod-update)
+- Lesen Sie die [Bekannte Funktionen](#bekannte-funktionen)
 - Möglicherweise haben Sie den Bildschirm ausgeschaltet. Schalten Sie ihn mit dem Makro [DISPLAY_ON](/de/System/#display_on) ein.
 
 ---
@@ -160,7 +174,7 @@ Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die D
 
 Wenn Sie mit dem nativen Bildschirm arbeiten, brauchen Sie nichts zu ändern.
 
-Wenn Sie im nicht-nativen Bildschirm/Guppy-Modus arbeiten (und es wird auch empfohlen, wenn Sie mit einem Bildschirm arbeiten), ersetzen Sie den gesamten Startcode:
+Wenn Sie im nicht-nativen Bildschirm/Guppy-Modus (Helixscreen) arbeiten (und es wird auch empfohlen, wenn Sie mit einem Bildschirm arbeiten), ersetzen Sie den gesamten Startcode:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
@@ -168,93 +182,85 @@ M104 S[düse_temperatur_anfangsschicht]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
-````START_PRINT EXTRUDER_TEMP= BED_TEMP=`````` sollte in eine Zeile geschrieben werden
+```START_PRINT EXTRUDER_TEMP= BED_TEMP=``` sollte in eine Zeile geschrieben werden.
 
-Und der endgültige Code ist auf:
+Und der Endcode lautet:
 ```
 END_PRINT
 ```
 
-Damit die Ebenen in Fluidd richtig gezählt werden, schreiben Sie den Code vor dem Wechsel der Ebene ein:
+Für eine korrekte Layerzählung in Fluidd fügen Sie dem Code vor dem Layerwechsel (G-Code vor dem Schichtwechsel) Folgendes hinzu:
 ```
-SET_PRINT_STATS_INFO AKTUELLE_SCHICHT={Schicht_Zahl + 1}
+SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
-Wenn Sie die automatische Kalibrierung bei jedem Druckvorgang aktivieren wollen, geben Sie Fluidd/Mainsail 1 mal in die Konsole ein
+Um die automatische Nivellierung für jeden Druck zu aktivieren, geben Sie dies einmalig in der Fluidd/Mainsail-Konsole ein:
 ```
 SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
-Gehen Sie im Bildschirmmenü des Druckers zu "Einstellungen" -> "WLAN-Symbol" -> "Netzwerkmodus" -> aktivieren Sie den Schieberegler "Nur lokale Netzwerke".
+Gehen Sie im Bildschirmmenü des Druckers zu `Einstellungen` -> `WLAN-Symbol` -> `Netzwerkmodus` -> aktivieren Sie `Nur lokale Netzwerke`.
 
-Lesen Sie die Dokumentation zu [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), damit Sie die erweiterten und nützlichen Funktionen von Z-Mod nutzen können
+Lesen Sie die Dokumentation von [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), damit Sie die erweiterten und nützlichen Funktionen von Z-Mod nutzen können.
 
-Wenn Sie Rollback von der Firmware verwenden wollen, lesen Sie [documentation](/ru/FAQ/#what-is-rollback-from-firmware) und fügen Sie
-Balkenprofil" -> "Erweitert" -> "G-Code-Balken starten".
+Wenn Sie Rollback von der Firmware verwenden wollen, lesen Sie [documentation](/de/FAQ/#was-ist-ein-firmware-ruckzug) und fügen Sie Folgendes hinzu unter `Filamentprofil` -> `Erweitert` -> `Filamentstart-G-Code`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
-*Waschbär
+*Waschbär*
 
 ---
 
-### So funktioniert Z-Offset
+### So funktioniert der Z-Offset
 
 Lesen Sie den Artikel "[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/#wie-z-offset-auf-Ihrem-Drucker-arbeitet)".
 
-Der Mod stört den Z-Offset in keiner Weise bei der Arbeit mit dem Bildschirm.
+Bei Verwendung des Bildschirms beeinflusst die Modifikation den Z-Offset nicht. Der auf dem Bildschirm gespeicherte Z-Offset wird verwendet.
 
-Offset bei der Arbeit mit dem nativen Bildschirm und bei der Arbeit im nicht-nativen Bildschirmmodus sind nicht dasselbe, und jeder führt sein eigenes Leben und wird separat konfiguriert.
+Der Offset für native und nicht-native Bildschirme ist unterschiedlich; jeder Bildschirmtyp hat sein eigenes Verhalten und wird separat konfiguriert.
 
 Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirm-Modus zu kopieren.
 
 Es wird der auf dem Bildschirm gespeicherte z-Offset verwendet.
 
-Der Z-Offset von Fluidd/Mainsail/GuppyScreen/HelixScreen wirkt **nur bis zum Neustart** und sollte nicht verändert werden, ohne zu wissen, wohin sich die Düse bewegt.
+Z-Offset-Anpassungen über Fluidd/Mainsail/GuppyScreen/HelixScreen sind **nur bis zum Neustart** wirksam. Änderungen ohne Kenntnis der Düsenbewegung werden nicht empfohlen.
 
-Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/ru/Global/#load_zoffset) angegeben ist (der standardmäßig deaktiviert ist, um `SAVE_ZMOD_DATA LOAD_ZOFFSET=1` zu aktivieren), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/ru/Main/#start_print) verwendet wird.
+Jeder Aufruf von `SET_GCODE_OFFSET` (der automatisch aufgerufen wird, wenn man den Z-Offset von Fluid/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. 
+Aber dieser gespeicherte Wert wird nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/de/Global/#load_zoffset) angegeben ist (dStandardmäßig deaktiviert; aktivieren mit `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/de/Main/#start_print) verwendet wird.
 
-Sie können auch die Parameter [START_PRINT](/ru/Main/#start_print) verwenden, um den Z-Offset zu setzen
+Sie können auch die Parameter [START_PRINT](/de/Main/#start_print) verwenden, um den Z-Offset zu setzen
 
 - Z_OFFSET - Einstellung des Z-Offsets (0.0)
 
-#### Welche Optionen gibt es zum Entfernen der Tabellenabbildung?
+---
 
-Wenn Sie die automatische Kalibrierung bei jedem Druckvorgang aktivieren wollen, geben Sie fluidd/mainsail 1 mal in die Konsole ein:
+### Welche Optionen stehen für die Bettnivellierung zur Verfügung?
+
+Um die automatische Nivellierung für jeden Druck zu aktivieren, geben Sie dies einmalig in der Fluidd/Mainsail-Konsole ein:
 ```
 SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 
-Der native Bildschirm verwendet Karten (immer, es ist nicht fixiert, auch wenn man es nicht muss):
+Der native Bildschirm verwendet immer:
 
-- ```MESH_DATA``` - Voreinstellung
+- `MESH_DATA` - Voreinstellung
 - `DEFAULT` - wenn `Leveling` (Aufbau der Tabellenkarte vor dem Druck) angekreuzt ist, und nach dem Druck wird die `DEFAULT` Karte immer gelöscht.
 
-Bei der Arbeit im nicht-nativen Bildschirmmodus wird die Karte verwendet:
+Ohne den nativen Bildschirm wird das automatische Mesh beim Start automatisch geladen.:
 
 - `auto` - sie wird automatisch geladen, wenn der Drucker eingeschaltet wird.
 
-Wenn Sie beim Drucken eine andere Karte verwenden wollen (z.B. `moya_karta_na_80_gradusov`), dann:
+Wenn Sie beim Drucken eine andere Karte verwenden wollen (z.B. `PETG_75`), dann:
 
 - Schalten Sie die automatische Kalibrierung in den globalen Parametern aus.
 
-  ````SAVE_ZMOD_DATA PRINT_LEVELING=0````
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=0```
 
-- Erfassen Sie die Tabellenkarte im Voraus über das Makro [AUTO_FULL_BED_LEVEL](/de/FAQ/#chores-macros-and-buttons-in-fluidd).
- 
-  ````AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=moya_karta_na_80_gradusov```''
+- Geben Sie das Mesh über den Parameter `MESH` in [START_PRINT](/de/Main/#start_print) an. Beispiel: `START_PRINT MESH=PETG_75`.
 
-Wählen Sie eine der beiden Optionen:
+- Laden Sie das Filamentprofil über `BED_MESH_PROFILE LOAD=PETG_75`. Stellen Sie sicher, dass Profil und `START_PRINT` übereinstimmen, oder deaktivieren Sie die Düsenreinigung in `START_PRINT`.
 
-- Geben Sie den Namen der Tabellenkarte im Parameter `MESH` für das Makro [START_PRINT](/ru/Main/#start_print) an.
- 
-  ``` ```START_PRINT MESH=moya_karta_na_80_gradusov```''
-
-- oder laden Sie die Tabellenkarte an einer beliebigen Stelle (z.B. im Barprofil) mit dem Befehl
- 
-  ```BED_MESH_PROFILE LOAD=moya_karta_na_80_gradusov```
-
-  Stellen Sie sicher, dass Sie dieselbe Karte im Balkenprofil und in `START_PRINT` verwenden, oder deaktivieren Sie die Düsenreinigung in `START_PRINT`, indem Sie es über das Balkenprofil ausführen.
+- Nivellieren Sie das Druckbett vorab mit [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level). Beispiel: `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=75 PROFILE=PETG_75`.
 
 ---
 
@@ -265,10 +271,10 @@ Ich empfehle die Verwendung globaler Parameter, die einmal konfiguriert und bei 
 Parameter `PRINT_LEVELING`:
 
 - Entfernt die Tabellenabbildung bei jedem Druckvorgang
-- Wenn Sie mit dem Bildschirm arbeiten, wird die Tabellenkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten. Wenn der Parameter 1 "SAVE_ZMOD_DATA PRINT_LEVELING=1" lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird der Tabellenplan erfasst.
-- Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/ru/Main/#start_print) im anfänglichen G-Code verwenden, wird der Tabellenplan ebenfalls bei jedem Druckvorgang gelöscht
+- Wenn Sie mit dem Bildschirm arbeiten, wird die Tabellenkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten. Wenn der Parameter 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1` lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird der Tabellenplan erfasst.
+- Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/de/Main/#start_print) im anfänglichen G-Code verwenden, wird der Tabellenplan ebenfalls bei jedem Druckvorgang gelöscht
 
-  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/ru/Global/#zshaper)
+  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/de/Global/#zshaper)
 
   ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
 
@@ -540,20 +546,6 @@ Der Unterschied zwischen `REBOOT` und `FIRMWARE_RESTART` ist, dass `REBOOT` Linu
 
 ---
 
-### Was ist MACROS? Wie man es ausführt, herunterlädt und benutzt.
-
-Ein Makro ist ein kleines Programm in der Klipper/Gcode-Sprache.
-
-Es kann aufgerufen werden:
-
-- Aus einer GCODE-Datei
-- Von der Fluidd/Mainstaill-Konsole aus
-*Igel
-
-[Makro-Liste](/de/Makros/)
-
----
-
 ### Ich gehe über Orca/Browser zum Drucker und sehe Welcome to Moonraker
 
 Welche Ports verwendet Z-Mod?
@@ -614,7 +606,7 @@ Kataloge, die von entware erstellt und verwendet werden:
 
 ---
 
-### Was ist ein Rollback von der Firmware?
+### Was ist ein Firmware Rückzug?
 
 Im Z-Mod in Fluidd/Mainsail gibt es Schieberegler, um die Geschwindigkeit und den Umfang des Rollbacks von der Firmware zu steuern.
 
