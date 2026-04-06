@@ -144,9 +144,9 @@ It can be called:
 
 ---
 
-### I'm using the screen version. I send a file to print, but the screen shows temperature 0 0 and printing doesn't start.
+### I'm using the screen version. I send a file to print, but the screen displays a temperature of 0°C and the printing process doesn't start.
 
-Add these two lines at the very beginning of the start code:
+Add these two lines to the very beginning of the start code in the printer settings under Machine G-Code:
 ```
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer]
@@ -157,11 +157,19 @@ Without these lines, the printer screen doesn't know the target temperatures for
 
 ---
 
+### After installing Z-Mod, my screen is dead and not responding to touches.
+
+- Install the latest native [firmware and Z-Mod updates](/Recomendations/#install-latest-native-firmware-and-zmod-updates)
+- Read [known peculiarities](#known-peculiarities) *bison*
+- You might have disabled the screen. Enable it with the [DISPLAY_ON](/System/#display_on) macro
+
+---
+
 ### Do I need to change anything in the start code?
 
 If using the native screen, no changes are needed.
 
-For operation without the native screen/Guppy (also recommended with the screen), replace the entire start code with:
+For operation without the native screen/Guppy (Helixscreen) (also recommended with the screen), replace the entire start code with:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
@@ -200,6 +208,8 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### How does Z-Offset work?
 
+Read the article: [How Z-Offset Works on Your Printer](/SetupCalibrations/#how-z-offset-works-on-your-printer)
+
 When using the screen, the mod doesn't interfere with z-offset. The z-offset saved on the screen is used.
 
 The offset for native and non-native screens is not the same, and each has its own unique behavior and is configured separately.
@@ -213,6 +223,8 @@ Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset fro
 Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 
 - Z_OFFSET - Set Z offset (0.0)
+
+---
 
 ### What options are available for bed leveling?
 
@@ -228,7 +240,11 @@ The native screen always uses:
 
 Without the native screen, the `auto` mesh is auto-loaded on startup.
 
-To use another mesh, disable auto-leveling (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
+If you want to use a different card for printing (e.g., `PETG_75`), then:
+
+- Disable automatic calibration in the global parameters.
+
+```SAVE_ZMOD_DATA PRINT_LEVELING=0```
 
 - Specify via the `MESH` parameter in [START_PRINT](/Main/#start_print). E.g., `START_PRINT MESH=my_80_degree_mesh`
 - Load via `BED_MESH_PROFILE LOAD=my_80_degree_mesh` in filament profile. Ensure consistency between profile and `START_PRINT`, or disable nozzle cleaning in `START_PRINT`.
@@ -484,14 +500,6 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
 Use `GET_RETRACTION` to view current settings.
-
----
-
-### After installing Z-Mod, my screen is dead and not responding to touches.
-
-- [Install the latest native firmware and Z-Mod updates](/Recomendations/#install-latest-native-firmware-and-zmod-updates)
-- Read [known peculiarities](#known-peculiarities) *bison*
-- You might have disabled the screen. Enable it with the [DISPLAY_ON](/System/#display_on) macro
 
 ---
 
