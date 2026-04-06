@@ -309,10 +309,13 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 
 4.  Upravujte podle kvality první vrstvy.
 
+5.  Nativní obrazovka tiskárny sama uloží zadanou hodnotu a použije ji při příštím tisku.
+
 **Důležité vědět:**
 
 *   U tiskárny AD5M originální obrazovka vždy přičítá fixní hodnotu **0,025 mm** k vašemu nastavení.
 *   Proto hodnota Z-offsetu, kterou vidíte ve Fluidd nebo Mainsail, bude vždy **o 0,025 mm VYŠŠÍ** než ta, kterou nastavíte na obrazovce tiskárny. Je to v pořádku!
+*   Seřizování Z-Offset přes Fluidd/Mainsail při práci s nativní obrazovkou není vhodné, protože nativní obrazovka neví o existenci Fluidd/Mainsail.
 
 **Druhé důležité pravidlo:**
 **Z-offset pro originální a neoriginální obrazovky je odlišný; každá má své vlastní nastavení. Použijte ```LOAD_ZOFFSET_NATIVE``` pro zkopírování Z-offsetu z originální obrazovky do režimu neoriginální obrazovky.**

@@ -309,10 +309,13 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 4.  Make changes based on the first layer quality.
 
+5.  The printer's native screen will itself save the entered value and use it for the next print.
+
 **Important to Know:**
 
 *   For the AD5M printer, the stock screen always adds a fixed value of **0.025 mm** to your setting.
 *   Therefore, the Z-Offset you see in the Fluidd or Mainsail interface will always be **0.025 mm MORE** than the value you set on the printer screen. This is normal!
+*   Adjusting the Z-Offset via Fluidd/Mainsail while using the native screen is not advisable, because the native screen is not aware of the existence of Fluidd/Mainsail.
 
 **Second important rule:**
 **The Z-Offset for native and non-native screens is different; each has its own unique setting. Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-Offset from the native screen to non-native screen mode.

@@ -315,10 +315,13 @@ A tela nativa é a principal ferramenta para ajustar o deslocamento Z. Ela contr
 
 4.  Faça alterações com base na qualidade da disposição da primeira camada.
 
+5.  A tela nativa da impressora salvará o valor inserido e o utilizará na próxima impressão.
+
 **Importante saber:**
 
 * Para a impressora AD5M, a tela nativa sempre adiciona um valor fixo de **0,025 mm** ao seu valor.
 * Portanto, o Z-Offset que você vê na interface Fluidd ou Mainsail será sempre **0,025 mm MAIS** do que o valor definido na tela da impressora. Isso é normal!
+* Não é recomendado ajustar o Z-Offset via Fluidd/Mainsail ao usar a tela nativa, pois a tela nativa não sabe da existência do Fluidd/Mainsail.
 
 #### Ajuste do Z-Offset via Fluidd / Mainsail / GuppyScreen ao trabalhar **em modo de tela não nativo**
 

@@ -328,11 +328,14 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 4.  Änderungen basierend auf der Qualität der ersten Schicht vornehmen.
 
+5.  Der native Druckerbildschirm speichert den eingegebenen Wert selbst und wird ihn beim nächsten Druck verwenden.
+
 > [!IMPORTANT]
 > **Wichtig zu wissen:**
 >
 > * Für den AD5M-Drucker wird auf dem nativen Bildschirm immer ein fester Wert von **0,025mm** zu Ihrem Wert hinzugefügt.
 > * Der Z-Offset, den Sie im Fluidd- oder Mainsail-Interface sehen, wird also immer **0,025mm MEHR** sein als der Wert, den Sie auf dem Druckerbildschirm eingestellt haben. Das ist normal!
+> * Das Anpassen des Z-Offsets über Fluidd/Mainsail bei Verwendung des nativen Bildschirms ist nicht empfehlenswert, da der native Bildschirm nichts von der Existenz von Fluidd/Mainsail weiß.
 
 **Zweite wichtige Regel:**
 
