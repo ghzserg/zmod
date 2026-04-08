@@ -270,60 +270,64 @@ Ich empfehle die Verwendung globaler Parameter, die einmal konfiguriert und bei 
 
 Parameter `PRINT_LEVELING`:
 
-- Entfernt die Tabellenabbildung bei jedem Druckvorgang
-- Wenn Sie mit dem Bildschirm arbeiten, wird die Tabellenkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten. Wenn der Parameter 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1` lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird der Tabellenplan erfasst.
-- Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/de/Main/#start_print) im anfänglichen G-Code verwenden, wird der Tabellenplan ebenfalls bei jedem Druckvorgang gelöscht
+- Entfernt die Bettnetzkarte bei jedem Druckvorgang
+- Wenn Sie mit dem Bildschirm arbeiten, wird die Bettnetzkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten.
+- Wenn der Parameter 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1` lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird das Bettnetz erfasst.
+- Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/de/Main/#start_print) im anfänglichen G-Code verwenden, wird das Bettnetz ebenfalls bei jedem Druckvorgang gelöscht
 
-  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/de/Global/#zshaper)
+  Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/de/Global/#print_leveling)
 
-  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die Karte bei jedem Druck entfernt.
+  ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird das Bettnetz bei jedem Druck entfernt.
 
-  *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` -> ```Wifi-Symbol``` -> ```Netzwerkmodus``` -> schalten Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
+- Um die Bettnetzkarte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` -> ```Wifi-Symbol``` -> ```Netzwerkmodus``` -> aktivieren Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
 
-  *Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Schreibtischkarte beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
+- Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Bettnetzkarte beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
 
 Parameter `USE_KAMP`:
 
-- Adaptive table map removal (KAMP) kann aktiviert werden, dann wird nicht die gesamte Tabelle entfernt, sondern nur die Teile mit druckbaren Modellen.
+- Klipper Adaptive Meshing and Purging (KAMP) kann aktiviert werden, dann wird nicht das gesamte Bettnetz entfernt, sondern nur die Teile mit druckbaren Modellen.
   **Automatisches Table-Map-Skimming wird nicht ausgelöst!**. Dieser Parameter legt fest, dass bei Aufruf des Table Map Skimming stattdessen KAMP ausgeführt werden soll.
 
-  Um diese Funktion zu aktivieren, müssen Sie das Makro [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data) einmal konfigurieren, Parameter [USE_KAMP](/ru/Global/#zshaper)
+  Um diese Funktion zu aktivieren, müssen Sie das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data) einmal konfigurieren, Parameter [USE_KAMP](/de/Global/#use_kamp)
 
-  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(muss in der Fluidd/Mainsail Konsole eingegeben werden)*. In diesem Fall wird die adaptive Tabellenkarte verwendet, wo immer dies möglich ist, auch wenn die Tabellenkarte mit dem nativen Bildschirm über das Netzwerk erfasst wird.
+  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird die adaptive Bettnetzkarte verwendet, wo immer dies möglich ist, auch wenn die Bettnetzkarte mit dem nativen Bildschirm über das Netzwerk erfasst wird.
 
 ---
 
 #### Durch Änderung des Startcodes und des Makros START_PRINT
 
-Wenn Sie die globalen Parameter *(SAVE_ZMOD_DATA PRINT_LEVELING=0)* nicht verwenden wollen, stehen Ihnen die folgenden Parameter des Makros [START_PRINT](/ru/Main/#start_print), das im Start-G-Code geschrieben wird, zur Verfügung.
+Wenn Sie die globalen Parameter *(SAVE_ZMOD_DATA PRINT_LEVELING=0)* nicht verwenden wollen, stehen Ihnen die folgenden Parameter des Makros [START_PRINT](/de/Main/#start_print), das im Start-G-Code geschrieben wird, zur Verfügung.
 
 - FORCE_LEVELING - erzwingt den Aufbau einer Tabellenkarte, True - aufbauen, False - nicht aufbauen (False)
 - FORCE_KAMP - Start des Aufbaus der adaptiven Tabellenkarte, True - ja, False - nein (False).
 - SKIP_LEVELING - unter keiner Bedingung die Tabellenkarte aufbauen. Stärker als FORCE_KAMP und FORCE_LEVELING (False)
 - MESH - Name der zu ladenden Table Map, wenn nicht angegeben, wird nichts geladen, wenn sie nicht existiert, wird sie erstellt ("").
 
+!!! warning "Warnung"
+    Der Parameter FORCE_LEVELING oder FORCE_KAMP ist kein separates Makro, sondern ein Parameter des Startdruck-Makros.
+
 Beispiele:
 
-Entfernen einer kompletten Table Map:
+Entfernen des kompletten Bettnetz:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[Düsentemperatur_Einstiegsschicht]
+M104 S[nozzle_temperature_initial_layer]
 ```
 
-Entfernen der Karte der adaptiven Tabelle
+Entfernen des adaptiven Bettnetz:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[düse_temperatur_einzel_schicht]
+M104 S[nozzle_temperature_initial_layer]
 ```
 
-Algorithmus zum Entfernen der Tabellenkarte im Makro [START_PRINT](/ru/Main/#start_print):
+Algorithmus zum Entfernen der Bettnetzkarte im Macro [START_PRINT](/de/Main/#start_print):
 
 1. Wenn MESH nicht leer ist, wird die Karte mit dem im Parameter MESH angegebenen Namen geladen
-2. Wenn SKIP_LEVELING = True - wird die Tabellenkarte unter keinen Umständen entfernt
+2. Wenn `SKIP_LEVELING=True` - wird die Bettnetzkarte unter keinen Umständen entfernt
 3. Andernfalls, wenn `FORCE_CAMP=True` gesetzt ist, wird KAMP entfernt.
-4. Andernfalls, wenn die Tabellenkarte nicht geladen ist (der native Kopf lädt immer die `MESH_DATA` Karte) oder wenn `FORCE_LEVELING=True`, wird der Aufbau der Tabellenkarte gestartet, aber sie wird nicht selbst gespeichert
+4. Andernfalls, wenn die Bettnetzkarte nicht geladen ist (der native Kopf lädt immer die `MESH_DATA` Karte) oder wenn `FORCE_LEVELING=True`, wird der Aufbau der Bettnetzkarte gestartet, aber sie wird nicht selbst gespeichert
 
 ---
 
@@ -331,9 +335,9 @@ Algorithmus zum Entfernen der Tabellenkarte im Makro [START_PRINT](/ru/Main/#sta
 
 Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden wollen, stehen Ihnen die folgenden Makros zur Verfügung:
 
-- [AUTO_FULL_BED_LEVEL](/ru/Calibrations/#auto_full_bed_level) - Tischkartenentnahme mit Düsenreinigung bei einer bestimmten Tisch- und Extrudertemperatur. *Deaktiviert die Heizung nach der Kartenentnahme.
+- [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level) (Fluidd button `BED LEVELING`) - Entfernt das Bettnetz und reinigt die Düse bei der angegebenen Bett- und Extrudertemperatur. Die Heizung wird nach dem Entfernen des Bettnetz abgeschaltet.
 
-   Das gleiche Makro kann mit der Schaltfläche Fluidd/Mainsail aufgerufen werden, es heißt `TABLE CALIBRATION`. Nachdem Sie die Tischkarte bei einer bestimmten Temperatur entnommen haben, können Sie die Schaltfläche "Parameter speichern" drücken, und die Tischkarte wird in der Datei "printer.cfg" gespeichert.
+- Das gleiche Makro kann mit der Schaltfläche Fluidd/Mainsail aufgerufen werden, es heißt `BED CALIBRATION`. Nachdem Sie die Bettnetz bei einer bestimmten Temperatur entnommen haben, können Sie die Schaltfläche `Save Parameters` drücken, und die Bettnetzkarte wird in der Datei `printer.cfg` gespeichert.
 
    Sie kann auch in den Start-G-Code geschrieben werden:
    ```
@@ -342,28 +346,35 @@ Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden woll
    M104 S[Düsentemperatur_Einstiegsschicht]
    ```
 
-- [KAMP](/de/Kalibrierungen/#kamp) - Adaptive Tabellenkalibrierung mit Düsenreinigung
-  ```` KAMP EXTRUDER_TEMP=[düse_temperatur_anfangs_schicht] BED_TEMP=[bett_temperatur_anfangs_schicht_einzeln]````
+- [KAMP](/de/Calibrations/#kamp) - Adaptive Bettnetzkalibrierung mit Düsenreinigung
+  ```
+  EXTRUDER_TEMP=[nozzle_temperature_initial_layer]
+  BED_TEMP=[bed_temperature_initial_layer_single]
+  ```
 
-- BED_MESH_CALIBRATE - Entfernung der Tabellenkarte durch das Standard-Klipper-Makro. **Es wird nicht empfohlen, es zu verwenden**, da keine Düsenreinigung durchgeführt wird, so dass die Ergebnisse falsch sein werden. **Adaptive Table Map von Orca, überhaupt nicht empfohlen**, da sie die Punktentfernung nicht zufällig vornimmt, was bedeutet, dass die Düse beim Drucken identischer Modelle jedes Mal an denselben Punkten misst, was zum Auftreten von Mikrolöchern und infolgedessen zu einer falschen Table Map führt.
+- BED_MESH_CALIBRATE - Entfernung der Bettnetzkarte durch das Standard-Klipper-Macro.
+
+  **Es wird nicht empfohlen, es zu verwenden**, da keine Düsenreinigung durchgeführt wird, so dass die Ergebnisse falsch sein werden. **Adaptive Table Map von Orca, überhaupt nicht empfohlen**, da sie die Punktentfernung nicht zufällig vornimmt, was bedeutet, dass die Düse beim Drucken identischer Modelle jedes Mal an denselben Punkten misst, was zum Auftreten von Mikrolöchern und infolgedessen zu einer falschen Table Map führt.
+
+- Standard-Klipper-Macros (**nicht empfohlen**)
 
 ---
 
 #### Verwendung von Standard-KLIPPER-Befehlen
 
-Um mit MESH zu arbeiten, gibt es Standard-KLIPPER-Makros:
+Um mit MESH zu arbeiten, gibt es Standard-KLIPPER-Macros:
 
-- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Tabellenabbildung entfernen
-- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - Tabellenabbildung ausgeben
-- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - Tabellenabbildung laden, löschen, speichern
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Bettnetzkarte entfernen
+- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - Bettnetzkarte ausgeben
+- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - Bettnetzkarte laden, löschen, speichern
 
-Wenn Sie ein Kennfeld über KLIPPER-Befehle in das Stangenprofil laden, stellen Sie sicher, dass Sie dasselbe Kennfeld in `START_PRINT` und dem Stangenprofil verwenden, oder deaktivieren Sie die Düsenreinigung in START_PRINT und führen Sie sie separat über das Stangenprofil aus.
+Wenn Sie eine Druckbettkarte mithilfe von KLIPPER-Befehlen im Filamentprofil laden, stellen Sie sicher, dass Sie in `START_PRINT` und im Filamentprofil dieselbe Druckbettkarte verwenden. Alternativ können Sie die Düsenreinigung in START_PRINT deaktivieren und separat im Filamentprofil ausführen.
 
 Es wird dringend empfohlen, die Optionen für die Düsenreinigung zu lesen:
 
-- [CLEAR_NOZZLE](/de/Global/#clear_nozzle) - Düsenreinigung wie in nativer Firmware
-- Parameter [PRECLEAR](/ru/Global/#preclear) - Zusätzliche Düsenreinigung, wenn die Tischkarte entfernt wird.
-- Parameter [CLEAR](/ru/Global/#clear) - vier Algorithmen (Sie können Ihre eigenen hinzufügen) für die zeilenweise Düsenreinigung vor dem Druck.
+- [CLEAR_NOZZLE](/de/Main/#clear_nozzle) - Düsenreinigung wie in nativer Firmware
+- [PRECLEAR](/de/Global/#preclear) - Zusätzliche Düsenreinigung, wenn die Bettkarte entfernt wird.
+- [CLEAR](/de/Global/#clear) - vier Algorithmen (Sie können Ihre eigenen hinzufügen) für die zeilenweise Düsenreinigung vor dem Druck.
 
 ---
 
@@ -373,22 +384,24 @@ Niemand mag/will die Dokumentation lesen, obwohl 90% der Fragen in ihr gelöst u
 
 Diejenigen, die sie nicht lesen, sagen auch gerne, dass sie alles gelesen haben.
 
-Deshalb habe ich die Namen der Tiere *opossum* in den Text gestreut und werde sie fragen, wenn sie eine andere Frage aus der Dokumentation stellen. Wenn Sie das Tier, das für Ihre Frage im Text versteckt war, nicht nennen konnten, dann haben Sie die Dokumentation nicht gelesen.
+Deshalb habe ich die Namen der Tiere *opossum* im Text verteilt und werde sie fragen, wenn sie eine andere Frage aus der Dokumentation stellen. Wenn Sie das Tier, das für Ihre Frage im Text versteckt war, nicht nennen konnten, dann haben Sie die Dokumentation nicht gelesen.
 
 Wenn Sie hierher verwiesen wurden. Lesen Sie die Dokumentation und nennen Sie das Tier, das auf Ihrer Frage steht, und Sie werden auf jeden Fall Hilfe bekommen:
 
 - [Häufig gestellte Fragen](/de/FAQ/)
 - [Tipps zur Verbesserung der Druckerstabilität](/de/Recomendations/)
-- [Mod installieren/verbessern/deinstallieren](/ru/Setup/)
-- [Makro-Liste](/ru/Makros/)
-- Speichereinstellungen](#storage-settings)
-- Bekannte Funktionen](#known-features)
+- [Mod installieren/verbessern/deinstallieren](/de/Setup/)
+- [Makro-Liste](/de/Macros/)
+- [Speichereinstellungen](de/FAQ/#speichern-von-einstellungen)
+- [Bekannte Funktionen](/de/FAQ/#bekannte-funktionen)
 
 ---
 
 ### Ich möchte Z-Mod löschen - muss ich alles neu kalibrieren?
 
 Nein - alle Einstellungen bleiben erhalten
+
+----
 
 ### Was ist eine alternative Kamera?
  
