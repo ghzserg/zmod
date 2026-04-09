@@ -218,7 +218,7 @@ Druck unterbrechen
 
 ---
 
-### FORTSETZEN
+### RESUME
 
 Wiederaufnahme des Drucks nach einer Unterbrechung
 
