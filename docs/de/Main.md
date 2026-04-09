@@ -172,7 +172,7 @@ gcode:
 
 ---
 
-### ABBRUCH
+### CANCEL
 
 Drucken abbrechen
 
