@@ -527,7 +527,7 @@ No - all settings are saved
 
 ### Entware in Z-Mod: How to Use It
 
-**Warning! There is no Entware in [AD5X](/ru/AD5X/)**
+**Warning! There is no Entware in [AD5X](/AD5X/)**
 
 1. SSH into the printer (`root`:`root`, port `22`).
 2. Run:
@@ -554,7 +554,7 @@ No - all settings are saved
 
 #### AD5X
 
-[AD5X](/ru/AD5X/)
+[AD5X](/AD5X/)
 
 ---
 
@@ -618,8 +618,7 @@ WeightValue is the value on the load cells in grams. It is displayed in degrees,
 
 What is this sensor for?
 
- It can be used to measure zoffset via the [g28_tenz](https://github.com/ghzserg/g28_tenz) plugin
-
+- It can be used to measure zoffset via the [g28_tenz](https://github.com/ghzserg/g28_tenz) plugin
 - You can stop printing if the nozzle hits the part or the part is torn off. [NOZZLE_CONTROL](/ru/Global/#nozzle_control)
 - Without resetting it, the table map will be measured incorrectly.
 
@@ -632,7 +631,7 @@ Here are some errors that depend on the MCU:
 - MCU Protocol error
 - Unknown temperature sensor flashforge_loadcell
 - Required MCU command
-- flashforge_loadcell: Required MCU command 'flashforge_loadcell_h1' is not available
+- flashforge_loadcell: Required MCU command `flashforge_loadcell_h1` is not available
 
 The essence of all these errors is that the Klipper version does not match the MCU version.
 
@@ -648,7 +647,7 @@ Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipp
 
 If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (Ad5M/Ad5mPro).
 
-[Switch to Native Klipper](/en/Native_FW/#fix_klipper)
+[Switch to Native Klipper](/Native_FW/#fix_klipper)
 
 Accordingly, Z-Mod needs to load native Klipper.
 
@@ -662,7 +661,7 @@ If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - t
 
 If all else fails and **Klipper isn't working**:
 
-- [Switch to Native Klipper](/en/Native_FW/#fix_klipper)
+- [Switch to Native Klipper](/Native_FW/#fix_klipper)
 - [Install the native Factory firmware](/Native_FW/#how-to-install-native-firmware), which will install the native MCU.
 
 ---
