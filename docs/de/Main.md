@@ -266,7 +266,7 @@ Implementierung: @darksimpson.
 
 ### NEW_SAVE_CONFIG
 
-Ruft `SAVE_CONFIG` vom nativen Bildschirm aus auf. Kann verwendet werden, um den Clipper neu zu starten, ohne den nativen Bildschirm aufzuhängen.
+Ruft `SAVE_CONFIG` vom nativen Bildschirm aus auf. Kann verwendet werden, um den Klipper neu zu starten, ohne den nativen Bildschirm aufzuhängen.
 
 Implementierung: @darksimpson.
 

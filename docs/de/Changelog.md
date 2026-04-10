@@ -231,7 +231,7 @@ Unterstützung für Interface-Sprachen:
       - Keine PID-Tabellen-Kalibrierung, da es dort keine PID gibt
       - Beim Aktivieren der Kamera muss VIDEO3 angegeben werden
       - Keine Wägezellen, daher kein Tabellenschutz und keine Rückstellung der Wägezellen.
-      - Kein Filament-Bewegungssensor vom Clipper verfügbar
+      - Kein Filament-Bewegungssensor vom Klipper verfügbar
 
 ### Version 1.4.0
 04.03.2025
@@ -415,7 +415,7 @@ Unterstützung für Interface-Sprachen:
 - Neustart über fluidd-Topmenü
 - Fehlerbehebungen
 - Große Überarbeitung des Makros [START_PRINT](/de/Main/#start_print)
-- Makro [NEW_SAVE_CONFIG](/de/Macros/#new_save_config) - speichert Änderungen/lädt den Clipper ohne Einfrieren des Bildschirms. @darksimpson's Implementierung
+- Makro [NEW_SAVE_CONFIG](/de/Macros/#new_save_config) - speichert Änderungen/lädt den Klipper ohne Einfrieren des Bildschirms. @darksimpson's Implementierung
 - Makro [CLOSE_DIALOGS](/de/Macros/#close_dialogs) - schließt Fenster, wenn der Druck beendet ist und wenn der Druck abgebrochen wird. Implementierung durch @darksimpson
 - Makro [STOP_ZMOD](/de/Macros/#stop_zmod) - Moonraker abschalten
 - Makro [START_ZMOD](/de/Macros/#start_zmod) - Moonraker einschalten
@@ -489,7 +489,7 @@ Unterstützung für Interface-Sprachen:
 ### Version 0.1.1
 27.11.2024
 
-- Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Clipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und die Tabellenkarte aus dem Standardprofil wird geladen.
+- Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Klipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und die Tabellenkarte aus dem Standardprofil wird geladen.
 - Makros [MEM](/de/Makros/#mem) - zeigt an, wie viel Speicher verwendet wird und von welcher Anwendung.
 - Makro [DISPLAY_ON](/de/System/#display_on) - setzt den Bildschirm in den Standardmodus zurück, der Drucker wird neu gestartet
 - Makro [LED](/de/Makros/#led) - schaltet die Hintergrundbeleuchtung bei 50% ein

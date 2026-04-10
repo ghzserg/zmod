@@ -343,7 +343,7 @@ M104 S[nozzle_temperature_initial_layer]
 
 ---
 
-#### Using Standard Clipper Commands
+#### Using Standard Klipper Commands
 
 To work with MESH, there are standard KLIPPER macros:
 

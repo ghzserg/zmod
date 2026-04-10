@@ -26,7 +26,7 @@ Unterschiedliche Philosophie.
 * KlipperMod ist im Wesentlichen eine alternative Firmware-Implementierung.
 * Z-Mod ist ein minimaler Eingriff in die native Firmware. Alle Funktionen der nativen Firmware werden beibehalten.
 
-Deshalb wird es keine G17, G18, G19 in Z-Mod geben - obwohl das einfach ist. Es wird keine Updates für den nativen Clipper geben, keine Umbenennung oder Änderung von Standardmakros, Einstellungen, Pin-Namen usw.
+Deshalb wird es keine G17, G18, G19 in Z-Mod geben - obwohl das einfach ist. Es wird keine Updates für den nativen Klipper geben, keine Umbenennung oder Änderung von Standardmakros, Einstellungen, Pin-Namen usw.
 
 Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Das heißt, Z-Mod verwendet einige Makros und Skripte von KlipperMod, und nutzt auch Entwicklungen von KlipperMod. Aber Sie sollten von Z-Mod kein ähnliches Verhalten wie von KlipperMod erwarten.
 
