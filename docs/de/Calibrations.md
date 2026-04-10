@@ -13,24 +13,24 @@ Es kann aufgerufen werden durch:
 ---
 
 !!! Tipp
-    [Druckerkalibrierung für Anfänger](/de/SetupCalibrations/#Drucker-Kalibrierung-fuer-Anfänger)
+    [Druckerkalibrierung für Anfänger](/de/SetupCalibrations/#drucker-kalibrierung-für-einsteiger)
 
 ---
 
 ### BED_LEVEL_SCREWS_TUNE
 
-Tischschrauben kalibrieren ([manuell](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe))
+Bettnivellierungsschrauben ([manuell](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe))
 
-- EXTRUDER_TEMP - Extrudertemperatur (240)
-- BED_TEMP - Tischtemperatur (80)
+- `EXTRUDER_TEMP` - Extrudertemperatur `(Standard: 240)`
+- `BED_TEMP` - Tischtemperatur `(Standard: 80)`
 
-Misst den Abstand zwischen der Düse und den Schrauben und gibt Hinweise zum Anziehen der Schrauben. Dann speichert es die Temperaturen, damit es nicht erneut aufheizen muss, wartet darauf, dass der Benutzer die Schnecken einstellt und drückt erneut die Kalibriertaste. Wenn die Kalibrierung beendet ist, muss der Benutzer die Temperatur selbst zurücksetzen.
+Das Gerät misst den Abstand zwischen Düse und Bettschrauben, gibt Einstellhinweise, speichert die Temperaturen, um ein erneutes Aufheizen zu vermeiden, und wartet auf die Bestätigung des Benutzers. Nach Abschluss des Vorgangs müssen die Temperaturen manuell zurückgesetzt werden.
 
 ---
 
 ### LOAD_CELL_TARE
 
-Gewicht der Wägezellen zurücksetzen. Wird während der Tabellenkalibrierung aufgerufen
+Gewicht der Wägezellen zurücksetzen. Wird während der Bettkalibrierung aufgerufen
 
 ---
 
@@ -38,7 +38,7 @@ Gewicht der Wägezellen zurücksetzen. Wird während der Tabellenkalibrierung au
 
 Kalibrierung der Tabelle PID
 
-- TEMPERATURE - Temperatur der Tabelle (80)
+- `TEMPERATUR` — BED Temperatur (default: `80`)
 
 Nach der Kalibrierung wird `SAVE_CONFIG` aufgerufen, siehe auch [NEW_SAVE_CONFIG](/de/Main/#new_save_config)
 
@@ -53,8 +53,8 @@ PID_CALIBRATE HEATER=heater_bed TARGET={Temperatur}
 
 Kalibrierung der Extruder-PID
 
-- TEMPERATURE - Temperatur des Extruders (245)
-- COOLER - Lüftergeschwindigkeit 0-100 (100)
+- `TEMPERATUR` – Extrudertemperatur (Standard: `245`)
+- `KÜHLER` – Lüfterdrehzahl (0–100, Standard: `100`)
 
 Kalibrieren Sie den PID auf die Temperatur, bei der Sie drucken, und auf die Gebläsestufe, die Sie verwenden.
 
@@ -69,14 +69,13 @@ PID_CALIBRATE HEATER=extruder TARGET={Temperatur}
 
 ### ZSHAPER
 
-Shaper Kalibrierung.
+Kalibrierung des Input Shaper(Ressonanzmessung).
 
-Shaper-Bilder befinden sich auf der Registerkarte "Konfiguration" -> mod_data
+Die Ergebnisse werden gespeichert in `Maschine` -> `mod_data`:
 
-- kalibrierung_data_x.png
-- kalibrierung_daten_y.png
-
-Die Csv-Dateien befinden sich ebenfalls dort.
+- `calibration_data_x.png`
+- `calibration_data_y.png`
+- CSV-Dateien
 
 Lesen Sie über [fix_scv](/de/Global/#fix_scv)
 
@@ -88,50 +87,53 @@ Lesen Sie über [fix_scv](/de/Global/#fix_scv)
 
 Führt einen speziellen Halbachsentest durch, um die Frequenzprofile der einzelnen Bänder auf CoreXY-Druckern zu analysieren und zu vergleichen
 
-SPECTROGRAM - 0 - kein Spektrogramm erstellen, 1 - Spektrogramm erstellen (1)
+- `SPEKTROGRAMM` — `0` = Spektrogramm deaktivieren, `1` = aktivieren (Standard: `1`)
 
-Erfordert 256 Megabyte RAM und SWAP aktiviert
+**Anforderungen:**
+
+- 256 MB RAM
+- Swap aktiviert
 
 ---
 
 ### KAMP
 
-Adaptive Tischkalibrierung mit Düsenreinigung
+Adaptive Bettnetzkalibrierung mit Düsenreinigung.
+Parameter:
 
-- EXTRUDER_TEMP - Extrudertemperatur (240)
-- BED_TEMP - Tischtemperatur (80)
+- `EXTRUDER_TEMP` – Extrudertemperatur (Standard: `240`)
+- `BED_TEMP` – Betttemperatur (Standard: `80`)
 
 Fügen Sie die erste Zeile in Orca hinzu
 ```
-KAMP EXTRUDER_TEMP=[Düsentemperatur_Anfangsschicht] BED_TEMP=[Betttemperatur_Anfangsschicht_Einzel]
+KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-Aber es ist besser, [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#start_print) zu verwenden PRINT_LEVELING=1 USE_KAMP=1
+**Empfohlen:** Verwenden Sie [START_PRINT](/de/Main/#start_print) mit `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` und `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, um die Spülbereiche zu nutzen.
 
-Es wird auch empfohlen, `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, was es Ihnen ermöglicht, den Aufräumraum zu nutzen, in dem die Tabellenkarte entfernt wird.
-
-[Was sind die Optionen zum Entfernen der Tabellenkarte?](/de/FAQ/#what-are-the-options-for-removing-the-table-card)
+[Optionen zur Bettnivellierung](/de/FAQ/#welche-optionen-stehen-für-die-bettnivellierung-zur-verfügung)
 
 ---
 
 ### AUTO_FULL_BED_LEVEL
 
-Tabellenkalibrierung mit Düsenreinigung
+Vollständige Bettnivellierung mit Düsenreinigung.
+Parameter:
 
-- EXTRUDER_TEMP - Extruder-Temperatur (230)
-- BED_TEMP - Tischtemperatur (80)
-- PROFILE - für welches Profil (auto)
+- `EXTRUDER_TEMP` – Extrudertemperatur (Standard: `230`)
+- `BED_TEMP` – Betttemperatur (Standard: `80`)
+- `PROFILE` – Name des Netzprofils (Standard: `auto`)
 
 Fügen Sie die erste Zeile in Orca ein
 ```
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[Düsentemperatur_Einstiegsschicht]
+M104 S[nozzle_temperature_initial_layer]
 ```
 
-Es ist jedoch besser, [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Goabal/#start_print) zu verwenden PRINT_LEVELING=1
+**Empfohlen:** Verwenden Sie [START_PRINT](/de/Main/#start_print) mit `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
-[Was sind die Optionen zum Entfernen einer Tabellenkarte?](/de/FAQ/#what-are-the-options-for-removing-a-table-card)
+[Optionen zur Bettnivellierung](/de/FAQ/#welche-optionen-stehen-für-die-bettnivellierung-zur-verfügung)
 
 ---
 
@@ -139,4 +141,4 @@ Es ist jedoch besser, [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](
 
 Übertragen der Z-Offset-Einstellungen vom nativen Bildschirm in den No-Screen-Modus
 
-[Wie Z-Offset auf Ihrem Drucker funktioniert](/de/SetupCalibrations/#wie-z-offset-auf-ihrem-drucker-arbeitet)
+[Wie funktioniert Z-Offset auf Ihrem Drucker](/de/SetupCalibrations/#wie-funktioniert-z-offset-auf-ihrem-drucker)
