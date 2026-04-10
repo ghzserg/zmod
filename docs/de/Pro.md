@@ -18,7 +18,7 @@ Interne Zirkulation einschalten
 
 ---
 
-### LUFT_UMLUFT_EXTERN
+### AIR_CIRCULATION_EXTERNAL
 
 Externe Umluft einschalten
 
