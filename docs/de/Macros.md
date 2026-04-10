@@ -5,7 +5,7 @@ Ein Makro ist ein kleines Programm in der Klipper/Gcode-Sprache.
 Es kann aufgerufen werden:
 
 - Aus der GCODE-Datei
-- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
+- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben `C` in Fluidd)
 
 !!! Hinweis
     *Der Wert in Klammern ist der Standardwert.
@@ -13,10 +13,10 @@ Es kann aufgerufen werden:
 ---
 
 ### AIR_CIRCULATION_EXTERNAL
-[LUFT_ZIRKULATION_EXTERN](/de/Pro/#Luft_ZIRKULATION_EXTERN)
+[AIR_CIRCULATION_EXTERNAL](/de/Pro/#AIR_CIRCULATION_EXTERNAL)
 
 ### LUFT_UMLUFT_INTERN
-[LUFT_KREISLAUF_INTERN](/de/Pro/#Luft_KREISLAUF_INTERN)
+[AIR_CIRCULATION_INTERNAL](/de/Pro/#air_circulation_internal)
 
 ### AIR_CIRCULATION_STOP
 [AIR_CIRCULATION_STOP](/de/Pro/#air_circulation_stop)
@@ -141,7 +141,7 @@ Es kann aufgerufen werden:
 ### SAVE_ZMOD_DATA
 [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data)
 
-### SET_PAUSE_AM_LAYER
+### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](/de/Filament/#set_pause_at_layer)
 
 ### SET_PAUSE_NEXT_LAYER
@@ -199,7 +199,7 @@ Es kann aufgerufen werden:
 [ZSSH_RESTART](/de/Zmod/#zssh_restart)
 
 ### FIX_E0011
-[E0011](/de/Global/#fix_e0017)
+[E0011](/de/Global/#fix_e0011)
 
 ### FIX_E0017
 [E0017](/de/Global/#fix_e0017)
