@@ -228,7 +228,7 @@ Wiederaufnahme des Drucks nach einer Unterbrechung
 
 MIDI-Datei abspielen
 
-- FILE - Dateiname (For_Elise.mid) Dateien werden in mod_data/midi/ gespeichert
+- `FILE` - Dateiname (Standard: `For_Elise.mid`) Dateien werden in mod_data/midi/ gespeichert
 
 ---
 
