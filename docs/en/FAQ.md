@@ -251,38 +251,113 @@ If you want to use a different card for printing (e.g., `PETG_75`), then:
 - Pre-level using [AUTO_FULL_BED_LEVEL](/Calibrations/#auto_full_bed_level). E.g., `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh`
 
 #### Via global parameters
-Use `PRINT_LEVELING` and `USE_KAMP` parameters. Enable with:
-```
-SAVE_ZMOD_DATA PRINT_LEVELING=1
-SAVE_ZMOD_DATA USE_KAMP=1
-```
+
+I recommend using global parameters that are configured once and used for every print job. In this case, it is not necessary to change the start and end G-code.
+
+Parameter `PRINT_LEVELING`:
+
+- Removes the bed mesh map on every print job
+- When working with the screen, the bed mesh map is removed from the native screen, as if you had selected a file on the screen and checked the `LEVELING` checkbox.
+- If the parameter is set to `SAVE_ZMOD_DATA PRINT_LEVELING=1`, when sending files via Orca/Fluidd/Mainsail, the printer assumes you have selected the file to be printed on the original screen and checked the "Orientation" checkbox. In this case, the bed mesh is captured every time you print.
+- When working in non-native screen mode and using the macro [START_PRINT](/Main/#start_print) in the initial G-code, the bed mesh is also cleared on every print job.
+
+To activate this function, you must first enter the macro [SAVE_ZMOD_DATA](/Global/#save_zmod_data) and the parameter [PRINT_LEVELING](/Global/#print_leveling)
+
+```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(**must be entered in the Fluidd/Mainsail console**)*. In this case, the bed mesh will be removed with every print.
+
+- To remove the bed mesh map from the native screen, go to ```Settings``` -> ```Wi-Fi icon``` -> ```Network mode``` -> enable the slider for ````Local networks only```` via the printer screen menu.
+
+- When this option is enabled, all START_PRINT parameters related to creating/using a bed mesh map (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH) will be ignored.
+
+Parameter `USE_KAMP`:
+
+- Klipper Adaptive Meshing and Purging (KAMP) can be enabled. This means that only the parts containing printable models are removed from the entire bed mesh.
+
+**Automatic table map skimming is not triggered!** This parameter specifies that KAMP should be executed instead of table map skimming.
+
+To enable this feature, you must configure the macro [SAVE_ZMOD_DATA](/Global/#save_zmod_data) once, parameter [USE_KAMP](/Global/#use_kamp)
+
+```SAVE_ZMOD_DATA USE_KAMP=1``` *(**must be entered in the Fluidd/Mainsail console**)*. In this case, the adaptive bed mesh map is used wherever possible, even if the bed mesh map is captured over the network using the native screen.
 
 ---
 
 #### By modifying the start code and START_PRINT macro
+
+If you do not want to use the global parameters *(SAVE_ZMOD_DATA PRINT_LEVELING=0)*, the following parameters of the macro [START_PRINT](/de/Main/#start_print), which is written in the start G-code, are available.
+
+- FORCE_LEVELING - forces the creation of a table map; True - create, False - do not create.
+- FORCE_KAMP - starts the creation of the adaptive table map; True - yes, False - no.
+- SKIP_LEVELING - never create the table map. Stronger than FORCE_KAMP and FORCE_LEVELING.
+- MESH - name of the table map to load; if not specified, nothing is loaded; if it does not exist, it is created.
+
 Examples:
 
-!!! warning
-    The parameter FORCE_LEVELING or FORCE_KAMP is not a separate macro, but a parameter of the Start Print Macro.
+Removing the entire Bedmesh:
+```
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
+M190 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
+```
 
-- Full leveling:
-  ```
-  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
-  ```
+Removing the adaptive Bedmesh:
+```
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
+M190 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
+```
 
-- Adaptive leveling:
-  ```
-  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
-  ```
+Algorithm for removing the bed net map in the macro [START_PRINT](/Main/#start_print):
+
+1. If MESH is not empty, the map with the name specified in the MESH parameter is loaded.
+2. If `SKIP_LEVELING=True`, the bed net map is never removed.
+3. Otherwise, if `FORCE_CAMP=True` is set, KAMP is removed.
+4. Otherwise, if the bed net map is not loaded (the native header always loads the `MESH_DATA` map) or if `FORCE_LEVELING=True`, the bed net map is built, but it is not saved.
 
 ---
 
 #### Via macros and buttons in Fluidd
-Use:
 
-- [AUTO_FULL_BED_LEVEL](/Calibrations/#auto_full_bed_level) (Fluidd button `BED LEVELING`)
-- [KAMP](/Calibrations/#kamp)
+If you don't want to use the START_PRINT macro and global parameters, the following macros are available:
+
+- [AUTO_FULL_BED_LEVEL](/Calibrations/#auto_full_bed_level) (Fluidd button `BED LEVELING`) - removes the bed map and cleans the nozzle at a specified bed and extruder temperature. Turns off heating after removing the bed map.
+
+- This same macro can be called using the Fluidd/Mainsail button; it's called `BED CALIBRATION`. After removing the bed map at a specified temperature, you can click the `Save Parameters` button, and the bed map will be saved to the `printer.cfg` file.
+
+It can also be written into the startup G-code:
+```
+AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+M190 S[bed_temperature_initial_layer_single]
+M104 S[nozzle_temperature_initial_layer]
+```
+
+- [KAMP](/Calibrations/#kamp) - Adaptive bed calibration with nozzle cleaning
+  ```
+  EXTRUDER_TEMP=[nozzle_temperature_initial_layer]
+  BED_TEMP=[bed_temperature_initial_layer_single]
+  ```
+
+- BED_MESH_CALIBRATE - Mesh removal using the standard clipper macro.
+  **Not recommended**, as it does not clean the nozzle, resulting in incorrect results. **Orca's adaptive bed map is not recommended** at all, as it lacks randomization of point measurements, meaning that when printing identical models, the nozzle will consistently take measurements at the same points, resulting in micro-holes and, consequently, an incorrect bed map.
+
 - Standard Klipper macros (**not recommended**)
+
+---
+
+#### Using Standard Clipper Commands
+
+To work with MESH, there are standard KLIPPER macros:
+
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Remove bed mesh map
+- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - Output bed mesh map
+- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - Load, delete, and save bed mesh maps
+
+When loading a print bed map using KLIPPER commands in the filament profile, ensure you use the same print bed map in both START_PRINT and the filament profile. Alternatively, you can disable nozzle cleaning in START_PRINT and perform it separately in the filament profile.
+
+It is strongly recommended that you review the nozzle cleaning options:
+
+- [CLEAR_NOZZLE](Main/#clear_nozzle) – Nozzle cleaning as in the native firmware.
+- [PRECLEAR](/Global/#preclear) – Additional nozzle cleaning when removing the print bed map.
+- [CLEAR](/Global/#clear) – Four algorithms (you can add your own) for cleaning the nozzle line before printing.
 
 ---
 
@@ -294,7 +369,14 @@ Documentation is often unread, though 90% of questions are answered here. To ver
 - [Recommendations](/Recomendations/)
 - [Setup/Update/Uninstall](/Setup/)
 - [Macros](/Macros/)
+- [Configuration Storage](/FAQ/#configuration-storage)
 - [Known Issues](#known-peculiarities)
+
+---
+
+### I want to remove Z-Mod - I have to recalib?
+
+No - all settings are saved
 
 ---
 
@@ -516,12 +598,6 @@ Settings-> Software updates-> Press Check for update
 - Reboot the printer
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
-
----
-
-### I want to remove Z-Mod - I have to recalib?
-
-No - all settings are saved
 
 ---
 
