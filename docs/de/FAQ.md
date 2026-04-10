@@ -409,15 +409,15 @@ Die native Kamera, die über den Bildschirm eingeschaltet wird, hat eine Reihe v
 
 - Hoher RAM-Verbrauch
 - Schlechte Bildqualität
-- Nur eine Verbindung zur Kamera. Sobald Sie sie in Ork öffnen, wird sie im Browser nicht mehr angezeigt
+- Nur eine Verbindung zur Kamera. Sobald Sie sie in Orca Slicer öffnen, wird sie im Browser nicht mehr angezeigt
 - Regelmäßige Bildaussetzer
 
-Alternative Kamera, erlaubt die Änderung der Auflösung, fps, erlaubt mehrere Verbindungen, komprimiert das Bild nicht, einfaches Neustarten und Anpassen [macro](/ru/Zmod/#camera_on). *zayats*.
+Alternative Kamera, erlaubt die Änderung der Auflösung, fps, erlaubt mehrere Verbindungen, komprimiert das Bild nicht, einfaches Neustarten und Anpassen über die [Macro](/de/Zmod/#camera_on) funktion. *zayats*.
 
 - Deaktiviert die native Kamera auf dem Druckerbildschirm.
-- Rufen Sie das Makro [CAMERA_ON](/ru/Zmod/#camera_on)
+- Rufen Sie das Makro [CAMERA_ON](/de/Zmod/#camera_on)
 
-Lesen: [Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt!](#I-installed-a-printer-and-zmod-hid-my-camera-in-orca-ff-I-see-it-and-now-it's-gone).
+Lesen: [Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt!](#ich-habe-einen-drucker-installiert-und-z-mod-hat-meine-kamera-versteckt-ich-konnte-sie-in-orca-ff-sehen-aber-jetzt-ist-sie-weg).
 
 #### Kamera-Einrichtung
 
@@ -446,9 +446,9 @@ Der Parameter "STREAMER=auto" wählt den geeigneten Streamer aus.
 
 **Bildformate (nur für ustreamer)**
 
-Sie können wählen: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG.
+Folgende Formate stehen zur Auswahl: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG.
 
-Standardmäßig wird MJPEG verwendet.
+Standardmäßig wird **MJPEG** verwendet.
 
 **Befehlsbeispiele**
 
@@ -464,7 +464,7 @@ CAMERA_ON VIDEO=video0 STREAMER=ustreamer FORMAT=YUYV WIDTH=640 HEIGHT=480
 
 **Wo kann man das Bild sehen?**
 
-In einem Browser öffnen: `http://ip_адрес_принтера:8080`.
+In einem Browser öffnen: `http://printer_ip_address:8080`.
 
 Dort können Sie Helligkeit, Kontrast und andere Einstellungen ändern.
 
@@ -483,16 +483,16 @@ Das Programm zeigt eine Liste der verfügbaren Kameras an.
 
 ### Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich konnte sie in Orca-FF sehen, aber jetzt ist sie weg!
  
-In der Weboberfläche (fluidd) gehen Sie zu "Einstellungen" -> "Videokameras".
+In der Weboberfläche (fluidd) gehen Sie zu `Einstellungen` -> `Videokameras`.
 
 Dort gibt es bereits eine Videokamera, `Sample_Settings_Camera`. Gehen Sie zu ihr und sehen Sie sich die Einstellungen an.
 
-**Erstellen Sie eine neue Kamera** mit ähnlichen Einstellungen wie die Kamera "Beispiel_Einstellungen_Kamera":
+**Erstellen Sie eine neue Kamera** mit ähnlichen Einstellungen wie die Kamera `Sample_Settings_Camera`:
 
 - Streamtyp: `MJPEG-Stream`.
-- Stream-URL: `http://your_IP:8080/?action=stream`.
-- Schnappschuss-URL: `http://your_IP:8080/?action=snapshot`
-- your_IP - ersetzen Sie durch die IP-Adresse Ihres Druckers.
+- Stream-URL: `http://printer_ip_address:8080/?action=stream`.
+- Schnappschuss-URL: `http://printer_ip_address:8080/?action=snapshot`
+- printer_ip_address - ersetzen Sie durch die IP-Adresse Ihres Druckers.
 
 In Versionen, die älter sind als `1.4.3`, können Sie auch angeben:
 
@@ -500,17 +500,18 @@ In Versionen, die älter sind als `1.4.3`, können Sie auch angeben:
 - Stream-URL: `/webcam/?action=stream`.
 - Schnappschuss-URL: `/webcam/?action=snapshot`.
 
-Wenn Sie die Auflösung und die Bildrate anpassen, die Kamera des Telegram-Bots verwenden, den RAM-Verbrauch reduzieren oder parallele Verbindungen erlauben wollen, müssen Sie [alternative Kamera](/ru/Zmod/#camera_on) verwenden. *Kroot
+Wenn Sie die Auflösung und die Bildrate anpassen, die Kamera des Telegram-Bots verwenden, den RAM-Verbrauch reduzieren oder parallele Verbindungen erlauben wollen, müssen Sie [Alternative Kamera](/de/FAQ/#was-ist-eine-alternative-kamera) verwenden. *Kroot*
 
-Legen Sie auf dem Router eine *statische IP-Adresse für den Drucker* fest, sonst ändert sie sich und die Kamera stürzt ab.
+!!! info "Statische IP"
+    Legen Sie auf dem Router eine *statische IP-Adresse für den Drucker* fest, sonst ändert sie sich und die Kamera stürzt ab.
 
 ---
 
 ### Ich habe 2 Kameras / wie kann ich die Kamera deaktivieren/umkehren
 
-Wenn Sie keine Kamera haben, oder die automatischen Kameraeinstellungen Ihnen nicht zusagen, müssen Sie die Datei `mod_data/user.moonraker.conf` über Fluidd/Mainsail öffnen
+Wenn Sie keine Kamera haben, oder die automatischen Kameraeinstellungen Ihnen nicht zusagen, müssen Sie die Datei `mod_data/user.moonraker.conf` über Fluidd/Mainsail öffnen.
 
-Und hineinschreiben:
+Und fügen Sie folgendes hinzu:
 
 Um die Kamera zu deaktivieren:
 ```
@@ -529,9 +530,15 @@ Drehen: 90
 ### Ich habe die neueste Version installiert und der Entwickler sagt, dass ich ein Upgrade durchführen soll.
 
 - Vergewissern Sie sich, dass Sie die neueste Version vom Flash-Laufwerk installiert haben
-- Rufen Sie die Webschnittstelle auf. Einstellungen" -> "Software-Updates" -> Klicken Sie auf "Nach Update suchen".
+  
+- **Rufen Sie in Mainsail folgendes auf.**
+```
+  Maschine -> Update-Manger -> Klicken Sie auf Nach Update suchen.
+```
+
 - Aktualisieren Sie alle Komponenten von *treeflyer*.
-- Starten Sie den Drucker neu
+
+-  Starten Sie den Drucker neu
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -541,14 +548,14 @@ Drehen: 90
 
 Nach einem Neustart erscheint ein Fehler
 ```
-!! MCU 'eboard' Konfiguration kann nicht aktualisiert werden, da sie heruntergefahren ist
+!! Cannot update MCU 'eboard' config as it is shutdown
 ```
 
 Neustart des Druckers im abnormalen Betriebsmodus.
 
 Aus diesem Grund werden Sie aufgefordert, das Gerät aus- und wieder einzuschalten, wenn Sie die native Firmware installieren.
 
-Beim Neustart wird die MCU nicht von der Stromversorgung getrennt, was bedeutet, dass das in die MCU geschriebene Programm weiterläuft. Dieses Programm versucht, den Clipper zu kontaktieren, der während des Neustarts nicht verfügbar ist, und führt dazu, dass die MCU einfriert oder sich abschaltet.
+Beim Neustart wird die MCU nicht von der Stromversorgung getrennt, was bedeutet, dass das in die MCU geschriebene Programm weiterläuft. Dieses Programm versucht, mit Klipper zu kommunizieren, der während des Neustarts nicht verfügbar ist. Dies führt dazu, dass der MCU einfriert oder die Verbindung abbricht.
 
 In diesem Fall müssen Sie sich für eine Option entscheiden:
 
@@ -563,25 +570,24 @@ Der Unterschied zwischen `REBOOT` und `FIRMWARE_RESTART` ist, dass `REBOOT` Linu
 
 Welche Ports verwendet Z-Mod?
 
-- 7125" - dort befindet sich Moonraker.
-- 8080" - dort befindet sich die Kamera.
-- 80" - dort arbeitet Fluidd/Mainsail.
+- `7125` - dort befindet sich Moonraker.
+- `8080` - dort befindet sich die Kamera.
+- `80` - dort arbeitet Fluidd/Mainsail.
 
-Um auf den Drucker zuzugreifen, geben Sie einfach die Drucker-IP ein, **ohne die Portnummer anzugeben**. *Hase
+Um auf den Drucker zuzugreifen, geben Sie einfach die Drucker-IP ein, **ohne die Portnummer anzugeben**. *Hase*
 
-[Wie man in Orca konfiguriert](/de/Recomendations/#send-files-to-print-octoklipper)
+[Wie man in Orca konfiguriert](/de/Recomendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
 
 #### Ich habe das Webinterface umgestellt und jetzt funktioniert nichts mehr.
 
-Wenn du das Interface mit dem Makro [WEB](/ru/System/#web) umschaltest *whoosh*
+Wenn du das Interface mit dem Makro [WEB](/de/System/#web) umschaltest *whoosh*
 
-Das erste, was zu tun ist, ist `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` zu drücken.
+1. Das erste, was zu tun ist, ist `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` zu drücken.
 
-Wenn Sie ein Problem in Orca haben, müssen Sie `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` drücken *fox*
+2. Wenn Sie ein Problem in Orca haben, müssen Sie `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` drücken *fox*
 
-Wenn Sie einen anderen Browser verwenden, müssen Sie den Cache und die Cookies löschen und die IP-Adresse des Druckers ohne zusätzliche Zeichen in der Adressleiste aufrufen.
-
-http://ИП_ПРИНТЕРА/".
+3. Wenn Sie einen anderen Browser verwenden, müssen Sie den Cache und die Cookies löschen und die IP-Adresse des Druckers ohne zusätzliche Zeichen in der     Adressleiste aufrufen.
+    `http://PRINTER_IP/`
 
 Wenn dies nicht hilft, verwenden Sie einen anderen Browser: Firefox, Chrome, Yandex, Opera, etc.
 
@@ -589,7 +595,8 @@ Wenn dies nicht hilft, verwenden Sie einen anderen Browser: Firefox, Chrome, Yan
 
 ### Z-Mod enthält Entware - wie benutzt man es?
 
-**WARNUNG! Es gibt keine Entware** in [AD5X](/ru/AD5X/)
+!!! warning "Warunung"
+    **Es gibt keine Entware** in [AD5X](/de/AD5X/)
 
 Sie müssen sich per SSH mit dem Drucker verbinden (`root`:`root` port `22`)
 
@@ -621,47 +628,44 @@ Kataloge, die von entware erstellt und verwendet werden:
 
 ### Was ist ein Firmware Rückzug?
 
-Im Z-Mod in Fluidd/Mainsail gibt es Schieberegler, um die Geschwindigkeit und den Umfang des Rollbacks von der Firmware zu steuern.
+- In Z-Mod verfügt Fluidd/Mainsail über Schieberegler zur Anpassung von Rückzugsgeschwindigkeit und -distanz per Firmware. 
 
-Sie wirken sich nicht auf den Druck aus, wenn die G-Code-Datei ohne Verwendung von Rollback-Parametern aus der Firmware gesliced wird.
+- Diese Einstellungen wirken sich nur dann auf den Druck aus, wenn die G-Code-Datei mit aktiviertem Firmware-Rückzug gesliced ​​wurde.
 
-Mit dem Firmware-Rollback können Sie den Rollback-Wert während des Drucks ändern, ohne die gesamte Datei neu schneiden zu müssen.
+- Der Firmware-Rückzug ermöglicht die Anpassung des Rückzugs während des Druckvorgangs, ohne dass ein erneutes Slicen erforderlich ist.
 
-Anstelle von umständlichen Rollback-Befehlen wie "G1 E-.5 F2100" wird jetzt das kurze "G10" für den Rückzug verwendet, und anstelle von "G1 E.5 F2100" wird "G11" für den umgekehrten Rückzug verwendet.
+Anstelle von Befehlen wie `G1 E-.5 F2100` verwenden Sie `G10` zum Einziehen und `G11` zum Ausziehen.
 
-Um das Rollback aus der Firmware zu nutzen, muss in Orca.
+**Um dies in Orca zu aktivieren:**
+`Druckereinstellungen` -> `Allgemeine Informationen` -> `Erweitert` -> `Firmware-Rückzug` das Kontrollkästchen anklicken.
 
-Druckereinstellungen" -> "Allgemeine Informationen" -> "Erweitert" -> "Firmware-Rollback" das Kontrollkästchen anklicken.
-
-Wenn Sie die Standard-Rollback-Einstellungen in der Firmware ändern möchten:
-
-Über Fluidd. Konfiguration` -> `mod_data` -> `user.cfg`
+**So ändern Sie die Standardeinstellungen für den Rückzug:**
+Über Fluidd/Mainsail. (`Maschine` -> `mod_data` -> `user.cfg`)
 ```
 [firmware_retraction].
 retract_length: 0.9
-einziehen_Geschwindigkeit: 35
+retract_speed: 35
 unretract_extra_length: 0
 untract_speed: 35
 ```
 
-SET_RETRACTION" wird normalerweise als Teil der Slicer-Konfiguration für jedes Filament gesetzt, da verschiedene Filamente unterschiedliche Parametereinstellungen erfordern:
-SET_RETRACTION [RETRACT_LENGTH=<mm>] [RETRACT_SPEED=<mm/s>] [UNRETRACT_EXTRA_LENGTH=<mm>] [UNRETRACT_SPEED=<mm/s>]: Setzt die Parameter für den Rückzug.
+**`SET_RETRACTION` wird normalerweise als Teil der Slicer-Konfiguration für jedes Filament gesetzt, da verschiedene Filamente unterschiedliche Parametereinstellungen erfordern:**
+!!! info
+    SET_RETRACTION [RETRACT_LENGTH=<mm>] [RETRACT_SPEED=<mm/s>] [UNRETRACT_EXTRA_LENGTH=<mm>] [UNRETRACT_SPEED=<mm/s>]: Setzt die Parameter für den Rückzug.
 
-- RETRACT_LENGTH ist die Länge des Gewindes für Rückzüge und Retraktionen.
-- RETRACT_SPEED - Geschwindigkeit für den Rückzug.
-- UNRETRACT_SPEED - die Rückzugsgeschwindigkeit wird durch UNRETRACT_SPEED gesteuert und ist nicht besonders kritisch, obwohl sie oft niedriger ist als RETRACT_SPEED.
-- UNRETRACT_EXTRA_LENGTH - in manchen Fällen ist es nützlich, beim Zurückziehen eine kleine zusätzliche Länge hinzuzufügen.
+- `RETRACT_LENGTH` ist die Länge des Gewindes für Rückzüge und Retraktionen.
+- `RETRACT_SPEED` - Geschwindigkeit für den Rückzug.
+- `UNRETRACT_SPEED` - die Rückzugsgeschwindigkeit wird durch `UNRETRACT_SPEED` gesteuert und ist nicht besonders kritisch, obwohl sie oft niedriger ist       als `RETRACT_SPEED`.
+- `UNRETRACT_EXTRA_LENGTH` - in manchen Fällen ist es nützlich, beim Zurückziehen eine kleine zusätzliche Länge hinzuzufügen.
 
-Beispiel für die Einstellung von RETRACTION bei Orca:
-
-Balkenprofil" -> "Parameterüberschreibung" -> "RETRACT" -> "Länge".
-
-Balkenprofil -> `Zusätzlich` -> `Start G-Code des Balkens`
+**Beispiel in Orca:**
+`Filamentprofil` -> `Parameter überschreiben` -> `Rückzug` -> `Länge`
+`Filamentprofil` -> `Erweitert` -> `Start G-Code`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
-```GET_RETRACTION```: fragt die aktuellen Parameter ab, die beim Rollback verwendet werden und zeigt sie auf dem Terminal an.
+Verwenden Sie `GET_RETRACTION`, um die aktuellen Einstellungen anzuzeigen.
 
 Retract Substitutionsvariante von [@minicx](https://github.com/loss-and-quick/)
 ```
@@ -670,9 +674,9 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ---
 
-### AD5X
+### AD5X Einzelheiten
 
-[AD5X](/ru/AD5X/)
+[AD5X](/de/AD5X/)
 
 ---
 
@@ -680,7 +684,7 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ### Wie kontaktiere ich den Entwickler-Support?
 
-[Anleitung verschoben](/ru/Help/)
+[Kontakt](/de/Help/)
 
 ---
 
@@ -700,17 +704,17 @@ Starten Sie den Drucker 2 mal neu.
 
 Wenn Sie die Mod löschen, wird das ursprüngliche Logo wiederhergestellt. Wenn dies beim AD5M nicht geschehen ist:
 
-- Sie müssen die Mod installieren
+- Sie müssen die den Mod installieren
 - Laden Sie die Datei [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) in den Ordner "mod_data/logo" hoch.
 - Starten Sie den Drucker neu
 
 ---
 
-### Kein Auslöser an der Sonde nach voller Bewegung
+### Keine Auslösung der Sonde nach vollständiger Bewegung
 
-Der Fehler tritt vor allem dann auf, wenn der Hub der Z-Achse während der Antastung nicht ausreicht.
+Dieser Fehler tritt üblicherweise auf, wenn die z-Achse während der Messung nicht ausreichend angehoben wird.
 
-Er kann programmatisch wie folgt behoben werden:
+Dies lässt sich programmatisch wie folgt beheben:
 
 Geben Sie in ```mod_data/user.cfg``` ein.
 ```
@@ -718,19 +722,19 @@ Geben Sie in ```mod_data/user.cfg``` ein.
 horizontal_move_z: 5
 ```
 
-Hardware - alle Schrauben sollten eingestellt sein und der Tisch sollte keinen Versatz aufweisen.
+Hardware – alle Schrauben müssen eingestellt sein und das Bett darf nicht verzogen sein.
 
 ---
 
-### GewichtWert
+### Gewichtswert
 
-WeightValue ist der Wert auf den Wägezellen in Gramm. Er wird in Grad angezeigt, da er über die Temperatursensor-Schnittstelle implementiert ist. Daher zeigen Fluidd und Mainsail Grad an.
+Der Wert von **WeightValue** wird von den Wägezellen in Gramm angezeigt. Er wird in Grad dargestellt, da er über die Schnittstelle des Temperatursensors implementiert ist. Daher zeigen Fluidd und Mainsail Grad an.
 
 Warum brauchen Sie diesen Sensor?
 
 - Er kann verwendet werden, um den Z-Offset über das [g28_tenz](https://github.com/ghzserg/g28_tenz) Plugin zu messen.
 - Sie können den Druck stoppen, wenn die Düse ein Teil trifft oder ein Teil abgerissen wird. [NOZZLE_CONTROL](/de/Global/#nozzle_control)
-- Ohne Zurücksetzen ist die Messung der Tischkarte nicht korrekt.
+- Ohne eine Neukalibrierung wird das Bed Mesh falsch vermessen.
 
 ---
 
@@ -741,7 +745,7 @@ Hier sind einige Fehler, die von der MCU abhängen:
 - MCU-Protokoll-Fehler
 - Unbekannter Temperatursensor flashforge_loadcell
 - Erforderlicher MCU-Befehl
-- flashforge_loadcell: Erforderlicher MCU-Befehl 'flashforge_loadcell_h1' ist nicht verfügbar
+- flashforge_loadcell: Erforderlicher MCU-Befehl `flashforge_loadcell_h1`ist nicht verfügbar
 
 Die Essenz all dieser Fehler ist, dass die Klipper-Version nicht mit der MCU-Version übereinstimmt.
 
@@ -763,7 +767,7 @@ Sie brauchen also Z-Mod, um native Klipper zu laden.
 
 - Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klipper13 = 1```.
 - Speichern Sie die Datei
-- Schalten Sie den Drucker aus und schalten Sie ihn wieder ein (nicht neu starten!).
+- Schalten Sie den Drucker aus und schalten Sie ihn wieder ein (**nicht neu starten!**).
 
 <img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
 
@@ -772,13 +776,13 @@ Wenn dies nicht der Fall ist und Klipper läuft, dann führen Sie ```UPDATE_MCU 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 
 - [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
-- Installiere die native Werks-Firmware](/de/Native_FW/#how-to-install-native-firmware), was die native MCU installieren wird.
+- [Installiere die native Werks-Firmware](de/Native_FW/#so-installieren-sie-die-native-firmware), was die native MCU installieren wird.
 
 ---
 
 #### Das Filament ist ausgegangen oder wurde gestoppt
 
-Beim AD5M müssen Sie die Sensorstufen nach Auswahl kalibrieren. Schreiben Sie in `mod_data/user.cfg`.
+Bei AD5M müssen Sie die Sensorschritte durch Ausprobieren kalibrieren. Geben Sie dies ein in `mod_data/user.cfg`.
 
 Erhöhen Sie diese Zahl. Einige Leute sind mit dem Standard `8` zufrieden, und einige Sensoren arbeiten nur bei `17` korrekt.
 ```
@@ -786,7 +790,7 @@ Erhöhen Sie diese Zahl. Einige Leute sind mit dem Standard `8` zufrieden, und e
 Erkennung_Länge: 8
 ```
 
-Der Faden (IFS) ist stehen geblieben.
+Filament stau erkannt (IFS).
 
 Für AD5X müssen Sie die Schritte des IFS-Sensors durch Auswahl kalibrieren. Schreiben Sie in `mod_data/user.cfg`.
 
@@ -796,33 +800,34 @@ Erhöhen Sie diese Zahl. Einige Leute sind mit dem Standardwert `10` zufrieden, 
 detektion_länge: 8
 ```
 
-Auch das Anhalten des Fadens in IFS kann damit zusammenhängen:
+Darüber hinaus kann ein Filamentstopp im IFS folgende Ursachen haben:
 
-- Es ist ein Stab 1 im Extruder, und ein Stab 2 wird herausgezogen. Verwenden Sie [SET_EXTRUDER_SLOT](/de/AD5X/#5-how-to-manually-indicate-to-the-printer-which-coil-is-now-filled-ad5x).
-- In den Extruder ist ein Stab eingesetzt, in dem sich aber bereits der alte Stab befindet
-- Die 4-in-1-Module und die Schläuche zu ihnen haben unterschiedliche Längen, daher müssen Sie den Parameter ```filament_unload_into_tube``` in ```mod_data/filament.json``` anpassen, indem Sie ihn auf 70 oder mehr setzen. [Mehr lesen](/de/AD5X/#wichtigste-einstellungen-was-man-oft-ändern-muss-ad5x)
+- Der Extruder ist mit Spule 1 bestückt, Spule 2 wird jedoch herausgezogen. Verwenden Sie [`SET_EXTRUDER_SLOT`](/de/AD5X/#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist), um den aktuellen Extruder-Slot zu synchronisieren.
+- Neues Filament wird eingeführt, während sich altes Filament noch im Extruder befindet.
+- Die 4-in-1-Module und ihre Schläuche haben unterschiedliche Längen. Passen Sie daher den Wert für `filament_unload_into_tube` in `mod_data/filament.json` an. Setzen Sie ihn auf **70 oder höher**. [Mehr lesen](/de/AD5X/#10-ifs-befehle)
 
-Das Problem kann auch dadurch verursacht werden, dass der Balken im IFS-Kanal nicht entsperrt werden kann.
+Das Problem kann auch durch die **Unfähigkeit, das Filament im IFS-Kanal zu entriegeln** bedingt sein.
 
-Die Gründe dafür sind rein mechanisch:
+Mechanische Ursachen sind beispielsweise:
 
-- Eindringen von Kunststoffspänen auf die Klemmwelle
-- Abrutschen der Feder vom Kanalhebel.
+- Kunststoffspäne, die an der Andruckrollenwelle kleben.
+- Eine Feder, die sich vom IFS-Kanalhebel gelöst hat.
 
-Es ist notwendig, die Späne zu entfernen, die Teile zu demontieren und wieder einzubauen.
+!!! info "Lösung"
+    Entfernen Sie die Verunreinigungen, zerlegen Sie den Mechanismus und setzen Sie die Komponenten korrekt wieder zusammen.
 
-Testen Sie anschließend den Druck und die Verriegelung/Entriegelung der Stange über [IFS-Befehle](/ru/AD5X/#10-ifs-commands).
+Testen Sie nach der Reparatur den Druckvorgang und das Verhalten der Filamentverriegelung/-entriegelung mithilfe der [IFS-Befehle](/de/AD5X/#10-ifs-befehle).
 
 ---
 
-### Misst die Tabelle vor jedem Druckauftrag zentriert
+### Vor jedem Druckvorgang misst der Drucker die Mitte des Druckbetts.
 
 Vor dem Drucken misst der Drucker:
 
 - heizt er den Tisch und die Düse auf.
 - reinigt die Düse.
 - kühlt die Düse
-- ** misst die Mitte des Tisches** (Start des manuellen Z-Tasters. Verwenden Sie TESTZ, um die Position einzustellen)
+- **misst die Mitte des Tisches** (Start des manuellen Z-Tasters. Verwenden Sie TESTZ, um die Position einzustellen)
 - heizt die Düse
 - startet den Druck
 
@@ -833,8 +838,8 @@ Dies ist eine Funktion der **nativen Firmware** ab der Version **native Firmware
 
 Lösung:
 
-- [Native Firmware zurücksetzen](/ru/Native_FW/) auf Version **1.1.7.7** für AD5X, **3.2.3.3** für FF5M/FF5MPro
-- [Native Anzeige deaktivieren](/ru/System/#display_off)
+- [Native Firmware zurücksetzen](/de/Native_FW/) auf Version **1.1.7.7** für AD5X, **3.2.3.3** für FF5M/FF5MPro
+- [Native Anzeige deaktivieren](/de/System/#display_off)
 
 ---
 
@@ -854,7 +859,7 @@ Um zu sehen, was genau der Fehler ist:
 - gehen Sie auf die Konsole und lesen Sie den Fehlertext
 - Öffnen Sie den Telegram-Bot [@zmod_help_bot](http://t.me/zmod_help_bot) und geben Sie den Fehlertext ein oder suchen Sie selbst in der Dokumentation nach der Beschreibung.
 
-Wenn Sie den Fehler nicht beheben können, [müssen Sie ein Ticket erstellen](/ru/Help/).
+Wenn Sie den Fehler nicht beheben können, [müssen Sie ein Ticket erstellen](#wie-kontaktiere-ich-den-entwickler-support).
 
-[Einheimische Konfigurationen](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
+[Native Konfigurationen](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
 
