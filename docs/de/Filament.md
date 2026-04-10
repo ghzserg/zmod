@@ -29,7 +29,7 @@ Pause und Filament ersetzen
 
 ---
 
-### FARBE
+### COLOR
 
 * * nur AD5X * *
 
