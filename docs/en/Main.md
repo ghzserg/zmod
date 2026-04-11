@@ -63,7 +63,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ---
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#start_print)):
+#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#print-startbed-mapping-parameters-start_print)):
 
 - `PRECLEAR` — pre-nozzle cleaning in `CLEAR_NOZZLE`: `0` = disable, `1` = enable (default: `0`).
 - `CLEAR` — nozzle cleaning method (`LINE_PURGE`).
@@ -113,7 +113,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Replaces the default end G-code.
 
-#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#end_print)):
+#### Global flags (set via [`SAVE_ZMOD_DATA`](/Global/#print-endcancel-parameters-end_print)):
 
 - `AUTO_REBOOT` — auto-reboot after print (same as above).
 - `CLOSE_DIALOGS` — auto-close dialogs (same as above).
