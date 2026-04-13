@@ -131,6 +131,7 @@
 
 20. [Leia as recomendações](/pt/Recomendations/)
 21. [Read FAQ](/pt/FAQ/)
+22. [Calibrate the printer](/pt/SetupCalibrations/)
 
 ### Atenção AD5X
 

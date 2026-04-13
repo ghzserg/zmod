@@ -126,12 +126,13 @@
     
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
 
-20. [Povolit ověření MD5](Recomendations.md#enable-md5-checksum-control)
+20. [Povolit ověření MD5](/cs/Recomendations.md#enable-md5-checksum-control)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-21. [Přečtěte si doporučení](Recomendations.md)
-22. [Přečtěte si často kladené otázky](FAQ.md)
+21. [Přečtěte si doporučení](/cs/Recomendations.md)
+22. [Přečtěte si často kladené otázky](/cs/FAQ.md)
+23. [Calibrate the printer](/cs/SetupCalibrations/)
 
 ### Varování AD5X
 

@@ -132,6 +132,7 @@
 
 21. [Read the recommendations](/Recomendations/)
 22. [Read the FAQ](/FAQ/)
+23. [Calibrate the printer](/SetupCalibrations/)
 
 ### AD5X Warning
 
