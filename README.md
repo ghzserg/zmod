@@ -2,7 +2,6 @@
 
 <img width="698" height="291" alt="zmod logo" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
-
 [На русском](https://wiki.zmod.link/ru/)
 
 [https://zmod.link/](https://zmod.link/) [@zmod_help_bot](http://t.me/zmod_help_bot)
