@@ -1,6 +1,3 @@
 #!/bin/sh
 
 /mnt/tool
-
-
-
