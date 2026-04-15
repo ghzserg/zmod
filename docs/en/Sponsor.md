@@ -26,3 +26,5 @@ Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purch
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
 
+[Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
+- [@Wideopentuning](https://github.com/Wideopentuning)
