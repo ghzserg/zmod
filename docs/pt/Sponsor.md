@@ -25,3 +25,7 @@ Muito obrigado à comunidade [FF_5M_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) por ad
 - [@cackmobile](https://github.com/cackmobile)
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
+
+[Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
+
+- [@Wideopentuning](https://github.com/Wideopentuning)
