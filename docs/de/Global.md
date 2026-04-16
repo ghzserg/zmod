@@ -377,7 +377,7 @@ Beispiel: `SAVE_ZMOD_DATA MOTION_SENSOR=1`.
 
 ---
 
-##### STILLE
+##### SILENT
 
 Nur AD5X.
 
