@@ -139,7 +139,7 @@ Dieses Fenster öffnet sich **selbst**, wenn Sie den Druckvorgang starten.
 
 ### Globale AD5X-Parameter
 
-Verwenden Sie den globalen Parameter [SILENT](/de/Global/#stille), um zu verhindern, dass das Farbauswahlfenster beim Druckstart angezeigt wird.
+Verwenden Sie den globalen Parameter [SILENT](/de/Global/#silent), um zu verhindern, dass das Farbauswahlfenster beim Druckstart angezeigt wird.
 
 - 0 - Fenster anzeigen (Standard)
 - 1 - Fenster nicht anzeigen, vorher eingestellte Farben verwenden
@@ -171,7 +171,7 @@ Um das Filament nach Abschluss des Druckvorgangs zu entfernen, verwenden Sie den
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#erlaubte_werkzeug_anzahl).
+Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#allowed_tool_count).
 
 [Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
