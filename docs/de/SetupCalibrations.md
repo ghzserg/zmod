@@ -224,7 +224,7 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 3.  Das spart Zeit, ohne die Druckqualität zu beeinträchtigen.
 4.  Die Karte wird dichter und damit genauer.
 
-!!! info **"Wichtig"**
+!!! info "Wichtig"
     Ein wichtiges Merkmal des Verfahrens:
     Bei der Verwendung von KAMP (und auch bei der vollständigen Kalibrierung) verhält sich der Drucker auf intelligente Weise, um maximale Genauigkeit zu gewährleisten:
 
@@ -271,11 +271,11 @@ M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
 M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
 ```
 
-> [!IMPORTANT]
-> **Wichtig für die Arbeit vom systemeigenen Bildschirm aus:**
-> 
-> Um die Bettnivellierung über den Standardbildschirm des Druckers zu starten, müssen Sie das Bildschirmmenü aufrufen:
-> ```Einstellungen``` → ```Wifi-Symbol``` → ```Netzwerkmodus``` → den Schieberegler ```Nur lokale Netzwerke``` aktivieren.
+!!! warning "Wichtig"
+    **Wichtig für die Arbeit vom systemeigenen Bildschirm aus:**
+    
+    Um die Bettnivellierung über den Standardbildschirm des Druckers zu starten, müssen Sie das Bildschirmmenü aufrufen: 
+    ```Einstellungen``` → ```Wifi-Symbol``` → ```Netzwerkmodus``` → den Schieberegler ```Nur lokale Netzwerke``` aktivieren.
 
 **3. Intelligente Reinigung vor dem Drucken**
 
@@ -330,12 +330,12 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 5.  Der native Druckerbildschirm speichert den eingegebenen Wert selbst und wird ihn beim nächsten Druck verwenden.
 
-> [!IMPORTANT]
-> **Wichtig zu wissen:**
->
-> * Für den AD5M-Drucker wird auf dem nativen Bildschirm immer ein fester Wert von **0,025mm** zu Ihrem Wert hinzugefügt.
-> * Der Z-Offset, den Sie im Fluidd- oder Mainsail-Interface sehen, wird also immer **0,025mm MEHR** sein als der Wert, den Sie auf dem Druckerbildschirm eingestellt haben. Das ist normal!
-> * Das Anpassen des Z-Offsets über Fluidd/Mainsail bei Verwendung des nativen Bildschirms ist nicht empfehlenswert, da der native Bildschirm nichts von der Existenz von Fluidd/Mainsail weiß.
+!!! warning "Wichtig"
+    **Wichtig zu wissen:**
+    
+    * Für den AD5M-Drucker wird auf dem nativen Bildschirm immer ein fester Wert von **0,025mm** zu Ihrem Wert hinzugefügt.
+    * Der Z-Offset, den Sie im Fluidd- oder Mainsail-Interface sehen, wird also immer **0,025mm MEHR** sein als der Wert, den Sie auf dem Druckerbildschirm eingestellt haben. Das ist normal!
+    * Das Anpassen des Z-Offsets über Fluidd/Mainsail bei Verwendung des nativen Bildschirms ist nicht empfehlenswert, da der native Bildschirm nichts von der Existenz von Fluidd/Mainsail weiß.
 
 **Zweite wichtige Regel:**
 
@@ -372,13 +372,11 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertra
 * **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1``` aus.
 * Das System wird alles von selbst speichern. Sie brauchen sich um nichts zu kümmern.
 
-> [!WARNING]
-> 
->   Sie können `Z_OFFSET_APPLY_ENDSTOP` auf diesem Drucker nicht verwenden.
->    
->   Und Sie können es nicht ändern ```[probe] z_offset: ``` in ```printer.cfg``` oder ```printer.base.cfg```.
->    
->   Denn der native Bildschirm und das ```START_PRINT```-Makro laden den Offset zu Beginn des Drucks.
+!!! warning "Wichtig"
+    Sie können `Z_OFFSET_APPLY_ENDSTOP` auf diesem Drucker nicht verwenden.
+ 
+    Und Sie können es nicht ändern ```[probe] z_offset: ``` in ```printer.cfg``` oder ```printer.base.cfg```. 
+    Denn der native Bildschirm und das ```START_PRINT```-Makro laden den Offset zu Beginn des Drucks.
 
 ---
 
@@ -390,8 +388,7 @@ Wenn sich der Drucker schnell bewegt, kann er wie eine Maschine mit hoher Geschw
 
 Ihr Drucker hat bei der ersten Kalibrierung bereits automatisch Shaper eingestellt, und das reicht für die meisten Aufgaben aus. Wenn Sie jedoch die Qualität maximieren oder die Funktionsweise Ihres Druckers besser verstehen möchten, können Sie sich die Diagramme ansehen und manuelle Einstellungen vornehmen.
 
-> [!IMPORTANT]
-> #### Wichtig: Der Parameter `FIX_SCV`
+#### Der Parameter** `FIX_SCV`
 
 **Wo liegt das Problem?**
 
