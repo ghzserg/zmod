@@ -29,3 +29,4 @@
 [Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
 
 - [@Wideopentuning](https://github.com/Wideopentuning)
+- [@edzeg](https://github.com/edzeg)
