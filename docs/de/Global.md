@@ -14,9 +14,9 @@ Es kann aufgerufen werden durch:
 
 ### LANG
 
-Legt die Sprache fest, die Z-Mod verwenden soll.
+Legt Sie die Sprache fest, die Z-Mod verwenden soll.
 
-- LANG - Sprache, en - Englisch, ru - Russisch, de - Deutsch, fr - Französisch, it - Italienisch, es - Spanisch, zh - Chinesisch, ja - Japanisch, ko - Koreanisch, pt - Portugiesisch, cs - Tschechisch, tr - Türkisch
+- LANG - Sprache: `en - Englisch`, `ru - Russisch`, `de - Deutsch`, `fr - Französisch`, `it - Italienisch`, `es - Spanisch`, `zh - Chinesisch`, `ja - Japanisch`, `ko - Koreanisch, `pt - Portugiesisch`, `cs - Tschechisch`, `tr - Türkisch`
 
 Beispiel:
 ```
@@ -27,51 +27,63 @@ LANG LANG=de
 
 ### SET_TIMEZONE
 
-Zeitzone ändern
+Zeitzone ändern:
+
+Man findet die Zeitzone in dem folgenden Ordner `/usr/data/.mod/.zmod/usr/share/zoneinfo`
+
+```
+SET_TIMEZONE ZONE=Asia/Yekaterinburg
+```
 
 - ZONE - Zeitzone (Asien/Jekaterinburg)
+- ZONE - Zeitzone (Europe/Berlin)
 
 ---
 
 ### NOZZLE_CONTROL
 
-Kontrolle des Abreißens von Teilen oder des Auftreffens der Düse auf dem Tisch.
+Kollisionsverhinderung der Düse mit dem Druckbett oder Ablösung des Werkstücks.
 
-Notabschaltung des Druckers, wenn ein Übergewicht festgestellt wird.
+Notabschaltung bei Überschreitung des eingestellten Gewichtslimits.
 
-GEWICHT - Gewicht in Gramm (1500)
+- GEWICHT - Gewicht in Gramm (1500)
 
-Die Einstellung bleibt auch nach einem Neustart erhalten.
+Einstellungen bleiben nach einem Neustart erhalten.
 
 Setzen Sie `NOZZLE_CONTROL WEIGHT=0`, um diese Funktion zu deaktivieren.
 
-*Vor dem ersten Makroaufruf ist die Steuerung deaktiviert.
+!!! info "INFO"
+    *Die Steuerung ist deaktiviert, bis das Makro zum ersten Mal aufgerufen wird.*
 
-Bei der Arbeit mit dem nativen Bildschirm wird durch den Aufruf des Makros der Drucker neu gestartet.
+Bei Verwendung des nativen Bildschirms startet der Drucker nach der Makroausführung neu.
 
-Bei der Arbeit im nicht-nativen Bildschirmmodus wird Klipper neu gestartet, wenn Änderungen an den Konfigurationsdateien vorgenommen werden.
+Ohne den nativen Bildschirm wird Klipper neu gestartet (Konfigurationsdateien werden angepasst).
 
-Alles funktioniert im automatischen Modus, aber die folgenden Makros sind auch verfügbar und können in Gcode verwendet werden:
+Funktioniert automatisch; zusätzliche Makros sind für G-Code verfügbar.
 
-- ZCONTROL_ON" - Steuerung aktivieren
-- ZCONTROL_OFF" - Steuerung deaktivieren
-- ZCONTROL_STATUS` - ermittelt den Status der Funktion
+- `ZCONTROL_ON` - Steuerung aktivieren
+- `ZCONTROL_OFF` - Steuerung deaktivieren
+- `ZCONTROL_STATUS` - ermittelt den Status der Funktion
 - `ZCONTROL_PAUSE` - Aufruf der Pause beim Auslösen (die Pause wird erst nach Freigabe der Befehlswarteschlange ausgeführt, nicht bei den ersten Schichten).
-- ZCONTROL_ABORT` - stoppt Klipper, wenn ausgelöst
+- `ZCONTROL_ABORT` - stoppt Klipper, wenn ausgelöst
 - `ZCONTROL_AUTO` - stoppt Klipper (wenn Höhe z < `ZCONTROL_Z`), oder ruft PAUSE auf, wenn z >= `ZCONTROL_Z`.
 - `ZCONTROL_Z Z=10` - setzt die Höhe um Z.
-- SAVE_ZMOD_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ```SAVE_ZMOD_DATA ZCONTROL_Z=230```.
+- `SAVE_ZMOD_DATA ZCONTROL_Z=10` - speichert die Höhe um Z. Wenn Sie nicht auf Pause schalten wollen, setzen Sie ```SAVE_ZMOD_DATA ZCONTROL_Z=230```.
 
-Wenn Sie die Düsensteuerung auf den ersten Schichten aktivieren wollen, dann fügen Sie ```ZCONTROL_PAUSE``` durch den Slicer auf der Schicht hinzu, auf der Sie die Pause anstelle der Unterbrechung verwenden wollen
+Um die Düsensteuerung für die ersten Schichten zu aktivieren, fügen Sie `ZCONTROL_PAUSE` im Slicer an der gewünschten Stelle hinzu.
 
 ---
 
 ### GET_ZMOD_DATA
 
 Liefert die Werte der globalen Z-Mod-Parameter/Flags.
-Nach der Ausführung des Makros zeigt die Konsole die Daten an, die zuvor gespeichert und zum aktuellen Zeitpunkt angewendet wurden
+Nach der Ausführung des Makros zeigt die Konsole die Daten an, die zuvor gespeichert und zum aktuellen Zeitpunkt angewendet wurden.
 
-Fluidd" -> "Makros" -> "Haupt" -> "Z-Mod-PARAMETER".
+??? note "FLUIDD"
+    `Fluidd` -> `Makros` -> `Haupt` -> `Z-Mod-PARAMETER`.
+
+??? note "MAINSAIL"
+    `Mainsail` -> `Dashboard` -> `System` -> `GET ZMOD DATA`
 
 ---
 
@@ -79,7 +91,7 @@ Fluidd" -> "Makros" -> "Haupt" -> "Z-Mod-PARAMETER".
 
 Vereinfachte Steuerung der globalen Parameter. Nur Parameter, die durch Drücken der Taste geändert werden können, sind verfügbar. Parameter, die eine Nummer, einen Dateinamen usw. erfordern, werden von diesem Makro nicht gesteuert.
 
-Es wird empfohlen, den Drucker nach dem Ändern von Parametern neu zu starten
+**Es wird empfohlen, den Drucker nach dem Ändern von Parametern neu zu starten**
 
 ---
 
@@ -87,21 +99,35 @@ Es wird empfohlen, den Drucker nach dem Ändern von Parametern neu zu starten
 
 Speichert globale Z-Mod-Parameter/Flags, die bei jedem Druck angewendet werden.
 
-Dieses Makro muss nicht in die Start-, Endcode- oder Gcode-Datei eingefügt werden. Das Makro wird über die Konsole fluidd/mainsail aufgerufen. Nach dem Ausschalten des Druckers werden die Parameter im Druckerspeicher in der Datei `mod_data/variables.cfg` gespeichert (**die Datei nicht von Hand editieren - Sie bringen den Klipper oder Mod** durcheinander) und müssen nicht jedes Mal neu eingegeben werden.
+Dieses Makro muss nicht in den Start-, Endcode- oder Gcode-Datei eingefügt werden. Das Makro wird über die Konsole Fluidd/Mainsail aufgerufen. 
 
-**Um den gewünschten Parameter zu bearbeiten, gehe zu `Fluidd` -> `Makros` -> `System` -> `SAVE Z-Mod PARAMETERS`**, wähle den Parameter aus, den du ändern willst, trage ihn ein und drücke `SEND`. Sehen Sie, was in der Fluidd-Konsole angezeigt wird.
+Nach dem Ausschalten des Druckers werden die Parameter im Druckerspeicher in der Datei `mod_data/variables.cfg` gespeichert 
 
-Zweite Möglichkeit. Schreiben Sie in die Fluidd-Konsole den gewünschten Befehl, zum Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
+!!! info "INFO"
+    **die Datei nicht von Hand editieren - Sie bringen Klipper oder den ZMod** durcheinander
+    und müssen nicht jedes Mal neu eingegeben werden.
+
+**Um den gewünschten Parameter zu bearbeiten:**
+
+??? note "FLUIDD"
+    `Fluidd` -> `Makros` -> `System` -> `SAVE Z-Mod PARAMETERS`
+
+??? note "MAINSAIL"
+    `Mainsail` -> `Dashboard` -> `System` -> `SAVE ZMOD DATA`
+    
+wähle den Parameter aus, den Sie ändern wollen, trage ihn ein und drücken `SENDEN`. Sehen Sie, was in der Konsole angezeigt wird.
+
+Zweite Möglichkeit. Schreiben Sie in die Konsole den gewünschten Befehl, zum Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
 [Gespeicherte Parameter anzeigen](/de/Global/#get_zmod_data)
 
 ---
 
-#### Menüparameter für die Farbauswahl drucken ###
+### Parameter des Menüs zur Auswahl der Druckfarbe ###
 
-**Alle Optionen des Farbauswahlmenüs gelten nur für das AD5X.**
+**Die Parameter des Farbauswahlmenüs gelten ausschließlich für den AD5X.**
 
-##### ERLAUBTE_WERKZEUG_ANZAHL
+##### ALLOWED_TOOL_COUNT
 
 Die Anzahl der Werkzeuge, die im Farbauswahlmenü angezeigt werden. Dies bezieht sich auf die Befehle T0, T1 usw. in der gcode-Datei, nicht auf die physischen Spulen in Ihrem IFS.
 
@@ -109,7 +135,7 @@ Wenn Z-Mod die Datei erfolgreich nach verwendeten Instrumenten durchsucht, wird 
 
 Diese Einstellung kann nicht verwendet werden, wenn der native Bildschirm aktiviert ist.
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
@@ -117,7 +143,7 @@ Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 Ermöglicht das Scannen von Gcode-Dateien, um die verwendeten Werkzeugwechselbefehle (T0, T1 usw.) und die ihnen im Slicer zugewiesenen Farben und Materialien zu ermitteln: 0 (aus), 1 (an), 2 (schaltet das vollständige Scannen aus, sucht aber nach vom Slicer-Skript vorbereiteten Daten).
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`.
 
@@ -140,7 +166,7 @@ Um benutzerdefinierte Werte für Fehlerbedingungen im stillen Modus einzustellen
 * 8 (Mindestens eine Farbe stimmt nicht gut überein)
 * 16 (Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen)
 
-[Siehe Vorverarbeitungseinstellung](/de/Recomendations/#enable-md5-checksum-control)
+[Siehe Vorverarbeitungseinstellung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
