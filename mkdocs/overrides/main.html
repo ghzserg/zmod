@@ -21,5 +21,16 @@
         {%- endif -%}
       </a>
     </p>
+    <p class="edit-page-footer">
+      ⭐
+        {%- if config.theme.language == "ru" -%}
+        <a href="https://wiki.zmod.link/ru/Sponsor/" target="_blank" rel="noopener">
+          Нравится Z-Mod или zmod.link? Поддержите разработку или оплату хостинга.
+        {%- else -%}
+        <a href="https://wiki.zmod.link/Sponsor/" target="_blank" rel="noopener">
+          Like Z-Mod or zmod.link? Support its development or pay for hosting.
+        {%- endif -%}
+      </a>
+    </p>
   {% endif %}
 {% endblock %}
