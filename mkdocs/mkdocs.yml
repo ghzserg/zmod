@@ -146,45 +146,6 @@ plugins:
             Video: Video
             TelegramBot: Telegram-Bot
             Z-ModLink: Z-Mod LINK
-        - locale: pt
-          name: Português
-          build: true
-          reconfigure_search: true
-          theme:
-            language: pt
-          nav_translations:
-            Index: Página inicial
-
-            Begin: Início
-            Setup: Instalação
-            Setup Calibrations: Calibração inicial
-            Recommendations: Recomendações
-
-            Configuration: Configuração
-            Parameters: Parâmetros
-            Plugins: Plugins
-            Telegram: Telegram
-
-            Help: Ajuda
-            FAQ: Perguntas frequentes
-
-            Macros: Macros
-            List: Lista
-            Main: Principais
-            Calibrations: Calibrações
-            Start/Stop/Global: Iniciar/Parar/Global
-            System: Sistema
-            Filament: Filamento
-
-            Additional: Adicional
-            Native firmware: Firmware nativo
-            Changelog: Histórico de alterações
-            Support: Suporte
-
-            Download: Baixar
-            Video: Vídeo
-            TelegramBot: Bot do Telegram
-            Z-ModLink: Z-Mod LINK
         - locale: cs
           name: Čeština
           build: true
