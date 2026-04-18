@@ -291,6 +291,7 @@ So erhalten Sie das Login und das Passwort:
 2. Geben Sie den Befehl ```cloud``` ein - wenn Sie sich bereits registriert haben, wird Ihnen Ihr Benutzername angezeigt
 3. um einen Benutzer mit dem Namen ```test``` zu registrieren, geben Sie ein: ```cloud register test```.
 4. Um das Passwort zurückzusetzen, geben Sie ein: ```cloud reset_password```.
+5. Um den aktuellen Benutzer zu entfernen, geben Sie ein: ```cloud remove```
 
 Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
 

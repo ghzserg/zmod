@@ -277,6 +277,7 @@ How to get login and password:
 2. Enter the command ```cloud``` - if you have registered before, it will tell you your login
 3. To register a user with the name `test`, enter: ```cloud register test```
 4. To reset the password, enter: ```cloud reset_password```
+5. To remove the current user, enter: ```cloud remove```
 
 How to connect to the cloud [zmod.link](https://zmod.link/link/):
 

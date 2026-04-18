@@ -277,6 +277,7 @@ Jak získat přihlášení a heslo:
 2. Zadejte příkaz ```cloud``` - pokud jste se zaregistrovali dříve, řekne vám vaše přihlášení
 3. Chcete-li zaregistrovat uživatele se jménem `test`, zadejte: ```cloud register test```
 4. Chcete-li resetovat heslo, zadejte: ```cloud reset_password```
+5. Chcete-li odebrat aktuálního uživatele, zadejte: ```cloud remove```
 
 Jak se připojit ke cloudu [zmod.link](https://zmod.link/link/):
 
