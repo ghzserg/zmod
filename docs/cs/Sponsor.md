@@ -30,3 +30,4 @@ Velké díky komunitě [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) za zakoupení [
 
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)
+- Dave Shaw
