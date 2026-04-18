@@ -68,6 +68,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - [FORCE_MD5](/de/Global/#force_md5) - MD5-Hashes der Datei überprüfen (Standard: `1`).
 
 ???+ note "Notiz"
+
      1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
      - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
      - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie      nicht, ```chmod +x zmod_preprocess-linux-amd64``` auszuführen.
@@ -75,6 +76,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
      - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon.          Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
      - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht,      ```chmod +x zmod-preprocess.py``` auszuführen.
      - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht,      ```chmod +x zmod-preprocess.sh``` auszuführen.
+     
      2. In Orca müssen Sie Folgendes angeben: ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
      **Hier sind die Optionen, die Sie hinzufügen müssen:**
      - ```"C:\path_to_file\zmod_preprocess-windows-amd64.exe";```

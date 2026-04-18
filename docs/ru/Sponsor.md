@@ -30,3 +30,4 @@
 
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)
+- Dave Shaw

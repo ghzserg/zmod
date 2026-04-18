@@ -16,7 +16,7 @@ Es kann aufgerufen werden durch:
 
 Legt Sie die Sprache fest, die Z-Mod verwenden soll.
 
-- LANG - Sprache: `en - Englisch`, `ru - Russisch`, `de - Deutsch`, `fr - Französisch`, `it - Italienisch`, `es - Spanisch`, `zh - Chinesisch`, `ja - Japanisch`, `ko - Koreanisch, `pt - Portugiesisch`, `cs - Tschechisch`, `tr - Türkisch`
+- LANG - Sprache: `en - Englisch`, `ru - Russisch`, `de - Deutsch`, `fr - Französisch`, `it - Italienisch`, `es - Spanisch`, `zh - Chinesisch`, `ja - Japanisch`, `ko - Koreanisch`, `pt - Portugiesisch`, `cs - Tschechisch`, `tr - Türkisch`
 
 Beispiel:
 ```
@@ -80,9 +80,11 @@ Liefert die Werte der globalen Z-Mod-Parameter/Flags.
 Nach der Ausführung des Makros zeigt die Konsole die Daten an, die zuvor gespeichert und zum aktuellen Zeitpunkt angewendet wurden.
 
 ??? note "FLUIDD"
+
     `Fluidd` -> `Makros` -> `Haupt` -> `Z-Mod-PARAMETER`.
 
 ??? note "MAINSAIL"
+
     `Mainsail` -> `Dashboard` -> `System` -> `GET ZMOD DATA`
 
 ---
@@ -110,9 +112,11 @@ Nach dem Ausschalten des Druckers werden die Parameter im Druckerspeicher in der
 **Um den gewünschten Parameter zu bearbeiten:**
 
 ??? note "FLUIDD"
+
     `Fluidd` -> `Makros` -> `System` -> `SAVE Z-Mod PARAMETERS`
 
 ??? note "MAINSAIL"
+
     `Mainsail` -> `Dashboard` -> `System` -> `SAVE ZMOD DATA`
     
 wähle den Parameter aus, den Sie ändern wollen, trage ihn ein und drücken `SENDEN`. Sehen Sie, was in der Konsole angezeigt wird.
