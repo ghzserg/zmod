@@ -4,7 +4,6 @@
 
 [На русском](https://wiki.zmod.link/ru/)
 
-
 [https://zmod.link/](https://zmod.link/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
 ### **Z-Mod for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer**
