@@ -41,6 +41,7 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 ```gcode
 PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
 ```
+
 * **Was das bedeutet:**
 
   * ```TEMPERATURE=255``` - die Kalibrierung wird für eine Temperatur von 255°C durchgeführt. Stellen Sie die von Ihnen gewünschte Temperatur ein.
@@ -388,7 +389,7 @@ Wenn sich der Drucker schnell bewegt, kann er wie eine Maschine mit hoher Geschw
 
 Ihr Drucker hat bei der ersten Kalibrierung bereits automatisch Shaper eingestellt, und das reicht für die meisten Aufgaben aus. Wenn Sie jedoch die Qualität maximieren oder die Funktionsweise Ihres Druckers besser verstehen möchten, können Sie sich die Diagramme ansehen und manuelle Einstellungen vornehmen.
 
-#### Der Parameter** `FIX_SCV`
+#### Der Parameter `FIX_SCV`
 
 **Wo liegt das Problem?**
 
