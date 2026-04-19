@@ -312,7 +312,7 @@ Beispiel: `SAVE_ZMOD_DATA DISABLE_SKEW=1`.
 
 Laden des Z-Offsets aus den zuvor über SET_GCODE_OFFSET gespeicherten globalen Parametern. 1 - ja, 0 - nein (1)
 
-[Wie funktioniert Z-Offset](/de/FAQ/#wie-z-offset-arbeitet)
+[Wie funktioniert Z-Offset](/de/FAQ/#so-funktioniert-der-z-offset)
 
 Beispiel: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`.
 
