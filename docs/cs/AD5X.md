@@ -24,9 +24,9 @@
 ### [Pluginy](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Kompatibilita s Bambu Studio, lepší čistící věže, přesné odhady, snížení odpadu
+- [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - Fork doplňku Bambufy
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximální snížení odpadu od ninjamida
-- [lessWaste](https://github.com/Hrybmo/lessWaste/) - fork bambufy
-- [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs_jacker)
+- [**IFS Jacker**](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs_jacker)
 
 ---
 
