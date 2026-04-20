@@ -17,7 +17,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod.
 3. [Dryer](https://github.com/pantata/dryer) - Sušení filamentu pomocí vyhřívané podložky
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs_jacker), který umožňuje automatickou detekci počtu dostupných kanálů a integraci ventilátorů, LED a senzorů připojených přes IFS Jacker do Klipperu.
 
-Chcete-li povolit repozitář externích pluginů, které nevyvíjí autor Z-Mod, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
+Chcete-li povolit repozitář externích pluginů, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
 
 ---
 

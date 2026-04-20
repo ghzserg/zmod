@@ -17,7 +17,7 @@ External plugins not developed by the Z-Mod author.
 3. [Dryer](https://github.com/pantata/dryer) - Drying filament via heated bed
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) - Plugin to support the [IFS Jacker hardware mod](https://github.com/ninjamida/ifs_jacker), for auto-detection of available channel count and Klipper integration for fans / LEDs / sensors connected via an IFS Jacker
 
-To enable the repository of external plugins not developed by the Z-Mod author, run the command `ENABLE_EXTRA_PLUGINS`.
+To enable the repository of external plugins, run the command `ENABLE_EXTRA_PLUGINS`.
 
 ---
 
