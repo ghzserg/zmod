@@ -23,11 +23,11 @@
 
 [Плагины](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md):
 
-- [bambufy](https://github.com/function3d/bambufy) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail,
+- [**bambufy**](https://github.com/function3d/bambufy) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail,
 быструю смену цвета и расширенные функции печати.
-
-- [nopoop](https://github.com/ghzserg/nopoop) - Максимальное уменьшение количества отходов от ninjamida
-- [lessWaste](https://github.com/Hrybmo/lessWaste/) - форк bambufy
+- [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - форк bambufy
+- [**nopoop**](https://github.com/ghzserg/nopoop) - Максимальное уменьшение количества отходов от ninjamida
+- [**IFS Jacker**](https://github.com/ninjamida/ifs_jacker_plugin) — Плагин для поддержки [железного мода IFS Jacker](https://github.com/ninjamida/ifs_jacker)
 
 ---
 
