@@ -25,7 +25,8 @@
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
-- [lessWaste](https://github.com/Hrybmo/lessWaste/) - форк bambufy
+- [lessWaste](https://github.com/Hrybmo/lessWaste/) - Fork of Bambufy
+- [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) - Plugin to support the [IFS Jacker hardware mod](https://github.com/ninjamida/ifs_jacker)
 
 ---
 

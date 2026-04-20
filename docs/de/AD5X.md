@@ -25,9 +25,9 @@
 
 - [bambufy](https://github.com/function3d/bambufy) - Kompatibel mit Bambu Studio, verbessert die Steuerung des Zufuhrturms, bietet eine genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt Mainsail,
 schnelle Farbwechsel und erweiterte Druckfunktionen.
-
 - [nopoop](https://github.com/ghzserg/nopoop) - Maximiert die Abfallreduzierung von ninjamida
 - [lessWaste](https://github.com/Hrybmo/lessWaste/) - Eine Abspaltung von bambufy
+- [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs_jacker)
 
 ---
 
