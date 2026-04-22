@@ -263,6 +263,11 @@ markdown_extensions:
   - admonition
   - tables
   - md_in_html
+  - pymdownx.details
+  - attr_list
+  - pymdownx.emoji:      # <-- NEU: Ermöglicht :arrow_right:, :check:, etc.
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - toc:
       permalink: true
       slugify: !!python/object/apply:pymdownx.slugs.slugify
