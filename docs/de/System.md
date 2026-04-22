@@ -5,10 +5,10 @@ Ein Makro ist ein kleines Programm in der Sprache Klipper/Gcode.
 Es kann aufgerufen werden durch:
 
 - Aus der GCODE-Datei
-- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
+- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben `C` in Fluidd)
 
 !!! Hinweis
-    *Der Wert in Klammern ist der Standardwert.
+    *Der Wert in Klammern ist der Standardwert*.
 
 ---
 
@@ -20,8 +20,9 @@ Schalten Sie die Standardanzeige ein und starten Sie den Drucker neu.
 
 #### DISPLAY_OFF
 
-- GUPPY: 0 - GuppyScreen nicht aktivieren, 1 - GuppyScreen aktivieren (1)
-- Helix: 0 - HelixScreen nicht aktivieren, 1 - HelixScreen aktivieren (0) + `ENABLE_EXTRA_PLUGINS`
+- `GUPPY`: `0` = GuppyScreen deaktivieren, `1` = GuppyScreen aktivieren (Standard: `1`)
+
+- `Helix`: `0` = HelixScreen deaktivieren, `1` = HelixScreen aktivieren (Standard: `0`) + `ENABLE_EXTRA_PLUGINS`
 
 Schaltet den Standardbildschirm aus. Spart 13 Megabyte (20 Megabyte bei älteren Versionen der nativen Firmware).
 
@@ -34,18 +35,19 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 - Bessere Wiederherstellung von unterbrochenen Druckvorgängen
 - Basiert auf [fork](https://github.com/ghzserg/guppyscreen_ff5m), das auf [original repository](https://github.com/ballaswag/guppyscreen) und einem weiteren [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m) basiert.
 
-[HelixScreen](https://github.com/prestonbrown/helixscreen) ist eine alternative Bildschirm-Implementierung
+**[HelixScreen](https://github.com/prestonbrown/helixscreen)** ist eine alternative Bildschirm-Implementierung
 
-**Deaktivieren Sie den Bildschirm nur, wenn Sie genau verstehen, wie die Tabellenabbildung, der z-Offset und die Makros START_PRINT und END_PRINT funktionieren**
+!!! warning "Warnung:"
 
-**Dieses Makro muss nicht in den g-code aufgenommen werden.**
-Nach dem Neustart funktioniert der Bildschirm noch 3 Minuten lang, aber das hat keinen Einfluss auf den z-Offset, da er nicht durch ihn hindurch druckt.
+	- Deaktivieren Sie den Bildschirm nur, wenn Sie die Bettnivellierung, den Z-Offset und die Makros `START_PRINT`/`END_PRINT` vollständig verstehen.
 
-Um die Aktivierungszeit des alternativen Bildschirms zu ändern [globale Parameter verwenden](/de/Global/#display_off_timeout)
+	- Der Bildschirm bleibt nach einem Neustart 3 Minuten lang aktiv, hat aber keinen Einfluss auf den Z-Offset oder den Druckvorgang.
 
-Setzen Sie START_PRINT. Stellen Sie den gewünschten z-Offset über diesen Parameter oder über globale Parameter ein.
+Die Aktivierungszeit kann über den globalen Parameter [`DISPLAY_OFF_TIMEOUT`](/de/Global/#display_off_timeout) angepasst werden.
 
-[Lesen Sie diesen Hinweis](/de/FAQ/#Was ist der Unterschied zwischen der Arbeit mit einem Bildschirm und ohne einen nativen Bildschirm)
+Konfigurieren Sie START_PRINT. Legen Sie den gewünschten Z-Offset entweder über diese Funktion oder über die globalen Parameter fest.
+
+[Lesen Sie diesen Hinweis](/de/FAQ/#was-ist-der-unterschied-zwischen-der-arbeit-mit-und-ohne-nativen-bildschirm)
 
 ---
 
@@ -59,16 +61,22 @@ Speicherverbrauch anzeigen
 
 Schreibt SIZE MB auf die EMMC und gibt die Lese- und Schreibgeschwindigkeit an.
 
-Gibt den prozentualen Verschleiß der EMMC aus
+EMMC-Leistung und Verschleiß prüfen.
+Parameter:
 
-- SIZE - wie viele Megabytes geschrieben werden (100)
-- SYNC - 1 - synchroner Betrieb. SIZE Megabytes an Daten werden geschrieben und gelesen und die Geschwindigkeit wird ausgegeben, 0 - asynchroner Modus, SIZE Megabytes an Daten werden im Hintergrund geschrieben - dient als Hintergrundlast für die EMMC-Speicherkarte. (1)
-- FLASH - schreiben: 0 - auf EMMC, 1 - auf USB FLASH, 2 - auf RAM (0)
-- RANDOM - verwendet Zufallszahlen zum Schreiben. 1 - ja, 0 - nein (0)
+- `SIZE` – Datengröße in MB (Standard: `100`).
+
+- `SYNC` – `1` = synchroner Modus (Geschwindigkeitsmessung), `0` = asynchrones Schreiben im Hintergrund (Standard: `1`).
+
+- `FLASH` – Zielspeicher: `0` = EMMC, `1` = USB-Flash, `2` = RAM (Standard: `0`).
+
+- `RANDOM` – Zufallsdaten verwenden: `1` = Ja, `0` = Nein (Standard: `0`).
+
+**Befehl für die Standard-Firmware:**
 
 Auf dem Lager:
 Datei [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh) herunterladen
-```
+```bash
 chmod +x zfs.sh
 ./zfs.sh 400 1
 ```
@@ -77,10 +85,12 @@ chmod +x zfs.sh
 
 ### CLEAR_EMMC
 
-Löscht die EMMC.
+EMMC-Speicher löschen.
+Parameter:
 
-- LOG - löscht Logdateien, 1 - ja, 0 - nein (1)
-- ANY - löscht alles (gcode, Bilder, Fotos, Videos) außer Logdateien, 1 - ja, 0 - nein (0).
+- `LOG` – Protokolldateien löschen: `1` = Ja, `0` = Nein (Standard: `1`).
+
+- `ANY` – Alle Dateien löschen (G-Code, Bilder, Videos): `1` = Ja, `0` = Nein (Standard: `0`).
 
 ---
 
@@ -92,36 +102,46 @@ Anzeige der aktuellen Uhrzeit
 
 ### DATE_SET
 
-Einstellen von Datum und Uhrzeit im Format 2024.01.01.01-00:00:00:00
+Systemdatum und -zeit einstellen.
 
-- DT - Datum 2024.01.01.01-00:00:00:00
+- `DT` — Datum/Uhrzeit im Format `YYYY.MM.DD-HH:MM:SS`.
 
 ---
 
 ### WEB
 
-Web-Interface fluidd/mainsail ändern
+Wechseln Sie zwischen den Web-Oberflächen von Fluidd und Mainsail.
 
-Nach der Ausführung des Makros:
+Nach Ausführung des Makros:
 
-- Sie müssen "Strg + F5" oder "Strg + Umschalt + R" oder "Wahl + Befehl + E" drücken.
-- Wenn Sie ein Problem in Orca haben, müssen Sie `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` drücken.
+- Drücken Sie Strg + F5 oder Strg + Umschalt + R oder Option + Befehl + E.
 
-Wenn Sie Mainsail verwenden, geben Sie nur diese Miniaturgrößen an: "140x110/PNG, 64x64/PNG".
+- Falls in Orca ein Problem auftritt, drücken Sie Strg + F5 oder Strg + Umschalt + R oder Option + Befehl + E.
 
-In Orca, ```Druckerprofil``` -> ```Allgemeine Informationen``` -> ```Erweitert``` -> ```G-Code Thumbnails```.
+Bei Verwendung von Mainsail geben Sie bitte nur die folgenden Miniaturansichtsgrößen an: 140x110/PNG, 64x64/PNG.
+
+In Orca, `Druckerprofil` :arrow_right: `Allgemeine Informationen` :arrow_right: `Erweitert` :arrow_right: `G-Code Thumbnails`.
 
 Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
 
-Achtung: Der Autor benutzt Fluidd, Mainsail wird nur von Anwendern getestet. Wenn Sie Probleme mit Mainsail haben, erstellen Sie ein [ticket](/de/Help/)
+!!! info "Achtung:" 
+
+	Der Autor benutzt Fluidd, Mainsail wird nur von Anwendern getestet. Wenn Sie Probleme mit Mainsail haben, erstellen Sie ein [ticket](/de/Help/)
 
 ---
 
 ### SET_TIMEZONE
 
-Zeitzone ändern
+Zeitzone ändern:
+
+Man findet die Zeitzone in dem folgenden Ordner `/usr/data/.mod/.zmod/usr/share/zoneinfo`
+
+```
+SET_TIMEZONE ZONE=Asia/Yekaterinburg
+```
 
 - ZONE - Zeitzone (Asien/Jekaterinburg)
+- ZONE - Zeitzone (Europe/Berlin)
 
 ---
 
@@ -133,28 +153,48 @@ Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SA
 
 MD5-Summe prüfen.
 
-- DELETE - defekte Datei löschen (ja)
+- `DELETE` — beschädigte Dateien löschen: `yes`/`no`.
 
-1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
+??? info "Download: Wählen Sie die passende Datei für Ihr System"
 
-- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64`'' auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
+    1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
+        * [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - **Windows**
+        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x                           zmod_preprocess-linux-amd64` auszuführen.
+        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Intel** Vergessen Sie nicht, `chmod +x                  zmod_preprocess-darwin-arm64` auszuführen.
+        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Silicon** Vergessen Sie nicht, `chmod +x                zmod_preprocess-darwin-amd64` auszuführen.
+        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py`             auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh`             auszuführen.
+     
+??? tip "2. Konfiguration in Orca"
+    In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
+    `Prozessprofil` :arrow_right: `Andere` :arrow_right: `Nachverarbeitungsskripte`.
 
-2. In Orca muessen Sie schreiben. ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
+    **Hier sind die Optionen, die Sie hinzufügen müssen (je nach System):**
 
-Hier sind die Optionen, die Sie hinzufügen müssen:
+    * **Windows (Executable):**
+        ```text
+        "C:\path_to_file\zmod_preprocess-windows-amd64.exe";
+        ```
 
-- ```"C:\path_to_file\zmod_preprocess-windows-amd64.exe";```
-- ```"C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";```
-- ````"/usr/bin/python3" "/home/user/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod_preprocess-darwin-amd64";````
-- ````"/home/benutzer/zmod_preprocess-darwin-arm64";````
-- ````"/home/benutzer/zmod_preprocess-linux-amd64";````
+    * **Windows (Python Skript):**
+        ```text
+        "C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";
+        ```
+
+    * **Linux/macOS (Python):**
+        ```text
+        "/usr/bin/python3" "/home/user/zmod-preprocess.py";
+        ```
+
+    * **Linux/macOS (Direkter Pfad):**
+        ```text
+        "/home/benutzer/zmod-preprocess.py";
+        ```
+
+    * **Binärdateien (Linux/macOS):**
+        * `/home/benutzer/zmod_preprocess-darwin-amd64`;
+        * `/home/benutzer/zmod_preprocess-darwin-arm64`;
+        * `/home/benutzer/zmod_preprocess-linux-amd64`;
 
 Die Quelldateien sind hier zu finden: [https://github.com/ghzserg/zmod_preprocess](https://github.com/ghzserg/zmod_preprocess)
 
@@ -208,7 +248,7 @@ Parameter FORCE:
 
 Beispiel: `UPDATE_MCU FORCE=13` erzwingt das Laden der Klipper 13-Firmware
 
-Wenn du nicht verstehst, wie man [MCU-Konfigurationen und -Firmware wiederherstellt](/de/Native_FW/#installing-full-firmware-on-ad5x), führe es nicht aus.
+Wenn du nicht verstehst, wie man [MCU-Konfigurationen und -Firmware wiederherstellt](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ad5x), führe es nicht aus.
 
 Wenn etwas schief geht, gehen Sie nur über [factory](/de/Native_FW/) zurück.
 
@@ -222,26 +262,24 @@ Passwort des Root-Benutzers auf root zurücksetzen
 
 ### CHECK_SYSTEM
 
-Überprüfen Sie das Betriebssystem des Druckers auf beschädigte Dateien.
+Diagnose der Systemdateiintegrität.
 
-- RESTORE: 0 - beschädigte Dateien nicht reparieren, 1 - beschädigte Dateien reparieren (0)
+- `RESTORE` — `0` = keine Reparatur, `1` = beschädigte Dateien reparieren (Standard: `0`).
 
-Überprüft:
+Prüfverfahren:
 
-- Dateien (md5, Berechtigungen)
-- Kataloge (Zugriffsrechte)
-- Symbolische Links (Korrektheit der Angabe)
+- Dateiberechtigungen/MD5-Hashes.
 
-Symbolische Links, Rechte auf Verzeichnisse und Dateien werden automatisch wiederhergestellt.
+- Verzeichnisberechtigungen.
 
-Die Überprüfungszeit beträgt etwa 10 Minuten.
+- Symbolische Links.
 
-Wenn Fehler gefunden werden - gehen Sie zu [link](https://github.com/ghzserg/zmod/tree/main/stock), dort können Sie eine unbeschädigte Kopie der Datei herunterladen.
+**Wiederherstellung:** Laden Sie intakte Dateien von [hier](https://github.com/ghzserg/FF/tree/main/stock) herunter.
 
 ---
 
 ### BILDSCHIRM
 
-Einen Screenshot des Druckerbildschirms erstellen
+Erstellen Sie einen Screenshot des Druckers.
 
-Der Screenshot wird unter ```mod_data/screen.jpg``` gespeichert.
+Das Foto wird unter ```mod_data/screen.jpg``` gespeichert.
