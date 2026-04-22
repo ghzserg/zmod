@@ -618,8 +618,8 @@ To update stock firmware, enable Chinese clouds via `SAVE_ZMOD_DATA CHINA_CLOUD=
 
 Instead, you can use:
 
-- [zmod.link](/ru/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
-- [Telegram bot](/ru/Macros/).
+- [zmod.link](/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
+- [Telegram bot](/Telegram/#telegram-bot).
 
 **To disable Chinese clouds on stock firmware:**
 
