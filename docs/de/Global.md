@@ -159,34 +159,40 @@ Beispiel: `SAVE_ZMOD_DATA COLOUR_MENU_1_BASED=1`.
 
 ##### AUTO_ASSIGN_COLORS
 
-Legt fest, ob versucht werden soll, Werkzeugwechselbefehle (T0, T1 usw.) automatisch dem physischen Filament zuzuordnen, das in Ihrem IFS geladen ist, wenn Sie den Druckvorgang starten. Wenn Sie den stillen Modus nicht aktiviert haben, wird das Farbauswahlmenü trotzdem angezeigt; diese Einstellung wirkt sich nur auf die Standardauswahl aus: 0 (aus), 1 (ein).
+Legt fest, ob beim Druckstart die automatische Zuordnung von Werkzeugwechselbefehlen (T0, T1 usw.) zum im IFS geladenen Filament versucht werden soll. Sofern der Silent-Modus nicht aktiviert ist, wird das Farbauswahlmenü weiterhin angezeigt. Diese Einstellung betrifft nur die Standardauswahl: 
 
-Diese Einstellung gilt auch für Aufträge, die im stillen Modus ausgeführt werden. Sie können einstellen, dass der Druck unterbrochen wird, wenn bestimmte automatische Zuordnungsfehler auftreten: 2 (Unterbrechung, wenn ein Material nicht übereinstimmt, aber Farbabweichungen zulassen), 30 (Unterbrechung bei allen Problemen).
+- 0 (deaktivieren), 
+- 1 (aktivieren).
 
-Um benutzerdefinierte Werte für Fehlerbedingungen im stillen Modus einzustellen, addieren Sie die folgenden Werte, um die gewünschte Einstellung zu erhalten:
+Diese Einstellung gilt auch für Drucke, die im Silent-Modus gestartet werden. Sie können die automatische Materialzuordnung so konfigurieren, dass der Druckvorgang bei bestimmten Fehlern abgebrochen wird: 
 
-* 2 (Mindestens ein Material stimmt nicht überein, z. B. wenn in der Gcode-Datei ABS angegeben ist, Sie aber nur PLA geladen haben, oder die Materialdaten nicht geladen werden konnten)
-* 4 (Mindestens eine Farbe stimmt überhaupt nicht überein, in der Regel weil die Scandateien deaktiviert oder fehlerhaft sind)
-* 8 (Mindestens eine Farbe stimmt nicht gut überein)
-* 16 (Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen)
+- 2 (Abbruch, wenn Materialien nicht zugeordnet werden können; Farbabweichungen sind zulässig), 
+- 30 (Abbruch bei allen Problemen).
+
+Für benutzerdefinierte Werte bei Fehlerbedingungen im stillen Modus addieren Sie die folgenden Werte, um die richtige Einstellung zu ermitteln:
+
+- 2 (Mindestens ein Material kann nicht zugeordnet werden; z. B. ist in der G-Code-Datei ABS angegeben, aber nur PLA geladen; oder die Materialdaten konnten nicht geladen werden).
+- 4 (Mindestens eine Farbe kann nicht zugeordnet werden, üblicherweise aufgrund eines deaktivierten oder fehlgeschlagenen Dateiscans).
+- 8 (Mindestens eine Farbe stimmt möglicherweise nicht überein).
+- 16 (Mindestens eine physische Spule wurde in der Datei mehreren Werkzeugindizes zugeordnet).
 
 [Siehe Vorverarbeitungseinstellung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
-### Parameter für den Start des Drucks, Aufbau der Tabellenkarte [START_PRINT]:
+### Parameter für den Start des Druckvorgangs und die Erstellung einer Bettkarte [START_PRINT]:
 
 ##### MIDI_START
 
 MIDI abspielen bei Druckbeginn (""), 0 zum Ausschalten
 
-Beispiel: `SAVE_ZMOD_DATA MIDI_START=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid`.
 
 ---
 
 ##### PRECLEAR
 
-Düsenvorreinigung in CLEAR_NOZZLE verwenden 0-nein, 1-ja (0)
+Düsenvorreinigung in CLEAR_NOZZLE verwenden 0-(nein), 1-(ja)
 
 Beispiel: `SAVE_ZMOD_DATA PRECLEAR=0`.
 
@@ -194,7 +200,12 @@ Beispiel: `SAVE_ZMOD_DATA PRECLEAR=0`.
 
 ##### PRINT_LEVELING
 
-Erstellen Sie bei jedem Druck eine Tischkarte (über den nativen Bildschirm, wenn dieser aktiviert ist) 0-nein, 1-ja (0). *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> **aktivieren Sie den Schieberegler** "Nur lokale Netzwerke "* über das Menü des Druckerbildschirms.
+Erstellen Sie bei jedem Druck ein Bettnetz (über den nativen Bildschirm, wenn dieser aktiviert ist) 
+
+- 0-(nein), 
+- 1-(ja) . 
+
+*Um die Bettnetz-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu `Einstellungen` :arrow_right: `WiFi-Symbol` :arrow_right: `Netzwerkmodus` :arrow_right: **aktivieren Sie den Schieberegler** `Nur lokale Netzwerke `* über das Menü des Druckerbildschirms.
 
 Beispiel: `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
@@ -202,11 +213,14 @@ Beispiel: `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
 ##### USE_KAMP
 
-Wenn es möglich ist, eine adaptive Tabellenkarte (KAMP) anstelle einer vollständigen Tabellenkarte zu verwenden 0-nein, 1-ja (0).
+Verwenden Sie nach Möglichkeit adaptives Mesh (KAMP) anstelle von vollständigem Bett-Mesh: 
 
-Es wird auch empfohlen, `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, was es ermöglicht, den Bereinigungsraum zu verwenden, in dem die Tabellenkarte entfernt wird.
+- 0-(nein), 
+- 1-(ja) .
 
-*Ermöglicht die Verwendung von KAMP beim Leveln vom nativen Bildschirm über das Netzwerk.
+Es wird empfohlen, `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` zu setzen, um die Spülposition mit dem KAMP-Mesh abzustimmen.
+
+*Ermöglicht die Verwendung von KAMP beim Leveln vom nativen Bildschirm über das Netzwerk*.
 
 Beispiel: `SAVE_ZMOD_DATA USE_KAMP=1`.
 
@@ -214,56 +228,63 @@ Beispiel: `SAVE_ZMOD_DATA USE_KAMP=1`.
 
 ##### MESH_TEST
 
-Testen Sie die Tabellenkarte vor dem Drucken:
+Testen Sie das Bettnetz vor dem Drucken.:
 
 - 0 - keine
 - 1 - Test OHNE automatische Z-Offset-Auswahl (standardmäßig)
 - 2 - Test OHNE automatische Z-Offset-Auswahl, bei falscher Zuordnung KAMP starten
 - 3 - Test mit AUTO Z-Offset-Auswahl, mit Düsenreinigung
-- 4 - Test mit AUTO Z-Offset-Auswahl, mit Düsenreinigung, bei Kennfeldfehlern, KAMP starten
+- 4 - Testen Sie mit automatischer Z-Offset-Anpassung und Düsenreinigung. Falls das Bettnetz nicht übereinstimmt, führen Sie KAMP aus.
 
 **Automatische Auswahl des Z-Offsets**
 
-Algorithmus zur automatischen Kalibrierung des Z-Achsen-Offsets (Z-Offset):
+Algorithmus zur automatischen Z-Offset-Kalibrierung:
 
-1.  **Quelldaten:** Im Druckerspeicher ist die Tabellenkarte (in der Regel 25 Punkte) des letzten Ausrichtungsvorgangs gespeichert.
-2.  **Vorbereitung:**
+1. **Quelldaten:** Der Druckerspeicher speichert ein Bettnetz (typischerweise 25 Punkte), das beim letzten Nivellierungsvorgang erstellt wurde.
 
-    * Düse auf Betriebstemperatur erwärmt, gegen den Tisch gereinigt und auf 151°C abgekühlt.
+2. **Vorbereitung:**
 
-3.  **Wählen Sie den Messpunkt:**
+	* Die Düse wird auf Betriebstemperatur erhitzt, über das Druckbett geführt und auf 151 °C abgekühlt.
 
-    * Der **mittlere** Punkt der Karte wird verwendet.
+3. **Messpunktauswahl:**
 
-4.  **Messung und Vergleich:**
+	* Der **Mittelpunkt** des Netzes wird verwendet.
 
-    * Eine neue Sondenmessung (PROBE) wird an dem ausgewählten Punkt durchgeführt.
-        * Der erhaltene Wert wird mit dem in der Tabellenkarte gespeicherten Wert verglichen.
+4. **Messung und Vergleich:**
 
-5.  **Anpassung des Offsets:**
+	* Am ausgewählten Punkt wird eine neue Messung durchgeführt.
 
-    * Ist die Differenz **kleiner als 0,3 mm**, wird die Differenz zum aktuellen Z-Offset-Wert addiert.
-        * Ist die Differenz **größer oder gleich 0,3 mm**, betrachtet das System die gespeicherte Karte als irrelevant und startet bei aktivierten Einstellungen automatisch das Verfahren zur Neuausrichtung der Tabelle (KAMP).
+		* Der ermittelte Wert wird mit dem im Bettnetz gespeicherten Wert verglichen.
+
+5. **Offset-Korrektur:**
+
+	* Beträgt die Abweichung **weniger als 0,3 mm**, wird die Differenz zum aktuellen Z-Offset-Wert addiert.
+
+		* Beträgt die Abweichung **größer oder gleich 0,3 mm**, betrachtet das System das gespeicherte Netz als veraltet und leitet, sofern die Einstellungen dies zulassen, automatisch eine Bettnivellierung (KAMP) ein.
 
 **Kein automatischer Z-Offset**
 
-Algorithmus für die Überprüfung der Tabellenkarte:
+Algorithmus zur Validierung des Druckbettnetzes:
 
-1.  **Messung:** Eine Standard-Sondenmessung (PROBE) wird am aktuellen Punkt durchgeführt.
-2.  **Validierung:** Der resultierende Z-Wert wird mit der geladenen Karte verglichen.
-3.  **Kriterium:** Der Wert muss zwischen (Karte Minimum - 0,21 mm) und (Karte Maximum + 0,21 mm) liegen.
-4.  **Ergebnis:**
+1. **Messung:** An der aktuellen Position wird eine Standard-Sondenmessung durchgeführt.
 
-    **Erfolg:** Die Karte wird als korrekt angesehen, der Druck wird fortgesetzt.
-        * Fehler:** ** Es wird eine Warnung angezeigt und der Druckvorgang wird gestoppt oder, falls die Einstellungen aktiviert sind, wird automatisch das Verfahren zur Neuausrichtung der Tabelle (KAMP) gestartet.
+2. **Validierung:** Der ermittelte Z-Wert wird auf Übereinstimmung mit dem geladenen Netz geprüft.
+
+3. **Kriterium:** Der Wert muss im Bereich von (Netzminimum - 0,21 mm) bis (Netzmaximum + 0,21 mm) liegen.
+
+4. **Ergebnis:**
+	* **Erfolg:** Das Netz wird als korrekt betrachtet, der Druckvorgang wird fortgesetzt.
+
+		* **Fehler:** Es wird eine Warnung ausgegeben und der Druckvorgang wird gestoppt oder, falls die Einstellungen dies zulassen, automatisch eine Bettnivellierung (KAMP) eingeleitet.
 
 **Hinweise:**
 
-* Die Prüfung ist eine grobe Schätzung. Sie ist dazu gedacht, kritische Fehler zu erkennen, z.B. wenn eine Karte, die für dickes Glas genommen wurde, für eine PEI-Platte geladen wird und umgekehrt.
-* ** ** Verlassen Sie sich nicht auf diese Prüfung als absolute Sicherheit.
-* Bei Verwendung der intelligenten Reinigung (KAMP) befindet sich die Wärmewarte in der Nähe des Reinigungsbereichs und nicht in der Ecke des Tisches.
+* Diese Prüfung ist eine grobe Schätzung. Sie dient dazu, kritische Fehler zu erkennen, z. B. wenn ein für eine PEI-Folie erstelltes Netz für dickes Glas geladen wird und umgekehrt.
 
-Beispiel: `SAVE_ZMOD_DATA MESH_TEST=0`.
+* **Diese Prüfung bietet keinen absoluten Schutz.**
+* Bei Verwendung der intelligenten Reinigung (KAMP) erfolgt die Heizwartezeit in der Nähe des Reinigungsbereichs, nicht in einer Ecke des Bettes.
+
+Beispiel: `SAVE_ZMOD_DATA MESH_TEST=0`
 
 ---
 
@@ -271,28 +292,51 @@ Beispiel: `SAVE_ZMOD_DATA MESH_TEST=0`.
 
 Igor Polunovskiy
 
-Überprüft die MD5-Summe der Datei, löscht die Datei im Falle eines Fehlers. 0-nicht prüfen, 1-prüfen (1)
+Überprüft die MD5-Summe der Datei, löscht die Datei im Falle eines Fehlers.
 
-1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
+- 0-nicht prüfen,
+- 1-prüfen 
 
-- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64`'' auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
+??? info "Download: Wählen Sie die passende Datei für Ihr System"
 
-2. In Orca muessen Sie schreiben. ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
+    1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
+        * [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - **Windows**
+        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x                           zmod_preprocess-linux-amd64` auszuführen.
+        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Intel** Vergessen Sie nicht, `chmod +x                  zmod_preprocess-darwin-arm64` auszuführen.
+        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Silicon** Vergessen Sie nicht, `chmod +x                zmod_preprocess-darwin-amd64` auszuführen.
+        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py`             auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh`             auszuführen.
+     
+??? tip "2. Konfiguration in Orca"
+    In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
+    `Prozessprofil` :arrow_right: `Andere` :arrow_right: `Nachverarbeitungsskripte`.
 
-Hier sind die Optionen, die Sie hinzufügen müssen:
+    **Hier sind die Optionen, die Sie hinzufügen müssen (je nach System):**
 
-- ```"C:\path_to_file\zmod_preprocess-windows-amd64.exe";```
-- ```"C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";```
-- ````"/usr/bin/python3" "/home/user/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod_preprocess-darwin-amd64";````
-- ````"/home/benutzer/zmod_preprocess-darwin-arm64";````
-- ````"/home/benutzer/zmod_preprocess-linux-amd64";````
+    * **Windows (Executable):**
+        ```text
+        "C:\path_to_file\zmod_preprocess-windows-amd64.exe";
+        ```
+
+    * **Windows (Python Skript):**
+        ```text
+        "C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";
+        ```
+
+    * **Linux/macOS (Python):**
+        ```text
+        "/usr/bin/python3" "/home/user/zmod-preprocess.py";
+        ```
+
+    * **Linux/macOS (Direkter Pfad):**
+        ```text
+        "/home/benutzer/zmod-preprocess.py";
+        ```
+
+    * **Binärdateien (Linux/macOS):**
+        * `/home/benutzer/zmod_preprocess-darwin-amd64`;
+        * `/home/benutzer/zmod_preprocess-darwin-arm64`;
+        * `/home/benutzer/zmod_preprocess-linux-amd64`;
 
 Beispiel: `SAVE_ZMOD_DATA FORCE_MD5=1`.
 
@@ -300,7 +344,8 @@ Beispiel: `SAVE_ZMOD_DATA FORCE_MD5=1`.
 
 ##### DISABLE_SKEW
 
-1 - SKEW-Korrektur deaktivieren, 0 - Profil `skew_profile` laden (das Makro `SKEW_PROFILE LOAD=skew_profile` wird aufgerufen) (1)
+- 1 - SKEW-Korrektur deaktivieren, 
+- 0 - Profil `skew_profile` laden (das Makro `SKEW_PROFILE LOAD=skew_profile` wird aufgerufen)
 
 [Mehr lesen](https://www.klipper3d.org/Skew_Correction.html)
 
@@ -310,7 +355,10 @@ Beispiel: `SAVE_ZMOD_DATA DISABLE_SKEW=1`.
 
 ##### LOAD_ZOFFSET
 
-Laden des Z-Offsets aus den zuvor über SET_GCODE_OFFSET gespeicherten globalen Parametern. 1 - ja, 0 - nein (1)
+Laden des Z-Offsets aus den zuvor über SET_GCODE_OFFSET gespeicherten globalen Parametern.
+
+- 1 - ja,
+- 0 - nein
 
 [Wie funktioniert Z-Offset](/de/FAQ/#so-funktioniert-der-z-offset)
 
@@ -320,7 +368,10 @@ Beispiel: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`.
 
 ##### DISABLE_PRIMING
 
-Deaktivieren der Düsenreinigung durch Zusammendrücken 0-no, 1-yes (0)
+Düsenreinigung über Extrusion deaktivieren:
+
+- 0-no,
+- 1-yes
 
 Beispiel: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`.
 
@@ -330,19 +381,20 @@ Beispiel: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`.
 
 Auswahl des Algorithmus zur Reinigung der Düsenextrusion (LINE_PURGE)
 
-- _CLEAR1 - wie in Orca
-- CLEAR2 - aus FF-Gruppe
-- CLEAR3 - aus der FF-Gruppe Variante 2
-- CLEAR4 - Schrader-Reinigungscode von rechts oben nach unten
-- CLEAR_TRAP - wenn es eine rechte Seitenbürste von oben nach unten gibt
-- LINE_PURGE - Reinigung KAMP
+- _CLEAR1 – Orca-Stil (kann das Druckbett mit KAMP beschädigen)
+- _CLEAR2 – FF-Gruppenstil (kann das Druckbett mit KAMP beschädigen)
+- _CLEAR3 – Alternative zur FF-Gruppe (kann das Druckbett mit KAMP beschädigen)
+- _CLEAR4 – Shreider-Code (von oben rechts nach unten rechts)
+- _CLEAR_TRAP – Für Pinsel (von oben rechts nach unten rechts)
+- LINE_PURGE – KAMP-Reinigung
 
 Wenn Sie `KAMP` verwenden, wird die Reinigung zwangsweise auf `LINE_PURGE` gesetzt (anstelle von _CLEAR1, _CLEAR2, _CLEAR3, _CLEAR4).
 
 Wenn Sie `LINE_PURGE` verwenden, aber die Objektpartitionierung in Orca nicht aktiviert haben, dann wird `_CLEAR2` erzwungen
 
-Du kannst dein Aufräum-Makro zu 'mod_data/user.cfg' hinzufügen und es mit diesem Parameter benennen
-*behemoth
+Du kannst dein Aufräum-Makro zu `mod_data/user.cfg` hinzufügen und es mit diesem Parameter benennen.
+
+*behemoth*
 
 Beispiel: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`.
 
@@ -356,15 +408,19 @@ Beispiel: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`.
 
 MIDI am Ende des Drucks abspielen (""), 0 für deaktivieren
 
-Beispiel: `SAVE_ZMOD_DATA MIDI_END=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`.
 
 ---
 
 ##### CLOSE_DIALOGS
 
-Dialoge automatisch schließen, wenn der Druckvorgang beendet ist und abgebrochen wird 0-nein, 1-ja langsam, 2-ja schnell
+Dialoge automatisch schließen, wenn der Druckvorgang beendet ist und abgebrochen wird 
 
-*Um Dialoge schnell zu schließen, gehen Sie im Menü des Druckerbildschirms zu "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> **Schalten Sie den Schieberegler** "Nur lokales Netzwerk "* (0) ein.
+- 0 - nein,
+- 1 - ja langsam,
+- 2 - ja schnell
+
+*Um Dialoge schnell zu schließen,  gehen Sie im Menü des Druckerbildschirms zu `Einstellungen` :arrow_right: `WiFi-Symbol` :arrow_right: `Netzwerkmodus` :arrow_right: **aktivieren Sie den Schieberegler** `Nur lokale Netzwerke `* über das Menü des Druckerbildschirms.
 
 Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
@@ -372,7 +428,10 @@ Beispiel: `SAVE_ZMOD_DATA CLOSE_DIALOGS=2`.
 
 ##### STOP_MOTOR
 
-Automatisches Abschalten der Motoren nach dem Drucken/Abbrechen nach 25 Sekunden 0-nein, 1-ja (1)
+Automatisches Abschalten der Motoren nach dem Drucken/Abbrechen nach 25 Sekunden 
+
+- 0-nein,
+- 1-ja 
 
 Beispiel: `SAVE_ZMOD_DATA STOP_MOTOR=1`.
 
@@ -394,14 +453,14 @@ Beispiel: `SAVE_ZMOD_DATA AUTO_REBOOT=0`.
 
 ##### MOTION_SENSOR
 
-Verwendung anstelle des Glühfadensensors, [Glühfaden-Bewegungssensor](https://aliexpress.ru/item/1005007480443587.html) (0)
+Verwenden Sie einen [Filamentbewegungssensor](https://de.aliexpress.com/item/1005006119360974.html) anstelle des Filamentpräsenzsensors.
 
 - 0 - nein
 - 1 - ja
 
 Wenn Sie den Filament-Bewegungssensor verwenden, deaktivieren Sie ihn auf dem systemeigenen Bildschirm, da sonst der Druckvorgang abgebrochen wird.
 
-Wenn der Filamentsensor im nicht-nativen Bildschirmmodus verwendet wird, wird der folgende Satz angezeigt, wenn er ausgelöst wird: "Out of filament. Es wird in 30 Sekunden eine Pause eingelegt".
+Wenn der Filamentsensor im nicht-nativen Bildschirmmodus verwendet wird, wird der folgende Satz angezeigt, wenn er ausgelöst wird: `Out of filament`. Es wird in 30 Sekunden eine Pause eingelegt".
 
 Beispiel: `SAVE_ZMOD_DATA MOTION_SENSOR=1`.
 
@@ -425,10 +484,10 @@ Beispiel: `SAVE_ZMOD_DATA SILENT=0`
 
 Nur AD5X.
 
-Balken automatisch laden
+Filament automatisch laden
 
-- 0 - Balken nicht automatisch laden
-- 1 - Balken automatisch laden (Standard)
+- 0 - Filament nicht automatisch laden
+- 1 - Filament automatisch laden (Standard)
 
 Beispiel: `SAVE_ZMOD_DATA AUTOINSERT=0`
 
@@ -453,7 +512,7 @@ Nur AD5X
 
 Nur bei Betrieb im nicht-nativen Bildschirmmodus
 
-Bei Farbwechsel während des Drucks Bin-Reset verwenden
+Verwenden Sie beim Drucken den Mülleimer für den Farbwechsel.
 
 - 0 - kein Auswurf im Abwurfschacht
 - 1 - Auswurf im Abwurfschacht (Standard)
@@ -469,7 +528,7 @@ Nur AD5X.
 
 Nur bei Betrieb im nicht-nativen Bildschirmmodus
 
-Entfernen Sie den Balken nach Abschluss des Druckvorgangs
+Entfernen Sie das Filament nach Abschluss des Druckvorgangs
 
 - 0 - nicht auswerfen (Standard)
 - 1 - auswerfen
@@ -480,8 +539,7 @@ Beispiel: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
 
 ##### FIX_SCV
 
-Behebt falsche SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) beim Rendern von Beschleunigungsgraphen und bei der Berechnung von Shapern.
- Shaper.
+Korrigiert den fehlerhaften SCV-Wert ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) beim Rendern von Beschleunigungsgraphen und Berechnen von Input Shapers.
 
 - 0 belässt den Parameter wie in Stock 5
 - 1 verwendet `quare_corner_velocity` aus `mod_data/user.cfg` oder `printer.base.cfg`
@@ -502,6 +560,10 @@ square_corner_velocity: 9
 ```
 
 Dies reduziert die Geschwindigkeit in den Ecken und verbessert generell die Druckqualität, allerdings auf Kosten einer geringfügigen Geschwindigkeitsreduzierung.
+
+!!! tip "Empfohlens Plugin aktivieren"
+	
+	Oder das Plugin [Recommend](https://wiki.zmod.link/de/Plugin/) aktivieren.
 
 ---
 
