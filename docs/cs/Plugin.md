@@ -15,7 +15,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod.
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Kompatibilní s Bambu Studio, vylepšuje správu čisticí věže, poskytuje přesné odhady doby tisku a spotřeby materiálu, snižuje odpad, podporuje Mainsail, rychlé změny barev a pokročilé tiskařské funkce. NELZE POUŽÍT S NATIVNÍ OBRAZOVKOU.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - fork pluginu BamBufy.
 3. [Dryer](https://github.com/pantata/dryer) - Sušení filamentu pomocí vyhřívané podložky
-4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs_jacker), který umožňuje automatickou detekci počtu dostupných kanálů a integraci ventilátorů, LED a senzorů připojených přes IFS Jacker do Klipperu.
+4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs-jacker), který umožňuje automatickou detekci počtu dostupných kanálů a integraci ventilátorů, LED a senzorů připojených přes IFS Jacker do Klipperu.
 
 Chcete-li povolit repozitář externích pluginů, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
 
