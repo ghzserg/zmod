@@ -563,131 +563,169 @@ Dies reduziert die Geschwindigkeit in den Ecken und verbessert generell die Druc
 
 !!! tip "Empfohlens Plugin aktivieren"
 	
-	Oder das Plugin [Recommend](https://wiki.zmod.link/de/Plugin/) aktivieren.
+	Oder das Plugin [Recommend](/de/Plugin/#plugins-in-z-mod) aktivieren.
 
 ---
 
 ##### WIFI
 
-Bei einigen Firmwares startet das Wi-Fi gelegentlich nicht.
+Bei einigen Firmware-Versionen kann es gelegentlich vorkommen, dass WLAN nicht startet.
 
-Um dies zu beheben. Sie müssen eine Verbindung zum Wi-Fi-Netzwerk über den nativen Bildschirm herstellen.
+Um dies zu beheben, verbinden Sie sich über den nativen Bildschirm mit einem WLAN-Netzwerk.
 
-Rufen Sie `SAVE_ZMOD_DATA WIFI=1` auf.
+Führen Sie `SAVE_ZMOD_DATA WIFI=1` aus.
 
-Deaktivieren des WLANs auf dem nativen Bildschirm
+Deaktivieren Sie anschließend WLAN auf dem nativen Bildschirm.
 
-- 0 WiFi über den nativen Bildschirm verwenden
-- 1 WiFi über Z-Mod verwenden
+- 0 – WLAN über den nativen Bildschirm verwenden
+- 1 – WLAN über Z-Mod verwenden
 
 ---
 
 ##### FIX_E0011
 
-Die Ursachen des Fehlers E0011 sind global (Timer zu nah):
+Häufige Ursachen für den Fehler E0011 (Timer zu kurz):
 
-- Host hat nicht in der vorgesehenen Zeit geantwortet (0,025 sec)
-- MCU hat nicht innerhalb der vorgesehenen Zeit (0,025 sec) geantwortet
+- Der Host hat nicht innerhalb der vorgegebenen Zeit (0,025 Sek.) reagiert.
 
-Private Ursachen:
+- Die MCU hat nicht innerhalb der vorgegebenen Zeit (0,025 Sek.) reagiert.
 
-- Nationen MCU-Hauptplatine oder E-Platine hängt. Kommunikation mit MCU 'mcu' verloren. Lösung: Neustart. Ersetzen Sie die Hauptplatine (`mcu`) oder die Extruderplatine ('eboard').
-- Host-Prozessor ist überlastet (Shaper-Berechnung/Plotting)
-- EMMC ist überlastet (Arbeit mit Git, Backups, Laden großer Dateien während des Druckens, usw.)
-- RAM-Knappheit. Lösung: den Prozessor neu anlöten und den Speicher auf 256 Megabyte aufstocken
-- Gebrochenes Kabel zum Extruder. Lösung: Ersetzen/Korrigieren des Kabels
-- Der Kabelstecker hat keinen Kontakt mit der Extruderkopf-Platine. Lösung: Ersetzen Sie die Extruderplatine
-- Herunterladen von Daten aus dem SWAP (SWAP befindet sich auf EMMC, das mit 10 MB/s läuft, die Datenmenge im SWAP beträgt bis zu 25 Megabyte, wenn Shaper gebaut werden). Lösung: SWAP deaktivieren, wenn Sie 256 MB RAM haben `SAVE_ZMOD_DATA USE_SWAP=0`.
-- MCU-Firmware-Fehler. Lösung: MCU neu flashen [über Reset](/de/Setup/#return-printer-to-factory-settings-needed-for-mod installation). MCU neu flashen von mod [UPDATE_MCU](/de/System/#update_mcu)
+Spezifische Ursachen:
 
-Behebt den Fehler E0011 sowie `Communication timeout during homing`, eine Änderung des Parameters führt zu einem Neustart des Druckers. 0-Nein, 1-Ja (0)
+- Eingefrorenes Nations-MCU-Mainboard oder -eboard. „Kommunikationsverlust mit MCU 'mcu'“. Lösung: Neustart. Mainboard (`mcu`) oder Extruderplatine (`eboard`) austauschen.
 
-- 0 belässt den Parameter auf dem Standardwert 0,025
-- 1 setzt den Parameter auf 0,1
+- Überlastung der Host-CPU (Shaper-Berechnungen/Grafikdarstellung).
 
-Beispiel: `SAVE_ZMOD_DATA FIX_E0011=1`.
+- Überlastung des EMMC (Git-Operationen, Backups, Uploads großer Dateien während des Druckvorgangs usw.).
 
-Der Fehler kann auch auftreten:
+- Unzureichender Arbeitsspeicher. Lösung: CPU nachlöten und auf 256 MB Arbeitsspeicher aufrüsten.
 
-- Große Anzahl von Modellausschlüssen: Lösung `Prozessprofil` -> `Andere` -> `Output G-cod` -> `Model Exclusion` das Häkchen ausschalten.
-- Wenn Sie Swap auf FF5M/FF5MPro deaktiviert haben.
-  
-  Führen Sie das Makro `MEM` aus und sehen Sie nach, ob ein Swap vorhanden ist und wie groß er ist.
-  
-  Aktivieren Sie SWAP, wenn es deaktiviert ist ```SAVE_ZMOD_DATA USE_SWAP=1```.
+- Beschädigtes Extruderkabel. Lösung: Kabel austauschen/reparieren.
 
-- Wenn Sie FF5M/FF5MPro verwenden, machen Sie einen vollständigen Test. Nämlich die PID-Kalibrierung, das Entfernen der Table Map und das Entfernen des Shapers zur gleichen Zeit.
-  
-  Alle Kalibrierungen werden am besten [nach diesen Anweisungen] durchgeführt (/de/SetupCalibrations/#calibrate-printer-for-beginners)
+- Lose Kabelverbindung der Extruderplatine. Lösung: Extruderplatine austauschen.
 
-Der Fehler "Kommunikations-Timeout während der Referenzfahrt" kann aufgrund einer hohen Kommunikationslatenz zwischen dem Host-Computer und den Mikrocontrollern auftreten. Normalerweise sollte die Fahrzeit konstant unter 10 ms liegen. Eine auch nur kurzzeitig hohe Verzögerung kann zu Fehlfunktionen bei der Einrichtung führen.
+- Laden von SWAP-Daten (SWAP befindet sich auf dem EMMC-Speicher, der mit 10 MB/s arbeitet; die SWAP-Daten können während der Shaper-Berechnungen bis zu 25 MB groß sein). Lösung: Deaktivieren Sie SWAP, wenn Sie über 256 MB RAM verfügen, mit `SAVE_ZMOD_DATA USE_SWAP=0`.
 
-TRSYNC_TIMEOUT" ist ein Parameter in Klipper, der standardmäßig auf 0,025 Sekunden eingestellt ist. Er ermöglicht es Ihnen, Verzögerungen im Systembetrieb auszugleichen.
+- Absturz der MCU-Firmware. Lösung: Flashen Sie die MCU neu, indem Sie sie auf Werkseinstellungen zurücksetzen (z. B. über [Werkseinstellungen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)) oder das Modul [UPDATE_MCU](/de/System/#update_mcu) verwenden.
 
-Die Datei `/opt/klipper/klippy/mcu.py` hat `TRSYNC_TIMEOUT = 0.025` in der Standarddatei, der Patch ändert den Wert auf `TRSYNC_TIMEOUT = 0.1`.
+Beheben Sie die Fehler E0011 und `Kommunikations-Timeout während des Homing`. Durch Ändern dieses Parameters wird der Drucker neu gestartet. 0 – Nein, 1 – Ja (0):
 
-Wie man das in der Bestandsdatei korrigiert:
+– 0 – Standardparameter (0,025) beibehalten
+– 1 – Parameter auf 0,1 setzen
 
-- Formatieren Sie den USB-Stick auf FAT32
-- Speichern Sie die Datei `flashforge_init.sh` auf dem USB-Flash:
-    - [Um den Adventurer5M-Parameter zu reparieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-      - Wiederherstellen der Adventurer5M-Lagerparameter](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
-      - Um Adventurer5MPro zu reparieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-      - So stellen Sie die Adventurer5MPro-Lagerparameter wieder her](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
+Beispiel: `SAVE_ZMOD_DATA FIX_E0011=1`
 
-- Schalten Sie den Drucker aus
-- Stecken Sie den USB-Flash in den Drucker
-- Schalten Sie den Drucker ein
-- Der Drucker gibt einen lauten Piepton ab.
+Dieser Fehler kann auch auftreten:
+
+– Große Anzahl ausgeschlossener Modelle: Lösung `Prozessprofil` :arrow_right: `Sonstige` :arrow_right: `Ausgabe-G-Code` :arrow_right `Modelle ausschließen` deaktivieren.
+
+– Wenn Sie den Swap-Speicher in FF5M/FF5MPro deaktiviert haben.
+
+Führen Sie das Makro `MEM` aus und prüfen Sie, ob Swap-Speicher vorhanden ist und wie groß dieser ist.
+
+Aktivieren Sie den Swap-Speicher, falls er deaktiviert ist: ```SAVE_ZMOD_DATA USE_SWAP=1```
+
+– Wenn Sie FF5M/FF5MPro verwenden, führen Sie einen vollständigen Test durch. Dieser umfasst die PID-Kalibrierung, das Entfernen der Tabellenzuordnung und das gleichzeitige Entfernen der Shaper.
+
+Es empfiehlt sich, alle Kalibrierungen [hier gemäß dieser Anleitung](/de/SetupCalibrations/#drucker-kalibrierung-für-einsteiger) durchzuführen.
+
+Der Fehler `Kommunikations-Timeout beim Homing` kann aufgrund einer hohen Kommunikationslatenz zwischen Host und Mikrocontrollern auftreten. Die Round-Trip-Zeit sollte konstant unter 10 ms liegen. Kurzzeitige Latenzspitzen können zu Homing-Fehlern führen.
+
+`TRSYNC_TIMEOUT` ist ein Klipper-Parameter (Standardwert: 0,025 s), der Systemverzögerungen kompensiert.
+
+Die Standarddatei `/opt/klipper/klipper/mcu.py` setzt `TRSYNC_TIMEOUT = 0,025`. Der Patch ändert diesen Wert auf `TRSYNC_TIMEOUT = 0,1`.
+
+**So beheben Sie das Problem mit der Standard-Firmware:**
+
+- Formatieren Sie einen USB-Stick als FAT32.
+
+- Speichern Sie die Datei `flashforge_init.sh` auf dem USB-Stick:
+
+- [Parameter Adventurer5M korrigieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+
+- [Standardparameter Adventurer5M wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+
+- [Parameter Adventurer5MPro korrigieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+
+- [Standardparameter Adventurer5MPro wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+
+- Schalten Sie den Drucker aus.
+- Stecken Sie den USB-Stick in den Drucker.
+
+- Schalten Sie den Drucker ein (er piept laut).
+
 - Warten Sie, bis er neu gestartet ist.
-- Entfernen Sie den USB-Flash
-- Drucken Sie die problematische Datei erneut, der Fehler E0011 sollte Sie nicht mehr stören.
 
-So beheben Sie den Fehler manuell auf dem Lager:
+- Entfernen Sie den USB-Stick.
 
-- Installieren Sie [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
-- Gehe zu [winscp](https://winscp.net/eng/download.php) über ssh und editiere die Datei `/opt/klipper/klippy/mcu.py`.
-- Suchen Sie die Zeile `TRSYNC_TIMEOUT = 0.025` in der Datei.
-- Ersetzen Sie sie durch `TRSYNC_TIMEOUT = 0.1`.
-- Speichern Sie die Datei auf dem Drucker.
-- Starten Sie den Drucker neu
+- Drucken Sie die problematische Datei erneut; der Fehler E0011 sollte nun nicht mehr auftreten.
+
+**Manuelle Behebung mit der Standard-Firmware:**
+
+- Installieren Sie [root](/de/Native_FW/#root).
+
+- Stellen Sie mit [WinSCP](https://winscp.net/eng/download.php) eine SSH-Verbindung zum Drucker her.
+
+- Bearbeiten Sie die Datei `/opt/klipper/klipper/mcu.py`.
+
+- Suchen Sie nach `TRSYNC_TIMEOUT = 0.025` und ändern Sie den Wert in `TRSYNC_TIMEOUT = 0.1`.
+
+- Speichern Sie die Datei und starten Sie den Drucker neu.
+
+!!! tip "Empfohlens Plugin aktivieren"
+	
+	Oder das Plugin [Recommend](/de/Plugin/#plugins-in-z-mod) aktivieren.
 
 ---
 
 ##### FIX_E0017
 
-Behebt den Fehler E0017, wenn Sie den Parameter ändern, wird der Drucker neu gestartet. 0-Nein, 1-Ja (1)
+E0017-Fehler beheben. Durch Ändern dieses Parameters wird der Drucker neu gestartet. 0 - Nein, 1 - Ja (1):
 
-In der Datei `/opt/klipper/klippy/toolhead.py` steht im Stack der Parameter `LOOKAHEAD_FLUSH_TIME = 0.5`, im Original-Klipper `LOOKAHEAD_FLUSH_TIME = 0.250`, unser Wunder funktioniert gut mit `LOOKAHEAD_FLUSH_TIME = 0.150`.
+In der Originaldatei `/opt/klipper/klipper/toolhead.py` ist `LOOKAHEAD_FLUSH_TIME = 0.5` gesetzt. Der Original-Klipper verwendet `LOOKAHEAD_FLUSH_TIME = 0.250`. Unsere Modifikation funktioniert am besten mit `LOOKAHEAD_FLUSH_TIME = 0.150`.
 
-- 0 setzt den Parameter auf Lager
-- 1 setzt den Parameter auf 0.150
+- 0 - Originalwert
+- 1 - 0.150
 
-Beispiel: `SAVE_ZMOD_DATA FIX_E0017=1`.
+Beispiel: `SAVE_ZMOD_DATA FIX_E0017=1`
 
-Wie auf dem Lager zu beheben:
+**So beheben Sie den Fehler mit der Original-Firmware:**
 
-- Formatieren Sie den USB-Stick auf FAT32
-- Speichern Sie in der USB-Flash-Datei:
-    - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) für FlashForge 5M
-      - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) für FlashForge 5M Pro
+- Formatieren Sie einen USB-Stick als FAT32.
 
-- Schalten Sie den Drucker aus
-- Stecken Sie den USB-Flash in den Drucker
-- Schalten Sie den Drucker ein
-- Der Drucker gibt einen lauten Piepton von sich.
+- Speichern Sie die entsprechende Datei auf dem USB-Stick:
+
+- [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) für FlashForge 5M
+
+- [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) für FlashForge 5M Pro
+
+- Schalten Sie den Drucker aus.
+
+- Stecken Sie den USB-Stick in den Drucker.
+
+- Schalten Sie den Drucker ein (er piept laut).
+
 - Warten Sie, bis er neu gestartet ist.
-- Entfernen Sie den USB-Flash
-- Drucken Sie die problematische Datei erneut, der Fehler E0017 sollte Sie nicht mehr stören.
 
-So beheben Sie den Fehler manuell auf dem Gerät:
+- Entfernen Sie den USB-Stick.
 
-- Installieren Sie [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root)
-- Melden Sie sich über [winscp](https://winscp.net/eng/download.php) per ssh an und bearbeiten Sie die Datei `/opt/klipper/klippy/toolhead.py`.
-- Suchen Sie die Zeile `LOOKAHEAD_FLUSH_TIME = 0.5` in der Datei.
-- Ersetzen Sie sie durch `LOOKAHEAD_FLUSH_TIME = 0.150`.
-- Speichern Sie die Datei auf dem Drucker.
-- Starten Sie den Drucker neu
+- Drucken Sie die problematische Datei erneut; der Fehler E0017 sollte nun nicht mehr auftreten.
+
+**Manuelle Reparatur der Standard-Firmware:**
+
+- Installieren Sie [root](/de/Native_FW/#root).
+
+- Stellen Sie mit [WinSCP](https://winscp.net/eng/download.php) eine SSH-Verbindung zum Drucker her.
+
+- Bearbeiten Sie die Datei `/opt/klipper/klipper/toolhead.py`.
+
+- Suchen Sie nach `LOOKAHEAD_FLUSH_TIME = 0.5` und ändern Sie den Wert in `LOOKAHEAD_FLUSH_TIME = 0.150`.
+
+- Speichern Sie die Datei und starten Sie den Drucker neu.
+
+!!! tip "Empfohlens Plugin aktivieren"
+	
+	Oder das Plugin [Recommend](/de/Plugin/#plugins-in-z-mod) aktivieren.
 
 ---
 
@@ -703,7 +741,7 @@ Beispiel: `SAVE_ZMOD_DATA LED=50`
 
 Spielt MIDI, wenn es eingeschaltet ist (""), 0 zum Ausschalten
 
-Beispiel: `SAVE_ZMOD_DATA MIDI_ON=Schmerz-Halt-deinen-Mund.mid`.
+Beispiel: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`.
 
 ---
 
@@ -717,11 +755,11 @@ Beispiel: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`.
 
 ##### USE_SWAP
 
-SWAP verwenden (1)
+SWAP aktivieren (1):
 
-- 0 - nein *Nur für aufgelöste Prozessoren mit 256 MB Speicher*
-- 1 - ja, auf EMMC
-- 2 - ja, wenn möglich auf USB FLASH
+- 0 – Nein (*Nur für aufgerüsteten 256-MB-RAM*)
+- 1 – Ja, auf EMMC
+- 2 – Ja, USB-Flash bevorzugen
 
 Beispiel: `SAVE_ZMOD_DATA USE_SWAP=1`.
 
@@ -733,22 +771,22 @@ Chinesische Wolken einschalten 0 - nein, 1 - ja (1)
 
 Beispiel: `SAVE_ZMOD_DATA CHINA_CLOUD=0`.
 
-[Chinesische Wolken deaktivieren](/de/Recomendations/#disable-china-clouds)
+[Chinesische Cloud-Dienste deaktivieren](/de/Recomendations/#chinesische-cloud-dienste-deaktivieren)
 
-Auch wenn Sie alles auf dem Bildschirm ausgeschaltet haben. Der Drucker versucht immer noch, Foto- und Videotelemetrie an chinesische Server zu senden.
+Selbst wenn alle Cloud-Optionen über den Bildschirm deaktiviert sind, versucht der Drucker weiterhin, Fotos, Videos und Telemetriedaten an chinesische Server zu senden.
 
-Wenn Sie diesen Parameter auf 0 setzen, werden solche nützlichen Funktionen für den Hersteller teilweise deaktiviert.
+Durch Setzen dieses Parameters auf 0 werden diese Funktionen teilweise deaktiviert.
 
-**Wenn chinesische Wolken deaktiviert sind, sucht der Drucker nicht nach nativen Firmware-Updates.**
+**Wenn chinesische Cloud-Dienste deaktiviert sind, sucht der Drucker nicht nach Firmware-Updates.**
+
+Um die Firmware zu aktualisieren, aktivieren Sie die chinesischen Cloud-Dienste über `SAVE_ZMOD_DATA CHINA_CLOUD=1`, starten Sie den Drucker neu und führen Sie das Update durch.
 
 Stattdessen können Sie verwenden:
 
 - [zmod.link](/de/Zmod/#zlink) - Cloud, für die Verwaltung von Druckern über Fluidd/Mainsail.
-- [Telegram bot](/de/Macros/).
+- [Telegram bot](/de/Telegram/#telegram-bot).
 
-Wenn Sie die native Firmware aktualisieren möchten, müssen Sie die chinesische Cloud aktivieren, `SAVE_ZMOD_DATA CHINA_CLOUD=1`, neu starten und die native Firmware aktualisieren.
-
-So **deaktivieren** Sie chinesische Wolken auf der nativen Firmware:
+So **deaktivieren** Sie chinesische Cloud-Dienste auf der Standard-Firmware:
 
 - Formatieren Sie das Flash-Laufwerk auf FAT32
 - Legen Sie die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) auf diesem Flash-Laufwerk ab.
@@ -758,7 +796,7 @@ So **deaktivieren** Sie chinesische Wolken auf der nativen Firmware:
 - Der Drucker wird 1 Mal neu gestartet
 - Entfernen Sie den USB-Stick und verwenden Sie die Standard-Firmware
 
-So **aktivieren** Sie chinesische Wolken mit der Standard-Firmware:
+So **aktivieren** Sie chinesische Cloud-Dienste auf der Standard-Firmware:
 
 - Formatieren Sie das Flash-Laufwerk auf FAT32
 - Legen Sie die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) auf dem Flash-Laufwerk ab.
@@ -772,7 +810,10 @@ So **aktivieren** Sie chinesische Wolken mit der Standard-Firmware:
 
 ##### NICE
 
-Legen Sie die Priorität des Klipper-Prozesses fest. 1 ist die niedrigste Priorität, 40 ist die höchste Priorität (20).
+Legen Sie die Priorität des Klipper-Prozesses fest.
+
+- 1 ist die niedrigste Priorität,
+- 40 ist die höchste Priorität (20).
 
 Beispiel: `SAVE_ZMOD_DATA NICE=20`.
 
@@ -792,19 +833,19 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 ##### DISPLAY_OFF_TIMEOUT
 
-Legt die Zeit in Sekunden fest, nach der der native Bildschirm ausgeschaltet wird, wenn er im nicht-nativen Bildschirmmodus betrieben wird. (180)
+Legen Sie die Timeout-Dauer (in Sekunden) fest, nach der sich der Bildschirm bei Nichtgebrauch automatisch ausschaltet. Standardwert: 180.
 
-Beachten Sie, dass der native Bildschirm Zeit haben muss, um WiFi zu konfigurieren; die Mindestzeit beträgt 5 Sekunden.
+Hinweis: Der Bildschirm benötigt mindestens 5 Sekunden, um WLAN zu konfigurieren.
 
-Beispiel: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`.
+Beispiel: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
 
 ##### PRO_POWEROFF_TIMEOUT
 
-Legt die Zeit in Minuten fest, nach der der FF5m Pro abgeschaltet wird. (0)
+Legen Sie die Zeit (in Minuten) fest, nach der sich FF5M(AD5X) Pro automatisch ausschaltet. Standardwert: 0 (deaktiviert).
 
-Beispiel: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`.
+Beispiel: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
 
 ---
 

@@ -53,29 +53,27 @@ Führen Sie dann das Makro [CAMERA_ON](/de/Zmod/#camera_on)
 
 ---
 
-### Chinesische Wolken deaktivieren.
+### Chinesische Cloud-Dienste deaktivieren
 
-### Lan-Modus-Fehler
+### LAN-Modus-Fehler
 
-Trennen Sie die Verbindung zu den chinesischen Clouds, da diese instabil sind und regelmäßig abreißen.
-Sobald die Verbindung wiederhergestellt ist, verstopfen sie den Drucker mit rückständigen Anfragen und verursachen Fehler.
+Diese Dienste sind instabil und können zeitweise die Verbindung verlieren. Wiederverbindungsversuche können den Drucker mit Anfragen in der Warteschlange überlasten und Fehler verursachen.
 
-Wenn chinesische Clouds ausgeführt werden, funktioniert das Drucken vom nativen Bildschirm mit Desktop-Entfernung und Schnellschließen von Fenstern nicht.
+Durch die Deaktivierung dieser Dienste wird außerdem ein schnelleres Schließen des Dialogs nach dem Druckvorgang ermöglicht und die native Bettnivellierung über den Bildschirm unterstützt.
 
-Auf dem Druckerbildschirm.
+**Auf dem Druckerbildschirm:**
 
-Einstellungen" -> Registerkarte "WiFi" -> "Netzwerkmodus" -> "Nur lokale Netzwerke" aktivieren.
+1. `Einstellungen` :arrow_right: `WLAN` :arrow_right: `Netzwerkmodus` :arrow_right: `Nur lokales Netzwerk` aktivieren.
 
-Wenn Sie "Chinesische Wolken" deaktivieren, können Sie das "Ok"-Fenster nach dem Drucken schnell schließen und mit dem Algorithmus des ursprünglichen Bildschirms drucken, ohne dass die Tabelle angezeigt wird.
+2. `Einstellungen` :arrow_right: `Cloud` :arrow_right: `FlashCloud` und `Polar3D` deaktivieren.
 
-Einstellungen" -> Registerkarte "Wolke" -> Deaktivieren Sie "FlashCloud" und "Polar3d".
+Alternativ können Sie Folgendes verwenden:
 
-Sie können stattdessen verwenden:
+- [zmod.link](/de/Zmod/#zlink) – Cloud zur Druckerverwaltung über Fluidd/Mainsail.
 
-- [zmod.link](/de/Zmod/#zlink) - Cloud, für die Verwaltung von Druckern über Fluidd/Mainsail.
-- [Telegram bot](/de/Macros/).
+- [Telegram-Bot](/de/Telegram/#telegram-bot).
 
-[Mehr über chinesische Wolken](/de/Global/#china_cloud).
+[Mehr über chinesische Cloud-Dienste](/Global/#china_cloud).
 
 ---
 

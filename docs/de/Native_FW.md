@@ -81,7 +81,7 @@ Für diejenigen, die auf dem Dach verschoben "nach Hause" gegangen sind (Parken 
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
-## Wurzel
+## Root
 
 - Anmeldung: root
 - Passwort: root
