@@ -15,7 +15,7 @@ Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Futterturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
 3. [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung über das Heizbett
-4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs_jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
+4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
 
 Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `ENABLE_EXTRA_PLUGINS` aus.
 
