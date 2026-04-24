@@ -27,6 +27,7 @@ Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `EN
 ```gcode
 ENABLE_PLUGIN name=g28_tenz
 ```
+
 - wird das Plugin herunterladen und Klipper bei Erfolg neu starten.
 
 **Plugin deaktivieren:**

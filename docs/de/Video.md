@@ -1,5 +1,6 @@
 ---
 ausblenden:
+
   - Navigation
 ---
 

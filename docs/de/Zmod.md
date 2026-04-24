@@ -7,8 +7,8 @@ Es kann aufgerufen werden durch:
 - Aus der GCODE-Datei
 - Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
 
-!!! Hinweis
-    *Der Wert in Klammern ist der Standardwert.
+!!! info "Hinweis"
+	*Der Wert in Klammern ist der Standardwert.*
 
 ---
 
@@ -16,21 +16,21 @@ Es kann aufgerufen werden durch:
 
 Eine alternative Implementierung der Kamera verwenden
 
-- WIDTH - Breite des Bildes (640)
-- HEIGHT - Höhe des Bildes (480)
-- FPS - Bilder pro Sekunde (20)
-- VIDEO - Videogerät (video0)
-- FS - 1, um die Bildgrößenbegrenzung für gebogene Kameras zu aktivieren, 0, um sie nicht zu aktivieren (0)
-- STREAMER - welcher Streamer verwendet werden soll (auto, mjpg_streamer, ustreamer)
-- FORMAT - Bildformat für ustreamer: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG; Standard: MJPEG.
+- `BREITE` – Bildbreite (Standard: `640`)
+- `HÖHE` – Bildhöhe (Standard: `480`)
+- `FPS` – Bilder pro Sekunde (Standard: `20`)
+- `VIDEO` – Videogerät (Standard: `video0`)
+- `FS` – `1` = Bildgrößenbegrenzer für instabile Kameras aktivieren, `0` = deaktivieren (Standard: `0`)
+- `STREAMER` – Zu verwendender Streamer (auto, mjpg_streamer, ustreamer)
+- `FORMAT` – Bildformat für ustreamer: YUYV, YVYU, UYVY, RGB565, RGB24, BGR24, MJPEG, JPEG; Standard: MJPEG
 
-*Deaktivieren Sie die Kamera auf dem Druckerbildschirm und rufen Sie erst dann das Makro auf.
+*Deaktivieren Sie die Kamera auf dem Druckerbildschirm und rufen Sie erst dann das Makro auf.*
 
 Um die Kamera einzuschalten, verwenden Sie ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video99```.
 
 <img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
 
-Wenn die Kamera nicht funktioniert, sehen Sie sich die Logs `mod_data/log/cam/` an.
+Falls die Kamera nicht funktioniert, schauen Sie in den Protokolldateien unter `mod_data/log/cam` nach.
 
 RAM-Verbrauch der Standard-Kamera:
 
@@ -40,8 +40,11 @@ RAM-Verbrauch der Standard-Kamera:
 
 *Viele Kameras von Ali/Ozon/Wildberries verbrauchen immer 18 MiB.
 
-- [Was ist eine alternative Kamera?](/de/FAQ/#Was-ist-eine-alternative-Kamera)
-- Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen und jetzt ist sie weg!](/de/FAQ/#Ich habe einen Drucker installiert und Z-Mod hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
+!!! info "Hinweis"
+
+	- [Was ist eine alternative Kamera?](/de/FAQ/#was-ist-eine-alternative-kamera)
+
+		- [Ich habe den Drucker installiert, und Z-Mod hat meine Kamera ausgeblendet! Ich konnte sie in Orca-FF sehen, und jetzt ist sie weg!](/de/FAQ/#ich-habe-einen-drucker-installiert-und-z-mod-hat-meine-kamera-versteckt-ich-konnte-sie-in-orca-ff-sehen-aber-jetzt-ist-sie-weg)
 
 `Camera Off Waiting...` - diese Meldung wird angezeigt, wenn der Kamerastream noch nicht verfügbar ist. Die Kamera startet nach dem Start von Klipper - während die Informationen über globale Parameter angezeigt werden
 
@@ -68,7 +71,7 @@ Ein Streamer ist ein Programm, das ein Bild von einer Kamera aufnimmt und es in 
 - **mjpg_streamer** - einfaches Programm, funktioniert nur mit MJPG-Kameras.
 - **ustreamer** - leistungsfähiger, benötigt aber mehr Speicher, unterstützt verschiedene Kameras.
 
-Der Parameter "STREAMER=auto" wählt den geeigneten Streamer aus.
+Der Parameter `STREAMER=auto` wählt den geeigneten Streamer aus.
 
 **Bildformate (nur für ustreamer)**
 
@@ -90,11 +93,11 @@ CAMERA_ON VIDEO=video0 STREAMER=ustreamer FORMAT=YUYV WIDTH=640 HEIGHT=480
 
 **Wo kann man das Bild sehen?**
 
-In einem Browser öffnen: `http://ip_адрес_принтера:8080`.
+In einem Browser öffnen: `http://printer_ip_address:8080`.
 
 Dort können Sie Helligkeit, Kontrast und andere Einstellungen ändern.
 
-**Wenn es Probleme gibt**
+**Wenn es Probleme gibt?**
 
 Sie können die Kamera nicht sehen?
 Starten Sie:
@@ -123,13 +126,17 @@ Neustart der alternativen Kamera-Implementierung
 
 Z-Mod entfernen.
 
-- FULL: 0 - Ordner `/opt/config/mod_data` belassen, 1 - Ordner `/opt/config/mod_data` löschen (0)
-
-Achtung! Deaktivieren Sie alle Plugins und wechseln Sie zum nativen Klipper.
+- `FULL`: `0` - Ordner `/opt/config/mod_data` belassen, `1` - Ordner `/opt/config/mod_data` löschen (Standard: `0`)
 
 Der Ordner `/opt/config/mod_data` enthält Einstellungen für `zmod`, `fluidd`, `moonraker`, `mainsail`.
 
-Er wird nicht standardmäßig gelöscht, da Leute oft versehentlich das Makro `REMOVE_ZMOD` aufrufen
+!!! warning "Warnung"
+	
+	Achtung! Deaktivieren Sie alle Plugins und wechseln Sie zum nativen Klipper.
+
+!!! info "Hinweis"
+	
+	Er wird nicht standardmäßig gelöscht, da Leute oft versehentlich das Makro `REMOVE_ZMOD` aufrufen
 
 ---
 
@@ -139,12 +146,14 @@ Neustart zum ursprünglichen System. Ohne Z-Mod auszuführen.
 
 Z-Mod, Moonraker, Fluidd Konfigurationsdateien sind deaktiviert.
 
-Achtung! Deaktivieren Sie alle Plugins selbst und wechseln Sie zu nativen Klipper
-
 Funktioniert weiterhin:
 
 - Alternative Kamera
 - SSH
+
+!!! warning "Warnung"
+	
+	Achtung! Deaktivieren Sie alle Plugins und wechseln Sie zum nativen Klipper.
 
 ---
 
@@ -152,7 +161,7 @@ Funktioniert weiterhin:
 
 Speichert Konfigurationsdateien in einem Archiv.
 
-Laden Sie das Archiv herunter unter 'Konfiguration' -> 'mod_data' -> config.tar.gz
+Laden Sie das Archiv herunter unter **`Maschine` :arrow_right: mod_data :arrow_right: config.tar.gz**
 
 ---
 
@@ -160,19 +169,19 @@ Laden Sie das Archiv herunter unter 'Konfiguration' -> 'mod_data' -> config.tar.
 
 Stellt Konfigurationsdateien aus dem Archiv `config.tar.gz` wieder her
 
-Laden Sie das Archiv unter 'Konfiguration' -> 'mod_data' -> `config.tar.gz`.
+Laden Sie das Archiv herunter unter **`Maschine` :arrow_right: mod_data :arrow_right: config.tar.gz**
 
 ---
 
 ### ZFLASH
 
-Ermöglicht die Aktualisierung von einem USB-Stick über das Netzwerk.
+Firmware-Aktualisierung über das Netzwerk mithilfe eines USB-Sticks.
 
-Stecken Sie den USB-Stick in den Drucker, schalten Sie den Drucker ein.
+1. Stecken Sie den USB-Stick in den Drucker und schalten Sie ihn ein.
 
-Wenn Sie im nicht-nativen Bildschirmmodus arbeiten, ist es wichtig, dass der USB-Stick in den Drucker eingesteckt ist, wenn der Drucker eingeschaltet ist.
+2. Wenn Sie den Drucker ohne integriertes Display verwenden, stellen Sie sicher, dass der USB-Stick **vor** dem Einschalten eingesteckt ist.
 
-Dieses Makro sucht die neueste verfügbare Version, lädt sie auf das Flash-Laufwerk herunter, überprüft die MD5-Summe des Archivs und installiert sie nach einem Neustart.
+3. Dieses Makro sucht nach der neuesten Firmware-Version, lädt sie auf den USB-Stick herunter, überprüft den MD5-Hash und installiert sie nach dem Neustart.
 
 ---
 
@@ -216,16 +225,20 @@ Wenn diese Zeile im endgültigen Code enthalten ist, wird GUPPY/HELIX gestartet,
 
 ### ZSSH_ON
 
-SSH-Umleitung einschalten
+SSH-Tunneling aktivieren.
+Parameter:
 
-- SSH_SERVER - IP des entfernten SSH-Servers
-- SSH_PORT - Port des entfernten SSH-Servers
-- SSH_USER - Benutzername auf dem entfernten Server
-- VIDEO_PORT - Port des entfernten Servers, der für Video verwendet werden soll (8080)
-- MOON_PORT - Port des entfernten Servers, der für Moonraker verwendet werden soll (7125)
-- REMOTE_RUN - Befehl, der auf dem Remote-Server aufgerufen werden soll ("NONE"), um den Telegrammbot neu zu starten. Sie können das Skript [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh) verwenden (es befindet sich auf dem Drucker im Ordner `mod/telegram/`), indem Sie es wie folgt schreiben: `./ff5m.sh bot1`, wobei bot1 das Verzeichnis ist, in dem der Bot installiert ist.
-Das Skript kann auf folgende Weise installiert werden (wenn Sie den Bot nicht mit einem einzigen Befehl installiert haben)
-```
+- `SSH_SERVER` – IP-Adresse/Hostname des entfernten SSH-Servers
+- `SSH_PORT` – SSH-Port (Standard: `22`)
+- `SSH_USER` – Benutzername des entfernten Servers
+- `VIDEO_PORT` – Port des entfernten Servers für Videostreaming (Standard: `8080`)
+- `MOON_PORT` – Port des entfernten Servers für Moonraker (Standard: `7125`)
+- `REMOTE_RUN` – Befehl, der auf dem entfernten Server ausgeführt werden soll (Standard: `"NONE"`).
+
+Beispiel: Verwenden Sie `./ff5m.sh bot1` (im Verzeichnis `mod/telegram/`), um den Telegram-Bot neu zu starten.
+
+**Setup-Skript (falls nicht über OneCommand installiert):**
+```bash
 su - tbot # Ändern Sie den Benutzer in den Benutzer, unter dem der Bot-Dienst ausgeführt wird.
 wget --cache=off -q -O ff5m.sh https://raw.githubusercontent.com/ghzserg/zmod_ff5m/refs/heads/main/telegram/ff5m.sh
 chmod +x ff5m.sh
@@ -236,11 +249,9 @@ Beispielinstallation, geben Sie fluidd/mainsail in der Konsole ein:
 ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_RUN="./ff5m.sh bot1"
 ```
 
+SSH startet 3 Minuten nach dem Start von Klipper und wird zu Beginn der Druckvorgänge automatisch neu gestartet (über das Makro `START_PRINT`).
+
 [Mehr über Telegram bot](/de/Telegram/)
-
-SSH startet 3 Minuten nach dem Start von klipper.
-
-Außerdem wird SSH automatisch neu gestartet (wenn es tot ist), wenn das Makro START_PRINT mit dem Drucken beginnt.
 
 ---
 
@@ -258,25 +269,27 @@ SSH-Client neu starten
 
 ### ZSSH_RELOAD
 
-Starten Sie den SSH-Client neu, falls er noch nicht läuft.
+Laden Sie den SSH-Client neu, falls er nicht ausgeführt wird.
 
-Dieses Makro wird zu Beginn des Druckvorgangs mit dem Makro START_PRINT aufgerufen.
+Dieses Makro wird beim Start von Druckvorgängen (über `START_PRINT`) ausgelöst.
 
 ---
 
 ### ZRESTORE
 
-Wiederherstellung des Drucks nach einem Stromausfall oder einem Druckerfehler.
+Druckvorgang nach Stromausfall oder Druckerfehlern fortsetzen.
 
-Die Druckwiederherstellung ist aktiv, wenn der native Bildschirm deaktiviert ist, da der native Bildschirm über eine integrierte Druckwiederherstellungsfunktion verfügt.
+**Voraussetzungen:**
 
-Damit die Wiederherstellungsfunktion funktioniert, darf **der Name der Druckdatei nicht mit einer Zahl beginnen**.
+- Der native Bildschirm muss deaktiviert sein (die native Wiederherstellung ist mit ZRESTORE inkompatibel).
+
+- Der Dateiname darf **nicht mit einer Zahl beginnen**.
 
 ---
 
 ### ZLINK
 
-Verbindung zur Wolke [zmod.link](https://zmod.link/link/)
+Verbindung zur Cloud [zmod.link](https://zmod.link/link/)
 
 - Mit der Cloud können Sie Ihren Drucker über Fluidd oder Mainsail von überall aus steuern.
 - Der Speicherbedarf des Druckers erhöht sich um 1 MB.
@@ -313,7 +326,7 @@ Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
    Beispiel:
 
    - `Testdrucker`.
-       - ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
+       - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
 
    
    <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="https://github.com/user-attachments/assets/b6401b71-5827-480d-ba1c-b7114f87177b" />
@@ -326,7 +339,7 @@ Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
    
    In dem Beispiel ````zlink p=testprinter u=test m=10006 c=30006```.
 
-   Klicken Sie auf ```Ich habe die Zeile bereits in den Drucker eingefügt```
+   Klicken Sie auf ```I have already pasted the string into the printer```
    
    Der Drucker kann sich dann mit der Cloud verbinden.
    

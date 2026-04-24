@@ -287,6 +287,7 @@ Klonen Sie das Repository mit helm chart
 ```
 git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
+
 - Änderungen:
 
     * Ändern Sie `persistence.enabled` auf „false“, wenn Sie keine Zeitraffer speichern möchten.
