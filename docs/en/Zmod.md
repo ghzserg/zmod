@@ -44,7 +44,7 @@ RAM usage for stock cameras:
 !!! note
 
     - [What is an Alternative Camera?](/FAQ/#what-is-an-alternative-camera)
-        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-z-mod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
