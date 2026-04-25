@@ -213,7 +213,7 @@ Parameters:
 - `SSH_USER` — remote server username
 - `VIDEO_PORT` — remote server port for video streaming (default: `8080`)
 - `MOON_PORT` — remote server port for Moonraker (default: `7125`)
-- `REMOTE_enN` — command to execute on the remote server (default: `"NONE"`).
+- `REMOTE_RUN` — command to execute on the remote server (default: `"NONE"`).
   Example: Use `./ff5m.sh bot1` (located in `mod/telegram/`) to restart the Telegram bot.
 
 **Setup script (if not installed via one-command):**
