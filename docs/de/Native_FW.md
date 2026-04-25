@@ -5,79 +5,85 @@
 ## So installieren Sie die native Firmware
 
 1. Setzen Sie den Drucker auf die Standardeinstellungen zurück.
-2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
+2. Formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
 3. Legen Sie die Datei im Stammverzeichnis des USB-Flash-Speichers ab.
 4. Schalten Sie den Drucker aus
 5. Stecken Sie das USB-Flash-Laufwerk in den Drucker
 6. Schalten Sie den Drucker ein
 
-## Native AD5X-Firmware
+??? abstract "AD5X"
 
-- [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
-- [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
-- [1.0.8](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.8-1.0.5-20250418-Factory.tgz)
-- [1.1.6](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz)
-- [1.1.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
-- [1.1.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.9-1.1.1-3.0.7-20251201-Factory.tgz)
-- [1.2.0](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.0-1.1.1-3.0.7-20251212-Factory.tgz)
-- [1.2.1](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.1-1.1.1-3.0.7-20251217-Factory.tgz)
-- [1.2.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.2-1.1.1-3.0.7-20260205.tgz)
-- [1.2.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.3-1.1.1-3.0.7-20260205-Factory.tgz)
-- [3.0.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.3-1.1.1-3.0.7-20260119.tgz)
+	## Native AD5X-Firmware
 
-## Native AD5M-Firmware
+	- [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
+	- [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
+	- [1.0.8](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.8-1.0.5-20250418-Factory.tgz)
+	- [1.1.6](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.6-1.1.0-3.0.6-20250722.tgz)
+	- [1.1.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+	- [1.1.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.9-1.1.1-3.0.7-20251201-Factory.tgz)
+	- [1.2.0](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.0-1.1.1-3.0.7-20251212-Factory.tgz)
+	- [1.2.1](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.1-1.1.1-3.0.7-20251217-Factory.tgz)
+	- [1.2.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.2-1.1.1-3.0.7-20260205.tgz)
+	- [1.2.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.3-1.1.1-3.0.7-20260205-Factory.tgz)
+	- [3.0.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.3-1.1.1-3.0.7-20260119.tgz)
 
-- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
-- [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
-- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
-- [3.2.5](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.5-2.2.3-20251205-Factory.tgz)
-- [3.2.6](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.6-2.2.3-20251212-Factory.tgz)
-- [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.7-2.2.3-20251217-Factory.tgz)
-- [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.0.3-2.2.3-20260122.tgz)
+??? abstract "AD5M"
 
-## Native AD5MPro-Firmware
+	## Native AD5M-Firmware
 
-- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
-- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
-- [3.2.4](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.4-2.2.3-20251114-Factory.tgz)
-- [3.2.5](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.5-2.2.3-20251126-Factory.tgz)
-- [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.7-2.2.3-20251217-Factory.tgz)
-- [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
+	- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
+	- [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+	- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
+	- [3.2.5](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.5-2.2.3-20251205-Factory.tgz)
+	- [3.2.6](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.6-2.2.3-20251212-Factory.tgz)
+	- [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.7-2.2.3-20251217-Factory.tgz)
+	- [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.0.3-2.2.3-20260122.tgz)
+
+??? abstract "AD5MPro"
+
+	## Native AD5MPro-Firmware
+
+	- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
+	- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
+	- [3.2.4](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.4-2.2.3-20251114-Factory.tgz)
+	- [3.2.5](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.5-2.2.3-20251126-Factory.tgz)
+	- [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.7-2.2.3-20251217-Factory.tgz)
+	- [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 
 ## Installation der vollständigen Firmware auf dem AD5X
 
-Dies ist nicht die Original-Firmware, sondern eine Entbrickungs-/Wiederherstellungs-Firmware. Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht mehr startet.
+Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. Installieren Sie sie nur, wenn der Drucker überhaupt nicht mehr startet.
 
 Die Installation kann bis zu einer Stunde dauern.
 
-Herunterladen auf einen USB-Stick
+Auf USB-Stick herunterladen
 
 - [AD5X-Fabrik-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
-- Nach dem Update, wenn Sie die MCU flashen müssen, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+- Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Installation der vollständigen Firmware auf dem FF5M
 
-Dies ist nicht die Original-Firmware, sondern eine Entbrickungs-/Wiederherstellungs-Firmware. Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht mehr startet.
+Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. Installieren Sie sie nur, wenn der Drucker überhaupt nicht mehr startet.
 
 Die Installation kann bis zu einer Stunde dauern.
 
-Herunterladen auf einen USB-Stick
+Auf USB-Stick herunterladen
 
 - [Adventurer5M-Fabrik-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
 - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, wenn Sie es zuvor über `TAR_CONFIG` erstellt haben.
-- Nach dem Upgrade, wenn Sie die MCU-Installation neu erstellen müssen [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+- `config.tar`, falls Sie dies zuvor über `TAR_CONFIG` durchgeführt haben.
+- Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-## AD5X-ENABLE-zmod.tgz
+## zmod auf AD5X aktivieren
 
-Das Aktivieren von zmod auf dem AD5X nach einem nativen Firmware-Update erlaubt es, den Mod zu aktivieren, ohne ihn komplett neu zu installieren
+Durch Aktivieren von Zmod auf dem AD5X nach einem Firmware-Update kann der Mod aktiviert werden, ohne ihn komplett neu installieren zu müssen.
 
 [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
 
 ## XY installieren
 
-Für diejenigen, die auf dem Dach verschoben "nach Hause" gegangen sind (Parken auf dem Poop-Empfänger). Entpacken Sie den Inhalt des Archivs in das Stammverzeichnis des Flash-Laufwerks, stecken Sie das Flash-Laufwerk ein und starten Sie den Drucker neu. Die Kalibrierung wird geladen. Drücken Sie zunächst Reset. Stellen Sie dann die korrekte Position des Druckkopfes mit den Steuertasten auf dem Bildschirm ein. Fixieren Sie ihn mit der Taste Set. Starten Sie den Drucker ohne den USB-Stick neu. Archiv vom offiziellen Flashforge-Support.
+Für alle, die den Verstand verloren haben und ihren Drucker komplett umgekrempelt haben (vom Parkplatz zum Abfallbehälter): Entpacken Sie den Archivinhalt auf einen USB-Stick, stecken Sie den Stick ein und starten Sie den Drucker neu. Die Kalibrierung wird geladen. Drücken Sie zuerst die Reset-Taste. Stellen Sie anschließend mithilfe der Bedienelemente auf dem Bildschirm die korrekte Druckkopfposition ein. Drücken Sie die Set-Taste, um die Position zu fixieren. Starten Sie den Drucker ohne den USB-Stick neu. Archiv von der offiziellen Flashforge-Supportseite.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 

@@ -25,6 +25,7 @@
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Kompatibel mit Bambu Studio, verbessert die Steuerung des Zufuhrturms, bietet eine genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt Mainsail,
 schnelle Farbwechsel und erweiterte Druckfunktionen.
+
 - [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - Eine Abspaltung von bambufy
 - [**nopoop**](https://github.com/ghzserg/nopoop) - Maximiert die Abfallreduzierung von ninjamida
 - [**IFS Jacker**](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs_jacker)
@@ -277,7 +278,6 @@ Damit diese Einstellungen funktionieren, müssen Sie den **eigenen Bildschirm de
 5.  **`filament_unload_into_tube`** — Wie viel Filament aus dem 4-in-1-Modul entladen werden soll, wenn der Extruder nicht mehr verwendet wird. **Standard: 70 mm.**
 
     *   Wenn Sie ein 4-in-1-Modul der neuen Version haben, erhöhen Sie `filament_unload_into_tube` oder im äußersten Fall erhöhen Sie `nozzle_cleaning_length`
-
 
 ---
 

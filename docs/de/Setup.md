@@ -146,6 +146,7 @@ Wenn Sie auf diese Situation stoßen, müssen Sie das Parken mit Hilfe des folge
 1. Laden Sie das Archiv [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) herunter und entpacken Sie es in das Stammverzeichnis des Flash-Laufwerks
 2. Stecken Sie den USB-Stick in den ausgeschalteten Drucker und schalten Sie ihn ein.
 Die Kalibrierungsschnittstelle wird auf dem Bildschirm des Druckers angezeigt. Sie müssen auf Reset drücken.
+
 4. Verwenden Sie die Steuerpfeile, um den Druckkopf so am Empfänger zu parken, dass der Druckkopf genügend Druck auf den Verschlusshebel ausübt, die Düse hinter dem beweglichen Verschluss liegt und der Verschluss selbst mit der Vorderseite des Empfängers bündig ist.
 5. Sichern Sie das Kalibrierungsergebnis mit der Set-Taste.
 6. Entfernen Sie den Speicherstick und starten Sie den Drucker neu.

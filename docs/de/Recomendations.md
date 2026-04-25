@@ -10,7 +10,7 @@ Die Empfehlungen gelten sowohl für native als auch für Z-Mod-Firmware.
 Aktivieren Sie den Modellausschluss in Orca:
 
 - `Prozessprofil` -> `Andere` -> `Output G-cod` -> `Modellausschluss`, um das Kontrollkästchen zu aktivieren
-- Prozessprofil" -> "Sonstige" -> "Output G-cod" -> "Modelle ausschließen", um das Kontrollkästchen zu aktivieren
+- `Prozessprofil` -> `Sonstige` -> `Output G-cod` -> `Modelle ausschließen`, um das Kontrollkästchen zu aktivieren
 
 <img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
 
@@ -26,7 +26,7 @@ Der Autor hat nicht die Ressourcen, um alle Versionen zu unterstützen, also [in
 
 Der Drucker unterstützt dies nicht.
 
-In Orca. Druckerprofil" -> "Extruder 1" -> "Z-Achsen-Hubtyp". Stellen Sie "Ordinär" oder "Kippen" ein.
+In Orca. `Druckerprofil` -> `Extruder 1` -> `Z-Achsen-Hubtyp`. Stellen Sie `Nomral` oder `Steigung` ein.
 
 ---
 
@@ -85,28 +85,46 @@ Igor Polunovskiy
 
 Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1` zu verwenden.
 
-1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem finden und auf Ihren Computer herunterladen:
+??? info "Download: Wählen Sie die passende Datei für Ihr System"
 
-- [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64`'' auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
+    1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
+        * [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - **Windows**
+        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x                           zmod_preprocess-linux-amd64` auszuführen.
+        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Intel** Vergessen Sie nicht, `chmod +x                  zmod_preprocess-darwin-arm64` auszuführen.
+        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Silicon** Vergessen Sie nicht, `chmod +x                zmod_preprocess-darwin-amd64` auszuführen.
+        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py`             auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh`             auszuführen.
+     
+??? tip "2. Konfiguration in Orca"
+    In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
+    `Prozessprofil` :arrow_right: `Andere` :arrow_right: `Nachverarbeitungsskripte`.
 
-2. In Orca muessen Sie schreiben. ```Prozessprofil``` -> ```Andere``` -> ```Nachverarbeitungsskripte```.
+    **Hier sind die Optionen, die Sie hinzufügen müssen (je nach System):**
 
-Wenn der Pfad Leerzeichen enthält, sollten Sie den vollständigen Pfad in Anführungszeichen setzen, aber es ist besser, keine Leerzeichen in Ordnern zu verwenden.
+    * **Windows (Executable):**
+        ```text
+        "C:\path_to_file\zmod_preprocess-windows-amd64.exe";
+        ```
 
-Hier sind die Varianten des Hinzufügens:
+    * **Windows (Python Skript):**
+        ```text
+        "C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";
+        ```
 
-- ````"C:C:\pfad_zur_datei\zmod_preprocess-windows-amd64.exe";````
-- "C:\python_ordner\python.exe" "C:\Scripts\zmod-preprocess.py";```
-- ````"/usr/bin/python3" "/home/user/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod-preprocess.py";````
-- ````"/home/benutzer/zmod_preprocess-darwin-amd64";````
-- ````"/home/benutzer/zmod_preprocess-darwin-arm64";````
-- ````"/home/benutzer/zmod_preprocess-linux-amd64";````
+    * **Linux/macOS (Python):**
+        ```text
+        "/usr/bin/python3" "/home/user/zmod-preprocess.py";
+        ```
+
+    * **Linux/macOS (Direkter Pfad):**
+        ```text
+        "/home/benutzer/zmod-preprocess.py";
+        ```
+
+    * **Binärdateien (Linux/macOS):**
+        * `/home/benutzer/zmod_preprocess-darwin-amd64`;
+        * `/home/benutzer/zmod_preprocess-darwin-arm64`;
+        * `/home/benutzer/zmod_preprocess-linux-amd64`;
 
 <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
@@ -128,7 +146,7 @@ In Orca. Klicken Sie auf das Wifi-Symbol neben dem Drucker:
 
 Wenn Mainsail verwendet wird, dann geben Sie nur diese Miniaturgrößen an: ```140x110/PNG, 64x64/PNG```.
 
-In Orca, ```Druckerprofil``` -> ```Allgemeine Informationen``` -> ```Erweitert``` -> ```G-Code Thumbnails```.
+In Orca, ```Druckerprofil```:arrow_right:```Allgemeine Informationen```:arrow_right:```Erweitert```:arrow_right:```G-Code Thumbnails```.
 
 Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
 

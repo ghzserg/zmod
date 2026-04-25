@@ -7,14 +7,14 @@ Es kann aufgerufen werden durch:
 - Aus der GCODE-Datei
 - Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
 
-!!! Hinweis
-    *Der Wert in Klammern ist der Standardwert.
+!!! info "Hinweis"
+    *Der Wert in Klammern ist der Standardwert.*
 
 ---
 
 ### COLDPULL
 
-Coldpool (Düsenreinigung) ohne Gewalt.
+Kaltes Ziehen (Düsenreinigung) ohne Kraftaufwand.
 Implementierung von [diesem Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 - Wählen Sie das zu reinigende Material (PETG, ABS, NEYLON).
@@ -31,7 +31,7 @@ Pause und Filament ersetzen
 
 ### COLOR
 
-* * nur AD5X * *
+*nur AD5X*
 
 Steuert den Kunststofftyp, die Kunststofffarbe und das Laden und Entladen des Filaments von farbigen Spulen.
 
@@ -41,30 +41,33 @@ Funktioniert nur bei Betrieb im nativen Bildschirmmodus
 
 ### SET_PAUSE_NEXT_LAYER
 
-Pause/Aufrufmakro auf der nächsten Ebene setzen
+Makro auf der nächsten Ebene pausieren/auslösen:
 
-- ENABLE - 0 - ausschalten, 1 - einschalten (1)
-- MACRO - aufzurufendes Makro (`PAUSE`)
+- `ENABLE` — `0` = deaktivieren, `1` = aktivieren (Standard: `1`)
+- `MACRO` — aufzurufendes Makro (z. B. `PAUSE`)
 
 ---
 
 ### SET_PAUSE_AT_LAYER
 
-Aktivieren/Deaktivieren der Pause bei einer bestimmten Ebenennummer
+Pause bei einer bestimmten Layernummer aktivieren/deaktivieren:
 
-- ENABLE - 0 - ausschalten, 1 - einschalten (1)
-- MACRO - aufzurufendes Makro (`PAUSE`)
-- LAYER - Ebenennummer (0)
+- `ENABLE` — `0` = deaktivieren, `1` = aktivieren (Standard: `1`)
+- `MACRO` — aufzurufendes Makro (z. B. `PAUSE`)
+- `LAYER` — Ziel-Layernummer (Standard: `0`)
 
 ---
-!!! Warnung
+!!! warning "Warnung"
     Damit diese Funktionen funktionieren, müssen Sie den Startcode ergänzen:
+	
+	Maschinen Start G-Code:
     ```
     SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
     ```
     
-    Fügen Sie im Code für den Ebenenwechsel Folgendes hinzu:
+	G-Code vor dem Schichtwechsel:
+	
     ```
-    SET_PRINT_STATS_INFO CURRENT_LAYER={schicht_zahl + 1}
+    SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     ```
 

@@ -1,5 +1,6 @@
 ---
 hide:
+
   - navigation
 ---
 
@@ -125,8 +126,6 @@ Diese Funktionen sind auf die Standard-Firmware portiert:
 6. [Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#return-printer-to-factory-settings-needed-for-installation-mod)
 7. [FF5M zu FF5MPro neu flashen](/de/Native_FW/#re-flash-5m-to-5mpro)
 8. [FF5MPro zu FF5M](/de/Native_FW/#übersetzen-5mpro-zu-5m)
-
-
 
 ### Kompatibilität
 Installiert auf einer sauberen Version:
