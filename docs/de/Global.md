@@ -360,7 +360,7 @@ Laden des Z-Offsets aus den zuvor über SET_GCODE_OFFSET gespeicherten globalen 
 - 1 - ja,
 - 0 - nein
 
-[Wie funktioniert Z-Offset](/de/FAQ/#so-funktioniert-der-z-offset)
+[Wie funktioniert der Z-Offset](/de/FAQ/#so-funktioniert-der-z-offset)
 
 Beispiel: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`.
 
@@ -370,8 +370,8 @@ Beispiel: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`.
 
 Düsenreinigung über Extrusion deaktivieren:
 
-- 0-no,
-- 1-yes
+- 0-nein,
+- 1-ja
 
 Beispiel: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`.
 
@@ -398,7 +398,7 @@ Du kannst dein Aufräum-Makro zu `mod_data/user.cfg` hinzufügen und es mit dies
 
 Beispiel: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`.
 
-*5M/5MPro: Dies ist kein Ersatz für das native clean(CLEAR_NOZZLE), bei dem die Düse in der Mitte von oben in den Tisch stößt und dann das Plastik gegen den Tisch schabt. Dies ist eine Reinigung der Düse kurz vor dem Druck.
+*5M/5MPro: Dies ist kein Ersatz für das native clean(CLEAR_NOZZLE), bei dem die Düse in der Mitte von oben in ddas Bett stößt und dann das Plastik gegen das Bett schabt. Dies ist eine Reinigung der Düse kurz vor dem Druck.*
 
 ---
 
@@ -820,7 +820,7 @@ Beispiel: `SAVE_ZMOD_DATA NICE=20`.
 Je höher die Priorität von Klipper, desto mehr Ressourcen hat er, aber desto häufiger stürzen Moonraker und Kamera ab.
 
 Für diejenigen, die Linux kennen:
-```
+```bash
 NICE=20
 grep -q "^nice = " /opt/config/mod_data/variables.cfg && NICE=$(grep "^nice = " /opt/config/mod_data/variables.cfg | cut -d "=" -f2| awk '{print $1}')
 NICE=$((20-$NICE))

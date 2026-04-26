@@ -1,4 +1,4 @@
-### [Installation](#installation-mod)
+### [Installation](#installieren-des-mods)
 
 ### Drucker auf Werkseinstellungen zurücksetzen (erforderlich für die Installation des Mods)
 
@@ -16,21 +16,21 @@
 6. Schalten Sie den Drucker ein
 7. Warten Sie, bis die native Firmware installiert ist.
 8. WiFi oder Lan einrichten *neuer Biber*
-9. Holen Sie sich die neuesten Drucker-Updates oder installieren Sie die Firmware 1.1.7 für AD5X bzw. 3.2.3 für [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), wenn Sie nicht möchten, dass der Drucker [vor jedem Druckauftrag die Mitte des Druckbetts misst](/de/FAQ/#misst-die-tabelle-vor-jedem-druckauftrag-zentriert)
+9. Laden Sie die neuesten Drucker-Updates herunter oder installieren Sie die Firmware 1.1.7 für AD5X bzw. 3.2.3 für [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz) / [AD5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), wenn der [Drucker die Bettmitte nicht vor jedem Druckvorgang](/de/FAQ/#vor-jedem-druckvorgang-misst-der-drucker-die-mitte-des-druckbetts) messen soll.
 
 ---
 
-## Installieren der Mod
+## Installieren des Mods
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
-1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zur-installation-von-mod-zuruecksetzen)** [Vorsicht AD5X](/de/Setup/#Vorsicht-ad5x)
+1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)** - [Vorsicht AD5X](/de/Setup/#achtung-ad5x)
 2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
 3. Legen Sie die [Datei](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
-       - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-       - für [AD5X](/de/AD5X/): AD5X-**zmod**-\*.tgz
+    - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
+    - für *[AD5X](/de/AD5X/)*: AD5X-**zmod**-\*.tgz
 
 4. Schalten Sie den Drucker aus
 5. Stecken Sie den USB-Stick in den Drucker
@@ -50,7 +50,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) und [activate mod](de/Native_FW/#ad5x-enable-zmodtgz) installieren.
+    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) und [activate mod](/de/Native_FW/#zmod-auf-ad5x-aktivieren) installieren.
      
 12. Übersetzen Sie den Mod in Ihrer Sprache.
     
@@ -74,12 +74,12 @@
 
     Wenn Sie dieses Fenster wieder sehen wollen - dann geben Sie `GLOBAL` in die Konsole ein
 
-14. Gehen Sie zu `Einstellungen` -> `Software Updates`.
+14. Gehen Sie zu `Einstellungen` :arrow_right: `Software Updates`.
 15. Klicken Sie auf "Nach Updates suchen" und warten Sie, bis die Updates geprüft wurden.
 16. Klicken Sie auf **Update** und aktualisieren Sie alle Komponenten.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
-    Wenn es viele Fehler anzeigt, ist das normal. Plugins sind nicht Teil der Firmware und werden separat heruntergeladen. Sie müssen auf "Nach Updates suchen" klicken.
+    Wenn es viele Fehler anzeigt, ist das normal. Plugins sind nicht Teil der Firmware und werden separat heruntergeladen. Sie müssen auf **Nach Updates suchen** klicken.
     Stellen Sie dann alle Plug-ins wieder her und aktualisieren Sie sie nacheinander. Der Drucker wird neu gestartet.
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
@@ -102,7 +102,7 @@
     SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
     ```
     
-    ````START_PRINT EXTRUDER_TEMP= BED_TEMP=```` **muss in eine Zeile geschrieben werden**
+    ```START_PRINT EXTRUDER_TEMP= BED_TEMP=``` **muss in eine Zeile geschrieben werden**
 
     Der endgültige Code zu diesem:
 
@@ -112,34 +112,34 @@
 
     Code, bevor Sie die Ebene in diese ändern:
 
-    ````SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}```.
+    ```SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}```.
 
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
 
     Es ist notwendig, auf das Protokoll "Octo/Klipper" umzuschalten:
 
       - Protokoll: `Octo/Klipper`.
-          - Hostname: "IP-Druckername:7125".
+          - Hostname: `IP-Druckername:7125`.
           - Url-Adresse des Hosts: `IP_printer` oder `IP_printer:80`
 
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
-19. [MD5-Kontrolle aktivieren](de/Recomendations/#aktivieren-sie-die-md5-kontrolle))
+19. [MD5-Kontrolle aktivieren](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
 20. [Lesen Sie die Empfehlungen](/de/Recomendations/)
 21. [FAQ lesen](/de/FAQ/)
-22. [Calibrate the printer](/de/SetupCalibrations/)
+22. [Drucker-Kalibrierung](/de/SetupCalibrations/)
 
 ### Achtung AD5X
 
 [@Khamai](https://t.me/Khamai)
 
-Nach der Installation der Native Firmware kann es vorkommen, dass der Druckkopf nicht richtig am Filamentempfänger geparkt ist (Unterklemmen des Empfängervorhangs, Herausdrücken des Filaments auf dem Tisch usw.).
+Nach der Installation der nativen Firmware kann es vorkommen, dass der Druckkopf nicht korrekt gegen den Filamentempfänger positioniert ist (der Empfängerverschluss ist möglicherweise nicht vollständig geschlossen, Filament kann auf das Bett gedrückt werden usw.).
 
-[Über das Engineering-Menü der nativen Firmware][(/de/AD5X/#korb-setup-auf-nativer-ad5x-firmware)
+[Über das Engineering-Menü der nativen Firmware](/de/AD5X/#abfallbehälter-setup-auf-nativer-ad5x-firmware)
 
 Wenn Sie auf diese Situation stoßen, müssen Sie das Parken mit Hilfe des folgenden Algorithmus kalibrieren:
 
@@ -153,22 +153,29 @@ Die Kalibrierungsschnittstelle wird auf dem Bildschirm des Druckers angezeigt. S
 
 ---
 
-## Aktualisieren Sie die Mod
+## Aktualisieren Sie den Mod
 
-Wenn der Mod sagt `Update zMOD vom Flash-Laufwerk`, müssen Sie Z-Mod vom Flash-Laufwerk aktualisieren, auch wenn Sie es kürzlich aktualisiert haben.
+Wenn die Meldung (`Z-Mod über USB aktualisieren`) angezeigt wird, müssen Sie die Aktualisierung per USB durchführen, auch wenn sie erst kürzlich erfolgt ist.
 
-**Wenn Sie von einem USB-Stick aktualisieren, werden alle Daten gespeichert.**
+**Bei der Aktualisierung per USB bleiben alle Daten erhalten.**
 
-**Der einfachste Weg, Z-Mod von einem USB-Stick zu aktualisieren, ist die Verwendung des Makros [ZFLASH](/de/Zmod/#zflash)**.
+**Einfachste Methode:** Verwenden Sie das Makro [ZFLASH](/de/Zmod/#zflash). Stecken Sie den USB-Stick ein, starten Sie den Drucker neu und führen Sie `ZFLASH` aus. Das Makro führt folgende Schritte aus:
 
-In diesem Fall müssen Sie den USB-Stick in den Drucker stecken, den Drucker neu starten und das Makro "ZFLASH" aufrufen.
+- Suche nach der neuesten Version.
 
-- Das Makro sucht nach der letzten aktuellen Version
-- Laden Sie die neueste Version für Ihr Druckermodell herunter
-- Überprüft die Prüfsummen
-- Neustart des Druckers
-- Die neue Version wird nach dem Neustart automatisch installiert (der USB-Stick muss nicht entfernt werden, Sie können ihn für künftige Aktualisierungen im Drucker belassen).
-- Gehen Sie dann auf die Registerkarte "Einstellungen" -> "Software-Update". Klicken Sie auf "Nach Updates suchen" und installieren Sie die neuesten "Z-Mod"-Updates.
+- Herunterladen der neuesten Version für Ihr Druckermodell.
+
+- Überprüfung der Prüfsummen.
+
+- Neustart des Druckers.
+
+- Automatische Installation des Updates (lassen Sie den USB-Stick für zukünftige Updates eingesteckt).
+
+Nach der Installation:
+
+1. Öffnen Sie Fluidd/(Mainsail) :arrow_right: `Einstellungen/(Maschine)` :arrow_right: `Software-Update`.
+
+2. Klicken Sie auf „Nach Updates suchen“ und installieren Sie die neuesten Z-Mod-Updates.
 
 <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -176,20 +183,30 @@ Wenn es viele Fehler anzeigt, ist das normal.
 
 Denn die Plugins sind nicht Teil der Firmware und werden separat heruntergeladen.
 
-Sie müssen auf "Nach Updates suchen" klicken. Und die Plug-ins nacheinander wiederherstellen und aktualisieren. Der Drucker wird neu gestartet.
+Sie müssen auf **"Nach Updates suchen"** klicken. Und die Plug-ins nacheinander wiederherstellen und aktualisieren. Der Drucker wird neu gestartet.
 
 <img width="671" height="223" alt="image" src="https://github.com/user-attachments/assets/5744dc8e-ba58-4359-b78a-652be846ca07" />
 
-Sie können die aktuelle Version des Betriebssystems des Mods unter der Registerkarte "System" -> "Verteilung" einsehen
+**Versionskompatibilität:**
 
-Die aktuelle Version von Z-Mod (Registerkarte "Einstellungen" -> "Update" -> "ffm5/zmod"), **muss** in den ersten beiden Ziffern mit der Version auf der Registerkarte "System" übereinstimmen.
+- Die Betriebssystemversion:
 
-<u>Wenn sie nicht übereinstimmen, wird die Mod **nicht richtig funktionieren**, in diesem Fall beschweren Sie sich nicht über Z-Mod</u>.
+!!! info "Hinweis Fluidd"
+	(unter `System` :arrow_right: `Distribution`)
+
+!!! info "Hinweis Mainsail"
+	(`Maschine` :arrow_right: `Systemauslastung(Host)`)
+
+muss mit den ersten beiden Ziffern der Z-Mod-Version (unter `Einstellungen/Maschine` :arrow_right: `Updates (Manager)` :arrow_right: `ffm5/zmod`) übereinstimmen.
+
+- **Versionsabweichungen führen zu Instabilität.**
+
+<u>Wenn sie nicht übereinstimmen, wird der Mod **nicht richtig funktionieren**</u>.
 
 Update über USB-Stick:
 
 1. den USB-Stick auf FAT/FAT16/FAT32 formatieren
-2. Legen Sie [file](https://github.com/ghzserg/zmod/releases/) in den Stammordner des USB-Sticks.
+2. Kopieren Sie [file](https://github.com/ghzserg/zmod/releases/) in den Stammordner des USB-Sticks.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
     - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
@@ -204,17 +221,7 @@ Update über USB-Stick:
 9. Ziehen Sie den USB-Stick heraus
 10. Schalten Sie den Drucker aus
 11. Schalten Sie den Drucker ein
-12. Gehen Sie in Fluidd/Mainsail auf die Registerkarte `Einstellungen` -> `Software-Update`. Klicken Sie auf "Nach Updates suchen" und installieren Sie die neuesten "Z-Mod"-Updates.
-
----
-
-## Hilfe Entwicklung
-
-[SBP, Bankkarte, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
-
-<img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
-
-BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
+12. Gehen Sie in Fluidd/Mainsail auf die Registerkarte `Einstellungen/Maschine` :arrow_right: `Updates (Manager)`. Klicken Sie auf **Nach Updates suchen** und installieren Sie die neuesten **Z-Mod**-Updates.
 
 ---
 
@@ -246,16 +253,22 @@ Deinstallation des Mods über ein Flash-Laufwerk:
 
 ## Wie aktualisiere ich die Standard-Firmware?
 
-1. deaktivieren Sie alle aktiven Plugins außer recommend, timelamse, notify (```DISABLE_PLUGIN name=plugin_name```).
-2. Wenn Sie **Klipper 13** benutzen, sollten Sie ```UPDATE_MCU``` durchführen, bevor Sie die native Firmware aktualisieren. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen sind.
-3. Aktivieren Sie die chinesische Wolke, wenn Sie das Update vom nativen Bildschirm aus durchführen wollen ```SAVE_ZMOD_DATA CHINA_CLOUD=1```.
+1. Deaktivieren Sie alle aktiven Plugins außer `recommend`, `timelapse` und `notify`:
+
+```DISABLE_PLUGIN name=plugin_name```
+
+2. Wenn Sie **Klipper 13** verwenden, führen Sie ```UPDATE_MCU``` *vor* dem Aktualisieren der Original-Firmware aus. Dadurch werden Versionskonflikte zwischen dem Mikrocontroller und Klipper vermieden.
+
+3. Aktivieren Sie die chinesischen Cloud-Dienste (falls Sie über den Original-Touchscreen aktualisieren möchten):
+
+```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
 Wenn der native Bildschirm das Update nicht findet:
 
 - Ihre Seriennummer wurde noch nicht von der Update-Verteilung getroffen
 - [Installieren Sie das native Firmware-Update von einem USB-Stick](/de/Native_FW/)
 
-**Für [AD5X](/de/AD5X/) erfordert [Aktivieren Sie Z-Mod](/de/Native_FW/) über `AD5X-ENABLE-zmod.tgz` von einem USB-Stick, nach dem Stock-Update**.
+**Für [AD5X](/de/AD5X/) ist die [Z-Mod-Aktivierung](/de/Native_FW/) über `AD5X-ENABLE-zmod.tgz` von einem USB-Stick erforderlich – nach dem Aktualisieren der Original-Firmware.**
 
 ---
 
@@ -269,14 +282,15 @@ Für diejenigen, die einen Drucker haben, der beim Einschalten im Bildschirmscho
 
 Versuchen Sie, die Firmware über eine vollständige Firmware-Installation wiederherzustellen:
 
-- [FF5M](/de/Native_FW/#Vollständige-Firmware-auf-ff5m-installieren)
-- [AD5X](/de/Native_FW/#Vollständige-Firmware-auf-Ad5x-installieren)
+- [FF5M](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ff5m)
+- [AD5X](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ad5x)
 
 Wiederherstellungs-Algorithmus:
 
 1. **Schalten Sie den Drucker aus**
 2. UART/USB-Konverter vorbereiten (3,3V- oder 5V/3,3V-Jumper erforderlich)
 
+*CH340G Schnittstellenkonverter*
 ![](../images/ch340.jpg)
 
 **WARNUNG!** Der Konverter muss mit 3,3 Volt betrieben werden, bei 5 Volt brennt der Prozessor durch!
@@ -286,52 +300,73 @@ Wiederherstellungs-Algorithmus:
 
 ![](../images/connect.jpg)
 
-Sie MÜSSEN den Jumper (wenn Sie einen haben) von 5V auf 3,3V umstecken. Wenn Sie auf 5V anschließen, müssen Sie die Hauptplatine ersetzen.
-So sollte der Anschluss am Ende aussehen:
+Sie MÜSSEN den Jumper (wenn Sie einen haben) von 5V auf 3,3V umstecken. **WARNUNG:** Eine 5-V-Eingangsspannung kann das Motherboard beschädigen!
 
-- RX/TX sind kreuzweise verbunden RX-TX TX-RX
-- GND des Konverters mit GND auf der Platine
-- 3.3V ist nirgends angeschlossen
+5. Schließen Sie den Konverter über Kreuz an:
+
+- Konverter RX → Drucker TX
+
+- Konverter TX → Drucker RX
+
+- Konverter GND → Drucker GND
 
 ![](../images/connect_photo.jpg)
 
-5. Ein neuer COM-Anschluss sollte auf dem System erscheinen.
+6. Ein neuer COM-Anschluss sollte auf dem System erscheinen.
 
 ![](../images/port.jpg)
 
-6. Starten Sie das Programm [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), geben Sie dort Ihren COM-Port ein (im obigen Beispiel COM6), Geschwindigkeit `115200`, Verbindungstyp - `Seriell`.
+7. Starten Sie das Programm [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html): 
 
-7. Schließen Sie den Drucker an die normale Stromversorgung an.
+- **Verbindungstyp**: Seriell
 
-8. Warten Sie im Terminal auf die Zeile:
-```
-Drücken Sie eine beliebige Taste, um den Autoboot zu stoppen
-```
-Drücken Sie dann schnell `Enter`.
+- **Geschwindigkeit**: 115200
 
-9. Dies wird Sie zu `U-Boot` bringen. Sie koennen dort eine Menge Dinge tun (schreiben Sie `Hilfe`)
+- **COM-Port**: (z. B. COM6)
 
-Aber wir müssen nur den Startbefehl für den Linux-Kernel überschreiben, um die Shell zu bekommen.
+8. Schließen Sie den Drucker an die normale Stromversorgung an.
 
-Wir schreiben in U-Boot über das Terminal:
+9. Wenn die Meldung „Beliebige Taste drücken, um den automatischen Start zu stoppen“ erscheint, drücken Sie **Enter**.
+
+10. Führen Sie in U-Boot Folgendes aus:
 
 ```
 setenv init /bin/sh
-booten
+boot
+
 ```
 
-10. Wenn Sie alles richtig gemacht haben, werden Sie nach dem Booten des Linux-Kernels `sh` erhalten.
-
-11. Das Dateisystem ist im Nur-Lese-Modus eingehängt, also müssen Sie es neu einhängen:
+11. Nach dem Start von Linux das Dateisystem als beschreibbar einhängen:
 
 ```
 mount -t proc proc /proc
 mount -o remount,rw /
+
 ```
 
-12. Reparieren Sie, was kaputt ist, z.B. `rm -f /etc/init.d/S01bad_script`, oder `rm -f /opt/config/mod/.shell/S98camera`, wenn Sie keinen Start wegen der Kamera bekommen.
+12. Beschädigte Dateien reparieren (z. B. fehlerhafte Skripte löschen):
 
-13. Sie müssen die Änderungen speichern: ```Sync```.
+```
+rm -f /etc/init.d/S01bad_script
+rm -f /opt/config/mod/.shell/S98camera
 
-14. Und neu starten: ```reboot```.
+```
+
+13. Änderungen speichern und neu starten:
+
+```
+sync
+reboot
+
+```
+
+---
+
+## Hilfe Entwicklung
+
+[SBP, Bankkarte, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
+
+<img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
+
+BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 

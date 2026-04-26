@@ -32,7 +32,7 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
     - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
     - **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
     - **Zugang zum Drucker-Webinterface über Internet** Cloud-Service [zmod.link](https://zmod.link)
-    - **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+    - **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme.md)
 
 #### 2. Erweiterte Kalibrierungs- und Nivellierungssysteme
 

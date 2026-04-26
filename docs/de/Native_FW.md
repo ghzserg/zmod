@@ -93,8 +93,8 @@ Für alle, die den Verstand verloren haben und ihren Drucker komplett umgekrempe
 - Passwort: root
 
 - [Adventurer5M-root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-root.tgz)
-- [Adventurer5MPro-Wurzel](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-root.tgz)
-- [AD5X-Wurzel](https://github.com/ghzserg/FF/releases/download/R/AD5X-root.tgz)
+- [Adventurer5MPro-Root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-root.tgz)
+- [AD5X-Root](https://github.com/ghzserg/FF/releases/download/R/AD5X-root.tgz)
 
 ## E0011 auf nativer Firmware
 
@@ -130,7 +130,7 @@ IFS-Firmware-Archiv
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
-- [IFS-Firmware-Reparaturanleitung](/de/AD5X/#11-recover-firmware-ifs)
+- [IFS-Firmware-Reparaturanleitung](/de/AD5X/#11-ifs-firmware-wiederherstellen)
 
 ## 5X G-Code
 

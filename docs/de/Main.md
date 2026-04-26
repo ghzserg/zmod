@@ -211,7 +211,7 @@ Parameter:
 
 - `BED_TEMP` – Betttemperatur (Standard: `80`)
 
-*`PRECLEAR` (einstellbar über `SAVE_ZMOD_DATA PRECLEAR=1`) aktiviert die Vorreinigung. [Mehr erfahren](/de/Global/#save_zmod_data).*
+*`PRECLEAR` (einstellbar über `SAVE_ZMOD_DATA PRECLEAR=1`) aktiviert die Vorreinigung. [Mehr erfahren](/de/Global/#preclear).*
 
 *Das Verfeinern des `CLEAR_NOZZLE`-Macros in `mod_data/user.cfg` wird die native Düsenbereinigung auf dem BED nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne Z-Mod funktioniert und daher keine Z-Mod-Makros verwendet*.
 
