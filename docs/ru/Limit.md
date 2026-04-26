@@ -29,7 +29,7 @@
 |--------|-----------|-------------|
 | **🇷🇺 Рубли (РФ)** | [Ссылка для оплаты](https://pay.cloudtips.ru/p/3cbf9e9f) | Укажите ваш логин zmod.link в имени отправителя |
 | **₿ Bitcoin** | `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` | ≈ **0.000012 BTC** за принтер* |
-| ** Boosty** | <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a> | ≈ **5$** за принтер* |
+| **Boosty** | <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a> | ≈ **5$** за принтер* |
 
 > \* Точная сумма в BTC зависит от текущего курса. Рассчитайте эквивалент **500 ₽** по актуальному курсу на момент перевода. Пример: при курсе 1 BTC ≈ 4 200 000 ₽ → 500 ₽ ≈ 0.000119 BTC.
 

@@ -29,7 +29,7 @@ Available payment methods:
 |--------|---------|-----------|
 | **🇷🇺 Russian Rubles** | [Payment link](https://pay.cloudtips.ru/p/3cbf9e9f) | Include your zmod.link **username** in the sender's name |
 | **₿ Bitcoin** | `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL` | Send the BTC equivalent of **500 RUB** per printer* |
-| ** Boosty** | <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a> | ≈ Send the $ equivalent of **500 RUB** per printer* ≈ 5$ |
+| **Boosty** | <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a> | ≈ Send the $ equivalent of **500 RUB** per printer* ≈ 5$ |
 
 > \* BTC amount varies with market rate. Calculate the equivalent of **500 RUB** using the current exchange rate at the time of transfer.
 > Example (approximate): at 1 BTC ≈ 4,200,000 RUB → 500 RUB ≈ **0.00012 BTC** per printer.
