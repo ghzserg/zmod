@@ -191,6 +191,10 @@ Kontroly:
 
 **Obnova:** Stáhněte neporušené soubory z [tohoto odkazu](https://github.com/ghzserg/FF/tree/main/stock).
 
+Pokud není konzole k dispozici, připojte se k tiskárně přes SSH:
+
+`/opt/config/mod/.shell/zcheckmd5.sh`
+
 ---
 
 ### SCREEN

@@ -252,6 +252,10 @@ Wenn man es nicht versteht, wie man [MCU-Konfigurationen und -Firmware wiederher
 
 Wenn etwas schief geht, gehen Sie nur über [factory](/de/Native_FW/) zurück.
 
+Wenn die Konsole nicht verfügbar ist, verbinden Sie sich über SSH mit dem Drucker:
+
+`/opt/config/mod/.shell/zcheckmd5.sh`
+
 ---
 
 ### RESET_PASSWD

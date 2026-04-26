@@ -191,6 +191,10 @@ Checks:
 
 **Recovery:** Download intact files from [here](https://github.com/ghzserg/FF/tree/main/stock).
 
+If the console is unavailable, connect to the printer via SSH:
+
+`/opt/config/mod/.shell/zcheckmd5.sh`
+
 ---
 
 ### SCREEN
