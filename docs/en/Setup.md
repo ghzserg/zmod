@@ -155,7 +155,7 @@ If you encounter this issue, you need to calibrate the print head position using
 
 ## Updating the Mod
 
-If the mod displays ("Update Z-Mod via USB"), you must update via USB, even if recently updated.
+If the mod displays (`Update Z-Mod via USB`), you must update via USB, even if recently updated.
 
 **Updating via USB preserves all data.**
 
@@ -237,12 +237,6 @@ Attention!
 
 ---
 
-## Support Mod Development
-
-BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
-
----
-
 ## Boot Recovery
 
 *Guide by [@darksimpson](https://t.me/darksimpson), [Alexander](https://github.com/DrA1ex), [@Ikaros413](https://t.me/Ikaros413), [@SoloMen88](https://t.me/SoloMen88)*
@@ -314,3 +308,14 @@ Try restoring the firmware by installing a full firmware:
     sync
     reboot
     ```
+---
+
+## Support Mod Development
+
+[SBP, Bankkarte, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
+
+<img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
+
+BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
+
+
