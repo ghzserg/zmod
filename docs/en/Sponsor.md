@@ -30,5 +30,6 @@ Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purch
 
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)
+- [Namida Verasche](https://github.com/ninjamida/)
 - Dave Shaw
-- [@corim123](https://github.com/corim123)
+- Sean Hinkley
