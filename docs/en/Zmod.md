@@ -44,7 +44,7 @@ RAM usage for stock cameras:
 !!! note
 
     - [What is an Alternative Camera?](/FAQ/#what-is-an-alternative-camera)
-        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-z-mod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
@@ -213,7 +213,7 @@ Parameters:
 - `SSH_USER` — remote server username
 - `VIDEO_PORT` — remote server port for video streaming (default: `8080`)
 - `MOON_PORT` — remote server port for Moonraker (default: `7125`)
-- `REMOTE_enN` — command to execute on the remote server (default: `"NONE"`).
+- `REMOTE_RUN` — command to execute on the remote server (default: `"NONE"`).
   Example: Use `./ff5m.sh bot1` (located in `mod/telegram/`) to restart the Telegram bot.
 
 **Setup script (if not installed via one-command):**
@@ -225,7 +225,7 @@ chmod +x ff5m.sh
 
 **Example usage in Fluidd/Mainsail console:**
 ```
-ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_enN="./ff5m.sh bot1"
+ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_RUN="./ff5m.sh bot1"
 ```
 
 SSH starts 3 minutes after Klipper boots and automatically restarts at the beginning of prints (via `START_PRINT` macro).

@@ -31,3 +31,4 @@
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)
 - Dave Shaw
+- [@corim123](https://github.com/corim123)
