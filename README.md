@@ -133,7 +133,7 @@ Native firmware files are located [here](https://wiki.zmod.link/Native_FW/).
 
 ## Printer Stability Recommendations
 
-[Read if encountering issues](https://wiki.zmod.link/Recomendations/)
+[Read if encountering issues](https://wiki.zmod.link/Recommendations/)
 
 ## Plugins
 
