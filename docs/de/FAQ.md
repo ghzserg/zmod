@@ -49,7 +49,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 - Automatische Aktualisierung von `Fluidd`/`Mainsail`/`Moonraker` und Z-Mod über das Netzwerk
 - [Entware](/de/FAQ/#z-mod-enthält-entware---wie-benutzt-man-es)
 - Fehler behoben [E0017](/de/Global/#fix_e0017)
-- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rollback, Düsenreinigung, Dehnungsmessstreifen-Reset,        Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
+- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rückzug, Düsenreinigung, Dehnungsmessstreifen-Reset,        Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
 - Feste Lüftersteuerung für die Motorkühlung. Die Lüfter schalten sich automatisch ein, sobald die Motoren laufen. Bei der Standard-Firmware nur während des   Druckvorgangs.
 - Adaptive Bettnivellierung [KAMP](/de/Calibrations/#kamp)
 - PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [BED](/de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
@@ -70,7 +70,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 ## Speichern von Einstellungen
 
 Zugriff auf den Ordner **mod_data** über die fluidd-Weboberfläche.
-`Konfiguration` -> `Konfigurationsdateien` -> `mod_data`
+`Konfiguration` :arrow_right: `Konfigurationsdateien` :arrow_right: `mod_data`
 
 - Benutzerdefinierte Klipper-Einstellungen werden in `mod_data/user.cfg` gespeichert, wodurch `printer_base.cfg` und Z-Mod-Dateien überschrieben/ergänzt werden können.
 - Benutzerdefinierte Moonraker-Einstellungen müssen in die Datei `mod_data/user.moonraker.conf` eingetragen werden.
@@ -198,11 +198,11 @@ Um die automatische Nivellierung für jeden Druck zu aktivieren, geben Sie dies 
 ```
 SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
-Gehen Sie im Bildschirmmenü des Druckers zu `Einstellungen` -> `WLAN-Symbol` -> `Netzwerkmodus` -> aktivieren Sie `Nur lokale Netzwerke`.
+Gehen Sie im Bildschirmmenü des Druckers zu `Einstellungen` :arrow_right:`WLAN-Symbol` :arrow_right:`Netzwerkmodus` :arrow_right:aktivieren Sie `Nur lokale Netzwerke`.
 
 Lesen Sie die Dokumentation von [START_PRINT](/de/Main/#start_print) und [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), damit Sie die erweiterten und nützlichen Funktionen von Z-Mod nutzen können.
 
-Wenn Sie Rollback von der Firmware verwenden wollen, lesen Sie [documentation](/de/FAQ/#was-ist-ein-firmware-ruckzug) und fügen Sie Folgendes hinzu unter `Filamentprofil` -> `Erweitert` -> `Filamentstart-G-Code`:
+Wenn Sie den Rückzug von der Firmware verwenden wollen, lesen Sie [Was-ist-ein-firmware-rückzug](/de/FAQ/#was-ist-ein-firmware-rückzug) und fügen Sie Folgendes hinzu unter `Filamentprofil` :arrow_right:`Erweitert` :arrow_right:`Filamentstart-G-Code`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -213,7 +213,7 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### So funktioniert der Z-Offset
 
-Lesen Sie den Artikel "[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/#wie-z-offset-auf-Ihrem-Drucker-arbeitet)".
+Lesen Sie den Artikel "[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/##wie-funktioniert-z-offset-auf-ihrem-drucker)".
 
 Bei Verwendung des Bildschirms beeinflusst die Modifikation den Z-Offset nicht. Der auf dem Bildschirm gespeicherte Z-Offset wird verwendet.
 
@@ -279,7 +279,7 @@ Parameter `PRINT_LEVELING`:
 
   ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird das Bettnetz bei jedem Druck entfernt.
 
-- Um die Bettnetzkarte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` -> ```Wifi-Symbol``` -> ```Netzwerkmodus``` -> aktivieren Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
+- Um die Bettnetzkarte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` :arrow_right:```Wifi-Symbol``` :arrow_right:```Netzwerkmodus``` :arrow_right:aktivieren Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
 
 - Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Bettnetzkarte beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
 
@@ -352,7 +352,7 @@ Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden woll
   BED_TEMP=[bed_temperature_initial_layer_single]
   ```
 
-- BED_MESH_CALIBRATE - Entfernung der Bettnetzkarte durch das Standard-Klipper-Macro.
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Entfernung der Bettnetzkarte durch das Standard-Klipper-Macro.
 
   **Es wird nicht empfohlen, es zu verwenden**, da keine Düsenreinigung durchgeführt wird, so dass die Ergebnisse falsch sein werden. **Adaptive Table Map von Orca, überhaupt nicht empfohlen**, da sie die Punktentfernung nicht zufällig vornimmt, was bedeutet, dass die Düse beim Drucken identischer Modelle jedes Mal an denselben Punkten misst, was zum Auftreten von Mikrolöchern und infolgedessen zu einer falschen Table Map führt.
 
@@ -392,7 +392,7 @@ Wenn Sie hierher verwiesen wurden. Lesen Sie die Dokumentation und nennen Sie da
 - [Tipps zur Verbesserung der Druckerstabilität](/de/Recomendations/)
 - [Mod installieren/verbessern/deinstallieren](/de/Setup/)
 - [Makro-Liste](/de/Macros/)
-- [Speichereinstellungen](de/FAQ/#speichern-von-einstellungen)
+- [Speichereinstellungen](/de/FAQ/#speichern-von-einstellungen)
 - [Bekannte Funktionen](/de/FAQ/#bekannte-funktionen)
 
 ---
@@ -483,7 +483,7 @@ Das Programm zeigt eine Liste der verfügbaren Kameras an.
 
 ### Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich konnte sie in Orca-FF sehen, aber jetzt ist sie weg!
  
-In der Weboberfläche (fluidd) gehen Sie zu `Einstellungen` -> `Videokameras`.
+In der Weboberfläche (fluidd) gehen Sie zu `Einstellungen` :arrow_right: `Videokameras`.
 
 Dort gibt es bereits eine Videokamera, `Sample_Settings_Camera`. Gehen Sie zu ihr und sehen Sie sich die Einstellungen an.
 
@@ -533,7 +533,7 @@ Drehen: 90
   
 - **Rufen Sie in Mainsail folgendes auf.**
 ```
-  Maschine -> Update-Manger -> Klicken Sie auf Nach Update suchen.
+  Maschine :arrow_right: Update-Manger :arrow_right: Klicken Sie auf Nach Update suchen.
 ```
 
 - Aktualisieren Sie alle Komponenten von *treeflyer*.
@@ -596,14 +596,14 @@ Wenn dies nicht hilft, verwenden Sie einen anderen Browser: Firefox, Chrome, Yan
 ### Z-Mod enthält Entware - wie benutzt man es?
 
 !!! warning "Warunung"
-    **Es gibt keine Entware** in [AD5X](/de/AD5X/)
+    **Es gibt keine Entware** im [AD5X](/de/AD5X/)
 
 Sie müssen sich per SSH mit dem Drucker verbinden (`root`:`root` port `22`)
 
-Führen Sie den Befehl
-`
+Führen Sie den Befehl:
+```bash
 export PATH="$PATH:/opt/bin/:/opt/sbin/"
-`
+```
 
 Sie können dann `mc` oder `opkg` ausführen
 
@@ -637,10 +637,10 @@ Kataloge, die von entware erstellt und verwendet werden:
 Anstelle von Befehlen wie `G1 E-.5 F2100` verwenden Sie `G10` zum Einziehen und `G11` zum Ausziehen.
 
 **Um dies in Orca zu aktivieren:**
-`Druckereinstellungen` -> `Allgemeine Informationen` -> `Erweitert` -> `Firmware-Rückzug` das Kontrollkästchen anklicken.
+`Druckereinstellungen` :arrow_right:`Allgemeine Informationen` :arrow_right: `Erweitert` :arrow_right: `Firmware-Rückzug` das Kontrollkästchen anklicken.
 
 **So ändern Sie die Standardeinstellungen für den Rückzug:**
-Über Fluidd/Mainsail. (`Maschine` -> `mod_data` -> `user.cfg`)
+Über Fluidd/Mainsail. (`Maschine` :arrow_right: `mod_data` :arrow_right: `user.cfg`)
 ```
 [firmware_retraction].
 retract_length: 0.9
@@ -659,8 +659,8 @@ untract_speed: 35
 - `UNRETRACT_EXTRA_LENGTH` - in manchen Fällen ist es nützlich, beim Zurückziehen eine kleine zusätzliche Länge hinzuzufügen.
 
 **Beispiel in Orca:**
-`Filamentprofil` -> `Parameter überschreiben` -> `Rückzug` -> `Länge`
-`Filamentprofil` -> `Erweitert` -> `Start G-Code`:
+`Filamentprofil` :arrow_right: `Parameter überschreiben` :arrow_right: `Rückzug` :arrow_right: `Länge`
+`Filamentprofil` :arrow_right: `Erweitert` :arrow_right: `Start G-Code`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -763,7 +763,7 @@ Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` begi
 
 [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
 
-Sie brauchen also Z-Mod, um native Klipper zu laden.
+Demzufolge muss Z-Mod die native Klipper-Bibliothek laden.
 
 - Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klipper13 = 1```.
 - Speichern Sie die Datei
@@ -776,7 +776,7 @@ Wenn dies nicht der Fall ist und Klipper läuft, dann führen Sie ```UPDATE_MCU 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 
 - [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
-- [Installiere die native Werks-Firmware](de/Native_FW/#so-installieren-sie-die-native-firmware), was die native MCU installieren wird.
+- [Installiere die native Werks-Firmware](/de/Native_FW/#so-installieren-sie-die-native-firmware), was die native MCU installieren wird.
 
 ---
 
@@ -804,7 +804,7 @@ Darüber hinaus kann ein Filamentstopp im IFS folgende Ursachen haben:
 
 - Der Extruder ist mit Spule 1 bestückt, Spule 2 wird jedoch herausgezogen. Verwenden Sie [`SET_EXTRUDER_SLOT`](/de/AD5X/#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist), um den aktuellen Extruder-Slot zu synchronisieren.
 - Neues Filament wird eingeführt, während sich altes Filament noch im Extruder befindet.
-- Die 4-in-1-Module und ihre Schläuche haben unterschiedliche Längen. Passen Sie daher den Wert für `filament_unload_into_tube` in `mod_data/filament.json` an. Setzen Sie ihn auf **70 oder höher**. [Mehr lesen](/de/AD5X/#10-ifs-befehle)
+- Die 4-in-1-Module und ihre Schläuche haben unterschiedliche Längen. Passen Sie daher den Wert für `filament_unload_into_tube` in `mod_data/filament.json` an. Setzen Sie ihn auf **70 oder höher**. [Mehr lesen](/de/AD5X/#wichtigste-einstellungen-was-am-häufigsten-zu-ändern-ist-ad5x)
 
 Das Problem kann auch durch die **Unfähigkeit, das Filament im IFS-Kanal zu entriegeln** bedingt sein.
 
@@ -822,12 +822,12 @@ Testen Sie nach der Reparatur den Druckvorgang und das Verhalten der Filamentver
 
 ### Vor jedem Druckvorgang misst der Drucker die Mitte des Druckbetts.
 
-Vor dem Drucken misst der Drucker:
+Vor dem Drucken:
 
-- heizt er den Tisch und die Düse auf.
+- heizt er das Bett und die Düse auf.
 - reinigt die Düse.
 - kühlt die Düse
-- **misst die Mitte des Tisches** (Start des manuellen Z-Tasters. Verwenden Sie TESTZ, um die Position einzustellen)
+- **misst die Mitte des Bettes** (Start des manuellen Z-Tasters. Verwenden Sie TESTZ, um die Position einzustellen)
 - heizt die Düse
 - startet den Druck
 

@@ -130,7 +130,7 @@ Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SA
 
 [Mehr lesen](/de/System/#check_md5)
 
-*hamster
+*hamster*
 
 ---
 
@@ -141,8 +141,8 @@ Das native FF-Protokoll sendet gelegentlich defekte Dateien und erzeugt auch kei
 In Orca. Klicken Sie auf das Wifi-Symbol neben dem Drucker:
 
 - Protokoll: `Octo/Klipper`.
-- Host-Name: "IP_drucker_name:7125".
-- Url-Adresse des Hosts: "IP_drucker" oder "IP_drucker:80".
+- Host-Name: `IP_drucker_name:7125`.
+- Url-Adresse des Hosts: `IP_drucker` oder `IP_drucker:80`.
 
 Wenn Mainsail verwendet wird, dann geben Sie nur diese Miniaturgrößen an: ```140x110/PNG, 64x64/PNG```.
 

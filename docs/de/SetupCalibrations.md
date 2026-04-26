@@ -54,7 +54,7 @@ PID_TUNE_EXTRUDER TEMPERATURE=255 COOLER=80
 
 ---
 
-### Tabelle PID-Einstellung
+### Heizbett PID-Einstellung
 
 **Warum brauche ich das?**
 
@@ -148,10 +148,10 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 ### Präzise Bettnivellierung (AUTO_FULL_BED_LEVEL)
 
 **Warum ist dies notwendig?**
-Selbst ein perfektes nivelliertes Druckbett kann kleine Vertiefungen oder Unebenheiten aufweisen. Ein Bettnetz (oder "Netzkalibrierung") ist wie eine "Höhenkarte" Ihres Druckbettes. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf dem gesamten Druckbett einwandfrei haftet.
+Selbst ein perfektes nivelliertes Druckbett kann kleine Vertiefungen oder Unebenheiten aufweisen. Ein Bettnetz (oder **Netzkalibrierung**) ist wie eine **Höhenkarte** Ihres Druckbettes. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf dem gesamten Druckbett einwandfrei haftet.
 
 **Warum dieser Befehl?**
-Die eingebauten Werkzeuge Fluidd und Mainsail sind für unsere Drucker nicht geeignet, weil sie:
+Die eingebauten Werkzeuge in Fluidd und Mainsail sind für unsere Drucker nicht geeignet, weil sie:
 
 * Sie können nicht mit dem **Berührungssensor** arbeiten (der bei uns für die genaue Berührungserkennung zuständig ist).
 * Sie **reinigen die Düse** nicht, bevor Sie beginnen, um alle Kunststofftropfen zu entfernen, die die Genauigkeit der Messungen ruinieren können.
@@ -159,7 +159,7 @@ Die eingebauten Werkzeuge Fluidd und Mainsail sind für unsere Drucker nicht gee
 Unser Makro [AUTO_FULL_BED_LEVEL](/de/Macros/#auto_full_bed_level) berücksichtigt diese beiden Eigenschaften!
 
 **Wichtige Einstellungen:**
-Die Karte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch drucken - ein erwärmtes Druckbett und ein heißer Extruder, da sich das Metall durch die Temperatur leicht ausdehnt. Eine Bettnetzkarte, die bei 60 Grad gedruckt wird, unterscheidet sich drastisch von einer Bettnetzkarte, die bei 110 Grad gedruckt wird.
+Die Bettnetzkarte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch drucken - ein erwärmtes Druckbett und ein heißer Extruder, da sich das Metall durch die Temperatur leicht ausdehnt. Eine Bettnetzkarte, die bei 60 Grad gedruckt wird, unterscheidet sich drastisch von einer Bettnetzkarte, die bei 110 Grad gedruckt wird.
 
 * `EXTRUDER_TEMP=255` - Extrudertemperatur. Der Kunststoff in der Düse sollte geschmolzen sein, damit er vor der Messung gereinigt werden kann. Stellen Sie die von Ihnen gewünschte Temperatur ein.
 * `BED_TEMP=80` - Heizbetttemperatur. Geben Sie die Temperatur an, die Sie für den Druck verwenden. Stellen Sie die gewünschte Temperatur ein.
@@ -251,8 +251,8 @@ SAVE_ZMOD_DATA USE_KAMP=1
 
 Orca anpassen:
 
-- ```Prozessprofil``` -> ```Sonstiges``` -> ```G-Code Ausgabe``` -> ```Objekte beschriften``` das Häkchen setzen
-- ```Prozessprofil``` -> ```Sonstiges``` -> ```G-Code Ausgabe``` -> ```Objekte ausschließen``` aktivieren Sie das Kontrollkästchen
+- ```Prozessprofil``` :arrow_right: ```Sonstiges``` :arrow_right:```G-Code Ausgabe``` :arrow_right:```Objekte beschriften``` das Häkchen setzen
+- ```Prozessprofil``` :arrow_right:```Sonstiges``` :arrow_right:```G-Code Ausgabe``` :arrow_right:```Objekte ausschließen``` aktivieren Sie das Kontrollkästchen
 
 <img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
 
@@ -276,7 +276,7 @@ M104 S[nozzle_temperature_initial_layer] ; Düsentemperatur einstellen
     **Wichtig für die Arbeit vom systemeigenen Bildschirm aus:**
     
     Um die Bettnivellierung über den Standardbildschirm des Druckers zu starten, müssen Sie das Bildschirmmenü aufrufen: 
-    ```Einstellungen``` → ```Wifi-Symbol``` → ```Netzwerkmodus``` → den Schieberegler ```Nur lokale Netzwerke``` aktivieren.
+    ```Einstellungen``` :arrow_right: ```Wifi-Symbol``` :arrow_right: ```Netzwerkmodus``` :arrow_right: den Schieberegler ```Nur lokale Netzwerke``` aktivieren.
 
 **3. Intelligente Reinigung vor dem Drucken**
 
@@ -302,7 +302,7 @@ Vor jedem Druckvorgang nimmt der Drucker nun nur dort ein Bettnetz auf, wo Objek
 
 **Was ist Z-Offset?**
 
-Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düsenspitze und dem Druckbett** in dem Moment, in dem der Drucker denkt, dass sie sich "berühren". Ein korrekter Z-Offset gewährleistet, dass die erste Kunststoffschicht perfekt auf dem Druckbett haftet - nicht zu niedrig (die Düse berührt ddas Druckbett) und nicht zu hoch (der Kunststoff haftet nicht). [Mehr lesen](/de/FAQ/#so-funktioniert-z-offset)
+Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düsenspitze und dem Druckbett** in dem Moment, in dem der Drucker denkt, dass sie sich "berühren". Ein korrekter Z-Offset gewährleistet, dass die erste Kunststoffschicht perfekt auf dem Druckbett haftet - nicht zu niedrig (die Düse berührt das Druckbett) und nicht zu hoch (der Kunststoff haftet nicht). [Mehr lesen](/de/FAQ/#so-funktioniert-der-z-offset)
 
 **Wichtigste Regel:**
 
@@ -453,7 +453,7 @@ ZSHAPER Y=1 X=0
 
 **Wo kann man die Graphen sehen?**
 
-Nach dem Ausführen von `ZSHAPER` erscheinen die Graphen und CSV-Dateien in der Registerkarte **"Konfiguration" -> mod_data** in Ihrem Webinterface (Fluidd/Mainsail).
+Nach dem Ausführen von `ZSHAPER` erscheinen die Graphen und CSV-Dateien in der Registerkarte **"Konfiguration" :arrow_right: mod_data** in Ihrem Webinterface (Fluidd/Mainsail).
 
 <img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" />
 

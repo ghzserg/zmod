@@ -8,7 +8,7 @@ Es kann aufgerufen werden durch:
 - Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
 
 !!! info "Hinweis"
-    *Der Wert in Klammern ist der Standardwert.
+    *Der Wert in Klammern ist der Standardwert.*
 
 ---
 

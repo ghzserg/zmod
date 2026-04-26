@@ -64,15 +64,15 @@ Wie Sie Ihren Bot registrieren
 
 Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md).
 
-Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) unter Debian:
+Installieren Sie Telegram bot [mit einem Befehl](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) unter Debian:
 
 Unter dem Benutzer `root` ausführen
-```
-bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+```bash
+wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.7/telegram/telegram.sh
 ```
 
 Wenn Sie wget nicht haben
-```
+```bash
 apt update && apt install wget -y
 ```
 
@@ -83,7 +83,7 @@ Dieses Skript:
 3. Erstellt einen `tbot`-Benutzer
 4. Führt Sie durch die Bot-Registrierung und fragt den `bot_token` ab
 5. Hilft Ihnen, die `chat_id` zu ermitteln und fragt diese ab
-6. Wird [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh) installieren.
+6. Wird [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/ff5m.sh) installieren.
 
 Sie müssen den **ssh-Schlüssel** selbst hinzufügen.
 
@@ -93,7 +93,7 @@ Sie müssen den **ssh-Schlüssel** selbst hinzufügen.
 
 Wenn Sie nur Benachrichtigungen in Telegram benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/)
 
-1. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) aus dem Verzeichnis `mod/telegram/` des Druckers.
+1. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) aus dem Verzeichnis `mod/telegram/` des Druckers.
 2. Installieren Sie Docker (Anleitung für Debian):
 ```bash
 apt update 
@@ -102,7 +102,7 @@ apt install docker.io docker-compose docker apparmor -y
 ```
 
 3. Erstellen Sie ein Verzeichnis für den Bot:
-```
+```bash
 mkdir bot1
 cd bot1
 ```
@@ -110,7 +110,7 @@ cd bot1
 4. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) in das erstellte Verzeichniss.
 
 5. Erstellen Sie die Unterverzeichnisse:
-```
+```bash
 mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
@@ -122,12 +122,12 @@ chmod 777 config log timelapse_finished timelapse
 Weitere Informationen zur Konfiguration des Bots können Sie [hier](https://github.com/nlef/moonraker-telegram-bot/wiki) nachlesen.
 
 7. Starten Sie den Bot:
-```
+```bash
 docker-compose up -d
 ```
 
 8. Erstellen Sie einen Benutzer und vergeben Sie Berechtigungen:
-```
+```bash
 useradd tbot
 usermod -a -G docker tbot
 ```
@@ -175,22 +175,22 @@ Hinzufügen:
 ```
 
 Öffnen Sie den Port in Ihrer Firewall, wenn Sie diese verwenden.
-```
+```bash
 iptables -I INPUT -p tcp --dport 7912 -j ACCEPT
 ```
 
 Erstellen Sie das `spoolman`-Verzeichnis:
-```
+```bash
 mkdir spoolman
 chmod 777 spoolman
 ```
 
 Starten Sie Docker neu:
-```
+```bash
 docker-compose down && docker-compose up -d
 ```
 oder
-```
+```bash
 docker compose down && docker compose up -d
 ```
 
@@ -212,11 +212,11 @@ Bearbeiten Sie die Datei [docker-compose.yml](https://github.com/ghzserg/z_ff5m/
 
 Geben Sie Ihre Zeitzone an. In der Beispieldatei wird ```TZ=Asia/Yekaterinburg``` angegeben.
 
-```
+```bash
 docker-compose down && docker-compose up -d
 ```
 oder
-```
+```bash
 docker compose down && docker compose up -d
 ```
 
@@ -233,38 +233,39 @@ Installieren Sie Armbian auf der sdcard mit balenaEtcher von [https://etcher.bal
 Starten Sie das System, erstellen Sie ein root-Passwort und einen neuen Benutzer
 
 Von nun an machen wir alles unter dem Benutzer root
-```
+```bash
 su - root
 ```
 
 Richten Sie Wi-Fi ein, falls Sie es nach dem Anlegen eines neuen Benutzers noch nicht eingerichtet haben
-```
+```bash
 sudo armbian-config
 ```
 
 Aktualisieren Sie das System
-```
+```bash
 sudo apt update && sudo apt upgrade -y
 ```
 
 Apparmor Linux Kernel Sicherheitsmodul installieren
-```
+```bash
 sudo apt install -y apparmor apparmor-utils
 ```
 
 Installieren Sie den Telegram-Bot
-```
-bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+```bash 
+wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh
 ```
 
 Hinzufügen von ssh-Schlüsseln:
-Einloggen vom Benutzer root zum Benutzer tbot
-```
+
+- Einloggen vom Benutzer root zum Benutzer tbot
+```bash
 su - tbot
 ```
 
 Schreibe ssh-Schlüssel:
-```
+```bash
 mkdir -p .ssh
 cat >.ssh/authorised_keys
 ```
@@ -284,7 +285,7 @@ Wenn Ihnen nur Telegram-Benachrichtigungen genügen - dann [verwenden Sie das No
 Laden Sie helm herunter und installieren Sie es auf Ihrem Computer [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
 Klonen Sie das Repository mit helm chart
-```
+```bash
 git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
 
@@ -310,7 +311,7 @@ Wie man bot_token und chat_id erhält siehe [hier](/de/Telegram/#registrieren-si
 Installation:
 
 Sie müssen sich im Helm-Chart-Ordner befinden, um den Befehl „install“ oder „upgrade“ auszuführen.
-```
+```bash
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
 ---
@@ -333,7 +334,7 @@ ssh root@<<IP_drucker> -p 22
 ```
 
 Standard-Passwort:
-```
+```bash
 root
 ```
 
@@ -360,8 +361,8 @@ rm -f ssh.pub.txt ssh.key
 Nach dem Neustart wird der Dienst automatisch neue Schlüssel erstellen.
 
 Der öffentliche Schlüssel (ssh.pub.txt) muss der Serverdatei ~/.ssh/authorized_keys hinzugefügt werden:
-```
-    ~/.ssh/authorised_keys
+```bash
+~/.ssh/authorised_keys
 ```
 für den Benutzer, über den die Verbindung läuft (z.B. `tbot`).
 

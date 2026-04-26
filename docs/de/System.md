@@ -248,7 +248,7 @@ Parameter FORCE:
 
 Beispiel: `UPDATE_MCU FORCE=13` erzwingt das Laden der Klipper 13-Firmware
 
-Wenn du nicht verstehst, wie man [MCU-Konfigurationen und -Firmware wiederherstellt](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ad5x), führe es nicht aus.
+Wenn man es nicht versteht, wie man [MCU-Konfigurationen und -Firmware wiederherstellt](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ad5x), führe es nicht aus.
 
 Wenn etwas schief geht, gehen Sie nur über [factory](/de/Native_FW/) zurück.
 

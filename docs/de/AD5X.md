@@ -23,12 +23,14 @@
 
 [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md):
 
-- [**bambufy**](https://github.com/function3d/bambufy) - Kompatibel mit Bambu Studio, verbessert die Steuerung des Zufuhrturms, bietet eine genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt Mainsail,
-schnelle Farbwechsel und erweiterte Druckfunktionen.
+Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 
-- [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - Eine Abspaltung von bambufy
-- [**nopoop**](https://github.com/ghzserg/nopoop) - Maximiert die Abfallreduzierung von ninjamida
-- [**IFS Jacker**](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs_jacker)
+- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Futterturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
+- [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
+- [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung über das Heizbett
+- [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
+
+Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `ENABLE_EXTRA_PLUGINS` aus.
 
 ---
 
@@ -36,11 +38,11 @@ schnelle Farbwechsel und erweiterte Druckfunktionen.
 
 Unterschiede zum AD5M:
 
-* Keine `Entware`.
-* Anstelle des Makros `CLOSE_DILALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
-* Das Makro `NEW_SAVE_CONFIG` funktioniert **nicht**.
-* Um die Kamera einzuschalten, müssen Sie ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video99``` verwenden.
-* Klipper kann abstürzen. Lösung `Process Profile` -> `Other` -> `Output G-cod` -> `Model Exclusion` das Häkchen ausschalten.
+- Keine `Entware`.
+- Anstelle des Makros `CLOSE_DILALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
+- Das Makro `NEW_SAVE_CONFIG` funktioniert **nicht**.
+- Um die Kamera einzuschalten, müssen Sie ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video99``` verwenden.
+- Klipper kann abstürzen. Lösung `Process Profile` :arrow_right:`Other` :arrow_right:`Output G-cod` :arrow_right:`Model Exclusion` das Häkchen ausschalten.
 
 ---
 
@@ -180,7 +182,7 @@ Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (fall
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie die gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
+Mit dem Parameter [SCAN_FILE_COLORS](/de/Global/#scan_file_colors) können Sie die gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
 
 [Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
 
@@ -188,7 +190,7 @@ Mit dem Parameter [SCAN_FILE_COLORS](de/Global/#scan_file_colors) können Sie di
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-Mit dem Parameter [AUTO_ASSIGN_COLORS](de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
+Mit dem Parameter [AUTO_ASSIGN_COLORS](/de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
 
 Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im stillen Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
 
@@ -203,7 +205,7 @@ Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im still
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
-Wird ein Befehl zum Farbwechsel aufgerufen und soll auf die bereits geladene Farbe zurückgegriffen werden, wird der Vorgang in der Regel übersprungen, da er sinnlos ist. Falls Sie den vollständigen Farbwechselvorgang aktivieren möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](de/Global/#always_full_color_change).
+Wird ein Befehl zum Farbwechsel aufgerufen und soll auf die bereits geladene Farbe zurückgegriffen werden, wird der Vorgang in der Regel übersprungen, da er sinnlos ist. Falls Sie den vollständigen Farbwechselvorgang aktivieren möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](/de/Global/#always_full_color_change).
 
 ```gcode
 SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
@@ -244,7 +246,7 @@ Im bildschirmlosen Modus sind die Sensoren verfügbar und aktiviert:
 
 **Wie Sie diese Einstellungen finden:**
 
-1.  Klicken Sie auf die Registerkarte **"Konfiguration "**.
+1.  Klicken Sie auf die Registerkarte **"Konfiguration"**.
 2.  Suchen Sie den Ordner **"mod_data "** und öffnen Sie ihn.
 3.  Suchen und öffnen Sie in diesem Ordner die Datei **`filament.json`**.
 
