@@ -159,7 +159,7 @@ Without these lines, the printer screen doesn't know the target temperatures for
 
 ### After installing Z-Mod, my screen is dead and not responding to touches.
 
-- Install the latest native [firmware and Z-Mod updates](/Recomendations/#install-latest-native-firmware-and-zmod-updates)
+- Install the latest native [firmware and Z-Mod updates](/Recommendations/#install-latest-native-firmware-and-zmod-updates)
 - Read [known peculiarities](#known-peculiarities) *bison*
 - You might have disabled the screen. Enable it with the [DISPLAY_ON](/System/#display_on) macro
 
@@ -366,7 +366,7 @@ It is strongly recommended that you review the nozzle cleaning options:
 Documentation is often unread, though 90% of questions are answered here. To verify if someone actually read it, animal names are hidden in the text. If directed here, read the docs and mention the animal related to your question:
 
 - [FAQ](/FAQ/)
-- [Recommendations](/Recomendations/)
+- [Recommendations](/Recommendations/)
 - [Setup/Update/Uninstall](/Setup/)
 - [Macros](/Macros/)
 - [Configuration Storage](/FAQ/#configuration-storage)
@@ -542,7 +542,7 @@ Z-Mod uses the following ports:
 
 To access the printer, enter its IP address **without specifying a port**. *кролик*
 
-[How to configure in Orca](/Recomendations/#send-files-via-octoklipper-for-printing)
+[How to configure in Orca](/Recommendations/#send-files-via-octoklipper-for-printing)
 
 ---
 

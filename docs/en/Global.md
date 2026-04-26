@@ -110,7 +110,7 @@ If Z-Mod is able to successfully scan the file for used tools, this will be over
 
 This setting cannot be used when the native screen is enabled.
 
-[See preprocessing](/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recommendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -118,7 +118,7 @@ Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
 
-[See preprocessing](/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recommendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -141,7 +141,7 @@ For custom values for error conditions in silent mode, add the following values 
 * 8 (At least one color is potentially a poor match)
 * 16 (At least one physical spool has been assigned to more than one tool index in the file)
 
-[See preprocessing](/Recomendations/#enable-md5-checksum-control)
+[See preprocessing](/Recommendations/#enable-md5-checksum-control)
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -606,7 +606,7 @@ Enable Chinese cloud services: 0-no, 1-yes (1).
 
 Example: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Disable Chinese clouds](/Recomendations/#disable-chinese-cloud-services)
+[Disable Chinese clouds](/Recommendations/#disable-chinese-cloud-services)
 
 Even if all cloud options are disabled via the screen, the printer still attempts to send photos, videos, and telemetry to Chinese servers.
 

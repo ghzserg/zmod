@@ -92,7 +92,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Send Files via "Octo/Klipper" for Printing](/Recomendations/#send-files-via-octoklipper-for-printing)
+18. [Send Files via "Octo/Klipper" for Printing](/Recommendations/#send-files-via-octoklipper-for-printing)
 
     You **need to switch to the Octo/Klipper protocol**:
 
@@ -126,11 +126,11 @@
     
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
 
-20. [Enable MD5 verification](/Recomendations/#enable-md5-checksum-control)
+20. [Enable MD5 verification](/Recommendations/#enable-md5-checksum-control)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-21. [Read the recommendations](/Recomendations/)
+21. [Read the recommendations](/Recommendations/)
 22. [Read the FAQ](/FAQ/)
 23. [Calibrate the printer](/SetupCalibrations/)
 

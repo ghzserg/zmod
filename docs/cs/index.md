@@ -136,7 +136,7 @@ Soubory nativního firmwaru se nacházejí [zde](Native_FW.md).
 
 ## Doporučení pro stabilitu tiskárny
 
-[Přečtěte si, pokud narazíte na problémy](Recomendations.md)
+[Přečtěte si, pokud narazíte na problémy](Recommendations.md)
 
 ## Pluginy
 

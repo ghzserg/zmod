@@ -164,7 +164,7 @@ Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die D
 
 #### Nach der Installation von Z-Mod ist mein Bildschirm tot und reagiert nicht mehr auf Tastendrucke.
 
-- Installieren Sie das letzte Update der nativen [Firmware und Z-Mod](/de/Recomendations/#installieren-sie-die-neueste-native-firmware-und-das-z-mod-update)
+- Installieren Sie das letzte Update der nativen [Firmware und Z-Mod](/de/Recommendations/#installieren-sie-die-neueste-native-firmware-und-das-z-mod-update)
 - Lesen Sie die [Bekannte Funktionen](#bekannte-funktionen)
 - Möglicherweise haben Sie den Bildschirm ausgeschaltet. Schalten Sie ihn mit dem Makro [DISPLAY_ON](/de/System/#display_on) ein.
 
@@ -389,7 +389,7 @@ Deshalb habe ich die Namen der Tiere *opossum* im Text verteilt und werde sie fr
 Wenn Sie hierher verwiesen wurden. Lesen Sie die Dokumentation und nennen Sie das Tier, das auf Ihrer Frage steht, und Sie werden auf jeden Fall Hilfe bekommen:
 
 - [Häufig gestellte Fragen](/de/FAQ/)
-- [Tipps zur Verbesserung der Druckerstabilität](/de/Recomendations/)
+- [Tipps zur Verbesserung der Druckerstabilität](/de/Recommendations/)
 - [Mod installieren/verbessern/deinstallieren](/de/Setup/)
 - [Makro-Liste](/de/Macros/)
 - [Speichereinstellungen](/de/FAQ/#speichern-von-einstellungen)
@@ -576,7 +576,7 @@ Welche Ports verwendet Z-Mod?
 
 Um auf den Drucker zuzugreifen, geben Sie einfach die Drucker-IP ein, **ohne die Portnummer anzugeben**. *Hase*
 
-[Wie man in Orca konfiguriert](/de/Recomendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
+[Wie man in Orca konfiguriert](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
 
 #### Ich habe das Webinterface umgestellt und jetzt funktioniert nichts mehr.
 

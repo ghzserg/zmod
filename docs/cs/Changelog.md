@@ -150,7 +150,7 @@ Díky za podporu tenz [@minicx](https://github.com/loss-and-quick/)
 
 ### Verze 1.5.3
 
-* Opravena chyba Klipperu [#119](https://github.com/ghzserg/zmod/issues/119), která vyžadovala použití [tohoto](Recomendations.md#avoid-using-russian-characters-in-filenames)
+* Opravena chyba Klipperu [#119](https://github.com/ghzserg/zmod/issues/119), která vyžadovala použití [tohoto](Recommendations.md#avoid-using-russian-characters-in-filenames)
 * Kontrola trysky je nyní povolena při tisku z obrazovky okamžitě
 * Drobné kosmetické opravy
 

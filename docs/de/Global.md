@@ -139,7 +139,7 @@ Wenn Z-Mod die Datei erfolgreich nach verwendeten Instrumenten durchsucht, wird 
 
 Diese Einstellung kann nicht verwendet werden, wenn der native Bildschirm aktiviert ist.
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
@@ -147,7 +147,7 @@ Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 Ermöglicht das Scannen von Gcode-Dateien, um die verwendeten Werkzeugwechselbefehle (T0, T1 usw.) und die ihnen im Slicer zugewiesenen Farben und Materialien zu ermitteln: 0 (aus), 1 (an), 2 (schaltet das vollständige Scannen aus, sucht aber nach vom Slicer-Skript vorbereiteten Daten).
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einstellung für die Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`.
 
@@ -176,7 +176,7 @@ Für benutzerdefinierte Werte bei Fehlerbedingungen im stillen Modus addieren Si
 - 8 (Mindestens eine Farbe stimmt möglicherweise nicht überein).
 - 16 (Mindestens eine physische Spule wurde in der Datei mehreren Werkzeugindizes zugeordnet).
 
-[Siehe Vorverarbeitungseinstellung](/de/Recomendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Vorverarbeitungseinstellung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
@@ -771,7 +771,7 @@ Chinesische Wolken einschalten 0 - nein, 1 - ja (1)
 
 Beispiel: `SAVE_ZMOD_DATA CHINA_CLOUD=0`.
 
-[Chinesische Cloud-Dienste deaktivieren](/de/Recomendations/#chinesische-cloud-dienste-deaktivieren)
+[Chinesische Cloud-Dienste deaktivieren](/de/Recommendations/#chinesische-cloud-dienste-deaktivieren)
 
 Selbst wenn alle Cloud-Optionen über den Bildschirm deaktiviert sind, versucht der Drucker weiterhin, Fotos, Videos und Telemetriedaten an chinesische Server zu senden.
 

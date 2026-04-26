@@ -165,7 +165,7 @@
 	### Version 1.5.3
 	03.06.2025
 	
-	* Fehler im Klipper [#119](https://github.com/ghzserg/zmod/issues/119) behoben, der die Verwendung von [this](/de/Recomendations/#don't-use-Russian-names-in-object-names) notwendig machte
+	* Fehler im Klipper [#119](https://github.com/ghzserg/zmod/issues/119) behoben, der die Verwendung von [this](/de/Recommendations/#don't-use-Russian-names-in-object-names) notwendig machte
 	* Die Düsensteuerung ist nun auch aktiviert, wenn vom Bildschirm aus auf einmal gedruckt wird
 	* Kleinere kosmetische Korrekturen
 

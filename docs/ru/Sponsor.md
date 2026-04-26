@@ -31,4 +31,6 @@
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)
 - Dave Shaw
+- Namida Verasche
+- Sean Hinkley
 - [@corim123](https://github.com/corim123)

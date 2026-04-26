@@ -44,7 +44,7 @@ Rozdíly oproti AD5M:
 
 ## **2. Jak připravit soubor v Orca**
 
-[Odeslat soubory přes "Octo/Klipper" pro tisk](Recomendations.md#send-files-via-octoklipper-for-printing)
+[Odeslat soubory přes "Octo/Klipper" pro tisk](Recommendations.md#send-files-via-octoklipper-for-printing)
 
 **Musíte odstranit nepoužívané cívky ze seznamu v Orce.**
 
@@ -173,7 +173,7 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 Chcete-li nastavit, kolik nástrojů se zobrazí v okně pro výběr barvy (pokud soubor nelze pro tuto informaci prohledat), použijte parametr [ALLOWED_TOOL_COUNT](Global.md#allowed_tool_count).
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
@@ -181,7 +181,7 @@ SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 
 Chcete-li povolit prohledávání gcode souborů pro informace o nástroji, barvě a materiálu, použijte parametr [SCAN_FILE_COLORS](Global.md#scan_file_colors). Můžete jej také nastavit na 2 pro kontrolu dat připravených skriptem sliceru, ale nepokoušejte se prohledávat celé soubory.
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -196,7 +196,7 @@ Můžete vytvořit vlastní hodnoty pro přerušení v tichém režimu sečtení
 * 8 (Alespoň jedna barva je potenciálně špatně spárována)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30

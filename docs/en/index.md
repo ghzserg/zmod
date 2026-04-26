@@ -136,7 +136,7 @@ Native firmware files are located [here](/Native_FW/).
 
 ## Printer Stability Recommendations
 
-[Read if encountering issues](/Recomendations/)
+[Read if encountering issues](/Recommendations/)
 
 ## Plugins
 

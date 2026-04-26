@@ -145,7 +145,7 @@ Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
 ## Empfehlungen zur Verbesserung der Druckerstabilität
 
-[Lesen - wenn etwas nicht richtig funktioniert](/de/Recomendations/)
+[Lesen - wenn etwas nicht richtig funktioniert](/de/Recommendations/)
 
 ## Plug-ins
 

@@ -108,7 +108,7 @@ Pokud Z-Mod dokáže úspěšně prohledat soubor pro použité nástroje, toto 
 
 Toto nastavení nelze použít, když je povolena nativní obrazovka.
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -116,7 +116,7 @@ Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 Povolí prohledávání gcode souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (zakázat), 1 (povolit), 2 (zakázat úplné prohledávání, ale hledat data připravená skriptem sliceru)
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -139,7 +139,7 @@ Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následujíc
 * 8 (Alespoň jedna barva je potenciálně špatně spárována)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](/Recomendations/#enable-md5-checksum-control)
+[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
 
 Příklad: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -604,7 +604,7 @@ Povolit čínské cloudové služby: 0-ne, 1-ano (1).
 
 Příklad: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Zakázat čínské cloudy](Recomendations.md#disable-chinese-cloud-services)
+[Zakázat čínské cloudy](Recommendations.md#disable-chinese-cloud-services)
 
 I když jsou všechny cloudové možnosti vypnuty přes obrazovku, tiskárna se stále snaží posílat fotky, videa a telemetrii na čínské servery.
 

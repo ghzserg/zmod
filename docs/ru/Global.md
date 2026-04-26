@@ -109,7 +109,7 @@ WEIGHT - вес в граммах (1500)
 
 Эта настройка не может быть использована, если включен родной экран (native screen).
 
-[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recommendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -121,7 +121,7 @@ WEIGHT - вес в граммах (1500)
 - 1 (включено)
 - 2 (выключить полное сканирование, но искать данные, подготовленные скриптом слайсера).
 
-[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recommendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -153,7 +153,7 @@ WEIGHT - вес в граммах (1500)
 * 8 (Хотя бы один цвет совпадает плохо)
 * 16 (Одна и та же физическая катушка была назначена более чем одному индексу инструмента в файле)
 
-[Смотри настройку препроцессинга](/ru/Recomendations/#enable-md5-checksum-control)
+[Смотри настройку препроцессинга](/ru/Recommendations/#enable-md5-checksum-control)
 
 Пример: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -652,7 +652,7 @@ square_corner_velocity: 9
 
 Пример: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Отключите китайские облака](/ru/Recomendations/#отключите-китайские-облака)
+[Отключите китайские облака](/ru/Recommendations/#отключите-китайские-облака)
 
 Даже, если у вас все выключено с экрана. Принтер все равно пытается отправлять фото, видео телеметрию на китайские сервера.
 

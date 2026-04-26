@@ -254,7 +254,7 @@ Použijte:
 Dokumentace se často nečte, ačkoliv 90 % otázek je zde zodpovězeno. Pro ověření, zda si ji někdo skutečně přečetl, jsou v textu skryta jména zvířat. Pokud jste sem byli odkázáni, přečtěte si dokumentaci a zmiňte zvíře související s vaší otázkou:
 
 - [FAQ](FAQ.md)
-- [Doporučení](Recomendations.md)
+- [Doporučení](Recommendations.md)
 - [Nastavení/Aktualizace/Odinstalace](Setup.md)
 - [Makra](Macros.md)
 - [Známé problémy](#known-peculiarities)
@@ -443,7 +443,7 @@ Z-Mod používá následující porty:
 
 Pro přístup k tiskárně zadejte její IP adresu **bez specifikace portu**. *králík*
 
-[Jak konfigurovat v Orca](Recomendations.md#send-files-via-octoklipper-for-printing)
+[Jak konfigurovat v Orca](Recommendations.md#send-files-via-octoklipper-for-printing)
 
 ---
 
@@ -488,7 +488,7 @@ Použijte `GET_RETRACTION` pro zobrazení aktuálního nastavení.
 
 ### Po instalaci Z-Modu je moje obrazovka mrtvá a nereaguje na dotyky.
 
-- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](Recomendations.md#install-latest-native-firmware-and-zmod-updates)
+- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](Recommendations.md#install-latest-native-firmware-and-zmod-updates)
 - Přečtěte si [známé zvláštnosti](#known-peculiarities) *bizon*
 - Možná jste vypnuli obrazovku. Povolte ji pomocí makra [DISPLAY_ON](System.md#display_on)
 

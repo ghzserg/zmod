@@ -150,7 +150,7 @@ Thanks for tenz support [@minicx](https://github.com/loss-and-quick/)
 
 ### Version 1.5.3
 
-* Fixed Klipper bug [#119](https://github.com/ghzserg/zmod/issues/119), which required using [this](/Recomendations/#avoid-using-russian-characters-in-filenames)
+* Fixed Klipper bug [#119](https://github.com/ghzserg/zmod/issues/119), which required using [this](/Recommendations/#avoid-using-russian-characters-in-filenames)
 * Nozzle control is now enabled when printing from the screen immediately
 * Minor cosmetic fixes
 
