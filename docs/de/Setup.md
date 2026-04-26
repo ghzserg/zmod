@@ -370,3 +370,6 @@ reboot
 
 BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 
+<a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a>
+
+<img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" />
