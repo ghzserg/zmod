@@ -167,7 +167,7 @@ The [CHECK_SYSTEM](/System/#check_system) macro checks file MD5 hashes and repai
 Disabled by default. Enable using the [NOZZLE_CONTROL](/Global/#nozzle_control) macro:
 
 ```
-NOZZLE_CONTROL WEIGHT=0
+NOZZLE_CONTROL WEIGHT=1500
 ```
 
 This halts Klipper if the nozzle scratches the bed or a part detaches. **Highly recommended for users employing nozzle pre-cleaning routines.**

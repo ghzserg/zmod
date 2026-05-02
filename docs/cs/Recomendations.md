@@ -166,7 +166,7 @@ Makro [CHECK_SYSTEM](System.md#check_system) kontroluje MD5 hash souboru a v př
 Ve výchozím nastavení je tato funkce vypnuta. Zapněte ji pomocí makra [NOZZLE_CONTROL](Global.md#nozzle_control):
 
 ```
-NOZZLE_CONTROL WEIGHT=0
+NOZZLE_CONTROL WEIGHT=1500
 ```
 
 Tím se zastaví Klipper, pokud tryska poškrábe podložku nebo se uvolní část. **Důrazně doporučeno pro uživatele, kteří používají rutiny předběžného čištění trysek.**

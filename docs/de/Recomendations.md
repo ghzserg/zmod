@@ -186,7 +186,7 @@ Die Steuerung ist standardmäßig deaktiviert.
 
 Aktiviert durch das Makro [NOZZLE_CONTROL](/de/Global/#nozzle_control)
 
-NOZZLE_CONTROL WEIGHT=0`
+`NOZZLE_CONTROL WEIGHT=1500`
 
 Die Steuerung schaltet den Klipper ab, wenn die Düse beginnt, die Platte zu zerkratzen oder das Teil vom Tisch fällt.
 
