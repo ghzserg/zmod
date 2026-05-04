@@ -256,53 +256,58 @@ In dieser Datei gibt es eine Liste von Nummern für jede Art von Kunststoff (PLA
 
 ---
 
-#### **Wichtigste Einstellungen (was am häufigsten zu ändern ist) AD5X:**
+#### **Grundlegende Parameter (am häufigsten angepasst):**
 
-Damit diese Einstellungen funktionieren, müssen Sie den **eigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` abschalten.
+Damit diese Einstellungen funktionieren, müssen Sie **das Display des Druckers deaktivieren**. Verwenden Sie dazu das Makro `DISPLAY_OFF`.
 
-1.  **`temp`** - Düsentemperatur für den Filamentwechsel. **Der Standardwert ist materialabhängig.**
-2.  **`filament_drop_length`** - Die Temperatur, auf die die Düse für den Fadenwechsel aufgeheizt wird. (**Spüllänge**)
+1. **`temp`** – Düsentemperatur beim Filamentwechsel. **Der Standardwert ist materialabhängig.**
 
-    * **Einfach:** Wie viele Millimeter Filament der Drucker in den Abfallbehälter befördert, um die Düse von der vorherigen Farbe zu **reinigen**. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor dem Druckvorgang sowie beim Farbwechsel, wenn die Option `USE_TRASH_ON_PRINT` auf `1` gesetzt ist.
+2. **`filament_drop_length` (Spüllänge)**
 
-    !!! tip "**Tipp:**"
-		Wenn die Farben beim Wechseln der Spulen gemischt werden, erhöhen Sie diese Zahl. Wenn Sie weniger Abfall wünschen, verringern Sie diesen Wert.
+* **Einfach erklärt:** Wie viele Millimeter Filament der Drucker in den Abfallbehälter befördert, um die Düse von der vorherigen Farbe zu reinigen. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor dem Druck sowie beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
 
-3.  **`Filament_drop_length_add` (Optional zurücksetzen)**
+!!! tip "**Tipp:**"
+	Erhöhen Sie diesen Wert, wenn sich die Farben beim Spulenwechsel vermischen. Verringern Sie ihn, um Abfall zu vermeiden.
 
-    * **Einfach ausgedrückt:** Die Spülzeit verlängert sich beim Wechsel des **Materialtyps** (z. B. von PLA zu PETG), nicht nur beim Farbwechsel. Dies gilt sowohl beim Laden von Farben außerhalb des Druckvorgangs als auch vor dem Druckvorgang sowie beim Farbwechsel, wenn `USE_TRASH_ON_PRINT` auf `1` gesetzt ist.
-    
-    !!! info "**Warum wird es benötigt:**"
-		Verschiedene Materialien lassen sich nicht gut mischen, daher muss die Düse besser gereinigt werden.
+3. **`filament_drop_length_add` (Zusätzliche Spülung)**
 
-4.  **`nozzle_cleaning_length`** - Die Länge (in mm), die das Filament beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr in Gebrauch ist. **Voreinstellung: 60 mm**.
+* **Einfach erklärt:** Zusätzliche Spüllänge beim Wechsel des Materialtyps (z. B. von PLA zu PETG), nicht nur der Farbe. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor dem Druckvorgang sowie beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
 
-5.  **`filament_unload_into_tube`** — Wie viel Filament aus dem 4-in-1-Modul entladen werden soll, wenn der Extruder nicht mehr verwendet wird. **Standard: 70 mm.**
+!!! info "**Warum dies erforderlich ist:**"
+	Unterschiedliche Materialien mischen sich nicht gut, daher ist eine gründlichere Düsenreinigung notwendig.
 
-    *   Wenn Sie ein 4-in-1-Modul der neuen Version haben, erhöhen Sie `filament_unload_into_tube` oder im äußersten Fall erhöhen Sie `nozzle_cleaning_length`
+4. **`nozzle_cleaning_length`** – Die Länge (in mm) des Filaments, das beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr verwendet wird. **Standard: 60 mm.**
+
+5. **`filament_unload_into_tube`** – Die Menge an Filament, die aus dem 4-in-1-Modul entnommen wird, wenn der Extruder nicht mehr verwendet wird. **Standardwert: 70 mm.**
+
+* Wenn Sie ein neueres 4-in-1-Modul verwenden, erhöhen Sie `filament_unload_into_tube` oder, als letzte Möglichkeit, `nozzle_cleaning_length`.
 
 ---
 
-##### **Erweiterte Einstellungen (nicht ändern, wenn Sie sich des Ergebnisses nicht sicher sind) AD5X:**
+##### **Erweiterte Parameter (Nicht anpassen, wenn Sie sich über das Ergebnis nicht sicher sind):**
 
-Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie **das native Display des Druckers** mithilfe des Makros `DISPLAY_OFF` deaktivieren.
 
-* **`filament_tube_length`** - Gesamtlänge des PTFE-Schlauchs vom IFS-Modul bis zum Extruder. Nützlich für nicht standardisierte Schläuche. **Voreinstellung: 1000 mm.**
-* **`Filament_unload_before_cutting`** - Wie viele Millimeter wird das Filament angehoben, **bevor** es geschnitten wird. **Standard: 0 mm.**
-* **`filament_unload_after_cutting`** - Filament-Hubstrecke nach dem Schneiden, bevor es in den Abfallbehälter transportiert wird. **Standard: 5 mm.**
-* **`filament_unload_after_drop`** - Rückzugsdistanz nach dem Spülen, um ein Nachtropfen zu verhindern. **Standard: 3mm.**
-* **`filament_extruder_speed`** — Geschwindigkeit (in mm/min), mit der Filament in den Extruder geladen wird. **Standard: 300 mm/min (5 mm/s).**
-* **`filament_ifs_speed`** — Geschwindigkeit (in mm/min), mit der das IFS-Modul arbeitet. **Standard: 12000 mm/min (20 mm/s).**
-* **`filament_fan_speed`** - Filament-Lüfterdrehzahl (0 bis 255) während des Spülvorgangs. **Standard: 102**.
-* **`Filament_autoinsert_empty_length`** - Wie viele Millimeter Filament werden beim automatischen Einsetzen gezogen, wenn der Extruder leer ist. **Standard: 600 mm**.
-* **`Filament_autoinsert_full_length`** - Wie viele Millimeter Filament werden beim automatischen Befüllen eingezogen, wenn sich bereits ein anderes Filament im Extruder befunden hat. **Voreinstellung: 550 mm.**
-* **`filament_autoinsert_ret_length`** - Wieviele Millimeter Filament werden zurückgezogen, wenn der Sensor im Extruder ausgelöst wird (nur wenn der Extruder leer ist). **Voreinstellung: 90 mm.**
-* **`filament_autoinsert_speed`** - Die Geschwindigkeit (in mm/m), mit der das Filament automatisch in den Extruder eingezogen wird. **Standard: 1200 mm/m (20 mm/s).**
+* **`filament_tube_length`** – Gesamtlänge des PTFE-Schlauchs vom IFS-Modul zum Extruder. Nützlich für nicht standardmäßige Schläuche. **Standardwert: 1000 mm.**
+* **`filament_unload_before_cutting`** – Filament-Hubweg **vor** dem Schneiden. **Standardwert: 0 mm.**
+* **`filament_unload_after_cutting`** – Filament-Hubweg **nach** dem Schneiden, bevor das Filament in den Abfallbehälter befördert wird. **Standardwert: 5 mm.**
+* **`filament_unload_after_drop`** – Rückzugsdistanz nach dem Spülen, um Nachlaufen zu verhindern. **Standardwert: 3 mm.**
+* **`filament_extruder_speed`** – Geschwindigkeit (in mm/min), mit der Filament in den Extruder geladen wird. **Standardwert: 300 mm/min (5 mm/s).**
+* **`filament_ifs_speed`** – Geschwindigkeit (in mm/min), mit der das IFS-Modul arbeitet. **Standardwert: 12000 mm/min (20 mm/s).**
+* **`filament_fan_speed`** – Lüfterdrehzahl (0–255) während des Spülens zur Kühlung von Nachlaufen. **Standardwert: 102.**
+* **`filament_autoinsert_empty_length`** – Filamentlänge, die beim automatischen Laden in einen leeren Extruder eingezogen wird. **Standardwert: 600 mm.**
 
-!!! warning "**WARNUNG!**"
-	Das Ändern der Einstellungen im erweiterten Bereich kann zu fehlerhaftem Betrieb des Druckers, Filamentstaus oder Ausfällen führen. Ändern Sie die Einstellungen nur, wenn Sie genau wissen, wofür die einzelnen Parameter verantwortlich sind und welche Folgen sie haben können.
+* **`filament_autoinsert_full_length`** – Filamentlänge, die beim Filamentwechsel eingezogen wird. **Standardwert: 550 mm.**
 
-**Hauptgedanken:** Um Abfall zu reduzieren, verringern Sie zunächst die Werte für `filament_drop_length` und `filament_drop_length_add` für Ihr Material. Vergessen Sie nicht, die Datei nach den Änderungen zu speichern!
+* **`filament_autoinsert_ret_length`** – Rückzugsdistanz nach Auslösung des Extrudersensors (nur bei leerem Extruder). **Standardwert: 90 mm.**
+
+* **`filament_autoinsert_speed`** – Automatische Einzugsgeschwindigkeit (mm/min). **Standardwert: 1200 mm/min (20 mm/s).**
+
+!!! warning "**Warnung!**"
+	Die Änderung erweiterter Parameter kann zu Fehlfunktionen des Druckers, Filamentstaus oder Hardwareschäden führen. Nehmen Sie Änderungen nur vor, wenn Sie die Funktion und die potenziellen Folgen jedes Parameters vollständig verstehen.
+
+!!! info "**Wichtig:**"
+	Um Abfall zu reduzieren, verringern Sie zunächst die Werte für **`filament_drop_length`** und **`filament_drop_length_add`** für Ihr Material. Vergessen Sie nicht, die Datei nach den Änderungen zu speichern!
 
 ---
 
