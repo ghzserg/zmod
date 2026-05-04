@@ -538,11 +538,11 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 - `IFS_F11` - Odebrat filament
 - `IFS_F13` - Stav IFS
 - `IFS_F15` - Resetovat ovladač
-- `F18` - Čištění filamentu všude
-- `F23` - Označit filament jako vložený
-- `F24` - Svorka filamentu
-- `F39` - Čištění filamentu
-- `F112` - Zastavit podávání filamentu
+- `IFS_F18` - Čištění filamentu všude
+- `IFS_F23` - Označit filament jako vložený
+- `IFS_F24` - Svorka filamentu
+- `IFS_F39` - Čištění filamentu
+- `IFS_F112` - Zastavit podávání filamentu
 - `PURGE_PRUTOK_IFS` - Čištění filamentu z IFS do extruderu
 - `REMOVE_PRUTOK_IFS` - Odebere filament podle čísla filamentu
 - `INSERT_PRUTOK_IFS` - Vloží filament do IFS podle čísla filamentu
