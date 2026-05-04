@@ -548,11 +548,11 @@ Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildsc
 - `IFS_F11` - Filament entfernen
 - `IFS_F13` - IFS-Status
 - `IFS_F15` - Treiber zurücksetzen
-- `F18` - Filament komplett spülen
-- `F23` - Filament als eingelegt markieren
-- `F24` - Filament-Halterung (Andruckhebel)
-- `F39` - Filament spülen
-- `F112` - Filamentzufuhr stoppen
+- `IFS_F18` - Filament komplett spülen
+- `IFS_F23` - Filament als eingelegt markieren
+- `IFS_F24` - Filament-Halterung (Andruckhebel)
+- `IFS_F39` - Filament spülen
+- `IFS_F112` - Filamentzufuhr stoppen
 - `PURGE_PRUTOK_IFS` - Filament vom IFS zum Extruder spülen
 - `REMOVE_PRUTOK_IFS` - Filament anhand der Filamentnummer entfernen
 - `INSERT_PRUTOK_IFS` - Filament anhand der Filamentnummer in das IFS einlegen

@@ -544,11 +544,11 @@ For these settings to work, you need to **disable the printer's native display**
 - `IFS_F11` - Remove filament
 - `IFS_F13` - IFS state
 - `IFS_F15` - Reset driver
-- `F18` - Filament purge everywhere
-- `F23` - Mark filament as inserted
-- `F24` - Filament clamp
-- `F39` - Filament purge
-- `F112` - Stop filament feed
+- `IFS_F18` - Filament purge everywhere
+- `IFS_F23` - Mark filament as inserted
+- `IFS_F24` - Filament clamp
+- `IFS_F39` - Filament purge
+- `IFS_F112` - Stop filament feed
 - `PURGE_PRUTOK_IFS` - Purge filament from IFS to the extruder
 - `REMOVE_PRUTOK_IFS` - Removes filament by filament number
 - `INSERT_PRUTOK_IFS` - Insert filament into IFS by filament number
