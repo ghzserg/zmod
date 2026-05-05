@@ -456,9 +456,9 @@ On some firmware versions, Wi-Fi occasionally fails to start.
 
 To fix this, connect to a Wi-Fi network via the native screen.
 
-Execute `SAVE_ZMOD_DATA WIFI=1`
-
-Then disable Wi-Fi on the native screen.
+1. Call `SAVE_ZMOD_DATA WIFI=1`
+2. Turn off the printer
+3. Turn on the printer
 
 - 0 — use Wi-Fi from the native screen
 - 1 — use Wi-Fi through Z-Mod

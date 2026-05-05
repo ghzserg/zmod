@@ -454,9 +454,9 @@ Na některých verzích firmwaru se Wi-Fi občas nespustí.
 
 Pro opravu se připojte k Wi-Fi síti přes nativní obrazovku.
 
-Spusťte `SAVE_ZMOD_DATA WIFI=1`
-
-Poté vypněte Wi-Fi na nativní obrazovce.
+1. Zavolat `SAVE_ZMOD_DATA WIFI=1`
+2. Vypnout tiskárnu
+3. Zapnout tiskárnu
 
 - 0 — použít Wi-Fi z nativní obrazovky
 - 1 — použít Wi-Fi přes Z-Mod

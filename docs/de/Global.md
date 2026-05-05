@@ -573,9 +573,9 @@ Bei einigen Firmware-Versionen kann es gelegentlich vorkommen, dass WLAN nicht s
 
 Um dies zu beheben, verbinden Sie sich über den nativen Bildschirm mit einem WLAN-Netzwerk.
 
-Führen Sie `SAVE_ZMOD_DATA WIFI=1` aus.
-
-Deaktivieren Sie anschließend WLAN auf dem nativen Bildschirm.
+1. `SAVE_ZMOD_DATA WIFI=1` aufrufen
+2. Den Drucker ausschalten
+3. Den Drucker einschalten
 
 - 0 – WLAN über den nativen Bildschirm verwenden
 - 1 – WLAN über Z-Mod verwenden
