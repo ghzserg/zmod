@@ -48,8 +48,8 @@ Auf dem Bildschirm des Druckers. Einstellungen" -> Registerkarte "Kamera" -> Dea
 
 Führen Sie dann das Makro [CAMERA_ON](/de/Zmod/#camera_on)
 
-- Was ist eine alternative Kamera?](/de/FAQ/#Was-ist-eine-alternative-Kamera)
-- Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen, und jetzt ist sie weg](/de/FAQ/#Ich habe einen Drucker installiert und Z-Mod hat meine Kamera in Orca-FF versteckt - ich habe sie gesehen und jetzt ist sie weg).
+- [Was ist eine alternative Kamera?](/de/FAQ/#was-ist-eine-alternative-kamera)
+- [Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich habe sie in Orca-FF gesehen, und jetzt ist sie weg](/de/FAQ/#ich-habe-einen-drucker-installiert-und-z-mod-hat-meine-kamera-versteckt-ich-konnte-sie-in-orca-ff-sehen-aber-jetzt-ist-sie-weg).
 
 ---
 
