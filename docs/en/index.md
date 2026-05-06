@@ -9,6 +9,8 @@ hide:
 
 [Z-Mod LINK is available at this link ->](https://zmod.link/link/)
 
+[Fundraising announced for Creator 5 Pro to launch Z-Mod on this printer ->>>](https://github.com/ghzserg/zmod/discussions/554)
+
 ### **Z-Mod for FlashForge AD5M/PRO/AD5X: Full Control Over Your Printer**
 
 Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, Z-Mod is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
