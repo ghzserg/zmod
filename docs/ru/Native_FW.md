@@ -78,6 +78,8 @@
 
 ## AD5X-ENABLE-zmod.tgz
 
+Это активатор Z-Mod
+
 Включение zmod на AD5X после  обновления родной прошивки, позволяет активировать мод без полной его переустановки
 
 [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
