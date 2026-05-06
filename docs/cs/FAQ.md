@@ -585,6 +585,10 @@ Odstranění modu obnoví původní logo. Pokud se tak na AD5M nestane:
 - Nahrajte soubor [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) do složky `mod_data/logo`
 - Restartujte tiskárnu
 
+Logo od Alberto Maciel:
+- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
+
 ---
 
 ### Žádný trigger na sondě po plném pohybu

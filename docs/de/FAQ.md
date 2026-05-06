@@ -708,6 +708,10 @@ Wenn Sie die Mod löschen, wird das ursprüngliche Logo wiederhergestellt. Wenn 
 - Laden Sie die Datei [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) in den Ordner "mod_data/logo" hoch.
 - Starten Sie den Drucker neu
 
+Logo von Alberto Maciel:
+- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
+
 ---
 
 ### Keine Auslösung der Sonde nach vollständiger Bewegung
