@@ -586,6 +586,7 @@ Odstranění modu obnoví původní logo. Pokud se tak na AD5M nestane:
 - Restartujte tiskárnu
 
 Logo od Alberto Maciel:
+
 - [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
 - [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
 
