@@ -703,6 +703,8 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 - Загрузить в папку `mod_data/logo` файл [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp)
 - Перезагрузить принтер
 
+
+
 ---
 
 ### No trigger on probe after full movement
