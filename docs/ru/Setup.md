@@ -24,6 +24,9 @@
 ## Установка мода
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
+<div class="video-embed">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5MPro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 1. **[Вернуть принтер к заводским настройкам](/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](/ru/Setup/#внимание-ad5x)
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
