@@ -44,16 +44,18 @@
    
    На AD5X установка может занимать до 40 минут
 
-8. Вытащить флешку
-9. Выключить принтер
-10. Включить принтер
-11. **Открыть в браузере ip принтера**
+   Если пропустили окно с зеленой галочкой и пр нткрмавтоматически перезагрузился, то загрузится стандартный экран принтера, в этом случае можно пемеходить сразу к 12 пункту меню.
+
+9. Вытащить флешку
+10. Выключить принтер
+11. Включить принтер
+12. **Открыть в браузере ip принтера**
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
     Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](/ru/Native_FW/#ad5x-enable-zmodtgz).
      
-12. Переведите мод на ваш язык.
+13. Переведите мод на ваш язык.
     
     <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
     
@@ -61,7 +63,7 @@
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
 
-13. Настройте мод
+14. Настройте мод
     
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
     
@@ -75,9 +77,9 @@
 
     Если хотите  снова увидеть это окно - то наберите к консоли `GLOBAL`
 
-14. Перейдите в `Настройки` -> `Обновления ПО` 
-15. Нажмите `Проверить обновления`, подождите пока обновления проверятся
-16. Нажать **Обновление** и обновить все компоненты.
+15. Перейдите в `Настройки` -> `Обновления ПО` 
+16. Нажмите `Проверить обновления`, подождите пока обновления проверятся
+17. Нажать **Обновление** и обновить все компоненты.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
     Если показывает много ошибок, то это нормально. Плагины не входят в состав прошивки и скачиваются отдельно. Нужно нажать `Проверить обновления`.
@@ -85,7 +87,7 @@
     
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
-17. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
+18. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
     
     <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
 
@@ -93,7 +95,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на--печать-через-octoklipper)  
+19. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на--печать-через-octoklipper)  
     Весь стартовый код нужно заменить на этот:
 
     ```
@@ -126,13 +128,13 @@
     <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
-19. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
+20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-20. [Прочитайте рекомендации](/ru/Recommendations/)
-21. [Прочитайте FAQ](/ru/FAQ/)
-22. [Откалибруйте принтер](/ru/SetupCalibrations/)
+21. [Прочитайте рекомендации](/ru/Recommendations/)
+22. [Прочитайте FAQ](/ru/FAQ/)
+23. [Откалибруйте принтер](/ru/SetupCalibrations/)
 
 ### Внимание AD5X
 
