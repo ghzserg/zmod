@@ -15,6 +15,8 @@
 
 Это Facrory (фактори) родная прошивка для AD5X
 
+Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 1.1.7
+
 - [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
 - [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
 - [1.0.8](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.8-1.0.5-20250418-Factory.tgz)
@@ -32,6 +34,8 @@
 
 Это Facrory (фактори) родная прошивка для AD5M
 
+Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
+
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
@@ -43,6 +47,8 @@
 ## AD5MPro родная прошивка
 
 Это Facrory (фактори) родная прошивка для AD5MPro
+
+Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
 
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)

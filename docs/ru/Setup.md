@@ -28,6 +28,8 @@
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5MPro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
+<iframe src="https://vkvideo.ru/video_ext.php?oid=-238575243&id=456239017&hash=047fa1a63cc31586&hd=3" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
+
 1. **[Вернуть принтер к заводским настройкам](/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](/ru/Setup/#внимание-ad5x)
 2. Отформатировать USB Flash в FAT/FAT16/FAT32
 3. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
