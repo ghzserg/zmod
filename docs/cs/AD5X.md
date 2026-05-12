@@ -291,7 +291,7 @@ Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** po
 *   **`filament_unload_after_cutting`** — Vzdálenost zvednutí filamentu **po** řezání, před přesunem do odpadní nádobky. **Výchozí: 5 mm.**
 *   **`filament_unload_after_drop`** — Vzdálenost retrakce po čištění, aby se zabránilo odkapávání. **Výchozí: 3 mm.**
 *   **`filament_extruder_speed`** — Rychlost (v mm/min), kterou je filament zaváděn do extrudéru. **Výchozí: 300 mm/min (5 mm/s).**
-*   **`filament_ifs_speed`** — Rychlost (v mm/min), kterou pracuje modul IFS. **Výchozí: 12000 mm/min (20 mm/s).**
+*   **`filament_ifs_speed`** — Rychlost (v mm/min), kterou pracuje modul IFS. **Výchozí: 1200 mm/min (20 mm/s).**
 *   **`filament_fan_speed`** — Rychlost ventilátoru (0–255) během čištění pro chlazení odkapávání. **Výchozí: 102.**
 *   **`filament_autoinsert_empty_length`** — Délka filamentu taženého při automatickém vkládání do prázdného extruderu. **Výchozí: 600 mm.**
 *   **`filament_autoinsert_full_length`** — Délka filamentu taženého při výměně stávajícího filamentu. **Výchozí: 550 mm.**

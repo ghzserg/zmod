@@ -291,7 +291,7 @@ For these settings to work, you need to **disable the printer's native display**
 *   **`filament_unload_after_cutting`** — Filament lift distance **after** cutting, before moving to the waste bin. **Default: 5 mm.**
 *   **`filament_unload_after_drop`** — Retraction distance after purging to prevent oozing. **Default: 3 mm.**
 *   **`filament_extruder_speed`** — Speed (in mm/min) at which filament is loaded into the extruder. **Default: 300 mm/min (5 mm/s).**
-*   **`filament_ifs_speed`** — Speed (in mm/min) at which the IFS module operates. **Default: 12000 mm/min (20 mm/s).**
+*   **`filament_ifs_speed`** — Speed (in mm/min) at which the IFS module operates. **Default: 1200 mm/min (20 mm/s).**
 *   **`filament_fan_speed`** — Fan speed (0–255) during purging to cool oozing. **Default: 102.**
 *   **`filament_autoinsert_empty_length`** — Filament length pulled when auto-loading into an empty extruder. **Default: 600 mm.**
 *   **`filament_autoinsert_full_length`** — Filament length pulled when replacing existing filament. **Default: 550 mm.**
