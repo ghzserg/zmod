@@ -9,6 +9,8 @@ hide:
 
 [Z-Mod LINK je k dispozici na tomto odkazu ->](https://zmod.link/link/)
 
+[Byla oznámena sbírka na Creator 5 Pro pro spuštění Z-Mod na této tiskárně ->>>](https://github.com/ghzserg/zmod/discussions/554)
+
 ### **Z-Mod pro FlashForge AD5M/PRO/AD5X: Plná kontrola nad vaší tiskárnou**
 
 Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro začátek, ale pokud chcete odemknout plný potenciál vašeho zařízení, Z-Mod je výkonné a bezplatné řešení, které promění vaši tiskárnu z „uživatelsky přívětivé“ na „profesionální úroveň“.
@@ -122,7 +124,7 @@ Tyto funkce jsou přeneseny do továrního firmwaru:
 Kompatibilní s čistými verzemi firmwaru:
 
 - FF5M/FF5MPro: v2.7.5 nebo vyšší (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3)
-- [AD5X](AD5X.md): pouze (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 3.0.3)
+- [AD5X](AD5X.md): pouze (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 3.0.3, 3.0.9) _verze IFS libovolná_
 
 Soubory nativního firmwaru se nacházejí [zde](Native_FW.md).
 

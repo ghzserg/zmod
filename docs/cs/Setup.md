@@ -26,6 +26,10 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
+<div class="video-embed">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5MPro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 1. **[Obnovte tovární nastavení tiskárny](#restoring-printer-to-factory-settings-required-for-mod-installation).**  [Varování pro AD5X](#ad5x-warning)
 2. Naformátujte USB disk na FAT/FAT16/FAT32.
 3. Zkopírujte soubor [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:

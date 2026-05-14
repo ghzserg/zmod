@@ -670,6 +670,11 @@ Removing the mod will restore the original logo. If this doesn't happen on the A
 - Upload the [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp) file to the `mod_data/logo` folder
 - Restart the printer
 
+Logo by Alberto Maciel:
+
+- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
+
 ---
 
 ### No trigger on probe after full movement

@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#version-history)
+		- [Version 1.7.1](#version-171)
 		- [Version 1.7.0](#version-170)
 		- [Version 1.6.6](#version-166)
 		- [Version 1.6.5](#version-165)
@@ -45,6 +46,22 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.1"
+	### Version 1.7.1
+	14.05.2026
+
+	* Fluidd/Mainsail/Klipper aktualisiert
+	* Automatische Wiederherstellung der GuppyScreen-Konfiguration bei Benutzer-Löschung
+	* Schutz von Klipper vor dem OOM-Killer
+	* Konsolenausgabe bei `BED_MESH`-Lade-/Löschvorgängen
+	* `dmesg`-Log im Konfigurationsarchiv
+	* Wi-Fi-Funktionalität korrigiert
+	* `SAVE_CONFIG...`-Statusanzeige beim Speichern
+	* Überwachung auf Hängenbleiben der Wägezellen
+	* Druckbett senkt sich bei Pause über das native Display um 5 mm ab
+	* `IP`-Makro – gibt IP-Adresse nach dem Start in der Konsole aus
+	* Rebranding: `ZMOD` → `Z-Mod`
 
 ??? note "Version 1.7.0"
 	### Version 1.7.0

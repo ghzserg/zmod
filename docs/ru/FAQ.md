@@ -703,6 +703,11 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 - Загрузить в папку `mod_data/logo` файл [boot.bmp](https://github.com/ghzserg/FF/releases/download/R/boot.bmp)
 - Перезагрузить принтер
 
+Лого от Alberto Maciel:
+
+- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
+
 ---
 
 ### No trigger on probe after full movement

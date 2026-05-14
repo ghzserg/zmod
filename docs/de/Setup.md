@@ -24,6 +24,10 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
+<div class="video-embed">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5MPro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)** - [Vorsicht AD5X](/de/Setup/#achtung-ad5x)
 2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
 3. Legen Sie die [Datei](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.

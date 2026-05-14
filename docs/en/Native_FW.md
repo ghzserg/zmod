@@ -24,6 +24,7 @@
 - [1.2.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.2-1.1.1-3.0.7-20260205.tgz)
 - [1.2.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.3-1.1.1-3.0.7-20260205-Factory.tgz)
 - [3.0.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.3-1.1.1-3.0.7-20260119.tgz)
+- [3.0.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.9-1.1.1-3.0.7-20260417.tgz)
 
 ## AD5M native firmware
 

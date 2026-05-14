@@ -26,6 +26,10 @@
 
 [Video](https://www.youtube.com/watch?v=2sfb2OtY7wM)
 
+<div class="video-embed">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5MPro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
 1. **[Restore the printer to factory settings](/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation).**  [AD5X Warning](/Setup/#ad5x-warning)
 2. Format a USB drive to FAT/FAT16/FAT32.
 3. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root directory:
