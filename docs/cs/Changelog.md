@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+    - [Verze 1.7.1](#verze-171)
     - [Verze 1.7.0](#verze-170)
     - [Verze 1.6.6](#verze-166)
       - [Verze 1.6.5](#verze-165)
@@ -45,6 +46,21 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.1
+14.05.2026
+
+* Aktualizováno Fluidd/Mainsail/Klipper
+* Obnovení konfigurace GuppyScreen při vymazání uživatelem
+* Ochrana Klipperu před OOM-killerem
+* Výpis událostí načtení/vymazání `BED_MESH` do konzole
+* Zápis `dmesg` do archivu konfigurace
+* Oprava funkce Wi-Fi
+* Indikace `SAVE_CONFIG...` při ukládání
+* Kontrola zaseknutí tenzometrických snímačů
+* Snížení stolu o 5 mm při pozastavení z nativní obrazovky
+* Makro `IP` – výpis IP adresy do konzole po spuštění
+* Rebranding: `ZMOD` → `Z-Mod`
 
 ### Verze 1.7.0
 15.03.2026
