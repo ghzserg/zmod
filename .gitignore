@@ -2,4 +2,3 @@ site/*
 **/__pycache__/**
 docs/.DS_Store
 mkdocs/overrides/assets/javascripts/bundle.*.js
-
