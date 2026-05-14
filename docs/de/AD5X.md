@@ -8,8 +8,8 @@
 5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist)
 6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-so-konfigurieren-sie-das-abfallfilament-beim-filamentwechsel)
 
-    - 🔧 [Grundeinstellungen](#wichtigste-einstellungen-was-am-häufigsten-zu-ändern-ist-ad5x)
-       - ⚙️ [Erweiterte Einstellungen](#erweiterte-einstellungen-nicht-ändern-wenn-sie-sich-des-ergebnisses-nicht-sicher-sind-ad5x)
+    - 🔧 [Grundeinstellungen](#grundlegende-parameter-am-häufigsten-angepasst)
+       - ⚙️ [Erweiterte Einstellungen](#erweiterte-parameter-nicht-anpassen-wenn-sie-sich-über-das-ergebnis-nicht-sicher-sind)
 
 7. [Fügen Sie Ihre Filamenttypen hinzu](#7-fügen-sie-ihre-ad5x-filamenttypen-hinzu)
 8. [Fügen Sie Ihre Farben hinzu](#8-fügen-sie-ihre-ad5x-farben-hinzu)
