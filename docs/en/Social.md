@@ -32,7 +32,8 @@ Join our community! Here you'll find official support channels, discussion group
 ### Unofficial Groups
 <div class="grid cards" markdown>
 -   __Facebook Group__
-    - [Facebook Community](https://www.facebook.com/groups/1526322885078508)
+    - [Facebook Community](https://www.facebook.com/groups/zmodgroup)
+    - [Facebook Community](https://www.facebook.com/groups/1526322885078508) (read only)
     - Unofficial discussion group
 
 -   __Discord Server__
@@ -56,7 +57,8 @@ Join our community! Here you'll find official support channels, discussion group
 | **Support** | Telegram Bot | [Help Bot](https://t.me/zmod_help_bot) | Official |
 | **News** | Telegram Channel | [Info Channel](https://t.me/zmod_info) | Official |
 | **Discussion** | Telegram Group | [Discussion Group](https://t.me/FF_5M_5M_Pro/408369) | Official |
-| **Community** | Facebook | [Facebook Group](https://www.facebook.com/groups/1526322885078508) | Unofficial |
+| **Community** | Facebook | [Facebook Group](https://www.facebook.com/groups/zmodgroup) | Unofficial |
+| **Community** | Facebook | [Facebook Group](https://www.facebook.com/groups/1526322885078508) (ro) | Unofficial |
 | **Chat** | Discord | [Discord Server](https://discord.gg/Cw4cT5C24q) | Unofficial |
 | **Code** | GitHub | [Repository](https://github.com/ghzserg/zmod) | Official |
 

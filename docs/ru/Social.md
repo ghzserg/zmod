@@ -40,7 +40,8 @@ hide:
 ### Не официальные группы
 <div class="grid cards" markdown>
 -   __Facebook Group__
-    - [Facebook Community](https://www.facebook.com/groups/1526322885078508)
+    - [Facebook Community](https://www.facebook.com/groups/zmodgroup)
+    - [Facebook Community](https://www.facebook.com/groups/1526322885078508) (только чтение)
     - Неофициальная группа для обсуждений
 
 -   __Discord Server__
