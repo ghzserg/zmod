@@ -35,6 +35,7 @@
 - [3.2.6](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.6-2.2.3-20251212-Factory.tgz)
 - [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.7-2.2.3-20251217-Factory.tgz)
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.0.3-2.2.3-20260122.tgz)
+- [5.1.1](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.1.1-2.2.3-20260417.tgz)
 
 ## Nativní firmware pro AD5MPro
 
@@ -44,6 +45,7 @@
 - [3.2.5](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.5-2.2.3-20251126-Factory.tgz)
 - [3.2.7](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.7-2.2.3-20251217-Factory.tgz)
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
+- [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
 ## Instalace úplného firmwaru na AD5X
 
