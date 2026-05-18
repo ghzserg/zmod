@@ -325,6 +325,11 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 #### Регулировка Z-Offset через Fluidd / Mainsail / GuppyScreen при работе **в режиме без родного экрана**
 
+!!! danger
+
+    Если у вас работает *родной экран*, то регулировка Z-Offset через Fluidd / Mainsail / GuppyScreen *бесполезна*.
+    Родной экран сбросит ее при первой печати. Регулировка Z-Offset через Fluidd / Mainsail / GuppyScreen работает только с отключенным родным экраном
+
 **Как это работает:**
 
 1.  Чтобы принтер запоминал Z-Offset из веб-интерфейса и GuppyScreen/HelixScreen, нужно один раз активировать специальную настройку [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/ru/Global/#load_zoffset):
