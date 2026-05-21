@@ -33,3 +33,4 @@
 - [Namida Verasche](https://github.com/ninjamida/)
 - Dave Shaw
 - Sean Hinkley
+- [@kristian](https://github.com/kristian/)

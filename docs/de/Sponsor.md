@@ -33,3 +33,4 @@ Vielen Dank an die [FF_5M_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) Community für d
 - [Namida Verasche](https://github.com/ninjamida/)
 - Dave Shaw
 - Sean Hinkley
+- [@kristian](https://github.com/kristian/)

@@ -33,3 +33,4 @@ Many thanks to the [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) community for purch
 - [Namida Verasche](https://github.com/ninjamida/)
 - Dave Shaw
 - Sean Hinkley
+- [@kristian](https://github.com/kristian/)
