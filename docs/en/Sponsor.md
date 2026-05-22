@@ -2,6 +2,8 @@
 
 Since people have been asking, I accept donations but please remember that I work on Z-Mod for fun and not for the money. I will not accept donations to work on specific bugs or features.
 
+[Fundraising announced for Creator 5 Pro to launch Z-Mod on this printer ->>>](https://github.com/ghzserg/zmod/discussions/554)
+
 | <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a> | <img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" /> |
 | :----: | :----: |
 | Support Mod Development: BTC `bc1qm5ukaw5svn7z7zm6ddagxw9l99mwac6zctm47e` | <img width="262" height="262" alt="BTC" src="https://github.com/user-attachments/assets/fa8fc602-732f-4e7f-accb-fa146a4f34b3" /> |
