@@ -2,6 +2,8 @@
 
 Поскольку люди просили, я принимаю пожертвования, но, пожалуйста, помните, что я работаю над Z-Mod ради удовольствия, а не ради денег. Я не буду принимать пожертвования для работы над конкретными ошибками или функциями.
 
+[Объявлен сбор на Creator 5 Pro для запуска Z-Mod на этом принтере ->>>](https://github.com/ghzserg/zmod/discussions/554)
+
 | <a href="https://pay.cloudtips.ru/p/3cbf9e9f">На развитие zmod: СБП, Банковская карта, T-pay</a> | <img width="262" height="262" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> |
 | :----: | :----: |
 | <a href="https://boosty.to/ghzserg">Поддержать через Boosty (СБП/Мир/Visa/Mastercard из любых стран)</a> | <img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" /> |
