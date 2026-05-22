@@ -25,6 +25,7 @@ Velké díky komunitě [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) za zakoupení [
 - [@cackmobile](https://github.com/cackmobile)
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
+- [@emsilva](https://github.com/emsilva)
 
 [Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
 

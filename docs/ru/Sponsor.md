@@ -25,6 +25,7 @@
 - [@cackmobile](https://github.com/cackmobile)
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
+- [@emsilva](https://github.com/emsilva)
 
 [Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
 
