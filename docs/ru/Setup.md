@@ -100,7 +100,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-19. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на--печать-через-octoklipper)  
+19. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
     Весь стартовый код нужно заменить на этот:
 
     ```
