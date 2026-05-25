@@ -65,12 +65,20 @@ This is not the original firmware, but an unbricking/recovery firmware. It shoul
 
 Installation takes a long time, up to an hour.
 
-Download to flash drive
+1. Download to flash drive FF5M
 
-- [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
-- [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, if you previously did it via `TAR_CONFIG`
-- After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+  - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
+  - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+  - `config.tar`, if you previously did it via `TAR_CONFIG`
+
+
+2. Copy the following files to a USB flash drive for the FF5MPro (the printer will revert to FF5M firmware version; to revert back, see instructions below):
+
+   - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
+   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+   - `config.tar`, if you previously created it via `TAR_CONFIG`
+
+3. After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 ## AD5X-ENABLE-zmod.tgz
 

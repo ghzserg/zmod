@@ -71,12 +71,19 @@ Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. 
 
 Die Installation kann bis zu einer Stunde dauern.
 
-Auf USB-Stick herunterladen
+1. Auf USB-Stick herunterladen FF5M
 
-- [Adventurer5M-Fabrik-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
-- [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, falls Sie dies zuvor über `TAR_CONFIG` durchgeführt haben.
-- Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+  - [Adventurer5M-Fabrik-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
+  - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+  - `config.tar`, falls Sie dies zuvor über `TAR_CONFIG` durchgeführt haben.
+
+2. Laden Sie folgende Dateien auf einen USB-Stick für den FF5MPro (der Drucker wechselt dabei auf die FF5M-Firmware-Version; wie Sie zurückwechseln, lesen Sie unten):
+
+   - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
+   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+   - `config.tar`, falls Sie diese Datei zuvor über `TAR_CONFIG` erstellt haben
+
+3. Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 ## zmod auf AD5X aktivieren
 

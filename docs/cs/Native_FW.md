@@ -65,12 +65,19 @@ Toto není nativní firmware, ale firmware pro obnovu z nefunkčního stavu (unb
 
 Instalace trvá dlouho, až jednu hodinu.
 
-Stáhněte soubory na USB disk:
+1. Stáhněte soubory na USB disk FF5M:
 
-- [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
-- [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
-- `config.tar`, pokud jste jej dříve vytvořili pomocí `TAR_CONFIG`
-- Po aktualizaci, pokud potřebujete znovu flashovat MCU, nainstalujte [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+  - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
+  - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+  - `config.tar`, pokud jste jej dříve vytvořili pomocí `TAR_CONFIG`
+
+2. Zkopírujte na USB flash disk pro FF5MPro následující soubory (tiskárna přejde na verzi firmwaru FF5M; jak provést zpětný přechod, naleznete níže):
+
+   - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
+   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+   - `config.tar`, pokud jste jej dříve vytvořili pomocí `TAR_CONFIG`
+
+3. Po aktualizaci, pokud potřebujete znovu flashovat MCU, nainstalujte [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 ## AD5X-ENABLE-zmod.tgz
 
