@@ -37,3 +37,4 @@ Vielen Dank an die [FF_5M_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) Community für d
 - Dave Shaw
 - Sean Hinkley
 - [@kristian](https://github.com/kristian/)
+- Idi Schmitz

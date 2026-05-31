@@ -37,3 +37,4 @@
 - Dave Shaw
 - Sean Hinkley
 - [@kristian](https://github.com/kristian/)
+- Idi Schmitz
