@@ -1,9 +1,7 @@
 name: Check Config Attachment
-
 on:
   issues:
     types: [opened, edited, reopened]
-
 jobs:
   check-config-attachment:
     runs-on: ubuntu-latest
@@ -11,7 +9,6 @@ jobs:
     permissions:
       issues: write
       contents: read
-
     steps:
       - name: Check attachment status
         id: check_attachment
@@ -34,12 +31,10 @@ jobs:
             let fileName = '';
 
             // Регулярное выражение для поиска любых файлов config*.tar.gz
-            // Ищет ссылки вида [filename](url) где filename содержит config и заканчивается на .tar.gz
             const markdownRegex = /\[(config[^\]]*\.tar\.gz)\]\((https?:\/\/[^\s)]+)\)/gi;
             const matches = [...issue.data.body.matchAll(markdownRegex)];
 
             if (matches && matches.length > 0) {
-              // Берем первый найденный файл (можно изменить логику, если нужно проверять все)
               const firstMatch = matches[0];
               fileName = firstMatch[1];
               fileUrl = firstMatch[2];
@@ -121,6 +116,18 @@ jobs:
             exit 0
           fi
           echo "lesswaste_detected=false" >> $GITHUB_OUTPUT
+
+          # 🆕 ПРОВЕРКА HELIXSCREEN
+          if grep -q -F "DISPLAY_OFF HELIX=1" "$EXTRACT_DIR/$REQUIRED_FILE"; then
+            echo "ERROR: HelixScreen detected in console.log"
+            echo "file_valid=false" >> $GITHUB_OUTPUT
+            echo "verification_error=HelixScreen usage detected in '$FILE_NAME'" >> $GITHUB_OUTPUT
+            echo "helixscreen_detected=true" >> $GITHUB_OUTPUT
+            rm -rf "$EXTRACT_DIR"
+            rm -f "/tmp/config.tar.gz"
+            exit 0
+          fi
+          echo "helixscreen_detected=false" >> $GITHUB_OUTPUT
 
           VERSION_CHECK_MESSAGE=""
           VERSION_OUTDATED="false"
@@ -219,17 +226,13 @@ jobs:
 
               let commentBody = '✅ **Archive Check Passed** / **Проверка архива пройдена**\n';
               commentBody += `The file \`${fileName}\` is valid. / Файл \`${fileName}\` корректен.\n\n`;
-
               commentBody += `🔴 **Action Required / Требуется действие:** ${versionMessage}\n\n`;
-
               commentBody += '🚫 **Issue Status / Статус тикета:**\n';
               commentBody += 'This issue will remain **closed** until the mod is updated to the latest version.\n';
               commentBody += 'Тикет останется **закрытым** до обновления мода до последней версии.\n\n';
-
               commentBody += '🔄 **Please update your mod first! / Сначала обновите мод!**\n';
               commentBody += '- Update guide (English): https://wiki.zmod.link/Setup/#updating-the-mod\n';
               commentBody += '- Инструкция по обновлению (Русский): https://wiki.zmod.link/ru/Setup/#обновление-мода\n\n';
-
               commentBody += 'After updating, please **edit this issue** (no need to create a new one). The check will run again and reopen it if the version matches.\n';
               commentBody += 'После обновления **отредактируйте этот тикет** (создавать новый не нужно). Проверка запустится снова и откроет его, если версия совпадает.';
               commentBody += '\nhttps://wiki.zmod.link/Help/\nhttps://wiki.zmod.link/ru/Help/';
@@ -240,8 +243,7 @@ jobs:
                 repo,
                 body: commentBody
               });
-            }
-            else {
+            } else {
               if (issue.data.state === 'closed') {
                 await github.rest.issues.update({
                   owner,
@@ -369,8 +371,67 @@ jobs:
               body: commentBody
             });
 
+      - name: Handle helixscreen detection
+        if: steps.verify_archive.outputs.helixscreen_detected == 'true'
+        uses: actions/github-script@v6
+        env:
+          FILE_NAME: ${{ steps.check_attachment.outputs.file_name }}
+        with:
+          script: |
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const issue = await github.rest.issues.get({
+              owner,
+              repo,
+              issue_number: issueNumber
+            });
+
+            if (issue.data.state === 'open') {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issueNumber,
+                state: 'closed'
+              });
+            }
+
+            const fileName = process.env.FILE_NAME || 'config.tar.gz';
+
+            let commentBody = '❌ **HelixScreen Usage Detected** / **Обнаружено использование HelixScreen**\n\n';
+            commentBody += `The file \`${fileName}\` contains references to HelixScreen.\n\n`;
+            commentBody += `Файл \`${fileName}\` содержит упоминания HelixScreen.\n\n`;
+            commentBody += '**Please switch to GuppyScreen and replace the attachment on the first page.**\n\n';
+            commentBody += '**Пожалуйста, перейдите на GuppyScreen и замените вложение на первой странице.**\n\n';
+            commentBody += '🚫 **Issue Status / Статус тикета:**\n';
+            commentBody += 'This issue has been **closed**.\n';
+            commentBody += 'Тикет был **закрыт**.\n\n';
+            commentBody += '🔧 **How to fix / Как исправить:**\n';
+            commentBody += '1. Switch your display configuration to GuppyScreen\n';
+            commentBody += '2. Create a new `config*.tar.gz` file without HelixScreen references\n';
+            commentBody += '3. Edit this issue and attach the corrected file\n\n';
+            commentBody += '1. Переключите настройки дисплея на GuppyScreen\n';
+            commentBody += '2. Создайте новый файл `config*.tar.gz` без упоминаний HelixScreen\n';
+            commentBody += '3. Отредактируйте этот тикет и прикрепите исправленный файл\n\n';
+            commentBody += '\nhttps://wiki.zmod.link/ru/Help/\nhttps://wiki.zmod.link/Help/';
+
+            await github.rest.issues.createComment({
+              issue_number: issueNumber,
+              owner,
+              repo,
+              body: commentBody
+            });
+
       - name: Handle missing, inaccessible, or invalid attachment
-        if: steps.check_attachment.outputs.attachment_found != 'true' || steps.check_attachment.outputs.file_accessible != 'true' || (steps.verify_archive.outputs.file_valid != 'true' && steps.verify_archive.outputs.file_valid != '' && steps.verify_archive.outputs.bambufy_detected != 'true' && steps.verify_archive.outputs.lesswaste_detected != 'true')
+        if: >-
+          steps.check_attachment.outputs.attachment_found != 'true' ||
+          steps.check_attachment.outputs.file_accessible != 'true' ||
+          (steps.verify_archive.outputs.file_valid != 'true' &&
+           steps.verify_archive.outputs.file_valid != '' &&
+           steps.verify_archive.outputs.bambufy_detected != 'true' &&
+           steps.verify_archive.outputs.lesswaste_detected != 'true' &&
+           steps.verify_archive.outputs.helixscreen_detected != 'true')
         uses: actions/github-script@v6
         env:
           ATTACHMENT_FOUND: ${{ steps.check_attachment.outputs.attachment_found }}
