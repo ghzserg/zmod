@@ -336,7 +336,7 @@ M104 S[nozzle_temperature_initial_layer]
   BED_TEMP=[bed_temperature_initial_layer_single]
   ```
 
-- BED_MESH_CALIBRATE - Mesh removal using the standard clipper macro.
+- BED_MESH_CALIBRATE - Mesh removal using the standard Klipper macro.
   **Not recommended**, as it does not clean the nozzle, resulting in incorrect results. **Orca's adaptive bed map is not recommended** at all, as it lacks randomization of point measurements, meaning that when printing identical models, the nozzle will consistently take measurements at the same points, resulting in micro-holes and, consequently, an incorrect bed map.
 
 - Standard Klipper macros (**not recommended**)
