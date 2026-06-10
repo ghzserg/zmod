@@ -134,6 +134,10 @@ Nach dem Aufruf von `ENABLE_PLUGIN` wird automatisch die Datei `install.sh` aufg
 
 Nach dem Aufruf von `DISABLE_PLUGIN`, wird automatisch die Datei `uninstall.sh` aufgerufen.
 
+### Update-Skript
+
+Wenn der Update-Manager das Plugin aktualisiert, wird `update.sh` automatisch ausgeführt, sofern die Datei existiert.
+
 ### Einsprachiges Plugin
 Muss die Datei enthalten:
 ```
