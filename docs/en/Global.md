@@ -595,7 +595,7 @@ Enable SWAP (1):
 
 - 0 - no (*Only for upgraded 256MB RAM*)
 - 1 - yes, on EMMC
-- 2 - yes, prefer USB FLASH
+- 2 - yes, if possible on USB FLASH(FAT32) for the brave and confident (in fact, it works 90% slower than EMMC)
 
 Example: `SAVE_ZMOD_DATA USE_SWAP=1`
 
