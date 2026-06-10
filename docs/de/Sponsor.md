@@ -38,3 +38,4 @@ Vielen Dank an die [FF_5M_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) Community für d
 - Sean Hinkley
 - [@kristian](https://github.com/kristian/)
 - Idi Schmitz
+- Serhii Povar
