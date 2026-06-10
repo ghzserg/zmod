@@ -131,6 +131,10 @@ After calling `ENABLE_PLUGIN`, the file `install.sh` will be executed automatica
 
 After calling `DISABLE_PLUGIN`, the file `uninstall.sh` will be executed automatically.
 
+### Update Script
+
+When the Update Manager updates the plugin, `update.sh` will be executed automatically if it exists.
+
 ### Single-language Plugin
 Must contain the file:
 ```
