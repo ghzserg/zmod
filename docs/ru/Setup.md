@@ -127,10 +127,11 @@
     Необходимо переключиться на протокол "Octo/Klipper":
 
       - Протокол: `Octo/Klipper`
-          - Имя хоста: `IP_принтера:7125`
-          - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
+      - Агент: `Moonraker`
+      - Имя хоста: `IP_принтера:7125`
+      - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
-    <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
 20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
