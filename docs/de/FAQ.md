@@ -102,9 +102,13 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 - Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den nicht-nativen Bildschirmmodus übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirmmodus an.
 - Das Bettnetz wird beim Start automatisch geladen.
 - Das FlashForge-Protokoll wird nicht unterstützt (wird vom nativen Bildschirm verarbeitet). Verwenden Sie "Octo/Klipper".
-   - Protokoll: `Octo/Klipper`.
-     - Hostname: `IP-Adresse(vom Drucker):7125`.
-     - Url-Adresse des Hosts: `IP_printer` oder `IP_printer:80`.
+
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
+
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
 ---
 

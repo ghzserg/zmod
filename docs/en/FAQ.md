@@ -49,10 +49,13 @@ ast_close_dialogs)).
 - If you want to transfer z-offset from native screen to non-native screen mode, call the macro ```LOAD_ZOFFSET_NATIVE``` it will read the z-offset value from the native screen and apply it to non-native screen mode.
 - Bed mesh `auto` loads automatically on startup.
 - FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":
-    - Protocol: `Octo/Klipper`
-      - Hostname: `printer_IP:7125`
-      - URL: `printer_IP` or `printer_IP:80`
 
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
+    
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 ---
 
 ### What's the difference between using the screen and without the native screen?

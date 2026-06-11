@@ -99,13 +99,13 @@
 18. [Send Files via "Octo/Klipper" for Printing](/Recommendations/#send-files-via-octoklipper-for-printing)
 
     You **need to switch to the Octo/Klipper protocol**:
-
-    - Protocol: `Octo/Klipper`
-        - Hostname: `Printer_IP:7125`
-        - Host URL: `Printer_IP` or `Printer_IP:80`
-
     
-    <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
+    
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
 19. The entire start code should be replaced with this:
