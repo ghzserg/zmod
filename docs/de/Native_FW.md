@@ -5,7 +5,7 @@
 ## So installieren Sie die native Firmware
 
 1. Setzen Sie den Drucker auf die Standardeinstellungen zurück.
-2. Formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
+2. Formatieren Sie den USB-Stick auf FAT/FAT16/FAT32(MBR)
 3. Legen Sie die Datei im Stammverzeichnis des USB-Flash-Speichers ab.
 4. Schalten Sie den Drucker aus
 5. Stecken Sie das USB-Flash-Laufwerk in den Drucker

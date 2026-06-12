@@ -5,7 +5,7 @@
 ## How to install native firmware
 
 1. Reset the printer to default settings.
-2. Format a USB drive to FAT/FAT16/FAT32.
+2. Format a USB drive to FAT/FAT16/FAT32(MBR).
 3. Copy the appropriate file to the USB root directory
 4. Power off the printer.
 5. Insert the usb drive into printer usb port.

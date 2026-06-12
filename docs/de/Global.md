@@ -637,7 +637,7 @@ Die Standarddatei `/opt/klipper/klipper/mcu.py` setzt `TRSYNC_TIMEOUT = 0,025`. 
 
 **So beheben Sie das Problem mit der Standard-Firmware:**
 
-- Formatieren Sie einen USB-Stick als FAT32.
+- Formatieren Sie einen USB-Stick als FAT32(MBR).
 
 - Speichern Sie die Datei `flashforge_init.sh` auf dem USB-Stick:
 
@@ -691,7 +691,7 @@ Beispiel: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **So beheben Sie den Fehler mit der Original-Firmware:**
 
-- Formatieren Sie einen USB-Stick als FAT32.
+- Formatieren Sie einen USB-Stick als FAT32(MBR).
 
 - Speichern Sie die entsprechende Datei auf dem USB-Stick:
 
@@ -788,7 +788,7 @@ Stattdessen können Sie verwenden:
 
 So **deaktivieren** Sie chinesische Cloud-Dienste auf der Standard-Firmware:
 
-- Formatieren Sie das Flash-Laufwerk auf FAT32
+- Formatieren Sie das Flash-Laufwerk auf FAT32(MBR)
 - Legen Sie die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) auf diesem Flash-Laufwerk ab.
 - Schalten Sie den Drucker aus
 - Stecken Sie den USB-Stick in den Drucker
@@ -798,7 +798,7 @@ So **deaktivieren** Sie chinesische Cloud-Dienste auf der Standard-Firmware:
 
 So **aktivieren** Sie chinesische Cloud-Dienste auf der Standard-Firmware:
 
-- Formatieren Sie das Flash-Laufwerk auf FAT32
+- Formatieren Sie das Flash-Laufwerk auf FAT32(MBR)
 - Legen Sie die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) auf dem Flash-Laufwerk ab.
 - Schalten Sie den Drucker aus
 - Stecken Sie den USB-Stick in den Drucker

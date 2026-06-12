@@ -6,7 +6,7 @@
 
 0. [Odinstalujte KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), pokud byl dříve nainstalován.
 1. Obnovte výchozí nastavení tiskárny.
-2. Naformátujte USB disk na FAT/FAT16/FAT32.
+2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 3. Zkopírujte příslušný soubor z [nativního firmwaru](Native_FW.md) do kořenového adresáře USB:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) pro FF5M
@@ -31,7 +31,7 @@
 </div>
 
 1. **[Obnovte tovární nastavení tiskárny](#restoring-printer-to-factory-settings-required-for-mod-installation).**  [Varování pro AD5X](#ad5x-warning)
-2. Naformátujte USB disk na FAT/FAT16/FAT32.
+2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 3. Zkopírujte soubor [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:
 
     - Pro FF5M: Adventurer5M-**zmod**-*.tgz
@@ -192,7 +192,7 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 **Manuální aktualizace přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32.
+1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 2. Zkopírujte [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.
@@ -217,7 +217,7 @@ Pozor!
 
 **Odstranění přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32.
+1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 2. Zkopírujte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.

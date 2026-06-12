@@ -6,7 +6,7 @@
 
 0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) if previously installed.
 1. Reset the printer to default settings.
-2. Format a USB drive to FAT/FAT16/FAT32.
+2. Format a USB drive to FAT/FAT16/FAT32(MBR).
 3. Copy the appropriate file from the [Native firmware](/Native_FW/) to the USB root directory:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
@@ -31,7 +31,7 @@
 </div>
 
 1. **[Restore the printer to factory settings](/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation).**  [AD5X Warning](/Setup/#ad5x-warning)
-2. Format a USB drive to FAT/FAT16/FAT32.
+2. Format a USB drive to FAT/FAT16/FAT32(MBR).
 3. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root directory:
 
     - For FF5M: Adventurer5M-**zmod**-*.tgz
@@ -193,7 +193,7 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 **Manual USB Update:**
 
-1. Format a USB drive to FAT/FAT16/FAT32.
+1. Format a USB drive to FAT/FAT16/FAT32(MBR).
 2. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root.
 3. Power off the printer.
 4. Insert the USB drive.
@@ -218,7 +218,7 @@ Attention!
 
 **USB Removal:**
 
-1. Format a USB drive to FAT/FAT16/FAT32.
+1. Format a USB drive to FAT/FAT16/FAT32(MBR).
 2. Copy [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) to the USB root.
 3. Power off the printer.
 4. Insert the USB drive.

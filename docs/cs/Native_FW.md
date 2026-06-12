@@ -5,7 +5,7 @@
 ## Jak nainstalovat nativní firmware
 
 1. Obnovte tiskárnu do výchozího nastavení.
-2. Naformátujte USB disk na systém souborů FAT/FAT16/FAT32.
+2. Naformátujte USB disk na systém souborů FAT/FAT16/FAT32(MBR).
 3. Zkopírujte příslušný soubor do kořenového adresáře USB disku.
 4. Vypněte tiskárnu.
 5. Vložte USB disk do USB portu tiskárny.

@@ -547,7 +547,7 @@ square_corner_velocity: 9
 
 Как исправить на стоке:
 
-- Отформатируйте USB в FAT32
+- Отформатируйте USB в FAT32(MBR)
 - Сохраните на usb flash файл `flashforge_init.sh`:
     - [Для исправления параметра Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
       - [Для восстановления параметра как на стоке Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
@@ -586,7 +586,7 @@ square_corner_velocity: 9
 
 Как исправить на стоке:
 
-- Отформатируйте USB в FAT32
+- Отформатируйте USB в FAT32(MBR)
 - Сохраните на usb flash файл:
     - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) для FlashForge 5M
       - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) для FlashForge 5M Pro
@@ -640,7 +640,7 @@ square_corner_velocity: 9
 
 - 0 - нет *Только для перепаянного процессора на 256 мб памяти*
 - 1 - да, на EMMC
-- 2 - да, по возможности на USB FLASH(FAT32) _для смелых и уверенных в себе (по факту работает в 90% медленнее EMMC)_
+- 2 - да, по возможности на USB FLASH(FAT32(MBR)) _для смелых и уверенных в себе (по факту работает в 90% медленнее EMMC)_
 
 Пример: `SAVE_ZMOD_DATA USE_SWAP=1`
 
@@ -669,7 +669,7 @@ square_corner_velocity: 9
 
 Для **отключения** китайских облаков на родной прошивке:
 
-- Отформатируйте флешку в FAT32
+- Отформатируйте флешку в FAT32(MBR)
 - Поместите файл [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) на эту флешку
 - Выключите принтер
 - Вставьте флешку в принтер
@@ -679,7 +679,7 @@ square_corner_velocity: 9
 
 Для **включения** китайских облаков на родной прошивке:
 
-- Отформатируйте флешку в FAT32
+- Отформатируйте флешку в FAT32(MBR)
 - Поместите файл [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) на эту флешку
 - Выключите принтер
 - Вставьте флешку в принтер

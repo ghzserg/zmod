@@ -4,7 +4,7 @@
 
 0. [Удалить KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), если он был установлен
 1. Сбросить принтер до настроек по умолчанию
-2. Отформатировать USB Flash в FAT/FAT16/FAT32
+2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 3. Поместить файл из [Native firmware](/ru/Native_FW/) в корневую папку USB Flash
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
@@ -31,12 +31,16 @@
 <iframe src="https://vkvideo.ru/video_ext.php?oid=-238575243&id=456239017&hash=047fa1a63cc31586&hd=3" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
 
 1. **[Вернуть принтер к заводским настройкам](/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](/ru/Setup/#внимание-ad5x)
-2. Отформатировать USB Flash в FAT/FAT16/FAT32
+2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 3. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
 
-    - для FF5M: Adventurer5M-**zmod**-\*.tgz
-       - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-       - для [AD5X](/ru/AD5X/): AD5X-**zmod**-\*.tgz
+   - для FF5M: Adventurer5M-**zmod**-\*.tgz
+   - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
+   - для [AD5X](/ru/AD5X/): AD5X-**zmod**-\*.tgz
+
+  _А лучше поместить все 3 файла на флешку, тогда принтер сам запустит нужный файл_
+
+  **Распаковывать файлы не нужно**
 
 4. Выключить принтер
 5. Вставить флешку в принтер
@@ -196,7 +200,7 @@
 
 Обновление через флешку:
 
-1. Отформатировать USB Flash в FAT/FAT16/FAT32
+1. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 2. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
 
     - для FF5M: Adventurer5M-**zmod**-\*.tgz
@@ -246,7 +250,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Удаление мода  через флешку:
 
-- Отформатируйте флешку в FAT/FAT16/FAT32
+- Отформатируйте флешку в FAT/FAT16/FAT32(MBR)
 - Поместите файл [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) на эту флешку
 - Выключите принтер
 - Вставьте флешку в принтер
