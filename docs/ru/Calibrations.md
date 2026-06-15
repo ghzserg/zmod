@@ -130,6 +130,7 @@ M104 S[nozzle_temperature_initial_layer]
 ```
 
 Но лучше использовать [START_PRINT](/ru/Main/#start_print) и [SAVE_ZMOD_DATA](/ru/Global/#start_print) PRINT_LEVELING=1
+При снятии карты стола происходит калбировка стартовго ноля.
 
 [Какие есть варианты снятия карты стола?](/ru/FAQ/#какие-есть-варианты-снятия-карты-стола)
 
