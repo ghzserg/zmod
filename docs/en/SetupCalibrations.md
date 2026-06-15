@@ -143,6 +143,8 @@ Before calibration, clean the nozzle, otherwise the measurements will be incorre
 **Why is this needed?**
 Even a perfectly leveled bed can have slight dips or bumps. A bed mesh (or "mesh calibration") is like a "topographic map" of your bed. The printer remembers these irregularities and will slightly move the Z-axis during printing to keep the nozzle at the perfect distance from the surface. This guarantees flawless first-layer adhesion across the entire bed area.
 
+_If you replace one plate with another (or glass), you also need mesh calibration, since the height of the plates may differ, and this will recalibrate the starting zero to the height of the new plate._
+
 **Why This Specific Command?**
 The built-in tools in Fluidd and Mainsail are not suitable for our printers because they:
 
@@ -225,7 +227,7 @@ When using KAMP (and full calibration too), the printer follows a smart scheme t
 #### KAMP Configuration
 
 **When to Use KAMP?**
-In most cases, there is no need to build a bed mesh before every print. The exception is if you use **removable plates with different thicknesses** (e.g., PEI sheet and glass), as they may have different heights.
+In most cases, there is no need to build a bed mesh before every print. The exception is if you use **removable plates with different thicknesses** (e.g., PEI sheet and glass), as they may have different heights, therefore, the starting zero will be different for printing.
 
 **1. Enabling Adaptive Calibration (KAMP)**
 

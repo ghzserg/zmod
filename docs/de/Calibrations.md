@@ -133,6 +133,8 @@ M104 S[nozzle_temperature_initial_layer]
 
 **Empfohlen:** Verwenden Sie [START_PRINT](/de/Main/#start_print) mit `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
+Bei der Durchführung der Netzkalibrierung wird der Startnullpunkt kalibriert.
+
 [Optionen zur Bettnivellierung](/de/FAQ/#welche-optionen-stehen-für-die-bettnivellierung-zur-verfügung)
 
 ---

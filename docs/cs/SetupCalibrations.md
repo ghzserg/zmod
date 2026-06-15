@@ -143,6 +143,8 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
 **Proč je to potřeba?**
 I dokonale vyrovnaná podložka může mít drobné prohlubně nebo vyvýšeniny. Mapa podložky (nebo „mesh kalibrace“) je jako „topografická mapa“ vašeho lože. Tiskárna si tyto nerovnosti zapamatuje a během tisku jemně posouvá osu Z, aby tryska zůstala v ideální vzdálenosti od povrchu. To zajišťuje perfektní přilnavost první vrstvy v celé ploše.
 
+_Pokud vyměníte jednu desku za jinou (nebo sklo), potřebujete také kalibraci sítě, protože výška desek se může lišit, a to překalibruje počáteční nulu na výšku nové desky._
+
 **Proč právě tento příkaz?**
 Vestavěné nástroje ve Fluidd a Mainsail nejsou pro naše tiskárny vhodné, protože:
 
@@ -225,7 +227,7 @@ Při použití KAMP (a i plné kalibrace) tiskárna postupuje podle chytrého sc
 #### Nastavení KAMP
 
 **Kdy použít KAMP?**
-Ve většině případů není nutné vytvářet mapu podložky před každým tiskem. Výjimkou je použití **výměnných plátů s různou tloušťkou** (např. PEI fólie a sklo), protože mohou mít rozdílnou výšku.
+Ve většině případů není nutné vytvářet mapu podložky před každým tiskem. Výjimkou je použití **výměnných plátů s různou tloušťkou** (např. PEI fólie a sklo), protože mohou mít rozdílnou výšku, proto bude počáteční nula pro tisk jiná.
 
 **1. Povolení adaptivní kalibrace (KAMP)**
 

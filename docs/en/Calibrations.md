@@ -127,6 +127,8 @@ M104 S[nozzle_temperature_initial_layer]
 
 **Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
+When the mesh calibration is performed, the starting zero is calibrated.
+
 [Bed leveling options](/FAQ/#what-options-are-available-for-bed-leveling)
 
 ---
