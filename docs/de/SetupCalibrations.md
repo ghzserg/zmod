@@ -150,6 +150,8 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 **Warum ist dies notwendig?**
 Selbst ein perfektes nivelliertes Druckbett kann kleine Vertiefungen oder Unebenheiten aufweisen. Ein Bettnetz (oder **Netzkalibrierung**) ist wie eine **Höhenkarte** Ihres Druckbettes. Der Drucker merkt sich diese Unregelmäßigkeiten und verschiebt die Z-Achse während des Drucks leicht, damit die Düse immer den perfekten Abstand zur Oberfläche hat. Dadurch wird sichergestellt, dass die erste Schicht auf dem gesamten Druckbett einwandfrei haftet.
 
+_Wenn Sie eine Platte durch eine andere (oder Glas) ersetzen, ist auch eine Netzkalibrierung erforderlich, da die Höhe der Platten unterschiedlich sein kann. Dadurch wird der Startnullpunkt auf die Höhe der neuen Platte neu kalibriert._
+
 **Warum dieser Befehl?**
 Die eingebauten Werkzeuge in Fluidd und Mainsail sind für unsere Drucker nicht geeignet, weil sie:
 
@@ -239,7 +241,7 @@ In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle en
 
 **Wann sollte man KAMP verwenden?**
 
-In den meisten Fällen ist es nicht notwendig, vor jedem Druck ein Bettnetz zu erstellen. Die Ausnahme ist, wenn Sie **Druckplatten mit unterschiedlichen Dicken** (z.B. PEI-Platte und Glas) verwenden, da diese unterschiedliche Höhen haben können.
+In den meisten Fällen ist es nicht notwendig, vor jedem Druck ein Bettnetz zu erstellen. Die Ausnahme ist, wenn Sie **Druckplatten mit unterschiedlichen Dicken** (z.B. PEI-Platte und Glas) verwenden, da diese unterschiedliche Höhen haben können, daher wird die Startnull beim Drucken anders sein.
 
 **1. Aktivieren der adaptiven Kalibrierung (KAMP)**
 
