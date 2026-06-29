@@ -293,6 +293,15 @@ SSH запускается через 3 минуты  после  старта  
 4. Чтобы сбросить пароль введите: ```cloud reset_password```
 5. Чтобы удалить текущего пользователя введите: ```cloud remove```
 
+Если Телеграмм не работает:
+
+1. Открыть [vk.com/zmod_official](https://vk.com/zmod_official)
+2. Написать сообщение в группу
+3. Ввести команду ```cloud``` - если вы ранее регистрировались, то он сообщит вам ваш логин
+3. Чтобы зарегистрировать пользователя с именем `test` введите: ```cloud register test```
+4. Чтобы сбросить пароль введите: ```cloud reset_password```
+5. Чтобы удалить текущего пользователя введите: ```cloud remove```
+
 Как подключиться к облаку [zmod.link](https://zmod.link/link/):
 
 1. Зайти на сайт [zmod.link](https://zmod.link/link//) и ввести логин и пароль
@@ -313,7 +322,7 @@ SSH запускается через 3 минуты  после  старта  
    Пример:
 
    - `testprinter`
-       - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
+   - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
 
    
    <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="https://github.com/user-attachments/assets/b6401b71-5827-480d-ba1c-b7114f87177b" />

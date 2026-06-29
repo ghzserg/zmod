@@ -20,6 +20,9 @@ body:
         [Если ошибка в плагине bambufy, обратитесь к автору](https://github.com/function3d/bambufy).
         [Если ошибка в плагине lessWaste, обратитесь к автору](https://github.com/Hrybmo/lessWaste).
 
+        Если вы используете HelixScreen, то перед созданием тикета НУЖНО перейти на GuppyScreen.
+        [Если ошибка есть на HelixScreen, но ее нет на GuppyScreen, то обратитесь к автору](https://github.com/prestonbrown/helixscreen/)
+
         **Одна проблема, один тикет** - не добавляйте в один тикет несколько проблем, решена будет только одна.
 
   - type: dropdown
@@ -43,7 +46,7 @@ body:
       options:
         - Я работаю с родным экраном
         - Я работаю с GuppyScreen
-        - Я работаю с HelixScreen
+        - Я работаю с HelixScreen (перейдите на GuppyScreen)
         - Я работаю без экрана
     validations:
       required: true
@@ -137,5 +140,6 @@ body:
         **Проверьте перед отправкой:**
         - Я прикрепил файл `config-*.tar.gz`
         - Я отключил все сторонние плагины (кроме recommend)
+        - Я перешел с HellixScreen на GuppyScreen
         - Я прочитал рекомендованные материалы
         - **Одна проблема, один тикет** - не добавляйте в один тикет несколько проблем, решена будет только одна.

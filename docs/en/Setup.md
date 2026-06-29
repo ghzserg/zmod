@@ -6,7 +6,7 @@
 
 0. [Uninstall KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) if previously installed.
 1. Reset the printer to default settings.
-2. Format a USB drive to FAT/FAT16/FAT32.
+2. Format a USB drive to FAT/FAT16/FAT32(MBR).
 3. Copy the appropriate file from the [Native firmware](/Native_FW/) to the USB root directory:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) for FF5M
@@ -31,7 +31,7 @@
 </div>
 
 1. **[Restore the printer to factory settings](/Setup/#restoring-printer-to-factory-settings-required-for-mod-installation).**  [AD5X Warning](/Setup/#ad5x-warning)
-2. Format a USB drive to FAT/FAT16/FAT32.
+2. Format a USB drive to FAT/FAT16/FAT32(MBR).
 3. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root directory:
 
     - For FF5M: Adventurer5M-**zmod**-*.tgz
@@ -99,13 +99,13 @@
 18. [Send Files via "Octo/Klipper" for Printing](/Recommendations/#send-files-via-octoklipper-for-printing)
 
     You **need to switch to the Octo/Klipper protocol**:
-
-    - Protocol: `Octo/Klipper`
-        - Hostname: `Printer_IP:7125`
-        - Host URL: `Printer_IP` or `Printer_IP:80`
-
     
-    <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
+    
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
 19. The entire start code should be replaced with this:
@@ -193,7 +193,7 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 **Manual USB Update:**
 
-1. Format a USB drive to FAT/FAT16/FAT32.
+1. Format a USB drive to FAT/FAT16/FAT32(MBR).
 2. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root.
 3. Power off the printer.
 4. Insert the USB drive.
@@ -218,7 +218,7 @@ Attention!
 
 **USB Removal:**
 
-1. Format a USB drive to FAT/FAT16/FAT32.
+1. Format a USB drive to FAT/FAT16/FAT32(MBR).
 2. Copy [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) to the USB root.
 3. Power off the printer.
 4. Insert the USB drive.

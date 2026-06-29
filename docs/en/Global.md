@@ -511,7 +511,7 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 
 **How to fix on stock firmware:**
 
-- Format a USB drive as FAT32.
+- Format a USB drive as FAT32(MBR).
 - Save the `flashforge_init.sh` file to the USB:
     - [Fix parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
       - [Restore stock parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
@@ -547,7 +547,7 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **How to fix on stock firmware:**
 
-- Format a USB drive as FAT32.
+- Format a USB drive as FAT32(MBR).
 - Save the appropriate file to the USB:
     - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) for FlashForge 5M
       - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) for FlashForge 5M Pro
@@ -595,7 +595,7 @@ Enable SWAP (1):
 
 - 0 - no (*Only for upgraded 256MB RAM*)
 - 1 - yes, on EMMC
-- 2 - yes, prefer USB FLASH
+- 2 - yes, if possible on USB FLASH(FAT32(MBR)) for the brave and confident (in fact, it works 90% slower than EMMC)
 
 Example: `SAVE_ZMOD_DATA USE_SWAP=1`
 
@@ -623,7 +623,7 @@ Instead, you can use:
 
 **To disable Chinese clouds on stock firmware:**
 
-- Format a USB drive as FAT32.
+- Format a USB drive as FAT32(MBR).
 - Place [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) on the USB.
 - Power off the printer.
 - Insert the USB into the printer.
@@ -632,7 +632,7 @@ Instead, you can use:
 
 **To enable Chinese clouds on stock firmware:**
 
-- Format a USB drive as FAT32.
+- Format a USB drive as FAT32(MBR).
 - Place [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) on the USB.
 - Follow the same steps as above.
 

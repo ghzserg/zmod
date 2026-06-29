@@ -5,7 +5,7 @@
 ## Как установить родную прошивку
 
 1. Сбросить принтер до настроек по умолчанию
-2. Отформатировать USB Flash в FAT/FAT16/FAT32
+2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 3. Поместить файл в корневую папку USB Flash
 4. Выключить принтер
 5. Вставить флешку в принтер
@@ -29,6 +29,7 @@
 - [1.2.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.2.3-1.1.1-3.0.7-20260205-Factory.tgz)
 - [3.0.3](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.3-1.1.1-3.0.7-20260119.tgz)
 - [3.0.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.9-1.1.1-3.0.7-20260417.tgz)
+- [3.1.0](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.1.0-1.1.1-3.0.7-20260515.tgz)
 
 ## AD5M родная прошивка
 
@@ -78,13 +79,19 @@
 
 Установка занимает много времени до часа.
 
-1. Загрузите на флешку:
+1. Загрузите на флешку FF5M:
 
    - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
-2. После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+2. Загрузите на флешку FF5MPro (принтер станет с версией FF5M, как пекрейти обратно читайте ниже):
+
+   - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
+   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
+   - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
+
+3. После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 ## AD5X-ENABLE-zmod.tgz
 

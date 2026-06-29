@@ -127,6 +127,8 @@ M104 S[nozzle_temperature_initial_layer]
 
 **Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
+Po provedení kalibrace sítě se kalibruje počáteční nula.
+
 [Možnosti vyrovnávání stolu](FAQ.md#what-options-are-available-for-bed-leveling)
 
 ---

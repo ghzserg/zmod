@@ -130,6 +130,10 @@ primary_branch: main
 Po volání `ENABLE_PLUGIN` se automaticky spustí soubor `install.sh`.
 Po volání `DISABLE_PLUGIN` se automaticky spustí soubor `uninstall.sh`.
 
+### Skript aktualizace
+
+Když správce aktualizací aktualizuje plugin, soubor `update.sh` se automaticky spustí, pokud existuje.
+
 ### Plugin s jedním jazykem
 Musí obsahovat soubor:
 ```

@@ -242,6 +242,9 @@ extra:
     - icon: fontawesome/brands/facebook
       link: https://www.facebook.com/groups/zmodgroup
       name: "Official Facebook Group"
+    - icon: fontawesome/brands/vk
+      link: https://vk.com/zmod_official
+      name: "Official VK Group"
     - icon: fontawesome/brands/discord
       link: https://discord.gg/Cw4cT5C24q
       name: "Unofficial Discord Server"

@@ -6,7 +6,7 @@
 
 0. [Odinstalujte KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), pokud byl dříve nainstalován.
 1. Obnovte výchozí nastavení tiskárny.
-2. Naformátujte USB disk na FAT/FAT16/FAT32.
+2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 3. Zkopírujte příslušný soubor z [nativního firmwaru](Native_FW.md) do kořenového adresáře USB:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) pro FF5M
@@ -31,7 +31,7 @@
 </div>
 
 1. **[Obnovte tovární nastavení tiskárny](#restoring-printer-to-factory-settings-required-for-mod-installation).**  [Varování pro AD5X](#ad5x-warning)
-2. Naformátujte USB disk na FAT/FAT16/FAT32.
+2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 3. Zkopírujte soubor [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:
 
     - Pro FF5M: Adventurer5M-**zmod**-*.tgz
@@ -99,13 +99,13 @@
 18. [Odesílání souborů k tisku pomocí „Octo/Klipper“](Recommendations.md#send-files-via-octoklipper-for-printing)
 
     **Musíte přepnout na protokol Octo/Klipper**:
-
-    - Protokol: `Octo/Klipper`
-        - Název hostitele: `Printer_IP:7125`
-        - URL hostitele: `Printer_IP` nebo `Printer_IP:80`
-
     
-    <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
+    
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
 19. Celý startovací kód by měl být nahrazen tímto:
@@ -192,7 +192,7 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 **Manuální aktualizace přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32.
+1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 2. Zkopírujte [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.
@@ -217,7 +217,7 @@ Pozor!
 
 **Odstranění přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32.
+1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
 2. Zkopírujte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.

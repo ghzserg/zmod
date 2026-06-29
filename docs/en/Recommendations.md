@@ -124,9 +124,12 @@ The native FF protocol occasionally transfers corrupted files and lacks metadata
 1. Click the WiFi icon next to the printer.
 2. Set:
 
-    - **Protocol**: `Octo/Klipper`
-       - **Hostname**: `Printer_IP:7125`
-       - **Host URL**: `Printer_IP` or `Printer_IP:80`
+- **Host Type**: `Octo/Klipper`
+- **Printer Agent**: `Moonraker`
+- **Hostname**: `IP_printer:7125`
+- **Device UI**: `IP_printer` or `IP_printer:80`
+
+<img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
 If using Mainsail, specify only these thumbnail sizes: ```140x110/PNG, 64x64/PNG```
 

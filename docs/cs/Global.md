@@ -509,7 +509,7 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 
 **Jak opravit na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32.
+- Naformátujte USB disk jako FAT32(MBR).
 - Uložte soubor `flashforge_init.sh` na USB:
     - [Opravit parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
       - [Obnovit tovární parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
@@ -545,7 +545,7 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Jak opravit na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32.
+- Naformátujte USB disk jako FAT32(MBR).
 - Uložte příslušný soubor na USB:
     - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) pro FlashForge 5M
       - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) pro FlashForge 5M Pro
@@ -621,7 +621,7 @@ Místo toho můžete použít:
 
 **Jak zakázat čínské cloudy na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32.
+- Naformátujte USB disk jako FAT32(MBR).
 - Umístěte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) na USB.
 - Vypněte tiskárnu.
 - Vložte USB do tiskárny.
@@ -630,7 +630,7 @@ Místo toho můžete použít:
 
 **Jak povolit čínské cloudy na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32.
+- Naformátujte USB disk jako FAT32(MBR).
 - Umístěte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) na USB.
 - Postupujte stejně jako výše.
 

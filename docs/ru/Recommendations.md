@@ -125,8 +125,11 @@ Igor Polunovskiy
 В Orca. Щелкнуть по значку Wifi рядом с принтером:
 
 - Протокол: `Octo/Klipper`
+- Сетевой Агент: `Moonraker`
 - Имя хоста: `IP_принтера:7125`
 - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
+
+<img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
 Если используется Mainsail, то пропишите только эти размеры миниатюр: ```140x110/PNG, 64x64/PNG```
 
@@ -171,6 +174,8 @@ Igor Polunovskiy
 Включается макросом [NOZZLE_CONTROL](/ru/Global/#nozzle_control)
 
 `NOZZLE_CONTROL WEIGHT=1500`
+
+После включения, активируется автоматически при печати.
 
 Контроль, выключит Klipper, в случае если сопло начнет царапать пластину или оторвётся деталь от стола.
 

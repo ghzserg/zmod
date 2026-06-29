@@ -4,7 +4,7 @@
 
 0. [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md) deinstallieren, wenn er installiert wurde
 1. Setzen Sie den Drucker auf die Standardeinstellungen zurück.
-2. den USB-Stick auf FAT/FAT16/FAT32 formatieren
+2. den USB-Stick auf FAT/FAT16/FAT32(MBR) formatieren
 3. Legen Sie die Datei von [Native Firmware](/de/Native_FW/) in den Stammordner des USB-Flash-Laufwerks
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) für FF5m
@@ -29,7 +29,7 @@
 </div>
 
 1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)** - [Vorsicht AD5X](/de/Setup/#achtung-ad5x)
-2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32
+2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32(MBR)
 3. Legen Sie die [Datei](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
@@ -122,11 +122,12 @@
 
     Es ist notwendig, auf das Protokoll "Octo/Klipper" umzuschalten:
 
-      - Protokoll: `Octo/Klipper`.
-          - Hostname: `IP-Druckername:7125`.
-          - Url-Adresse des Hosts: `IP_printer` oder `IP_printer:80`
+    - **Host Type**: `Octo/Klipper`
+    - **Printer Agent**: `Moonraker`
+    - **Hostname**: `IP_printer:7125`
+    - **Device UI**: `IP_printer` or `IP_printer:80`
 
-    <img width="673" height="467" alt="image" src="https://github.com/user-attachments/assets/70d5da64-0604-44e5-9102-887b758b5cf0" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
 19. [MD5-Kontrolle aktivieren](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
@@ -209,7 +210,7 @@ muss mit den ersten beiden Ziffern der Z-Mod-Version (unter `Einstellungen/Masch
 
 Update über USB-Stick:
 
-1. den USB-Stick auf FAT/FAT16/FAT32 formatieren
+1. den USB-Stick auf FAT/FAT16/FAT32(MBR) formatieren
 2. Kopieren Sie [file](https://github.com/ghzserg/zmod/releases/) in den Stammordner des USB-Sticks.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
@@ -245,7 +246,7 @@ Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1```.
 
 Deinstallation des Mods über ein Flash-Laufwerk:
 
-- Formatiere das Flash-Laufwerk auf FAT/FAT16/FAT32
+- Formatiere das Flash-Laufwerk auf FAT/FAT16/FAT32(MBR)
 - Kopiere die Datei [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) auf einen USB-Stick
 - Schalten Sie den Drucker aus
 - Stecken Sie den USB-Stick in den Drucker

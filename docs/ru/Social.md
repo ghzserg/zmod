@@ -41,6 +41,13 @@ hide:
     - Официальная группа для обсуждений
 </div>
 
+### VK
+<div class="grid cards" markdown>
+-   __Facebook Group__
+    - [VK](https://vk.com/zmod_official)
+    - Бот для регистрации в zmod.link
+</div>
+
 ## 🌐 Community Resources
 
 ### Не официальные группы
