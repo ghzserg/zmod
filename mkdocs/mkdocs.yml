@@ -86,7 +86,7 @@ plugins:
             Plugins: Плагины
             Telegram: Телеграм
 
-            Help: Помощь 
+            Help: Помощь
             FAQ: FAQ
 
             Macros: Макросы
@@ -191,7 +191,7 @@ nav:
   - Begin:
       - Setup: Setup.md
       - Setup Calibrations: SetupCalibrations.md
-      - Recommendations: Recomendations.md
+      - Recommendations: Recommendations.md
 
   - Configuration:
       - Setup Calibrations: SetupCalibrations.md
