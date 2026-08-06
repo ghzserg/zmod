@@ -1,9 +1,10 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
-    - [Verze 1.7.1](#verze-171)
-    - [Verze 1.7.0](#verze-170)
-    - [Verze 1.6.6](#verze-166)
+      - [Verze 1.7.2](#verze-172)
+      - [Verze 1.7.1](#verze-171)
+      - [Verze 1.7.0](#verze-170)
+      - [Verze 1.6.6](#verze-166)
       - [Verze 1.6.5](#verze-165)
       - [Verze 1.6.4](#verze-164)
       - [Verze 1.6.3](#verze-163)
@@ -46,6 +47,12 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.2
+06.08.2026
+
+* Aktualizováno Fluidd/Mainsail/Klipper
+
 
 ### Verze 1.7.1
 14.05.2026

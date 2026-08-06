@@ -1,6 +1,7 @@
 # Changelog
 
 - [Version History](#version-history)
+    - [Version 1.7.2](#version-172)
     - [Version 1.7.1](#version-171)
     - [Version 1.7.0](#version-170)
     - [Version 1.6.6](#version-166)
@@ -46,6 +47,12 @@
 ---
 
 ## Version History
+
+### Version 1.7.2
+06.08.2026
+
+* Updated Fluidd/Mainsail/Klipper
+
 
 ### Version 1.7.1
 14.05.2026
