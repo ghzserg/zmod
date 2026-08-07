@@ -111,6 +111,10 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
+  В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
+
+  <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 ---
 
 ### Чем отличается работа с экраном и без родного экрана
@@ -147,6 +151,11 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
   - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
   <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+
+В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
+
+<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 
 ---
 

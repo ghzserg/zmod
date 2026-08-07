@@ -153,6 +153,10 @@ In Orca, ```Druckerprofil```:arrow_right:```Allgemeine Informationen```:arrow_ri
 
 Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
 
+In Orca ab Version 2.4.2 deaktivieren Sie die Übertragung von 3MF-Dateien: `Druckerprofil` -> `Allgemeine Informationen` -> `Erweitert` -> `Use 3MF instead of G-code` deaktivieren (Häkchen entfernen).
+
+<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 ---
 
 ### Fehlerbehebung E0017 einschalten

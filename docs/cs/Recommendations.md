@@ -137,6 +137,10 @@ V Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thum
 
 Vezměte na vědomí, že na nativní obrazovce se již nebudou zobrazovat miniatury.
 
+V Orca verzi 2.4.2 a novější vypněte přenos souborů 3MF: `Profil tiskárny` -> `Obecné informace` -> `Rozšířené` -> zrušte zaškrtnutí `Use 3MF instead of G-code`.
+
+<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 ---
 
 ### Povolit opravu chyby E0017

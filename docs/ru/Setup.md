@@ -138,6 +138,10 @@
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
+    В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
+
+    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
 
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />

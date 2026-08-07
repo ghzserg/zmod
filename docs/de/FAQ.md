@@ -110,6 +110,10 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
+    In Orca ab Version 2.4.2 deaktivieren Sie die Übertragung von 3MF-Dateien: `Druckerprofil` -> `Allgemeine Informationen` -> `Erweitert` -> `Use 3MF instead of G-code` deaktivieren (Häkchen entfernen).
+
+    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 ---
 
 ### Was ist der Unterschied zwischen der Arbeit mit und ohne nativen Bildschirm

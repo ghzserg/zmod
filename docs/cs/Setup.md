@@ -107,6 +107,10 @@
     
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
+    
+    V Orca verzi 2.4.2 a novější vypněte přenos souborů 3MF: `Profil tiskárny` -> `Obecné informace` -> `Rozšířené` -> zrušte zaškrtnutí `Use 3MF instead of G-code`.
+    
+    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 19. Celý startovací kód by měl být nahrazen tímto:
     ```

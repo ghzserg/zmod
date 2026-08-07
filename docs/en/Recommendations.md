@@ -137,6 +137,10 @@ In Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thu
 
 Note that the native screen will no longer display thumbnails.
 
+In Orca version 2.4.2 or later, disable 3MF file transfer: `Printer Profile` -> `General Information` -> `Advanced` -> uncheck `Use 3MF instead of G-code`.
+
+<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
+
 ---
 
 ### Enable Fix for E0017 Error
