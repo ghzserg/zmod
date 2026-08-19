@@ -19,7 +19,7 @@ Pokud nelze provést `TAR_CONFIG`:
 
 Nebo se připojte k tiskárně přes SSH:
 
-AD5M/AD5MPro:
+AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/

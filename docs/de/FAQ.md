@@ -774,7 +774,7 @@ Du hast z.B. Klipper 13 laufen und verwendest die MCU von Klipper 11 oder 12.
 
 Oder andersherum. Du hast einen nativen Klipper laufen - aber du hast die MCU für Klipper 13 geladen.
 
-Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (Ad5M/Ad5mPro) geladen hast.
+Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (AD5M/AD5M Pro) geladen hast.
 
 [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
 
@@ -849,7 +849,7 @@ Vor dem Drucken:
 Dies ist eine Funktion der **nativen Firmware** ab der Version **native Firmware**:
 
 - 1.1.8 AD5X
-- 3.2.4 AD5M/AD5MPro
+- 3.2.4 AD5M/AD5M Pro
 
 Lösung:
 

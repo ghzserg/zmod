@@ -650,7 +650,7 @@ Například používáte Klipper 13, ale použitý MCU je z Klipperu 11 nebo 12.
 
 Nebo naopak. Používáte nativní Klipper, ale nahráli jste MCU pro Klipper 13.
 
-Pokud verze vašeho MCU začíná na ```?-20230317_182329-ubuntu20-virtual-machine```, pak jste nahráli MCU pro Klipper 12 (AD5X) nebo Klipper 11 (Ad5M/Ad5mPro).
+Pokud verze vašeho MCU začíná na ```?-20230317_182329-ubuntu20-virtual-machine```, pak jste nahráli MCU pro Klipper 12 (AD5X) nebo Klipper 11 (AD5M/AD5M Pro).
 
 V souladu s tím musí Z-Mod načíst nativní Klipper.
 
@@ -726,7 +726,7 @@ Před tiskem tiskárna:
 Toto je vlastnost nativního firmwaru od verze:
 
 - **1.1.8** AD5X
-- **3.2.4** AD5M/AD5MPro
+- **3.2.4** AD5M/AD5M Pro
 
 Řešení:
 

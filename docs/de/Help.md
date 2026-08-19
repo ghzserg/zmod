@@ -20,7 +20,7 @@ Falls `TAR_CONFIG` nicht ausgeführt werden kann:
 
 Oder verbinden Sie sich per SSH mit dem Drucker:
 
-AD5M/AD5MPro:
+AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/

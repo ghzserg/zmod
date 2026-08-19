@@ -396,7 +396,7 @@ Don't forget to restart your printer!
 
 [ZSHAPER](/Calibrations/#zshaper) - this macro makes the printer vibrate at different frequencies, measures the response, and builds graphs to find the ideal input shaper parameters for the X and Y axes.
 
-**Specifics for Printers with Low Memory (AD5M, AD5MPro):**
+**Specifics for Printers with Low Memory (AD5M, AD5M Pro):**
 To avoid overloading the system, **calibrate the axes separately**.
 
 *   `ZSHAPER` — calibrates both axes (X and Y).

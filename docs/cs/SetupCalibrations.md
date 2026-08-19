@@ -396,7 +396,7 @@ Nezapomeňte tiskárnu restartovat!
 
 [ZSHAPER](Calibrations.md#zshaper) – toto makro rozvibruje tiskárnu různými frekvencemi, změří odezvu a vytvoří grafy pro určení ideálních parametrů Input Shaperu pro osy X a Y.
 
-**Specifika pro tiskárny s malou pamětí (AD5M, AD5MPro):**
+**Specifika pro tiskárny s malou pamětí (AD5M, AD5M Pro):**
 Aby nedošlo k přetížení systému, **kalibrujte osy zvlášť**.
 
 *   `ZSHAPER` — kalibruje obě osy (X i Y).

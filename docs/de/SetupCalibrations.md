@@ -422,7 +422,7 @@ Vergessen Sie nicht, den Drucker neu zu starten!
 
 [ZSHAPER](/de/Calibrations/#zshaper) - dieses Makro lässt den Drucker bei verschiedenen Frequenzen vibrieren, misst die Reaktion und zeichnet die idealen Shaper-Parameter für die X- und Y-Achse auf.
 
-**Funktion für Drucker mit geringem Speicherplatz (AD5M, AD5MPro):**
+**Funktion für Drucker mit geringem Speicherplatz (AD5M, AD5M Pro):**
 
 Um eine Überlastung des Systems zu vermeiden, **müssen die Achsen einzeln kalibriert werden**.
 

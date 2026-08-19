@@ -19,7 +19,7 @@ If it is impossible to execute `TAR_CONFIG`:
 
 Or connect to the printer via SSH:
 
-AD5M/AD5MPro:
+AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/

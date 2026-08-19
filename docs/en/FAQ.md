@@ -734,7 +734,7 @@ For example, you are running Klipper 13, but the MCU used is from Klipper 11 or 
 
 Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipper 13.
 
-If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (Ad5M/Ad5mPro).
+If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (AD5M/AD5M Pro).
 
 [Switch to Native Klipper](/Native_FW/#fix_klipper)
 
@@ -812,7 +812,7 @@ Before printing, the printer:
 This is a feature of the native firmware starting with version:
 
 - **1.1.8** AD5X
-- **3.2.4** AD5M/AD5MPro
+- **3.2.4** AD5M/AD5M Pro
 
 Solution:
 

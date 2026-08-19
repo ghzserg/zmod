@@ -20,7 +20,7 @@
 
 Или подключитесь к принтеру по SSH:
 
-AD5M/AD5MPro:
+AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/
