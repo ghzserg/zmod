@@ -101,6 +101,8 @@ For those who've lost their minds and moved their "home" (parking lot to the poo
 - [Adventurer5M-root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-root.tgz)
 - [Adventurer5MPro-root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-root.tgz)
 - [AD5X-root](https://github.com/ghzserg/FF/releases/download/R/AD5X-root.tgz)
+- [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-root.tgz)
+- [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-root.tgz)
 
 ## E0011 native firmware 
 
