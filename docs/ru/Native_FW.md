@@ -60,6 +60,18 @@
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 - [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
+## Creator 5 родная прошивка
+
+Это Facrory (фактори) родная прошивка для Creator 5
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+
+## Creator 5 pro родная прошивка
+
+Это Facrory (фактори) родная прошивка для Creator 5 pro
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Установка полной прошивки на AD5X
 
 **Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.

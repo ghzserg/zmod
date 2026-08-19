@@ -48,6 +48,18 @@
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 - [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
+## Creator 5 stock firmware
+
+This is the Factory (factory) stock firmware for Creator 5
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+
+## Creator 5 Pro stock firmware
+
+This is the Factory (factory) stock firmware for Creator 5 Pro
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Installing full firmware on AD5X
 
 This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.

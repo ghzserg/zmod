@@ -54,6 +54,18 @@
 	- [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 	- [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
+## Creator 5 Original-Firmware
+
+Dies ist die Factory (Factory) Original-Firmware für Creator 5
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+
+## Creator 5 Pro Original-Firmware
+
+Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Installation der vollständigen Firmware auf dem AD5X
 
 Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. Installieren Sie sie nur, wenn der Drucker überhaupt nicht mehr startet.

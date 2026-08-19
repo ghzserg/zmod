@@ -48,6 +48,18 @@
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 - [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
+## Creator 5 Originální firmware
+
+Toto je Factory (factory) originální firmware pro Creator 5
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+
+## Creator 5 Pro Originální firmware
+
+Toto je Factory (factory) originální firmware pro Creator 5 Pro
+
+- [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Instalace úplného firmwaru na AD5X
 
 Toto není nativní firmware, ale firmware pro obnovu z nefunkčního stavu (unbricking/recovery). Měl by být instalován pouze v případě, že se tiskárna vůbec nespustí.
