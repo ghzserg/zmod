@@ -4,7 +4,7 @@ hide:
   - navigation
 ---
 
-# FF5M / FF5M Pro / AD5X Z-Mod
+# FF5M / FF5M Pro / AD5X / Creator 5 / Creator 5 Pro Z-Mod
 
 <img width="698" height="291" alt="logo zmod" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
@@ -12,7 +12,7 @@ hide:
 
 [Sammelaktion für Creator 5 Pro angekündigt, um Z-Mod auf diesem Drucker zu starten ->>>](https://github.com/ghzserg/zmod/discussions/554)
 
-### **Z-Mod für FlashForge AD5M/PRO/AD5X: Volle Kontrolle über Ihren Drucker**
+### **Z-Mod für FlashForge AD5M/AD5M PRO/AD5X/Creator 5/Creator 5 Pro: Volle Kontrolle über Ihren Drucker**
 
 Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist Z-Mod eine leistungsstarke und kostenlose Lösung, die Ihren Drucker von "benutzerdefiniert" auf "professionell" umstellt.
 

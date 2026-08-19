@@ -3,7 +3,7 @@ hide:
   - navigation
 ---
 
-# FF5M / FF5M Pro / AD5X Z-Mod
+# FF5M / FF5M Pro / AD5X / Creator 5 / Creator 5 Pro Z-Mod
 
 <img width="698" height="291" alt="zmod logo" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
 
@@ -11,7 +11,7 @@ hide:
 
 [Byla oznámena sbírka na Creator 5 Pro pro spuštění Z-Mod na této tiskárně ->>>](https://github.com/ghzserg/zmod/discussions/554)
 
-### **Z-Mod pro FlashForge AD5M/PRO/AD5X: Plná kontrola nad vaší tiskárnou**
+### **Z-Mod pro FlashForge AD5M/AD5M PRO/AD5X/Creator 5/Creator 5 Pro: Plná kontrola nad vaší tiskárnou**
 
 Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro začátek, ale pokud chcete odemknout plný potenciál vašeho zařízení, Z-Mod je výkonné a bezplatné řešení, které promění vaši tiskárnu z „uživatelsky přívětivé“ na „profesionální úroveň“.
 
