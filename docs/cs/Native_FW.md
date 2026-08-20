@@ -173,6 +173,7 @@ Záloha firmwaru IFS
 
 - [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ad5x)
 - [AD5M/Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ff5m)
+- [Creator 5 Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/creator5pro)
 
 ## FIX_LOOP
 ### Obnovení zavádění
