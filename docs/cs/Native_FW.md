@@ -60,6 +60,23 @@ Toto je Factory (factory) originální firmware pro Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 
+## Instalace kompletního firmwaru na Creator 5 / Creator 5 Pro
+
+**Toto NENÍ originální Factory firmware, ale nástroj pro odblokování tiskárny.** Měl by být instalován pouze v případě, že tiskárna vůbec nenastartuje.
+
+Instalace trvá dlouho, až hodinu.
+
+1. Stáhněte na USB flash disk:
+
+   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
+   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
+   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+2. Po aktualizaci, pokud potřebujete znovu nahrát firmware do MCU, nainstalujte:
+
+   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Instalace úplného firmwaru na AD5X
 
 Toto není nativní firmware, ale firmware pro obnovu z nefunkčního stavu (unbricking/recovery). Měl by být instalován pouze v případě, že se tiskárna vůbec nespustí.

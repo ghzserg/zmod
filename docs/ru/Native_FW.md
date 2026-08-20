@@ -72,6 +72,23 @@
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 
+## Установка полной прошивки на Creator 5 / Creator 5 Pro
+
+**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+
+Установка занимает много времени до часа.
+
+1. Загрузите на флешку:
+
+   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
+   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
+   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+2. После обновления, если вам надо перешить MCU установите:
+
+   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Установка полной прошивки на AD5X
 
 **Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.

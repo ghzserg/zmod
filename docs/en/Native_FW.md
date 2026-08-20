@@ -60,6 +60,23 @@ This is the Factory (factory) stock firmware for Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 
+## Installing Full Firmware on Creator 5 / Creator 5 Pro
+
+**This is NOT the original Factory firmware, but a printer unbricking tool.** It should only be installed if the printer does not start at all.
+
+Installation takes a long time, up to an hour.
+
+1. Download to a USB flash drive:
+
+   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
+   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
+   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+2. After updating, if you need to reflash the MCU, install:
+
+   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Installing full firmware on AD5X
 
 This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.

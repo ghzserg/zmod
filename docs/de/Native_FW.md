@@ -66,6 +66,23 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 
+## Installation der vollständigen Firmware auf Creator 5 / Creator 5 Pro
+
+**Dies ist NICHT die originale Factory-Firmware, sondern ein Tool zum Entblocken des Druckers.** Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht startet.
+
+Die Installation dauert lange, bis zu einer Stunde.
+
+1. Laden Sie auf einen USB-Stick herunter:
+
+   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
+   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
+   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+2. Nach dem Update, wenn Sie den MCU neu flashen müssen, installieren Sie:
+
+   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+
 ## Installation der vollständigen Firmware auf dem AD5X
 
 Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. Installieren Sie sie nur, wenn der Drucker überhaupt nicht mehr startet.
