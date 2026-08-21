@@ -16,6 +16,7 @@
 2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк BamBufy
 3. [Dryer](https://github.com/pantata/dryer) - Сушка филамента на нагревательном столе
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) — Плагин для поддержки [железа IFS Jacker](https://github.com/ninjamida/ifs-jacker); обеспечивает автоопределение количества доступных каналов и интеграцию в Klipper вентиляторов, светодиодов и датчиков, подключенных через IFS Jacker.
+5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `ENABLE_EXTRA_PLUGINS`.
 
