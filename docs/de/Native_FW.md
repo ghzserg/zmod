@@ -213,6 +213,8 @@ Entfernt übrig gebliebene Links aus dem Autostart
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_update_mcu.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_update_mcu.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_update_mcu.tgz)
+- [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-update_mcu.tgz)
+- [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-update_mcu.tgz)
 
 ## LOG
 ### Ermöglicht das Abrufen von Log-Dateien, wenn Klipper nicht funktioniert
