@@ -176,6 +176,14 @@ Fix E0011 Off
 
 [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
+## Перевод Creator 5 в Creator 5 Pro
+
+[Creator5-to_c5pro.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-to_c5pro.tgz)
+
+## Перевод Creator 5 Pro в Creator 5
+
+[Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
+
 ## 5X IFS
 Архив IFS прошивки
 
