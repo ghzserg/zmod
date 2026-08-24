@@ -71,6 +71,7 @@
 Это Facrory (фактори) родная прошивка для Creator 5 pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+- [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
 ## Установка полной прошивки на Creator 5 / Creator 5 Pro
 

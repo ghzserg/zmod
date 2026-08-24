@@ -65,6 +65,7 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5
 Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+- [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
 ## Installation der vollständigen Firmware auf Creator 5 / Creator 5 Pro
 

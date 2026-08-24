@@ -59,6 +59,7 @@ This is the Factory (factory) stock firmware for Creator 5
 This is the Factory (factory) stock firmware for Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+- [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
 ## Installing Full Firmware on Creator 5 / Creator 5 Pro
 
