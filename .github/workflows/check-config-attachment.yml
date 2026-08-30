@@ -132,54 +132,75 @@ jobs:
           VERSION_CHECK_MESSAGE=""
           VERSION_OUTDATED="false"
 
-          VERSION_FILE_5X="opt/config/mod/version_5x.txt"
-          REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/z_ad5x/refs/heads/1.7/version_5x.txt"
+          VERSION_FILE_C5PRO="usr/data/zmod/zmod/version_c5pro.txt"
+          REMOTE_VERSION_URL_C5PRO="https://raw.githubusercontent.com/ghzserg/z_c5pro/refs/heads/1.7/version_c5pro.txt"
 
-          if [ -f "$EXTRACT_DIR/$VERSION_FILE_5X" ]; then
-            echo "Found $VERSION_FILE_5X, checking version..."
-            LOCAL_VERSION_5X=$(cat "$EXTRACT_DIR/$VERSION_FILE_5X" | xargs)
-            REMOTE_VERSION_5X=$(curl -s -f "$REMOTE_VERSION_URL_5X" | xargs)
+          if [ -f "$EXTRACT_DIR/$VERSION_FILE_C5PRO" ]; then
+            echo "Found $VERSION_FILE_C5PRO, checking version..."
+            LOCAL_VERSION_C5PRO=$(cat "$EXTRACT_DIR/$VERSION_FILE_C5PRO" | xargs)
+            REMOTE_VERSION_C5PRO=$(curl -s -f "$REMOTE_VERSION_URL_C5PRO" | xargs)
 
-            if [ -z "$REMOTE_VERSION_5X" ]; then
-              echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5X"
+            if [ -z "$REMOTE_VERSION_C5PRO" ]; then
+              echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_C5PRO"
               VERSION_CHECK_MESSAGE="⚠️ Could not check for updates (failed to fetch latest version)."
-            elif [ "$LOCAL_VERSION_5X" != "$REMOTE_VERSION_5X" ]; then
-              echo "OUTDATED: Local version ($LOCAL_VERSION_5X) differs from remote ($REMOTE_VERSION_5X)."
+            elif [ "$LOCAL_VERSION_C5PRO" != "$REMOTE_VERSION_C5PRO" ]; then
+              echo "OUTDATED: Local version ($LOCAL_VERSION_C5PRO) differs from remote ($REMOTE_VERSION_C5PRO)."
               VERSION_OUTDATED="true"
-              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** does not match the latest version **$REMOTE_VERSION_5X**."
+              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_C5PRO** does not match the latest version **$REMOTE_VERSION_C5PRO**."
             else
-              echo "UP-TO-DATE: Version $LOCAL_VERSION_5X is current."
-              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** is up to date."
+              echo "UP-TO-DATE: Version $LOCAL_VERSION_C5PRO is current."
+              VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_C5PRO** is up to date."
             fi
 
           else
-            VERSION_FILE_5M="opt/config/mod/version_5m.txt"
-            REMOTE_VERSION_URL_5M="https://raw.githubusercontent.com/ghzserg/z_ff5m/refs/heads/1.7/version_5m.txt"
+            VERSION_FILE_5X="opt/config/mod/version_5x.txt"
+            REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/z_ad5x/refs/heads/1.7/version_5x.txt"
+            if [ -f "$EXTRACT_DIR/$VERSION_FILE_5X" ]; then
+              echo "Found $VERSION_FILE_5X, checking version..."
+              LOCAL_VERSION_5X=$(cat "$EXTRACT_DIR/$VERSION_FILE_5X" | xargs)
+              REMOTE_VERSION_5X=$(curl -s -f "$REMOTE_VERSION_URL_5X" | xargs)
 
-            if [ -f "$EXTRACT_DIR/$VERSION_FILE_5M" ]; then
-              echo "Found $VERSION_FILE_5M, checking version..."
-              LOCAL_VERSION_5M=$(cat "$EXTRACT_DIR/$VERSION_FILE_5M" | xargs)
-              REMOTE_VERSION_5M=$(curl -s -f "$REMOTE_VERSION_URL_5M" | xargs)
-
-              if [ -z "$REMOTE_VERSION_5M" ]; then
-                echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5M"
+              if [ -z "$REMOTE_VERSION_5X" ]; then
+                echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5X"
                 VERSION_CHECK_MESSAGE="⚠️ Could not check for updates (failed to fetch latest version)."
-              elif [ "$LOCAL_VERSION_5M" != "$REMOTE_VERSION_5M" ]; then
-                echo "OUTDATED: Local version ($LOCAL_VERSION_5M) differs from remote ($REMOTE_VERSION_5M)."
+              elif [ "$LOCAL_VERSION_5X" != "$REMOTE_VERSION_5X" ]; then
+                echo "OUTDATED: Local version ($LOCAL_VERSION_5X) differs from remote ($REMOTE_VERSION_5X)."
                 VERSION_OUTDATED="true"
-                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** does not match the latest version **$REMOTE_VERSION_5M**."
+                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** does not match the latest version **$REMOTE_VERSION_5X**."
               else
-                echo "UP-TO-DATE: Version $LOCAL_VERSION_5M is current."
-                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** is up to date."
+                echo "UP-TO-DATE: Version $LOCAL_VERSION_5X is current."
+                VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5X** is up to date."
               fi
 
             else
-              echo "ERROR: No version file found (neither 5x.txt nor 5m.txt)."
-              echo "file_valid=false" >> $GITHUB_OUTPUT
-              echo "verification_error=The archive '$FILE_NAME' does not contain a valid version file (version_5x.txt or version_5m.txt)." >> $GITHUB_OUTPUT
-              rm -rf "$EXTRACT_DIR"
-              rm -f "/tmp/config.tar.gz"
-              exit 0
+              VERSION_FILE_5M="usr/data/zmod/zmod/version_5m.txt"
+              REMOTE_VERSION_URL_5M="https://raw.githubusercontent.com/ghzserg/z_ff5m/refs/heads/1.7/version_5m.txt"
+
+              if [ -f "$EXTRACT_DIR/$VERSION_FILE_5M" ]; then
+                echo "Found $VERSION_FILE_5M, checking version..."
+                LOCAL_VERSION_5M=$(cat "$EXTRACT_DIR/$VERSION_FILE_5M" | xargs)
+                REMOTE_VERSION_5M=$(curl -s -f "$REMOTE_VERSION_URL_5M" | xargs)
+
+                if [ -z "$REMOTE_VERSION_5M" ]; then
+                  echo "WARNING: Could not fetch remote version from $REMOTE_VERSION_URL_5M"
+                  VERSION_CHECK_MESSAGE="⚠️ Could not check for updates (failed to fetch latest version)."
+                elif [ "$LOCAL_VERSION_5M" != "$REMOTE_VERSION_5M" ]; then
+                  echo "OUTDATED: Local version ($LOCAL_VERSION_5M) differs from remote ($REMOTE_VERSION_5M)."
+                  VERSION_OUTDATED="true"
+                  VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** does not match the latest version **$REMOTE_VERSION_5M**."
+                else
+                  echo "UP-TO-DATE: Version $LOCAL_VERSION_5M is current."
+                  VERSION_CHECK_MESSAGE="Your mod version **$LOCAL_VERSION_5M** is up to date."
+                fi
+
+              else
+                echo "ERROR: No version file found (neither 5x.txt nor 5m.txt nor c5pro.txt)."
+                echo "file_valid=false" >> $GITHUB_OUTPUT
+                echo "verification_error=The archive '$FILE_NAME' does not contain a valid version file (version_5x.txt or version_5m.txt or version_c5pro.txt)." >> $GITHUB_OUTPUT
+                rm -rf "$EXTRACT_DIR"
+                rm -f "/tmp/config.tar.gz"
+                exit 0
+              fi
             fi
           fi
 
