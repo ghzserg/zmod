@@ -56,7 +56,11 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) und [activate mod](/de/Native_FW/#zmod-auf-ad5x-aktivieren) installieren.
+    Wenn sich das Webinterface nicht öffnet, hat die native Firmware den Mod deaktiviert. Um sie zu aktivieren, müssen Sie die USB-Flash-Datei installieren:
+
+    - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+    - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+    - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
      
 12. Übersetzen Sie den Mod in Ihrer Sprache.
     
@@ -279,7 +283,11 @@ Wenn der native Bildschirm das Update nicht findet:
 - Ihre Seriennummer wurde noch nicht von der Update-Verteilung getroffen
 - [Installieren Sie das native Firmware-Update von einem USB-Stick](/de/Native_FW/)
 
-**Für [AD5X](/de/AD5X/) ist die [Z-Mod-Aktivierung](/de/Native_FW/) über `AD5X-ENABLE-zmod.tgz` von einem USB-Stick erforderlich – nach dem Aktualisieren der Original-Firmware.**
+**Für [AD5X](/de/AD5X/)/Creator 5/Creator 5 Pro ist die [Z-Mod-Aktivierung](/de/Native_FW/) von einem USB-Stick erforderlich – nach dem Aktualisieren der Original-Firmware.**
+
+- [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+- [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+- [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 ---
 

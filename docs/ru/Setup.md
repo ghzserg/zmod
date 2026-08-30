@@ -64,7 +64,11 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) и [активировать мод](/ru/Native_FW/#ad5x-enable-zmodtgz).
+    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл:
+
+    - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+    - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+    - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
      
 13. Переведите мод на ваш язык.
     
@@ -277,7 +281,11 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - Ваш серийный номер еще не попал под раздачу обновлений
 - [Установите обновление родной прошивки с флешки](/ru/Native_FW/)
 
-**Для [AD5X](/ru/AD5X/) требуется [активация Z-Mod](/ru/Native_FW/) через `AD5X-ENABLE-zmod.tgz` с флешки, после обновления стока**.
+**Для [AD5X](/ru/AD5X/)/Creator 5/Creator 5 Pro требуется [активация Z-Mod](/ru/Native_FW/) с флешки, после обновления стока**:
+
+- [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+- [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+- [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 ---
 

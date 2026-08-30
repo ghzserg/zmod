@@ -57,7 +57,11 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Pokud se webové rozhraní neotevře, znamená to, že standardní firmware tuto funkci zakázal. Chcete-li ji povolit, zkopírujte soubor [AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz) na USB flash disk a [aktivujte mod](Native_FW.md#ad5x-enable-zmodtgz).
+    Pokud se webové rozhraní neotevře, znamená to, že standardní firmware tuto funkci zakázal. Chcete-li ji povolit, zkopírujte soubor na USB flash disk a [aktivujte mod](Native_FW.md#ad5x-enable-zmodtgz).
+
+    - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+    - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+    - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 12. Nastavte jazyk modu.
 
@@ -242,7 +246,11 @@ Pozor!
 3. Povolení čínských cloudových služeb (pokud chcete aktualizovat přes nativní dotykový displej):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**U [AD5X](AD5X.md) je nutná aktivace modu [Z-Mod](Native_FW.md) pomocí `AD5X-ENABLE-zmod.tgz` z USB disku – po aktualizaci nativního firmwaru.**
+**U [AD5X](AD5X.md)/Creator 5/Creator 5 Pro je nutná aktivace modu [Z-Mod](Native_FW.md) z USB disku – po aktualizaci nativního firmwaru.**
+
+- [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+- [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+- [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 ---
 

@@ -116,11 +116,13 @@ Die Installation kann bis zu einer Stunde dauern.
 
 3. Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-## zmod auf AD5X aktivieren
+## Z-Mod auf AD5X/Creator 5/Creator 5 Pro aktivieren
 
-Durch Aktivieren von Zmod auf dem AD5X nach einem Firmware-Update kann der Mod aktiviert werden, ohne ihn komplett neu installieren zu müssen.
+Durch Aktivieren von Z-Mod auf dem AD5X/Creator 5/Creator 5 Pro nach einem Firmware-Update kann der Mod aktiviert werden, ohne ihn komplett neu installieren zu müssen.
 
-[AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
+- [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+- [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+- [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 ## XY installieren
 

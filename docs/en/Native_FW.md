@@ -111,11 +111,13 @@ Installation takes a long time, up to an hour.
 
 3. After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-## AD5X-ENABLE-zmod.tgz
+## AD5X/Creator 5/Creator 5 Pro enable Z-Mod
 
-Enabling zmod on AD5X after updating the native firmware allows you to activate the mod without completely reinstalling it
+Enabling zmod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware allows you to activate the mod without completely reinstalling it
 
-[AD5X-ENABLE-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-ENABLE-zmod.tgz)
+- [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
+- [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
+- [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
 ## SET XY
 
