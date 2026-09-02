@@ -748,7 +748,18 @@ LED-Helligkeit im eingeschalteten Zustand (50)
 Beispiel: `SAVE_ZMOD_DATA LED=50`
 
 ---
+##### WEB_SCREEN
 
+Nur Creator 5 / Creator 5 Pro
+
+Leiten Sie den Druckerbildschirm als virtuelle `screen`-Kamera in Fluidd/Mainsail und [zmod.link](https://zmod.link) um
+
+- 1 - Umleiten (Standard)
+- 2 - Nicht umleiten
+
+Beispiel: `SAVE_ZMOD_DATA WEB_SCREEN=1`
+
+---
 ##### MIDI_ON
 
 Spielt MIDI, wenn es eingeschaltet ist (""), 0 zum Ausschalten

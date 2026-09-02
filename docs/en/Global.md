@@ -586,6 +586,18 @@ LED brightness at startup (50).
 Example: `SAVE_ZMOD_DATA LED=50`
 
 ---
+##### WEB_SCREEN
+
+Only Creator 5 / Creator 5 Pro
+
+Redirect the printer screen as a virtual `screen` camera in Fluidd/Mainsail and [zmod.link](https://zmod.link)
+
+- 1 - Redirect (default)
+- 2 - Do not redirect
+
+Example: `SAVE_ZMOD_DATA WEB_SCREEN=1`
+
+---
 ##### MIDI_ON
 
 Play MIDI at startup (""). Use `0` to disable.

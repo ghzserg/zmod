@@ -583,6 +583,18 @@ Jas LED při spuštění (50).
 Příklad: `SAVE_ZMOD_DATA LED=50`
 
 ---
+##### WEB_SCREEN
+
+Pouze Creator 5 / Creator 5 Pro
+
+Přesměrovat obrazovku tiskárny jako virtuální kameru `screen` do Fluidd/Mainsail a [zmod.link](https://zmod.link)
+
+- 1 - Přesměrovávat (výchozí)
+- 2 - Nepřesměrovávat
+
+Příklad: `SAVE_ZMOD_DATA WEB_SCREEN=1`
+
+---
 ##### MIDI_ON
 
 Přehrát MIDI při spuštění (""). Použijte `0` pro zakázání.
