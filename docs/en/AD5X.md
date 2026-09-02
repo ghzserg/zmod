@@ -353,7 +353,7 @@ When using Bambu Studio, only poop mode is supported.
 
 **If you do a print from these profiles in Slicer-Controlled Poop Mode, make sure to change your USE_TRASH_ON_PRINT setting back to 0 or 1 before printing any multicolor gcode that was not sliced with these profiles.**
 
-## **7. Add custom filament types**
+## **7. Add or remove filament types**
 
 For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
 
@@ -362,7 +362,14 @@ To add a new filament type, add the following to ```mod_data/user.cfg```:
 [zmod_ifs]
 filament_NEWTYPE: 300
 ```
-Where NEWTYPE is replaced with the desired filament type (e.g., HIPS), and the number is the melting point of this filament.
+Where NEWTYPE is replaced with the desired filament type (e.g., HIPS), and the number is the extruder temperature for loading, unloading and purging this filament.
+
+To hide a filament type, add the following to ```mod_data/user.cfg```:
+```
+[zmod_color]
+hide_filament_types: XXX,YYY,ZZZ
+```
+Where XXX, YYY, ZZZ are replaced with the desired filament types (eg. PLA-CF,PETG-CF,SILK). You can use this to hide the default types, or to hide types you have manually added via the above setting. Doing so will not disable the filament type; it will only hide it from the type selection menu.
 
 ```IFS_PRINT_DEFAULTS``` - displays available filament types and their melting points
 

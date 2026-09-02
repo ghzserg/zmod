@@ -360,16 +360,23 @@ Bei der Verwendung von Bambu Studio wird nur der Poop-Modus unterstützt.
 
 **Wenn Sie einen Druck mit diesen Profilen im Slicer-gesteuerten Poop-Modus durchführen, stellen Sie sicher, dass Sie Ihre USE_TRASH_ON_PRINT-Einstellung wieder auf 0 oder 1 zurücksetzen, bevor Sie mehrfarbigen G-Code drucken, der nicht mit diesen Profilen gesliced wurde.**
 
-## **7. Fügen Sie Ihre AD5X-Filamenttypen hinzu**
+## **7. Filamenttypen hinzufügen oder entfernen**
 
 Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
 Um einen neuen Filamenttyp hinzuzufügen, fügen Sie Folgendes in der ```mod_data/user.cfg``` hinzu:
 ```
-[zmod_ifs].
+[zmod_ifs]
 filament_NEWTYPE: 300
 ```
-Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und die Zahl ist der Schmelzpunkt des Filaments.
+Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und die Zahl ist die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments.
+
+Um einen Filamenttyp auszublenden, fügen Sie Folgendes in der ```mod_data/user.cfg``` hinzu:
+```
+[zmod_color]
+hide_filament_types: XXX,YYY,ZZZ
+```
+Dabei werden XXX, YYY, ZZZ durch die gewünschten Filamenttypen ersetzt (z.B. PLA-CF,PETG-CF,SILK). Sie können dies verwenden, um die Standardtypen auszublenden oder um Typen auszublenden, die Sie manuell über die oben genannte Einstellung hinzugefügt haben. Dadurch wird der Filamenttyp nicht deaktiviert; er wird lediglich im Typauswahlmenü ausgeblendet.
 
 ```IFS_PRINT_DEFAULTS``` - gibt die verfügbaren Filamenttypen und deren Schmelztemperaturen aus
 
