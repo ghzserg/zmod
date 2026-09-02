@@ -202,12 +202,24 @@ Beispiel: `SAVE_ZMOD_DATA PRECLEAR=0`.
 
 Erstellen Sie bei jedem Druck ein Bettnetz (über den nativen Bildschirm, wenn dieser aktiviert ist) 
 
-- 0-(nein), 
-- 1-(ja) . 
+- 0-(nein),
+- 1-(ja) .
 
-*Um die Bettnetz-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu `Einstellungen` :arrow_right: `WiFi-Symbol` :arrow_right: `Netzwerkmodus` :arrow_right: **aktivieren Sie den Schieberegler** `Nur lokale Netzwerke `* über das Menü des Druckerbildschirms.
+*Um die Bettnetz-Karte vom nativen Bildschirm zu entfernen, gehen Sie zu `Einstellungen` :arrow_right: `WiFi-Symbol` :arrow_right: `Netzwerkmodus` :arrow_right: **aktivieren Sie den Schieberegler** `Nur lokale Netzwerke `* über das Menü des Druckerbildschirms.*
 
-Beispiel: `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
+Beispiel: `SAVE_ZMOD_DATA PRINT_LEVELING=0`.
+
+---
+
+#####  PRINT_AUTOPA
+
+Nur für Creator 5 / Creator 5 Pro
+
+PA (Pressure Advance) bei jedem Druck anpassen: 0-nein, 1-ja (0).
+
+*Damit Auto PA über den Original-Bildschirm funktioniert, gehen Sie zu `Einstellungen` :arrow_right: `WiFi-Symbol` :arrow_right: `Netzwerkmodus` :arrow_right: **aktivieren Sie den Schieberegler** `Nur lokale Netzwerke `* über das Menü des Druckerbildschirms.*
+
+Beispiel: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
 
 ---
 

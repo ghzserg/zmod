@@ -167,6 +167,16 @@ Vytvořit mesh podložky před každým tiskem (pomocí nativní obrazovky, poku
 Příklad: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
 
 ---
+##### PRINT_AUTOPA
+Pouze pro Creator 5 / Creator 5 Pro
+
+Vybrat PA (Pressure Advance) při každém tisku: 0-ne, 1-ano (0). 
+
+*Aby Auto PA fungovalo z nativní obrazovky, přejděte v menu tiskárny na kartu „Nastavení“ -> „Ikona WiFi“ -> „Síťový režim“ -> zapněte posuvník „Pouze lokální sítě“*
+
+Příklad: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
+
+---
 ##### USE_KAMP
 
 Použít adaptivní mesh (KAMP) místo plného meshe podložky, kde je to možné: 0 (ne), 1 (ano) (0).

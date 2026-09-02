@@ -169,6 +169,17 @@ Build bed mesh before each print (using native screen if enabled): 0 (no), 1 (ye
 Example: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
 
 ---
+##### PRINT_AUTOPA
+
+Creator 5 / Creator 5 Pro only
+
+Select PA (Pressure Advance) for each print: 0-no, 1-yes (0).
+
+*For Auto PA to work from the native screen, enable "Local Network Only" via the printer menu: Settings -> WiFi icon -> Network Mode.*
+
+Example: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
+
+---
 ##### USE_KAMP
 
 Use Adaptive Mesh (KAMP) instead of full bed mesh where possible: 0 (no), 1 (yes) (0).
