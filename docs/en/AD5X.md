@@ -572,7 +572,7 @@ IFS module parameters:
 - receive_delay - duration to wait between sending IFS command and reading response (*0.2*)
 - next_cmd_delay - duration to wait between processing IFS response and sending next command (*0.2*)
 - send_ff_terminator - whether to send a 0xFF terminator to the IFS after *receive_delay*; may be required by older IFS firmware (*True*, False)
-- filament_NEWFILAMENT - Add a new filament type. Parameter - replacement temperature for this type of plastic.
+- filament_NEWFILAMENT - Add a new filament type. Parameter - loading and unloading temperature for this material.
 
 Set via `mod_data/user.cfg`:
 ```

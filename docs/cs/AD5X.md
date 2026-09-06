@@ -564,7 +564,10 @@ Parametry modulu IFS:
 - silk_count - počet pokusů o načtení tyče do IFS (*1*)
 - stall_count - počet pokusů o započítání tyče jako zastavené (*1*)
 - retry_count - počet opakování příkazu při chybě (*3*)
-- filament_NEWFILEMENT - Přidat nový typ filamentu. Parametr - teplota výměny pro tento typ plastu.
+- receive_delay - doba čekání mezi odesláním příkazu IFS a načtením odpovědi (*0.2*)
+- next_cmd_delay - doba čekání mezi zpracováním odpovědi IFS a odesláním dalšího příkazu (*0.2*)
+- send_ff_terminator - zda po uplynutí *receive_delay* odeslat do IFS ukončovací znak 0xFF; může být vyžadováno starším firmwarem IFS (*True*, False)
+- filament_NEWFILAMENT - Přidat nový typ filamentu. Parametr - teplota pro zavádění a vyjímání tohoto materiálu.
 
 Nastavte přes `mod_data/user.cfg`:
 ```
