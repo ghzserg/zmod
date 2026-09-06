@@ -157,7 +157,7 @@ It can be called:
 Add these two lines to the very beginning of the start code in the printer settings under Machine G-Code:
 ```
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 Without these lines, the printer screen doesn't know the target temperatures for the nozzle and bed.
@@ -179,9 +179,9 @@ If using the native screen, no changes are needed.
 
 For operation without the native screen/Guppy (Helixscreen) (also recommended with the screen), replace the entire start code with:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
@@ -302,16 +302,16 @@ Examples:
 
 Removing the entire Bedmesh:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_LEVELING=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 Removing the adaptive Bedmesh:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_KAMP=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 Algorithm for removing the bed net map in the macro [START_PRINT](/Main/#start_print):
@@ -335,7 +335,7 @@ It can also be written into the startup G-code:
 ```
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 - [KAMP](/Calibrations/#kamp) - Adaptive bed calibration with nozzle cleaning

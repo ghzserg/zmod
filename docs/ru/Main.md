@@ -32,13 +32,13 @@
 
 Пример для Orca c родным экраном. Удаляете  стартовый код и ставите то что ниже
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 Пример для Orca в режиме без родного экрана
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 ```
 
 Чтобы корректно считались слои во Fluidd, в стартовый код прописать:

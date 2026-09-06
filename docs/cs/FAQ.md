@@ -136,7 +136,7 @@ Lze ho spustit:
 Přidejte tyto dva řádky na úplný začátek startovního kódu:
 ```
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 Bez těchto řádků obrazovka tiskárny nezná cílové teploty pro trysku a podložku.
@@ -150,9 +150,9 @@ Pokud používáte nativní obrazovku, nejsou potřeba žádné změny.
 
 Pro provoz bez nativní obrazovky/Guppy (také doporučeno s obrazovkou) nahraďte celý startovní kód za:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
@@ -238,12 +238,12 @@ Příklady:
 
 - Plné vyrovnání:
   ```
-  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
+  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_LEVELING=True
   ```
 
 - Adaptivní vyrovnání:
   ```
-  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
+  START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_KAMP=True
   ```
 
 ---

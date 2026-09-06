@@ -128,7 +128,7 @@ Fügen Sie die erste Zeile in Orca ein
 ```
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer]
+M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
 ```
 
 **Empfohlen:** Verwenden Sie [START_PRINT](/de/Main/#start_print) mit `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
