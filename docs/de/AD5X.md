@@ -578,9 +578,8 @@ Parameter des IFS-Moduls:
 - silk_count - Anzahl der Versuche, einen Stab in das IFS einzulesen (*1*)
 - stall_count - Anzahl der Versuche, einen Stab als angehalten zu zählen (*1*)
 - retry_count - Anzahl der Wiederholungen des Befehls bei einem Fehler (*3*)
-- receive_delay - Wartezeit zwischen dem Senden des IFS-Befehls und dem Lesen der Antwort (*0.2*)
 - next_cmd_delay - Wartezeit zwischen der Verarbeitung der IFS-Antwort und dem Senden des nächsten Befehls (*0.2*)
-- send_ff_terminator - ob nach *receive_delay* ein 0xFF-Abschlusszeichen an das IFS gesendet werden soll; kann von älterer IFS-Firmware benötigt werden (*True*, False)
+- send_ff_terminator - aktiviert oder deaktiviert eine Verzögerung von 0,2 s + das Senden von 0xFF nach einem IFS-Befehl; kann von sehr alter IFS-Firmware benötigt werden (True, *False*)
 - filament_NEWFILAMENT - Einen neuen Filamenttyp hinzufügen. Parameter - Lade- und Entladetemperatur für dieses Material.
 
 Eingestellt über `mod_data/user.cfg`:
