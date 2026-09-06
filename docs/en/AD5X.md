@@ -569,7 +569,7 @@ IFS module parameters:
 - silk_count - number of attempts to read a rod into IFS (*1*)
 - stall_count - number of attempts to count a rod as stopped (*1*)
 - retry_count - number of times to retry the command on error (*3*)
-- filament_NEWFILEMENT - Add a new filament type. Parameter - replacement temperature for this type of plastic.
+- filament_NEWFILAMENT - Add a new filament type. Parameter - replacement temperature for this type of plastic.
 
 Set via `mod_data/user.cfg`:
 ```
