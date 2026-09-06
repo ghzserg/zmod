@@ -52,7 +52,7 @@
 ### Version 1.7.3
 09.09.2026
 
-* Alpha support for Creator 5 / Creator 5 Pro (no support for headless mode, 13 clippers, not all macros tested)
+* Alpha support for Creator 5 / Creator 5 Pro (no support for headless mode, 13 Klipper, not all macros tested)
 * AD5M: Support for native firmware 5.1.9
 * AD5X: Polling cycle speedup from @ninjamida
 
