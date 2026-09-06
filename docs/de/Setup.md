@@ -37,6 +37,8 @@
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
     - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
     - für *[AD5X](/de/AD5X/)*: AD5X-**zmod**-\*.tgz
+    - für Creator5: Creator5-**zmod**-\*.tgz
+    - für Creator5 Pro: Creator5Pro-**zmod**-\*.tgz
 
 4. Schalten Sie den Drucker aus
 5. Stecken Sie den USB-Stick in den Drucker

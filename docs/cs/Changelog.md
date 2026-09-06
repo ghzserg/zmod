@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+      - [Verze 1.7.3](#verze-173)
       - [Verze 1.7.2](#verze-172)
       - [Verze 1.7.1](#verze-171)
       - [Verze 1.7.0](#verze-170)
@@ -47,6 +48,13 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.3
+09.09.2026
+
+* Podpora alfa verzí pro Creator 5 / Creator 5 Pro (žádná podpora pro headless režim, 13 clipperů, ne všechna makra testována)
+* AD5M: Podpora pro nativní firmware 5.1.9
+* AD5X: Zrychlení cyklu dotazování od @ninjamida
 
 ### Verze 1.7.2
 06.08.2026

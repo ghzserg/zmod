@@ -37,8 +37,10 @@
 3. Zkopírujte soubor [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:
 
     - Pro FF5M: Adventurer5M-**zmod**-*.tgz
-       - Pro FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
-       - Pro [AD5X](AD5X.md): AD5X-**zmod**-*.tgz
+    - Pro FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
+    - Pro [AD5X](AD5X.md): AD5X-**zmod**-*.tgz
+    - Pro Creator5: Creator5-**zmod**-\*.tgz
+    - Pro Creator5 Pro: Creator5Pro-**zmod**-\*.tgz
 
 4. Vypněte tiskárnu.
 5. Vložte USB disk.

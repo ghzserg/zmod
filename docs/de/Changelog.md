@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#version-history)
+		- [Version 1.7.3](#version-173)
 		- [Version 1.7.2](#version-172)
 		- [Version 1.7.1](#version-171)
 		- [Version 1.7.0](#version-170)
@@ -47,6 +48,12 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.3"
+	### Version 1.7.3
+	* Alpha-Unterstützung für Creator 5 / Creator 5 Pro (keine Unterstützung für den Headless-Modus, 13 Clipper, nicht alle Makros getestet)
+	* AD5M: Unterstützung für die native Firmware 5.1.9
+	* AD5X: Beschleunigung des Abfragezyklus von @ninjamida
 
 ??? note "Version 1.7.2"
 	### Version 1.7.2

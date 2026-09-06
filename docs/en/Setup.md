@@ -37,8 +37,10 @@
 3. Copy the [mod file](https://github.com/ghzserg/zmod/releases/) to the USB root directory:
 
     - For FF5M: Adventurer5M-**zmod**-*.tgz
-       - For FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
-       - For [AD5X](/AD5X/): AD5X-**zmod**-*.tgz
+    - For FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
+    - For [AD5X](/AD5X/): AD5X-**zmod**-*.tgz
+    - For Creator5: Creator5-**zmod**-\*.tgz
+    - For Creator5 Pro: Creator5Pro-**zmod**-\*.tgz
 
 4. Power off the printer.
 5. Insert the USB drive.
