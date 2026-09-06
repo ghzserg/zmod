@@ -575,10 +575,12 @@ Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildsc
 Parameter des IFS-Moduls:
 
 - debug - Fehlersuche (True, *False*)
-- silk_count - ab welchem Versuch auszulesen, das dass Filament im IFS ist (*1*)
-- stall_count - ab welchem Versuch auszulesen, das dass Filament angehalten hat (*1*)
-- retry_count - wie oft soll der Befehl im Falle eines Fehlers wiederholt werden (*3*)
-- filament_NEWFILEMENT - Neuen Filamenttyp hinzufügen. Parameter - Austauschtemperatur für diesen Kunststofftyp.
+- silk_count - Anzahl der Versuche, einen Stab in das IFS einzulesen (*1*)
+- stall_count - Anzahl der Versuche, einen Stab als angehalten zu zählen (*1*)
+- retry_count - Anzahl der Wiederholungen des Befehls bei einem Fehler (*3*)
+- next_cmd_delay - Wartezeit zwischen der Verarbeitung der IFS-Antwort und dem Senden des nächsten Befehls (*0.2*)
+- send_ff_terminator - aktiviert oder deaktiviert eine Verzögerung von 0,2 s + das Senden von 0xFF nach einem IFS-Befehl; kann von sehr alter IFS-Firmware benötigt werden (True, *False*)
+- filament_NEWFILAMENT - Einen neuen Filamenttyp hinzufügen. Parameter - Lade- und Entladetemperatur für dieses Material.
 
 Eingestellt über `mod_data/user.cfg`:
 ```
