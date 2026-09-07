@@ -215,9 +215,11 @@
 1. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 2. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
 
-    - для FF5M: Adventurer5M-**zmod**-\*.tgz
-       - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
-       - для [AD5X](/ru/AD5X/): AD5X-**zmod**-\*.tgz
+   - для FF5M: Adventurer5M-**zmod**-\*.tgz
+   - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
+   - для [AD5X](/ru/AD5X/): AD5X-**zmod**-\*.tgz
+   - для Creator 5: Creator5-**zmod**-\*.tgz
+   - для Creator 5 Pro: Creator5Pro-**zmod**-\*.tgz
 
 3. Выключить принтер
 4. Вставить флешку в принтер
@@ -288,6 +290,8 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
+
+Но если вы обновляете с родного экрана, а не с флешки, то до выключения принтера нужно вызвать макрос ```RESET_PASSWD```
 
 ---
 
