@@ -49,7 +49,7 @@
    
    <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
    
-   Auf dem AD5X kann die Installation bis zu **40 Minuten** dauern.
+   Auf dem AD5X/Creator 5/Creator 5 Pro kann die Installation bis zu **40 Minuten** dauern.
 
 8. Entfernen Sie den USB-Stick
 9. Schalten Sie den Drucker aus
