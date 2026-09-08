@@ -79,11 +79,13 @@
 
 Установка занимает много времени до часа.
 
-1. Загрузите на флешку:
+1. Загрузите на флешку 3 файла сразу:
 
    - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
    - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
    - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+Creator 5 станет Creator 5 Pro. Что бы вернуть его обратно в обычную версию, читайте ниже
 
 2. После обновления, если вам надо перешить MCU установите:
 
@@ -96,7 +98,7 @@
 
 Установка занимает много времени до часа.
 
-1. Загрузите на флешку:
+1. Загрузите на флешку 2 файла сразу:
 
    - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
    - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
@@ -109,13 +111,13 @@
 
 Установка занимает много времени до часа.
 
-1. Загрузите на флешку FF5M:
+1. Загрузите на флешку FF5M все перечисленные файлы:
 
    - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
-2. Загрузите на флешку FF5MPro (принтер станет с версией FF5M, как перейти обратно читайте ниже):
+2. Загрузите на флешку FF5MPro пречисленные ниже файлы (принтер станет с версией FF5M, как перейти обратно читайте ниже):
 
    - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
