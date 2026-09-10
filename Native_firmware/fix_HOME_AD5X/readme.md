@@ -1,8 +1,6 @@
 ##### FIX_HOME_EN
 
-Here's the translation preserving the original structure and tone:
-
-**For those whose roof has slid off, the "house" has shifted (parking next to the dumpster).**
+**For anyone whose printer has lost its mind and shifted its home position (parking right over the purge bucket).**
 
 *   **Place all files in the root directory of the USB drive.**
 *   **Insert the USB drive.**
@@ -17,13 +15,13 @@ Here's the translation preserving the original structure and tone:
 
 ##### FIX_HOME_RU
 
-Для тех у кого поехала крыша сместился "дом" (парковка к какашкоприемнику). 
+Для тех у кого поехала крыша сместился "дом" (парковка к корзине).
 
-Поместить все файлы в корень флешки, вставить флешку и перезагрузить принтер. 
+Поместить все файлы в корень флешки, вставить флешку и перезагрузить принтер.
 
 Загрузится калибровка.
 
-Сначала нажать Reset. 
+Сначала нажать Reset.
 
 Потом выставить кнопками управления на экране правильную позицию головы.
 
