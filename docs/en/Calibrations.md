@@ -122,7 +122,7 @@ Parameters:
 ```gcode
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
 **Recommended:** Use [START_PRINT](/Main/#start_print) with `SAVE_ZMOD_DATA PRINT_LEVELING=1`.

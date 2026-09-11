@@ -199,7 +199,7 @@ Noch besser: Erstellen Sie mehrere Netze für jede Temperatur (60, 70, 80, 90, 1
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]; Düsentemperatur einstellen
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}; Düsentemperatur einstellen
 ```
 
 In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle entspricht.
@@ -271,7 +271,7 @@ Der Startcode kann wie folgt verwendet werden:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]; Düsentemperatur einstellen
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}; Düsentemperatur einstellen
 ```
 
 !!! warning "Wichtig"

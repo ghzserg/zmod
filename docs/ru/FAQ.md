@@ -164,7 +164,7 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 Добавьте в стартовый код в самое начало 2 строчки
 ```
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
 Без этих строчек родной экран принтера не знает до какой температуры надо греть сопло и стол.
@@ -188,7 +188,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
@@ -326,14 +326,14 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_LEVELING=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
 Снятие адаптивной карты стола
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_KAMP=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
 Алгоритм снятия карты стола в макросе [START_PRINT](/ru/Main/#start_print):
@@ -357,7 +357,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
    ```
    AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
    M190 S[bed_temperature_initial_layer_single]
-   M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
+   M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
    ```
 
 - [KAMP](/ru/Calibrations/#kamp) - Адаптивная калибровка стола с очисткой сопла
