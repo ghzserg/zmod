@@ -176,7 +176,7 @@ Aby tiskárna automaticky načetla správnou mapu na začátku každého tisku, 
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=80
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Nastav teplotu trysky
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
 
 **Co se zde děje:**
@@ -190,7 +190,7 @@ Ještě lepší je vytvořit několik map pro různé teploty (např. 60, 70, 80
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Nastav teplotu trysky
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
 
 V tomto případě se načte mapa odpovídající aktuální teplotě podložky.
@@ -256,7 +256,7 @@ Můžete použít startovací kód například takto:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Nastav teplotu trysky
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
 
 **Důležité pro použití originální obrazovky:** Pokud chcete spustit měření mapy podložky z originální obrazovky, musíte přejít do menu:

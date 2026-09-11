@@ -162,7 +162,7 @@ Es kann aufgerufen werden:
 Fügen Sie diese beiden Zeilen ganz am Anfang des Startcodes in den Einstellung vom Drucker unter Maschinen G-Code ein:
 ```
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
 ```
 
 Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die Düse und das Bed erwärmt werden sollen.
@@ -186,7 +186,7 @@ Wenn Sie im nicht-nativen Bildschirm/Guppy-Modus (Helixscreen) arbeiten (und es 
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
 ```
 
@@ -320,14 +320,14 @@ Entfernen des kompletten Bettnetz:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_LEVELING=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
 ```
 
 Entfernen des adaptiven Bettnetz:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_KAMP=True
 M190 S[bed_temperature_initial_layer_single]
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
 ```
 
 Algorithmus zum Entfernen der Bettnetzkarte im Macro [START_PRINT](/de/Main/#start_print):
@@ -351,7 +351,7 @@ Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden woll
    ```
    AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
    M190 S[bed_temperature_initial_layer_single]
-   M104 S[nozzle_temperature_initial_layer] T[initial_extruder]
+   M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder]
    ```
 
 - [KAMP](/de/Calibrations/#kamp) - Adaptive Bettnetzkalibrierung mit Düsenreinigung

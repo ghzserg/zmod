@@ -176,7 +176,7 @@ To make the printer automatically load the required mesh at the start of each pr
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=80
 M190 S[bed_temperature_initial_layer_single] ; Wait for bed to heat
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Set nozzle temperature
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder] ; Set nozzle temperature
 ```
 
 **What happens here:**
@@ -190,7 +190,7 @@ Even better, create several meshes for each temperature 60, 70, 80, 90, 100, 110
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Wait for bed to heat
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Set nozzle temperature
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder] ; Set nozzle temperature
 ```
 
 In this case, the bed mesh corresponding to the bed temperature will be loaded.
@@ -256,7 +256,7 @@ You can use a start code like this:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
 M190 S[bed_temperature_initial_layer_single] ; Wait for bed to heat
-M104 S[nozzle_temperature_initial_layer] T[initial_extruder] ; Set nozzle temperature
+M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T[initial_extruder] ; Set nozzle temperature
 ```
 
 **Important for stock screen operation:** To initiate bed mesh leveling from the printer's stock screen, you must go to the screen menu:
