@@ -78,7 +78,11 @@ primary_branch: master
 Vytvořte symbolický odkaz pro připojení modulu ke Klipperu:
 
 ```bash
+exit
+# Native Klipper
 ln -s /opt/config/mod_data/plugins/klipper-led_effect/src/led_effect.py /usr/prog/klipper/klippy/extras/led_effect.py
+# Klipper 13
+ln -s /opt/config/mod_data/plugins/klipper-led_effect/src/led_effect.py /usr/data/zmod/klipper/klippy/extras/led_effect.py
 ```
 
 Nahraďte:
