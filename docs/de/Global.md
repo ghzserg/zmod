@@ -256,7 +256,7 @@ Algorithmus zur automatischen Z-Offset-Kalibrierung:
 
 2. **Vorbereitung:**
 
-	* Die Düse wird auf Betriebstemperatur erhitzt, über das Druckbett geführt und auf 151 °C abgekühlt.
+	* Die Düse wird auf Betriebstemperatur erhitzt, über das Druckbett geführt und auf die Prüftemperatur abgekühlt: [TEMP_TEST_MAX](/de/Global/#temp_test_max) (standardmäßig 151), wenn die Zieltemperatur der Düse über 230 °C liegt, sonst [TEMP_TEST_MIN](/de/Global/#temp_test_min) (standardmäßig 121).
 
 3. **Messpunktauswahl:**
 
@@ -297,6 +297,31 @@ Algorithmus zur Validierung des Druckbettnetzes:
 * Bei Verwendung der intelligenten Reinigung (KAMP) erfolgt die Heizwartezeit in der Nähe des Reinigungsbereichs, nicht in einer Ecke des Bettes.
 
 Beispiel: `SAVE_ZMOD_DATA MESH_TEST=0`
+
+---
+
+##### TEMP_TEST_MIN
+
+Untere Düsentemperatur für den Bettkontakttest in [MESH_TEST](/de/Global/#mesh_test) Modi 3/4 (mit Düsenreinigung). Liegt die Zieltemperatur der Düse bei 230 °C oder darunter, kühlt die Düse vor dem Prüfen auf diese Temperatur ab. Standard: `121`.
+
+Verringern Sie den Wert, wenn Ihre Druckplatte die Standardtemperatur nicht verträgt: Auf PC-Platten (Glasübergangspunkt ~145-150 °C) und einigen G10-Platten hinterlässt die heiße Düse tiefe Abdrücke.
+
+Dieser Parameter wird nicht über `SAVE_ZMOD_DATA` gesetzt — geben Sie den Befehl in der Fluidd/Mainsail-Konsole ein (der Wert wird in `mod_data/variables.cfg` gespeichert):
+
+Beispiel: `SAVE_VARIABLE VARIABLE=temp_test_min VALUE=110`
+
+*   Empfohlener Bereich: 100-150. Der neue Wert gilt ab dem nächsten Druck, ein Neustart ist nicht erforderlich.
+*   Wird nur verwendet, wenn eine Düsenreinigung durchgeführt wird ([MESH_TEST](/de/Global/#mesh_test) 3/4). In den Modi 1/2 (Standard) wird das Netz bei voller Drucktemperatur ohne Abkühlung geprüft.
+
+---
+
+##### TEMP_TEST_MAX
+
+Obere Düsentemperatur für den Bettkontakttest in [MESH_TEST](/de/Global/#mesh_test) Modi 3/4 (mit Düsenreinigung). Liegt die Zieltemperatur der Düse über 230 °C, kühlt die Düse vor dem Prüfen auf diese Temperatur ab. Standard: `151`.
+
+Die Verwendung entspricht [TEMP_TEST_MIN](/de/Global/#temp_test_min) — verringern Sie den Wert für temperaturempfindliche Druckplatten (PC, einige G10).
+
+Beispiel: `SAVE_VARIABLE VARIABLE=temp_test_max VALUE=140`
 
 ---
 
