@@ -206,7 +206,7 @@ Algorithm for automatic Z-Offset calibration:
 1.  **Source data:** The printer's memory stores a bed mesh (typically 25 points) obtained during the last leveling procedure.
 2.  **Preparation:**
 
-    *   Nozzle is heated to the working temperature, wiped on the bed, and cooled down to 151°C.
+    *   Nozzle is heated to the working temperature, wiped on the bed, and cooled down to the bed probing temperature: [TEMP_TEST_MAX](/Global/#temp_test_max) (151 by default) if the target nozzle temperature is above 230°C, otherwise [TEMP_TEST_MIN](/Global/#temp_test_min) (121 by default).
 
 3.  **Measurement point selection:**
 
@@ -241,6 +241,31 @@ Bed mesh validation algorithm:
 *   When using smart cleaning (KAMP), the heating wait occurs near the cleaning location, not in the corner of the bed.
 
 Example: `SAVE_ZMOD_DATA MESH_TEST=0`
+
+---
+
+##### TEMP_TEST_MIN
+
+Lower nozzle temperature for the bed contact test in [MESH_TEST](/Global/#mesh_test) modes 3/4 (with nozzle cleaning). If the target nozzle temperature is 230°C or lower, the nozzle is cooled down to this temperature before probing. Default: `121`.
+
+Lower the value if your build plate does not tolerate the default temperature: on PC plates (glass transition point ~145-150°C) and some G10 plates a hot nozzle leaves deep imprints in the surface.
+
+This parameter is not set via `SAVE_ZMOD_DATA` — enter the command in the Fluidd/Mainsail console (the value is stored in `mod_data/variables.cfg`):
+
+Example: `SAVE_VARIABLE VARIABLE=temp_test_min VALUE=110`
+
+*   Recommended range: 100-150. The new value applies from the next print, no restart required.
+*   Only used where nozzle wiping/cleaning is performed ([MESH_TEST](/Global/#mesh_test) 3/4). In modes 1/2 (default) the mesh is checked at full print temperature without cooling down.
+
+---
+
+##### TEMP_TEST_MAX
+
+Upper nozzle temperature for the bed contact test in [MESH_TEST](/Global/#mesh_test) modes 3/4 (with nozzle cleaning). If the target nozzle temperature is above 230°C, the nozzle is cooled down to this temperature before probing. Default: `151`.
+
+Usage is the same as for [TEMP_TEST_MIN](/Global/#temp_test_min) — lower the value for temperature-sensitive build plates (PC, some G10).
+
+Example: `SAVE_VARIABLE VARIABLE=temp_test_max VALUE=140`
 
 ---
 
