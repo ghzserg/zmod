@@ -174,7 +174,7 @@ V tomto příkladu vytváříme mapu pro tisk na 80 °C a ukládáme ji pod náz
 Aby tiskárna automaticky načetla správnou mapu na začátku každého tisku, přidejte do **Start G-code** ve svém sliceru (OrcaSlicer) následující řádky:
 
 ```gcode
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=80
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=80
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
@@ -188,7 +188,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 Ještě lepší je vytvořit několik map pro různé teploty (např. 60, 70, 80, 90, 100, 110) a použít tento startovací kód:
 ```gcode
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] MESH=[bed_temperature_initial_layer_single]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
@@ -254,7 +254,7 @@ SAVE_ZMOD_DATA PRINT_LEVELING=1
 
 Můžete použít startovací kód například takto:
 ```gcode
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```

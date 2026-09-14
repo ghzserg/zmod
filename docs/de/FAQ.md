@@ -184,7 +184,7 @@ Wenn Sie mit dem nativen Bildschirm arbeiten, brauchen Sie nichts zu ändern.
 
 Wenn Sie im nicht-nativen Bildschirm/Guppy-Modus (Helixscreen) arbeiten (und es wird auch empfohlen, wenn Sie mit einem Bildschirm arbeiten), ersetzen Sie den gesamten Startcode:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder]
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
@@ -318,14 +318,14 @@ Beispiele:
 
 Entfernen des kompletten Bettnetz:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_LEVELING=True
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_LEVELING=True
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
 Entfernen des adaptiven Bettnetz:
 ```
-START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] T=[initial_extruder] FORCE_KAMP=True
+START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] FORCE_KAMP=True
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
