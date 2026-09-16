@@ -321,7 +321,7 @@ Try restoring the firmware by installing a full firmware:
 12. Fix corrupted files (e.g., delete faulty scripts):
     ```
     rm -f /etc/init.d/S01bad_script
-    rm -f /opt/config/mod/.shell/S98camera
+    rm -f /usr/data/zmod/zmod/.shell/S98camera
     ```
 
 13. Save changes and reboot:

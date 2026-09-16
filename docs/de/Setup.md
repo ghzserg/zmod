@@ -369,7 +369,7 @@ mount -o remount,rw /
 
 ```
 rm -f /etc/init.d/S01bad_script
-rm -f /opt/config/mod/.shell/S98camera
+rm -f /usr/data/zmod/zmod/.shell/S98camera
 
 ```
 

@@ -247,7 +247,7 @@ Klipper 13 (по умолчанию отключен).
 Если консоль недоступна, то подключитесь к принтеру по SSH:
 
 ```
-/opt/config/mod/.shell/zcheckmd5.sh
+/usr/data/zmod/zmod/.shell/zcheckmd5.sh
 ```
 
 ---

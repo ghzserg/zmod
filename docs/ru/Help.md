@@ -24,14 +24,14 @@ AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/
-/opt/config/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
 AD5X:
 
 ```
 chroot /usr/data/.mod/.zmod/
-/opt/config/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
 ## Почему я прошу оформлять тикеты — объяснение «на пальцах»

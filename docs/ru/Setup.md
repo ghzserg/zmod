@@ -367,7 +367,7 @@ mount -t proc proc /proc
 mount -o remount,rw /
 ```
 
-12. Исправляем то что сломалось, например `rm -f /etc/init.d/S01bad_script`, или `rm -f /opt/config/mod/.shell/S98camera`, если у вас не проходит запуск из-за камеры.
+12. Исправляем то что сломалось, например `rm -f /etc/init.d/S01bad_script`, или `rm -f /usr/data/zmod/zmod/.shell/S98camera`, если у вас не проходит запуск из-за камеры.
 
 13. Нужно сохранить изменения: ```sync```
 

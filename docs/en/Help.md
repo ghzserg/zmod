@@ -23,14 +23,14 @@ AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/
-/opt/config/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
 AD5X:
 
 ```
 chroot /usr/data/.mod/.zmod/
-/opt/config/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
 ## Why I Ask You to Create Tickets — Explained Simply

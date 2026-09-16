@@ -193,7 +193,7 @@ Kontroly:
 
 Pokud není konzole k dispozici, připojte se k tiskárně přes SSH:
 
-`/opt/config/mod/.shell/zcheckmd5.sh`
+`/usr/data/zmod/zmod/.shell/zcheckmd5.sh`
 
 ---
 

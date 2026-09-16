@@ -254,7 +254,7 @@ Wenn etwas schief geht, gehen Sie nur über [factory](/de/Native_FW/) zurück.
 
 Wenn die Konsole nicht verfügbar ist, verbinden Sie sich über SSH mit dem Drucker:
 
-`/opt/config/mod/.shell/zcheckmd5.sh`
+`/usr/data/zmod/zmod/.shell/zcheckmd5.sh`
 
 ---
 

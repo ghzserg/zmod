@@ -193,7 +193,7 @@ Checks:
 
 If the console is unavailable, connect to the printer via SSH:
 
-`/opt/config/mod/.shell/zcheckmd5.sh`
+`/usr/data/zmod/zmod/.shell/zcheckmd5.sh`
 
 ---
 
