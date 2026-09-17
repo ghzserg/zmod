@@ -35,6 +35,8 @@ body:
         - AD5M
         - AD5M PRO
         - AD5X
+        - Creator 5
+        - Cteator 5 Pro
     validations:
       required: true
 
