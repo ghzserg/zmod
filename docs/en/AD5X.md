@@ -453,6 +453,7 @@ Replace **only** these values:
 ```json
 "CutXOffset": 0.0,
 "CutYOffset": 0.0,
+"xOffset": 0.0,
 "yOffset": 0.0,
 ```
 
