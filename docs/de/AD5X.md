@@ -477,6 +477,8 @@ Ersetzen Sie **nur** diese Werte:
 2. Wenn sich der Abfallbehälter nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Abfallbehälter schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2```.
 3. Schauen Sie, welche **Y**-Koordinate Sie jetzt haben.
 4. Ziehen Sie 229 von dieser Zahl ab. Das Ergebnis ist Ihr "yOffset".
+5. Schauen Sie, welche **X**-Koordinate Sie jetzt haben.
+6. Ziehen Sie 52.5 von dieser Zahl ab. Das Ergebnis ist Ihr "xOffset".
 
 Beispiele:
 

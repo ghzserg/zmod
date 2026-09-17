@@ -470,6 +470,8 @@ Replace **only** these values:
 2. If the bin doesn't close. Сarefully move the head until the bin closes. You need use GCODE: ```G1 Y230.2```
 3. Check what **Y** coordinate you now have.
 4. Subtract 229 from this number. The result will be your `yOffset`.
+5. Check what **X** coordinate you now have.
+6. Subtract 52.5 from this number. The result will be your `xOffset`.
 
 Examples:
 

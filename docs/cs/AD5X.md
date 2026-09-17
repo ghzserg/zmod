@@ -465,6 +465,8 @@ Nahraďte **pouze** tyto hodnoty:
 2. Pokud se nádobka nezavře. Opatrně posouvejte hlavu, dokud se nádobka nezavře. Musíte použít GCODE: ```G1 Y230.2```
 3. Zkontrolujte, jakou máte nyní souřadnici **Y**.
 4. Odečtěte od tohoto čísla 229. Výsledek bude váš `yOffset`.
+5. Zkontrolujte, jakou máte nyní souřadnici **X**.
+6. Odečtěte od tohoto čísla 52.5. Výsledek bude váš `xOffset`.
 
 Příklady:
 
