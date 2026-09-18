@@ -26,7 +26,7 @@ chroot /data/.mod/.zmod/
 /usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
-AD5X:
+AD5X/C5/C5Pro:
 
 ```
 chroot /usr/data/.mod/.zmod/
