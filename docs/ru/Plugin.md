@@ -18,7 +18,7 @@
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) — Плагин для поддержки [железа IFS Jacker](https://github.com/ninjamida/ifs-jacker); обеспечивает автоопределение количества доступных каналов и интеграцию в Klipper вентиляторов, светодиодов и датчиков, подключенных через IFS Jacker.
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Плагин для более быстрой смены цветов на AD5X
-7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Плагин для подключения сушилки [Flook32](https://github.com/schreider/flook32)
+7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Плагин для подключения сушилки [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `ENABLE_EXTRA_PLUGINS`.
 

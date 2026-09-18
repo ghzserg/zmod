@@ -18,7 +18,7 @@ External plugins not developed by the Z-Mod author.
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) - Plugin to support the [IFS Jacker hardware mod](https://github.com/ninjamida/ifs-jacker), for auto-detection of available channel count and Klipper integration for fans / LEDs / sensors connected via an IFS Jacker
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - an alternative screen implementation
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin for faster color changing on AD5X
-7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin for connecting the [Flook32](https://github.com/schreider/flook32) dryer
+7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin for connecting the [Flook32](https://github.com/schreider/flook32) dryer [En](https://github.com/ghzserg/flook32)
 
 To enable the repository of external plugins, run the command `ENABLE_EXTRA_PLUGINS`.
 
