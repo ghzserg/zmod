@@ -18,6 +18,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod.
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs-jacker), který umožňuje automatickou detekci počtu dostupných kanálů a integraci ventilátorů, LED a senzorů připojených přes IFS Jacker do Klipperu.
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – alternative Bildschirmimplementierung
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin pro rychlejší změnu barev na AD5X
+7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin pro připojení sušičky [Flook32](https://github.com/schreider/flook32)
 
 Chcete-li povolit repozitář externích pluginů, spusťte příkaz `ENABLE_EXTRA_PLUGINS`.
 
