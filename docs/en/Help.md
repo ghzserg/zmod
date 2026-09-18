@@ -51,9 +51,9 @@ And I have to start with the most basic question:
 
 Our “fleet” includes **over 100 unique configurations**. Just by major categories:
 
-- **3 different printer models**:
+- **5 different printer models**:
 
-  FF5M, FF5M Pro, AD5X
+  FF5M, FF5M Pro, AD5X, C5, C5Pro
 
 - **3 Klipper “engine” versions**:
 
@@ -66,12 +66,9 @@ Our “fleet” includes **over 100 unique configurations**. Just by major categ
 - **Display options (“interior trim”)**:
 
     - Stock screen
-
-      - GuppyScreen
-
-      - HelixScreen
-
-      - Headless (no screen)
+    - GuppyScreen
+    - HelixScreen
+    - Headless (no screen)
 
 - **Primary UIs**:
 

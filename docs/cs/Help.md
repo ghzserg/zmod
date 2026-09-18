@@ -51,9 +51,9 @@ A musím začít se základní otázkou:
 
 Naši „flotilu" tvoří **přes 100 jedinečných konfigurací**. Jen podle hlavních kategorií:
 
-- **3 různé modely tiskáren**:
+- **5 různé modely tiskáren**:
 
-  FF5M, FF5M Pro, AD5X
+  FF5M, FF5M Pro, AD5X, C5, C5Pro
 
 - **3 verze „motoru" Klipperu**:
 
@@ -66,12 +66,9 @@ Naši „flotilu" tvoří **přes 100 jedinečných konfigurací**. Jen podle hl
 - **Možnosti zobrazení („vnitřní vybavení")**:
 
     - Původní obrazovka
-
-      - GuppyScreen
-
-      - HelixScreen
-
-      - Bez obrazovky (headless)
+    - GuppyScreen
+    - HelixScreen
+    - Bez obrazovky (headless)
 
 - **Primární uživatelská rozhraní**:
 

@@ -49,9 +49,9 @@ Und ich muss mit einer einfachen Frage beginnen:
 
 Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlagen:
 
-- **3 verschiedene Hersteller**:
+- **5 verschiedene Hersteller**:
 
-  FF5M, FF5M Pro, AD5X
+  FF5M, FF5M Pro, AD5X, C5, C5Pro
 
 - **3 Versionen des "Motors" (Klipper)**:
 
@@ -64,12 +64,9 @@ Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlag
 - **Anzeigeoptionen („Innenausstattung“)**:
 
     - mit nativem Bildschirm
-
-      - mit GuppyScreen
-
-      - mit HelixScreen
-
-      - kein Bildschirm
+    - mit GuppyScreen
+    - mit HelixScreen
+    - kein Bildschirm
 
 - **Zwei Hauptsteuerungsschnittstellen**:
 
