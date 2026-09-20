@@ -61,6 +61,20 @@ Toto je Factory (factory) originální firmware pro Creator 5 Pro
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
+# Unbricker
+
+Univerzální unbricker pro FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+
+1. Stáhněte soubor [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip)
+2. Naformátujte flash disk na FAT32
+2. Rozbalte [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) do kořenového adresáře flash disku
+3. Vypněte tiskárnu
+4. Vložte flash disk do tiskárny
+5. Počkejte na flashování firmwaru (až 40 minut)
+6. Vyjměte flash disk z tiskárny
+
+Pokud se něco pokazilo, zkontrolujte log soubory na flash disku
+
 ## Instalace kompletního firmwaru na Creator 5 / Creator 5 Pro
 
 **Toto NENÍ originální Factory firmware, ale nástroj pro odblokování tiskárny.** Měl by být instalován pouze v případě, že tiskárna vůbec nenastartuje.

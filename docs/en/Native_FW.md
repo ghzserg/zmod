@@ -61,6 +61,20 @@ This is the Factory (factory) stock firmware for Creator 5 Pro
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
+# Unbricker
+
+Universal unbricker for FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+
+1. Download the [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) file
+2. Format the USB drive to FAT32
+2. Extract [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) to the root of the USB drive
+3. Turn off the printer
+4. Insert the USB drive into the printer
+5. Wait for the firmware to flash (up to 40 minutes)
+6. Remove the USB drive from the printer
+
+If something went wrong, check the log files on the USB drive
+
 ## Installing Full Firmware on Creator 5 / Creator 5 Pro
 
 **This is NOT the original Factory firmware, but a printer unbricking tool.** It should only be installed if the printer does not start at all.

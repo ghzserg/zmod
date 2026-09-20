@@ -67,6 +67,20 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
+# Unbricker
+
+Universeller Unbricker für FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+
+1. Datei [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) herunterladen
+2. USB-Stick auf FAT32 formatieren
+2. [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) in das Stammverzeichnis des USB-Sticks entpacken
+3. Drucker ausschalten
+4. USB-Stick in den Drucker einstecken
+5. Warten, bis die Firmware geflasht ist (bis zu 40 Minuten)
+6. USB-Stick aus dem Drucker entfernen
+
+Falls etwas schiefgelaufen ist, die Log-Dateien auf dem USB-Stick überprüfen
+
 ## Installation der vollständigen Firmware auf Creator 5 / Creator 5 Pro
 
 **Dies ist NICHT die originale Factory-Firmware, sondern ein Tool zum Entblocken des Druckers.** Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht startet.

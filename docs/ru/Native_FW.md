@@ -73,37 +73,19 @@
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 
-## Установка полной прошивки на Creator 5 / Creator 5 Pro
+# Раскирпичиватель
 
-**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+Универсальный раскирпичиватель для FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
 
-Установка занимает много времени до часа.
+1. Скачать файл [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip)
+2. Отформатировать флешку в Fat32
+2. Распаковать [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) в корень флешки
+3. Выключить принтер
+4. Вставить флешку в принтер
+5. Дождать прошивки (до 40 минут)
+6. Вынуть флешку из принтера
 
-1. Загрузите на флешку 3 файла сразу:
-
-   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
-   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
-   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
-
-Creator 5 станет Creator 5 Pro. Что бы вернуть его обратно в обычную версию, читайте ниже
-
-2. После обновления, если вам надо перешить MCU установите:
-
-   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
-   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
-
-## Установка полной прошивки на AD5X
-
-**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
-
-Установка занимает много времени до часа.
-
-1. Загрузите на флешку 2 файла сразу:
-
-   - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
-   - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
-
-2. После обновления, если вам надо перешить MCU установите [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+Если что-то пошло не так, посмотреть log файлы на флешке
 
 ## Установка полной прошивки на FF5M
 
@@ -124,6 +106,38 @@ Creator 5 станет Creator 5 Pro. Что бы вернуть его обра
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
 3. После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+
+## Установка полной прошивки на AD5X
+
+**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+
+Установка занимает много времени до часа.
+
+1. Загрузите на флешку 2 файла сразу:
+
+   - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
+   - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
+
+2. После обновления, если вам надо перешить MCU установите [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+
+## Установка полной прошивки на Creator 5 / Creator 5 Pro
+
+**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+
+Установка занимает много времени до часа.
+
+1. Загрузите на флешку 3 файла сразу:
+
+   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
+   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
+   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+
+Creator 5 станет Creator 5 Pro. Что бы вернуть его обратно в обычную версию, читайте ниже
+
+2. После обновления, если вам надо перешить MCU установите:
+
+   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 
 ## AD5X/Creator 5/Creator 5 Pro активация Z-Mod
 
