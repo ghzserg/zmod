@@ -8,12 +8,12 @@ body:
     attributes:
       value: |
         **Перед тем, как задавать вопрос, спросите его у [@zmod_help_bot](http://t.me/zmod_help_bot) и прочитайте:**
-        - **[Алгоритм оформления TAR_CONFIG](https://github.com/ghzserg/zmod/wiki/Help)** - без него тикет рассматриваться не будет
-        - [FAQ](https://github.com/ghzserg/zmod/wiki/FAQ)
-        - [Рекомендации](https://github.com/ghzserg/zmod/wiki/Recomendations)
-        - [Документацию по макросам](https://github.com/ghzserg/zmod/wiki/Macros)
-        - [AD5X](https://github.com/ghzserg/zmod/wiki/AD5X)
-        - Запустите CHECK_SYSTEM
+        - **[Алгоритм оформления TAR_CONFIG](https://wiki.zmod.link/ru/Help/)** - без него тикет рассматриваться не будет
+        - [FAQ](https://wiki.zmod.link/ru/FAQ/)
+        - [Рекомендации](https://wiki.zmod.link/ru/Recommendations/)
+        - [Документацию по макросам](https://wiki.zmod.link/ru/Macros/)
+        - [AD5X](https://wiki.zmod.link/ru/AD5X/)
+        - Запустите `CHECK_SYSTEM`
 
         **Важно:** Если вы используете какие-либо плагины кроме recommend, то отключите их.
         Если проблема вызвана плагином g28_tenz или nopoop, укажите это в заголовке.
