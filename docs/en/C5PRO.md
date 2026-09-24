@@ -416,3 +416,15 @@ AIR_CIRCULATION_INTERNAL
 ```
 
 Thus, during multi-color printing with different materials, the ventilation will automatically switch to the required mode for each extruder.
+
+## Print Speedup
+
+Add to 'mod_data/user.cfg'
+
+```
+[printer]
+short_move_limit: False
+short_extrude_move_limit: False
+```
+
+This setting significantly speeds up printing, but it can lead to printer crashes when printing with a fuzzy skin.

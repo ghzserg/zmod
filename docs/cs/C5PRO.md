@@ -416,3 +416,15 @@ AIR_CIRCULATION_INTERNAL
 ```
 
 Tímto způsobem se při vícebarevném tisku s různými materiály ventilace automaticky přepne do požadovaného režimu pro každý extruder.
+
+## Zrychlení tisku
+
+Zapište do 'mod_data/user.cfg'
+
+```
+[printer]
+short_move_limit: False
+short_extrude_move_limit: False
+```
+
+Toto nastavení výrazně urychluje tisk, ale může vést k pádům tiskárny při tisku s funkcí „fuzzy skin“ (chlupatý povrch).

@@ -416,3 +416,15 @@ AIR_CIRCULATION_INTERNAL
 ```
 
 Auf diese Weise schaltet die Lüftung beim Mehrfarbendruck mit verschiedenen Materialien automatisch in den für jeden Extruder erforderlichen Modus.
+
+## Druckbeschleunigung
+
+In 'mod_data/user.cfg' eintragen
+
+```
+[printer]
+short_move_limit: False
+short_extrude_move_limit: False
+```
+
+Diese Einstellung beschleunigt den Druckvorgang erheblich, kann jedoch bei der Option „Fuzzy Skin“ (Rauhe Oberfläche) zu Druckerabstürzen führen.
