@@ -114,6 +114,7 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 #### What's in Z-Mod but not in KlipperMod:
 
 *   [AD5X](/AD5X/) support
+*   [Creator 5 / Creator 5 Pro](/C5PRO/) support
 *   Support for [the following languages](/Global/#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
 *   Native screen support
 *   [Print recovery after power loss](/Zmod/#zrestore)
