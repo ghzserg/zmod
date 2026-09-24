@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#version-history)
+		- [Version 1.7.4](#version-174)
 		- [Version 1.7.3](#version-173)
 		- [Version 1.7.2](#version-172)
 		- [Version 1.7.1](#version-171)
@@ -48,6 +49,18 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.4"
+	### Version 1.7.4
+	24.09.2026
+
+	* C5Pro: Alles, was auf dem AD5X läuft, funktioniert auch hier, außer Klipper 13 
+	* C5Pro: Modus ohne den Original-Bildschirm hinzugefügt 
+	* C5Pro: Kalibrierungen hinzugefügt: Extruder, VFA 
+	* C5Pro: Übertragung des Druckerbildschirms 
+	* AD5X: Übertragung des Druckerbildschirms 
+	* GuppyScreen: Unterstützung für mehrere Extruder
+
 
 ??? note "Version 1.7.3"
 	### Version 1.7.3

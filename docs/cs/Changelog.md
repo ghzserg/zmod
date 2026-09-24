@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+      - [Verze 1.7.4](#verze-174)
       - [Verze 1.7.3](#verze-173)
       - [Verze 1.7.2](#verze-172)
       - [Verze 1.7.1](#verze-171)
@@ -48,6 +49,16 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.3
+24.09.2026 
+
+* C5Pro: Funguje vše co na AD5X, kromě Klipperu 13 
+* C5Pro: Přidán režim bez nativní obrazovky 
+* C5Pro: Přidány kalibrace: extruderů, vfa 
+* C5Pro: Streamování obrazovky tiskárny 
+* AD5X: Streamování obrazovky tiskárny 
+* GuppyScreen: Podpora pro více extruderů
 
 ### Verze 1.7.3
 09.09.2026

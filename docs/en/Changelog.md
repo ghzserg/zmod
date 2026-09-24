@@ -1,6 +1,7 @@
 # Changelog
 
 - [Version History](#version-history)
+    - [Version 1.7.4](#version-174)
     - [Version 1.7.3](#version-173)
     - [Version 1.7.2](#version-172)
     - [Version 1.7.1](#version-171)
@@ -48,6 +49,17 @@
 ---
 
 ## Version History
+
+### Version 1.7.4
+24.09.2026
+
+* C5Pro: Everything that works on AD5X works here too, except for Klipper 13 
+* C5Pro: Added a mode without the native screen 
+* C5Pro: Added calibrations: extruders, vfa 
+* C5Pro: Printer screen broadcast 
+* AD5X: Printer screen broadcast 
+* GuppyScreen: Support for multiple extruders
+
 
 ### Version 1.7.3
 09.09.2026
