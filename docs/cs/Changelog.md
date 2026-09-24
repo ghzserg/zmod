@@ -50,7 +50,7 @@
 
 ## Historie verzí
 
-### Verze 1.7.3
+### Verze 1.7.4
 24.09.2026 
 
 * C5Pro: Funguje vše co na AD5X, kromě Klipperu 13 
