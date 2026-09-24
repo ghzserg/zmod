@@ -13,6 +13,7 @@ body:
         - [Рекомендации](https://wiki.zmod.link/ru/Recommendations/)
         - [Документацию по макросам](https://wiki.zmod.link/ru/Macros/)
         - [AD5X](https://wiki.zmod.link/ru/AD5X/)
+        - [C5Pro](https://wiki.zmod.link/ru/C5PRO/)
         - Запустите `CHECK_SYSTEM`
 
         **Важно:** Если вы используете какие-либо плагины кроме recommend, то отключите их.

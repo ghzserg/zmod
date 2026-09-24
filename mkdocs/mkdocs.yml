@@ -196,6 +196,7 @@ nav:
   - Configuration:
       - Setup Calibrations: SetupCalibrations.md
       - AD5X: AD5X.md
+      - C5Pro: C5PRO.md
       - Plugins: Plugin.md
       - Telegram: Telegram.md
 

@@ -13,6 +13,7 @@ body:
         - [Recommendations](https://wiki.zmod.link/Recommendations/)
         - [Macros Documentation](https://wiki.zmod.link/Macros/)
         - [AD5X](https://wiki.zmod.link/AD5X/)
+        - [C5Pro](https://wiki.zmod.link/C5PRO/)
         - Run `CHECK_SYSTEM`
 
         **Important:** If you are using any plugins other than 'recommend', disable them.
