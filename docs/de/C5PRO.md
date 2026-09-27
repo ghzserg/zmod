@@ -1,18 +1,5 @@
 # Creator5 Pro
 
-1. [Wichtige Hinweise](#wichtige-hinweise)
-2. [Wie man eine Datei in Orca vorbereitet](#wie-man-eine-datei-in-orca-vorbereitet)
-3. [Wie man das Farbauswahlmenü verwendet](#wie-man-das-farbauswahlmenü-verwendet)
-4. [Druckmenü](#druckmenü)
-5. [Feineinstellung](#feineinstellung)
-6. [Globale Parameter](#globale-parameter)
-7. [Eigene Filamenttypen hinzufügen](#eigene-filamenttypen-hinzufügen)
-8. [Eigene Farben hinzufügen](#eigene-farben-hinzufügen)
-9. [Extruderkalibrierung](#extruderkalibrierung)
-10. [VFA-Kalibrierung](#vfa-kalibrierung)
-11. [`T_INFO`-Makro](#t_info-makro)
-12. [Lüftungsmodi](#lüftungsmodi)
-
 ---
 
 ## Wichtige Hinweise
@@ -30,7 +17,8 @@
 
 ## Wie man eine Datei in Orca vorbereitet
 
-[Senden Sie Dateien zum Drucken über Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+- [Senden Sie Dateien zum Drucken über Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+- [Orca Slicer Profile](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 
 ---
 ## COLOR
@@ -428,3 +416,19 @@ short_extrude_move_limit: False
 ```
 
 Diese Einstellung beschleunigt den Druckvorgang erheblich, kann jedoch bei der Option „Fuzzy Skin“ (Rauhe Oberfläche) zu Druckerabstürzen führen.
+
+## Deaktivierung der Benachrichtigung bei geöffneter Tür
+
+Um Benachrichtigungen über eine geöffnete Abdeckung oder Tür im Betrieb ohne nativen Bildschirm zu entfernen
+
+Fügen Sie Folgendes in 'mod_data/user.cfg' ein
+
+```
+[gcode_button topDoor]
+press_gcode:
+release_gcode:
+
+[gcode_button frontDoor]
+press_gcode:
+release_gcode:
+```

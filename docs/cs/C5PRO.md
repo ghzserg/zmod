@@ -1,18 +1,5 @@
 # Creator5 Pro
 
-1. [Důležité poznámky](#důležité-poznámky)
-2. [Jak připravit soubor v Orca](#jak-připravit-soubor-v-orca)
-3. [Jak používat nabídku výběru barvy](#jak-používat-nabídku-výběru-barvy)
-4. [Nabídka tisku](#nabídka-tisku)
-5. [Jemné ladění](#jemné-ladění)
-6. [Globální parametry](#globální-parametry)
-7. [Přidání vlastních typů filamentů](#přidání-vlastních-typů-filamentů)
-8. [Přidání vlastních barev](#přidání-vlastních-barev)
-9. [Kalibrace extruderů](#kalibrace-extruderů)
-10. [Kalibrace VFA](#kalibrace-vfa)
-11. [Makro `T_INFO`](#makro-t_info)
-12. [Režimy ventilace](#režimy-ventilace)
-
 ---
 
 ## Důležité poznámky
@@ -30,7 +17,8 @@
 
 ## Jak připravit soubor v Orca
 
-[Odesílejte soubory k tisku přes Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+- [Odesílejte soubory k tisku přes Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+- [Profily pro Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 
 ---
 ## COLOR
@@ -428,3 +416,19 @@ short_extrude_move_limit: False
 ```
 
 Toto nastavení výrazně urychluje tisk, ale může vést k pádům tiskárny při tisku s funkcí „fuzzy skin“ (chlupatý povrch).
+
+## Zakázání upozornění na otevřené dveře
+
+Chcete-li odstranit upozornění na otevřený kryt nebo dveře při provozu bez původní obrazovky
+
+Přidejte následující do 'mod_data/user.cfg'
+
+```
+[gcode_button topDoor]
+press_gcode:
+release_gcode:
+
+[gcode_button frontDoor]
+press_gcode:
+release_gcode:
+```

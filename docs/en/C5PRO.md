@@ -1,18 +1,5 @@
 # Creator5 Pro
 
-1. [Important Notes](#important-notes)
-2. [How to prepare a file in Orca](#how-to-prepare-a-file-in-orca)
-3. [How to use the color selection menu](#how-to-use-the-color-selection-menu)
-4. [Print Menu](#print-menu)
-5. [Fine-tuning](#fine-tuning)
-6. [Global Parameters](#global-parameters)
-7. [Add your own filament types](#add-your-own-filament-types)
-8. [Add your own colors](#add-your-own-colors)
-9. [Extruder Calibration](#extruder-calibration)
-10. [VFA Calibration](#vfa-calibration)
-11. [`T_INFO` Macro](#t_info-macro)
-12. [Ventilation Modes](#ventilation-modes)
-
 ---
 
 ## Important Notes
@@ -30,7 +17,8 @@
 
 ## How to prepare a file in Orca
 
-[Send files to print via Octo/Klipper.](/ru/Recommendations/#send-files-to-print-via-octoklipper)
+- [Send files to print via Octo/Klipper.](/ru/Recommendations/#send-files-to-print-via-octoklipper)
+- [Orca Slicer Profiles](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 
 ---
 ## COLOR
@@ -428,3 +416,19 @@ short_extrude_move_limit: False
 ```
 
 This setting significantly speeds up printing, but it can lead to printer crashes when printing with a fuzzy skin.
+
+## Disable open door notification
+
+To remove notifications about an open lid or door when operating without the native screen
+
+Add the following to 'mod_data/user.cfg'
+
+```
+[gcode_button topDoor]
+press_gcode:
+release_gcode:
+
+[gcode_button frontDoor]
+press_gcode:
+release_gcode:
+```
