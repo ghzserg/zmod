@@ -26,7 +26,7 @@
 
 <img width="881" height="856" alt="image" src="https://github.com/user-attachments/assets/7acd4ccf-3623-4afe-83bf-fcb96f5a416b" />
 
-<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 Nyní vyberte cívku, se kterou chcete pracovat (např. cívka 2):
 
