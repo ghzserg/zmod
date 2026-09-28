@@ -108,6 +108,7 @@ V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. 
 | `temp_manual` | 250 | Teplota pročištění v ručním režimu (při načítání přes nabídku). |
 | `temp_wait` | 120 | Teplota klidového stavu – teplota, na kterou tryska po pročištění vychladne. |
 | `filament_drop_length` | 50 | **Délka pročištění.** Kolik milimetrů plastu tiskárna vytlačí do odpadního koše, aby vyčistila trysku od staré barvy. |
+| `filament_full_length` | 690 | **Délka trubice.** Kolik milimetrů plastu vytlačí tiskárna po spuštění senzoru konce filamentu. |
 | `filament_tube_length` | 295 | Délka načítání filamentu při vložení nové cívky. |
 
 **Výchozí teploty pro různé materiály:**
