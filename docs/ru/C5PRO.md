@@ -22,9 +22,9 @@
 
 ---
 ## COLOR
-## Как пользоваться меню выбора цвета
+## Как пользоваться меню выбора цвета и типа филамента
 
-<img width="881" height="856" alt="image" src="https://github.com/user-attachments/assets/7acd4ccf-3623-4afe-83bf-fcb96f5a416b" />
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/7c454ea4-bd32-4fb8-b84c-37c95bb7a40b" />
 
 <img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
 
@@ -35,9 +35,9 @@
 Можно сделать четыре действия:
 
 - Изменить цвет катушки.
-- Изменить тип пластика (например, с PLA на PETG).
-- Поместить этот экструдер на каретку.
-- Загрузить новую катушку в экструдер.
+- Изменить тип пластика (PLA, PETG, ABS,...).
+- Подхватить этот экструдер на каретку.
+- Загрузить новый филамент в экструдер.
 
 **Как поменять цвет:**
 
@@ -63,7 +63,7 @@
 ## PRINT
 ## Меню печати
 
-Это окно открывается само, когда вы начинаете печать.
+Это окно открывается само, когда Вы начинаете печать, если установлен параметр SAVE_ZMOD_DATA SILENT=0 по умолчанию.
 
 <img width="562" height="593" alt="{A688018F-CB9C-4EFA-9431-AAE9E2DE842E}" src="https://github.com/user-attachments/assets/92cababe-52b1-49aa-aea3-1ad6ddf03cfe" />
 
