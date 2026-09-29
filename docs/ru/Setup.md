@@ -157,6 +157,7 @@
 21. [Прочитайте рекомендации](/ru/Recommendations/)
 22. [Прочитайте FAQ](/ru/FAQ/)
 23. [Откалибруйте принтер](/ru/SetupCalibrations/)
+24. Прочитайте особенности [AD5X](/ru/AD5X/) и [Creator 5 Pro](/ru/C5PRO/)
 
 ### Внимание AD5X
 
