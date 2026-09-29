@@ -153,7 +153,7 @@ In this file, for each type of filament (PLA, ABS, PETG, etc.), there is a list 
 To prevent the color selection window from appearing at the start of printing, use the global parameter **SILENT**:
 - `0` — show the window (default)
 - `1` — do not show the window, use previously set colors
-- `2` — do not show the window, do not use the feeding system
+- `2` — hide the window, display the selection menu if auto-mapping fails
 
 ```
 SAVE_ZMOD_DATA SILENT=1
@@ -170,6 +170,7 @@ SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 You can configure your own values for aborting the print in silent mode by adding the following numbers:
+- `1` — auto-assign colors, printing will continue even if it fails
 - `2` — At least one material does not match (e.g., ABS is specified in the gcode, but you only have PLA loaded)
 - `4` — At least one color does not match at all (usually because file scanning is disabled)
 - `8` — At least one color matches poorly

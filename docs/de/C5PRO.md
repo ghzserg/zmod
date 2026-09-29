@@ -153,7 +153,7 @@ In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine List
 Damit das Farbauswahlfenster zu Beginn des Drucks nicht angezeigt wird, verwenden Sie den globalen Parameter **SILENT**:
 - `0` – Fenster anzeigen (Standard)
 - `1` – Fenster nicht anzeigen, zuvor festgelegte Farben verwenden
-- `2` – Fenster nicht anzeigen, Zufuhrsystem nicht verwenden
+- `2` — Fenster ausblenden, bei Fehler der automatischen Zuordnung das Auswahlmenü anzeigen
 
 ```
 SAVE_ZMOD_DATA SILENT=1
@@ -170,6 +170,7 @@ SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 Sie können Ihre eigenen Werte für den Abbruch des Drucks im Silent-Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
+- `1` — Automatische Farbzuweisung, der Druck wird fortgesetzt, selbst wenn es fehlschlägt
 - `2` – Mindestens ein Material stimmt nicht überein (z. B. ist in der Gcode-Datei ABS angegeben, aber Sie haben nur PLA geladen)
 - `4` – Mindestens eine Farbe stimmt überhaupt nicht überein (normalerweise, weil das Dateiscanning deaktiviert ist)
 - `8` – Mindestens eine Farbe stimmt nur schlecht überein

@@ -153,7 +153,7 @@ V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. 
 Aby se okno výběru barvy nezobrazovalo na začátku tisku, použijte globální parametr **SILENT**:
 - `0` – zobrazit okno (výchozí)
 - `1` – nezobrazovat okno, použít dříve nastavené barvy
-- `2` – nezobrazovat okno, nepoužívat podávací systém
+- `2` — neskrývat okno, při selhání automatického párování zobrazit výběrové menu
 
 ```
 SAVE_ZMOD_DATA SILENT=1
@@ -170,6 +170,7 @@ SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
 Můžete nastavit vlastní hodnoty pro přerušení tisku v tichém režimu sečtením následujících čísel:
+- `1` — automatické přiřazení barev, tisk bude pokračovat, i když se to nezdaří
 - `2` – Alespoň jeden materiál neodpovídá (např. v gcode je uveden ABS, ale máte načteno pouze PLA)
 - `4` – Alespoň jedna barva vůbec neodpovídá (obvykle proto, že skenování souborů je vypnuté)
 - `8` – Alespoň jedna barva odpovídá jen slabě
