@@ -59,6 +59,7 @@
 Dies ist die Factory (Factory) Original-Firmware für Creator 5
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
+- [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
 
 ## Creator 5 Pro Original-Firmware
 
@@ -66,6 +67,7 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
+- [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
 
 # Unbricker
 
@@ -95,8 +97,8 @@ Die Installation dauert lange, bis zu einer Stunde.
 
 2. Nach dem Update, wenn Sie den MCU neu flashen müssen, installieren Sie:
 
-   - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
-   - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
+   - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
+   - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
 
 ## Installation der vollständigen Firmware auf dem AD5X
 
