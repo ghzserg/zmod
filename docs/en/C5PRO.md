@@ -24,7 +24,7 @@
 ## COLOR
 ## How to use the color selection menu
 
-<img width="881" height="856" alt="image" src="https://github.com/user-attachments/assets/7acd4ccf-3623-4afe-83bf-fcb96f5a416b" />
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 <img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
 
@@ -100,7 +100,7 @@ First, you need to disable the printer's native screen using the `DISPLAY_OFF` m
 
 <img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="https://github.com/user-attachments/assets/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de" />
 
-In this file, for each type of plastic (PLA, ABS, PETG, etc.), there is a list of numbers. Here is what they mean:
+In this file, for each type of filament (PLA, ABS, PETG, etc.), there is a list of numbers. Here is what they mean:
 
 | Parameter | Default | Description |
 |---|---|---|
@@ -164,7 +164,7 @@ To enable scanning of gcode files for information about tools, colors, and mater
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-To enable **automatic color mapping** from the gcode file to physical spools, use the **AUTO_ASSIGN_COLORS** parameter. To make this function work, file scanning must be activated. Using the value `30` will cause the print to abort in silent mode if any issues arise with automatic assignment:
+To enable **automatic color mapping** from the gcode file to physical spools, use the **AUTO_ASSIGN_COLORS** parameter. To make this function work, file scanning must be activated.
 ```
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
@@ -174,6 +174,8 @@ You can configure your own values for aborting the print in silent mode by addin
 - `4` — At least one color does not match at all (usually because file scanning is disabled)
 - `8` — At least one color matches poorly
 - `16` — The same physical spool was assigned to more than one tool index in the file
+
+ Using the `AUTO_ASSIGN_COLORS=30` (2+4+8+16) will cause the print to abort in silent mode if any issues arise with automatic assignment, value `10` (2+8) will cause the print to abort if at least one material does not match + at least one color matches poorly
 
 **If file scanning is disabled**, the printer does not know how many extruders are being used, and therefore **Auto PA will be run for all spools**.
 
