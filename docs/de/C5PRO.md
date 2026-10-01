@@ -108,7 +108,7 @@ In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine List
 | `temp_manual` | 250 | Spültemperatur im manuellen Modus (beim Laden über das Menü). |
 | `temp_wait` | 120 | Leerlauftemperatur – die Temperatur, auf die die Düse nach dem Spülen abkühlt. |
 | `filament_drop_length` | 50 | **Spüllänge.** Wie viele Millimeter Kunststoff der Drucker in den Mülleimer extrudiert, um die Düse von der alten Farbe zu reinigen. |
-| `filament_full_length` | 690 | **Rohrlänge.** Wie viele Millimeter Kunststoff der Drucker extrudiert, nachdem der Filament-Ende-Sensor ausgelöst wurde. |
+| `filament_full_length` | 670 | **Rohrlänge.** Wie viele Millimeter Kunststoff der Drucker extrudiert, nachdem der Filament-Ende-Sensor ausgelöst wurde. |
 | `filament_tube_length` | 295 | Filament-Ladelänge beim Einlegen einer neuen Spule. |
 
 **Standardtemperaturen für verschiedene Materialien:**

@@ -108,7 +108,7 @@ In this file, for each type of filament (PLA, ABS, PETG, etc.), there is a list 
 | `temp_manual` | 250 | Purge temperature in manual mode (when loading via the menu). |
 | `temp_wait` | 120 | Idle temperature — the temperature the nozzle cools down to after purging. |
 | `filament_drop_length` | 50 | **Purge length.** How many millimeters of plastic the printer will extrude into the trash bin to clean the nozzle of the old color. |
-| `filament_full_length` | 690 | **Tube length.** How many millimeters of plastic the printer will extrude after the filament runout sensor is triggered. |
+| `filament_full_length` | 670 | **Tube length.** How many millimeters of plastic the printer will extrude after the filament runout sensor is triggered. |
 | `filament_tube_length` | 295 | Filament loading length when inserting a new spool. |
 
 **Default temperatures for different materials:**
