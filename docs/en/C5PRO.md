@@ -182,6 +182,23 @@ You can configure your own values for aborting the print in silent mode by addin
 
 ---
 
+To automatically turn off the heating of unused extruders during multi-color printing, use the **unused_extruders_off_time** parameter. It sets the waiting time (in minutes) after which an idle tool will be turned off to avoid filament degradation and idle operation.
+
+```text
+SAVE_ZMOD_DATA unused_extruders_off_time=5
+```
+
+You can set the following values (in minutes):
+* `0` — feature disabled (extruders do not turn off during idle time)
+* `5`, `10`, `20`, `40`, `60` — the time after which an unused extruder will be turned off
+
+**Important:** For this option to work properly, the **Ooze prevention** feature must be enabled in the slicer. Without it, the printer will not be able to correctly handle the temperature profiles of idle hotends during filament changes.
+
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+
+
+---
+
 ## Add your own filament types
 
 For these settings to work, you need to disable the printer's native screen using the `DISPLAY_OFF` macro.
