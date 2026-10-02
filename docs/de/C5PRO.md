@@ -180,6 +180,22 @@ Sie können Ihre eigenen Werte für den Abbruch des Drucks im Silent-Modus konfi
 
 ---
 
+Um die Heizung ungenutzter Extruder beim Mehrfarbendruck automatisch abzuschalten, verwenden Sie den Parameter **unused_extruders_off_time**. Er legt die Wartezeit (in Minuten) fest, nach der ein stillstehendes Werkzeug abgeschaltet wird, um Materialschäden (Filament-Degradation) und unnötigen Leerlauf zu vermeiden.
+
+```text
+SAVE_ZMOD_DATA unused_extruders_off_time=5
+```
+
+Sie können die folgenden Werte (in Minuten) einstellen:
+* `0` — Funktion deaktiviert (Extruder werden im Leerlauf nicht abgeschaltet)
+* `5`, `10`, `20`, `40`, `60` — Zeitspanne, nach der ein ungenutzter Extruder abgeschaltet wird
+
+**Wichtig:** Damit diese Option ordnungsgemäß funktioniert, muss im Slicer die Funktion **Ooze prevention** (Sicker-Schutz / Vermeidung von Materialaustritt) aktiviert sein. Ohne diese Funktion kann der Drucker die Temperaturprofile im Leerlauf befindlicher Hotends während des Filamentwechsels nicht korrekt steuern.
+
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+
+---
+
 ## Eigene Filamenttypen hinzufügen
 
 Damit diese Einstellungen funktionieren, müssen Sie den Originalbildschirm des Druckers mit dem Makro `DISPLAY_OFF` deaktivieren.
