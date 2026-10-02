@@ -178,6 +178,23 @@ Můžete nastavit vlastní hodnoty pro přerušení tisku v tichém režimu seč
 
 ---
 
+Chcete-li automaticky vypínat ohřev nepoužívaných extruderů při vícebarevném tisku, použijte parametr **unused_extruders_off_time**. Nastavuje dobu čekání (v minutách), po které bude nečinný nástroj vypnut, aby se zabránilo degradaci filamentu a běhu naprázdno.
+
+```text
+SAVE_ZMOD_DATA unused_extruders_off_time=5
+```
+
+Můžete nastavit následující hodnoty (v minutách):
+* `0` — funkce je vypnutá (extrudery se během nečinnosti nevypínají)
+* `5`, `10`, `20`, `40`, `60` — čas, po kterém bude nepoužívaný extruder vypnut
+
+**Důležité:** Pro správnou funkci této volby musí být ve sliceru povolena funkce **Ooze prevention** (Zamezení vytékání plastu). Bez ní tiskárna nebude schopna správně řídit teplotní režimy nečinných hotendů během výměny filamentu.
+
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+
+
+---
+
 ## Přidání vlastních typů filamentů
 
 Aby tato nastavení fungovala, musíte vypnout originální displej tiskárny pomocí makra `DISPLAY_OFF`.
