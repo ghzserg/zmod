@@ -192,6 +192,18 @@ Můžete nastavit následující hodnoty (v minutách):
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
+---
+
+## Změnit počet pokusů pro vzzetí nebo zanechání nástroje
+
+Do souboru `mod_data/user.cfg` je nutné přidat:
+
+```
+[zmod_color]
+retry: 3
+```
+
+Výchozí hodnota je 5.
 
 ---
 

@@ -206,6 +206,18 @@ SAVE_ZMOD_DATA unused_extruders_off_time=5
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
+---
+
+## Изменить количество попыток взять или оставить инструмент
+
+Нужно в `mod_data/user.cfg` добавить:
+
+```
+[zmod_color]
+retry: 3
+```
+
+По умолчанию 5.
 
 ---
 

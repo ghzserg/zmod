@@ -196,6 +196,19 @@ Sie können die folgenden Werte (in Minuten) einstellen:
 
 ---
 
+## Die Anzahl der Versuche ändern, ein Werkzeug zu nehmen oder zu hinterlassen
+
+In `mod_data/user.cfg` muss Folgendes hinzugefügt werden:
+
+```
+[zmod_color]
+retry: 3
+```
+
+Standardmäßig ist es 5.
+
+---
+
 ## Eigene Filamenttypen hinzufügen
 
 Damit diese Einstellungen funktionieren, müssen Sie den Originalbildschirm des Druckers mit dem Makro `DISPLAY_OFF` deaktivieren.

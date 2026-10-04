@@ -196,6 +196,18 @@ You can set the following values (in minutes):
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
+---
+
+## Change the number of attempts to take or leave a tool
+
+You need to add the following to `mod_data/user.cfg`:
+
+```
+[zmod_color]
+retry: 3
+```
+
+Default is 5.
 
 ---
 
