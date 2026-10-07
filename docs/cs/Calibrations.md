@@ -117,6 +117,7 @@ Parametry:
 - `EXTRUDER_TEMP` — teplota extruderu (výchozí: `230`)
 - `BED_TEMP` — teplota stolu (výchozí: `80`)
 - `PROFILE` — název profilu meshe (výchozí: `auto`)
+- `SAVE` - automaticky ukládat mapu stolu (`1`)
 
 **Použití v Orca:**
 ```gcode

@@ -117,6 +117,7 @@ Parameters:
 - `EXTRUDER_TEMP` — extruder temperature (default: `230`)
 - `BED_TEMP` — bed temperature (default: `80`)
 - `PROFILE` — mesh profile name (default: `auto`)
+- `SAVE` - automatically save the table map (`1`)
 
 **Usage in Orca:**
 ```gcode

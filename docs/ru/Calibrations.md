@@ -121,6 +121,7 @@ KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_
 - EXTRUDER_TEMP - температура экструдера (230)
 - BED_TEMP - температура стола (80)
 - PROFILE - для какого профиля (auto)
+- SAVE - автоматически сохранять карту стола (1)
 
 Добавлять первой строчкой в Orca
 ```

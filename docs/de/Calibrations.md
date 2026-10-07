@@ -123,6 +123,7 @@ Parameter:
 - `EXTRUDER_TEMP` – Extrudertemperatur (Standard: `230`)
 - `BED_TEMP` – Betttemperatur (Standard: `80`)
 - `PROFILE` – Name des Netzprofils (Standard: `auto`)
+- `SAVE` - Tischplan automatisch speichern (`1`)
 
 Fügen Sie die erste Zeile in Orca ein
 ```
