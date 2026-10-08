@@ -450,6 +450,21 @@ short_extrude_move_limit: False
 
 This setting significantly speeds up printing, but it can lead to printer crashes when printing with a fuzzy skin.
 
+## Disabling Fast Head Return and Preheat
+
+Write in 'mod_data/user.cfg'
+
+```
+[virtual_sdcard]
+enable_speed_return: False
+enable_preheat: False
+```
+
+- **enable_speed_return**: False — Disables forced return of the head to the model at a speed of 600 mm/s, eliminating the risk of strong kinematic shocks and breakage of the hotend against printed parts (the rough tower). Control of the safe return trajectory is fully transferred to the OrcaSlicer slicer.
+- **enable_preheat**: False — Disables background scanning of Klipper files, reducing CPU load. The built-in function accelerated heating when using more than two nozzles in a short period of time, since the printer cannot heat more than two nozzles simultaneously. Predictive preheating is calculated more accurately on the OrcaSlicer side.
+
+---
+
 ## Disable open door notification
 
 To remove notifications about an open lid or door when operating without the native screen
