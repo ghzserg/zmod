@@ -448,6 +448,19 @@ short_extrude_move_limit: False
 
 Diese Einstellung beschleunigt den Druckvorgang erheblich, kann jedoch bei der Option „Fuzzy Skin“ (Rauhe Oberfläche) zu Druckerabstürzen führen.
 
+## Deaktivierung der schnellen Rückkehr des Kopfes und des Vorheizens
+
+Schreiben Sie in 'mod_data/user.cfg'
+
+```
+[virtual_sdcard]
+enable_speed_return: False
+enable_preheat: False
+```
+
+- **enable_speed_return**: False — Deaktiviert die erzwungene Rückkehr des Kopfes zum Modell mit einer Geschwindigkeit von 600 mm/s, wodurch das Risiko starker kinematischer Stöße und eines Bruchs des Hotends an gedruckten Teilen (dem Rohturm) beseitigt wird. Die Steuerung der sicheren Rückkehrbahn wird vollständig an den Slicer OrcaSlicer übergeben.
+- **enable_preheat**: False — Deaktiviert das Scannen von Klipper-Dateien im Hintergrund und entlastet den Prozessor. Die integrierte Funktion beschleunigte das Aufheizen bei Verwendung von mehr als zwei Düsen in einem kurzen Zeitraum, da der Drucker nicht mehr als zwei Düsen gleichzeitig aufheizen kann. Das vorausschauende Vorheizen wird auf der OrcaSlicer-Seite genauer berechnet.
+
 ## Deaktivierung der Benachrichtigung bei geöffneter Tür
 
 Um Benachrichtigungen über eine geöffnete Abdeckung oder Tür im Betrieb ohne nativen Bildschirm zu entfernen
