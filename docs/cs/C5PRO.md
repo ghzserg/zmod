@@ -446,6 +446,21 @@ short_extrude_move_limit: False
 
 Toto nastavení výrazně urychluje tisk, ale může vést k pádům tiskárny při tisku s funkcí „fuzzy skin“ (chlupatý povrch).
 
+---
+
+## Vypnutí rychlého návratu hlavy a předehřevu
+
+Zapište do 'mod_data/user.cfg'
+
+```
+[virtual_sdcard]
+enable_speed_return: False
+enable_preheat: False
+```
+
+- **enable_speed_return**: False — Vypne vynucený návrat hlavy k modelu rychlostí 600 mm/s, čímž odstraní riziko silných kinematických nárazů a poškození hotendu o vytištěné díly (hrubou věž). Řízení bezpečné trajektorie návratu se zcela předává sliceru OrcaSlicer.
+- **enable_preheat**: False — Vypne skenování souborů Klipperu na pozadí a odlehčí procesoru. Vestavěná funkce zrychlovala zahřívání při použití více než dvou trysek v krátkém časovém úseku, protože tiskárna nemůže zahřívat více než dvě trysky současně. Prediktivní předehřev se přesněji vypočítává na straně OrcaSliceru.
+
 ## Zakázání upozornění na otevřené dveře
 
 Chcete-li odstranit upozornění na otevřený kryt nebo dveře při provozu bez původní obrazovky
