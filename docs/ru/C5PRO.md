@@ -1,7 +1,5 @@
 # Creator5 Pro
 
----
-
 ## Важные особенности
 
 - Принтер всегда работает с **4 цветами** (T0, T1, T2, T3). Все четыре слота доступны в меню выбора.
@@ -17,6 +15,7 @@
 
 - [Отправляйте файлы на печать через Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
 - [Профили для Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+- [Настоятельно рекомендуется включить препроцессор](https://wiki.zmod.link/ru/Global/#force_md5)
 
 ---
 ## COLOR
