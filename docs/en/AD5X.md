@@ -9,14 +9,14 @@
 6. [Waste Filament Configuration](#6-how-to-configure-waste-filament-during-filament-change)
 
     - 🔧 [Basic Parameters](#basic-parameters-most-frequently-adjusted)
-       - ⚙️ [Advanced Parameters](#advanced-parameters-do-not-adjust-if-unsure-of-the-result)
+    - ⚙️ [Advanced Parameters](#advanced-parameters-do-not-adjust-if-unsure-of-the-result)
 
 7. [Add custom filament types](#7-add-custom-filament-types)
 8. [Add custom colors](#8-add-custom-colors)
 9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
 
     - [Via the engineering menu on the stock firmware](#setting-up-the-basket-on-the-ad5x-stock-firmware)
-       - [Via a flash drive on the stock firmware](/Setup/#ad5x-warning)
+    - [Via a flash drive on the stock firmware](/Setup/#ad5x-warning)
 
 10. [IFS commands](#10-ifs-commands)
 11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
@@ -88,7 +88,9 @@ You can perform four actions:
 
 1.  Click "Change Color".
 2.  **Select a color from the list.** This ensures the printer and native screen understand your selection.
-<img width="561" height="823" alt="image" src="https://github.com/user-attachments/assets/8dbff228-dfc0-4705-92f9-d94df80b7a4e" />
+
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
 
@@ -103,7 +105,8 @@ You can perform four actions:
 
 1.  Click "Change Type".
 2.  **Select a material type from the list.**
-<img width="562" height="710" alt="image" src="https://github.com/user-attachments/assets/baf7b807-c4f5-4ab4-8bfd-2fc43bb448cd" />
+
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
 
 <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
 

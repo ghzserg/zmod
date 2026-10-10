@@ -90,7 +90,8 @@ Sie haben vier Optionen zur Auswahl:
 
 1.  Drücken Sie **"Farbe ändern"**.
 2.  **Wählen Sie eine Farbe aus der Liste aus.** Dadurch wird sichergestellt, dass Drucker und Bildschirm Ihre Farbauswahl erkennen.
-<img width="561" height="823" alt="image" src="https://github.com/user-attachments/assets/8dbff228-dfc0-4705-92f9-d94df80b7a4e" />
+
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
 
@@ -106,7 +107,7 @@ Sie haben vier Optionen zur Auswahl:
 1.  Klicken Sie auf **"Typ ändern"**.
 2.  **Wählen Sie einen Typ aus der Liste aus.**
 
-<img width="562" height="710" alt="image" src="https://github.com/user-attachments/assets/baf7b807-c4f5-4ab4-8bfd-2fc43bb448cd" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
 
