@@ -1,100 +1,118 @@
 # Creator5 Pro
 
----
-
-## Wichtige Hinweise
+## Wichtige Besonderheiten
 
 - Der Drucker arbeitet immer mit **4 Farben** (T0, T1, T2, T3). Alle vier Slots sind im Auswahlmenü verfügbar.
-- Um die Kamera zu aktivieren, muss `CAMERA_ON VIDEO=video67` verwendet werden.
-- Klipper kann abstürzen. Lösung: `Prozessprofil` -> `Sonstiges` -> `G-Code ausgeben` -> Haken bei `Objekte ausschließen` entfernen.
-- Wenn Sie eine `3mf`-Datei senden, verwenden Sie nur den Modus mit dem Originalbildschirm.
-- Wenn Sie eine `gcode`-Datei senden, ist es problematisch, die Farbreihenfolge beim Drucken mit dem Originalbildschirm zu ändern.
-- Verwenden Sie anstelle des Makros `CLOSE_DILALOGS` (langes Schließen) immer `FAST_CLOSE_DILAOGS` (schnelles Schließen).
+- Um die Kamera einzuschalten, muss `CAMERA_ON VIDEO=video67` verwendet werden.
+- Klipper kann abstürzen. Lösung: `Prozessprofil` -> `Sonstiges` -> `Ausgabe-G-code` -> `Modelle ausschließen` — Kontrollkästchen deaktivieren.
+- Statt des Makros `CLOSE_DILALOGS` (langsames Schließen) immer `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
 - Das Makro `NEW_SAVE_CONFIG` funktioniert nicht.
-- Keine Unterstützung für Klipper 13.
+- Keine Unterstützung für Klipper 13
 
 ---
 
 ## Wie man eine Datei in Orca vorbereitet
 
-- [Senden Sie Dateien zum Drucken über Octo/Klipper.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
-- [Orca Slicer Profile](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+[- [Dateien über Octo/Klipper zum Drucken senden.](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)](/de/Recommendations/#senden-sie-dateien-zum-drucken-%C3%BCber-octoklipper)
+- [Profile für Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+- [Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
 ---
 ## COLOR
-## Wie man das Farbauswahlmenü verwendet
+## Wie man das Menü zur Auswahl von Farbe und Filamenttyp verwendet
 
-<img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 <img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
 
-Wählen Sie nun die Spule aus, mit der Sie arbeiten möchten (z. B. Spule 2):
+Wählen Sie die Spule aus, mit der Sie arbeiten möchten (zum Beispiel Spule 2):
 
 <img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
 
 Sie können vier Aktionen ausführen:
-- Die Farbe der Spule ändern.
-- Den Kunststofftyp ändern (z. B. von PLA auf PETG).
-- Diesen Extruder auf den Schlitten setzen.
-- Eine neue Spule in den Extruder laden.
+
+- Farbe der Spule ändern.
+- Kunststofftyp ändern (PLA, PETG, ABS, ...).
+- Diesen Extruder auf den Schlitten aufnehmen.
+- Neues Filament in den Extruder laden.
 
 **Wie man die Farbe ändert:**
-Klicken Sie auf „Farbe ändern“. Wählen Sie eine Farbe aus der Liste. So verstehen der Drucker und der Originalbildschirm Sie am besten.
 
-<img width="560" height="834" alt="{55C179BC-DB74-480D-BA6A-DBDF193794B5}" src="https://github.com/user-attachments/assets/32dfabcf-23c6-4ed8-b606-fa1e0fb01e67" />
+Klicken Sie auf „Farbe ändern“. Wählen Sie eine Farbe aus der Liste. So verstehen der Drucker und der originale Bildschirm Sie am besten.
 
-Nach der Auswahl kehren Sie zurück, und die Farbe der Spule in der Liste sollte sich geändert haben.
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
 
-Wenn sich die Farbe nicht geändert hat: Schließen Sie das Fenster mit dem Kreuz und starten Sie das Makro `COLOR` erneut. Manchmal hat der Bildschirm keine Zeit, sich zu aktualisieren.
+Nach der Auswahl kehren Sie zurück, und die Farbe der Spule in der Liste sollte sich ändern.
+
+Wenn sich die Farbe nicht geändert hat: Schließen Sie das Fenster mit dem X und starten Sie das Makro `COLOR` erneut. Manchmal schafft es der Bildschirm nicht, sich zu aktualisieren.
 
 **Wie man den Typ ändert:**
 Klicken Sie auf „Typ ändern“. Wählen Sie einen Typ aus der Liste.
 
-<img width="554" height="830" alt="{07CF6B87-8483-4300-B354-554431CCBE54}" src="https://github.com/user-attachments/assets/31445f6c-18b7-4e26-80fb-4f8306b11d57" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
 
-Wenn sich der Typ nicht geändert hat: Schließen Sie das Fenster mit dem Kreuz und starten Sie das Makro `COLOR` erneut. Manchmal hat der Bildschirm keine Zeit, sich zu aktualisieren.
+Wenn sich der Typ nicht geändert hat: Schließen Sie das Fenster mit dem X und starten Sie das Makro `COLOR` erneut. Manchmal schafft es der Bildschirm nicht, sich zu aktualisieren.
 
-**Tipp:** Wenn Sie für mehrere Spulen die gleiche Farbe und den gleichen Typ angeben, wechselt der Drucker automatisch zur nächsten Spule, wenn die erste leer ist. Dies wird als „Endlos-Spulen-Modus“ (Infinite Spool) bezeichnet.
+**Tipp:** Wenn für mehrere Spulen dieselbe Farbe und derselbe Typ angegeben sind, wechselt der Drucker automatisch zur nächsten Spule, wenn die erste leer ist. Das nennt man „Endlosspulenmodus“.
 
 ---
 
 ## PRINT
 ## Druckmenü
 
-Dieses Fenster öffnet sich automatisch, wenn Sie mit dem Drucken beginnen.
+Dieses Fenster öffnet sich automatisch, wenn Sie mit dem Drucken beginnen, sofern der Parameter `SAVE_ZMOD_DATA SILENT=0` standardmäßig gesetzt ist.
 
-<img width="562" height="593" alt="{A688018F-CB9C-4EFA-9431-AAE9E2DE842E}" src="https://github.com/user-attachments/assets/92cababe-52b1-49aa-aea3-1ad6ddf03cfe" />
+<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
 
 **Wie man versteht, was hier steht:**
 
-`Cube.gcode` ist der Name der gedruckten Datei.
-`1` ist die erste Farbe aus der Datei. Sie wird mit Filament von Spule 2 (orangefarbenes PETG) gedruckt.
-`2` ist die zweite Farbe. Sie wird mit Filament von Spule 4 (graues PLA) gedruckt.
-`3` ist die dritte Farbe, gedruckt von Spule 1 (schwarzes PETG).
+- In der linken Spalte stehen Werkzeugnummern und Farben aus der Datei, die vom Slicer übergeben wurden.
+- In der rechten Spalte stehen Spulennummern und Farben, die am Drucker geladen/verwendet werden.
+- `Cube.gcode` – das ist der Name der Datei, die gedruckt wird.
+- `1: PETG ->` – das ist die erste Farbe aus der Datei (oranges PETG). Sie wird mit Filament von Spule 3 gedruckt (oranges PETG).
+- `2: PLA ->` – das ist die zweite Farbe (graues PLA). Sie wird mit Filament von Spule 4 gedruckt (blaues PLA). Da sich keine anderen PLA-Kunststoffe im Drucker befinden.
+- `3: PETG ->` – die dritte Farbe (schwarzes PETG), gedruckt von Spule 3 (oranges PETG). Da sich keine anderen PETG-Kunststoffe im Drucker befinden.
+- `4: PETG-CF ->` – die vierte Farbe (blaues PETG-CF), gedruckt von Spule 1 (schwarzes PETG-CF). Da sich keine anderen PETG-CF-Kunststoffe im Drucker befinden.
 
-### Bettnivellierung und AUTO PA
+Wenn das Bild so aussieht
 
-Es gibt zwei wichtige Schaltflächen im Druckmenü:
+<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
 
-**Leveling (Bettnivellierung):**
-- `Bett nivellieren` – Vor dem Drucken wird automatisch eine Bettnivellierungskarte erstellt.
-- `Bett nicht nivellieren` – Es wird eine zuvor gespeicherte Karte verwendet.
+bedeutet das, dass Sie die Option zur automatischen Farbzuordnung und/oder das Scannen von Dateien deaktiviert haben. Sie können auf die Schaltfläche `AUTO_SELECT_COLORS` klicken oder sie in den globalen Parametern aktivieren:
+```
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
+```
 
-**Auto PA (Automatische Pressure-Advance-Einstellung):**
-- Wenn die Schaltfläche `Auto PA` aktiv ist (grün), wählt der Drucker **vor Beginn des Drucks** automatisch den optimalen Pressure-Advance-Wert für jeden verwendeten Extruder.
-- Der Vorgang dauert einige Minuten, verbessert aber die Qualität von Ecken und feinen Details erheblich.
-- Wenn `Auto PA` deaktiviert ist, werden die PA-Werte aus dem Slicer verwendet.
+[Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
-Die automatische Kalibrierung reicht von 0,01 bis 0,04 und ist für viskose Kunststoffe wie PETG nutzlos.
+---
+
+### Erstellung des Bett-Mesh und AUTO PA
+
+Im Druckmenü gibt es zwei wichtige Schaltflächen:
+
+**Leveling (Bett-Mesh):**
+
+- `Bett-Mesh abtasten` — vor dem Drucken wird automatisch ein Bett-Mesh erstellt.
+- `Bett-Mesh nicht abtasten` — das zuvor gespeicherte Mesh wird verwendet.
+
+**Auto PA (Automatische Pressure-Advance-Auswahl):**
+
+- Wenn die Schaltfläche `Auto PA` aktiv (grün) ist, wählt der Drucker **vor Druckbeginn** automatisch den optimalen Pressure-Advance-Wert für jeden verwendeten Extruder.
+- Der Prozess dauert einige Minuten, verbessert aber die Qualität von Ecken und dünnen Elementen deutlich.
+- Wenn `Auto PA` ausgeschaltet ist, werden die PA-Werte aus dem Slicer verwendet.
+
+Die automatische Kalibrierung reicht von 0,01 bis 0,04 und ist für viskose Kunststoffe wie PETG nutzlos
 
 ---
 
 ## Feineinstellung
 
-Zuerst müssen Sie den Originalbildschirm des Druckers mit dem Makro `DISPLAY_OFF` deaktivieren.
+Zuerst müssen Sie den originalen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
 
-**So finden Sie diese Einstellungen:**
-1. Klicken Sie auf den Reiter „Konfiguration“.
+**Wie man diese Einstellungen findet:**
+
+1. Klicken Sie auf die Registerkarte „Konfiguration“.
 2. Suchen und öffnen Sie den Ordner `mod_data`.
 3. Suchen und öffnen Sie in diesem Ordner die Datei `filament.json`.
 
@@ -104,12 +122,12 @@ In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine List
 
 | Parameter | Standard | Beschreibung |
 |---|---|---|
-| `temp` | 220 | Temperatur, auf die die Düse zum Filamentwechsel erhitzt wird. Der Wert hängt vom Materialtyp ab. |
+| `temp` | 220 | Temperatur, auf die die Düse zum Filamentwechsel erhitzt wird. Der Wert hängt vom Materialtyp ab |
 | `temp_manual` | 250 | Spültemperatur im manuellen Modus (beim Laden über das Menü). |
-| `temp_wait` | 120 | Leerlauftemperatur – die Temperatur, auf die die Düse nach dem Spülen abkühlt. |
-| `filament_drop_length` | 50 | **Spüllänge.** Wie viele Millimeter Kunststoff der Drucker in den Mülleimer extrudiert, um die Düse von der alten Farbe zu reinigen. |
-| `filament_full_length` | 600 | **Rohrlänge.** Wie viele Millimeter Kunststoff der Drucker extrudiert, nachdem der Filament-Ende-Sensor ausgelöst wurde. |
-| `filament_tube_length` | 295 | Filament-Ladelänge beim Einlegen einer neuen Spule. |
+| `temp_wait` | 120 | Leerlauftemperatur — auf diese kühlt die Düse nach dem Spülen ab. |
+| `filament_drop_length` | 50 | **Abfalllänge.** Wie viele Millimeter Kunststoff der Drucker in den Abfallbehälter extrudiert, um die Düse von der alten Farbe zu reinigen. |
+| `filament_full_length` | 600 | **Schlauchlänge.** Wie viele Millimeter Kunststoff der Drucker nach dem Auslösen des Filament-Endsens sensors extrudiert |
+| `filament_tube_length` | 295 | Länge des Filamentladens beim Einsetzen einer neuen Spule. |
 
 **Standardtemperaturen für verschiedene Materialien:**
 
@@ -136,108 +154,117 @@ In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine List
 
 | Parameter | Standard | Beschreibung |
 |---|---|---|
-| `trash_x` | 275.0 | X-Koordinate des Mülleimers. |
-| `trash_y` | 254.0 | Y-Koordinate des Mülleimers. |
-| `trash_z` | 10.0 | Z-Koordinate des Mülleimers. |
-| `wiper_x` | 266.50 | X-Koordinate der Düsenreinigungsstelle (Wischer). |
-| `wiper_y` | 13.80 | Y-Koordinate der Düsenreinigungsstelle. |
-| `wiper_z` | 1.0 | Z-Koordinate der Düsenreinigungsstelle. |
+| `trash_x` | 275.0 | X-Koordinate des Abfallbehälters. |
+| `trash_y` | 254.0 | Y-Koordinate des Abfallbehälters. |
+| `trash_z` | 10.0 | Z-Koordinate des Abfallbehälters. |
+| `wiper_x` | 266.50 | X-Koordinate des Düsenreinigungsorts (Gummi). |
+| `wiper_y` | 13.80 | Y-Koordinate des Düsenreinigungsorts. |
+| `wiper_z` | 1.0 | Z-Koordinate des Düsenreinigungsorts. |
 | `fan_speed` | 255.0 | Lüftergeschwindigkeit (von 0 bis 255) beim Abkühlen der Düse nach dem Spülen. |
 
-> **Achtung!** Das Ändern von Parametern im erweiterten Bereich kann zu Fehlfunktionen des Druckers, Filamentstaus oder Beschädigungen führen. Ändern Sie diese nur, wenn Sie genau verstehen, wofür jeder Parameter verantwortlich ist und welche Folgen dies haben kann.
+> **Achtung!** Das Ändern von Parametern im erweiterten Bereich kann zu fehlerhaftem Druckerbetrieb, Filamentstaus oder Schäden führen. Ändern Sie sie nur, wenn Sie vollständig verstehen, wofür jeder Parameter verantwortlich ist und welche Folgen möglich sind.
 
 ---
 
 ## Globale Parameter
 
-Damit das Farbauswahlfenster zu Beginn des Drucks nicht angezeigt wird, verwenden Sie den globalen Parameter **SILENT**:
-- `0` – Fenster anzeigen (Standard)
-- `1` – Fenster nicht anzeigen, zuvor festgelegte Farben verwenden
-- `2` — Fenster ausblenden, bei Fehler der automatischen Zuordnung das Auswahlmenü anzeigen
-
+Damit das Fenster zur Farbauswahl beim Druckstart nicht angezeigt wird, verwenden Sie den globalen Parameter
+**SILENT**:
+- `0` — Fenster anzeigen (Standard)
+- `1` — Fenster nicht anzeigen, zuvor festgelegte Farben verwenden
+- `2` — Fenster nicht anzeigen, bei fehlgeschlagener automatischer Zuordnung das Auswahlmenü anzeigen
 ```
 SAVE_ZMOD_DATA SILENT=1
 ```
 
-Um das Scannen von Gcode-Dateien nach Informationen zu Werkzeugen, Farben und Materialien zu aktivieren, verwenden Sie den Parameter **SCAN_FILE_COLORS**. Sie können auch den Wert `2` festlegen, um nur die vom Slicer-Skript vorbereiteten Daten zu überprüfen, ohne die gesamten Dateien zu scannen:
+---
+
+Um das Scannen von G-Code-Dateien auf Informationen über Werkzeuge, Farben und Materialien zu aktivieren, verwenden Sie den Parameter
+**SCAN_FILE_COLORS**.
 ```
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
-
-Um die **automatische Farbzusordnung** aus der Gcode-Datei zu physischen Spulen zu aktivieren, verwenden Sie den Parameter **AUTO_ASSIGN_COLORS**. Damit diese Funktion funktioniert, muss das Dateiscanning aktiviert sein. Die Verwendung des Wertes `30` führt im Silent-Modus zum Abbruch des Drucks, wenn Probleme bei der automatischen Zuweisung auftreten:
-```
-SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
-```
-
-Sie können Ihre eigenen Werte für den Abbruch des Drucks im Silent-Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
-- `1` — Automatische Farbzuweisung, der Druck wird fortgesetzt, selbst wenn es fehlschlägt
-- `2` – Mindestens ein Material stimmt nicht überein (z. B. ist in der Gcode-Datei ABS angegeben, aber Sie haben nur PLA geladen)
-- `4` – Mindestens eine Farbe stimmt überhaupt nicht überein (normalerweise, weil das Dateiscanning deaktiviert ist)
-- `8` – Mindestens eine Farbe stimmt nur schlecht überein
-- `16` – Dieselbe physische Spule wurde in der Datei mehr als einem Werkzeugindex zugewiesen
-
-**Wenn das Dateiscanning deaktiviert ist**, weiß der Drucker nicht, wie viele Extruder verwendet werden, und daher wird **Auto PA für alle Spulen ausgeführt**.
+Sie können auch den Wert festlegen:
+- `0` — Parameter deaktivieren
+- `1` — vollständiges Scannen der G-Code-Datei
+- `2` — nur die vom Slicer-Skript vorbereiteten Daten prüfen, ohne die gesamte Datei zu scannen
+**!Wenn das Scannen von Dateien deaktiviert ist**, weiß der Drucker nicht, wie viele Extruder verwendet werden, und deshalb wird **Auto PA für alle Spulen ausgeführt**
 
 ---
 
-Um die Heizung ungenutzter Extruder beim Mehrfarbendruck automatisch abzuschalten, verwenden Sie den Parameter **unused_extruders_off_time**. Er legt die Wartezeit (in Minuten) fest, nach der ein stillstehendes Werkzeug abgeschaltet wird, um Materialschäden (Filament-Degradation) und unnötigen Leerlauf zu vermeiden.
+Um die **automatische Farbzuordnung** aus der G-Code-Datei zu physischen Spulen zu aktivieren, verwenden Sie den Parameter
+**AUTO_ASSIGN_COLORS**. Damit diese Funktion funktioniert, muss das Scannen von Dateien aktiviert sein.
+```
+SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
+```
+Sie können eigene Werte für die Druckunterbrechung im leisen Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
+- `1` — der Druck wird fortgesetzt, auch wenn die automatische Farbzuordnung fehlgeschlagen ist
+- `2` — Mindestens ein Material stimmt nicht überein (zum Beispiel ist im G-Code ABS angegeben, aber Sie haben nur PLA geladen)
+- `4` — Mindestens eine Farbe stimmt überhaupt nicht überein (normalerweise weil das Scannen von Dateien deaktiviert ist)
+- `8` — Mindestens eine Farbe stimmt schlecht überein
+- `16` — Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen
+Zum Beispiel führt die Verwendung des Werts `30` zu einer Druckunterbrechung im leisen Modus, wenn Probleme mit der automatischen Zuordnung auftreten, und `AUTO_ASSIGN_COLORS=10` (2+8) unterbricht den Druck, wenn mindestens ein Material nicht übereinstimmt + mindestens eine Farbe schlecht übereinstimmt.
 
-```text
+---
+
+Um die Heizung ungenutzter Extruder beim Mehrfarbdruck automatisch auszuschalten, verwenden Sie den Parameter **unused_extruders_off_time**. Er legt die Wartezeit (in Minuten) fest, nach der ein leerstehendes Werkzeug ausgeschaltet wird, um Filamentdegradation und Leerlaufbetrieb zu vermeiden.
+
+```
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
-Sie können die folgenden Werte (in Minuten) einstellen:
-* `0` — Funktion deaktiviert (Extruder werden im Leerlauf nicht abgeschaltet)
-* `5`, `10`, `20`, `40`, `60` — Zeitspanne, nach der ein ungenutzter Extruder abgeschaltet wird
+Sie können die folgenden Werte festlegen (in Minuten):
+* `0` — Funktion deaktiviert (Extruder werden während des Leerlaufs nicht ausgeschaltet)
+* `5`, `10`, `20`, `40`, `60` — Zeit, nach der der ungenutzte Extruder ausgeschaltet wird
 
-**Wichtig:** Damit diese Option ordnungsgemäß funktioniert, muss im Slicer die Funktion **Ooze prevention** (Sicker-Schutz / Vermeidung von Materialaustritt) aktiviert sein. Ohne diese Funktion kann der Drucker die Temperaturprofile im Leerlauf befindlicher Hotends während des Filamentwechsels nicht korrekt steuern.
+**Wichtig:** Damit diese Option korrekt funktioniert, muss im Slicer die Funktion **Ooze prevention** (Verhinderung des Auslaufens von Kunststoff) aktiviert sein. Ohne sie kann der Drucker die Temperaturmodi der leerstehenden Hotends während des Filamentwechsels nicht korrekt verarbeiten.
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
 ---
 
-## Die Anzahl der Versuche ändern, ein Werkzeug zu nehmen oder zu hinterlassen
+## Anzahl der Versuche ändern, das Werkzeug aufzunehmen oder abzulegen
 
-In `mod_data/user.cfg` muss Folgendes hinzugefügt werden:
+Sie müssen in `mod_data/user.cfg` hinzufügen:
 
 ```
 [zmod_color]
 retry: 3
 ```
 
-Standardmäßig ist es 5.
+Standard ist 5.
 
 ---
 
 ## Eigene Filamenttypen hinzufügen
 
-Damit diese Einstellungen funktionieren, müssen Sie den Originalbildschirm des Druckers mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie den originalen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
 
-Um einen neuen Filamenttyp hinzuzufügen, fügen Sie in `mod_data/user.cfg` Folgendes hinzu:
+Um einen neuen Filamenttyp hinzuzufügen, fügen Sie in `mod_data/user.cfg` hinzu:
 
 ```
 [zmod_color]
 filament_NEWTYPE: 300
 ```
 
-Wobei `NEWTYPE` durch den gewünschten Filamenttyp (z. B. `HIPS`) ersetzt wird und die Zahl die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments ist. Basierend auf diesem Wert werden `temp_manual` (+30) und `temp_wait` (−100) automatisch berechnet.
+Wobei `NEWTYPE` durch den gewünschten Filamenttyp ersetzt wird (zum Beispiel `HIPS`), und die Zahl ist die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments. Auf Basis dieses Werts werden `temp_manual` (+30) und `temp_wait` (−100) automatisch berechnet.
 
-Um einen Filamenttyp auszublenden, fügen Sie in `mod_data/user.cfg` Folgendes hinzu:
+Um einen Filamenttyp auszublenden, fügen Sie in `mod_data/user.cfg` hinzu:
 
 ```
 [zmod_color]
 hide_filament_types: XXX,YYY,ZZZ
 ```
 
-Wobei `XXX`, `YYY`, `ZZZ` durch die Filamenttypen ersetzt werden, die Sie ausblenden möchten (z. B. `PLA-CF,PETG-CF,SILK`). Dies kann verwendet werden, um Standardtypen oder manuell hinzugefügte Typen auszublenden. Der Filamenttyp wird dabei nicht deaktiviert, sondern nur im Typauswahlmenü ausgeblendet.
+Wobei `XXX`, `YYY`, `ZZZ` durch die gewünschten Filamenttypen ersetzt werden (zum Beispiel `PLA-CF,PETG-CF,SILK`). Dies kann verwendet werden, um Standardtypen oder manuell hinzugefügte Typen auszublenden. Der Filamenttyp wird dabei nicht deaktiviert, sondern nur im Menü zur Typauswahl ausgeblendet.
 
 ---
 
 ## Eigene Farben hinzufügen
 
-Damit diese Einstellungen funktionieren, müssen Sie den Originalbildschirm des Druckers mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie den originalen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/de.json` (ersetzen Sie `de` durch Ihre Sprache) und fügen Sie eine neue Farbe hinzu oder benennen Sie eine vorhandene um.
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/ru.json` (verwenden Sie Ihre Sprache anstelle von `ru`) und fügen Sie eine neue Farbe hinzu oder benennen Sie eine vorhandene um.
 
 Damit der Farbname angezeigt wird, muss der Farbname mit einem Unterstrich `_` beginnen.
 
@@ -255,8 +282,8 @@ Damit der Farbname angezeigt wird, muss der Farbname mit einem Unterstrich `_` b
    "75d9f3": "hellblau",
    "45a8f9": "blau",
    "2750e0": "dunkelblau",
-   "46328e": "lila",
-   "a03cf7": "helllila",
+   "46328e": "violett",
+   "a03cf7": "hellviolett",
    "f330f9": "magenta",
    "d4b0dc": "flieder",
    "f95d73": "rosa",
@@ -265,41 +292,42 @@ Damit der Farbname angezeigt wird, muss der Farbname mit einem Unterstrich `_` b
    "f98d33": "orange",
    "fdebd5": "beige",
    "d3c4a3": "hellbraun",
-   "af7836": "terracotta",
+   "af7836": "terrakotta",
    "898989": "grau",
    "bcbcbc": "hellgrau",
    "161616": "schwarz"
 }
 ```
 
-Der Text `_transparent` wird auf den Schaltflächen angezeigt.
+Die Beschriftung `_transparent` wird auf den Schaltflächen angezeigt.
 
 ---
 
 ## Extruderkalibrierung
 
-Die Extruderkalibrierung ermöglicht es dem Drucker, die genaue Position jeder der vier Düsen relativ zueinander zu kennen. Dies ist für einen hochwertigen Mehrfarbendruck erforderlich.
+Die Extruderkalibrierung ermöglicht es dem Drucker, die genaue Position jeder der vier Düsen relativ zueinander zu kennen. Dies ist für hochwertigen Mehrfarbdruck erforderlich.
 
-**Wann kalibrieren:**
+**Wann kalibriert werden muss:**
 - Nach dem Austausch oder der Reparatur eines Extruders.
-- Wenn Sie feststellen, dass die Farben auf dem Modell nicht übereinstimmen (Verschiebung in X, Y oder Z).
+- Wenn Sie bemerken, dass die Farben am Modell nicht übereinstimmen (Versatz in X, Y oder Z).
 
-**So starten Sie:**
+**Wie man startet:**
 
-1. **Entfernen Sie die Druckplatte** vom Bett!
-2. Starten Sie das Makro `CALIBRATE_EXTRUDERS` aus dem Menü oder geben Sie es in der Konsole ein:
+1. **Nehmen Sie die Druckplatte** vom Bett!
+2. Starten Sie das Makro `CALIBRATE_EXTRUDERS` aus dem Menü oder geben Sie in der Konsole ein:
    ```
    CALIBRATE_EXTRUDERS
    ```
-3. Es erscheint ein Bestätigungsfenster. Klicken Sie auf `OK`.
+3. Ein Bestätigungsfenster erscheint. Klicken Sie auf `OK`.
 
 **Was passiert:**
-- Der Drucker führt ein Homing (G28) durch.
-- Er heizt das Bett auf 65°C.
-- Er nimmt nacheinander jeden der 4 Extruder (T0–T3).
-- Für jeden Extruder: Er heizt die Düse, führt eine Spülung durch, reinigt sie am Wischer und bestimmt dann mithilfe von Sensoren die genauen X-, Y- und Z-Koordinaten.
-- Die Ergebnisse werden automatisch in der Datei `rw/extruder.json` gespeichert.
-- Nach Abschluss gibt der Drucker die gefundenen Versätze für jeden Extruder in der Konsole aus.
+
+- Der Drucker führt (G28) aus.
+- Heizt das Bett auf 65 °C.
+- Nimmt nacheinander jeden der 4 Extruder (T0–T3).
+- Für jeden Extruder: heizt die Düse, führt ein Spülen aus, reinigt am Gummi und bestimmt dann mit Sensoren die genauen X-, Y- und Z-Koordinaten.
+- Die Ergebnisse werden automatisch in die Datei `rw/extruder.json` geschrieben.
+- Am Ende gibt der Drucker die gefundenen Offsets für jeden Extruder in der Konsole aus.
 
 **Zusätzliche Parameter** (für Fortgeschrittene):
 
@@ -307,23 +335,24 @@ Die Extruderkalibrierung ermöglicht es dem Drucker, die genaue Position jeder d
 |---|---|---|
 | `BED_TEMP` | 65.0 | Betttemperatur während der Kalibrierung |
 | `SEARCH` | 14.0 | Suchradius des Sensors (mm) |
-| `HOVER` | 0.6 | Schwebenhöhe über dem Punkt |
+| `HOVER` | 0.6 | Schwebhöhe über dem Punkt |
 | `SAFE_Z` | 10.0 | Sichere Z-Höhe |
 
 **Beispiel mit Parametern:**
+
 ```
 CALIBRATE_EXTRUDERS BED_TEMP=70 SEARCH=12
 ```
 
-> **Achtung!** Unterbrechen Sie die Kalibrierung nicht. Der Vorgang dauert einige Minuten.
+> **Achtung!** Unterbrechen Sie die Kalibrierung nicht. Der Prozess dauert einige Minuten.
 
 ---
 
 ## VFA-Kalibrierung
 
-Die VFA-Kalibrierung (Vertical Fine Artifacts) hilft, vertikale Artefakte auf der Druckoberfläche zu reduzieren, die durch Resonanzen der Schrittmotoren verursacht werden.
+Die VFA-Kalibrierung (Vertical Fine Artifacts) ermöglicht es, vertikale Artefakte auf der Druckoberfläche zu reduzieren, die durch Resonanzen der Schrittmotoren verursacht werden.
 
-**So starten Sie:**
+**Wie man startet:**
 
 Geben Sie in der Konsole ein:
 ```
@@ -333,22 +362,23 @@ CALIBRATE_VFA T=0
 Wobei `T=0` die Extrudernummer (0–3) ist, die während der Kalibrierung verwendet wird.
 
 **Was passiert:**
+
 - Der Drucker nimmt den angegebenen Extruder.
-- Er setzt alle G-Code-Versätze zurück.
-- Er bewegt den Kopf in die Mitte des Bettes (X130 Y130).
-- Er startet die automatische Resonanzkalibrierung (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
-- Er bringt den Extruder an seinen Platz zurück.
-- Er speichert die Konfiguration (`SAVE_CONFIG`).
+- Setzt alle G-Code-Offsets zurück.
+- Bewegt den Kopf in die Bettmitte (X130 Y130).
+- Startet die automatische Resonanzkalibrierung (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
+- Bringt den Extruder zurück an seinen Platz.
+- Speichert die Konfiguration (`SAVE_CONFIG`).
 
 > **Tipp:** Es wird empfohlen, die VFA-Kalibrierung durchzuführen, wenn sichtbare vertikale Streifen auf der Druckoberfläche auftreten.
 
 ---
 
-## `T_INFO`-Makro
+## Makro `T_INFO`
 
-Das `T_INFO`-Makro zeigt den aktuellen Zustand aller Extruder und Drucksensoren an.
+Das Makro `T_INFO` zeigt den aktuellen Zustand aller Extruder und Druckersensoren an.
 
-**So starten Sie:**
+**Wie man startet:**
 ```
 T_INFO
 ```
@@ -366,22 +396,24 @@ T_INFO
 ```
 
 **Wie man es liest:**
-- `home` – der Extruder befindet sich an seinem Platz (in der Parktasche).
-- `HEAD` – der Extruder ist am Druckkopf montiert.
-- `?` – undefinierter Zustand (Sensoren haben nicht ausgelöst).
-- `ERROR (both)` – Fehler: Der Extruder ist gleichzeitig zu Hause und am Kopf (Sensor-Desynchronisation).
-- `Door` – Zustand der vorderen Tür (`Close` / `Open`).
-- `Top` – Zustand der oberen Abdeckung (`Close` / `Open`).
-- `Offset` – aktuelle G-Code-Versätze entlang der X-, Y-, Z-Achsen.
+
+- `home` — der Extruder ist an seinem Platz (in der Parktasche).
+- `HEAD` — der Extruder ist am Druckkopf installiert.
+- `?` — unbestimmter Zustand (Sensoren haben nicht ausgelöst).
+- `ERROR (both)` — Fehler: Der Extruder ist gleichzeitig zu Hause und am Kopf (Sensor-Desynchronisation).
+- `Door` — Zustand der vorderen Tür (`Close` / `Open`).
+- `Top` — Zustand der oberen Abdeckung (`Close` / `Open`).
+- `Offset` — aktuelle G-Code-Offsets entlang der X-, Y-, Z-Achsen.
 
 ---
 
-## Lüftungsmodi
+## Ventilationsmodi
 
-Der Creator5 Pro ist mit einem Kammerlüftungssystem mit mehreren Lüftern ausgestattet. Die richtige Verwaltung der Lüftung ist entscheidend für die Druckqualität verschiedener Materialien.
+Der Creator5 Pro ist mit einem Kammer-Ventilationssystem mit mehreren Lüftern ausgestattet. Die richtige Steuerung der Ventilation ist entscheidend für die Druckqualität verschiedener Materialien.
 
 **Externe Ansaugung (PLA, TPU):**
-Das Makro `AIR_CIRCULATION_EXTERNAL` aktiviert die Kammerabsaugung und die Zufuhr frischer Luft. Dies wird für PLA und TPU benötigt, damit der Kunststoff schnell abkühlt und nicht durch die Kammerwärme erweicht.
+
+Das Makro `AIR_CIRCULATION_EXTERNAL` schaltet die Kammerabsaugung und die Frischluftzufuhr ein. Es wird für PLA und TPU benötigt, damit der Kunststoff schnell abkühlt und nicht durch die Kammerwärme erweicht.
 ```
 AIR_CIRCULATION_EXTERNAL
 ```
@@ -393,7 +425,8 @@ AIR_CIRCULATION_EXTERNAL
 | `chamber_loop_fan` (Zirkulation) | 0.0 |
 
 **Interne Zirkulation (ABS, ASA):**
-Das Makro `AIR_CIRCULATION_INTERNAL` aktiviert die interne Zirkulation und die Kammerheizung. Dies wird für ABS und ASA benötigt, um Delamination und Verzug durch Temperaturschwankungen zu vermeiden.
+
+Das Makro `AIR_CIRCULATION_INTERNAL` schaltet die interne Zirkulation und die Kammerheizung ein. Es wird für ABS und ASA benötigt, um Delaminierung und Verformung durch Temperaturschwankungen zu vermeiden.
 ```
 AIR_CIRCULATION_INTERNAL
 ```
@@ -404,41 +437,44 @@ AIR_CIRCULATION_INTERNAL
 | `chamber_heat_fan` (Heizung) | 0.9 |
 | `chamber_loop_fan` (Zirkulation) | 0.3 |
 
-**Lüftung stoppen:**
+**Ventilation stoppen:**
 Das Makro `AIR_CIRCULATION_STOP` schaltet alle Kammerlüfter vollständig aus.
 ```
 AIR_CIRCULATION_STOP
 ```
 
-### Wo man Lüftungsmakros hinzufügt
+### Wo Ventilationsmakros hinzugefügt werden
 
-> **Empfehlung:** Es ist am besten, Aufrufe von Lüftungsmakros in den **Filament-Code** im Slicer einzufügen. Dies gewährleistet einen automatischen Moduswechsel beim Materialwechsel.
+> **Empfehlung:** Am besten fügen Sie die Aufrufe der Ventilationsmakros in den **Filamentcode** im Slicer ein. Dies gewährleistet die automatische Umschaltung des Modus beim Materialwechsel.
 
 **In OrcaSlicer:**
-1. Öffnen Sie die Filamenteinstellungen.
-2. Gehen Sie zum Reiter „Filamenteinstellungen“.
-3. Fügen Sie im Feld **Filament-Start-G-Code** das erforderliche Makro hinzu:
+
+1. Öffnen Sie die Filament-Einstellungen.
+2. Gehen Sie zur Registerkarte „Filament-Einstellungen“.
+3. Fügen Sie im Feld **Start-G-Code des Filaments** das benötigte Makro hinzu:
    - Für PLA: `AIR_CIRCULATION_EXTERNAL`
    - Für ABS: `AIR_CIRCULATION_INTERNAL`
    - Für TPU: `AIR_CIRCULATION_EXTERNAL`
 
 **Beispiel für PLA:**
-```gcode
+```
 ; Filament start gcode
 AIR_CIRCULATION_EXTERNAL
 ```
 
 **Beispiel für ABS:**
-```gcode
+```
 ; Filament start gcode
 AIR_CIRCULATION_INTERNAL
 ```
 
-Auf diese Weise schaltet die Lüftung beim Mehrfarbendruck mit verschiedenen Materialien automatisch in den für jeden Extruder erforderlichen Modus.
+Somit wird bei Mehrfarbdruck mit unterschiedlichen Materialien die Ventilation automatisch für jeden Extruder in den benötigten Modus geschaltet.
+
+---
 
 ## Druckbeschleunigung
 
-In 'mod_data/user.cfg' eintragen
+Fügen Sie in 'mod_data/user.cfg' hinzu:
 
 ```
 [printer]
@@ -446,11 +482,13 @@ short_move_limit: False
 short_extrude_move_limit: False
 ```
 
-Diese Einstellung beschleunigt den Druckvorgang erheblich, kann jedoch bei der Option „Fuzzy Skin“ (Rauhe Oberfläche) zu Druckerabstürzen führen.
+Diese Einstellung beschleunigt den Druck erheblich, kann aber bei Fuzzy-Skin zu Druckerabstürzen führen.
 
-## Deaktivierung der schnellen Rückkehr des Kopfes und des Vorheizens
+---
 
-Schreiben Sie in 'mod_data/user.cfg'
+## Deaktivierung der schnellen Rückführung des Kopfes und der Vorheizung
+
+Fügen Sie in 'mod_data/user.cfg' hinzu:
 
 ```
 [virtual_sdcard]
@@ -458,14 +496,16 @@ enable_speed_return: False
 enable_preheat: False
 ```
 
-- **enable_speed_return**: False — Deaktiviert die erzwungene Rückkehr des Kopfes zum Modell mit einer Geschwindigkeit von 600 mm/s, wodurch das Risiko starker kinematischer Stöße und eines Bruchs des Hotends an gedruckten Teilen (dem Rohturm) beseitigt wird. Die Steuerung der sicheren Rückkehrbahn wird vollständig an den Slicer OrcaSlicer übergeben.
-- **enable_preheat**: False — Deaktiviert das Scannen von Klipper-Dateien im Hintergrund und entlastet den Prozessor. Die integrierte Funktion beschleunigte das Aufheizen bei Verwendung von mehr als zwei Düsen in einem kurzen Zeitraum, da der Drucker nicht mehr als zwei Düsen gleichzeitig aufheizen kann. Das vorausschauende Vorheizen wird auf der OrcaSlicer-Seite genauer berechnet.
+- **enable_speed_return**: False — Deaktiviert die erzwungene Rückführung des Kopfes zum Modell mit 600 mm/s, wodurch das Risiko starker kinematischer Stöße und eines Bruchs des Hotends an gedruckten Teilen (Prime Tower) beseitigt wird. Die Steuerung einer sicheren Rückführungsbahn wird vollständig an OrcaSlicer übergeben.
+- **enable_preheat**: False — Deaktiviert das Hintergrund-Scannen von Klipper-Dateien und entlastet den Prozessor. Die integrierte Funktion beschleunigte die Heizung bei Verwendung von mehr als zwei Düsen in kurzer Zeit, da der Drucker nicht mehr als zwei Düsen gleichzeitig heizen kann. Die vorausschauende Vorheizung wird auf der OrcaSlicer-Seite genauer berechnet.
 
-## Deaktivierung der Benachrichtigung bei geöffneter Tür
+---
 
-Um Benachrichtigungen über eine geöffnete Abdeckung oder Tür im Betrieb ohne nativen Bildschirm zu entfernen
+## Deaktivierung der Benachrichtigung über eine geöffnete Tür
 
-Fügen Sie Folgendes in 'mod_data/user.cfg' ein
+Um Benachrichtigungen über eine geöffnete Abdeckung oder Tür im Modus ohne originalen Bildschirm zu entfernen
+
+Fügen Sie in 'mod_data/user.cfg' hinzu:
 
 ```
 [gcode_button topDoor]
