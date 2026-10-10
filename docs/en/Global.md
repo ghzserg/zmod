@@ -743,8 +743,10 @@ Example: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
 
 ##### CONVERT_3MF
 
-- 0 - 3mf → 3mf. The file is saved as is, can be printed from the native screen, Guppy, Fluidd, Mainsail, but the preprocessor and exception simplification are not applied.
-- 1 - 3mf → gcode. The file is unpacked into gcode, the preprocessor and exception simplification work, but the original 3mf container is lost. (default)
+- 0 - 3mf → 3mf. The file is saved as is, can be printed from the native screen, Guppy, Fluidd, Mainsail.
+- 1 - 3mf → gcode. The file is unpacked into gcode, the original 3mf container is lost. (default)
+
+Attention! When sending in 3mf format, the preprocessor and exception simplification are not applied. Color matching works.
 
 <img width="394" height="310" alt="{7E72B275-D0A6-4E05-AE88-464569314BF9}" src="https://github.com/user-attachments/assets/31a7bf96-8111-478a-9c2c-c5576e92c5c8" />
 
