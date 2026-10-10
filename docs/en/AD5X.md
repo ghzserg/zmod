@@ -118,18 +118,30 @@ You can perform four actions:
 
 ## **4. Print Menu (Macro `PRINT`)**
 
-This window opens **automatically** when you start printing.
-<img width="567" height="564" alt="image" src="https://github.com/user-attachments/assets/a046c089-22d3-474e-89b6-89815412d068" />
+This window opens **by itself** when you start printing.
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f1ad0f49-e2bd-43c8-9301-7c58b9c05c22" />
+<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
 
-**How to interpret the display:**
+**How to understand what is written here:**
 
-*   `Cube.gcode` – The name of the file being printed.
-*   `T0` – The first color in the file. Printed using **spool №4** (orange PLA).
-*   `T1` – The second color. Printed using **spool №3** (black PLA).
-*   `T2` – The third color. Printed using **spool №2** (green PLA).
-*   `T3` – The fourth color. Also printed using **spool №2** (green PLA).
+- In the left column are tool numbers and colors from the file passed from the slicer.
+- In the right column are spool numbers and colors loaded/used on the printer.
+- `Cube.gcode` – this is the name of the file being printed.
+- `1: PETG ->` – this is the first color from the file (orange PETG). It is printed with filament from spool 3 (orange PETG).
+- `2: PLA ->` – this is the second color (gray PLA). It is printed with filament from spool 4 (blue PLA). Because there are no other PLA plastics in the printer.
+- `3: PETG ->` – the third color (black PETG), printed from spool 3 (orange PETG). Because there are no other PETG plastics in the printer.
+- `4: PETG-CF ->` – the fourth color (blue PETG-CF), printed from spool 1 (black PETG-CF). Because there are no other PETG-CF plastics in the printer.
+
+If the image looks like this
+
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+
+This means that you have disabled the auto color matching option and/or file scanning. You can click the `AUTO_SELECT_COLORS` button or enable it in global parameters:
+```
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
+```
+
+[It is strongly recommended to enable the preprocessor](/Global/#force_md5)
 
 **To change the spool for a color during printing:**
 
