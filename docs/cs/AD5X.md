@@ -117,18 +117,30 @@ Můžete provést čtyři akce:
 
 ## **4. Menu tisku (makro `PRINT`)** {#4-menu-tisku-print}
 
-Toto okno se otevře **automaticky** při spuštění tisku.
-<img width="567" height="564" alt="image" src="https://github.com/user-attachments/assets/a046c089-22d3-474e-89b6-89815412d068" />
+Toto okno se otevírá **samo**, když začnete tisknout.
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f1ad0f49-e2bd-43c8-9301-7c58b9c05c22" />
+<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
 
-**Jak interpretovat zobrazení:**
+**Jak pochopit, co je zde napsáno:**
 
-*   `Cube.gcode` – Název tištěného souboru.
-*   `T0` – První barva v souboru. Tiskne se pomocí **cívky č. 4** (oranžová PLA).
-*   `T1` – Druhá barva. Tiskne se pomocí **cívky č. 3** (černá PLA).
-*   `T2` – Třetí barva. Tiskne se pomocí **cívky č. 2** (zelená PLA).
-*   `T3` – Čtvrtá barva. Tiskne se také pomocí **cívky č. 2** (zelená PLA).
+- V levém sloupci jsou čísla nástrojů a barvy ze souboru předané ze sliceru.
+- V pravém sloupci jsou čísla cívek a barvy načtené/použité na tiskárně.
+- `Cube.gcode` – to je název souboru, který se tiskne.
+- `1: PETG ->` – to je první barva ze souboru (oranžový PETG). Tiskne se filamentem z cívky 3 (oranžový PETG).
+- `2: PLA ->` – to je druhá barva (šedý PLA). Tiskne se filamentem z cívky 4 (modrý PLA). Protože v tiskárně nejsou žádné jiné PLA plasty.
+- `3: PETG ->` – třetí barva (černý PETG), tiskne se z cívky 3 (oranžový PETG). Protože v tiskárně nejsou žádné jiné PETG plasty.
+- `4: PETG-CF ->` – čtvrtá barva (modrý PETG-CF), tiskne se z cívky 1 (černý PETG-CF). Protože v tiskárně nejsou žádné jiné PETG-CF plasty.
+
+Pokud obrázek vypadá takto
+
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+
+To znamená, že máte vypnutou volbu automatického přiřazení barev a/nebo skenování souborů. Můžete kliknout na tlačítko `AUTO_SELECT_COLORS` nebo ji zapnout v globálních parametrech:
+```
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
+```
+
+[Důrazně doporučujeme zapnout preprocesor](/cs/Global/#force_md5)
 
 **Pro změnu cívky pro barvu během tisku:**
 
