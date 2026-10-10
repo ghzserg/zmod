@@ -177,6 +177,7 @@ AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=80
+{single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
 M190 S[bed_temperature_initial_layer_single] ; Ждать прогрева стола
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Установить температуру сопла
 ```
@@ -191,6 +192,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 А еще лучше создать несколько карт под каждую температуру 60, 70, 80, 90, 100, 110 и прописать вот такой стартовый код:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
+{single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
 M190 S[bed_temperature_initial_layer_single] ; Ждать прогрева стола
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Установить температуру сопла
 ```
@@ -260,6 +262,7 @@ SAVE_ZMOD_DATA PRINT_LEVELING=1
 Стартовый код можно использовать такой:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
+{single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
 M190 S[bed_temperature_initial_layer_single] ; Ждать прогрева стола
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Установить температуру сопла
 ```
