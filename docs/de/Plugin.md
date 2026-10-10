@@ -19,6 +19,7 @@ Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – eine alternative Bildschirmimplementierung
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin für schnelleren Farbwechsel auf dem AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin zum Anschließen des Trockners [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
+8. [IFS Backup](https://github.com/catduckgnaf/zmod-ifs-backup) - Meldet andere AD5X-IFS-Slots mit derselben Farbe und demselben Material. Wechselt kein Filament.
 
 Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `ENABLE_EXTRA_PLUGINS` aus.
 
