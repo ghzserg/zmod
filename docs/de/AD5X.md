@@ -121,18 +121,30 @@ Sie haben vier Optionen zur Auswahl:
 
 ## **4. Menü "Drucken" (Makro `PRINT`) AD5X**
 
-Dieses Fenster öffnet sich **selbst**, wenn Sie den Druckvorgang starten.
-<img width="567" height="564" alt="image" src="https://github.com/user-attachments/assets/a046c089-22d3-474e-89b6-89815412d068" />
+Dieses Fenster öffnet sich **von selbst**, wenn Sie mit dem Drucken beginnen.
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/f1ad0f49-e2bd-43c8-9301-7c58b9c05c22" />
+<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
 
-**Wie ist das zu verstehen:**
+**So verstehen Sie, was hier steht:**
 
-* `Cube.gcode` ist der Name der Datei, die gedruckt wird.
-* `T0` ist die erste Farbe aus der Datei. Sie wird mit Filament von **Spule #4** (orangefarbenes PLA) gedruckt.
-* `T1` ist die zweite Farbe. Sie wird mit dem Filament von **Spule #3** (schwarzes PLA) gedruckt.
-* `T2` ist die dritte Farbe, sie wird aus der **Spule #2** (grünes PLA) gedruckt.
-* `T3` ist die vierte Farbe, die ebenfalls von der **Spule #2** (grünes PLA) gedruckt wird.
+- In der linken Spalte stehen Werkzeugnummern und Farben aus der Datei, die vom Slicer übergeben wurden.
+- In der rechten Spalte stehen Spulennummern und Farben, die am Drucker geladen/verwendet werden.
+- `Cube.gcode` – das ist der Name der Datei, die gedruckt wird.
+- `1: PETG ->` – das ist die erste Farbe aus der Datei (oranges PETG). Sie wird mit Filament von Spule 3 gedruckt (oranges PETG).
+- `2: PLA ->` – das ist die zweite Farbe (graues PLA). Sie wird mit Filament von Spule 4 gedruckt (blaues PLA). Da sich keine anderen PLA-Kunststoffe im Drucker befinden.
+- `3: PETG ->` – die dritte Farbe (schwarzes PETG), gedruckt von Spule 3 (oranges PETG). Da sich keine anderen PETG-Kunststoffe im Drucker befinden.
+- `4: PETG-CF ->` – die vierte Farbe (blaues PETG-CF), gedruckt von Spule 1 (schwarzes PETG-CF). Da sich keine anderen PETG-CF-Kunststoffe im Drucker befinden.
+
+Wenn das Bild so aussieht
+
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+
+bedeutet das, dass Sie die Option zur automatischen Farbzuordnung und/oder das Scannen von Dateien deaktiviert haben. Sie können auf die Schaltfläche `AUTO_SELECT_COLORS` klicken oder sie in den globalen Parametern aktivieren:
+```
+SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
+```
+
+[Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
 **So wechseln Sie die Farbspule während des Druckvorgangs:**
 
