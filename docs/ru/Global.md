@@ -802,3 +802,15 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 - 1 - Сохранять состояние датчиков после перезагрузки. Если отключить датчик, то после перезагрузки он также будет отключен.
 
 Пример: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
+
+
+##### CONVERT_3MF
+
+- 0 - 3mf → 3mf. Файл сохраняется как есть, печатается c родного экрана, Guppy, Fluidd, Mainsail, но препроцессор и упрощение исключений не применяются.
+- 1 - 3mf → gcode. Файл распаковывается в gcode, препроцессор и упрощение исключений работают, но исходный 3mf-контейнер теряется. (по умолчанию)
+
+<img width="394" height="310" alt="{7E72B275-D0A6-4E05-AE88-464569314BF9}" src="https://github.com/user-attachments/assets/31a7bf96-8111-478a-9c2c-c5576e92c5c8" />
+
+В Orca 3mf включается `Printer settings` -> `Basic Information` -> `USE 3MF insted of G-code`
+
+Пример: `SAVE_ZMOD_DATA CONVERT_3MF=0`
