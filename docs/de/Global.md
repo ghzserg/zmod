@@ -919,8 +919,10 @@ Beispiel: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`.
 
 ##### CONVERT_3MF
 
-- 0 - 3mf → 3mf. Die Datei wird unverändert gespeichert, kann vom nativen Bildschirm, Guppy, Fluidd, Mainsail gedruckt werden, aber der Präprozessor und die Ausnahmevereinfachung werden nicht angewendet.
-- 1 - 3mf → gcode. Die Datei wird in G-Code entpackt, der Präprozessor und die Ausnahmevereinfachung funktionieren, aber der ursprüngliche 3mf-Container geht verloren. (Standard)
+- 0 - 3mf → 3mf. Die Datei wird unverändert gespeichert, kann vom nativen Bildschirm, Guppy, Fluidd, Mainsail gedruckt werden.
+- 1 - 3mf → gcode. Die Datei wird in G-Code entpackt, der ursprüngliche 3mf-Container geht verloren. (Standard)
+
+Achtung! Beim Senden im 3mf-Format werden der Präprozessor und die Ausnahmevereinfachung nicht angewendet. Die Farbzuordnung funktioniert.
 
 <img width="394" height="310" alt="{7E72B275-D0A6-4E05-AE88-464569314BF9}" src="https://github.com/user-attachments/assets/31a7bf96-8111-478a-9c2c-c5576e92c5c8" />
 
