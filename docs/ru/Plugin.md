@@ -19,6 +19,7 @@
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Плагин для более быстрой смены цветов на AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Плагин для подключения сушилки [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
+8. [Print Bitch](https://github.com/catduckgnaf/print-bitch) - Показывает другие слоты IFS на AD5X с тем же цветом и материалом. Филамент не переключает.
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `ENABLE_EXTRA_PLUGINS`.
 
