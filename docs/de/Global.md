@@ -914,3 +914,16 @@ Beispiel: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`.
 - 1 - Zustand der Sensoren nach einem Neustart speichern. Wenn Sie einen Sensor deaktivieren, wird er auch nach dem Neustart deaktiviert.
 
 Beispiel: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`.
+
+---
+
+##### CONVERT_3MF
+
+- 0 - 3mf → 3mf. Die Datei wird unverändert gespeichert, kann vom nativen Bildschirm, Guppy, Fluidd, Mainsail gedruckt werden, aber der Präprozessor und die Ausnahmevereinfachung werden nicht angewendet.
+- 1 - 3mf → gcode. Die Datei wird in G-Code entpackt, der Präprozessor und die Ausnahmevereinfachung funktionieren, aber der ursprüngliche 3mf-Container geht verloren. (Standard)
+
+<img width="394" height="310" alt="{7E72B275-D0A6-4E05-AE88-464569314BF9}" src="https://github.com/user-attachments/assets/31a7bf96-8111-478a-9c2c-c5576e92c5c8" />
+
+In Orca wird 3mf aktiviert über `Printer settings` -> `Basic Information` -> `USE 3MF insted of G-code`
+
+Beispiel: `SAVE_ZMOD_DATA CONVERT_3MF=0`
