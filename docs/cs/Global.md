@@ -735,3 +735,16 @@ Příklad: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 - 1 - Uložit stav senzorů po restartu. Pokud senzor zakážete, bude zakázán i po restartu.
 
 Příklad: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
+
+---
+
+##### CONVERT_3MF
+
+- 0 - 3mf → 3mf. Soubor se uloží tak, jak je, lze tisknout z nativní obrazovky, Guppy, Fluidd, Mainsail, ale preprocesor a zjednodušení výjimek se nepoužijí.
+- 1 - 3mf → gcode. Soubor se rozbalí do gcode, preprocesor a zjednodušení výjimek fungují, ale původní 3mf kontejner se ztratí. (výchozí)
+
+<img width="394" height="310" alt="{7E72B275-D0A6-4E05-AE88-464569314BF9}" src="https://github.com/user-attachments/assets/31a7bf96-8111-478a-9c2c-c5576e92c5c8" />
+
+V Orca se 3mf zapíná přes `Printer settings` -> `Basic Information` -> `USE 3MF insted of G-code`
+
+Příklad: `SAVE_ZMOD_DATA CONVERT_3MF=0`
