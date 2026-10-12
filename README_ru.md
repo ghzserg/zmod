@@ -1,6 +1,6 @@
 # FF5M / FF5M Pro / AD5X / Creator 5 / Creator 5 Pro Z-Mod
 
-<img width="698" height="291" alt="logo zmod" src="https://github.com/user-attachments/assets/5e26413b-c9a2-49f2-b9b8-5ecde709c521" />
+<img width="660" height="263" alt="Logo" src="https://github.com/user-attachments/assets/2befbddc-c055-4006-9864-90ab3b182512" />
 
 [In English](https://wiki.zmod.link/)
 
