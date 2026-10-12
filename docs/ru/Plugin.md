@@ -20,6 +20,7 @@
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Плагин для более быстрой смены цветов на AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Плагин для подключения сушилки [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
 8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Показывает другие слоты IFS на AD5X с тем же цветом и материалом. Филамент не переключает.
+9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Показывает слоты IFS на AD5X или головы Creator 5 как линии AFC в панелях AFC Mainsail и Fluidd: загрузка/выгрузка, цвет, материал и катушки Spoolman.
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `ENABLE_EXTRA_PLUGINS`.
 
