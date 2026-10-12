@@ -6,8 +6,6 @@
 
 [https://zmod.link/](https://zmod.link/) [@zmod_help_bot](http://t.me/zmod_help_bot)
 
-[Объявлен сбор на Creator 5 Pro для запуска Z-Mod на этом принтере ->>>](https://github.com/ghzserg/zmod/discussions/554)
-
 ### Z-Mod для FlashForge AD5M/AD5M PRO/AD5X/Creator 5/Creator 5 Pro: Полный контроль над вашим принтером
 
 Поздравляем с покупкой принтера FlashForge! Родная прошивка отлична для начала работы, но если вы хотите раскрыть **полный потенциал** своего устройства, Z-Mod — это мощное и бесплатное решение, которое превращает ваш принтер из "пользовательского" в "профессиональный".
