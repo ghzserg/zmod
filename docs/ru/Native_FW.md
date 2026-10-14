@@ -2,14 +2,17 @@
 
 [Здесь находится родная прошивка для принтеров AD5M, AD5M Pro, AD5X](https://github.com/ghzserg/FF/releases/R)
 
-## Как установить родную прошивку
+## Как установить прошивку
 
-1. Сбросить принтер до настроек по умолчанию
-2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
-3. Поместить файл в корневую папку USB Flash
-4. Выключить принтер
-5. Вставить флешку в принтер
-6. Включить принтер
+0. Перед установкой лучше сбросить принтер до настроек по умолчанию, если это возможно.
+1. Отформатировать USB Flash (обычную флешку) в FAT32 или FAT/FAT16/(MBR).
+2. Поместить файл в корневую папку USB Flash (просто на флешку без вложенных папочек).
+3. Выключить принтер.
+4. Вставить флешку в принтер.
+5. Включить принтер.
+6. Дождаться полной загрузки.
+7. Перезагрузить принтер по питанию.
+8. Провести необходимые [калибровки](https://wiki.zmod.link/ru/SetupCalibrations/)
 
 ## AD5X родная прошивка
 
@@ -77,7 +80,7 @@
 
 # Раскирпичиватель
 
-Универсальный раскирпичиватель для FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+Универсальный раскирпичиватель для AD5m / AD5mPro / AD5x / Creator 5 / Creator 5 Pro
 
 1. Скачать файл [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip)
 2. Отформатировать флешку в Fat32
@@ -86,6 +89,7 @@
 4. Вставить флешку в принтер
 5. Дождаться прошивки (до 40 минут)
 6. Вынуть флешку из принтера
+7. Перезагрузить принтер по питанию
 
 Если что-то пошло не так, посмотреть log файлы на флешке
 
@@ -93,15 +97,15 @@
 
 **Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
 
-Установка занимает много времени до часа.
+[Установка](https://wiki.zmod.link/ru/Native_FW/#%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D1%83) занимает много времени до часа.
 
-1. Загрузите на флешку FF5M все перечисленные файлы:
+1. Загрузите на флешку AD5m все перечисленные файлы:
 
    - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
-2. Загрузите на флешку FF5MPro пречисленные ниже файлы (принтер станет с версией FF5M, как перейти обратно читайте ниже):
+2. Загрузите на флешку AD5mPro пречисленные ниже файлы (принтер станет с версией FF5M, как перейти обратно читайте ниже):
 
    - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
@@ -109,11 +113,11 @@
 
 3. После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-## Установка полной прошивки на AD5X
+## Установка полной прошивки на AD5x
 
 **Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
 
-Установка занимает много времени до часа.
+[Установка](https://wiki.zmod.link/ru/Native_FW/#%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D1%83) занимает много времени до часа.
 
 1. Загрузите на флешку 2 файла сразу:
 
@@ -124,28 +128,28 @@
 
 ## Установка полной прошивки на Creator 5 / Creator 5 Pro
 
-**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+**Раскирпичиватель Creator 5/5pro, Это НЕ Facrory (фактори) родная прошивка принтера.**
+Ее нужно ставить только в случае если принтер вообще не запускается. Установка занимает много времени до часа.
 
-Установка занимает много времени до часа.
+- Загрузите на флешку отформатированную в FAT32 сразу все 3 файла:
 
-1. Загрузите на флешку 3 файла сразу:
+   1. [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz) .
+   2. [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz) .
+   3. [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz) .
 
-   - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
-   - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
-   - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
+- Выключите питание принтера, вставьте флешку, включите питание, ждите полной перезагруки. Даже Creator 5 станет Creator 5 Pro - это нормально.
 
-Creator 5 станет Creator 5 Pro. Что бы вернуть его обратно в обычную версию, читайте ниже
-
-2. После обновления, если вам надо перешить MCU установите:
+- Перешить MCU после обновления чтобы вернуть Creator 5 обратно из 5pro в обычную версию, или наоборот:
 
    - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
    - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
 
-## AD5X/Creator 5/Creator 5 Pro активация Z-Mod
+## AD5X / Creator 5 / Creator 5 Pro активация Z-Mod
 
-Это активатор Z-Mod
+**Активатор Z-Mod**
 
-Включение Z-Mod на AD5X/Creator 5/Creator 5 Pro после обновления родной прошивки, позволяет активировать мод без полной его переустановки
+Включение Z-Mod на AD5X / Creator5 / Creator5pro после обновления родной прошивки, позволяет активировать мод без полной его переустановки.
+[Установка](https://wiki.zmod.link/ru/Native_FW/#%D0%BA%D0%B0%D0%BA-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D1%88%D0%B8%D0%B2%D0%BA%D1%83) начиная с пункта 1.
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -153,7 +157,8 @@ Creator 5 станет Creator 5 Pro. Что бы вернуть его обра
 
 ## Установка XY
 
-Для тех у кого поехала крыша сместился "дом" (парковка к какашкоприемнику). Извлечь содержимое архива в корень флешки, вставить флешку и перезагрузить принтер. Загрузится калибровка. Сначала нажать Reset. Потом выставить кнопками управления на экране правильную позицию головы. Зафиксировать это дело кнопкой Set. Перезагрузить принтер без флешки. Архив от официальной поддержки flashforge.
+Для тех у кого поехала крыша сместился "дом" (парковка к какашкоприемнику).
+Извлечь содержимое архива в корень FAT32 флешки, выключить принтер, вставить флешку, включить принтер. Загрузится калибровка. Сначала нажать Reset. Потом выставить кнопками управления на экране правильную позицию головы. Зафиксировать это дело кнопкой Set. Перезагрузить принтер без флешки. Архив от официальной поддержки flashforge.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
@@ -266,6 +271,7 @@ Fix E0011 Off
 ## REM_ZMOD
 ### Удалить ZMOD
 
+
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-rem_zmod.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-rem_zmod.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-rem_zmod.tgz)
@@ -273,6 +279,7 @@ Fix E0011 Off
 
 ## FIX_KLIPPER
 ### Восстановить оригинальный Klipper
+
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
