@@ -119,9 +119,10 @@ chmod +x zfs.sh
 
 ### SET_TIMEZONE
 
-Смена часового пояса
+Смена часового пояса запускается командой в консоль `SET_TIMEZONE ZONE=Europe/Moscow` ,
+чтобы увидеть список вариантов введите в консоль `SET_TIMEZONE`
+Позволяет расчитать во сколько закончится печать на guppyscreen
 
-- ZONE - часовая зона (Asia/Yekaterinburg)
 
 ---
 
