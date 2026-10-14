@@ -139,10 +139,14 @@
 
 - Выключите питание принтера, вставьте флешку, включите питание, ждите полной перезагруки. Creator 5 станет Creator 5 Pro - это нормально.
 
-- Перешить MCU после обновления чтобы вернуть Creator 5 обратно из 5pro в обычную версию, или наоборот:
+- Перешить MCU после обновления:
 
    - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
    - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
+
+- Чтобы вернуть Creator 5 обратно из Creator 5 Pro в обычную версию:
+
+   - [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
 ## AD5X / Creator 5 / Creator 5 Pro активация Z-Mod
 
