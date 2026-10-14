@@ -27,7 +27,7 @@ LANG LANG=en
 
 ### SET_TIMEZONE
 
-[Смена часового пояса](https://wiki.zmod.link/ru/System/?h=#set_timezone) .
+[Смена часового пояса](/ru/System/#set_timezone) .
 
 ---
 
