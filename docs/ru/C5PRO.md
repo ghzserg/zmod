@@ -1,4 +1,8 @@
+# Creator5
 # Creator5 Pro
+
+!!! note
+    Этот документ актуален для **Creator 5** и **Creator 5 Pro**
 
 ## Важные особенности
 

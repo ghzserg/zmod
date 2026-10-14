@@ -1,4 +1,8 @@
-# Creator5 Pro
+#Creator5
+#Creator5 Pro
+
+!!! note
+    This document is relevant for Creator 5 and Creator 5 Pro
 
 ## Important features
 
