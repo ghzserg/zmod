@@ -20,6 +20,7 @@ External plugins not developed by the Z-Mod author.
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin for faster color changing on AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin for connecting the [Flook32](https://github.com/schreider/flook32) dryer [En](https://github.com/ghzserg/flook32)
 8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Reports other AD5X IFS slots with the same color and material. It does not switch filament.
+9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Shows the AD5X IFS slots or the Creator 5 toolheads as AFC lanes in the Mainsail and Fluidd AFC panels, with load/unload, color, material and Spoolman spool controls.
 
 To enable the repository of external plugins, run the command `ENABLE_EXTRA_PLUGINS`.
 
