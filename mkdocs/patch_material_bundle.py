@@ -132,7 +132,7 @@ def _extract_locales(config: dict) -> set[str]:
 
     # Fallback for this repository structure if plugin internals differ.
     if not locales:
-        locales = {"ru", "de", "pt", "cs"}
+        locales = {"ru", "de", "cs"}
 
     return locales
 
