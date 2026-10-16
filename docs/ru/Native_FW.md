@@ -148,6 +148,21 @@
 
    - [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
+# Универсальный активатор Z-Mod
+
+Универсальный активатор для AD5x / Creator 5 / Creator 5 Pro
+
+1. Скачать файл [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip)
+2. Отформатировать флешку в Fat32
+2. Распаковать [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) в корень флешки
+3. Выключить принтер
+4. Вставить флешку в принтер
+5. Дождаться прошивки
+6. Вынуть флешку из принтера
+7. Выключить и включить принтер
+
+Если что-то пошло не так, посмотреть enable-zmod.log файл на флешке
+
 ## AD5X / Creator 5 / Creator 5 Pro активация Z-Mod
 
 **Активатор Z-Mod**

@@ -126,6 +126,21 @@ Instalace trvá dlouho, až jednu hodinu.
 
 3. Po aktualizaci, pokud potřebujete znovu flashovat MCU, nainstalujte [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
+# Univerzální aktivátor Z-Mod
+
+Univerzální aktivátor pro AD5x / Creator 5 / Creator 5 Pro
+
+1. Stáhnout soubor [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip)
+2. Naformátovat flash disk na FAT32
+2. Rozbalit [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) do kořene flash disku
+3. Vypnout tiskárnu
+4. Vložit flash disk do tiskárny
+5. Počkat na aktualizaci firmwaru
+6. Vyjmout flash disk z tiskárny
+7. Vypnout a zapnout tiskárnu
+
+Pokud se něco pokazilo, zkontrolujte soubor enable-zmod.log na flash disku
+
 ## AD5X/Creator 5/Creator 5 Pro enable Z-Mod
 
 Povolení Z-Modu na AD5X/Creator 5/Creator 5 Pro po aktualizaci nativního firmwaru vám umožní aktivovat modifikaci bez nutnosti její kompletní přeinstalace.

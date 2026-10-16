@@ -127,6 +127,21 @@ Installation takes a long time, up to an hour.
 
 3. After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
+# Universal Z-Mod Activator
+
+Universal activator for AD5x / Creator 5 / Creator 5 Pro
+
+1. Download the [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) file
+2. Format the USB flash drive to FAT32
+2. Unpack [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) to the root of the flash drive
+3. Turn off the printer
+4. Insert the flash drive into the printer
+5. Wait for the firmware update
+6. Remove the flash drive from the printer
+7. Turn the printer off and on
+
+If something went wrong, check the enable-zmod.log file on the flash drive
+
 ## AD5X/Creator 5/Creator 5 Pro enable Z-Mod
 
 Enabling zmod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware allows you to activate the mod without completely reinstalling it
