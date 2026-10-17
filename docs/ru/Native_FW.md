@@ -278,6 +278,22 @@ Fix E0011 Off
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-update_mcu.tgz)
 
 ## LOG
+
+Универсальное снятие логов для AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+
+1. Скачать файл [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip)
+2. Отформатировать флешку в Fat32
+2. Распаковать [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) в корень флешки
+3. Выключить принтер
+4. Вставить флешку в принтер
+5. Дождаться прошивки
+6. Вынуть флешку из принтера
+7. Выключить и включить принтер
+
+Если что-то пошло не так, посмотреть zmd_log.log файл на флешке
+
+Файл config-x.y.z.tar нужно приложить к тикету
+
 ### Позволяет получить лог файлы, если Klipper не работает
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)

@@ -254,6 +254,22 @@ Removes leftover links from autostart
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-update_mcu.tgz)
 
 ## LOG
+
+Universal log collection for AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+
+1. Download the [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) file
+2. Format the flash drive to FAT32
+2. Unpack [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) into the root of the flash drive
+3. Turn off the printer
+4. Insert the flash drive into the printer
+5. Wait for the firmware update to complete
+6. Remove the flash drive from the printer
+7. Turn the printer off and on
+
+If something went wrong, check the zmd_log.log file on the flash drive
+
+The config-x.y.z.tar file must be attached to the ticket
+
 ### Allows retrieving log files if Klipper is not working
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)

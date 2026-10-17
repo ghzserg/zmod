@@ -259,6 +259,22 @@ Entfernt übrig gebliebene Links aus dem Autostart
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-update_mcu.tgz)
 
 ## LOG
+
+Universelle Protokollerfassung für AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+
+1. Laden Sie die Datei [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) herunter
+2. Formatieren Sie das Flash-Laufwerk auf FAT32
+2. Entpacken Sie [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) in das Stammverzeichnis des Flash-Laufwerks
+3. Schalten Sie den Drucker aus
+4. Stecken Sie das Flash-Laufwerk in den Drucker
+5. Warten Sie, bis die Firmware aktualisiert wurde
+6. Ziehen Sie das Flash-Laufwerk aus dem Drucker
+7. Schalten Sie den Drucker aus und wieder ein
+
+Wenn etwas schiefgelaufen ist, sehen Sie sich die Datei zmd_log.log auf dem Flash-Laufwerk an
+
+Die Datei config-x.y.z.tar muss dem Ticket beigefügt werden
+
 ### Ermöglicht das Abrufen von Log-Dateien, wenn Klipper nicht funktioniert
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)

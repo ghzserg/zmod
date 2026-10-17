@@ -104,6 +104,25 @@ To je **neefektivní**, **zpomaluje pomoc** a **frustruje všechny**.
 
 ---
 
+## LOG
+
+Univerzální sběr logů pro AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+
+1. Stáhněte soubor [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip)
+2. Naformátujte flash disk na FAT32
+2. Rozbalte [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) do kořenového adresáře flash disku
+3. Vypněte tiskárnu
+4. Vložte flash disk do tiskárny
+5. Počkejte na dokončení aktualizace firmwaru
+6. Vyjměte flash disk z tiskárny
+7. Vypněte a zapněte tiskárnu
+
+Pokud se něco pokazilo, podívejte se na soubor zmd_log.log na flash disku
+
+Soubor config-x.y.z.tar je nutné přiložit k tiketu
+
+---
+
 ## ✅ Jak „přivézt auto do servisu“ — Kontrolní seznam pro hlášení
 
 Abyste mi pomohli **přeskočit hádání a začít opravovat**, postupujte prosím podle tohoto kontrolního seznamu:
