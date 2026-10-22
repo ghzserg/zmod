@@ -60,6 +60,8 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
+- [2.0.0](https://github.com/ghzserg/FF/releases/download/R/Creator5-2.0.0-1.3.1-20261014.tgz)
+
 
 ## Creator 5 Pro Original-Firmware
 
@@ -68,6 +70,7 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
+- [2.0.0](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-2.0.0-1.3.1-20261014.tgz)
 
 # Unbricker
 
