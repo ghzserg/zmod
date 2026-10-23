@@ -18,6 +18,8 @@ Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware 
 
 Z-Mod ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
 
+*Z-Mod: Qui non legit, non intrat*
+
 > **Warum „Z-Mod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
 
 ### Hauptvorteile von Z-Mod gegenüber nativer Firmware

@@ -16,6 +16,8 @@ Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro z
 ### Co je Z-Mod?
 Z-Mod je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní.
 
+*Z-Mod: Qui non legit, non intrat*
+
 > **Proč „Z-Mod"?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod". Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
 
 ### Klíčové výhody Z-Mod oproti továrnímu firmwaru
