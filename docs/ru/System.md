@@ -24,7 +24,7 @@
 Кнопка с выбором параметров из списка "Макросы" или команда в консоли:.
 
 - `DISPLAY_OFF GUPPY=1 HELIX=0` - включит GuppyScreen.
-- `DISPLAY_OFF GUPPY=0 HELIX=1`  - включит [HelixScreen](https://github.com/prestonbrown/helixscreen) + `ENABLE_EXTRA_PLUGINS`.
+- `DISPLAY_OFF GUPPY=0 HELIX=1`  - включит [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
 После перезагрузки родной экран будет работать ещё 10 секунд, но он не влияет на z-offset т.к. печать идёт, не через него.
 
 **GuppyScreen** - Рекомендуется использовать вместо родного экрана.

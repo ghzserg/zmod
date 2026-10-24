@@ -22,7 +22,7 @@
 8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Показывает другие слоты IFS на AD5X с тем же цветом и материалом. Филамент не переключает.
 9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Показывает слоты IFS на AD5X или головы Creator 5 как линии AFC в панелях AFC Mainsail и Fluidd: загрузка/выгрузка, цвет, материал и катушки Spoolman.
 
-Чтобы включить репозиторий внешних плагинов, выполните команду `ENABLE_EXTRA_PLUGINS`.
+Чтобы включить репозиторий внешних плагинов, выполните команду `PLUGINS`.
 
 ---
 
