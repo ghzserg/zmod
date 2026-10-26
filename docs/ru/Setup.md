@@ -145,8 +145,8 @@
       - Имя хоста: `IP_принтера`
 
    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
-
-	  Для FF5M / FF5m Pro:
+   
+    Для FF5M / FF5m Pro:
 
       - Имя хоста: `IP_принтера:7125`
       - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
