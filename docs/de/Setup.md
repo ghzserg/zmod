@@ -215,7 +215,7 @@ Sie müssen auf **"Nach Updates suchen"** klicken. Und die Plug-ins nacheinander
 !!! info "Hinweis Mainsail"
 	(`Maschine` :arrow_right: `Systemauslastung(Host)`)
 
-muss mit den ersten beiden Ziffern der Z-Mod-Version (unter `Einstellungen/Maschine` :arrow_right: `Updates (Manager)` :arrow_right: `ffm5/zmod`) übereinstimmen.
+muss mit den ersten beiden Ziffern der Z-Mod-Version (unter `Einstellungen/Maschine` :arrow_right: `Updates (Manager)` :arrow_right: `Z-Mod`) übereinstimmen.
 
 - **Versionsabweichungen führen zu Instabilität.**
 

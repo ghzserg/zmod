@@ -388,7 +388,7 @@ Kde XXX, YYY, ZZZ jsou nahrazeny požadovanými typy filamentů (např. PLA-CF,P
 
 Aby tato nastavení fungovala, musíte **vypnout nativní displej tiskárny** pomocí makra `DISPLAY_OFF`.
 
-Chcete-li přidat nebo přejmenovat barvu, otevřete ```mod_data/colors/cs.cfg``` (místo cs použijte svůj jazyk):
+Chcete-li přidat nebo přejmenovat barvu, otevřete `mod_data/color/cs.json` (místo cs použijte svůj jazyk):
 
 Přidejte novou barvu nebo přejmenujte stávající.
 

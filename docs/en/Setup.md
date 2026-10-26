@@ -201,7 +201,7 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 **Version Compatibility:**
 
-- The OS version (under `System` → `Distribution`) must match the first two digits of the Z-Mod version (`Settings` → `Updates` → `ffm5/zmod`).
+- The OS version (under `System` → `Distribution`) must match the first two digits of the Z-Mod version (`Settings` → `Updates` → `Z-Mod`).
 - **Mismatched versions cause instability.**
 
 **Manual USB Update:**

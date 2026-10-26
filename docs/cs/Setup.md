@@ -199,7 +199,7 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 **Kompatibilita verzí:**
 
-- Verze operačního systému (v menu `System` → `Distribution`) musí odpovídat prvním dvěma číslicím verze Z-Mod (v menu `Settings` → `Updates` → `ffm5/zmod`).
+- Verze operačního systému (v menu `System` → `Distribution`) musí odpovídat prvním dvěma číslicím verze Z-Mod (v menu `Settings` → `Updates` → `Z-Mod`).
 - **Nesoulad verzí způsobuje nestabilitu.**
 
 **Manuální aktualizace přes USB:**

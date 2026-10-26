@@ -225,7 +225,7 @@ chmod +x ff5m.sh
 
 **Příklad použití v konzoli Fluidd/Mainsail:**
 ```
-ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_enN="./ff5m.sh bot1"
+ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MOON_PORT=7125 REMOTE_RUN="./ff5m.sh bot1"
 ```
 
 SSH se spustí 3 minuty po startu Klipperu a automaticky se restartuje na začátku tisku (přes makro `START_PRINT`).

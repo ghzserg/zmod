@@ -779,8 +779,8 @@ Nur Creator 5 / Creator 5 Pro
 
 Leiten Sie den Druckerbildschirm als virtuelle `screen`-Kamera in Fluidd/Mainsail und [zmod.link](https://zmod.link) um
 
+- 0 - Nicht umleiten
 - 1 - Umleiten (Standard)
-- 2 - Nicht umleiten
 
 Beispiel: `SAVE_ZMOD_DATA WEB_SCREEN=1`
 

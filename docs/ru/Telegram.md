@@ -9,71 +9,71 @@
 | **Информация от датчика филамента** | + | + |
 | **Информация о прогрессе печати в процентах** | + | + |
 | **Работа с несколькими принтерами через одного бота** | + | – |
-| **Информировиние через другие сервисы** | + | - |
-| **Splooman** | - | + |
+| **Информирование через другие сервисы** | + | - |
+| **Spoolman** | - | + |
 
 ---
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 ## Telegram Bot
 
 ### Описание
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Суть:
-У нас очень медленное  железо и очень мало памяти. Поэтому на железе запускать moonraker-telegram-bot нет смысла. 
+У нас очень медленное железо и очень мало памяти. Поэтому на железе запускать moonraker-telegram-bot нет смысла. 
 Но мы его можем запустить на внешнем сервере.
-Для этого нужен любой  сервер (реальный/виртуальный), до которого сможет достучаться принтер по SSH.
+Для этого нужен любой сервер (реальный/виртуальный), до которого сможет достучаться принтер по SSH.
 
-Новая версия автоматом создает SSH ключи (они используются для авторизации без паролей).
+Новая версия автоматически создаёт SSH-ключи (они используются для авторизации без паролей).
 
 Ключи лежат тут:
 
-- `‎/mod_data/ssh.pub.txt` - это открытый ключ. Текст из него необходимо поместить на сервере в файл `~/.ssh/authorized_keys`
-- `‎/mod_data/ssh.key` - закрытый ключ. Используется принтером для подключения к серверу.
+- `/mod_data/ssh.pub.txt` - это открытый ключ. Текст из него необходимо поместить на сервере в файл `~/.ssh/authorized_keys`
+- `/mod_data/ssh.key` - закрытый ключ. Используется принтером для подключения к серверу.
 
 Сами ключи вам по сути не нужны.
-Вам достаточно вызвать макрос [ZSSH_ON](/ru/Zmod/#zssh_on) передав следующие параметры:
+Вам достаточно вызвать макрос [ZSSH_ON](/ru/Zmod/#zssh_on), передав следующие параметры:
 
 - SSH_SERVER - ip или имя вашего сервера
 - SSH_PORT - порт ssh на сервере - обычно 22
-- SSH_USER - имя  пользователя на ssh сервере
-- VIDEO_PORT - порт который будет использоваться на сервере для приема видеоданных с камеры (8080)
-- MOON_PORT - порт который будет использоваться на сервере для приема данных от moonraker (7125).
+- SSH_USER - имя пользователя на ssh сервере
+- VIDEO_PORT - порт, который будет использоваться на сервере для приема видеоданных с камеры (8080)
+- MOON_PORT - порт, который будет использоваться на сервере для приема данных от moonraker (7125).
 - REMOTE_RUN - команда, которую нужно вызывать на удаленном сервере
 
 Запуск ssh съедает около 300 килобайт памяти.
 
-**Если принтер и сервер находятся в одной сети, то использовать SSH не обязательно. Читайте файл конфигурации [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+**Если принтер и сервер находятся в одной сети, то использовать SSH не обязательно. Читайте файл конфигурации [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf)** [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 Файл конфигурации можно скачать с принтера `mod/telegram/`.
 
 ---
 
 ### Регистрация бота
 
-Как зарегистрировать свой бот
+Как зарегистрировать своего бота
 
 1. Идете к [@BotFather](https://t.me/BotFather)
 2. `/newbot`
-3. Вводите любое имя, которое  вам нравится
-4. Вводите имя бота  ff5msuper_bot - обязательно _bot  в конце. 
-5. Получаете  длинный ID - его нужно будет прописать в настройках бота в параметр bot_token
+3. Вводите любое имя, которое вам нравится
+4. Вводите имя бота ff5msuper_bot - обязательно _bot в конце. 
+5. Получаете длинный ID - его нужно будет прописать в настройках бота в параметр bot_token
 
 ---
 
 ### Развертывание сервера
 
-#### Установка телеграмм бота одной командой на Debian
+#### Установка Telegram-бота одной командой на Debian
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Установка телеграмм бота [одной командой](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.sh) на Debian:
+Установка Telegram-бота [одной командой](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) на Debian:
 
 Выполнять под пользователем `root`
 ```
-bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.7/telegram/telegram.sh)
 ```
 
 Если у вас нет wget
@@ -84,21 +84,21 @@ apt update && apt install wget -y
 Этот скрипт:
 
 1. Установит docker
-2. Скачает [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) и [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf). [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Скачает [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) и [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf). [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Создаст пользователя tbot
-4. Напишет инструкцию по регистрации телеграмм бота и запросит `bot_token`
+4. Напишет инструкцию по регистрации Telegram-бота и запросит `bot_token`
 5. Напишет инструкцию по получению `chat_id` и запросит `chat_id`
-6. Установит [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/ff5m.sh)
+6. Установит [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/ff5m.sh)
 
-Добавить ssh ключ нужно будет самостоятельно
+Добавить SSH-ключ нужно будет самостоятельно
 
 ---
 
-#### Установка телеграмм бота по шагам
+#### Установка Telegram-бота по шагам
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
-Берете файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml) из `mod/telegram/` c принтера.
+Берете файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) из `mod/telegram/` с принтера.
 
 Устанавливаете docker, далее инструкция для Debian
 ```
@@ -107,13 +107,13 @@ apt upgrade -y
 apt install docker.io docker-compose docker apparmor -y
 ```
 
-Создаете  каталог для бота.
+Создаете каталог для бота.
 ```
 mkdir bot1
 cd bot1
 ```
 
-Помещаете  туда  [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
+Помещаете туда [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
 
 Создаете подкаталоги
 ```
@@ -121,7 +121,7 @@ mkdir config log timelapse_finished timelapse
 chmod 777 config log timelapse_finished timelapse
 ```
 
-В каталог config помещаете [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) из [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) и правите его под себя.
+В каталог config помещаете [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) из [mod/telegram/](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) и правите его под себя.
 
 [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
@@ -132,7 +132,7 @@ chmod 777 config log timelapse_finished timelapse
 docker-compose up -d
 ```
 
-Добавляете пользователя и даем ему право самому запускать docker-compose
+Добавляете пользователя и даёте ему право самому запускать docker-compose
 ```
 useradd tbot
 usermod -a -G docker tbot
@@ -153,26 +153,26 @@ usermod -a -G docker tbot
    cat >.ssh/authorized_keys
    ```
 
-   Вводите открытый ключ из файла `mod_data/ssh.pub.txt`. Потом  `Ctrl + d` 
+   Вводите открытый ключ из файла `mod_data/ssh.pub.txt`. Потом `Ctrl + D` 
 
 ---
 
 #### Запуск ZSSH на принтере
-После этого запускаете на принтере [ZSSH_ON](/ru/Zmod/#zssh_on) c необходимыми параметрами.
+После этого запускаете на принтере [ZSSH_ON](/ru/Zmod/#zssh_on) с необходимыми параметрами.
 
-После  каждой перезагрузки ssh, будет запускаться автоматически через 3 минуты.
+После каждой перезагрузки SSH будет запускаться автоматически через 3 минуты.
 
 #### TimeZone
 
-Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
+Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
 
-Укажите  вашу временную зону. В примере файла указана ```TZ=Asia/Yekaterinburg```
+Укажите вашу временную зону. В примере файла указана ```TZ=Asia/Yekaterinburg```
 
 ```docker-compose down && docker-compose up -d``` или ```docker compose down && docker compose up -d```
 
 #### Spoolman
 
-Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/docker-compose.yml)
+Отредактируйте файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
 
 Добавьте:
 ```
@@ -188,7 +188,7 @@ usermod -a -G docker tbot
 
 ```
 
-Откройте порт в фаерволе если он у вас используется
+Откройте порт в фаерволе, если он у вас используется
 ```iptables -I INPUT -p tcp --dport 7912 -j ACCEPT```
 
 Создайте папку `spoolman`
@@ -202,7 +202,7 @@ chmod 777 spoolman
 
 На принтере пропишите в `mod_data/user.moonraker.conf`
 
-`external_IP` - внешний ИП сервера на котором стоит docker
+`external_IP` - внешний IP сервера, на котором стоит docker
 
 У принтера ДОЛЖЕН быть доступ к этому IP
 
@@ -216,7 +216,7 @@ sync_rate: 5
 
 #### Установка и настройка для armbian (от noyhay)
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Скачиваем Debian Minimal/IOT images with Armbian с сайта [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -246,11 +246,11 @@ sudo apt install -y apparmor apparmor-utils
 
 Устанавливаем бот telegram
 ```
-bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.7/telegram/telegram.sh)
 ```
 
 Добавление ssh ключей:
-Заходим из под пользователя root в пользователя tbot
+Переключаемся из-под пользователя root на пользователя tbot
 ```
 su - tbot
 ```
@@ -260,16 +260,16 @@ su - tbot
 mkdir -p .ssh
 cat >.ssh/authorized_keys
 ```
-Вводите открытый ключ из файла в системе корневой системе mod_data/ssh.pub.txt. Потом CTRL+D
+Вводите открытый ключ из файла `mod_data/ssh.pub.txt`. Потом `Ctrl + D`
 
 Перезагружаем систему
 ```sudo reboot```
 
 ---
 
-#### Установка бота телеграмм через helm в kubernetes (от aldiserg)
+#### Установка Telegram-бота через helm в kubernetes (от aldiserg)
 
-Если вам достаточно только уведомлений в Telegram - то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
 
 Скачиваем helm и устанавливаем на компьютер [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
@@ -279,11 +279,11 @@ git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
 Изменяем:
 
-1. persistence.enabled меняем на false если не планируется долговременно хранить таймлапсы
+1. persistence.enabled меняем на false, если не планируется долговременно хранить таймлапсы
 
-2. persistence.volumes...storageClass если будем использовать внешний сторадж для таймлапсов
+2. persistence.volumes...storageClass если будем использовать внешнее хранилище для таймлапсов
 
-2. configMapAsFile.data.telegram.conf - основной наш конфиг, тут нужно поменять поля:
+3. configMapAsFile.data.telegram.conf - основной наш конфиг, тут нужно поменять поля:
    ```
    [bot]
    server: 3D_printer_host:7125
@@ -298,7 +298,7 @@ git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 
 Установка:
 
-Команды должны выполняться из директории в которой находится чарт
+Команды должны выполняться из директории, в которой находится чарт
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
@@ -359,13 +359,13 @@ rm -f ssh.pub.txt ssh.key
 ###### 3. Проверка подключения
 
 После очистки ключей на принтере и обновления `authorized_keys` на
-сервере --- запустите ZSSH макрос на принтере.
+сервере запустите макрос ZSSH_ON на принтере.
 Теперь соединение должно устанавливаться без ошибок.
 
 
 #### Альтернатива боту
 
-Учитывая, что в последнее время наблюдаются сбои в работе Telegram - есть альтернативное решение - создание таймлапсов на отдельном сервере, который использовался для телеграм бота. 
+Учитывая, что в последнее время наблюдаются сбои в работе Telegram, есть альтернативное решение — создание таймлапсов на отдельном сервере, который использовался для Telegram-бота. 
 Пример содержится в репозитории [https://github.com/seligor/printer_timelapse](https://github.com/seligor/printer_timelapse)
 С минимальными доработками его можно совместить с [https://github.com/seligor/web-timelapse](https://github.com/seligor/web-timelapse) и получить аналогичный функционал, но без использования мессенджера. 
 

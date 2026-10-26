@@ -16,9 +16,9 @@
 
 ## AD5X родная прошивка
 
-Это Facrory (фактори) родная прошивка для AD5X
+Это Factory (фактори) родная прошивка для AD5X
 
-Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 1.1.7
+Если вы не хотите, чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 1.1.7
 
 - [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
 - [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
@@ -36,9 +36,9 @@
 
 ## AD5M родная прошивка
 
-Это Facrory (фактори) родная прошивка для AD5M
+Это Factory (фактори) родная прошивка для AD5M
 
-Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
+Если вы не хотите, чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
 
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
@@ -51,9 +51,9 @@
 
 ## AD5M Pro родная прошивка
 
-Это Facrory (фактори) родная прошивка для AD5M Pro
+Это Factory (фактори) родная прошивка для AD5M Pro
 
-Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
+Если вы не хотите, чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку не выше 3.2.3
 
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
@@ -65,15 +65,15 @@
 
 ## Creator 5 родная прошивка
 
-Это Facrory (фактори) родная прошивка для Creator 5
+Это Factory (фактори) родная прошивка для Creator 5
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
 - [2.0.0](https://github.com/ghzserg/FF/releases/download/R/Creator5-2.0.0-1.3.1-20261014.tgz)
 
-## Creator 5 pro родная прошивка
+## Creator 5 Pro родная прошивка
 
-Это Facrory (фактори) родная прошивка для Creator 5 pro
+Это Factory (фактори) родная прошивка для Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
@@ -82,64 +82,64 @@
 
 # Раскирпичиватель
 
-Универсальный раскирпичиватель для AD5m / AD5mPro / AD5x / Creator 5 / Creator 5 Pro
+Универсальный раскирпичиватель для AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Скачать файл [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip)
-2. Отформатировать флешку в Fat32
-2. Распаковать [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) в корень флешки
-3. Выключить принтер
-4. Вставить флешку в принтер
-5. Дождаться прошивки (до 40 минут)
-6. Вынуть флешку из принтера
-7. Выключить и включить принтер
+2. Отформатировать флешку в FAT32
+3. Распаковать [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) в корень флешки
+4. Выключить принтер
+5. Вставить флешку в принтер
+6. Дождаться прошивки (до 40 минут)
+7. Вынуть флешку из принтера
+8. Выключить и включить принтер
 
-Если что-то пошло не так, посмотреть log файлы на флешке
+Если что-то пошло не так, посмотреть лог-файлы на флешке
 
 ## Установка полной прошивки на FF5M
 
-**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+**Это НЕ Factory (фактори) родная прошивка, а раскирпичиватель принтера.** Её нужно ставить, только если принтер вообще не запускается.
 
-Установка занимает много времени до часа.
+Установка занимает много времени — до часа.
 
-1. Загрузите на флешку AD5m все перечисленные файлы:
+1. Загрузите на флешку AD5M все перечисленные файлы:
 
    - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
-2. Загрузите на флешку AD5mPro пречисленные ниже файлы (принтер станет с версией FF5M, как перейти обратно читайте ниже):
+2. Загрузите на флешку AD5M Pro перечисленные ниже файлы (принтер станет с версией FF5M, как перейти обратно, читайте ниже):
 
    - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, если вы его ранее делали через `TAR_CONFIG`
 
-3. После обновления, если вам надо перешить MCU установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+3. После обновления, если вам надо перешить MCU, установите [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-## Установка полной прошивки на AD5x
+## Установка полной прошивки на AD5X
 
-**Это НЕ Facrory (фактори) родная прошивка, а раскирпичиватель принтера.** Ее нужно ставить только в случае если принтер вообще не запускается.
+**Это НЕ Factory (фактори) родная прошивка, а раскирпичиватель принтера.** Её нужно ставить, только если принтер вообще не запускается.
 
-Установка занимает много времени до часа.
+Установка занимает много времени — до часа.
 
 1. Загрузите на флешку 2 файла сразу:
 
    - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
    - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
 
-2. После обновления, если вам надо перешить MCU установите [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+2. После обновления, если вам надо перешить MCU, установите [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
 ## Установка полной прошивки на Creator 5 / Creator 5 Pro
 
-**Раскирпичиватель Creator 5/5pro, Это НЕ Facrory (фактори) родная прошивка принтера.**
-Ее нужно ставить только в случае если принтер вообще не запускается. Установка занимает много времени до часа.
+**Раскирпичиватель Creator 5 / 5 Pro. Это НЕ Factory (фактори) родная прошивка принтера.**
+Её нужно ставить, только если принтер вообще не запускается. Установка занимает много времени — до часа.
 
-- Загрузите на флешку отформатированную в FAT32 сразу все 3 файла:
+- Загрузите на флешку, отформатированную в FAT32, сразу все 3 файла:
 
-   1. [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz) .
-   2. [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz) .
-   3. [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz) .
+   1. [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz).
+   2. [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz).
+   3. [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz).
 
-- Выключите питание принтера, вставьте флешку, включите питание, ждите полной перезагруки. Creator 5 станет Creator 5 Pro - это нормально.
+- Выключите питание принтера, вставьте флешку, включите питание, ждите полной перезагрузки. Creator 5 станет Creator 5 Pro - это нормально.
 
 - Перешить MCU после обновления:
 
@@ -152,16 +152,16 @@
 
 # Универсальный активатор Z-Mod
 
-Универсальный активатор для AD5x / Creator 5 / Creator 5 Pro
+Универсальный активатор для AD5X / Creator 5 / Creator 5 Pro
 
 1. Скачать файл [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip)
-2. Отформатировать флешку в Fat32
-2. Распаковать [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) в корень флешки
-3. Выключить принтер
-4. Вставить флешку в принтер
-5. Дождаться прошивки
-6. Вынуть флешку из принтера
-7. Выключить и включить принтер
+2. Отформатировать флешку в FAT32
+3. Распаковать [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) в корень флешки
+4. Выключить принтер
+5. Вставить флешку в принтер
+6. Дождаться прошивки
+7. Вынуть флешку из принтера
+8. Выключить и включить принтер
 
 Если что-то пошло не так, посмотреть enable-zmod.log файл на флешке
 
@@ -169,7 +169,7 @@
 
 **Активатор Z-Mod**
 
-Включение Z-Mod на AD5X / Creator5 / Creator5pro после обновления родной прошивки, позволяет активировать мод без полной его переустановки.
+Включение Z-Mod на AD5X / Creator 5 / Creator 5 Pro после обновления родной прошивки позволяет активировать мод без полной его переустановки.
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -177,8 +177,8 @@
 
 ## Установка XY
 
-Для тех у кого поехала крыша сместился "дом" (парковка к какашкоприемнику).
-Извлечь содержимое архива в корень FAT32 флешки, выключить принтер, вставить флешку, включить принтер. Загрузится калибровка. Сначала нажать Reset. Потом выставить кнопками управления на экране правильную позицию головы. Зафиксировать это дело кнопкой Set. Перезагрузить принтер без флешки. Архив от официальной поддержки flashforge.
+Для тех, у кого ~~поехала крыша~~ сместился "дом" (парковка к какашкоприемнику).
+Извлечь содержимое архива в корень FAT32 флешки, выключить принтер, вставить флешку, включить принтер. Загрузится калибровка. Сначала нажать Reset. Потом выставить кнопками управления на экране правильную позицию головы. Зафиксировать это дело кнопкой Set. Перезагрузить принтер без флешки. Архив от официальной поддержки FlashForge.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
@@ -231,7 +231,7 @@ Fix E0011 Off
 [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
 ## 5X IFS
-Архив IFS прошивки
+Архив прошивки IFS
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
@@ -251,8 +251,8 @@ Fix E0011 Off
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Универсальный Python. Не забудьте выполнить ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Не забудьте выполнить ```chmod +x zmod-preprocess.sh```
 
@@ -283,22 +283,22 @@ Fix E0011 Off
 
 ## LOG
 
-Универсальное снятие логов для AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+Универсальное снятие логов для AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Скачать файл [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip)
-2. Отформатировать флешку в Fat32
-2. Распаковать [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) в корень флешки
-3. Выключить принтер
-4. Вставить флешку в принтер
-5. Дождаться прошивки
-6. Вынуть флешку из принтера
-7. Выключить и включить принтер
+2. Отформатировать флешку в FAT32
+3. Распаковать [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) в корень флешки
+4. Выключить принтер
+5. Вставить флешку в принтер
+6. Дождаться прошивки
+7. Вынуть флешку из принтера
+8. Выключить и включить принтер
 
 Если что-то пошло не так, посмотреть zmd_log.log файл на флешке
 
 Файл config-x.y.z.tar нужно приложить к тикету
 
-### Позволяет получить лог файлы, если Klipper не работает
+### Позволяет получить лог-файлы, если Klipper не работает
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-log.tgz)

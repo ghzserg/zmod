@@ -2,18 +2,18 @@
 
 Любой пользователь может создать и подключить свой плагин к **zmod**.
 
-Плагины включенные в поставку Z-Mod:
+Плагины, включённые в поставку Z-Mod:
 
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md) - Настройки, которые рекомендуется использовать сразу после установки мода
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme_ru.md) - Парковка оси Z по тензодатчикам
-4. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme_ru.md) - Максимальное уменьшение количества отходов от ninjamida.
-5. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Moonraker TimeLapse
-6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Получение уведомлений в телеграм и еще более 100 различных сервисов
+3. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme_ru.md) - Максимальное уменьшение количества отходов от ninjamida.
+4. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md) - Moonraker TimeLapse
+5. [Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) - Получение уведомлений в Telegram и более чем 100 других сервисах
 
 Внешние плагины, не разрабатываемые автором Z-Mod. 
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Совместим с Bambu Studio, улучшает управление башней подачи, обеспечивает точную оценку времени и расхода материала, снижает отходы, поддерживает Mainsail, быструю смену цвета и расширенные функции печати. НЕЛЬЗЯ ИСПОЛЬЗОВАТЬ С РОДНЫМ ЭКРАНОМ.
-2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк BamBufy
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - форк Bambufy
 3. [Dryer](https://github.com/pantata/dryer) - Сушка филамента на нагревательном столе
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) — Плагин для поддержки [железа IFS Jacker](https://github.com/ninjamida/ifs-jacker); обеспечивает автоопределение количества доступных каналов и интеграцию в Klipper вентиляторов, светодиодов и датчиков, подключенных через IFS Jacker.
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
@@ -40,25 +40,24 @@ DISABLE_PLUGIN name=g28_tenz
 ```
 ---
 
-## PLUGUINS
+## PLUGINS
 
 Выводит меню управления плагинами 
 
 <img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
 
-Вот готовый лаконичный вариант текста для вашей Вики:
-
 В этом меню вы можете включать, выключать и полностью удалять дополнительные плагины.
 
-• Левый столбец (Активация): Нажмите, чтобы включить или выключить плагин.
-	• Зеленая кнопка — плагин активен.
-	• Серая кнопка — плагин выключен.
-• Правый столбец (Обновления): Включает или выключает автоматические обновления через Moonraker.
-	• UPDATE: ON — обновления включены.
-	• UPDATE: OFF — обновления отключены.
+- Левый столбец (активация): нажмите, чтобы включить или выключить плагин.
+    - Зелёная кнопка — плагин активен.
+    - Серая кнопка — плагин выключен.
+- Правый столбец (обновления): включает или выключает автоматические обновления через Moonraker.
+    - UPDATE: ON — обновления включены.
+    - UPDATE: OFF — обновления отключены.
 
-Как полностью удалить плагин:
-Если плагин вам больше не нужен, сделайте обе его кнопки серыми (отключите сам плагин и его обновления), нажмите кнопку SAVE (MOONRAKER RESTART), а затем перезагрузите принтер. Система автоматически сотрет его папку из директории `mod_data/plugins/`.
+**Как полностью удалить плагин:**
+
+Если плагин вам больше не нужен, сделайте обе его кнопки серыми (отключите сам плагин и его обновления), нажмите кнопку SAVE (MOONRAKER RESTART), а затем перезагрузите принтер. Система автоматически сотрёт его папку из директории `mod_data/plugins/`.
 
 ---
 
@@ -159,9 +158,9 @@ primary_branch: main
 
 ### Скрипт установки
 
-После вызова `ENABLE_PLUGIN`, будет автоматически вызыван файл `install.sh`
+После вызова `ENABLE_PLUGIN`, будет автоматически вызван файл `install.sh`
 
-После вызова `DISABLE_PLUGIN`, будет автоматически вызыван файл `uninstall.sh`
+После вызова `DISABLE_PLUGIN`, будет автоматически вызван файл `uninstall.sh`
 
 ### Скрипт обновления
 

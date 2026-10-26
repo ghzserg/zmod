@@ -268,7 +268,7 @@ Where `XXX`, `YYY`, `ZZZ` are replaced with the desired filament types (for exam
 
 For these settings to work, you need to turn off the native printer screen using the `DISPLAY_OFF` macro.
 
-To add or rename a color, open `mod_data/color/ru.json` (use your language instead of `ru`) and add a new color or rename an existing one.
+To add or rename a color, open `mod_data/color/en.json` (use your language instead of `en`) and add a new color or rename an existing one.
 
 For the color name to be displayed, the color name must start with an underscore `_`.
 

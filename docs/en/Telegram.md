@@ -66,7 +66,7 @@ Install the Telegram bot with [one command](https://github.com/ghzserg/z_ff5m/bl
 
 Execute as the `root` user:
 ```bash
-bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh)
+bash <(wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.7/telegram/telegram.sh)
 ```
 
 If `wget` is not installed:

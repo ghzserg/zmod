@@ -41,7 +41,7 @@ Sie müssen nur das Makro [ZSSH_ON](/de/Zmod/#zssh_on) mit den folgenden Paramet
 
 Die Ausführung von ssh verbraucht etwa 300 Kilobyte Speicherplatz.
 
-**Wenn sich Drucker und der Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.6/telegram/telegram.conf) Konfigurationsdatei** Hier ist eine [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
+**Wenn sich Drucker und der Server im selben Netzwerk befinden, ist die Verwendung von SSH nicht erforderlich. Lesen Sie die [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) Konfigurationsdatei** Hier ist eine [Sample-config](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config).
 Die Konfigurationsdatei kann vom Drucker `mod/telegram/` heruntergeladen werden.
 
 ---
@@ -254,7 +254,7 @@ sudo apt install -y apparmor apparmor-utils
 
 Installieren Sie den Telegram-Bot
 ```bash 
-wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.6/telegram/telegram.sh
+wget --cache=off -q -O - https://github.com/ghzserg/zmod_ff5m/raw/refs/heads/1.7/telegram/telegram.sh
 ```
 
 Hinzufügen von ssh-Schlüsseln:

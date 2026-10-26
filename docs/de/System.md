@@ -75,7 +75,7 @@ Parameter:
 **Befehl für die Standard-Firmware:**
 
 Auf dem Lager:
-Datei [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh) herunterladen
+Datei [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/.shell/zfs.sh) herunterladen
 ```bash
 chmod +x zfs.sh
 ./zfs.sh 400 1

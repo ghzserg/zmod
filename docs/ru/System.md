@@ -8,7 +8,7 @@
 - Из консоли Fluidd/Mainsail (нажать английскую букву `C` в fluidd)
 
 !!! note
-    *Значение указанное в скобках - это значение по умолчанию*
+    *Значение, указанное в скобках, — это значение по умолчанию*
 
 ---
 
@@ -21,27 +21,27 @@
 ### DISPLAY_OFF
 
 Выключить стандартный экран и перезагрузить принтер. Экономит до 20 мегабайт оперативки.
-Кнопка с выбором параметров из списка "Макросы" или команда в консоли:.
+Кнопка с выбором параметров из списка "Макросы" или команда в консоли:
 
 - `DISPLAY_OFF GUPPY=1 HELIX=0` - включит GuppyScreen.
 - `DISPLAY_OFF GUPPY=0 HELIX=1`  - включит [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
-После перезагрузки родной экран будет работать ещё 10 секунд, но он не влияет на z-offset т.к. печать идёт, не через него.
+После перезагрузки родной экран будет работать ещё 10 секунд, но он не влияет на z-offset т.к. печать идёт не через него.
 
 **GuppyScreen** - Рекомендуется использовать вместо родного экрана.
 
 - Использует 9 Мб оперативной памяти, против 23 Мб на родном экране.
-- Не зависает при перезагрузке клипера.
+- Не зависает при перезагрузке Klipper.
 - Более качественное восстановление прерванной печати.
 - Поддерживает все функции родного экрана, кроме настройки WiFi.
-- Наполнен дополнительными функциями в виде списка всех макросов включая ваши собственные
+- Наполнен дополнительными функциями в виде списка всех макросов, включая ваши собственные
 - Собирается из [форка](https://github.com/ghzserg/guppyscreen_ff5m), который базируется на [оригинальном репозитории](https://github.com/ballaswag/guppyscreen) и другом [форке](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
 
 
-**Не отключайте экран, если вы четко не понимаете как работает карта стола, z-offset и макросы START_PRINT и END_PRINT**
+**Не отключайте экран, если вы чётко не понимаете, как работает карта стола, z-offset и макросы START_PRINT и END_PRINT**
 
 **Не нужно включать этот макрос в стартовый g-code.**
 
-Чтобы изменить время активации альтернативного экрана [используйте глобальные параметры](/ru/Global/#display_off_timeout)
+Чтобы изменить время активации альтернативного экрана, [используйте глобальные параметры](/ru/Global/#display_off_timeout)
 
 Настройте START_PRINT. Установите нужный z-offset через него или через глобальные параметры.
 
@@ -57,17 +57,17 @@
 
 ### TEST_EMMC
 
-Записывает SIZE Мб на EMMC и пишет скорость чтения записи.
+Записывает SIZE Мб на EMMC и пишет скорость чтения/записи.
 
 Выводит процент износа EMMC.
 
 - SIZE - сколько мегабайт будет записано (100).
-- SYNC - 1 - работа в синхронном режиме. Будет записано и прочитано SIZE мегабайт данных и выведена скорость, 0 - асинхронный режим, в фоне  будет записано SIZE мегабайт данных - служит для фоновой нагрузки EMMC карты памяти. (1).
+- SYNC - 1 - работа в синхронном режиме. Будет записано и прочитано SIZE мегабайт данных и выведена скорость, 0 - асинхронный режим, в фоне будет записано SIZE мегабайт данных - служит для фоновой нагрузки EMMC карты памяти. (1).
 - FLASH - производить запись: 0 - на EMMC, 1 - на USB FLASH, 2 - в оперативную память (0).
-- RANDOM - использовать случайные числа  для записи. 1 - да, 0 - нет (0).
+- RANDOM - использовать случайные числа для записи. 1 - да, 0 - нет (0).
 
 На стоке:
-Скачать файл [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.6/.shell/zfs.sh)
+Скачать файл [zfs.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/.shell/zfs.sh)
 ```
 chmod +x zfs.sh
 ./zfs.sh 400 1
@@ -79,14 +79,14 @@ chmod +x zfs.sh
 
 Очищает EMMC.
 
-- LOG - очищать log фалы, 1 - да, 0 - нет (1).
-- ANY - очищать все (gcode, картинки, фото, видео) кроме лог файлов, 1 - да, 0 - нет (0).
+- LOG - очищать лог-файлы, 1 - да, 0 - нет (1).
+- ANY - очищать все (gcode, картинки, фото, видео) кроме лог-файлов, 1 - да, 0 - нет (0).
 
 ---
 
 ### WEB
 
-Сменить веб интерфейс fluidd/mainsail
+Сменить веб-интерфейс fluidd/mainsail
 
 После запуска макроса:
 
@@ -97,17 +97,17 @@ chmod +x zfs.sh
 
 В Orca `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Эскизы G-кода`
 
-Учтите, что родной экране перестанет показывать миниатюры.
+Учтите, что родной экран перестанет показывать миниатюры.
 
-Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail создавайте [тикет](/ru/Help/)
+Внимание! Автор использует Fluidd, Mainsail тестируется только пользователями. Если есть проблемы с Mainsail, создавайте [тикет](/ru/Help/)
 
 ---
 
 ### SET_TIMEZONE
 
-Смена часового пояса запускается командой в консоль `SET_TIMEZONE ZONE=Europe/Moscow` .
-Увидеть список вариантов можно по команде в консоль `SET_TIMEZONE` .
-Позволяет расчитать во сколько закончится печать на [Guppyscreen](/ru/System/#display_off)
+Смена часового пояса запускается командой в консоли `SET_TIMEZONE ZONE=Europe/Moscow`.
+Увидеть список вариантов можно по команде в консоли `SET_TIMEZONE`.
+Позволяет рассчитать, во сколько закончится печать на [Guppyscreen](/ru/System/#display_off)
 
 ---
 
@@ -119,9 +119,9 @@ chmod +x zfs.sh
 
 ### DATE_SET
 
-Установить дату и время в формате 2024.01.01-00:00:00 .
+Установить дату и время в формате 2024.01.01-00:00:00.
 
-- DT - дата 2024.01.01-00:00:00 .
+- DT - дата 2024.01.01-00:00:00.
 
 ---
 
@@ -133,7 +133,7 @@ Igor Polunovskiy
 
 Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
-Проверить MD5 сумму.
+Проверить MD5-сумму.
 
 - DELETE - удалять битый файл (yes)
 
@@ -141,8 +141,8 @@ Igor Polunovskiy
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Не забудьте выполнить ```chmod +x zmod_preprocess-linux-amd64```
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Не забудьте выполнить ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Универсальный Python. Не забудьте выполнить ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Не забудьте выполнить ```chmod +x zmod-preprocess.sh```
 
@@ -150,7 +150,7 @@ Igor Polunovskiy
 
 Вот варианты добавления:
 
-- ```"С:\путь_до_файла\zmod_preprocess-windows-amd64.exe";```
+- ```"C:\путь_до_файла\zmod_preprocess-windows-amd64.exe";```
 - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
 - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
 - ```"/home/user/zmod-preprocess.py";```
@@ -210,12 +210,12 @@ Klipper 13 (по умолчанию отключен).
 
 Пример: `UPDATE_MCU FORCE=13` принудительно загрузить прошивку Klipper 13
 
-Если не понимаете, как [восстановить родной Klipper через флешку](/ru/Native_FW/#fix_klipper) не запускайте.
+Если не понимаете, как [восстановить родной Klipper через флешку](/ru/Native_FW/#fix_klipper), не запускайте.
 Будьте внимательны перед обновлением Klipper и просмотрите [изменения в новых версиях](https://www.klipper3d.org/Releases.html), на стоковой конфигурации файлы правки не требуют.
 
 После запуска макроса:
 
-1. Дождитесь музыкальной композиции (она будет играть даже если был выключен звук через оригинальный экран)
+1. Дождитесь музыкальной композиции (она будет играть, даже если был выключен звук через оригинальный экран)
 2. Отключите питание принтера
 3. **Подождите 10 секунд**
 4. Включите питание принтера
@@ -244,7 +244,7 @@ Klipper 13 (по умолчанию отключен).
 
 Время проверки около 10 минут.
 
-Если найдены ошибки - перейдите по [ссылке](https://github.com/ghzserg/zmod/tree/main/stock), там можно скачать не поврежденную копию файла.
+Если найдены ошибки - перейдите по [ссылке](https://github.com/ghzserg/FF/tree/main/stock), там можно скачать неповреждённую копию файла.
 
 Если консоль недоступна, то подключитесь к принтеру по SSH:
 
@@ -258,4 +258,4 @@ Klipper 13 (по умолчанию отключен).
 
 Получить снимок экрана принтера
 
-Снимок будет сохраненн в ```mod_data/screen.jpg```
+Снимок будет сохранён в ```mod_data/screen.jpg```

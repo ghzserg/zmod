@@ -394,7 +394,7 @@ Where XXX, YYY, ZZZ are replaced with the desired filament types (eg. PLA-CF,PET
 
 For these settings to work, you need to **disable the printer's native display** using the `DISPLAY_OFF` macro.
 
-To add or rename a color, open ```mod_data/colors/en.cfg``` (use your language instead of en):
+To add or rename a color, open `mod_data/color/en.json` (use your language instead of en):
 
 Add a new color or rename an existing one.
 

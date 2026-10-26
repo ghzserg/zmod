@@ -614,8 +614,8 @@ Pouze Creator 5 / Creator 5 Pro
 
 Přesměrovat obrazovku tiskárny jako virtuální kameru `screen` do Fluidd/Mainsail a [zmod.link](https://zmod.link)
 
+- 0 - Nepřesměrovávat
 - 1 - Přesměrovávat (výchozí)
-- 2 - Nepřesměrovávat
 
 Příklad: `SAVE_ZMOD_DATA WEB_SCREEN=1`
 

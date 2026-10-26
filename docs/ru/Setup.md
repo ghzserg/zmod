@@ -7,8 +7,8 @@
 2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 3. Поместить файл из [Native firmware](/ru/Native_FW/) в корневую папку USB Flash
 
-    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5m 
-    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5m**Pro** версии 
+    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) для FF5M
+    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5M **Pro** 
     - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz) для AD5X
     - [Creator5-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz) для Creator 5
     - [Creator5Pro-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz) для Creator 5 Pro
@@ -19,9 +19,9 @@
 5. Вставить флешку в принтер
 6. Включить принтер
 7. Дождаться установки родной прошивки. _Если ставится долго или не ставится вообще - смените флешку_
-8. Настроить WiFi или Lan *новый бобер*
+8. Настроить Wi-Fi или LAN *новый бобер*
 9. Провести первоначальные калибровки
-10. Получить последние обновления для принтера. Если вы не хотите чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку 1.1.7 (если она еще не установлена) для AD5X, или 3.2.3 для [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
+10. Получить последние обновления для принтера. Если вы не хотите, чтобы принтер [измерял стол перед каждой печатью](/ru/FAQ/#перед-каждой-печатью-измеряет-стол-по-центру), то нужно установить прошивку 1.1.7 (если она еще не установлена) для AD5X, или 3.2.3 для [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
 
 ---
 
@@ -39,8 +39,8 @@
    - для FF5M: Adventurer5M-**zmod**-\*.tgz
    - для FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
    - для [AD5X](/ru/AD5X/): AD5X-**zmod**-\*.tgz
-   - для Creator5: Creator5-**zmod**-\*.tgz
-   - для Creator5 Pro: Creator5Pro-**zmod**-\*.tgz
+   - для Creator 5: Creator5-**zmod**-\*.tgz
+   - для Creator 5 Pro: Creator5Pro-**zmod**-\*.tgz
 
   _А лучше поместить все 5 файлов на флешку, тогда принтер сам запустит нужный файл_
 
@@ -57,16 +57,16 @@
    
    На AD5X/Creator 5/Creator 5 Pro установка может занимать до 40 минут. _Если ставится долго или не ставится вообще - смените флешку_
 
-   Если пропустили окно с зеленой галочкой и принтер автоматически перезагрузился, то загрузится стандартный экран принтера, в этом случае можно пемеходить сразу к 12 пункту меню.
+   Если пропустили окно с зеленой галочкой и принтер автоматически перезагрузился, то загрузится стандартный экран принтера, в этом случае можно переходить сразу к пункту 12.
 
 9. Вытащить флешку
 10. Выключить принтер
 11. Включить принтер
-12. **Открыть в браузере ip принтера**
+12. **Открыть в браузере IP-адрес принтера**
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Если веб интерфейс не открывается, значит родная прошивка деактивировала мод. Чтобы его включить нужно записать на USB флэш файл:
+    Если веб-интерфейс не открывается, значит, родная прошивка деактивировала мод. Чтобы его включить, нужно записать на USB-флешку файл:
 
     - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
     - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -92,10 +92,10 @@
 
     <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
 
-    Если хотите  снова увидеть это окно - то наберите к консоли `GLOBAL`
+    Если хотите снова увидеть это окно, наберите в консоли `GLOBAL`
 
 15. Перейдите в `Настройки` -> `Обновления ПО` 
-16. Нажмите `Проверить обновления`, подождите пока обновления проверяются
+16. Нажмите `Проверить обновления`, подождите, пока обновления проверяются
 17. Нажать **Обновление** и обновить все компоненты.
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
@@ -112,7 +112,7 @@
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-19. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+19. [Настройте Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
 
 	[Готовые профили](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
     
@@ -153,29 +153,29 @@
 
     <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
 
-    Для FF5M / FF5m Pro:
+    Для FF5M / FF5M Pro:
 
       - Имя хоста: `IP_принтера:7125`
       - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
-21. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
+20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
    
     >Замечание: Только при отправке G-Code. Для 3mf не требуется.
     
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-23. [Прочитайте рекомендации](/ru/Recommendations/)
-24. [Прочитайте FAQ](/ru/FAQ/)
-25. [Откалибруйте принтер](/ru/SetupCalibrations/)
-26. Прочитайте особенности [AD5X](/ru/AD5X/) и [Creator 5 Pro](/ru/C5PRO/)
+21. [Прочитайте рекомендации](/ru/Recommendations/)
+22. [Прочитайте FAQ](/ru/FAQ/)
+23. [Откалибруйте принтер](/ru/SetupCalibrations/)
+24. Прочитайте особенности [AD5X](/ru/AD5X/) и [Creator 5 Pro](/ru/C5PRO/)
 
 ### Внимание AD5X
 
 [@Khamai](https://t.me/Khamai)
 
-После установки Native Firmware, возможна некорректная парковка печатающей головы к приемнику филамента (недожим шторки приемника, выдавливание филамента на стол и т.п.).
+После установки родной прошивки возможна некорректная парковка печатающей головы к приемнику филамента (недожим шторки приемника, выдавливание филамента на стол и т.п.).
 
 [Через инженерное меню на родной прошивке](/ru/AD5X/#настройка-корзины-на-родной-прошивке-ad5x)
 
@@ -198,7 +198,7 @@
 
 **Проще всего обновить мод через флешку макросом [ZFLASH](/ru/Zmod/#zflash)**
 
-В этом случае, вам нужно вставить флешку в принтер, перезагрузить принтер и вызвать макрос `ZFLASH`.
+В этом случае вам нужно вставить флешку в принтер, перезагрузить принтер и вызвать макрос `ZFLASH`.
 
 - Макрос посмотрит последнюю актуальную версию
 - Скачает последний релиз для вашей модели принтера
@@ -219,7 +219,7 @@
 
 Посмотреть текущую версию операционной системы мода можно на вкладке "Система" -> "Дистрибутив"
 
-Текущая версия Z-Mod (вкладка "Настройки" -> "Обновление" -> "ffm5/zmod"), **должна совпадать** первыми двумя цифрами с версией со вкладки система.
+Текущая версия Z-Mod (вкладка "Настройки" -> "Обновление" -> "Z-Mod"), **должна совпадать** первыми двумя цифрами с версией на вкладке «Система».
 
 <u>Если не совпадает, то мод **будет работать некорректно**, в этом случае не надо жаловаться на Z-Mod</u>
 
@@ -239,7 +239,7 @@
 5. Включить принтер
 6. Дождаться перезагрузки принтера (вытаскивать флешку не надо)
 7. Дождаться установки мода
-8. Когда принтер напишет что установка прошла
+8. Дождаться, когда принтер напишет, что установка прошла
 9. Вытащить флешку
 10. Выключить принтер
 11. Включить принтер
@@ -275,7 +275,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Полностью удалить мод ```REMOVE_ZMOD FULL=1```
 
-Удаление мода  через флешку:
+Удаление мода через флешку:
 
 - Отформатируйте флешку в FAT/FAT16/FAT32(MBR)
 - Поместите файл [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) на эту флешку
@@ -289,7 +289,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 ## Как обновлять сток?
 
-1. Отключите все активные плагины кроме recommend, timelamse, notify (```DISABLE_PLUGIN name=имя_плагина```)
+1. Отключите все активные плагины, кроме recommend, timelapse, notify (```DISABLE_PLUGIN name=имя_плагина```)
 2. Если у вас используется **Klipper 13**, то перед обновлением родной прошивки надо выполнить ```UPDATE_MCU```. Это позволит избежать ситуации, когда MCU и Klipper разных версий.
 3. Включите китайские облака, если хотите обновиться с родного экрана ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
@@ -298,7 +298,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - Ваш серийный номер еще не попал под раздачу обновлений
 - [Установите обновление родной прошивки с флешки](/ru/Native_FW/)
 
-**Для [AD5X](/ru/AD5X/)/Creator 5/Creator 5 Pro требуется [активация Z-Mod](/ru/Native_FW/) с флешки, после обновления стока**:
+**Для [AD5X](/ru/AD5X/)/Creator 5/Creator 5 Pro требуется [активация Z-Mod](/ru/Native_FW/) с флешки после обновления стока**:
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -312,13 +312,13 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Авторы инструкции: [@darksimpson](https://t.me/darksimpson), [Александр](https://github.com/DrA1ex), [@Ikaros413](https://t.me/Ikaros413), [@SoloMen88](https://t.me/SoloMen88)
 
-Для тех у кого принтер при включении повисает на заставке и не доступен по ЛАН кабелю.
+Для тех, у кого принтер при включении зависает на заставке и недоступен по LAN-кабелю.
 
 ![resized-image](https://github.com/user-attachments/assets/f63b16e6-2425-41c8-a166-226fb041f5ad)
 
 ![](../images/ff.jpg)
 
-Попробуйте восстановить прошивку, через установку полной прошивки:
+Попробуйте восстановить прошивку через установку полной прошивки:
 
 - [FF5M](/ru/Native_FW/#установка-полной-прошивки-на-ff5m)
 - [AD5X](/ru/Native_FW/#установка-полной-прошивки-на-ad5x)
@@ -326,31 +326,31 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 Алгоритм восстановления:
 
 1. **Обесточить принтер**
-2. Подготовить преобразователь UART/USB (Нужен на 3.3V, или с джампером 5V/3.3V)
+2. Подготовить преобразователь UART/USB (нужен на 3.3V или с джампером 5V/3.3V)
 
 ![](../images/ch340.jpg)
 
-**ВНИМАНИЕ!** конвертер должен быть на 3.3 ВОЛЬТА, подадите 5 вольт и процессор сгорит!
+**ВНИМАНИЕ!** Конвертер должен быть на 3.3 вольта: подадите 5 вольт — и процессор сгорит!
 
 3. Открыть заднюю стенку FlashForge
 4. Подключиться к выводу UART на плате (подключаем RX, TX, GND, **3.3V не подключать**)
 
 ![](../images/connect.jpg)
 
-ОБЯЗАТЕЛЬНО, ПЕРЕКИДЫВАЕМ ДЖАМПЕР (если у вас есть) С 5V на 3.3V  Если подадите на 5V, то попадете на замену материнской платы.
+ОБЯЗАТЕЛЬНО ПЕРЕКИДЫВАЕМ ДЖАМПЕР (если он у вас есть) С 5V НА 3.3V. Если подадите 5V, то попадёте на замену материнской платы.
 Как должно выглядеть подключение в конечном итоге:
 
-- RX/TX подключаются крест накрест RX-TX TX-RX
+- RX/TX подключаются крест-накрест RX-TX TX-RX
 - GND преобразователя к GND на плате
 - 3.3V никуда не подключается
 
 ![](../images/connect_photo.jpg)
 
-5. В системе должен появиться новый СОМ-порт.
+5. В системе должен появиться новый COM-порт.
 
 ![](../images/port.jpg)
 
-6. Запускаем программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), там вписываем ваш СОМ-порт(в примере  выше COM6), скорость `115200`, тип подключения - `Serial`.
+6. Запускаем программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), там вписываем ваш COM-порт (в примере выше COM6), скорость `115200`, тип подключения - `Serial`.
 
 7. Подаем штатное питание на принтер.
 
@@ -358,13 +358,13 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 ```
 Hit any key to stop autoboot
 ```
-затем  быстро нажать `Enter`.
+затем быстро нажать `Enter`.
 
 9. После этого вы окажетесь в `U-Boot`. Из него самого можно многое сделать (пишите `help`)
 
-Но нам достаточно переопределить стартовую команду для ядра линукса, чтобы получить шелл.
+Но нам достаточно переопределить стартовую команду для ядра Linux, чтобы получить шелл.
 
-Пишем в U-boot через терминал:
+Пишем в U-Boot через терминал:
 
 ```
 setenv init /bin/sh
@@ -380,7 +380,7 @@ mount -t proc proc /proc
 mount -o remount,rw /
 ```
 
-12. Исправляем то что сломалось, например `rm -f /etc/init.d/S01bad_script`, или `rm -f /usr/data/zmod/zmod/.shell/S98camera`, если у вас не проходит запуск из-за камеры.
+12. Исправляем то, что сломалось, например `rm -f /etc/init.d/S01bad_script`, или `rm -f /usr/data/zmod/zmod/.shell/S98camera`, если у вас не проходит запуск из-за камеры.
 
 13. Нужно сохранить изменения: ```sync```
 

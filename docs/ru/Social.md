@@ -7,65 +7,65 @@ hide:
 
 Присоединяйтесь к нашему сообществу! Здесь вы найдете официальные каналы поддержки, группы обсуждений и ресурсы для взаимодействия с проектом.
 
-## 🤖 Официальная поддерждка
+## 🤖 Официальная поддержка
 
 ### Бот поиска информации в документации
 <div class="grid cards" markdown>
--   __Help Bot__
+- __Help Bot__
     - [Telegram Help Bot](https://t.me/zmod_help_bot)
     - Автоматизированная поддержка, бот за вас найдет данные в документации.
 </div>
 
 ### Телеграм канал
 <div class="grid cards" markdown>
--   __Официальный канал Z-Mod Info__
+- __Официальный канал Z-Mod Info__
     - [Telegram Info Channel](https://t.me/zmod_info)
     - Официальные новости и обновления проекта
 
--   __Flashforge Adventurer 5M | 5M Pro | 5X | Guider 4 Pro Russia__
+- __Flashforge Adventurer 5M | 5M Pro | 5X | Guider 4 Pro Russia__
     - [Telegram Group](https://t.me/FF_5M_5M_Pro/408369)
     - Обсуждение и помощь от сообщества
 </div>
 
 ### MAX
 <div class="grid cards" markdown>
--   __Официальная группаа Z-Mod в MAX__
+- __Официальная группа Z-Mod в MAX__
     - [MAX Group](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k)
     - Обсуждение и помощь от сообщества
 </div>
 
 ### Facebook
 <div class="grid cards" markdown>
--   __Facebook Group__
+- __Facebook Group__
     - [Facebook Community](https://www.facebook.com/groups/zmodgroup)
     - Официальная группа для обсуждений
 </div>
 
 ### VK
 <div class="grid cards" markdown>
--   __Facebook Group__
+- __VK Group__
     - [VK](https://vk.com/zmod_official)
     - Бот для регистрации в zmod.link
 </div>
 
 ## 🌐 Community Resources
 
-### Не официальные группы
+### Неофициальные группы
 <div class="grid cards" markdown>
--   __Facebook Group__
+- __Facebook Group__
     - [Facebook Community](https://www.facebook.com/groups/1526322885078508) (только чтение)
     - Неофициальная группа для обсуждений
 
--   __Discord Server__
+- __Discord Server__
     - [Discord Community](https://discord.gg/Cw4cT5C24q)
-    - Неофицальный сервер для общения и уведомлений
+    - Неофициальный сервер для общения и уведомлений
 </div>
 
 ## 💻 Разработка
 
 ### GitHub Репозиторий
 <div class="grid cards" markdown>
--   __Source Code__
+- __Source Code__
     - [GitHub Repository](https://github.com/ghzserg/zmod)
     - Исходный код и документация проекта
 </div>
