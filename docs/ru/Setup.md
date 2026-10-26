@@ -113,6 +113,9 @@
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
 19. [Настройте  Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
+
+	[Готовые профили](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+    
     Весь стартовый код нужно заменить на этот:
 
     ```
@@ -143,16 +146,13 @@
         
    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
 
-	  FF5M / FF5m Pro:
+	  Для FF5M / FF5m Pro:
+	  
       - Имя хоста: `IP_принтера:7125`
       - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
-
-    В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
-
-    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
    
