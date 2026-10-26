@@ -140,6 +140,7 @@
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
 
     Включить исключение объектов:
+    
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
     Необходимо переключиться на протокол `Octo/Klipper`:
@@ -156,7 +157,7 @@
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
-20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
+21. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
    
     Только при отправке G-Code. Для 3mf не требуется.
     
