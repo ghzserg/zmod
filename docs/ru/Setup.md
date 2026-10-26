@@ -139,7 +139,7 @@
 
     <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
 
-
+    Включить исключение объектов:
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
     Необходимо переключиться на протокол `Octo/Klipper`:
