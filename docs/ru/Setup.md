@@ -32,8 +32,6 @@
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5M Pro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-<iframe src="https://vkvideo.ru/video_ext.php?oid=-238575243&id=456239017&hash=047fa1a63cc31586&hd=3" width="1280" height="720" allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;" frameborder="0" allowfullscreen></iframe>
-
 1. **[Вернуть принтер к заводским настройкам](/ru/Setup/#возврат-принтера-к-заводским-установкам-необходимо-для-установки-мода)** [Внимание AD5X](/ru/Setup/#внимание-ad5x)
 2. Отформатировать USB Flash в FAT/FAT16/FAT32(MBR)
 3. Поместить [файл](https://github.com/ghzserg/zmod/releases/) в корневую папку USB Flash.
@@ -141,7 +139,11 @@
     Необходимо переключиться на протокол "Octo/Klipper":
 
       - Протокол: `Octo/Klipper`
-      - Сетевой Агент: `Moonraker`
+      - Имя хоста: `IP_принтера`
+        
+   <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+	  FF5M / FF5m Pro:
       - Имя хоста: `IP_принтера:7125`
       - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
@@ -153,13 +155,15 @@
     <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
-
+   
+    Только при отправке G-Code. Для 3mf не требуется.
+    
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 
-21. [Прочитайте рекомендации](/ru/Recommendations/)
-22. [Прочитайте FAQ](/ru/FAQ/)
-23. [Откалибруйте принтер](/ru/SetupCalibrations/)
-24. Прочитайте особенности [AD5X](/ru/AD5X/) и [Creator 5 Pro](/ru/C5PRO/)
+23. [Прочитайте рекомендации](/ru/Recommendations/)
+24. [Прочитайте FAQ](/ru/FAQ/)
+25. [Откалибруйте принтер](/ru/SetupCalibrations/)
+26. Прочитайте особенности [AD5X](/ru/AD5X/) и [Creator 5 Pro](/ru/C5PRO/)
 
 ### Внимание AD5X
 
