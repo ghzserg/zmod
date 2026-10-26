@@ -64,6 +64,8 @@
 
 ??? note "Version 1.7.3"
 	### Version 1.7.3
+	09.09.2026
+
 	* Alpha-Unterstützung für Creator 5 / Creator 5 Pro (keine Unterstützung für den Headless-Modus, 13 Clipper, nicht alle Makros getestet)
 	* AD5M: Unterstützung für die native Firmware 5.1.9
 	* AD5X: Beschleunigung des Abfragezyklus von @ninjamida
@@ -396,7 +398,7 @@
 	- Parameter zum Makro [AUTO_REBOOT](/de/Macros/#auto_reboot) hinzugefügt, der einen Neustart der Firmware ermöglicht.
 	- G28 in Makros wird nur noch bei Bedarf aufgerufen
 	- Der MD5-Algorithmus wurde fast vollständig geändert. Jetzt funktioniert die MD5-Prüfung von überall und erfordert kein Aufheizen des Tisches oder des Extruders.
-	Verbessertes Makro [MEM](/de/Makros/#mem) gibt jetzt den Moonraker-, Klipper- und Shield-Speicher aus und wie SWAP verwendet wird
+	Verbessertes Makro [MEM](/de/Macros/#mem) gibt jetzt den Moonraker-, Klipper- und Shield-Speicher aus und wie SWAP verwendet wird
 
 	- Der Klipper-Prozess hat eine höhere Priorität als andere Prozesse
 	- Der globale Parameter [PRINT_LEVELING](/de/Global/#zshaper) funktioniert nun auch in nicht-nativen Bildschirmen
@@ -482,7 +484,7 @@
 	### Version 0.2.1
 	10.12.2024
 	
-	- Abrufen eines Shaper-Graphen direkt vom Drucker. Makro [ZSHAPER](/de/Kalibrierungen/#zshaper)
+	- Abrufen eines Shaper-Graphen direkt vom Drucker. Makro [ZSHAPER](/de/Calibrations/#zshaper)
 	- Fehler beim Arbeiten ohne nativen Bildschirm behoben
 
 ??? note "Version 0.2.0"
@@ -520,7 +522,7 @@
 	03.12.2024
 	
 	- Viele Makrokorrekturen
-	- Makro [STOP_ZMOD](/de/Makros/#stop_zmod) - deaktiviert vorübergehend fluidd/mainstaill und moonraker
+	- Makro [STOP_ZMOD](/de/Macros/#stop_zmod) - deaktiviert vorübergehend fluidd/mainstaill und moonraker
 
 ??? note "Version 0.1.6"
 	### Version 0.1.6
@@ -530,8 +532,8 @@
 	- Makro [LOAD_CELL_TARE](/de/Macros/#load_cell_tare) behoben
 	- Makro zur Kalibrierung von Extruder und Tisch-PID behoben
 	- Makro [CLEAR_NOZZLE](/de/Macros/#CLEAR_NOZZLE) - Düsenreinigung wie in nativer Firmware
-	- Makros [KAMP](/de/Kalibrierungen/#kamp) extruder_temp=[düse_temperatur_anfängliche_schicht] bed_temp=[bett_temperatur_anfängliche_schicht_single]. Adaptives Tabellenbild mit Düsenreinigung.
-	- [AUTO_FULL_BED_LEVEL](/de/Kalibrierungen/#auto_full_bed_level) - komplett neu geschriebenes Makro
+	- Makros [KAMP](/de/Calibrations/#kamp) extruder_temp=[düse_temperatur_anfängliche_schicht] bed_temp=[bett_temperatur_anfängliche_schicht_single]. Adaptives Tabellenbild mit Düsenreinigung.
+	- [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level) - komplett neu geschriebenes Makro
 
 ??? note "Version 0.1.5"
 	### Version 0.1.5
@@ -539,8 +541,8 @@
 	
 	- Großsegel hinzugefügt. Schalten über WEB-Makro
 	- Makro STOP - schaltet Motoren aus, geschrieben im finalen gcod.
-	- Makro [ZSHAPER](/de/Kalibrierungen/#zshaper) - kalibriert Shaper und lädt csv-Dateien nach /mod_data in Konfiguration. Weitere Analyse über (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
-	- Makro [LOAD_CELL_TARE](/de/Makros/#load_cell_tare) - Wägezellen zurücksetzen
+	- Makro [ZSHAPER](/de/Calibrations/#zshaper) - kalibriert Shaper und lädt csv-Dateien nach /mod_data in Konfiguration. Weitere Analyse über (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
+	- Makro [LOAD_CELL_TARE](/de/Macros/#load_cell_tare) - Wägezellen zurücksetzen
 	- Feste Tischkalibrierung. Sie können jetzt Tisch- und Extrudertemperatur für die Kalibrierung einstellen. Standard 120/80
 	- Bildschirmabschaltung im nicht-nativen Bildschirmmodus behoben. Er schaltet sich nach 4 Minuten ab.
 
@@ -552,8 +554,8 @@
 	- Fehler im Installer behoben, der in der letzten Version [heater_bed] aus den Konfigurationsdateien löschen konnte
 	- Geänderte Bilder während der Installation. Implementiert [@drmax_gc](https://t.me/drmax_gc)
 	- Makros sind kategorisiert und ins Russische übersetzt
-	- Makro [DATE_GET](/de/Makros/#date_get) - aktuelle Zeit anzeigen
-	- Makro [DATE_SET](/de/Makros/#date_set) - aktuelle Zeit setzen
+	- Makro [DATE_GET](/de/Macros/#date_get) - aktuelle Zeit anzeigen
+	- Makro [DATE_SET](/de/Macros/#date_set) - aktuelle Zeit setzen
 	- Makro [CAMERA_ON](/de/Zmod/#camera_on) - alternative Kamera-Implementierung verwenden
 	- Makro [CAMERA_OFF](/de/Macros/#camera_off) - Alternative Kamera-Implementierung deaktivieren
 
@@ -562,8 +564,8 @@
 	28.11.2024
 	
 	- MIDI-Wiedergabe hinzugefügt. Dateien werden in mod_data/midi gespeichert - Zugriff über die Konfigurationsregisterkarte. Dank an [@drmax_gc](https://t.me/drmax_gc)
-	- Makros [PLAY_MIDI](/de/Makros/#play_midi). Spielt die Melodie PLAY_MIDI FILE=Schmerz-Halt-deinen-Mund.mid
-	- Makro [SOFT_REMOVE](/de/Makros/#soft_remove). Entfernt nur Z-Mod, lässt audio, md5, root
+	- Makros [PLAY_MIDI](/de/Macros/#play_midi). Spielt die Melodie PLAY_MIDI FILE=Schmerz-Halt-deinen-Mund.mid
+	- Makro [SOFT_REMOVE](/de/Macros/#soft_remove). Entfernt nur Z-Mod, lässt audio, md5, root
 	- Nach dem Update bleiben die Moonraker-Einstellungen erhalten
 	- Die Benutzereinstellungen für klipper werden nach mod_data/user.cfg verschoben.
 	- Benutzereinstellungen für moonraker werden nach mod_data/user.moonraker.conf verschoben
@@ -576,10 +578,10 @@
 	27.11.2024
 	
 	- Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Klipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und die Tabellenkarte aus dem Standardprofil wird geladen.
-	- Makros [MEM](/de/Makros/#mem) - zeigt an, wie viel Speicher verwendet wird und von welcher Anwendung.
+	- Makros [MEM](/de/Macros/#mem) - zeigt an, wie viel Speicher verwendet wird und von welcher Anwendung.
 	- Makro [DISPLAY_ON](/de/System/#display_on) - setzt den Bildschirm in den Standardmodus zurück, der Drucker wird neu gestartet
-	- Makro [LED](/de/Makros/#led) - schaltet die Hintergrundbeleuchtung bei 50% ein
-	- Makro [LED_ON](/de/Makros/#led_on) - schaltet die Hintergrundbeleuchtung auf 100% ein.
+	- Makro [LED](/de/Macros/#led) - schaltet die Hintergrundbeleuchtung bei 50% ein
+	- Makro [LED_ON](/de/Macros/#led_on) - schaltet die Hintergrundbeleuchtung auf 100% ein.
 	- Makro [LED_OFF](/de/Macros/#led_off) - schaltet die Hintergrundbeleuchtung aus
 
 ??? note "Version 0.0.9-fix"

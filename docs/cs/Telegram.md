@@ -300,3 +300,61 @@ Měli byste být ve složce helm chart pro spuštění příkazu install/upgrade
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
+
+#### Řešení problému s připojením tiskárny k serveru přes SSH
+
+Po přeinstalaci operačního systému serveru se změní jeho **SSH host klíče** a tiskárna se odmítne připojit s chybou:
+
+```text
+ssh-ed25519 host key mismatch ...
+```
+
+##### Řešení
+
+###### 1. Vymazání uložených klíčů v tiskárně
+
+Připojte se k tiskárně přes SSH:
+
+```bash
+ssh root@<IP_tiskárny> -p 22
+```
+
+Výchozí heslo:
+
+```text
+root
+```
+
+Poté spusťte:
+
+```bash
+cd ~/.ssh
+rm -f know*
+```
+
+Tím se odstraní staré uložené host klíče serveru.
+
+###### 2. Opětovné vytvoření páru SSH klíčů v tiskárně (v případě potřeby)
+
+Pokud je potřeba vytvořit nový pár klíčů, odstraňte staré soubory:
+
+```bash
+cd ~/mod_data
+rm -f ssh.pub.txt ssh.key
+```
+
+Po restartu služba automaticky vytvoří nové klíče. Veřejný klíč (`ssh.pub.txt`) bude nutné znovu přidat na server do souboru `~/.ssh/authorized_keys` uživatele, pod kterým připojení funguje (například `tbot`).
+
+###### 3. Ověření připojení
+
+Po vymazání klíčů v tiskárně a aktualizaci souboru `authorized_keys` na serveru spusťte na tiskárně makro ZSSH. Připojení by nyní mělo fungovat bez chyby.
+
+
+#### Alternativa k botu
+
+Vzhledem k občasným výpadkům Telegramu je alternativou vytváření časosběrných videí na samostatném serveru (na stejném serveru, který se dříve používal pro Telegram bota).
+
+Příklad najdete v repozitáři [printer_timelapse](https://github.com/seligor/printer_timelapse). Po několika drobných úpravách jej lze propojit s [web-timelapse](https://github.com/seligor/web-timelapse) a získat podobné funkce bez použití komunikační aplikace.
+
+Základní postup: server sleduje, zda na tiskárně začal tisk, během tisku pořizuje snímky a po dokončení z nich vytvoří video a náhledový obrázek. Podporuje více tiskáren.
+

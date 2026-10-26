@@ -138,7 +138,7 @@ Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles na
 ### 4. **Durchführen eines vollständigen Diagnosetests**
 > Führen Sie diese Schritte in strikter Reihenfolge aus.:
 
-> 1. [CLEAR_EMMC](/de/System/?h=clea#clear_emmc) - alte Protokolle löschen
+> 1. [CLEAR_EMMC](/de/System/#clear_emmc) - alte Protokolle löschen
 
 > 2. **Den Drucker vollständig ausschalten** → 10 Sekunden warten.
 

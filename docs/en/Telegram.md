@@ -349,5 +349,11 @@ ssh-ed25519 host key mismatch ...
 !!! success "Step 3: Test the connection"
     Once you have cleared the keys on the printer and updated the `authorized_keys` on the server, run the **ZSSH macro** on the printer. The connection         should now be established without errors.
 
+#### Alternative to the bot
 
+Because Telegram has recently experienced occasional outages, an alternative is to generate timelapses on a separate server (the same server previously used for the Telegram bot).
+
+An example is available in the [printer_timelapse repository](https://github.com/seligor/printer_timelapse). With a few small changes, it can be combined with [web-timelapse](https://github.com/seligor/web-timelapse) to provide similar functionality without using a messaging app.
+
+The main workflow is to poll the printer for the start of a print, capture screenshots while printing, and then create a video and preview image when the print finishes. Multiple printers are supported.
 

@@ -118,7 +118,7 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 *   Support for [the following languages](/Global/#lang): English, German, French, Italian, Spanish, Chinese, Japanese, Korean, Portugal, Russsian
 *   Native screen support
 *   [Print recovery after power loss](/Zmod/#zrestore)
-*   [Shaper calibration with graphs](de/Calibrations/#zshaper) considering [SCV](/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
+*   [Shaper calibration with graphs](/Calibrations/#zshaper) considering [SCV](/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
 *   [File/permission/symlink check and repair for the native filesystem](/System/#check_system)
 *   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and Z-Mod over the network
 *   [Entware](/FAQ/#entware-in-z-mod-how-to-use-it)
@@ -292,7 +292,7 @@ To enable this feature, you must configure the macro [SAVE_ZMOD_DATA](/Global/#s
 
 #### By modifying the start code and START_PRINT macro
 
-If you do not want to use the global parameters *(SAVE_ZMOD_DATA PRINT_LEVELING=0)*, the following parameters of the macro [START_PRINT](/de/Main/#start_print), which is written in the start G-code, are available.
+If you do not want to use the global parameters *(SAVE_ZMOD_DATA PRINT_LEVELING=0)*, the following parameters of the macro [START_PRINT](/Main/#start_print), which is written in the start G-code, are available.
 
 - FORCE_LEVELING - forces the creation of a table map; True - create, False - do not create.
 - FORCE_KAMP - starts the creation of the adaptive table map; True - yes, False - no.
@@ -709,7 +709,7 @@ WeightValue is the value on the load cells in grams. It is displayed in degrees,
 What is this sensor for?
 
 - It can be used to measure zoffset via the [g28_tenz](https://github.com/ghzserg/g28_tenz) plugin
-- You can stop printing if the nozzle hits the part or the part is torn off. [NOZZLE_CONTROL](/ru/Global/#nozzle_control)
+- You can stop printing if the nozzle hits the part or the part is torn off. [NOZZLE_CONTROL](/Global/#nozzle_control)
 - Without resetting it, the table map will be measured incorrectly.
 
 ---

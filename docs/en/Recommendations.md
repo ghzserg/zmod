@@ -71,8 +71,8 @@ Disabling them also enables faster dialog closure after printing and native bed 
 
 Instead, you can use:
 
-- [zmod.link](/ru/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
-- [Telegram bot](/ru/Macros/).
+- [zmod.link](/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
+- [Telegram bot](/Macros/).
 
 [More about Chinese cloud services](/Global/#china_cloud).
 
@@ -84,7 +84,7 @@ Igor Polunovskiy
 
 Add [CHECK_MD5](/System/#check_md5) to your workflow.
 
-It is recommended to use the [global parameter FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+It is recommended to use the [global parameter FORCE_MD5](/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 1. Select and download the file for your architecture and operating system:
 

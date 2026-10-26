@@ -68,7 +68,7 @@
 * AD5X: Zrychlení cyklu dotazování od @ninjamida
 
 ### Verze 1.7.2
-06.08.2026
+16.08.2026
 
 * Aktualizováno Fluidd/Mainsail/Klipper
 

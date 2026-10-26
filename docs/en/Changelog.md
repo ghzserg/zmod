@@ -69,7 +69,7 @@
 * AD5X: Polling cycle speedup from @ninjamida
 
 ### Version 1.7.2
-06.08.2026
+16.08.2026
 
 * Updated Fluidd/Mainsail/Klipper
 
@@ -121,17 +121,17 @@
 ### Version 1.6.3
 **25.11.2025 — Z-Mod’s Birthday!**
 
-* [zmod.link](https://zmod.link/link/) | [ZLINK](/ru/Zmod/#zlink) — remote printer access via cloud
-* Macro [SCREEN](/ru/System/#screen) — capture a screenshot of the printer’s display
+* [zmod.link](https://zmod.link/link/) | [ZLINK](/Zmod/#zlink) — remote printer access via cloud
+* Macro [SCREEN](/System/#screen) — capture a screenshot of the printer’s display
 * Macro [LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native) — transfer Z-offset settings from the native screen to screenless mode
-* [AD5X](/ru/AD5X/): Added global parameter [REMOVE_FILAMENT](/ru/Global/#remove_filament) — unload filament after print completion
+* [AD5X](/AD5X/): Added global parameter [REMOVE_FILAMENT](/Global/#remove_filament) — unload filament after print completion
 * Added [recommended settings plugin](https://github.com/ghzserg/recommend)
 * Czech language support added
 * MCU version check for Klipper 13 implemented
-* [AD5X](/ru/AD5X/): Added leveling button
-* [AD5X](/ru/AD5X/): Fixes for Klipper 13
-* [AD5X](/ru/AD5X/): Nozzle cleaning improvements
-* [AD5X](/ru/AD5X/): Eliminated IFS grinding noise
+* [AD5X](/AD5X/): Added leveling button
+* [AD5X](/AD5X/): Fixes for Klipper 13
+* [AD5X](/AD5X/): Nozzle cleaning improvements
+* [AD5X](/AD5X/): Eliminated IFS grinding noise
 * ```CAMERA_ON VIDEO=video99``` — test all available cameras
 * Update check after print completion
 * When performing bed leveling via Fluidd/Mainsail, load cells are zeroed — but the user must manually clean the nozzle and preheat the bed beforehand
@@ -170,7 +170,7 @@
 
 ### Version 1.6.0
 
-- AD5M - Klipper 13 support. [UPDATE_MCU](/ru/System/#update_mcu)
+- AD5M - Klipper 13 support. [UPDATE_MCU](/System/#update_mcu)
 - AD5M - Temperature sensor in the head
 - Minor fixes
 

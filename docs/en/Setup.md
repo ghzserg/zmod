@@ -250,7 +250,7 @@ Attention!
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
-**For [AD5X](/ru/AD5X/)/Creator 5/Creator 5 Pro, [Z-Mod activation](/Native_FW/) from a USB drive—after updating the stock firmware.**:
+**For [AD5X](/AD5X/)/Creator 5/Creator 5 Pro, [Z-Mod activation](/Native_FW/) from a USB drive—after updating the stock firmware.**:
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)

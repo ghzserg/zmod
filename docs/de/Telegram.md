@@ -371,3 +371,12 @@ für den Benutzer, über den die Verbindung läuft (z.B. `tbot`).
 ###### 3. Verbindung testen
 
 Nachdem Sie die Schlüssel auf dem Drucker gelöscht und die Datei authorized_keys auf dem Server aktualisiert haben, führen Sie das ZSSH-Makro auf dem Drucker aus. Die Verbindung sollte nun fehlerfrei hergestellt werden.
+
+#### Alternative zum Bot
+
+Da es in letzter Zeit gelegentlich zu Ausfällen bei Telegram kommt, gibt es eine Alternative: Zeitrafferaufnahmen auf einem separaten Server erstellen (dem Server, der zuvor für den Telegram-Bot verwendet wurde).
+
+Ein Beispiel finden Sie im Repository [printer_timelapse](https://github.com/seligor/printer_timelapse). Mit wenigen Anpassungen lässt es sich mit [web-timelapse](https://github.com/seligor/web-timelapse) kombinieren. So erhalten Sie ähnliche Funktionen ohne einen Messenger.
+
+Der Hauptablauf: Der Drucker wird daraufhin überwacht, ob ein Druck beginnt. Während des Drucks werden Screenshots aufgenommen. Nach Abschluss des Drucks wird daraus ein Video mit Vorschaubild erstellt. Mehrere Drucker werden unterstützt.
+
