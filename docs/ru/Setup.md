@@ -162,7 +162,7 @@
 
 21. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
    
-    Только при отправке G-Code. Для 3mf не требуется.
+    >Замечание: Только при отправке G-Code. Для 3mf не требуется.
     
     <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
 

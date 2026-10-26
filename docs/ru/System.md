@@ -129,6 +129,8 @@ chmod +x zfs.sh
 
 Igor Polunovskiy
 
+>Замечание: Только при отправке G-Code. Для 3mf не требуется.
+
 Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 Проверить MD5 сумму.
@@ -169,7 +171,7 @@ Igor Polunovskiy
 =========================================
 1. На машине с Windows, где установлен слайсер.
   а) Скачиваем https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe
-  б) Добавляем в слайсер скрипт из пункта 1.а, 
+  б) Добавляем в слайсер скрипт из пункта 1.а,
      заменяя "disk:\patch\to\file\" на свой путь к данному скрипту:
     - для OrcaSlicer
       "Процесс"->"Прочее"->"Скрипты постобработки" 

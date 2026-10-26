@@ -83,6 +83,8 @@
 
 Igor Polunovskiy
 
+>Замечание: Только при отправке G-Code. Для 3mf не требуется.
+
 [CHECK_MD5](/ru/System/#check_md5)
 
 Рекомендуется использовать [глобальный параметр FORCE_MD5](/ru/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
@@ -125,7 +127,15 @@ Igor Polunovskiy
 В Orca. Щелкнуть по значку Wifi рядом с принтером:
 
 - Протокол: `Octo/Klipper`
-- Сетевой Агент: `Moonraker`
+
+Для Creator 5 / Creator 5 Pro / AD5X:
+
+- Имя хоста: `IP_принтера`
+
+<img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+Для FF5M / FF5m Pro:
+
 - Имя хоста: `IP_принтера:7125`
 - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
@@ -136,10 +146,6 @@ Igor Polunovskiy
 В Orca `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Эскизы G-кода`
 
 Учтите, что родной экран перестанет показывать миниатюры.
-
-В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
-
-<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 ---
 

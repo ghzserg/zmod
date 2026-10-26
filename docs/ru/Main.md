@@ -63,6 +63,8 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - [USE_KAMP](/ru/Global/#use_kamp) - Где возможно использовать адаптивную карту стола(KAMP), вместо полной карты стола 0-нет, 1-да (0)
 - [DISABLE_PRIMING](/ru/Global/#disable_priming) - запретить очистку сопла линией 0-нет, 1-да (0)
 - [FORCE_MD5](/ru/Global/#force_md5) - если 1 (по умолчанию 1) - проверять MD5 сумму файла, при ошибке - удалять файл.
+    >Замечание: Только при отправке G-Code. Для 3mf не требуется.
+
     1. Нужно подобрать и скачать к себе на компьютер файл для вашей архитектуры и операционной системы:
 
     - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows

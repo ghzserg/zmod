@@ -106,15 +106,19 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
   Необходимо переключиться на протокол "Octo/Klipper":
 
   - Протокол: `Octo/Klipper`
-  - Сетевой Агент: `Moonraker`
+
+  Для Creator 5 / Creator 5 Pro / AD5X:
+
+  - Имя хоста: `IP_принтера`
+
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+  Для FF5M / FF5m Pro:
+
   - Имя хоста: `IP_принтера:7125`
   - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
-
-  В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
-
-  <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 ---
 
@@ -147,16 +151,19 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 Необходимо переключиться на протокол "Octo/Klipper":
 
   - Протокол: `Octo/Klipper`
-  - Сетевой Агент: `Moonraker`
+
+  Для Creator 5 / Creator 5 Pro / AD5X:
+
+  - Имя хоста: `IP_принтера`
+
+  <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+  Для FF5M / FF5m Pro:
+
   - Имя хоста: `IP_принтера:7125`
   - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
   <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
-
-В Orca старше 2.4.2 отключите передачу 3mf файлов: `Профиль принтера` -> `Общая информация` -> `Дополнительно` -> `Use 3MF instead of G-code` снять галочку.
-
-<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
-
 
 ---
 
@@ -586,9 +593,9 @@ _Если вы считаете, что эта ошибка появилась �
 
 Итак, какие порты использует Z-Mod:
 
-- `7125` - тут находится `Moonraker`
-- `8080` - тут находится камера
-- `80` - тут работает `Fluidd/Mainsail`
+- `7125` - `Moonraker`
+- `8080` - камера
+- `80` - `Fluidd/Mainsail`
 
 Чтобы зайти на принтер, надо ввести просто IP принтера, **без указания номера порта**. *кролик*
 
