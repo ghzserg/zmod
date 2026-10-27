@@ -79,6 +79,8 @@
     Nebo zadejte do konzole: ```LANG LANG=cs```
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+    
+    Nastavte časové pásmo: ```SET_TIMEZONE ZONE=Europe/Prague``` (seznam pásem: `SET_TIMEZONE` bez parametrů). [Podrobnosti](System.md#set_timezone)
 
 13. Nakonfigurujte mod
 

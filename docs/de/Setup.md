@@ -77,6 +77,8 @@
     Oder geben Sie in der Konsole ```LANG LANG=de``` ein.
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+    
+    Stellen Sie die Zeitzone ein: ```SET_TIMEZONE ZONE=Europe/Berlin``` (Liste der Zonen: `SET_TIMEZONE` ohne Parameter). [Mehr dazu](/de/System/#set_timezone)
 
 13. Konfigurieren Sie den Mod
     

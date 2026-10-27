@@ -82,6 +82,8 @@
     Or type in the console: ```LANG LANG=en```
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+    
+    Set your timezone: ```SET_TIMEZONE ZONE=Europe/London``` (run `SET_TIMEZONE` without parameters to list zones). [Details](/System/#set_timezone)
 
 13. Configure the mod
 

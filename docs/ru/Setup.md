@@ -79,6 +79,8 @@
     Или в консоли наберите ```LANG LANG=ru```
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+    
+    Установите часовой пояс: ```SET_TIMEZONE ZONE=Europe/Moscow``` (список зон — `SET_TIMEZONE` без параметров). [Подробнее](/ru/System/#set_timezone)
 
 14. Настройте мод
     
