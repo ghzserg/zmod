@@ -23,15 +23,17 @@ AD5M/AD5M Pro:
 
 ```
 chroot /data/.mod/.zmod/
-/opt/konfig/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
 AD5X/C5/C5Pro:
 
 ```
 chroot /usr/data/.mod/.zmod/
-/opt/konfig/mod/.shell/tar_config.sh
+/usr/data/zmod/zmod/.shell/tar_config.sh
 ```
+
+**[Ticket erstellen](https://github.com/ghzserg/zmod/issues)**
 
 ## Warum ich Sie bitte, Tickets zu erstellen – einfach erklärt
 
@@ -184,3 +186,5 @@ Und dann kann ich anfangen **zu reparieren - sofort, nicht raten**.
     Danke für Ihr Verständnis und dafür, dass Sie die Zeit anderer Leute respektieren.
 
     Das ist keine Bürokratie - es ist der einzige Weg, die Unterstützung **schnell und effizient** zu gestalten.
+
+**[Ticket erstellen](https://github.com/ghzserg/zmod/issues)**

@@ -33,6 +33,8 @@ chroot /usr/data/.mod/.zmod/
 /usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
+**[Create a ticket](https://github.com/ghzserg/zmod/issues)**
+
 ## Why I Ask You to Create Tickets — Explained Simply
 
 Imagine your printer is a car.
@@ -181,3 +183,5 @@ Then I can start **fixing — immediately, not speculating**.
 Thank you for your understanding and respect for others’ time.
 
 This is not bureaucracy — it’s the **only way** to make support **fast and effective**.
+
+**[Create a ticket](https://github.com/ghzserg/zmod/issues)**

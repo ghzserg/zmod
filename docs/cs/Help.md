@@ -33,6 +33,8 @@ chroot /usr/data/.mod/.zmod/
 /usr/data/zmod/zmod/.shell/tar_config.sh
 ```
 
+**[Vytvořit tiket](https://github.com/ghzserg/zmod/issues)**
+
 ## Proč vás žádám, abyste vytvořili lístky — vysvětlení jednoduše
 
 Představte si, že vaše tiskárna je auto.
@@ -198,3 +200,5 @@ Pak mohu začít **opravovat — okamžitě, ne spekulovat**.
 Děkuji za pochopení a respekt k času ostatních.
 
 Toto není byrokracie — je to **jediný způsob**, jak učinit podporu **rychlou a efektivní**.
+
+**[Vytvořit tiket](https://github.com/ghzserg/zmod/issues)**

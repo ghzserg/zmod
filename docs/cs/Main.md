@@ -123,6 +123,24 @@ Nahradí výchozí koncový G-code.
 - `MIDI_END` — MIDI soubor k přehrání na konci tisku.
 
 ---
+### _USER_PREPARE_PRINT
+
+Uživatelské makro, které se volá před odesláním souboru k tisku.
+
+Umožňuje vložit vlastní makra a příkazy ještě před začátkem tisku souboru, tedy ještě před spuštěním `START_PRINT`.
+
+**Příklad přepsání v `mod_data/user.cfg`:**
+```gcode
+[gcode_macro _USER_PREPARE_PRINT]
+gcode:
+    # Vaše makra a příkazy
+    RESPOND MSG="Příprava k tisku"
+```
+
+**Poznámka:** Ve výchozím stavu je makro prázdné a uživatel ho může přepsat podle svých potřeb.
+
+---
+
 ### _USER_START_PRINT
 
 Vlastní makro pro uživatelsky definované akce na začátku tisku.

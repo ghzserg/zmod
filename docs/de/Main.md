@@ -144,6 +144,24 @@ Ersetzen des nativen End-G-Codes
 
 ---
 
+### _USER_PREPARE_PRINT
+
+Benutzerdefiniertes Makro, das aufgerufen wird, bevor die Datei zum Drucken gesendet wird.
+
+Ermöglicht es, eigene Makros und Befehle einzufügen, bevor der Druck der Datei beginnt, also noch vor der Ausführung von `START_PRINT`.
+
+**Beispiel für das Überschreiben in `mod_data/user.cfg`:**
+```gcode
+[gcode_macro _USER_PREPARE_PRINT]
+gcode:
+    # Ihre Makros und Befehle
+    RESPOND MSG="Druck wird vorbereitet"
+```
+
+**Hinweis:** Standardmäßig ist das Makro leer und kann vom Benutzer nach Bedarf überschrieben werden.
+
+---
+
 ### _USER_START_PRINT
 
 Benutzerdefiniertes Makro für benutzerdefinierte Aktionen zu Beginn des Druckvorgangs.

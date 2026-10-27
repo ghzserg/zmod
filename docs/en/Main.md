@@ -123,6 +123,24 @@ Replaces the default end G-code.
 - `MIDI_END` — MIDI file to play on print end.
 
 ---
+### _USER_PREPARE_PRINT
+
+Custom macro that is called before the file is sent to print.
+
+Lets you insert your own macros and commands before the file starts printing, i.e. even before `START_PRINT` runs.
+
+**Example override in `mod_data/user.cfg`:**
+```gcode
+[gcode_macro _USER_PREPARE_PRINT]
+gcode:
+    # Your macros and commands
+    RESPOND MSG="Preparing to print"
+```
+
+**Note:** By default, this macro is empty and can be overridden by the user according to their needs.
+
+---
+
 ### _USER_START_PRINT
 
 Custom macro for user-defined actions at the start of printing.
