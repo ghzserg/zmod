@@ -111,6 +111,9 @@ V menu tisku jsou dvě důležitá tlačítka:
 
 Automatická kalibrace probíhá od 0,01 do 0,04 a pro viskózní plasty, jako je PETG, je nepoužitelná
 
+
+**Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](Global.md#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ---
 
 ## Jemné ladění

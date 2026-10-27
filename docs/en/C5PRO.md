@@ -111,6 +111,9 @@ There are two important buttons in the print menu:
 
 Automatic calibration ranges from 0.01 to 0.04 and is useless for viscous plastics such as PETG
 
+
+**Purging all extruders without Auto PA.** By default only the first extruder is purged at print start. To purge all used extruders, enable the global parameter [PURGE_ALL_EXTRUDERS](/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ---
 
 ## Fine tuning

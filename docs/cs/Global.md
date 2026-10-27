@@ -164,6 +164,23 @@ Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následujíc
 
 Příklad: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
+---
+
+##### PURGE_ALL_EXTRUDERS
+
+Pouze Creator 5 / Creator 5 Pro
+
+Profouknutí extruderů při startu tisku:
+
+- 0 - profouknout pouze první (startovní) extruder (výchozí)
+- 1 - profouknout všechny použité extrudery
+
+Profukují se extrudery, které se účastní přiřazení barev ze souboru k fyzickým cívkám. Pokud je na jednu cívku přiřazeno více barev, extruder se profoukne jen jednou.
+
+Když je zapnuté Auto PA ([PRINT_AUTOPA](Global.md#print_autopa) nebo tlačítko `Auto PA` v menu tisku), všechny použité extrudery se profouknou už během kalibrace PA, proto tento parametr nemá žádný vliv.
+
+Příklad: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ### Parametry startu tisku/mapování podložky [START_PRINT]:
 
 ##### MIDI_START

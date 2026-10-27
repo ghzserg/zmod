@@ -201,6 +201,23 @@ Für benutzerdefinierte Werte bei Fehlerbedingungen im stillen Modus addieren Si
 
 Beispiel: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`.
 
+---
+
+##### PURGE_ALL_EXTRUDERS
+
+Nur Creator 5 / Creator 5 Pro
+
+Spülen der Extruder beim Druckstart:
+
+- 0 - nur den ersten (Start-)Extruder spülen (Standard)
+- 1 - alle verwendeten Extruder spülen
+
+Gespült werden die Extruder, die an der Zuordnung der Farben aus der Datei zu den physischen Spulen beteiligt sind. Sind mehrere Farben derselben Spule zugeordnet, wird dieser Extruder nur einmal gespült.
+
+Ist Auto PA aktiviert ([PRINT_AUTOPA](/de/Global/#print_autopa) oder die Schaltfläche `Auto PA` im Druckmenü), werden alle verwendeten Extruder ohnehin während der PA-Kalibrierung gespült, daher hat dieser Parameter keine Wirkung.
+
+Beispiel: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ### Parameter für den Start des Druckvorgangs und die Erstellung einer Bettkarte [START_PRINT]:
 
 ##### MIDI_START

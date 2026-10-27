@@ -111,6 +111,9 @@ Im Druckmenü gibt es zwei wichtige Schaltflächen:
 
 Die automatische Kalibrierung reicht von 0,01 bis 0,04 und ist für viskose Kunststoffe wie PETG nutzlos
 
+
+**Alle Extruder ohne Auto PA spülen.** Standardmäßig wird beim Druckstart nur der erste Extruder gespült. Damit alle verwendeten Extruder gespült werden, aktivieren Sie den globalen Parameter [PURGE_ALL_EXTRUDERS](/de/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ---
 
 ## Feineinstellung

@@ -168,6 +168,23 @@ For custom values for error conditions in silent mode, add the following values 
 
 Example: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
+---
+
+##### PURGE_ALL_EXTRUDERS
+
+Creator 5 / Creator 5 Pro only
+
+Extruder purge at print start:
+
+- 0 - purge only the first (starting) extruder (default)
+- 1 - purge all used extruders
+
+The extruders purged are those involved in mapping the file's colors to the physical spools. If several colors are assigned to the same spool, that extruder is purged once.
+
+When Auto PA is enabled ([PRINT_AUTOPA](/Global/#print_autopa) or the `Auto PA` button in the print menu), all used extruders are already purged during PA calibration, so this parameter has no effect.
+
+Example: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START

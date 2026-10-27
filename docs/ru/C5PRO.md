@@ -71,6 +71,9 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 !!! Note
     Автоматическая калибровка идёт от 0.01 до 0.04, и для вязких пластиков, таких как PETG, бесполезна.
 
+
+**Продувка всех экструдеров без Auto PA.** По умолчанию при старте печати продувается только первый экструдер. Чтобы продувались все используемые экструдеры, включите глобальный параметр [PURGE_ALL_EXTRUDERS](/ru/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+
 ---
 
 ## COLOR
