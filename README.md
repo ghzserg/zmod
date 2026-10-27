@@ -11,7 +11,7 @@
 Congratulations on your FlashForge printer purchase! The stock firmware is great for getting started, but if you want to unlock your device’s full potential, Z-Mod is a powerful and free solution that transforms your printer from “user-friendly” to “professional-grade”.
 
 ### What is Z-Mod?
-Z-Mod is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface.
+Z-Mod is a custom firmware modification installed *on top of* the stock software. It does **not** replace the original firmware — instead, it extends it, adding a vast number of features familiar from advanced printers, all while preserving the benefits and ease of use of the native interface. If you want even more, [welcome to the documentation](https://wiki.zmod.link/SetupCalibrations/) with lots of settings.
 
 *Z-Mod: Qui non legit, non intrat*
 
@@ -43,7 +43,7 @@ Here’s what you gain by installing Z-Mod:
 **Stock firmware**: Basic filament-runout detection. No firmware or file integrity checks → print hangs possible.
 **Z-Mod**:
 
-- **Nozzle Collision Detection**: Uses strain gauges to detect nozzle collisions with the print or bed — and automatically pauses to prevent damage.
+- **Nozzle Collision Detection**: Uses load cells to detect nozzle collisions with the print or bed — and automatically pauses to prevent damage.
 - **Power-loss Recovery**: Remembers the last print position and resumes after power is restored.
 - **Firmware Integrity Check**: Validates both stock firmware and Z-Mod files to prevent corruption.
 - **G-code File Integrity Check**: Verifies MD5 checksums during file transfer.
@@ -99,7 +99,7 @@ Z-Mod doesn’t *replace* the stock firmware — it enhances it, giving you the 
 > 
 > If you don’t know what this is, don’t understand why a Klipper web interface is needed, or are simply satisfied with the stock firmware, do NOT install this modification. For everyone else – **please read the entire instructions carefully!**
 > 
-> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://ghzserg.github.io/).
+> After installing the mod, if you don’t want to delve into details – just print as usual. No additional configuration or changes are required. If you decide to explore further – proceed by reading the [documentation](https://wiki.zmod.link/SetupCalibrations/).
 
 ## Before start
 
@@ -140,7 +140,7 @@ Native firmware files are located [here](https://wiki.zmod.link/Native_FW/).
 
 ## Plugins
 
-Z-Mod support [Plugins](https://wiki.zmod.link/Plugin/)
+Z-Mod supports [Plugins](https://wiki.zmod.link/Plugin/)
 
 ## Credits
 
