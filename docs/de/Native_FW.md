@@ -4,16 +4,23 @@
 
 ## So installieren Sie die native Firmware
 
-1. Setzen Sie den Drucker auf die Standardeinstellungen zurück.
-2. Formatieren Sie den USB-Stick auf FAT/FAT16/FAT32(MBR)
-3. Legen Sie die Datei im Stammverzeichnis des USB-Flash-Speichers ab.
-4. Schalten Sie den Drucker aus
-5. Stecken Sie das USB-Flash-Laufwerk in den Drucker
-6. Schalten Sie den Drucker ein
+0. Vor der Installation sollten Sie den Drucker nach Möglichkeit auf die Standardeinstellungen zurücksetzen.
+1. Formatieren Sie einen USB-Stick auf FAT32 oder FAT/FAT16 (MBR).
+2. Legen Sie die Datei im Stammverzeichnis des USB-Sticks ab (ohne Unterordner).
+3. Schalten Sie den Drucker aus.
+4. Stecken Sie den USB-Stick in den Drucker.
+5. Schalten Sie den Drucker ein.
+6. Warten Sie, bis er vollständig hochgefahren ist.
+7. Schalten Sie den Drucker aus und wieder ein.
+8. Führen Sie die nötigen [Kalibrierungen](/de/SetupCalibrations/) durch.
 
 ??? abstract "AD5X"
 
 	## Native AD5X-Firmware
+
+	Dies ist die Factory-Standardfirmware für AD5X.
+
+	Wenn Sie nicht möchten, dass der Drucker [vor jedem Druck die Bettmitte misst](/de/FAQ/#vor-jedem-druckvorgang-misst-der-drucker-die-mitte-des-druckbetts), installieren Sie keine Firmware-Version höher als 1.1.7.
 
 	- [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
 	- [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
@@ -33,6 +40,10 @@
 
 	## Native AD5M-Firmware
 
+	Dies ist die Factory-Standardfirmware für AD5M.
+
+	Wenn Sie nicht möchten, dass der Drucker [vor jedem Druck die Bettmitte misst](/de/FAQ/#vor-jedem-druckvorgang-misst-der-drucker-die-mitte-des-druckbetts), installieren Sie keine Firmware-Version höher als 3.2.3.
+
 	- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 	- [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 	- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
@@ -46,6 +57,10 @@
 
 	## Native AD5M Pro-Firmware
 
+	Dies ist die Factory-Standardfirmware für AD5M Pro.
+
+	Wenn Sie nicht möchten, dass der Drucker [vor jedem Druck die Bettmitte misst](/de/FAQ/#vor-jedem-druckvorgang-misst-der-drucker-die-mitte-des-druckbetts), installieren Sie keine Firmware-Version höher als 3.2.3.
+
 	- [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 	- [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
 	- [3.2.4](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.4-2.2.3-20251114-Factory.tgz)
@@ -56,7 +71,7 @@
 
 ## Creator 5 Original-Firmware
 
-Dies ist die Factory (Factory) Original-Firmware für Creator 5
+Dies ist die Factory-Originalfirmware für Creator 5.
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
@@ -65,7 +80,7 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5
 
 ## Creator 5 Pro Original-Firmware
 
-Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
+Dies ist die Factory-Originalfirmware für Creator 5 Pro.
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
@@ -74,17 +89,18 @@ Dies ist die Factory (Factory) Original-Firmware für Creator 5 Pro
 
 # Unbricker
 
-Universeller Unbricker für FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+Universeller Unbricker für AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Datei [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) herunterladen
 2. USB-Stick auf FAT32 formatieren
-2. [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) in das Stammverzeichnis des USB-Sticks entpacken
-3. Drucker ausschalten
-4. USB-Stick in den Drucker einstecken
-5. Warten, bis die Firmware geflasht ist (bis zu 40 Minuten)
-6. USB-Stick aus dem Drucker entfernen
+3. [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) in das Stammverzeichnis des USB-Sticks entpacken
+4. Drucker ausschalten
+5. USB-Stick in den Drucker einstecken
+6. Warten, bis die Firmware geflasht ist (bis zu 40 Minuten)
+7. USB-Stick aus dem Drucker entfernen
+8. Drucker aus- und wieder einschalten
 
-Falls etwas schiefgelaufen ist, die Log-Dateien auf dem USB-Stick überprüfen
+Falls etwas schiefgelaufen ist, die Log-Dateien auf dem USB-Stick überprüfen.
 
 ## Installation der vollständigen Firmware auf Creator 5 / Creator 5 Pro
 
@@ -92,16 +108,22 @@ Falls etwas schiefgelaufen ist, die Log-Dateien auf dem USB-Stick überprüfen
 
 Die Installation dauert lange, bis zu einer Stunde.
 
-1. Laden Sie auf einen USB-Stick herunter:
+1. Kopieren Sie alle 3 Dateien gleichzeitig auf einen FAT32-formatierten USB-Stick:
 
    - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
    - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
    - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
 
-2. Nach dem Update, wenn Sie den MCU neu flashen müssen, installieren Sie:
+2. Schalten Sie den Drucker aus, stecken Sie den USB-Stick ein, schalten Sie ihn ein und warten Sie auf einen vollständigen Neustart. Ein Creator 5 wird dabei zum Creator 5 Pro — das ist normal.
+
+3. Nach dem Update, wenn Sie den MCU neu flashen müssen, installieren Sie:
 
    - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
    - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
+
+4. Um einen Creator 5 vom Creator 5 Pro wieder in die normale Version zurückzuversetzen:
+
+   - [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
 ## Installation der vollständigen Firmware auf dem AD5X
 
@@ -109,9 +131,9 @@ Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. 
 
 Die Installation kann bis zu einer Stunde dauern.
 
-Auf USB-Stick herunterladen
+Kopieren Sie beide Dateien gleichzeitig auf den USB-Stick:
 
-- [AD5X-Fabrik-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
+- [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
 - Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
@@ -121,9 +143,9 @@ Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. 
 
 Die Installation kann bis zu einer Stunde dauern.
 
-1. Auf USB-Stick herunterladen FF5M
+1. Kopieren Sie folgende Dateien auf einen USB-Stick für den AD5M:
 
-  - [Adventurer5M-Fabrik-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
+  - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
   - `config.tar`, falls Sie dies zuvor über `TAR_CONFIG` durchgeführt haben.
 
@@ -160,7 +182,7 @@ Durch Aktivieren von Z-Mod auf dem AD5X/Creator 5/Creator 5 Pro nach einem Firmw
 
 ## XY installieren
 
-Für alle, die den Verstand verloren haben und ihren Drucker komplett umgekrempelt haben (vom Parkplatz zum Abfallbehälter): Entpacken Sie den Archivinhalt auf einen USB-Stick, stecken Sie den Stick ein und starten Sie den Drucker neu. Die Kalibrierung wird geladen. Drücken Sie zuerst die Reset-Taste. Stellen Sie anschließend mithilfe der Bedienelemente auf dem Bildschirm die korrekte Druckkopfposition ein. Drücken Sie die Set-Taste, um die Position zu fixieren. Starten Sie den Drucker ohne den USB-Stick neu. Archiv von der offiziellen Flashforge-Supportseite.
+Für alle, deren ~~Verstand~~ „Home“-Position verrutscht ist (Parkposition am Abfallschacht): Entpacken Sie den Archivinhalt in das Stammverzeichnis eines FAT32-USB-Sticks, schalten Sie den Drucker aus, stecken Sie den Stick ein und schalten Sie den Drucker ein. Die Kalibrierung wird geladen. Drücken Sie zuerst die Reset-Taste. Stellen Sie anschließend mithilfe der Bedienelemente auf dem Bildschirm die korrekte Druckkopfposition ein. Drücken Sie die Set-Taste, um die Position zu fixieren. Starten Sie den Drucker ohne den USB-Stick neu. Archiv vom offiziellen FlashForge-Support.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
@@ -182,12 +204,12 @@ Für alle, die den Verstand verloren haben und ihren Drucker komplett umgekrempe
 E0011 beheben Ein
 
 - [Adventurer5M-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-- [Abenteurer5MPro-e0011-an.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+- [Adventurer5MPro-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
 
 Fix E0011 Aus
 
-- [Abenteurer5M-e0011-aus.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
-- [Abenteurer5MPro-e0011-aus.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
+- [Adventurer5M-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
+- [Adventurer5MPro-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
 ## E0017 auf nativer Firmware
 
@@ -202,7 +224,7 @@ Fix E0011 Aus
 
 ## Übersetzen von 5MPro in 5M
 
-[Abenteurer5MPro-3.1.3-2.2.3-20250107-Fabrik-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
+[Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
 ## Konvertierung von Creator 5 in Creator 5 Pro
 
@@ -229,10 +251,12 @@ IFS-Firmware-Archiv
 
 ## MD5
 
+> Hinweis: Nur beim Senden von G-Code. Für 3MF nicht erforderlich.
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Vergessen Sie nicht, ```chmod +x zmod_preprocess-linux-amd64``` auszuführen.
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
 

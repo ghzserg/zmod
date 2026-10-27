@@ -6,14 +6,14 @@ Plugins included with Z-Mod:
 
 1. [Recommend](https://github.com/ghzserg/recommend) - Settings recommended for immediate use after installing the mod.
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz) – Z-axis parking using load cells
-2. [Nopoop](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
-3. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse
-4. [Notify](https://github.com/ghzserg/notify) - Receive notifications in Telegram and over 100 other different services
+3. [Nopoop](https://github.com/ghzserg/nopoop) - Maximum waste reduction by ninjamida
+4. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse
+5. [Notify](https://github.com/ghzserg/notify) - Receive notifications in Telegram and more than 100 other services
 
 External plugins not developed by the Z-Mod author.
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Compatible with Bambu Studio, improves feed tower control, provides accurate time and material consumption estimates, reduces waste, supports Mainsail, quick color changes, and advanced printing features. CANNOT BE USED WITH THE NATIVE SCREEN.
-2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - a fork of BamBufy
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - a fork of Bambufy
 3. [Dryer](https://github.com/pantata/dryer) - Drying filament via heated bed
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) - Plugin to support the [IFS Jacker hardware mod](https://github.com/ninjamida/ifs-jacker), for auto-detection of available channel count and Klipper integration for fans / LEDs / sensors connected via an IFS Jacker
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - an alternative screen implementation
@@ -38,6 +38,27 @@ ENABLE_PLUGIN name=g28_tenz
 ```gcode
 DISABLE_PLUGIN name=g28_tenz
 ```
+
+---
+
+## PLUGINS
+
+Displays the plugin management menu.
+
+<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
+
+In this menu you can enable, disable and completely remove additional plugins.
+
+- Left column (activation): click to enable or disable the plugin.
+    - Green button — the plugin is active.
+    - Gray button — the plugin is disabled.
+- Right column (updates): enables or disables automatic updates via Moonraker.
+    - UPDATE: ON — updates are enabled.
+    - UPDATE: OFF — updates are disabled.
+
+**How to completely remove a plugin:**
+
+If you no longer need a plugin, make both of its buttons gray (disable the plugin itself and its updates), press SAVE (MOONRAKER RESTART), and then reboot the printer. The system will automatically delete its folder from `mod_data/plugins/`.
 
 ---
 ## Installing Classic Klipper Plugins with Python Modules

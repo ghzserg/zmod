@@ -9,7 +9,7 @@
 - Tiskárna vždy pracuje se **4 barvami** (T0, T1, T2, T3). Všechny čtyři sloty jsou dostupné v menu výběru.
 - Pro zapnutí kamery použijte `CAMERA_ON VIDEO=video67`.
 - Možný pád Klipperu. Řešení: `Profil procesu` -> `Ostatní` -> `Výstupní G-code` -> `Vyloučení modelů` — vypněte zaškrtávací políčko.
-- Místo makra `CLOSE_DILALOGS` (pomalé zavírání) vždy používejte `FAST_CLOSE_DILAOGS` (rychlé zavírání).
+- Místo makra `CLOSE_DIALOGS` (pomalé zavírání) vždy používejte `FAST_CLOSE_DIALOGS` (rychlé zavírání).
 - Makro `NEW_SAVE_CONFIG` nefunguje.
 - Žádná podpora Klipperu 13
 
@@ -17,13 +17,15 @@
 
 ## Jak připravit soubor v Orca
 
-- [Odesílejte soubory k tisku přes Octo/Klipper.](/cs/Recommendations/#send-files-via-octoklipper-for-printing)
+- [Odesílejte soubory k tisku přes Octo/Klipper.](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 - [Profily pro Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 - [Důrazně doporučujeme zapnout preprocesor](/cs/Global/#force_md5)
 
 ---
-## BARVA
+## COLOR
 ## Jak používat menu pro výběr barvy a typu filamentu
+
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 <img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
 
@@ -33,12 +35,13 @@ Vyberte cívku, se kterou chcete pracovat (například cívka 2):
 
 <img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
 
-Můžete provést čtyři akce:
+Můžete provést pět akcí:
 
 - Změnit barvu cívky.
 - Změnit typ plastu (PLA, PETG, ABS, ...).
 - Nasadit tento extruder na vozík.
 - Načíst nový filament do extruderu.
+- Sundat tento extruder z vozíku.
 
 **Jak změnit barvu:**
 
@@ -61,7 +64,7 @@ Pokud se typ nezměnil: zavřete okno křížkem a spusťte makro `COLOR` znovu.
 
 ---
 
-## TISK
+## PRINT
 ## Menu tisku
 
 Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `SAVE_ZMOD_DATA SILENT=0` ve výchozím stavu.
@@ -91,14 +94,14 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 
 ---
 
-### Vytvoření mapy stolu a AUTO PA
+### Vytvoření sítě podložky a AUTO PA
 
 V menu tisku jsou dvě důležitá tlačítka:
 
-**Leveling (Mapa stolu):**
+**Leveling (síť podložky):**
 
-- `Snímat mapu stolu` — před tiskem bude automaticky vytvořena mapa stolu.
-- `Nesnímat mapu stolu` — použije se dříve uložená mapa.
+- `Snímat síť podložky` — před tiskem bude automaticky vytvořena mapa podložky.
+- `Nesnímat síť podložky` — použije se dříve uložená síť.
 
 **Auto PA (Automatický výběr Pressure Advance):**
 
@@ -112,7 +115,7 @@ Automatická kalibrace probíhá od 0,01 do 0,04 a pro viskózní plasty, jako j
 
 ## Jemné ladění
 
-Nejprve je třeba vypnout původní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
+Nefunguje s tovární obrazovkou, proto je nejprve třeba [vypnout nativní obrazovku tiskárny](/cs/System/#display_off) pomocí makra `DISPLAY_OFF`.
 
 **Jak najít tato nastavení:**
 
@@ -194,6 +197,9 @@ Můžete také nastavit hodnotu:
 - `2` — kontrolovat pouze data připravená skriptem sliceru, bez skenování celého souboru
 **!Pokud je skenování souborů vypnuté**, tiskárna neví, kolik extruderů se používá, a proto **bude Auto PA spuštěno pro všechny cívky**
 
+!!! note
+    U souborů 3MF se automatické přiřazení a skenování zapínají automaticky
+
 ---
 
 Chcete-li zapnout **automatické přiřazení barev** z G-code souboru k fyzickým cívkám, použijte parametr
@@ -207,7 +213,10 @@ Můžete nastavit vlastní hodnoty pro přerušení tisku v tichém režimu seč
 - `4` — Alespoň jedna barva vůbec neodpovídá (obvykle proto, že je vypnuté skenování souborů)
 - `8` — Alespoň jedna barva odpovídá špatně
 - `16` — Stejná fyzická cívka byla přiřazena více než jednomu indexu nástroje v souboru
-Například použití hodnoty `30` povede k přerušení tisku v tichém režimu, pokud nastanou jakékoli problémy s automatickým přiřazením, a `AUTO_ASSIGN_COLORS=10` (2+8) přeruší tisk, pokud alespoň jeden materiál neodpovídá + alespoň jedna barva odpovídá špatně.
+Například použití hodnoty `30` povede ke zrušení tisku v tichém režimu, pokud nastanou jakékoli problémy s automatickým přiřazením, a `AUTO_ASSIGN_COLORS=6` (2+4) zruší tisk, pokud alespoň jeden materiál neodpovídá + alespoň jedna barva neodpovídá vůbec.
+
+!!! note
+    U souborů 3MF se automatické přiřazení a skenování zapínají automaticky
 
 ---
 
@@ -221,7 +230,7 @@ Můžete nastavit následující hodnoty (v minutách):
 * `0` — funkce vypnuta (extrudery se během nečinnosti nevypínají)
 * `5`, `10`, `20`, `40`, `60` — doba, po které bude nepoužívaný extruder vypnut
 
-**Důležité:** Pro správnou funkci této volby musí být ve sliceru zapnuta funkce **Ooze prevention** (Prevence vytékání plastu). Bez ní tiskárna nedokáže správně zpracovat teplotní režimy nečinných hotendů během výměny filamentu.
+**Důležité:** Pro správnou funkci této volby musí být ve sliceru zapnuta funkce **Ooze prevention** (Prevence vytékání plastu) (`Nastavení tisku` > `Multimateriál` > `Ooze prevention`). Bez ní tiskárna nedokáže správně zpracovat teplotní režimy nečinných hotendů během výměny filamentu.
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
@@ -317,7 +326,7 @@ Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čty
 
 **Jak spustit:**
 
-1. **Sejměte tiskovou podložku** ze stolu!
+1. **Sejměte tiskovou desku** z podložky!
 2. Spusťte makro `CALIBRATE_EXTRUDERS` z menu nebo zadejte do konzole:
    ```
    CALIBRATE_EXTRUDERS
@@ -327,7 +336,7 @@ Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čty
 **Co se stane:**
 
 - Tiskárna provede (G28).
-- Zahřeje stůl na 65 °C.
+- Zahřeje podložku na 65 °C.
 - Postupně vezme každý ze 4 extruderů (T0–T3).
 - Pro každý extruder: zahřeje trysku, provede proplach, očistí o gumu a poté pomocí senzorů určí přesné souřadnice X, Y a Z.
 - Výsledky se automaticky zapíší do souboru `rw/extruder.json`.
@@ -337,7 +346,7 @@ Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čty
 
 | Parametr | Výchozí | Popis |
 |---|---|---|
-| `BED_TEMP` | 65.0 | Teplota stolu při kalibraci |
+| `BED_TEMP` | 65.0 | Teplota podložky při kalibraci |
 | `SEARCH` | 14.0 | Poloměr hledání senzoru (mm) |
 | `HOVER` | 0.6 | Výška vznášení nad bodem |
 | `SAFE_Z` | 10.0 | Bezpečná výška Z |
@@ -369,7 +378,7 @@ Kde `T=0` je číslo extruderu (0–3), který bude během kalibrace použit.
 
 - Tiskárna vezme zadaný extruder.
 - Vynuluje všechny G-code posuny.
-- Přesune hlavu do středu stolu (X130 Y130).
+- Přesune hlavu do středu podložky (X130 Y130).
 - Spustí automatickou kalibraci rezonancí (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
 - Vrátí extruder na místo.
 - Uloží konfiguraci (`SAVE_CONFIG`).
@@ -478,7 +487,7 @@ Takto se při vícebarevném tisku s různými materiály ventilace automaticky 
 
 ## Zrychlení tisku
 
-Napište do 'mod_data/user.cfg'
+Pro vypnutí zpomalování firmwaru na krátkých perimetrech otevřete webové rozhraní Fluidd -> levý sloupec -> karta `Konfigurace` -> `mod_data`/`user.cfg` a přidejte tři řádky:
 
 ```
 [printer]
@@ -486,13 +495,13 @@ short_move_limit: False
 short_extrude_move_limit: False
 ```
 
-Toto nastavení výrazně zrychluje tisk, ale může způsobit pády tiskárny při tisku s fuzzy skin.
+Počínaje továrním firmwarem 1.9.9 toto nastavení výrazně zrychluje tisk, ale může způsobit pády tiskárny při tisku s fuzzy skin.
 
 ---
 
 ## Vypnutí rychlého návratu hlavy a předehřevu
 
-Napište do 'mod_data/user.cfg'
+Přidejte do `mod_data/user.cfg`:
 
 ```
 [virtual_sdcard]
@@ -500,8 +509,12 @@ enable_speed_return: False
 enable_preheat: False
 ```
 
-- **enable_speed_return**: False — Vypne nucený návrat hlavy k modelu rychlostí 600 mm/s, čímž se odstraní riziko silných kinematických nárazů a zlomení hotendu o vytištěné části (prime tower). Řízení bezpečné trajektorie návratu je plně předáno OrcaSliceru.
-- **enable_preheat**: False — Vypne skenování souborů Klipperu na pozadí a odlehčí procesoru. Vestavěná funkce zrychlovala ohřev při použití více než dvou trysek v krátkém intervalu, protože tiskárna nemůže ohřívat více než dvě trysky současně. Předběžný ohřev se přesněji vypočítává na straně OrcaSliceru.
+- **enable_speed_return**:
+    - `enable_speed_return: False` — hlava se z oblasti uchopení hotendu vrací k modelu rychlostí a po trajektorii nastavené ve sliceru.
+    - `enable_speed_return: True` — hlava se z oblasti uchopení hotendu vrací k modelu rychlostí 600 mm/s po trajektorii zvolené firmwarem tiskárny (možné jsou nárazy do okrajů prime tower).
+- **enable_preheat**:
+    - `enable_preheat: False` — vypne prediktivní skenování G-code souboru na pozadí během tisku a odlehčí procesoru i disku. Prediktivní ohřev přesněji spočítá OrcaSlicer.
+    - `enable_preheat: True` — používá prediktivní skenování G-code souboru na pozadí k předehřevu další trysky. Zrychluje ohřev při použití více než dvou trysek v krátkém intervalu, protože tiskárna nedokáže ohřívat více než dvě trysky současně.
 
 ---
 
@@ -509,7 +522,7 @@ enable_preheat: False
 
 Chcete-li odstranit oznámení o otevřeném krytu nebo dvířkách v režimu bez původní obrazovky
 
-Napište do 'mod_data/user.cfg'
+Přidejte do `mod_data/user.cfg`:
 
 ```
 [gcode_button topDoor]

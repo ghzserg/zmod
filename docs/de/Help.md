@@ -1,17 +1,16 @@
 # So kontaktieren Sie den Entwickler-Support
 
-Öffnen Sie den Telegrammbot [@zmod_help_bot](http://t.me/zmod_help_bot) und stellen Sie ihm Ihre Frage, er kennt die gesamte Dokumentation.
+Öffnen Sie den Telegram-Bot [@zmod_help_bot](http://t.me/zmod_help_bot) und stellen Sie ihm Ihre Frage, er kennt die gesamte Dokumentation.
 
-1. [Aktualisieren Sie Z-Mod und alle Plugins auf die neueste Version](/de/Setup/#aktualisieren-sie-die-mod)
-2. Übersetze den Mod ins Russische ```LANG LANG=de```.
-3. Beschreibe das Problem deutlich. Bildschirme, Fotos, Textbeschreibung.
-4. Rufe [CLEAR_EMMC](/de/System/#clear_emmc) auf, um die Logs zu löschen
-5. **Der Drucker muss ausgeschaltet werden**
-6. Schalten Sie den Drucker ein
-7. Erzeugen Sie ein Problem
-8. Ausführen von [TAR_CONFIG](/de/Zmod/#tar_config) - Logdateien speichern
-9. Poste eine Nachricht mit Beschreibung und `config-1.6.28-15.tar.gz`-Datei.
-10. [Fehlermeldung hinzufügen](https://github.com/ghzserg/zmod/issues)
+1. [Aktualisieren Sie Z-Mod und alle Plugins auf die neueste Version](/de/Setup/#aktualisieren-sie-den-mod)
+2. Beschreiben Sie das Problem deutlich: Screenshots, Fotos, Textbeschreibung.
+3. Rufen Sie [CLEAR_EMMC](/de/System/#clear_emmc) auf, um die Logs zu löschen
+4. **Schalten Sie den Drucker aus**
+5. Schalten Sie den Drucker ein
+6. Reproduzieren Sie das Problem
+7. Führen Sie [TAR_CONFIG](/de/Zmod/#tar_config) aus, um die Logdateien zu speichern
+8. Veröffentlichen Sie **eine** Nachricht mit der Beschreibung und der Datei `config-1.6.6-28.tar.gz`, wobei 1.6.6-28 die aktuelle Version des Mods ist.
+9. [Fehlermeldung hinzufügen](https://github.com/ghzserg/zmod/issues)
 
 Falls `TAR_CONFIG` nicht ausgeführt werden kann:
 
@@ -49,7 +48,7 @@ Und ich muss mit einer einfachen Frage beginnen:
 
 Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlagen:
 
-- **5 verschiedene Hersteller**:
+- **5 verschiedene Druckermodelle**:
 
   FF5M, FF5M Pro, AD5X, C5, C5Pro
 
@@ -105,7 +104,7 @@ Das ist **ineffizient**, **verlangsamt die Hilfe** und **verärgert alle**.
 Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles nach der Checkliste:
 
 ### 1. **Aktualisieren Sie auf die neueste Version**
-> Folgen Sie den [offiziellen Upgrade-Anweisungen](/de/Setup/#aktualisieren-sie-die-mod).
+> Folgen Sie den [offiziellen Upgrade-Anweisungen](/de/Setup/#aktualisieren-sie-den-mod).
 
 ### 2. **Deutsche Sprache installieren**
 > Starten Sie in der Konsole:
@@ -121,7 +120,7 @@ Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles na
 
 > - "Nach der Aktualisierung von Z-Mod auf Version X.Y.Z beim Drücken von "Drucken" auf dem ursprünglichen Bildschirm:
 
-> - heizt sich der Tisch auf,
+> - heizt sich das Bett auf,
 
 > - der Extruder heizt NICHT auf,
 
@@ -169,7 +168,7 @@ Damit ich **nicht raten, sondern Ihnen gleich helfen kann**, machen Sie alles na
 
 Sie hören auf zu schreien: "Das Auto läuft nicht."
 
-und du fängst an, es zu mir zu bringen:
+und Sie bringen es zu mir:
 
 > 🚗 **Bestimmtes Modell**,
 

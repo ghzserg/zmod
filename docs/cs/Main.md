@@ -21,7 +21,7 @@ Parametry:
 
 - `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `245`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
-- `MESH` — název profilu síťě podložky (prázdné = žádná síť načtená/vytvořená)
+- `MESH` — název profilu sítě podložky, který se má načíst (prázdné = nic se nenačte; pokud profil neexistuje, vytvoří se)
 - `FORCE_LEVELING` — vynutit vyrovnání podložky (výchozí: `False`)
 - `SKIP_LEVELING` — úplně přeskočit vyrovnání podložky (přepíše `FORCE_KAMP`/`FORCE_LEVELING`, výchozí: `False`)
 - `FORCE_KAMP` — vytvořit adaptivní síť podložky (KAMP, výchozí: `False`).
@@ -33,8 +33,8 @@ Parametry:
 
 **Poznámky:**
 
-- Jakákoli kalibrace (např. `FORCE_KAMP`/`FORCE_LEVELING`) spustí [CLEAR_NOZZLE](Global.md#clear_nozzle).
-- `[ZSSH_RELOAD](Zmod.md#zssh_reload)` se volá během `START_PRINT` pro obnovení SSH, pokud je potřeba.
+- Jakákoli kalibrace (např. `FORCE_KAMP`/`FORCE_LEVELING`) spustí [CLEAR_NOZZLE](Main.md#clear_nozzle).
+- [`ZSSH_RELOAD`](Zmod.md#zssh_reload) se volá během `START_PRINT` pro obnovení SSH, pokud je potřeba.
 
 **Příklad pro Orca Slicer s nativní obrazovkou:**
 Nahraďte spouštěcí G-code s:
@@ -59,24 +59,26 @@ Přidejte do G-code pro změnu vrstvy:
 SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
-[Možnosti vyrovnání podložky](FAQ.md#what-options-are-available-for-bed-leveling)
+[Možnosti vyrovnání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 
-#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#start_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-startu-tiskumapování-podložky-start_print)):
 
 - `PRECLEAR` — předčištění trysky v `CLEAR_NOZZLE`: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `CLEAR` — metoda čištění trysky (`LINE_PURGE`).
 - `PRINT_LEVELING` — povolit vyrovnání podložky pro každý tisk: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `USE_KAMP` — použít adaptivní síť podložky (KAMP), kde je to možné: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `DISABLE_PRIMING` — vypnout přípravu (priming) trysky: `0` = zapnout, `1` = vypnout (výchozí: `0`).
-- `FORCE_MD5` — ověřit MD5 hashe souborů (výchozí: `1`).
+- `FORCE_MD5` — ověřit MD5 hashe souborů a při chybě soubor smazat (výchozí: `1`).
+    > Poznámka: Platí pouze při odesílání G-code. Pro 3MF není potřeba.
+
     1. Vyberte a stáhněte soubor pro vaši architekturu a operační systém:
 
     - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
     - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Nezapomeňte spustit `chmod +x zmod_preprocess-linux-amd64`
-    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-arm64```
-    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS (Apple Silicon). Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
+    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-arm64```
+    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
     - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Obecný Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
     - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
     
@@ -92,10 +94,10 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     - ```"/home/user/zmod_preprocess-darwin-arm64";```
     - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-- `DISABLE_SKEW` — vypnout korekci zkosení (skew): `1` = vypnout, `0` = načíst `skew_profile` (výchozí: `1`).
-- `AUTO_REBOOT` — automatický restart po tisku: `0` = vypnout, `1` = zapnout, `2` = restart firmwaru (výchozí: `0`).
-- `CLOSE_DIALOGS` — automatické zavírání dialogů: `0` = vypnout, `1` = pomalé, `2` = rychlé (vyžaduje povolení "Pouze místní síť" na obrazovce tiskárny).
-- `STOP_MOTOR` — vypnutí motorů po tisku: `0` = vypnout, `1` = zapnout (výchozí: `1`).
+- `DISABLE_SKEW` — vypnout korekci zkosení (skew): `1` = vypnout, `0` = načíst `skew_profile` (volá `SKEW_PROFILE LOAD=skew_profile`) (výchozí: `1`).
+- `AUTO_REBOOT` — automatický restart po tisku: `0` = vypnout, `1` = zapnout, `2` = `FIRMWARE_RESTART` (pouze v režimu bez nativní obrazovky; s nativní obrazovkou — `REBOOT`) (výchozí: `0`).
+- `CLOSE_DIALOGS` — automatické zavírání dialogů: `0` = vypnout, `1` = pomalé, `2` = rychlé (vyžaduje povolení "Pouze místní síť" na obrazovce tiskárny: Nastavení → Ikona WiFi → Režim sítě) (výchozí: `0`).
+- `STOP_MOTOR` — vypnutí motorů 25 sekund po skončení/zrušení tisku: `0` = vypnout, `1` = zapnout (výchozí: `1`).
 - `MIDI_START` — MIDI soubor k přehrání na začátku tisku (např. `"start.mid"`).
 - `MIDI_END` — MIDI soubor k přehrání na konci tisku.
 
@@ -106,14 +108,14 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 1. Načte síť z `MESH`, pokud je zadána.
 2. Přeskočí vyrovnávání, pokud `SKIP_LEVELING = True`.
 3. Vytvoří KAMP síť, pokud `FORCE_KAMP = True`.
-4. Vytvoří plnou síť, pokud není žádná síť načtena nebo `FORCE_LEVELING = True`.
+4. Jinak vytvoří plnou síť, pokud není načtena žádná síť (nativní obrazovka vždy načítá `MESH_DATA`) nebo `FORCE_LEVELING = True`. Samotná síť se neukládá.
 
 ---
 ### END_PRINT
 
 Nahradí výchozí koncový G-code.
 
-#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#end_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-koncezrušení-tisku-end_print)):
 
 - `AUTO_REBOOT` — automatický restart po tisku (stejné jako výše).
 - `CLOSE_DIALOGS` — automatické zavírání dialogů (stejné jako výše).
@@ -188,7 +190,9 @@ Parametry:
 - `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `230`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
-*`PRECLEAR` (nastaveno pomocí `SAVE_ZMOD_DATA PRECLEAR=1`) povoluje předčištění. [Zjistit více](Global.md#save_zmod_data).*
+*`PRECLEAR` není parametr `CLEAR_NOZZLE`, ale globální příznak nastavovaný přes `SAVE_ZMOD_DATA PRECLEAR=1`; povoluje předčištění. [Zjistit více](Global.md#preclear).*
+
+*Přepsání makra `CLEAR_NOZZLE` v `mod_data/user.cfg` nezmění nativní čištění trysky spuštěné přímo z nativní obrazovky: nativní obrazovka funguje bez Z-Mod, a proto makra Z-Mod nepoužívá.*
 
 ---
 ### LED_ON
@@ -232,21 +236,30 @@ Restartuje tiskárnu.
 ---
 ### CLOSE_DIALOGS
 
-Zavře dialogy na nativní obrazovce (pomalá metoda).
+Zavře dialogy na nativní obrazovce (pomalá metoda). Používá se k zavření okna na konci tisku nebo při jeho zrušení.
 *Může způsobit zamrznutí tiskárny.*
+
+Implementace: @darksimpson
+
 Ovládáno globálním parametrem [`CLOSE_DIALOGS`](Global.md#close_dialogs).
 
 ---
 ### FAST_CLOSE_DIALOGS
 
-Rychle zavře dialogy (doporučeno).
+Rychle zavře dialogy (doporučeno). Používá se k zavření okna na konci tisku nebo při jeho zrušení. Funguje rychleji a tiskárnu nezamrazí.
+
+Implementace: @darksimpson
+
 *Povolte "Pouze místní síť" v nastavení tiskárny: **Nastavení → Ikona WiFi → Režim sítě → Přepnout "Pouze místní síť"**.*
 Ovládáno globálním parametrem [`CLOSE_DIALOGS`](Global.md#close_dialogs).
 
 ---
 ### NEW_SAVE_CONFIG
 
-Spustí `SAVE_CONFIG` bez zamrznutí nativní obrazovky.
+Spustí `SAVE_CONFIG` bez zamrznutí nativní obrazovky. Lze použít i k restartu Klipperu bez zamrznutí nativní obrazovky.
+
+Implementace: @darksimpson
+
 *Může trvat ~1 minutu a občas způsobit grafické chyby na obrazovce.*
 
 ---

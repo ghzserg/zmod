@@ -18,19 +18,21 @@ Schalten Sie die Standardanzeige ein und starten Sie den Drucker neu.
 
 ---
 
-#### DISPLAY_OFF
+### DISPLAY_OFF
 
-- `GUPPY`: `0` = GuppyScreen deaktivieren, `1` = GuppyScreen aktivieren (Standard: `1`)
+Schaltet den Standardbildschirm aus und startet den Drucker neu. Spart 13 Megabyte (20 Megabyte bei älteren Versionen der nativen Firmware).
 
-- `Helix`: `0` = HelixScreen deaktivieren, `1` = HelixScreen aktivieren (Standard: `0`) + `PLUGINS`
+Verwenden Sie die Schaltfläche mit Parameterauswahl in der Liste „Makros“ oder einen Konsolenbefehl:
 
-Schaltet den Standardbildschirm aus. Spart 13 Megabyte (20 Megabyte bei älteren Versionen der nativen Firmware).
+- `DISPLAY_OFF GUPPY=1 HELIX=0` — aktiviert GuppyScreen.
+- `DISPLAY_OFF GUPPY=0 HELIX=1` — aktiviert [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
 
 GuppyScreen ist eine alternative Bildschirm-Implementierung:
 
 - Unterstützt alle Funktionen des nativen Bildschirms mit Ausnahme der WiFi-Einstellungen
 - Benötigt 9 MB RAM, verglichen mit 23 MB für den nativen Bildschirm
-- Bleibt nicht hängen, wenn der Klipper neu gebootet wird
+- Bleibt nicht hängen, wenn Klipper neu gestartet wird
+- Bietet zusätzliche Funktionen, z. B. eine Liste aller Makros einschließlich Ihrer eigenen
 - Empfohlen für die Verwendung anstelle des nativen Bildschirms.
 - Bessere Wiederherstellung von unterbrochenen Druckvorgängen
 - Basiert auf [fork](https://github.com/ghzserg/guppyscreen_ff5m), das auf [original repository](https://github.com/ballaswag/guppyscreen) und einem weiteren [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m) basiert.
@@ -41,7 +43,8 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 
 	- Deaktivieren Sie den Bildschirm nur, wenn Sie die Bettnivellierung, den Z-Offset und die Makros `START_PRINT`/`END_PRINT` vollständig verstehen.
 
-	- Der Bildschirm bleibt nach einem Neustart 3 Minuten lang aktiv, hat aber keinen Einfluss auf den Z-Offset oder den Druckvorgang.
+	- Fügen Sie dieses Makro nicht in den Start-G-Code ein.
+	- Nach einem Neustart läuft der native Bildschirm noch 10 Sekunden weiter, hat aber keinen Einfluss auf den Z-Offset, da der Druck nicht über ihn läuft.
 
 Die Aktivierungszeit kann über den globalen Parameter [`DISPLAY_OFF_TIMEOUT`](/de/Global/#display_off_timeout) angepasst werden.
 
@@ -140,8 +143,11 @@ Man findet die Zeitzone in dem folgenden Ordner `/usr/data/.mod/.zmod/usr/share/
 SET_TIMEZONE ZONE=Asia/Yekaterinburg
 ```
 
-- ZONE - Zeitzone (Asien/Jekaterinburg)
-- ZONE - Zeitzone (Europe/Berlin)
+- ZONE - Zeitzone (Standard: `Asia/Yekaterinburg`)
+
+Beispiel: `SET_TIMEZONE ZONE=Europe/Berlin`. Ohne Parameter zeigt `SET_TIMEZONE` die Liste der verfügbaren Zonen an.
+
+Die Zeitzone ermöglicht es [GuppyScreen](/de/System/#display_off), das Ende des Drucks zu berechnen.
 
 ---
 
@@ -149,21 +155,23 @@ SET_TIMEZONE ZONE=Asia/Yekaterinburg
 
 Igor Polunovskiy
 
+> Hinweis: Nur beim Senden von G-Code. Für 3MF nicht erforderlich.
+
 Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1` zu verwenden.
 
 MD5-Summe prüfen.
 
-- `DELETE` — beschädigte Dateien löschen: `yes`/`no`.
+- `DELETE` — beschädigte Dateien löschen: `yes`/`no` (Standard: `yes`).
 
 ??? info "Download: Wählen Sie die passende Datei für Ihr System"
 
     1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
         * [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - **Windows**
-        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x                           zmod_preprocess-linux-amd64` auszuführen.
-        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Intel** Vergessen Sie nicht, `chmod +x                  zmod_preprocess-darwin-arm64` auszuführen.
-        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Silicon** Vergessen Sie nicht, `chmod +x                zmod_preprocess-darwin-amd64` auszuführen.
-        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py`             auszuführen.
-        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh`             auszuführen.
+        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x zmod_preprocess-linux-amd64` auszuführen.
+        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Apple Silicon** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-arm64` auszuführen.
+        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Intel** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-amd64` auszuführen.
+        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py` auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh` auszuführen.
      
 ??? tip "2. Konfiguration in Orca"
     In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
@@ -248,13 +256,17 @@ Parameter FORCE:
 
 Beispiel: `UPDATE_MCU FORCE=13` erzwingt das Laden der Klipper 13-Firmware
 
-Wenn man es nicht versteht, wie man [MCU-Konfigurationen und -Firmware wiederherstellt](/de/Native_FW/#installation-der-vollständigen-firmware-auf-dem-ad5x), führe es nicht aus.
+Wenn Sie nicht wissen, wie Sie [den nativen Klipper per USB-Stick wiederherstellen](/de/Native_FW/#fix_klipper), führen Sie es nicht aus.
+Sehen Sie sich vor dem Klipper-Update die [Änderungen in den neuen Versionen](https://www.klipper3d.org/Releases.html) an; die Standardkonfigurationsdateien müssen nicht angepasst werden.
 
 Wenn etwas schief geht, gehen Sie nur über [factory](/de/Native_FW/) zurück.
 
-Wenn die Konsole nicht verfügbar ist, verbinden Sie sich über SSH mit dem Drucker:
+Nach dem Ausführen des Makros:
 
-`/usr/data/zmod/zmod/.shell/zcheckmd5.sh`
+1. Warten Sie auf die Melodie (sie wird auch dann abgespielt, wenn der Ton auf dem nativen Bildschirm stummgeschaltet wurde)
+2. Schalten Sie den Drucker aus
+3. **Warten Sie 10 Sekunden**
+4. Schalten Sie den Drucker wieder ein
 
 ---
 
@@ -278,12 +290,20 @@ Prüfverfahren:
 
 - Symbolische Links.
 
+Symbolische Links sowie Datei- und Verzeichnisrechte werden automatisch wiederhergestellt.
+
+Die Prüfung dauert etwa 10 Minuten.
+
 **Wiederherstellung:** Laden Sie intakte Dateien von [hier](https://github.com/ghzserg/FF/tree/main/stock) herunter.
+
+Wenn die Konsole nicht verfügbar ist, verbinden Sie sich über SSH mit dem Drucker:
+
+`/usr/data/zmod/zmod/.shell/zcheckmd5.sh`
 
 ---
 
-### BILDSCHIRM
+### SCREEN
 
-Erstellen Sie einen Screenshot des Druckers.
+Erstellen Sie einen Screenshot des Druckerbildschirms.
 
-Das Foto wird unter ```mod_data/screen.jpg``` gespeichert.
+Der Screenshot wird unter ```mod_data/screen.jpg``` gespeichert.

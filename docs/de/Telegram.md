@@ -10,7 +10,7 @@
 | **Drucken von Fortschrittsinformationen in Prozent** | + | + |
 | **Arbeiten mit mehreren Druckern über einen Bot** | + | - |
 | **Informieren durch andere Dienste** | + | - |
-| **Splooman** | - | + |
+| **Spoolman** | - | + |
 
 ---
 !!! info
@@ -370,7 +370,7 @@ für den Benutzer, über den die Verbindung läuft (z.B. `tbot`).
 
 ###### 3. Verbindung testen
 
-Nachdem Sie die Schlüssel auf dem Drucker gelöscht und die Datei authorized_keys auf dem Server aktualisiert haben, führen Sie das ZSSH-Makro auf dem Drucker aus. Die Verbindung sollte nun fehlerfrei hergestellt werden.
+Nachdem Sie die Schlüssel auf dem Drucker gelöscht und die Datei authorized_keys auf dem Server aktualisiert haben, führen Sie das Makro ZSSH_ON auf dem Drucker aus. Die Verbindung sollte nun fehlerfrei hergestellt werden.
 
 #### Alternative zum Bot
 

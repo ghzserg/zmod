@@ -6,14 +6,14 @@ In Z-Mod enthaltene Plugins:
 
 1. [Recommend](https://github.com/ghzserg/recommend/blob/main/Readme.md) - Einstellungen, deren Verwendung unmittelbar nach der Installation der Mod empfohlen wird
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz/blob/main/Readme.md) - Parken der Z-Achse durch Wägezellen
-4. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme.md) - Maximierung der Abfallreduzierung von ninjamida.
-5. [Zeitraffer](https://github.com/ghzserg/timelapse/blob/main/Readme.md) - Moonraker Zeitraffer
-6. [Notify](https://github.com/ghzserg/notify/blob/main/Readme.md) - Erhalten Sie Benachrichtigungen auf Telegram und über 100 anderen Diensten.
+3. [Nopoop](https://github.com/ghzserg/nopoop/blob/master/Readme.md) - Maximierung der Abfallreduzierung von ninjamida.
+4. [TimeLapse](https://github.com/ghzserg/timelapse/blob/main/Readme.md) - Moonraker Timelapse
+5. [Notify](https://github.com/ghzserg/notify/blob/main/Readme.md) - Erhalten Sie Benachrichtigungen auf Telegram und über 100 anderen Diensten.
 
 Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 
-1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Futterturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
-2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
+1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) - ein Fork von Bambufy
 3. [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung über das Heizbett
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – eine alternative Bildschirmimplementierung
@@ -39,6 +39,27 @@ ENABLE_PLUGIN name=g28_tenz
 ```gcode
 DISABLE_PLUGIN name=g28_tenz
 ```
+
+---
+
+## PLUGINS
+
+Zeigt das Menü zur Plugin-Verwaltung an.
+
+<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
+
+In diesem Menü können Sie zusätzliche Plugins aktivieren, deaktivieren und vollständig entfernen.
+
+- Linke Spalte (Aktivierung): Klicken Sie, um das Plugin zu aktivieren oder zu deaktivieren.
+    - Grüne Schaltfläche — das Plugin ist aktiv.
+    - Graue Schaltfläche — das Plugin ist deaktiviert.
+- Rechte Spalte (Updates): aktiviert oder deaktiviert automatische Updates über Moonraker.
+    - UPDATE: ON — Updates sind aktiviert.
+    - UPDATE: OFF — Updates sind deaktiviert.
+
+**So entfernen Sie ein Plugin vollständig:**
+
+Wenn Sie ein Plugin nicht mehr benötigen, schalten Sie beide Schaltflächen auf Grau (deaktivieren Sie das Plugin selbst und seine Updates), drücken Sie SAVE (MOONRAKER RESTART) und starten Sie den Drucker anschließend neu. Das System löscht seinen Ordner automatisch aus `mod_data/plugins/`.
 
 ---
 

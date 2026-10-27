@@ -19,25 +19,25 @@ Lze jej vyvolat z:
 
 ### BED_LEVEL_SCREWS_TUNE
 
-Kalibrace vyrovnání šroubů stolu ([průvodce](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe)).
+Kalibrace vyrovnání šroubů podložky ([průvodce](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe)).
 Parametry:
 
 - `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `240`)
-- `BED_TEMP` — teplota lůžka (výchozí: `80`)
+- `BED_TEMP` — teplota podložky (výchozí: `80`)
 
-Měří vzdálenost mezi tryskou a šrouby stolu, poskytuje pokyny k nastavení, uchovává teploty, aby se zabránilo opětovnému zahřívání, a čeká na potvrzení uživatele. Uživatelé musí ručně resetovat teploty po dokončení.
+Měří vzdálenost mezi tryskou a šrouby podložky, poskytuje pokyny k nastavení, uchovává teploty, aby se zabránilo opětovnému zahřívání, a čeká na potvrzení uživatele. Uživatelé musí ručně resetovat teploty po dokončení.
 
 ---
 ### LOAD_CELL_TARE
 
-Resetovat váhu čidla zatížení. Používá se během kalibrace stolu.
+Resetovat váhu čidla zatížení. Používá se během kalibrace podložky.
 
 ---
 ### PID_TUNE_BED
 
-Kalibrace PID stolu.
+Kalibrace PID podložky.
 
-- `TEMPERATURE` — teplota stolu (výchozí: `80`)
+- `TEMPERATURE` — teplota podložky (výchozí: `80`)
 
 Automaticky volá `SAVE_CONFIG` po kalibraci. Viz také [NEW_SAVE_CONFIG](Main.md#new_save_config).
 
@@ -92,11 +92,11 @@ Analýza frekvence řemenů CoreXY pomocí testu na půl osy.
 ---
 ### KAMP
 
-Adaptivní kalibrace mesh stolu s čištěním trysky.
+Adaptivní kalibrace sítě podložky s čištěním trysky.
 Parametry:
 
 - `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `240`)
-- `BED_TEMP` — teplota stolu (výchozí: `80`)
+- `BED_TEMP` — teplota podložky (výchozí: `80`)
 
 **Použití v Orca:**
 Přidejte jako první řádek:
@@ -106,18 +106,18 @@ KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_
 
 **Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` a `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` k využití oblastí pro čištění.
 
-[Možnosti vyrovnávání stolu](FAQ.md#what-options-are-available-for-bed-leveling)
+[Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 ### AUTO_FULL_BED_LEVEL
 
-Plné vyrovnání stolu s čištěním trysky.
+Plné vyrovnání podložky s čištěním trysky.
 Parametry:
 
 - `EXTRUDER_TEMP` — teplota extruderu (výchozí: `230`)
-- `BED_TEMP` — teplota stolu (výchozí: `80`)
+- `BED_TEMP` — teplota podložky (výchozí: `80`)
 - `PROFILE` — název profilu meshe (výchozí: `auto`)
-- `SAVE` - automaticky ukládat mapu stolu (`1`)
+- `SAVE` - automaticky ukládat síť podložky (`1`)
 
 **Použití v Orca:**
 ```gcode
@@ -130,7 +130,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 Po provedení kalibrace sítě se kalibruje počáteční nula.
 
-[Možnosti vyrovnávání stolu](FAQ.md#what-options-are-available-for-bed-leveling)
+[Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 
@@ -138,4 +138,4 @@ Po provedení kalibrace sítě se kalibruje počáteční nula.
 
 Zkopíruje z-offset z nativní obrazovky do režimu bez obrazovky
 
-[Jak funguje Z-Offset na vaší tiskárně](SetupCalibrations.md#how-z-offset-works-on-your-printer)
+[Jak funguje Z-Offset na vaší tiskárně](SetupCalibrations.md#jak-funguje-z-offset-na-vaší-tiskárně)

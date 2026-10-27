@@ -10,7 +10,7 @@ Pokud jste dokončili úvodní kalibrace:
 Pak již máte:
 
 - Nastavený Z-offset
-- Mapa podložky ```MESH_DATA``` (získaná při 60 °C) – nemažte ji, pokud používáte originální obrazovku, protože ta ji načítá při každém tisku
+- Mapa podložky ```MESH_DATA``` (získaná při 60 °C) – nemažte ji, pokud používáte nativní obrazovku, protože ta ji načítá při každém tisku
 - Kalibrace PID extruderu pro 240 °C
 
 Tyto hodnoty jsou však dost univerzální; málokdo tiskne při 240 °C na trysce a 60 °C na podložce.
@@ -127,12 +127,14 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
 
     <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
 
+    [Tento obrázek se zobrazuje pouze v Klipper 13](System.md#update_mcu)
+
 -   Po prvním kole tiskárna počká, až šrouby upravíte. Jakmile jsou všechny nastavené, **stiskněte tlačítko pro opakování** a tiskárna zkontroluje výsledek. Opakujte, dokud nejsou hodnoty perfektní.
 
 -   **Dokončení:**
     *   Po ukončení a opuštění režimu kalibrace tiskárna **NEvypne** teploty automaticky.
     *   **Nezapomeňte ručně nastavit teploty extruderu i podložky na nulu v ovládacím menu!**
-    *   **Mapa podložky i Z-offset budou nyní neplatné**. Spusťte vyrovnání podložky z **originální obrazovky**.
+    *   **Mapa podložky i Z-offset budou nyní neplatné**. Spusťte vyrovnání podložky z **nativní obrazovky**.
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
 
@@ -259,7 +261,7 @@ M190 S[bed_temperature_initial_layer_single] ; Čekej na zahřátí podložky
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} ; Nastav teplotu trysky
 ```
 
-**Důležité pro použití originální obrazovky:** Pokud chcete spustit měření mapy podložky z originální obrazovky, musíte přejít do menu:
+**Důležité pro použití nativní obrazovky:** Pokud chcete spustit měření mapy podložky z nativní obrazovky, musíte přejít do menu:
 `Nastavení` → `Ikona WiFi` → `Režim sítě` → povolte přepínač `Pouze místní sítě`.
 
 **3. Chytré čištění před tiskem**
@@ -285,16 +287,19 @@ Nyní bude tiskárna před každým tiskem měřit mapu pouze v oblasti, kde se 
 ### Jak funguje Z-offset na vaší tiskárně
 
 **Co je Z-offset?**
-Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podložkou** ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnutá – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). [Více zde](FAQ.md#how-does-z-offset-work)
+Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podložkou** ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnutá – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). [Více zde](FAQ.md#jak-funguje-z-offset)
 
 **Nejdůležitější pravidlo:**
 U této tiskárny **má Z-offset smysl pouze BĚHEM tisku**. Hodnoty, které vidíte na displeji nebo v rozhraní PŘED nebo PO tisku, jsou pouze orientační a neodpovídají skutečnosti.
 
-#### Nastavení Z-offsetu z originální obrazovky tiskárny
+**Druhé nejdůležitější pravidlo:**
+**Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný**: každý žije vlastním životem. Při přechodu do režimu bez nativní obrazovky spusťte makro ```LOAD_ZOFFSET_NATIVE``` — přečte Z-offset z nativní obrazovky a přenese ho do režimu bez nativní obrazovky.
+
+#### Nastavení Z-offsetu z nativní obrazovky tiskárny
 
 Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej spravuje a hodnoty se spolehlivě ukládají.
 
-**Aby tiskárna vybrala offset automaticky, spusťte měření mapy podložky z originální obrazovky.**
+**Aby tiskárna vybrala offset automaticky, spusťte měření mapy podložky z nativní obrazovky.**
 
 <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241" />
 
@@ -315,14 +320,14 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 
 **Důležité vědět:**
 
-*   U tiskárny AD5M originální obrazovka vždy přičítá fixní hodnotu **0,025 mm** k vašemu nastavení.
+*   U tiskárny AD5M nativní obrazovka vždy přičítá fixní hodnotu **0,025 mm** k vašemu nastavení.
 *   Proto hodnota Z-offsetu, kterou vidíte ve Fluidd nebo Mainsail, bude vždy **o 0,025 mm VYŠŠÍ** než ta, kterou nastavíte na obrazovce tiskárny. Je to v pořádku!
 *   Seřizování Z-Offset přes Fluidd/Mainsail při práci s nativní obrazovkou není vhodné, protože nativní obrazovka neví o existenci Fluidd/Mainsail.
 
 **Druhé důležité pravidlo:**
-**Z-offset pro originální a neoriginální obrazovky je odlišný; každá má své vlastní nastavení. Použijte ```LOAD_ZOFFSET_NATIVE``` pro zkopírování Z-offsetu z originální obrazovky do režimu neoriginální obrazovky.**
+**Z-offset v režimu s nativní obrazovkou a v režimu bez nativní obrazovky je odlišný; každý má své vlastní nastavení. Použijte ```LOAD_ZOFFSET_NATIVE``` pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky.**
 
-#### Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu *bez originální obrazovky*
+#### Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu *bez nativní obrazovky*
 
 **Jak to funguje:**
 
@@ -338,7 +343,7 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-3.  Pokud chcete přenést Z-offset z originální obrazovky do režimu neoriginální obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE```, které přečte hodnotu Z-offsetu z originální obrazovky a použije ji pro režim neoriginální obrazovky.
+3.  Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE```, které přečte hodnotu Z-offsetu z nativní obrazovky a použije ji pro režim nenativní obrazovky.
 
 **Hlavní výhody:**
 
@@ -348,8 +353,8 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
 #### Z-offset jednoduše:
 
 *   **Z-offset upravujte pouze během tisku první vrstvy.**
-*   **Při práci s originální obrazovkou upravujte Z-offset na ní.**
-*   **Při práci bez originální obrazovky** nejprve spusťte příkaz ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
+*   **Při práci s nativní obrazovkou upravujte Z-offset na ní.**
+*   **Při práci bez nativní obrazovky** nejprve spusťte příkaz ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1```.
 *   Systém vše uloží sám, nemusíte se o nic starat.
 
 !!! danger
@@ -357,7 +362,7 @@ Originální obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky je
     
     Nelze měnit ```[probe] z_offset: ``` v souborech ```printer.cfg``` nebo ```printer.base.cfg```.
     
-    Protože originální obrazovka i makro ```START_PRINT``` načítají offset na začátku tisku.
+    Protože nativní obrazovka i makro ```START_PRINT``` načítají offset na začátku tisku.
 
 ---
 

@@ -67,7 +67,7 @@ PID_CALIBRATE HEATER=extruder TARGET={temperature}
 ### ZSHAPER
 
 Input shaper calibration.
-Results are stored in:
+Results are stored on the "Configuration" tab -> `mod_data`:
 
 - `calibration_data_x.png`
 - `calibration_data_y.png`
@@ -117,7 +117,7 @@ Parameters:
 - `EXTRUDER_TEMP` — extruder temperature (default: `230`)
 - `BED_TEMP` — bed temperature (default: `80`)
 - `PROFILE` — mesh profile name (default: `auto`)
-- `SAVE` - automatically save the table map (`1`)
+- `SAVE` — automatically save the bed mesh (default: `1`)
 
 **Usage in Orca:**
 ```gcode

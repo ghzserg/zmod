@@ -43,8 +43,8 @@ Spotřeba RAM pro základní kamery:
 
 !!! poznámka
 
-    - [Co je alternativní kamera?](FAQ.md#what-is-an-alternative-camera)
-        - [Nainstaloval jsem tiskárnu a Z-Mod skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+    - [Co je alternativní kamera?](FAQ.md#co-je-to-alternativní-kamera)
+        - [Nainstaloval jsem tiskárnu a Z-Mod skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](FAQ.md#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
 
 `Camera Off Waiting...` - tato zpráva se zobrazí, pokud stream kamery není ještě k dispozici. Kamera se spustí po spuštění Klipperu během zobrazení informací o globálních nastaveních.
 
@@ -279,9 +279,18 @@ Jak získat přihlášení a heslo:
 4. Chcete-li resetovat heslo, zadejte: ```cloud reset_password```
 5. Chcete-li odebrat aktuálního uživatele, zadejte: ```cloud remove```
 
+Pokud Telegram není dostupný:
+
+1. Otevřete [vk.com/zmod_official](https://vk.com/zmod_official)
+2. Napište zprávu do skupiny
+3. Zadejte příkaz ```cloud``` – pokud jste se již registrovali, sdělí vám vaše přihlašovací jméno
+4. Chcete-li zaregistrovat uživatele se jménem `test`, zadejte: ```cloud register test```
+5. Chcete-li obnovit heslo, zadejte: ```cloud reset_password```
+6. Chcete-li odebrat aktuálního uživatele, zadejte: ```cloud remove```
+
 Jak se připojit ke cloudu [zmod.link](https://zmod.link/link/):
 
-1. Navštivte web [zmod.link](https://zmod.link/link//) a zadejte vaše přihlášení a heslo
+1. Navštivte web [zmod.link](https://zmod.link/link/) a zadejte vaše přihlášení a heslo
 
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 

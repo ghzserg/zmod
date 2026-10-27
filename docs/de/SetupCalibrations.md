@@ -10,10 +10,10 @@ Wenn Sie die Einsteigerkalibrierungen durchlaufen haben:
 Dann haben Sie das bereits:
 
 - Ein z-Offset ist eingerichtet
-- Es gibt eine ```MESH_DATA```-Tabelle (aufgenommen bei 60 Grad) - Sie können sie nicht löschen, wenn Sie den nativen Bildschirm verwenden, da sie bei jedem Druckvorgang geladen wird
+- Es gibt eine ```MESH_DATA```-Bettnetz (aufgenommen bei 60 Grad) - Sie können sie nicht löschen, wenn Sie den nativen Bildschirm verwenden, da sie bei jedem Druckvorgang geladen wird
 - Es gibt eine Extruder-PID-Kalibrierung bei 240 Grad
 
-Aber diese Einstellungen sind ziemlich allgemein, nicht viele Leute drucken bei 240 Grad Düsentemperatur und 60 Grad Tischtemperatur.
+Aber diese Einstellungen sind ziemlich allgemein, nicht viele Leute drucken bei 240 Grad Düsentemperatur und 60 Grad Betttemperatur.
 
 ---
 
@@ -70,7 +70,7 @@ max_power: 0.6
 Dadurch heizt sich das Heizbett schneller auf und der PID wird korrekt eingestellt.
 Nachdem Sie den Parameter geändert und gespeichert haben, **müssen Sie den Drucker neu starten.**
 
-Sie können auch das Empfehlungs-Plugin aktivieren, das diese Datei selbst korrigiert: ````ENABLE_PLUGIN NAME=Empfehlung```.
+Sie können auch das Empfehlungs-Plugin aktivieren, das diese Datei selbst korrigiert: ```ENABLE_PLUGIN NAME=recommend```.
 
 **Ein wichtiger Punkt, bevor Sie beginnen!**
 Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie die Temperatur, die Sie beim Drucken am häufigsten verwenden werden (z.B. 60°C für PLA oder 110°C für ABS).
@@ -83,7 +83,7 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie die Temperatur, d
 
     <img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" />
 
-- Der Befehl für die Tabelle sieht noch einfacher aus:
+- Der Befehl für das Bett sieht noch einfacher aus:
     ```gcode
     PID_TUNE_BED TEMPERATURE=80
     ```
@@ -109,7 +109,7 @@ Das Heizbett wird von mehreren Schrauben zusammengehalten. Wenn diese nicht glei
 1.  Der Drucker bringt die Düse nacheinander in die Positionen über jeder Schraube.
 2.  misst den Abstand zum Druckbett und zeigt auf dem Bildschirm an, welche Schraube in welche Richtung zu drehen ist.
 3.  Sie stellen die Schrauben ein, indem Sie den Aufforderungen folgen.
-4.  Der Vorgang wird so lange wiederholt, bis der Tisch waagerecht ist.
+4.  Der Vorgang wird so lange wiederholt, bis das Bett waagerecht ist.
 
 **Tuning-Parameter [BED_LEVEL_SCREWS_TUNE](/de/Calibrations/#bed_level_screws_tune):**
 
@@ -134,11 +134,13 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 
     <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
 
+    [Dieses Bild erscheint nur unter Klipper 13](/de/System/#update_mcu)
+
 - Nach dem ersten Durchgang wartet der Drucker, bis Sie die Einstellung vorgenommen haben. Wenn alle Schrauben angezogen sind, **drücken Sie die Wiederholungstaste**, damit der Drucker das Ergebnis prüft. Wiederholen Sie den Vorgang, bis das Ergebnis perfekt ist.
 
 - **Abschluss des Auftrags:**
   *   Wenn Sie den Kalibrierungsmodus beenden und verlassen, setzt der Drucker die Temperatur **NICHT automatisch zurück.**
-  *    **Selbsteinstellung der Extruder- und Tischtemperaturen auf Null über das Steuerungsmenü!**
+  *    **Selbsteinstellung der Extruder- und Betttemperaturen auf Null über das Steuerungsmenü!**
   *    **Das Bettgitter und der Z-Offset werden ungültig.** Starten Sie die Nivellierungskalibrierung **vom Standardbildschirm** aus.
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
@@ -161,11 +163,11 @@ Die eingebauten Werkzeuge in Fluidd und Mainsail sind für unsere Drucker nicht 
 Unser Makro [AUTO_FULL_BED_LEVEL](/de/Macros/#auto_full_bed_level) berücksichtigt diese beiden Eigenschaften!
 
 **Wichtige Einstellungen:**
-Die Bettnetzkarte muss unter denselben Bedingungen erstellt werden, unter denen Sie auch drucken - ein erwärmtes Druckbett und ein heißer Extruder, da sich das Metall durch die Temperatur leicht ausdehnt. Eine Bettnetzkarte, die bei 60 Grad gedruckt wird, unterscheidet sich drastisch von einer Bettnetzkarte, die bei 110 Grad gedruckt wird.
+Die Bettnetz muss unter denselben Bedingungen erstellt werden, unter denen Sie auch drucken - ein erwärmtes Druckbett und ein heißer Extruder, da sich das Metall durch die Temperatur leicht ausdehnt. Eine Bettnetz, die bei 60 Grad gedruckt wird, unterscheidet sich drastisch von einer Bettnetz, die bei 110 Grad gedruckt wird.
 
 * `EXTRUDER_TEMP=255` - Extrudertemperatur. Der Kunststoff in der Düse sollte geschmolzen sein, damit er vor der Messung gereinigt werden kann. Stellen Sie die von Ihnen gewünschte Temperatur ein.
 * `BED_TEMP=80` - Heizbetttemperatur. Geben Sie die Temperatur an, die Sie für den Druck verwenden. Stellen Sie die gewünschte Temperatur ein.
-* `PROFILE=auto` - Name des Profils, unter dem die Karte gespeichert werden soll. Es ist besser, es nach der Tabellentemperatur zu benennen, zum Beispiel `80`.
+* `PROFILE=auto` - Name des Profils, unter dem die Karte gespeichert werden soll. Es ist besser, es nach der Betttemperatur zu benennen, zum Beispiel `80`.
 
 **Beispielbefehl:**
 
@@ -175,7 +177,7 @@ AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 
 <img width="302" height="342" alt="image" src="https://github.com/user-attachments/assets/0fa6cdd8-2098-48e3-8281-8587fb153b0f" />
 
-In diesem Beispiel erstellen wir eine Karte zum Drucken auf einem 80°C-Tisch und speichern sie unter dem Namen `80`.
+In diesem Beispiel erstellen wir eine Karte zum Drucken auf einem 80°C-Bett und speichern sie unter dem Namen `80`.
 
 #### Wie kann ich die gespeicherte Karte beim Drucken verwenden?
 
@@ -184,7 +186,7 @@ Damit der Drucker zu Beginn jedes Druckvorgangs automatisch das richtige Kennfel
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=80
 {single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
-M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen der Tabelle
+M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Bettes
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}  T[initial_extruder]; Düsentemperatur einstellen
 ```
 
@@ -200,20 +202,20 @@ Noch besser: Erstellen Sie mehrere Netze für jede Temperatur (60, 70, 80, 90, 1
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single] MESH=[bed_temperature_initial_layer_single]
 {single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
-M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
+M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Bettes
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}; Düsentemperatur einstellen
 ```
 
-In diesem Fall wird die Bettnetzkarte geladen, die der Temperatur der Tabelle entspricht.
+In diesem Fall wird die Bettnetz geladen, die der Betttemperatur entspricht.
 
 !!! note **"Info"**
-    Wenn es keine gespeicherte Bettnetzkarte für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Bettnetzkarte und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.
+    Wenn es keine gespeicherte Bettnetz für den eingestellten Wert im Slicer gibt (z.B. 77 Grad eingestellt), entfernt der Algorithmus die Bettnetz und bietet an, sie am Ende des Drucks unter dem Namen 77 zu speichern.
 
 **Gesamte Reihenfolge der Operationen:**
 
-1.  Erstellen Sie eine Bettnetzkarte mit dem Makro `AUTO_FULL_BED_LEVEL` für Ihre Drucktemperatur.
+1.  Erstellen Sie eine Bettnetz mit dem Makro `AUTO_FULL_BED_LEVEL` für Ihre Drucktemperatur.
 2.  Fügen Sie den Befehl `START_PRINT` zum Startcode des Slicers hinzu, wobei der Parameter `MESH=...` auf Ihren Profilnamen verweist.
-3.  Der Drucker verwendet nun für jeden Druckvorgang automatisch die korrekte Bettnetzkarte!
+3.  Der Drucker verwendet nun für jeden Druckvorgang automatisch die korrekte Bettnetz!
 
 ---
 
@@ -262,7 +264,7 @@ Orca anpassen:
 
 **2. Aktivieren Sie die Kalibrierung vor jedem Druck**
 
-Wenn Sie möchten, dass der Drucker vor jedem Druckauftrag automatisch eine Bettnetzkarte erstellt (z.B. bei häufigem Plattenwechsel), aktivieren Sie diese Funktion [SAVE_ZMOD_DATA PRINT_LEVELING=1](/de/Global/#print_leveling).
+Wenn Sie möchten, dass der Drucker vor jedem Druckauftrag automatisch eine Bettnetz erstellt (z.B. bei häufigem Plattenwechsel), aktivieren Sie diese Funktion [SAVE_ZMOD_DATA PRINT_LEVELING=1](/de/Global/#print_leveling).
 
 ```gcode
 SAVE_ZMOD_DATA PRINT_LEVELING=1
@@ -273,7 +275,7 @@ Der Startcode kann wie folgt verwendet werden:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 {single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
-M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Tisches
+M190 S[bed_temperature_initial_layer_single] ; Warten auf Aufwärmen des Bettes
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}; Düsentemperatur einstellen
 ```
 
@@ -311,7 +313,11 @@ Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düse
 
 **Wichtigste Regel:**
 
-Bei unserem Drucker ist der **Z-Offset NUR während des Drucks** relevant. Die Werte, die Sie auf dem Bildschirm oder in der Schnittstelle VOR oder NACH dem Druck sehen, dienen nur als Referenz und spiegeln nicht das tatsächliche Bild wieder.
+Bei unserem Drucker ist der **Z-Offset NUR während des Drucks** relevant. Die Werte, die Sie auf dem Bildschirm oder in der Schnittstelle VOR oder NACH dem Druck sehen, dienen nur als Referenz und spiegeln nicht das tatsächliche Bild wider.
+
+**Zweitwichtigste Regel:**
+
+**Der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist nicht derselbe**: Jeder lebt sein eigenes Leben. Führen Sie beim Wechsel in den Modus ohne nativen Bildschirm das Makro ```LOAD_ZOFFSET_NATIVE``` aus – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn in den Modus ohne nativen Bildschirm.
 
 #### Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
 
@@ -345,9 +351,9 @@ Der systemeigene Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Of
 
 **Zweite wichtige Regel:**
 
-**Der Z-Offset ist für native und nicht-native Bildschirme unterschiedlich,** jeder hat seine eigene Einstellung. Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirmmodus zu kopieren.
+**Der Z-Offset im Modus mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist unterschiedlich,** jeder hat seine eigene Einstellung. Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren.
 
-#### Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten **im nicht-nativen Bildschirmmodus**
+#### Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten **im Modus ohne nativen Bildschirm**
 
 **Wie es funktioniert:**
 
@@ -375,7 +381,7 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den nicht-nativen Modus übertra
 
 * **Z-Offset nur beim Drucken der ersten Ebene einstellen.**
 * **Wenn Sie mit dem nativen Bildschirm arbeiten, passen Sie den Z-Offset auf dem nativen Bildschirm an.**
-* **Wenn Sie im nicht-nativen Bildschirmmodus arbeiten**, führen Sie zuerst den Befehl ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1``` aus.
+* **Wenn Sie im Modus ohne nativen Bildschirm arbeiten**, führen Sie zuerst den Befehl ```SAVE_ZMOD_DATA LOAD_ZOFFSET=1``` aus.
 * Das System wird alles von selbst speichern. Sie brauchen sich um nichts zu kümmern.
 
 !!! warning "Wichtig"

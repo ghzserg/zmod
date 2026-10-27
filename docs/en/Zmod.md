@@ -31,7 +31,7 @@ To enable the camera, use ```CAMERA_ON VIDEO=video0``` or ```CAMERA_ON VIDEO=vid
 
 <img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
 
-If the camera does not work, then look at the logs `mod_data/log/cam`
+If the camera does not work, check the logs in `mod_data/log/cam/`
 
 RAM usage for stock cameras:
 
@@ -44,7 +44,7 @@ RAM usage for stock cameras:
 !!! note
 
     - [What is an Alternative Camera?](/FAQ/#what-is-an-alternative-camera)
-        - [I installed the printer, and Z-Mod hid my camera! I saw her in Orca-FF, and now she's gone!](/FAQ/#i-installed-the-printer-but-z-mod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+    - [I installed the printer, and Z-Mod hid my camera! I saw it in Orca-FF, and now it's gone!](/FAQ/#i-installed-the-printer-but-z-mod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 `Camera Off Waiting...` - this message is displayed if the camera stream is not yet available. The camera starts after Klipper launches, during the global settings information display.
 
@@ -121,20 +121,20 @@ Restart the alternative camera implementation.
 ---
 ### REMOVE_ZMOD
 
-Uninstall Zmod.
+Uninstall Z-Mod.
 
 - `FULL`: `0` = keep `/opt/config/mod_data`, `1` = delete `/opt/config/mod_data` (default: `0`)
 
 The `/opt/config/mod_data` directory stores configurations for `zmod`, `fluidd`, `moonraker`, and `mainsail`.
-It is not deleted by default to prevent accidental data loss.
+It is not deleted by default, because people often call `REMOVE_ZMOD` by mistake.
 
 Warning! Disable all plugins yourself and switch to the native Klipper.
 
 ---
 ### SKIP_ZMOD
 
-Reboot into the original system without Zmod.
-Disables Zmod, Moonraker, and Fluidd configurations.
+Reboot into the original system without starting Z-Mod.
+Disables Z-Mod, Moonraker, and Fluidd configurations.
 
 Warning! Disable all plugins yourself and switch to the native Klipper.
 
@@ -279,9 +279,18 @@ How to get login and password:
 4. To reset the password, enter: ```cloud reset_password```
 5. To remove the current user, enter: ```cloud remove```
 
+If Telegram is not available:
+
+1. Open [vk.com/zmod_official](https://vk.com/zmod_official)
+2. Send a message to the group
+3. Enter the command ```cloud``` - if you have registered before, it will tell you your login
+4. To register a user with the name `test`, enter: ```cloud register test```
+5. To reset the password, enter: ```cloud reset_password```
+6. To remove the current user, enter: ```cloud remove```
+
 How to connect to the cloud [zmod.link](https://zmod.link/link/):
 
-1. Go to the website [zmod.link](https://zmod.link/link//) and enter your login and password
+1. Go to the website [zmod.link](https://zmod.link/link/) and enter your login and password
 
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 
@@ -323,7 +332,7 @@ How to connect to the cloud [zmod.link](https://zmod.link/link/):
 
    Just select the desired button.
 
-PS: The camera may load later than the interface - this is normal
+PS: The camera may load later than the interface — this is normal.
 
 PPS: If something is not working correctly, refresh the page with Ctrl + F5 and go to [zmod.link](https://zmod.link/link/)
 

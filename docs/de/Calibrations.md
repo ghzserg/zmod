@@ -12,7 +12,7 @@ Es kann aufgerufen werden durch:
 
 ---
 
-!!! Tipp
+!!! tip "Tipp"
     [Druckerkalibrierung für Anfänger](/de/SetupCalibrations/#drucker-kalibrierung-für-einsteiger)
 
 ---
@@ -22,7 +22,7 @@ Es kann aufgerufen werden durch:
 Bettnivellierungsschrauben ([manuell](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe))
 
 - `EXTRUDER_TEMP` - Extrudertemperatur `(Standard: 240)`
-- `BED_TEMP` - Tischtemperatur `(Standard: 80)`
+- `BED_TEMP` - Betttemperatur `(Standard: 80)`
 
 Das Gerät misst den Abstand zwischen Düse und Bettschrauben, gibt Einstellhinweise, speichert die Temperaturen, um ein erneutes Aufheizen zu vermeiden, und wartet auf die Bestätigung des Benutzers. Nach Abschluss des Vorgangs müssen die Temperaturen manuell zurückgesetzt werden.
 
@@ -30,15 +30,15 @@ Das Gerät misst den Abstand zwischen Düse und Bettschrauben, gibt Einstellhinw
 
 ### LOAD_CELL_TARE
 
-Gewicht der Wägezellen zurücksetzen. Wird während der Bettkalibrierung aufgerufen
+Gewicht der Wägezellen zurücksetzen. Wird während der Bettkalibrierung aufgerufen.
 
 ---
 
 ### PID_TUNE_BED
 
-Kalibrierung der Tabelle PID
+Kalibrierung des Bett-PID
 
-- `TEMPERATUR` — BED Temperatur (default: `80`)
+- `TEMPERATURE` — Betttemperatur (Standard: `80`)
 
 Nach der Kalibrierung wird `SAVE_CONFIG` aufgerufen, siehe auch [NEW_SAVE_CONFIG](/de/Main/#new_save_config)
 
@@ -53,8 +53,8 @@ PID_CALIBRATE HEATER=heater_bed TARGET={Temperatur}
 
 Kalibrierung der Extruder-PID
 
-- `TEMPERATUR` – Extrudertemperatur (Standard: `245`)
-- `KÜHLER` – Lüfterdrehzahl (0–100, Standard: `100`)
+- `TEMPERATURE` – Extrudertemperatur (Standard: `245`)
+- `COOLER` – Lüfterdrehzahl (0–100, Standard: `100`)
 
 Kalibrieren Sie den PID auf die Temperatur, bei der Sie drucken, und auf die Gebläsestufe, die Sie verwenden.
 
@@ -69,9 +69,9 @@ PID_CALIBRATE HEATER=extruder TARGET={Temperatur}
 
 ### ZSHAPER
 
-Kalibrierung des Input Shaper(Ressonanzmessung).
+Kalibrierung des Input Shapers (Resonanzmessung).
 
-Die Ergebnisse werden gespeichert in `Maschine` -> `mod_data`:
+Die Ergebnisse werden auf der Registerkarte `Konfiguration` -> `mod_data` gespeichert:
 
 - `calibration_data_x.png`
 - `calibration_data_y.png`
@@ -87,7 +87,7 @@ Lesen Sie über [fix_scv](/de/Global/#fix_scv)
 
 Führt einen speziellen Halbachsentest durch, um die Frequenzprofile der einzelnen Bänder auf CoreXY-Druckern zu analysieren und zu vergleichen
 
-- `SPEKTROGRAMM` — `0` = Spektrogramm deaktivieren, `1` = aktivieren (Standard: `1`)
+- `SPECTROGRAM` — `0` = Spektrogramm deaktivieren, `1` = aktivieren (Standard: `1`)
 
 **Anforderungen:**
 
@@ -123,7 +123,7 @@ Parameter:
 - `EXTRUDER_TEMP` – Extrudertemperatur (Standard: `230`)
 - `BED_TEMP` – Betttemperatur (Standard: `80`)
 - `PROFILE` – Name des Netzprofils (Standard: `auto`)
-- `SAVE` - Tischplan automatisch speichern (`1`)
+- `SAVE` – Bettnetz automatisch speichern (Standard: `1`)
 
 Fügen Sie die erste Zeile in Orca ein
 ```

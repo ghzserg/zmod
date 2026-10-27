@@ -10,7 +10,7 @@
 | **Print progress percentage** | + | + |
 | **Multiple printers via a single bot** | + | – |
 | **Notifications via other services** | + | – |
-| **Splooman** | - | + |
+| **Spoolman** | - | + |
 
 ---
 !!! info
@@ -28,8 +28,8 @@ The new version automatically generates SSH keys (used for passwordless authenti
 
 Key locations:
 
-- `‎/mod_data/ssh.pub.txt` — public key. Copy its contents to the server's `~/.ssh/authorized_keys` file.
-- `‎/mod_data/ssh.key` — private key. Used by the printer to connect to the server.
+- `/mod_data/ssh.pub.txt` — public key. Copy its contents to the server's `~/.ssh/authorized_keys` file.
+- `/mod_data/ssh.key` — private key. Used by the printer to connect to the server.
 
 You don’t need the keys themselves.
 Simply call the [ZSSH_ON](/Zmod/#zssh_on) macro with the following parameters:
@@ -38,8 +38,8 @@ Simply call the [ZSSH_ON](/Zmod/#zssh_on) macro with the following parameters:
 - `SSH_PORT` — SSH port on the server (default: 22)
 - `SSH_USER` — SSH server username
 - `VIDEO_PORT` — Server port for receiving video stream from the camera (default: 8080)
-- `MOON_PORT` — Server port for receiving data from moonraker (default: 7125)
-- `REMOTE_enN` — Command to execute on the remote server
+- `MOON_PORT` — Server port for receiving data from Moonraker (default: 7125)
+- `REMOTE_RUN` — Command to execute on the remote server
 
 SSH usage consumes approximately 300 KB of memory.
 
@@ -269,17 +269,17 @@ If you only need notifications in Telegram, then [use the Notify plugin](https:/
 
 Download and install helm [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
-Clone helm chart from repo
+Clone the repository with the helm chart
 ```
 git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
 Changes:
 
-1. persistence.enabled change to "false" if you nont planned to store timelapses
+1. persistence.enabled change to "false" if you do not plan to store timelapses permanently
 
-2. persistence.volumes...storageClass change if you will use external storage
+2. persistence.volumes...storageClass change if you will use external storage for timelapses
 
-2. configMapAsFile.data.telegram.conf - this is main config file, should be changed a few lines:
+3. configMapAsFile.data.telegram.conf - this is the main config file; change the following fields:
    ```
    [bot]
    server: 3D_printer_host:7125
@@ -290,11 +290,11 @@ Changes:
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-How to get bot_token and chat_id look [here](/Telegram/#bot-registration)
+How to get bot_token and chat_id: see [here](/Telegram/#bot-registration)
 
 Installation:
 
-You should be in helm chart folder to run install/upgrade command
+Run the commands from the directory containing the chart
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```
@@ -347,7 +347,7 @@ ssh-ed25519 host key mismatch ...
 ---
 
 !!! success "Step 3: Test the connection"
-    Once you have cleared the keys on the printer and updated the `authorized_keys` on the server, run the **ZSSH macro** on the printer. The connection         should now be established without errors.
+    Once you have cleared the keys on the printer and updated the `authorized_keys` on the server, run the **ZSSH_ON** macro on the printer. The connection should now be established without errors.
 
 #### Alternative to the bot
 

@@ -2,7 +2,7 @@
 
 ??? note "Änderungsprotokolle"
 
-	- [Versionsgeschichte](#version-history)
+	- [Versionsgeschichte](#änderungsprotokolle-ausführlich)
 		- [Version 1.7.4](#version-174)
 		- [Version 1.7.3](#version-173)
 		- [Version 1.7.2](#version-172)
@@ -11,29 +11,29 @@
 		- [Version 1.6.6](#version-166)
 		- [Version 1.6.5](#version-165)
 		- [Version 1.6.4](#version-164)
-		- [Version 1.6.3](#Version-163)
-		- [Version 1.6.2](#Version-162)
-		- [Version 1.6.1](#Version-161)
-		- [Version 1.6.0](#Version-160)
-		- [Version 1.5.4](#Version-154)
-		- [Version 1.5.3](#Version-153)
-		- [Version 1.5.2](#Version-152)
-		- [Version 1.5.1](#Version-151)
-		- [Version 1.5.0](#Version-150)
-		- [Version 1.4.3](#Version-143)
-		- [Version 1.4.2](#Version-142)
-		- [Version 1.4.1](#Version-141)
-		- [Version 1.4.0](#Version-140)
-		- [Version 1.3.1](#Version-131)
-		- [Version 1.3.0](#Version-130)
-		- [Version 1.1.2](#Version-112)
-		- [Version 1.1.1](#Version-111)
-		- [Version 1.1.0](#Version-110)
-		- [Version 1.0.5](#Version-105)
-		- [Version 1.0.4](#Version-104)
-		- [Version 1.0.0](#Version-100)
-		- [Version 0.2.4](#Version-024)
-		- [Version 0.2.3](#Version-023)
+		- [Version 1.6.3](#version-163)
+		- [Version 1.6.2](#version-162)
+		- [Version 1.6.1](#version-161)
+		- [Version 1.6.0](#version-160)
+		- [Version 1.5.4](#version-154)
+		- [Version 1.5.3](#version-153)
+		- [Version 1.5.2](#version-152)
+		- [Version 1.5.1](#version-151)
+		- [Version 1.5.0](#version-150)
+		- [Version 1.4.3](#version-143)
+		- [Version 1.4.2](#version-142)
+		- [Version 1.4.1](#version-141)
+		- [Version 1.4.0](#version-140)
+		- [Version 1.3.1](#version-131)
+		- [Version 1.3.0](#version-130)
+		- [Version 1.1.2](#version-112)
+		- [Version 1.1.1](#version-111)
+		- [Version 1.1.0](#version-110)
+		- [Version 1.0.5](#version-105)
+		- [Version 1.0.4](#version-104)
+		- [Version 1.0.0](#version-100)
+		- [Version 0.2.4](#version-024)
+		- [Version 0.2.3](#version-023)
 		- [Version 0.2.2](#version-022)
 		- [Version 0.2.1.1](#version-0211)
 		- [Version 0.2.1](#version-021)
@@ -41,10 +41,10 @@
 		- [Version 0.1.8](#version-018)
 		- [Version 0.1.7](#version-017)
 		- [Version 0.1.6](#version-016)
-		- [Version 0.1.5](#Version-015)
-		- [Version 0.1.4](#Version-014)
-		- [Version 0.1.3](#Version-013)
-		- [Version 0.1.1](#Version-011)
+		- [Version 0.1.5](#version-015)
+		- [Version 0.1.4](#version-014)
+		- [Version 0.1.3](#version-013)
+		- [Version 0.1.1](#version-011)
 		- [Version 0.0.9-fix](#version-009-fix)
 		- [Version 0.0.9](#version-009)
 
@@ -66,7 +66,7 @@
 	### Version 1.7.3
 	09.09.2026
 
-	* Alpha-Unterstützung für Creator 5 / Creator 5 Pro (keine Unterstützung für den Headless-Modus, 13 Clipper, nicht alle Makros getestet)
+	* Alpha-Unterstützung für Creator 5 / Creator 5 Pro (keine Unterstützung für den Headless-Modus, 13 Klipper, nicht alle Makros getestet)
 	* AD5M: Unterstützung für die native Firmware 5.1.9
 	* AD5X: Beschleunigung des Abfragezyklus von @ninjamida
 
@@ -98,7 +98,7 @@
 	15.03.2026
 
 	* Fluidd/Mainsail/Klipper aktualisiert
-	* [NoPoop 2](/de/AD5X/#slicer-controlled-purge) von @ninjamida
+	* [NoPoop 2](/de/AD5X/#slicer-gesteuerte-reinigung-purge) von @ninjamida
 	* HelixScreen - alternativer Bildschirm. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
 	* Großer Dank für die Unterstützung bei dieser Version geht an @xyzroe
 
@@ -132,7 +132,7 @@
 	
 	* [zmod.link](https://zmod.link/link/) [ZLINK](/de/Zmod/#zlink) - Fernverbindung zum Drucker über die Cloud
 	* Makro [SCREEN](/de/System/#screen) - einen Screenshot des Druckerbildschirms erstellen
-	* Makro [LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native) - Übertragung der Z-Offset-Einstellungen vom nativen Bildschirm in den Nicht-Bildschirm-Modus
+	* Makro [LOAD_ZOFFSET_NATIVE](/de/Calibrations/#load_zoffset_native) - Übertragung der Z-Offset-Einstellungen vom nativen Bildschirm in den Nicht-Bildschirm-Modus
 	* [AD5X](/de/AD5X/): Globaler Parameter [REMOVE_FILAMENT](/de/Global/#remove_filament) hinzugefügt - entfernt Filament nach dem Druck
 	* Plugin [Empfohlene Einstellungen](https://github.com/ghzserg/recommend) hinzugefügt
 	* Tschechische Sprache hinzugefügt
@@ -143,7 +143,7 @@
 	* [AD5X](/de/AD5X/): IFS-Crunch entfernt
 	* ```CAMERA_ON VIDEO=video99``` - testet alle verfügbaren Kameras
 	* Prüfen auf Aktualisierungen nach Beendigung des Drucks
-	* Wenn die Tabelle über Fluidd/Mainsail entfernt wird, werden die Tensils zurückgesetzt. Es ist aber Sache des Benutzers, die Düse zu reinigen und den Tisch vorher aufzuwärmen.
+	* Beim Messen des Bettnetzes über Fluidd/Mainsail werden die Wägezellen zurückgesetzt. Es ist aber Sache des Benutzers, die Düse zu reinigen und das Bett vorher aufzuwärmen.
 	* Fix PURGE_LINE, druckt nicht auf Stützen
 	* Behobener Kantenstoß beim Nachdrucken
 	* Behobene Skalen, wenn sie mehrere Tonnen anzeigen
@@ -165,7 +165,7 @@
 	* [WiFi](/de/Global/#wifi) kann nun direkt aktiviert werden, ohne den nativen Bildschirm zu benutzen
 	* [AD5X](/de/AD5X/): Korb- und Filamentabschneideproblem in neueren Revisionen behoben
 	* [AD5X](/de/AD5X/): Farbunterstützung für Druckwiederherstellung
-	* [AD5X](/de/AD5X/): Möglichkeit, [eigene Filamenttypen und -farben](/de/AD5X/#7-add-your-own-filament-types) zu erstellen, wenn man ohne einen nativen Bildschirm arbeitet
+	* [AD5X](/de/AD5X/): Möglichkeit, [eigene Filamenttypen und -farben](/de/AD5X/#7-filamenttypen-hinzufügen-oder-entfernen) zu erstellen, wenn man ohne einen nativen Bildschirm arbeitet
 	* Klipper und Monnraker aktualisiert
 	* Unterstützung für ens160.py von @minicx hinzugefügt
 	* Portugiesische Sprache hinzugefügt
@@ -198,11 +198,11 @@
 	28.06.2025
 
 	- AD5X - Ton funktioniert
-	- AD5X - Wägezellen und Düsenaufprallkontrolle auf dem Tisch funktionieren
+	- AD5X - Wägezellen und Düsenaufprallkontrolle auf das Bett funktionieren
 	- AD5X - Telegramm-Bot funktioniert
 	- AD5X - Fadensensor funktioniert
-	- AD5X - PID-Einstellung des Prinetron-Tisches funktioniert
-	- AD5X - wiederhergestellte Düsenreinigung beim Entfernen der Tischkarte
+	- AD5X - PID-Einstellung des Druckerbetts funktioniert
+	- AD5X - wiederhergestellte Düsenreinigung beim Messen des Bettnetzes
 	- AD5X - getestete Mods funktionieren mit Firmware 1.0.9, 1.1.0, 1.1.1
 	- AD5X - erstellt [Flash-Laufwerk zur Installation des Bildschirms Version 1.0.7 und alle anderen Module Version 1.1.1](/de/Native_FW/)
 	- AD5x - erstellt [Drucker-Reset-Stick](/de/Native_FW/)
@@ -212,8 +212,8 @@
 	### Version 1.5.3
 	03.06.2025
 	
-	* Fehler im Klipper [#119](https://github.com/ghzserg/zmod/issues/119) behoben, der die Verwendung von [this](/de/Recommendations/#don't-use-Russian-names-in-object-names) notwendig machte
-	* Die Düsensteuerung ist nun auch aktiviert, wenn vom Bildschirm aus auf einmal gedruckt wird
+	* Fehler im Klipper [#119](https://github.com/ghzserg/zmod/issues/119) behoben, wegen dem man auf nicht-lateinische Zeichen in Objektnamen verzichten musste
+	* Die Düsensteuerung ist nun auch aktiviert, wenn vom Bildschirm aus gedruckt wird
 	* Kleinere kosmetische Korrekturen
 
 ??? note "Version 1.5.2"
@@ -269,15 +269,15 @@
 	- Verbesserte [Düsenaufprallkontrolle](/de/Global/#nozzle_control) Funktionalität, Sie können nun [Pause](/de/Global/#nozzle_control) verwenden, anstatt den Drucker abzuschalten. Aufgabe [#23](https://github.com/ghzserg/zmod/issues/23)
 	- Die Systemprüfungsfunktion wurde verbessert.
 	- Das Fluidd-Farbschema wurde geändert.
-	- Globaler Parameter [SAVE_MOONRAKER](/de/Macros/#save_moonraker) hinzugefügt - erlaubt die Verwendung benutzerdefinierter Makro-Schaltflächen.
+	- Globaler Parameter [SAVE_MOONRAKER](/de/Global/#save_moonraker) hinzugefügt - erlaubt die Verwendung benutzerdefinierter Makro-Schaltflächen.
 	- GuppyScreen funktioniert in AD5X
 	- In AD5X neues Makro [COLOR](/de/Filament/#color) Steuerung des Kunststofftyps, der Kunststofffarbe, des Ladens und Entladens des Filaments von farbigen Spulen.
-	- Geänderter Algorithmus für den Tabellentest vor dem Drucken, neuer globaler Parameter [MESH_TEST](/de/Macros/#mesh_test) eingeführt
+	- Geänderter Algorithmus für den Betttest vor dem Drucken, neuer globaler Parameter [MESH_TEST](/de/Global/#mesh_test) eingeführt
 	- Fehler [#13](https://github.com/ghzserg/zmod/issues/13) behoben (Drucken in der Luft nach KAMP)
 	- Fehler [#14](https://github.com/ghzserg/zmod/issues/14) behoben (Drucken auf nativem Bildschirm wiederherstellen)
 	- Fehler behoben [#31](https://github.com/ghzserg/zmod/issues/27) (Einfrieren im GuppyScreen)
-	- Fehler [#25](https://github.com/ghzserg/zmod/issues/25) behoben (AD5X. Tabellenkalibrierung funktioniert nicht richtig)
-	- Fehler [#26](https://github.com/ghzserg/zmod/issues/26) behoben (AD5X. Kein Gürtelspektrogramm)
+	- Fehler [#25](https://github.com/ghzserg/zmod/issues/25) behoben (AD5X. Bettkalibrierung funktioniert nicht richtig)
+	- Fehler [#26](https://github.com/ghzserg/zmod/issues/26) behoben (AD5X. Kein Riemenspektrogramm)
 	- Fehler [#27](https://github.com/ghzserg/zmod/issues/27) behoben (AD5X. Installer-Fehler)
 
 ??? note "Version 1.4.1"
@@ -293,9 +293,9 @@
 	
 	- Keine Entware, daher funktionieren NEW_SAVE_CONFIG und CLOSE_DIALOGS nicht
 	- Spielt keine Musik ab
-	- Keine PID-Tabellen-Kalibrierung, da es dort keine PID gibt
+	- Keine Bett-PID-Kalibrierung, da es dort keine PID gibt
 	- Beim Aktivieren der Kamera muss VIDEO3 angegeben werden
-	- Keine Wägezellen, daher kein Tabellenschutz und keine Rückstellung der Wägezellen.
+	- Keine Wägezellen, daher kein Bettschutz und keine Rückstellung der Wägezellen.
 	- Kein Filament-Bewegungssensor vom Klipper verfügbar
 
 ??? note "Version 1.4.0"
@@ -304,22 +304,22 @@
 	
 	- Moonraker, Fluidd, Python aktualisiert
 	- [Druck bei Stromausfall wiederherstellen](/de/Zmod/#zrestore)
-	- Gürtel-Spektrogramm erstellen](/de/Macros/#belts_shaper_calibration)
-	- Überprüfung der geladenen Platte, prüft, ob die Tabelle ungefähr mit der aktuell geladenen Platte übereinstimmt
-	- Implementierte Arbeit mit [filament motion sensor](/de/Macros/#motion_sensor)
+	- [Riemen-Spektrogramm erstellen](/de/Macros/#belts_shaper_calibration)
+	- Überprüfung der geladenen Platte, prüft, ob das Bettnetz ungefähr mit der aktuell geladenen Platte übereinstimmt
+	- Implementierte Arbeit mit [filament motion sensor](/de/Global/#motion_sensor)
 	- GuppyScreen: Objektausschluss, Fehlerausgabe, Firmware-Rollback, PID-Kalibrierung, Gewichtsrücksetzung, Arbeit mit FF5M Pro
 	- Makro auf [nächste Ebene](/de/Macros/#set_pause_next_layer), oder [auf einer bestimmten Ebene](/de/Macros/#set_pause_at_layer) ausführen
 	- Protokollierung aller nativen Bildschirmmeldungen an Klipper und Antworten auf diese Meldungen
 	- Geänderter Algorithmus der Shaper-Entfernung, Shaper-Graphen werden unter Berücksichtigung von SCV geplottet
 	- MUTE-Makro - Stummschaltung vor Neustart
-	- Neuer Parameter - [Native screen off timeout](/de/System/#display_off_timeout)
+	- Neuer Parameter - [Native screen off timeout](/de/Global/#display_off_timeout)
 	- Neue Datei `mod_data/power_off.sh` - ermöglicht das Schreiben von Code, der beim Ausschalten des Druckers ausgeführt wird
 	- Aktiviertes intelligentes Parken bei Verwendung von KAMP
 	- Fehler beim Entfernen von Mods, Deaktivieren von Mods und vollständigem Entfernen von Mods behoben
 	- Vorreinigung behoben
-	- Kontrolle des Auftreffens der Düse auf dem Tisch behoben. Funktioniert nur während des Druckens.
+	- Kontrolle des Auftreffens der Düse auf das Bett behoben. Funktioniert nur während des Druckens.
 	- Druckkopfbewegung mit Tasten in Fluid/GuppyScreen behoben
-	- Behobene Pause im nicht-nativen Bildschirmmodus
+	- Behobene Pause im Modus ohne nativen Bildschirm
 	- KAMP-Betrieb behoben
 
 ??? note "Version 1.3.1"
@@ -327,7 +327,7 @@
 	
 	- GuppyScreen Verbesserungen: COLDPULL, PID-Steuerung, Firmware-Rückzüge, Shaper-Kalibrierung, Bandkalibrierung, kosmetische Korrekturen
 	- Die Düsensteuerung funktioniert jetzt nur noch beim Drucken
-	- RIEMEN_FORMGEBER_KALIBRIERUNG
+	- BELTS_SHAPER_CALIBRATION
 	- Verbesserte Bedienung ohne nativen Bildschirm
 	- Verbesserte Funktion des langsamen Fensterschließens und NEW_SAVE_CONFIG
 
@@ -341,7 +341,7 @@
 	- Ersetzte `mjpg_streamer` mit der Version mit Alexander-Patch, reduziert den Speicherverbrauch um 2-4 mal.
 	- Ausschluss von Objekten von Igor Polunovskiy behoben (jetzt wird die Unterstützung berücksichtigt).
 	- Shaper-Plotting unter Berücksichtigung von SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](/de/Global/#fix_scv).
-	- CHECK_SYSTEM](/de/System/#check_system) - Überprüfung von Datei- und Verzeichnisberechtigungen, Linkprüfung und Wiederherstellung hinzugefügt.
+	- [CHECK_SYSTEM](/de/System/#check_system) - Überprüfung von Datei- und Verzeichnisberechtigungen, Linkprüfung und Wiederherstellung hinzugefügt.
 	- Das Makro SOFT_REMOVE wurde entfernt.
 	- Moonraker, Fluidd, Mainsail aktualisiert.
 
@@ -350,10 +350,10 @@
 	03.02.2025
 	
 	- Neues Makro [CHECK_SYSTEM](/de/System/#check_system) - Überprüft das Drucker-Betriebssystem auf beschädigte Dateien.
-	- Neues Makro [NOZZLE_CONTROL](/de/Global/#nozzle_control) - Notabschaltung des Druckers, wenn ein abreißendes Teil oder eine auf den Tisch auftreffende Düse erkannt wird.
+	- Neues Makro [NOZZLE_CONTROL](/de/Global/#nozzle_control) - Notabschaltung des Druckers, wenn ein abreißendes Teil oder eine auf das Bett auftreffende Düse erkannt wird.
 	- Neues Makro [UPDATE_MCU](/de/Macros/#update_mcu) - Aktualisierung der MCU im Drucker.
-	- Neues globales Flag [NICE](/de/Macros/#nice) - Setzt die Klipper-Prozesspriorität, 1 ist die niedrigste Priorität, 40 die höchste (20).
-	- Neues globales Flag [FIX_E0011](/de/System/#fix_e0011) - Behebt den Fehler E0011 sowie `Communication timeout during homing`.
+	- Neues globales Flag [NICE](/de/Global/#nice) - Setzt die Klipper-Prozesspriorität, 1 ist die niedrigste Priorität, 40 die höchste (20).
+	- Neues globales Flag [FIX_E0011](/de/Global/#fix_e0011) - Behebt den Fehler E0011 sowie `Communication timeout during homing`.
 	- Säubert das Drucker-Dateisystem von gelöschten Dateien, beschleunigt EMMC.
 	- Eine Reihe kleinerer Korrekturen
 
@@ -370,7 +370,7 @@
 	- Implementierung von EXCLUDE_OBJECT_DEFINE von Igor Polunovskiy
 	- Bei wiederholtem Druck werden die Motoren nicht abgeschaltet und der Drucker wird nicht neu gestartet, auch wenn dies in den globalen Parametern angegeben ist
 	- Im Makro [TEST_EMMC](/de/Macros/#test_emmc) wird der Verschleiß der EMMC-Karte angezeigt
-	- Deaktivierung der chinesischen Wolken behoben
+	- Deaktivierung der chinesischen Cloud-Dienste behoben
 
 ??? note "Version 1.1.0"
 	### Version 1.1.0
@@ -379,11 +379,11 @@
 	- Moonraker aktualisiert
 	- Moonraker Ladegeschwindigkeit deutlich erhöht
 	- Versteckte `level_h1`, `level_h2`, `level_h3`, `power_off`, `clear_power_off`, `level_clear`, `check_level_pin_alt`.
-	- Die Implementierung von Igor Polunovskiy wird verwendet, um Wägezellen im nicht-nativen Bildschirmmodus zurückzusetzen
-	- Zurücksetzen von Wägezellen, jetzt nur bei erwärmtem Tisch
-	- Neuer globaler Parameter [ALTER_CELL_TARE](/de/Macros/#alter_cell_tare). Ermöglicht die Umgehung von [Wägezellen-Reset-Fehler](/de/FAQ/#alter_cell_tare error).
-	- Neuer globaler Parameter [CELL_WEIGHT](/de/Macros/#cell_weight) gibt an, bei welchem Gewicht die Wägezellen nicht kalibriert werden sollen
-	- Neuer globaler Parameter [CHINA_CLOUD](/de/Global/#china_cloud) - erlaubt es, chinesische Wolken zu deaktivieren.
+	- Die Implementierung von Igor Polunovskiy wird verwendet, um Wägezellen im Modus ohne nativen Bildschirm zurückzusetzen
+	- Zurücksetzen von Wägezellen, jetzt nur bei erwärmtem Bett
+	- Neuer globaler Parameter `ALTER_CELL_TARE`. Ermöglicht die Umgehung des Wägezellen-Reset-Fehlers.
+	- Neuer globaler Parameter `CELL_WEIGHT` gibt an, bei welchem Gewicht die Wägezellen nicht kalibriert werden sollen
+	- Neuer globaler Parameter [CHINA_CLOUD](/de/Global/#china_cloud) - erlaubt es, chinesische Cloud-Dienste zu deaktivieren.
 	- Aktualisierung der Druckerkonfiguration neu geschrieben
 	- In der Pro-Version arbeiten die Gebläse nun korrekt. Die Standard-Winkel sind 165/105
 	- Die Kühlergeschwindigkeit wird jetzt während der Extruderkalibrierung eingestellt
@@ -395,25 +395,25 @@
 	### Version 1.0.5
 	13.01.2025
 	
-	- Parameter zum Makro [AUTO_REBOOT](/de/Macros/#auto_reboot) hinzugefügt, der einen Neustart der Firmware ermöglicht.
+	- Parameter zum Makro [AUTO_REBOOT](/de/Global/#auto_reboot) hinzugefügt, der einen Neustart der Firmware ermöglicht.
 	- G28 in Makros wird nur noch bei Bedarf aufgerufen
-	- Der MD5-Algorithmus wurde fast vollständig geändert. Jetzt funktioniert die MD5-Prüfung von überall und erfordert kein Aufheizen des Tisches oder des Extruders.
+	- Der MD5-Algorithmus wurde fast vollständig geändert. Jetzt funktioniert die MD5-Prüfung von überall und erfordert kein Aufheizen des Bettes oder des Extruders.
 	Verbessertes Makro [MEM](/de/Macros/#mem) gibt jetzt den Moonraker-, Klipper- und Shield-Speicher aus und wie SWAP verwendet wird
 
 	- Der Klipper-Prozess hat eine höhere Priorität als andere Prozesse
-	- Der globale Parameter [PRINT_LEVELING](/de/Global/#zshaper) funktioniert nun auch in nicht-nativen Bildschirmen
+	- Der globale Parameter [PRINT_LEVELING](/de/Global/#print_leveling) funktioniert nun auch in nicht-nativen Bildschirmen
 	- Das Makro [BED_LEVEL_SCREWS_TUNE](/de/Calibrations/#bed_level_screws_tune) verwendet nun die Temperatur korrekt.
 	- Das Makro [TEST_EMMC](/de/Macros/#test_emmc) kann EMMC, USB Flash und RAM testen.
 	- Swap kann nun auf USB-Flash platziert werden (muss aber nicht)
 	- Makro [CLEAR_EMMC](/de/System/#clear_emmc) - löscht Logs und/oder GCODEs
-	- Fehlersuche [E0017](/de/System/#fix_e0017)
+	- Fehlersuche [E0017](/de/Global/#fix_e0017)
 
 ??? note "Version 1.0.4"
 	### Version 1.0.4
 	05.01.2025
 	
-	- Unterstützung [Rollback von Firmware](/de/FAQ/#what-is-rollback-firmware)
-	- Fehlerbehebung [E0017](/de/System/#fix_e0017)
+	- Unterstützung [Rollback von Firmware](/de/FAQ/#was-ist-ein-firmware-rückzug)
+	- Fehlerbehebung [E0017](/de/Global/#fix_e0017)
 	- Automatisches Einschalten des Treiberblasens, wenn die Motoren eingeschaltet werden. Löst das Problem des Entfernens von Shapern ohne Stock Blowing.
 	- Neues Makro [TEST_EMMC](/de/Macros/#test_emmc) - Schreibt SIZE MB auf EMMC und die Schreib-Lese-Geschwindigkeit.
 	- Neues Makro [CLEAR_EMMC](/de/System/#clear_emmc) - Löscht die EMMC.
@@ -425,7 +425,7 @@
 	- Die Aktualisierung von fluidd/mainsail erfordert jetzt keinen Neustart mehr
 	- Der Wechsel von fluidd zu mainsail erfordert jetzt keinen Neustart mehr
 	- Zmod meldet Dateien, wenn darin Bögen verwendet werden
-	- Skript "adddMD5.sh" korrigiert
+	- Skript "addMD5.sh" korrigiert
 	- Kühlungssteuerung des Treibers für nicht-native Bildschirmversionen korrigiert
 	- Automatisches Laden der Schreibtischkarte für nicht-native Bildschirmversionen beim Starten des Druckers
 
@@ -443,7 +443,7 @@
 	- Z-Mod schreibt automatisch, ob von einem Flash-Laufwerk aktualisiert werden soll - jetzt in roter Farbe
 	- Wenn die native Entfernung der Bildschirmtabelle verwendet wird (PRINT_LEVELING=1), werden die Parameter FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH in START_PRINT ignoriert
 	- Pause, auch beim Drucken vom Bildschirm in der äußersten rechten Ecke
-	- PRRECLEAR-Parameter, funktioniert jetzt auch beim Drucken mit Kartenaufbau vom Bildschirm aus
+	- PRECLEAR-Parameter, funktioniert jetzt auch beim Drucken mit Kartenaufbau vom Bildschirm aus
 	- Geänderter Installationsalgorithmus, nach erfolgreicher Installation ist es jetzt nicht mehr notwendig, den USB-Stick zu entfernen - der Drucker startet sich neu und löscht die Installationsdatei.
 
 ??? note "Version 0.2.3"
@@ -459,11 +459,11 @@
 	17.12.2024
 	
 	- Neues Makro [FAST_CLOSE_DIALOGS](/de/Macros/#fast_close_dialogs) - Bewirkt das schnelle Schließen von Dialogen auf dem ursprünglichen Bildschirm. Wird verwendet, um ein Fenster zu schließen, wenn der Druckvorgang beendet ist oder abgebrochen wird. *Damit das schnelle Schließen von Dialogen funktioniert, müssen Sie auf der Registerkarte Einstellungen -> WiFi-Symbol -> Netzwerkmodus -> den Schieberegler "Nur lokale Netzwerke" aktivieren *Implementierung über das Druckerbildschirmmenü: @darksimpson
-	- Neues Makro [LEVELING_PRINT_FILE](/de/Macros/#leveling_print_file) - Druckt eine Datei mit Table-Map-Plotting vom nativen Bildschirm. *Für LEVELING_PRINT_FILE ist es notwendig, über das Menü des Druckerbildschirms auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> den Schieberegler "Nur lokale Netzwerke "* einzuschalten.
+	- Neues Makro `LEVELING_PRINT_FILE` - Druckt eine Datei mit Table-Map-Plotting vom nativen Bildschirm. *Für LEVELING_PRINT_FILE ist es notwendig, über das Menü des Druckerbildschirms auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> den Schieberegler "Nur lokale Netzwerke "* einzuschalten.
 	- Neues Makro [COLDPULL](/de/Filament/#coldpull) Coldpull (Düsenreinigung) ohne Gewalt. Implementierung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 	- Neue Parameter [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data):
-	- [PRINT_LEVELING](/de/Global/#save_zmod_data) - Build Table Map mit nativem Bildschirm bedeutet 0-Nein, 1-Ja (0) bei jedem Druck. *Um die Desktop-Karte vom nativen Bildschirm zu entfernen, gehen Sie auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> schalten Sie den Schieberegler "Nur lokale Netzwerke" über das Menü des Druckerbildschirms ein.
-	- [USE_KAMP](/de/Global/#save_zmod_data) - ermöglicht die Verwendung der adaptiven Desktopkarte (KAMP) anstelle der vollständigen Desktopkarte 0-nein, 1-ja (0). *Ermöglicht die Verwendung von KAMP, wenn eine Tabellenkarte über das Netzwerk vom nativen Bildschirm übernommen wird.
+	- [PRINT_LEVELING](/de/Global/#save_zmod_data) - Build Table Map mit nativem Bildschirm bedeutet 0-Nein, 1-Ja (0) bei jedem Druck. *Um das Bettnetz vom nativen Bildschirm zu messen, gehen Sie auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> schalten Sie den Schieberegler "Nur lokale Netzwerke" über das Menü des Druckerbildschirms ein.
+	- [USE_KAMP](/de/Global/#save_zmod_data) - ermöglicht die Verwendung der adaptiven Bettnetzes (KAMP) anstelle des vollständigen Bettnetzesarte 0-nein, 1-ja (0). *Ermöglicht die Verwendung von KAMP, wenn ein Bettnetz über das Netzwerk vom nativen Bildschirm übernommen wird.
 	- [CLOSE_DIALOGS](/de/Global/#save_zmod_data) - schließt Dialoge automatisch, wenn sie fertig sind und wenn der Druck abgebrochen wird 0-nein, 1-ja langsam, 2-ja schnell. *Damit das schnelle Schließen von Dialogen funktioniert, gehen Sie auf die Registerkarte "Einstellungen" -> "WiFi-Symbol" -> "Netzwerkmodus" -> aktivieren Sie den Schieberegler "Nur lokale Netzwerke "* (0) über das Druckerbildschirmmenü.
 	- [USE_SWAP](/de/Global/#save_zmod_data) - SWAP verwenden 0-nein, 1-ja (1). *Wenn Sie einen nicht gelöteten Prozessor haben, ist SWAP zwingend erforderlich.
 
@@ -530,9 +530,9 @@
 	
 	- Speicherort der Logs korrigiert
 	- Makro [LOAD_CELL_TARE](/de/Macros/#load_cell_tare) behoben
-	- Makro zur Kalibrierung von Extruder und Tisch-PID behoben
-	- Makro [CLEAR_NOZZLE](/de/Macros/#CLEAR_NOZZLE) - Düsenreinigung wie in nativer Firmware
-	- Makros [KAMP](/de/Calibrations/#kamp) extruder_temp=[düse_temperatur_anfängliche_schicht] bed_temp=[bett_temperatur_anfängliche_schicht_single]. Adaptives Tabellenbild mit Düsenreinigung.
+	- Makro zur Kalibrierung von Extruder und Bett-PID behoben
+	- Makro [CLEAR_NOZZLE](/de/Macros/#clear_nozzle) - Düsenreinigung wie in nativer Firmware
+	- Makros [KAMP](/de/Calibrations/#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single_single]. Adaptives Tabellenbild mit Düsenreinigung.
 	- [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level) - komplett neu geschriebenes Makro
 
 ??? note "Version 0.1.5"
@@ -543,8 +543,8 @@
 	- Makro STOP - schaltet Motoren aus, geschrieben im finalen gcod.
 	- Makro [ZSHAPER](/de/Calibrations/#zshaper) - kalibriert Shaper und lädt csv-Dateien nach /mod_data in Konfiguration. Weitere Analyse über (https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
 	- Makro [LOAD_CELL_TARE](/de/Macros/#load_cell_tare) - Wägezellen zurücksetzen
-	- Feste Tischkalibrierung. Sie können jetzt Tisch- und Extrudertemperatur für die Kalibrierung einstellen. Standard 120/80
-	- Bildschirmabschaltung im nicht-nativen Bildschirmmodus behoben. Er schaltet sich nach 4 Minuten ab.
+	- Bettkalibrierung behoben. Sie können jetzt Bett- und Extrudertemperatur für die Kalibrierung einstellen. Standard 120/80
+	- Bildschirmabschaltung im Modus ohne nativen Bildschirm behoben. Er schaltet sich nach 4 Minuten ab.
 
 ??? note "Version 0.1.4"
 	### Version 0.1.4
@@ -564,8 +564,8 @@
 	28.11.2024
 	
 	- MIDI-Wiedergabe hinzugefügt. Dateien werden in mod_data/midi gespeichert - Zugriff über die Konfigurationsregisterkarte. Dank an [@drmax_gc](https://t.me/drmax_gc)
-	- Makros [PLAY_MIDI](/de/Macros/#play_midi). Spielt die Melodie PLAY_MIDI FILE=Schmerz-Halt-deinen-Mund.mid
-	- Makro [SOFT_REMOVE](/de/Macros/#soft_remove). Entfernt nur Z-Mod, lässt audio, md5, root
+	- Makros [PLAY_MIDI](/de/Macros/#play_midi). Spielt die Melodie PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
+	- Makro `SOFT_REMOVE`. Entfernt nur Z-Mod, lässt audio, md5, root
 	- Nach dem Update bleiben die Moonraker-Einstellungen erhalten
 	- Die Benutzereinstellungen für klipper werden nach mod_data/user.cfg verschoben.
 	- Benutzereinstellungen für moonraker werden nach mod_data/user.moonraker.conf verschoben
@@ -577,12 +577,12 @@
 	### Version 0.1.1
 	27.11.2024
 	
-	- Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Klipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und die Tabellenkarte aus dem Standardprofil wird geladen.
+	- Unterstützt den Betrieb mit deaktivierter nativer Anzeige. Dies spart 20 Megabyte RAM. Um diesen Modus zu aktivieren, müssen Sie das Makro DISPLAY_OFF aufrufen. Der Klipper wird neu starten und alternative Konfigurationsdateien verwenden. Es wird empfohlen, die Table Map zu entfernen und mit dem Standardprofil zu speichern. Nach dem Neustart wird der Bildschirm nach 5 Minuten nicht mehr verfügbar sein und das Bettnetz aus dem Standardprofil wird geladen.
 	- Makros [MEM](/de/Macros/#mem) - zeigt an, wie viel Speicher verwendet wird und von welcher Anwendung.
 	- Makro [DISPLAY_ON](/de/System/#display_on) - setzt den Bildschirm in den Standardmodus zurück, der Drucker wird neu gestartet
-	- Makro [LED](/de/Macros/#led) - schaltet die Hintergrundbeleuchtung bei 50% ein
-	- Makro [LED_ON](/de/Macros/#led_on) - schaltet die Hintergrundbeleuchtung auf 100% ein.
-	- Makro [LED_OFF](/de/Macros/#led_off) - schaltet die Hintergrundbeleuchtung aus
+	- Makro [LED](/de/Macros/#led) - schaltet die Beleuchtung bei 50% ein
+	- Makro [LED_ON](/de/Macros/#led_on) - schaltet die Beleuchtung auf 100% ein.
+	- Makro [LED_OFF](/de/Macros/#led_off) - schaltet die Beleuchtung aus
 
 ??? note "Version 0.0.9-fix"
 	### Version 0.0.9-fix

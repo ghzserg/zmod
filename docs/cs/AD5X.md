@@ -11,17 +11,17 @@
     - 🔧 [Základní parametry (nejčastěji upravované)](#základní-parametry-nejčastěji-upravované)
        - ⚙️ [Pokročilé parametry (neupravujte, pokud si nejste jisti výsledkem)](#pokročilé-parametry-neupravujte-pokud-si-nejste-jisti-výsledkem)
 
-7. [Přidat vlastní typy filamentů](#7-přidat-vlastní-typy-filamentů)
+7. [Přidat vlastní typy filamentů](#7-přidat-nebo-odebrat-typy-filamentů)
 8. [Přidat vlastní barvy](#8-přidat-vlastní-barvy)
 9. [Oprava funkce odpadní nádobky a nože na řezání filamentu](#9-oprava-funkce-odpadní-nádobky-a-nože-na-řezání-filamentu)
 
     - [Nastavení koše v továrním firmwaru AD5X](#nastavení-koše-v-továrním-firmwaru-ad5x)
-       - [Přes USB disk v továrním firmwaru](Setup.md#ad5x-warning)
+       - [Přes USB disk v továrním firmwaru](Setup.md#varování-ad5x)
 
 10. [Příkazy IFS](#10-příkazy-ifs)
 11. [Obnova firmwaru IFS](#11-obnova-firmwaru-ifs)
 
-### [Pluginy](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
+### [Pluginy](Plugin.md)
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Kompatibilita s Bambu Studio, lepší čistící věže, přesné odhady, snížení odpadu
 - [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - Fork doplňku Bambufy
@@ -44,7 +44,7 @@ Rozdíly oproti AD5M:
 
 ## **2. Jak připravit soubor v Orca**
 
-[Odeslat soubory přes "Octo/Klipper" pro tisk](Recommendations.md#send-files-via-octoklipper-for-printing)
+[Odeslat soubory přes "Octo/Klipper" pro tisk](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
 **Musíte odstranit nepoužívané cívky ze seznamu v Orce.**
 
@@ -187,7 +187,7 @@ SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 
 Chcete-li nastavit, kolik nástrojů se zobrazí v okně pro výběr barvy (pokud soubor nelze pro tuto informaci prohledat), použijte parametr [ALLOWED_TOOL_COUNT](Global.md#allowed_tool_count).
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
@@ -195,7 +195,7 @@ SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 
 Chcete-li povolit prohledávání gcode souborů pro informace o nástroji, barvě a materiálu, použijte parametr [SCAN_FILE_COLORS](Global.md#scan_file_colors). Můžete jej také nastavit na 2 pro kontrolu dat připravených skriptem sliceru, ale nepokoušejte se prohledávat celé soubory.
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
@@ -210,7 +210,7 @@ Můžete vytvořit vlastní hodnoty pro přerušení v tichém režimu sečtení
 * 8 (Alespoň jedna barva je potenciálně špatně spárována)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
@@ -431,7 +431,7 @@ Text ```_průhledná``` se zobrazí na tlačítkách.
 
 ## 9. Oprava funkce odpadní nádobky a nože na řezání filamentu
 
-[Alternativní verze pokynů](Setup.md#ad5x-warning)
+[Alternativní verze pokynů](Setup.md#varování-ad5x)
 
 Různé tiskárny AD5X mohou mít různé souřadnice pro odpadní nádobku a nůž. Někdy může být rozdíl až 4 mm.
 
@@ -473,7 +473,7 @@ Nahraďte **pouze** tyto hodnoty:
 
 ### Kalibrace odpadní nádobky
 
-[Alternativní verze pokynů](Setup.md#ad5x-warning)
+[Alternativní verze pokynů](Setup.md#varování-ad5x)
 
 1. Zadejte příkaz `_GOTO_TRASH` — hlava tiskárny se přesune k odpadní nádobce.
 2. Pokud se nádobka nezavře. Opatrně posouvejte hlavu, dokud se nádobka nezavře. Musíte použít GCODE: ```G1 Y230.2```
@@ -497,7 +497,7 @@ Zapište toto číslo do souboru `/rw/Adventurer5M.json`. Nádobka je zkalibrov�
 
 ### Kalibrace nože
 
-[Alternativní verze pokynů](Setup.md#ad5x-warning)
+[Alternativní verze pokynů](Setup.md#varování-ad5x)
 
 1. Zadejte příkaz `_CUT_PRUTOK` — hlava se přesune k noži.
 2. Musíte použít GCODE: ```G1 Y-7.7``` ```G1 X-1.7```, posouvejte hlavu, dokud se nůž neaktivuje.

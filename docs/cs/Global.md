@@ -73,6 +73,27 @@ Po spuštění se v konzoli zobrazí uložené parametry aplikované za běhu.
 
 ---
 
+### PLUGINS
+
+Zobrazí nabídku správy pluginů.
+
+<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
+
+V této nabídce můžete zapínat, vypínat a úplně odstraňovat doplňkové pluginy.
+
+- Levý sloupec (aktivace): kliknutím plugin zapnete nebo vypnete.
+    - Zelené tlačítko — plugin je aktivní.
+    - Šedé tlačítko — plugin je vypnutý.
+- Pravý sloupec (aktualizace): zapíná nebo vypíná automatické aktualizace přes Moonraker.
+    - UPDATE: ON — aktualizace jsou zapnuté.
+    - UPDATE: OFF — aktualizace jsou vypnuté.
+
+**Jak plugin úplně odstranit:**
+
+Pokud plugin již nepotřebujete, přepněte obě jeho tlačítka na šedou (vypněte samotný plugin i jeho aktualizace), stiskněte SAVE (MOONRAKER RESTART) a poté restartujte tiskárnu. Systém automaticky smaže jeho složku z `mod_data/plugins/`.
+
+---
+
 ### GLOBAL
 
 Zjednodušená správa globálních parametrů. K dispozici jsou pouze parametry, které lze změnit kliknutím na tlačítko. Parametry, které vyžadují zadání čísla, názvu souboru atd., nejsou tímto makrem ovládány.
@@ -108,7 +129,7 @@ Pokud Z-Mod dokáže úspěšně prohledat soubor pro použité nástroje, toto 
 
 Toto nastavení nelze použít, když je povolena nativní obrazovka.
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
@@ -116,7 +137,7 @@ Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 Povolí prohledávání gcode souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (zakázat), 1 (povolit), 2 (zakázat úplné prohledávání, ale hledat data připravená skriptem sliceru)
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -139,7 +160,7 @@ Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následujíc
 * 8 (Alespoň jedna barva je potenciálně špatně spárována)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](/Recommendations/#enable-md5-checksum-control)
+[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -203,7 +224,8 @@ Algoritmus pro automatickou kalibraci Z-Offsetu:
 1.  **Zdrojová data:** V paměti tiskárny je uložen mesh podložky (obvykle 25 bodů) získaný při posledním vyrovnávání.
 2.  **Příprava:**
 
-    *   Tryska je nahřátá na pracovní teplotu, otřena o podložku a ochlazena na teplotu měření: [TEMP_TEST_MAX](/cs/Global/#temp_test_max) (výchozí 151), pokud je cílová teplota trysky vyšší než 230°C, jinak [TEMP_TEST_MIN](/cs/Global/#temp_test_min) (výchozí 121).
+    *   U AD5M/AD5X je tryska nahřátá na pracovní teplotu, otřena o podložku a ochlazena na teplotu měření: [TEMP_TEST_MAX](/cs/Global/#temp_test_max) (výchozí 151), pokud je cílová teplota trysky vyšší než 230°C, jinak [TEMP_TEST_MIN](/cs/Global/#temp_test_min) (výchozí 121).
+    *   U Creator 5 / Creator 5 Pro se aktivní extrudér odloží.
 
 3.  **Výběr měřicího bodu:**
 
@@ -211,31 +233,32 @@ Algoritmus pro automatickou kalibraci Z-Offsetu:
 
 4.  **Měření a porovnání:**
 
-    *   Na vybraném bodě se provede nové měření sondou.
-        *   Získaná hodnota se porovná s hodnotou uloženou v meshi podložky.
+    *   Na vybraném bodě se provede nové měření sondou (PROBE).
+    *   Získaná hodnota se porovná s hodnotou uloženou v meshi podložky.
 
 5.  **Korekce offsetu:**
 
     *   Pokud je odchylka **menší než 0,3 mm**, rozdíl se přičte k aktuální hodnotě Z-Offsetu.
-        *   Pokud je odchylka **větší nebo rovna 0,3 mm**, systém považuje uložený mesh za zastaralý a, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
+    *   Pokud je odchylka **větší nebo rovna 0,3 mm**, systém považuje uložený mesh za zastaralý a, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
 
 **Bez automatického ladění Z-Offsetu**
 
 Algoritmus validace meshe podložky:
 
-1.  **Měření:** Na aktuálním bodě se provede standardní měření sondou.
+1.  **Měření:** Na aktuálním bodě se provede standardní měření sondou (PROBE).
 2.  **Validace:** Získaná hodnota Z se zkontroluje na konzistenci s načteným meshem.
 3.  **Kritérium:** Hodnota musí být v rozsahu od (minimum meshe - 0,21 mm) do (maximum meshe + 0,21 mm).
 4.  **Výsledek:**
 
     *   **Úspěch:** Mesh je považován za správný, tisk pokračuje.
-        *   **Neúspěch:** Je vydáno varování a tisk se zastaví nebo, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
+    *   **Neúspěch:** Je vydáno varování a tisk se zastaví nebo, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
 
-**Poznámky:**
+**Poznámky ke kontrole bez automatického ladění:**
 
 *   Tato kontrola je hrubý odhad. Je určena k detekci kritických chyb, například když je načten mesh pro PEI list pro tlusté sklo a naopak.
 *   **Nespoléhejte na tuto kontrolu jako na absolutní ochranu.**
 *   Při použití chytrého čištění (KAMP) se čekání na ohřev odehrává poblíž místa čištění, nikoli v rohu podložky.
+*   Kontrola probíhá s horkou tryskou.
 
 Příklad: `SAVE_ZMOD_DATA MESH_TEST=0`
 
@@ -276,8 +299,8 @@ Ověřit MD5 hash souboru a při neshodě smazat: 0 (zakázat), 1 (povolit) (1).
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Nezapomeňte `chmod +x zmod_preprocess-linux-amd64`
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Apple Silicon). Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-arm64`
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS (Intel). Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-amd64`
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-arm64`
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-amd64`
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Obecný Python. Nezapomeňte spustit `chmod +x zmod-preprocess.py`
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit `chmod +x zmod-preprocess.sh`
 
@@ -309,7 +332,7 @@ Příklad: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 
 Načíst Z-offset z globálních parametrů uložených přes SET_GCODE_OFFSET: 1 (ano), 0 (ne) (1).
 
-[Jak funguje Z-Offset](FAQ.md#how-does-z-offset-work)
+[Jak funguje Z-Offset](FAQ.md#jak-funguje-z-offset)
 
 Příklad: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 
@@ -325,16 +348,24 @@ Příklad: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`
 
 Vybrat algoritmus čištění trysky (LINE_PURGE):
 
-- _CLEAR1 - styl Orca (může poškrábat podložku s KAMP)
-- _CLEAR2 - styl skupiny FF (může poškrábat podložku s KAMP)
-- _CLEAR3 - alternativa skupiny FF (může poškrábat podložku s KAMP)
+- _CLEAR1 - styl Orca
+- _CLEAR2 - styl skupiny FF
+- _CLEAR3 - alternativa skupiny FF
 - _CLEAR4 - kód Shreidera (zprava nahoře doprava dolů)
 - _CLEAR_TRAP - Pro kartáče (zprava nahoře doprava dolů)
 - LINE_PURGE - čištění KAMP
 
-Vlastní makra pro čištění lze přidat do `mod_data/user.cfg`.
+Pokud používáte `KAMP`, čištění se vynutí na `LINE_PURGE` (místo _CLEAR1, _CLEAR2, _CLEAR3, _CLEAR4).
+
+Pokud používáte `LINE_PURGE`, ale v Orca nemáte zapnuté označování objektů, použije se `_CLEAR2`.
+
+Vlastní makra pro čištění lze přidat do `mod_data/user.cfg` — název makra uveďte v tomto parametru.
 
 Příklad: `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`
+
+*5M/5M Pro: Nejde o náhradu nativního čištění (CLEAR_NOZZLE), kdy tryska ťukne doprostřed podložky a pak plast otře o podložku. Jde o předtlačení trysky těsně před tiskem.*
+
+_Pro vypnutí předtlačení trysky linkou použijte [DISABLE_PRIMING](/cs/Global/#disable_priming)_
 
 ---
 
@@ -380,10 +411,12 @@ Příklad: `SAVE_ZMOD_DATA AUTO_REBOOT=0`
 
 Použít [senzor pohybu filamentu](https://aliexpress.ru/item/1005007480443587.html) místo senzoru přítomnosti filamentu (0):
 
-- 0 - ne
-- 1 - ano
+- 0 - ne (používá se senzor přítomnosti filamentu)
+- 1 - ano (používá se senzor pohybu filamentu)
 
-Při použití senzoru pohybu filamentu ho vypněte na nativní obrazovce; jinak se tisk pozastaví.
+**Při použití senzoru pohybu filamentu ho vypněte na nativní obrazovce; jinak se tisk zastaví.**
+
+Pokud se v režimu bez nativní obrazovky používá senzor přítomnosti filamentu, při jeho sepnutí se zobrazí zpráva: „Došel filament. Pauza za 30 sekund“.
 
 Příklad: `SAVE_ZMOD_DATA MOTION_SENSOR=1`
 
@@ -514,7 +547,7 @@ Specifické příčiny:
 - Poškozený kabel extruderu. Řešení: Vyměňte/opravte kabel.
 - Uvolněné připojení kabelu desky extruderu. Řešení: Vyměňte desku extruderu.
 - Načítání dat SWAP (SWAP je na EMMC, která pracuje rychlostí 10 MB/s; data SWAP během výpočtů shaperu mohou dosáhnout 25MB). Řešení: Vypněte SWAP, pokud máte 256MB RAM pomocí `SAVE_ZMOD_DATA USE_SWAP=0`.
-- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](Setup.md#restoring-printer-to-factory-settings-required-for-mod-installation) nebo použijte mod [UPDATE_MCU](System.md#update_mcu).
+- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace) nebo použijte mod [UPDATE_MCU](System.md#update_mcu).
 
 Opravit chyby E0011 a `Communication timeout during homing`. Změna tohoto parametru restartuje tiskárnu. 0-ne, 1-ano (0):
 
@@ -532,9 +565,12 @@ Tato chyba se může také objevit:
 
   Povolte swap, pokud je vypnutý: `SAVE_ZMOD_DATA USE_SWAP=1`
 
-- Pokud používáte FF5M/FF5MPro, spusťte plný test. To zahrnuje kalibraci PID, odstranění mapy stolu a odstranění shaperů současně.
+- Pokud na FF5M/FF5MPro spouštíte plný test, tedy kalibraci PID, měření sítě podložky a kalibraci shaperů současně.
 
   Je lepší provést všechny kalibrace [zde podle těchto pokynů](SetupCalibrations.md#printer-calibration-for-beginners)
+
+- Pokud používáte Klipper 13 na AD5X. V tom případě se můžete vrátit k nativnímu Klipperu příkazem `UPDATE_MCU FORCE=12`.
+- Pokud se používá fuzzy skin a procesor nestíhá počítat trasu. Vypněte fuzzy skin nebo upravte jeho parametry.
 
 Chyba `Communication timeout during homing` se může objevit kvůli vysoké latenci komunikace mezi hostitelem a MCU. Doba odezvy by měla konzistentně zůstat pod 10ms. Dočasné špičky latence mohou způsobit selhání homingu.
 
@@ -560,7 +596,7 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](/Native_FW/#root).
+- Nainstalujte [root](/cs/Native_FW/#root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/mcu.py`.
 - Najděte `TRSYNC_TIMEOUT = 0.025` a změňte ho na `TRSYNC_TIMEOUT = 0.1`.
@@ -594,7 +630,7 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](/Native_FW/#root).
+- Nainstalujte [root](/cs/Native_FW/#root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/toolhead.py`.
 - Najděte `LOOKAHEAD_FLUSH_TIME = 0.5` a změňte ho na `LOOKAHEAD_FLUSH_TIME = 0.150`.
@@ -651,7 +687,7 @@ Povolit čínské cloudové služby: 0-ne, 1-ano (1).
 
 Příklad: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Zakázat čínské cloudy](Recommendations.md#disable-chinese-cloud-services)
+[Zakázat čínské cloudy](Recommendations.md#zakažte-čínské-cloudové-služby)
 
 I když jsou všechny cloudové možnosti vypnuty přes obrazovku, tiskárna se stále snaží posílat fotky, videa a telemetrii na čínské servery.
 
@@ -663,8 +699,8 @@ Pro aktualizaci továrního firmwaru povolte čínské cloudy pomocí `SAVE_ZMOD
 
 Místo toho můžete použít:
 
-- [zmod.link](Zmod.md#zlink) - cloud, pro správu tiskáren přes Fluidd/Mainsail.
-- [Telegram bot](Macros.md).
+- [zmod.link](Zmod.md#zlink) - cloud pro správu tiskáren přes Fluidd/Mainsail.
+- [Telegram bot](Telegram.md).
 
 **Jak zakázat čínské cloudy na továrním firmwaru:**
 
@@ -703,7 +739,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 ---
 ##### DISPLAY_OFF_TIMEOUT
 
-Nastavit časový limit (v sekundách) pro vypnutí nativní obrazovky při nečinnosti. Výchozí: 180.
+Nastavit dobu (v sekundách), po které se nativní obrazovka v režimu bez nativní obrazovky vypne. Výchozí: 180.
 
 Poznámka: Nativní obrazovka potřebuje alespoň 5 sekund na konfiguraci WiFi.
 

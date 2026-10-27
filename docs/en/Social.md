@@ -13,7 +13,7 @@ Join our community! Here you'll find official support channels, discussion group
 <div class="grid cards" markdown>
 -  __Help Bot__
     - [Telegram Help Bot](https://t.me/zmod_help_bot)
-    - Automated assistance and support
+    - Automated support: the bot finds the answer in the documentation for you
 </div>
 
 ### Telegram Channels
@@ -27,11 +27,25 @@ Join our community! Here you'll find official support channels, discussion group
     - Community discussions and help
 </div>
 
+### MAX
+<div class="grid cards" markdown>
+-   __Official Z-Mod Group on MAX__
+    - [MAX Group](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k)
+    - Community discussions and help
+</div>
+
 ### Facebook
 <div class="grid cards" markdown>
 -   __Facebook Group__
     - [Facebook Community](https://www.facebook.com/groups/zmodgroup)
     - Official discussion group
+</div>
+
+### VK
+<div class="grid cards" markdown>
+-   __VK Group__
+    - [VK](https://vk.com/zmod_official)
+    - Bot for zmod.link registration
 </div>
 
 
@@ -64,7 +78,9 @@ Join our community! Here you'll find official support channels, discussion group
 | **Support** | Telegram Bot | [Help Bot](https://t.me/zmod_help_bot) | Official |
 | **News** | Telegram Channel | [Info Channel](https://t.me/zmod_info) | Official |
 | **Discussion** | Telegram Group | [Discussion Group](https://t.me/FF_5M_5M_Pro/408369) | Official |
+| **Community** | MAX | [MAX Group](https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k) | Official |
 | **Community** | Facebook | [Facebook Group](https://www.facebook.com/groups/zmodgroup) | Official |
+| **zmod.link** | VK | [VK Group](https://vk.com/zmod_official) | Official |
 | **Community** | Facebook | [Facebook Group](https://www.facebook.com/groups/1526322885078508) (ro) | Unofficial |
 | **Chat** | Discord | [Discord Server](https://discord.gg/Cw4cT5C24q) | Unofficial |
 | **Code** | GitHub | [Repository](https://github.com/ghzserg/zmod) | Official |

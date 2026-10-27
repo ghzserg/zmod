@@ -52,7 +52,7 @@ The built-in camera consumes excessive memory and offers poor image quality. Use
 Then, run the [CAMERA_ON](/Zmod/#camera_on) macro.
 
 - [What is an alternative camera?](/FAQ/#what-is-an-alternative-camera)
-- [I installed Z-Mod, and my camera disappeared! It worked in Orca-FF!](/FAQ/#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+- [I installed Z-Mod, and my camera disappeared! It worked in Orca-FF!](/FAQ/#i-installed-the-printer-but-z-mod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
 
 ---
 
@@ -71,8 +71,8 @@ Disabling them also enables faster dialog closure after printing and native bed 
 
 Instead, you can use:
 
-- [zmod.link](/Zmod/#zlink) - cloud, for managing printers via Fluidd/Mainsail.
-- [Telegram bot](/Macros/).
+- [zmod.link](/Zmod/#zlink) - a cloud for managing printers via Fluidd/Mainsail.
+- [Telegram bot](/Telegram/).
 
 [More about Chinese cloud services](/Global/#china_cloud).
 
@@ -82,6 +82,8 @@ Instead, you can use:
 
 Igor Polunovskiy
 
+> Note: Only applies when sending G-code. Not required for 3MF.
+
 Add [CHECK_MD5](/System/#check_md5) to your workflow.
 
 It is recommended to use the [global parameter FORCE_MD5](/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
@@ -89,17 +91,19 @@ It is recommended to use the [global parameter FORCE_MD5](/Global/#force_md5) `S
 1. Select and download the file for your architecture and operating system:
 
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to run ```chmod +x zmod_preprocess-linux-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Don't forget to run ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
 
 2. In Orca, you need to specify: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
+If the path contains spaces, enclose the full path in quotes — but it is better to avoid spaces in folder names.
+
 Here are the options for adding:
 
-- ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
+- ```"C:\path_to_file\zmod_preprocess-windows-amd64.exe";```
 - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
 - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
 - ```"/home/user/zmod-preprocess.py";```
@@ -126,6 +130,15 @@ The native FF protocol occasionally transfers corrupted files and lacks metadata
 
 - **Host Type**: `Octo/Klipper`
 - **Printer Agent**: `Moonraker`
+
+For Creator 5 / Creator 5 Pro / AD5X:
+
+- **Hostname**: `IP_printer`
+
+<img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+For FF5M / FF5M Pro:
+
 - **Hostname**: `IP_printer:7125`
 - **Device UI**: `IP_printer` or `IP_printer:80`
 
@@ -137,9 +150,6 @@ In Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thu
 
 Note that the native screen will no longer display thumbnails.
 
-In Orca version 2.4.2 or later, disable 3MF file transfer: `Printer Profile` -> `General Information` -> `Advanced` -> uncheck `Use 3MF instead of G-code`.
-
-<img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 ---
 
@@ -156,8 +166,6 @@ Enabled by default.
 Resolves `E0011` and `Communication timeout during homing` errors.
 
 [E0011 Fix](/Global/#fix_e0011)
-
-**Experimental feature** — disabled by default.
 
 ---
 
@@ -176,5 +184,7 @@ Disabled by default. Enable using the [NOZZLE_CONTROL](/Global/#nozzle_control) 
 ```
 NOZZLE_CONTROL WEIGHT=1500
 ```
+
+Once enabled, it activates automatically during printing.
 
 This halts Klipper if the nozzle scratches the bed or a part detaches. **Highly recommended for users employing nozzle pre-cleaning routines.**

@@ -42,11 +42,11 @@ Calibrate specifically for the conditions you print in:
     **What this means:**
 
     *   `TEMPERATURE=255` — calibration is performed for 255°C. Set your desired temperature.
-        *   `COOLER=80` — the part cooling fan runs at 80% power.
+    *   `COOLER=80` — the part cooling fan runs at 80% power.
 
 -   **After Completion:**
     *   The printer will automatically save the new settings.
-        *   **Be sure to reboot the printer!** This is needed to update the system data and prevent freezes.
+    *   **Be sure to reboot the printer!** This is needed to update the system data and prevent freezes.
 
 ---
 
@@ -88,7 +88,7 @@ The same rule applies here as with the extruder: calibrate for the temperature y
 
 -   **After Completion:**
     *   The new settings are automatically saved.
-        *   **Don't forget to reboot the printer!** This completes the process of applying the new parameters.
+    *   **Don't forget to reboot the printer!** This completes the process of applying the new parameters.
 
 ---
 
@@ -123,16 +123,18 @@ Before calibration, clean the nozzle, otherwise the measurements will be incorre
 
 -   **Important:**
     *   The printer will heat the extruder and bed to the specified temperatures.
-        *   It will start the procedure and show you which screw and how much to adjust (e.g., "clockwise" or "counter-clockwise").
+    *   It will start the procedure and show you which screw and how much to adjust (e.g., "clockwise" or "counter-clockwise").
 
     <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
+
+    [This picture appears only on Klipper 13](/System/#update_mcu)
 
 -   After the first pass, the printer will wait for you to perform the adjustments. When all screws are adjusted, **press the repeat button** for the printer to check the result. Repeat until the readings are perfect.
 
 -   **Completion:**
     *   When you finish and exit the calibration mode, the printer will **NOT reset** the temperatures automatically.
-        *   **Be sure to manually set the extruder and bed temperatures to zero via the control menu!**
-        *   **The bed mesh and z-offset will become invalid**. Start the leveling calibration from the **stock screen**.
+    *   **Be sure to manually set the extruder and bed temperatures to zero via the control menu!**
+    *   **The bed mesh and z-offset will become invalid**. Start the leveling calibration from the **stock screen**.
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
 
@@ -148,7 +150,7 @@ _If you replace one plate with another (or glass), you also need mesh calibratio
 **Why This Specific Command?**
 The built-in tools in Fluidd and Mainsail are not suitable for our printers because they:
 
-*   Do not know how to work with the **strain gauge** (which is responsible for precise touch detection).
+*   Do not know how to work with the **load cells** (which is responsible for precise touch detection).
 *   Do not perform **nozzle cleaning** beforehand to remove plastic ooze that could ruin measurement accuracy.
 
 Our macro [AUTO_FULL_BED_LEVEL](/Calibrations/#auto_full_bed_level) accounts for both these features!
@@ -290,11 +292,14 @@ Simply put, it is the **precise distance between the nozzle tip and the bed** at
 **The Most Important Rule:**
 On our printer, **Z-Offset is ONLY relevant DURING printing**. The values you see on the screen or in the interface BEFORE or AFTER printing are for reference only and do not reflect the actual situation.
 
+**The Second Most Important Rule:**
+**The Z-Offset with the native screen and in screenless mode is not the same**: each lives its own life. When switching to screenless mode, run the ```LOAD_ZOFFSET_NATIVE``` macro — it reads the Z-Offset from the native screen and applies it to screenless mode.
+
 #### Adjusting Z-Offset from the Stock Printer Screen
 
 The stock screen is the primary tool for Z-Offset adjustment. It automatically manages the offset, and its settings are saved reliably.
 
-**To make the printer select the offset automatically, you need to start building the table map from the native screen.**
+**To make the printer select the offset automatically, you need to start building the bed mesh from the native screen.**
 
 <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241" />
 
@@ -320,7 +325,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 *   Adjusting the Z-Offset via Fluidd/Mainsail while using the native screen is not advisable, because the native screen is not aware of the existence of Fluidd/Mainsail.
 
 **Second important rule:**
-**The Z-Offset for native and non-native screens is different; each has its own unique setting. Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-Offset from the native screen to non-native screen mode.
+**The Z-Offset for native-screen mode and screenless mode is different; each has its own setting.** Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-Offset from the native screen to screenless mode.
 
 #### Adjusting Z-Offset via Fluidd / Mainsail / GuppyScreen when operating *without the stock screen*
 
@@ -338,7 +343,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-3.  If you want to transfer z-offset from native screen to non-native screen mode, call the macro ```LOAD_ZOFFSET_NATIVE``` it will read the z-offset value from the native screen and apply it to non-native screen mode.
+3.  If you want to transfer z-offset from the native screen to screenless mode, call the macro ```LOAD_ZOFFSET_NATIVE``` — it will read the z-offset value from the native screen and apply it to screenless mode.
 
 **Key Advantages:**
 
@@ -388,7 +393,7 @@ The graph and input shaper calculations in Klipper by default use the value `squ
 
     *   **What does this do?** The printer will slightly reduce speed on sharp corners. This will marginally increase print time but significantly reduce vibrations and improve corner clarity.
 
-You can simplify things. Enter ENABLE_PLUGIN name=recommend into the console. This command will enable the recommendations plugin, which already has FIX_SCV enabled and square_corner_velocity: 9 set.
+You can simplify things: enter `ENABLE_PLUGIN name=recommend` into the console. This command will enable the recommendations plugin, which already has FIX_SCV enabled and square_corner_velocity: 9 set.
 
 Don't forget to restart your printer!
 
@@ -420,7 +425,7 @@ To avoid overloading the system, **calibrate the axes separately**.
     ```
 
     *   The system recommends the `zv` shaper because it has the least smoothing.
-        *   But the `mzv` shaper completely suppresses vibrations (`0.0%`), although it requires slightly lower acceleration.
+    *   But the `mzv` shaper completely suppresses vibrations (`0.0%`), although it requires slightly lower acceleration.
 
 #### How to Interpret the Results and Make a Decision
 

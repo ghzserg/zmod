@@ -9,7 +9,7 @@
 - Der Drucker arbeitet immer mit **4 Farben** (T0, T1, T2, T3). Alle vier Slots sind im Auswahlmenü verfügbar.
 - Um die Kamera einzuschalten, muss `CAMERA_ON VIDEO=video67` verwendet werden.
 - Klipper kann abstürzen. Lösung: `Prozessprofil` -> `Sonstiges` -> `Ausgabe-G-code` -> `Modelle ausschließen` — Kontrollkästchen deaktivieren.
-- Statt des Makros `CLOSE_DILALOGS` (langsames Schließen) immer `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
+- Statt des Makros `CLOSE_DIALOGS` (langsames Schließen) immer `FAST_CLOSE_DIALOGS` (schnelles Schließen) verwenden.
 - Das Makro `NEW_SAVE_CONFIG` funktioniert nicht.
 - Keine Unterstützung für Klipper 13
 
@@ -17,13 +17,15 @@
 
 ## Wie man eine Datei in Orca vorbereitet
 
-- [Dateien über Octo/Klipper zum Drucken senden.](/de/Recommendations/#senden-sie-dateien-zum-drucken-%C3%BCber-octoklipper)
+- [Dateien über Octo/Klipper zum Drucken senden.](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
 - [Profile für Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 - [Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
 ---
 ## COLOR
 ## Wie man das Menü zur Auswahl von Farbe und Filamenttyp verwendet
+
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 <img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
 
@@ -33,12 +35,13 @@ Wählen Sie die Spule aus, mit der Sie arbeiten möchten (zum Beispiel Spule 2):
 
 <img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
 
-Sie können vier Aktionen ausführen:
+Sie können fünf Aktionen ausführen:
 
 - Farbe der Spule ändern.
 - Kunststofftyp ändern (PLA, PETG, ABS, ...).
 - Diesen Extruder auf den Schlitten aufnehmen.
 - Neues Filament in den Extruder laden.
+- Diesen Extruder vom Schlitten abnehmen.
 
 **Wie man die Farbe ändert:**
 
@@ -112,7 +115,7 @@ Die automatische Kalibrierung reicht von 0,01 bis 0,04 und ist für viskose Kuns
 
 ## Feineinstellung
 
-Zuerst müssen Sie den originalen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
+Funktioniert nicht mit dem Werksbildschirm, daher müssen Sie zuerst [den nativen Druckerbildschirm ausschalten](/de/System/#display_off) – mit dem Makro `DISPLAY_OFF`.
 
 **Wie man diese Einstellungen findet:**
 
@@ -194,6 +197,9 @@ Sie können auch den Wert festlegen:
 - `2` — nur die vom Slicer-Skript vorbereiteten Daten prüfen, ohne die gesamte Datei zu scannen
 **!Wenn das Scannen von Dateien deaktiviert ist**, weiß der Drucker nicht, wie viele Extruder verwendet werden, und deshalb wird **Auto PA für alle Spulen ausgeführt**
 
+!!! note
+    Für 3MF-Dateien werden die automatische Zuordnung und das Scannen automatisch aktiviert
+
 ---
 
 Um die **automatische Farbzuordnung** aus der G-Code-Datei zu physischen Spulen zu aktivieren, verwenden Sie den Parameter
@@ -207,7 +213,10 @@ Sie können eigene Werte für die Druckunterbrechung im leisen Modus konfigurier
 - `4` — Mindestens eine Farbe stimmt überhaupt nicht überein (normalerweise weil das Scannen von Dateien deaktiviert ist)
 - `8` — Mindestens eine Farbe stimmt schlecht überein
 - `16` — Dieselbe physische Spule wurde mehr als einem Werkzeugindex in der Datei zugewiesen
-Zum Beispiel führt die Verwendung des Werts `30` zu einer Druckunterbrechung im leisen Modus, wenn Probleme mit der automatischen Zuordnung auftreten, und `AUTO_ASSIGN_COLORS=10` (2+8) unterbricht den Druck, wenn mindestens ein Material nicht übereinstimmt + mindestens eine Farbe schlecht übereinstimmt.
+Zum Beispiel führt die Verwendung des Werts `30` zum Abbruch des Drucks im leisen Modus, wenn Probleme mit der automatischen Zuordnung auftreten, und `AUTO_ASSIGN_COLORS=6` (2+4) bricht den Druck ab, wenn mindestens ein Material nicht übereinstimmt + mindestens eine Farbe überhaupt nicht übereinstimmt.
+
+!!! note
+    Für 3MF-Dateien werden die automatische Zuordnung und das Scannen automatisch aktiviert
 
 ---
 
@@ -221,7 +230,7 @@ Sie können die folgenden Werte festlegen (in Minuten):
 * `0` — Funktion deaktiviert (Extruder werden während des Leerlaufs nicht ausgeschaltet)
 * `5`, `10`, `20`, `40`, `60` — Zeit, nach der der ungenutzte Extruder ausgeschaltet wird
 
-**Wichtig:** Damit diese Option korrekt funktioniert, muss im Slicer die Funktion **Ooze prevention** (Verhinderung des Auslaufens von Kunststoff) aktiviert sein. Ohne sie kann der Drucker die Temperaturmodi der leerstehenden Hotends während des Filamentwechsels nicht korrekt verarbeiten.
+**Wichtig:** Damit diese Option korrekt funktioniert, muss im Slicer die Funktion **Ooze prevention** (Verhinderung des Auslaufens von Kunststoff) aktiviert sein (`Druckeinstellungen` > `Multimaterial` > `Ooze prevention`). Ohne sie kann der Drucker die Temperaturmodi der leerstehenden Hotends während des Filamentwechsels nicht korrekt verarbeiten.
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
@@ -268,7 +277,7 @@ Wobei `XXX`, `YYY`, `ZZZ` durch die gewünschten Filamenttypen ersetzt werden (z
 
 Damit diese Einstellungen funktionieren, müssen Sie den originalen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/ru.json` (verwenden Sie Ihre Sprache anstelle von `ru`) und fügen Sie eine neue Farbe hinzu oder benennen Sie eine vorhandene um.
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/de.json` (verwenden Sie Ihre Sprache anstelle von `de`) und fügen Sie eine neue Farbe hinzu oder benennen Sie eine vorhandene um.
 
 Damit der Farbname angezeigt wird, muss der Farbname mit einem Unterstrich `_` beginnen.
 
@@ -478,7 +487,7 @@ Somit wird bei Mehrfarbdruck mit unterschiedlichen Materialien die Ventilation a
 
 ## Druckbeschleunigung
 
-Fügen Sie in 'mod_data/user.cfg' hinzu:
+Um die Verlangsamung der Firmware bei kurzen Perimetern zu deaktivieren, öffnen Sie die Fluidd-Weboberfläche -> linke Spalte -> Registerkarte `Konfiguration` -> `mod_data`/`user.cfg` und fügen Sie drei Zeilen hinzu:
 
 ```
 [printer]
@@ -486,13 +495,13 @@ short_move_limit: False
 short_extrude_move_limit: False
 ```
 
-Diese Einstellung beschleunigt den Druck erheblich, kann aber bei Fuzzy-Skin zu Druckerabstürzen führen.
+Ab der Werksfirmware 1.9.9 beschleunigt diese Einstellung den Druck erheblich, kann aber bei Fuzzy-Skin zu Druckerabstürzen führen.
 
 ---
 
 ## Deaktivierung der schnellen Rückführung des Kopfes und der Vorheizung
 
-Fügen Sie in 'mod_data/user.cfg' hinzu:
+Fügen Sie in `mod_data/user.cfg` hinzu:
 
 ```
 [virtual_sdcard]
@@ -500,8 +509,12 @@ enable_speed_return: False
 enable_preheat: False
 ```
 
-- **enable_speed_return**: False — Deaktiviert die erzwungene Rückführung des Kopfes zum Modell mit 600 mm/s, wodurch das Risiko starker kinematischer Stöße und eines Bruchs des Hotends an gedruckten Teilen (Prime Tower) beseitigt wird. Die Steuerung einer sicheren Rückführungsbahn wird vollständig an OrcaSlicer übergeben.
-- **enable_preheat**: False — Deaktiviert das Hintergrund-Scannen von Klipper-Dateien und entlastet den Prozessor. Die integrierte Funktion beschleunigte die Heizung bei Verwendung von mehr als zwei Düsen in kurzer Zeit, da der Drucker nicht mehr als zwei Düsen gleichzeitig heizen kann. Die vorausschauende Vorheizung wird auf der OrcaSlicer-Seite genauer berechnet.
+- **enable_speed_return**:
+    - `enable_speed_return: False` — der Kopf kehrt aus dem Bereich der Hotend-Aufnahme mit der im Slicer festgelegten Geschwindigkeit und Bahn zum Modell zurück.
+    - `enable_speed_return: True` — der Kopf kehrt aus dem Bereich der Hotend-Aufnahme mit 600 mm/s auf einer von der Druckerfirmware gewählten Bahn zum Modell zurück (Kollisionen mit den Kanten des Prime Towers sind möglich).
+- **enable_preheat**:
+    - `enable_preheat: False` — deaktiviert das vorausschauende Hintergrund-Scannen der G-Code-Datei während des Drucks und entlastet CPU und Speicher. Das vorausschauende Heizen wird von OrcaSlicer genauer berechnet.
+    - `enable_preheat: True` — nutzt das vorausschauende Hintergrund-Scannen der G-Code-Datei zum Vorheizen der nächsten Düse. Beschleunigt das Heizen, wenn mehr als zwei Düsen in kurzer Zeit verwendet werden, da der Drucker nicht mehr als zwei Düsen gleichzeitig heizen kann.
 
 ---
 
@@ -509,7 +522,7 @@ enable_preheat: False
 
 Um Benachrichtigungen über eine geöffnete Abdeckung oder Tür im Modus ohne originalen Bildschirm zu entfernen
 
-Fügen Sie in 'mod_data/user.cfg' hinzu:
+Fügen Sie in `mod_data/user.cfg` hinzu:
 
 ```
 [gcode_button topDoor]

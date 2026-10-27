@@ -19,7 +19,7 @@ Ersetzt den standardmäßigen Start-G-Code.
 
 - `EXTRUDER_TEMP` - Extrudertemperatur (245)
 - `BED_TEMP` - Heizbetttemperatur (80)
-- `MESH` - Name des Bettnetzprofils (leer = kein Netz geladen/erstellt).
+- `MESH` - Name des zu ladenden Bettnetzprofils (leer = kein Netz wird geladen; existiert das Profil nicht, wird es erstellt).
 - `FORCE_LEVELING` - Bettnivellierung erzwingen (Standard: `False`)
 - `SKIP_LEVELING` - Die Nivellierung des Bettes wird vollständig übersprungen (überschreibt `FORCE_KAMP`/`FORCE_LEVELING`, Standardwert: `False`).
 - `FORCE_KAMP` - Erstelle ein adaptives Bettnetz (KAMP, Standard: `False`).
@@ -32,7 +32,7 @@ Ersetzt den standardmäßigen Start-G-Code.
 !!! info "Info"
     *Jeder Aufruf der Kalibrierung (`FORCE_KAMP` oder `FORCE_LEVELING`) löst [CLEAR_NOZZLE](/de/Main/#clear_nozzle) aus.*
 
-    *`[ZSSH_RELOAD](/de/Zmod/#zssh_reload)` wird während `START_PRINT` aufgerufen, um SSH bei Bedarf wiederherzustellen.*
+    *[`ZSSH_RELOAD`](/de/Zmod/#zssh_reload) wird während `START_PRINT` aufgerufen, um SSH bei Bedarf wiederherzustellen.*
 
 **Beispiel für Orca mit nativem Bildschirm.** Entferne den Startcode und füge den folgenden ein.
 ```
@@ -41,7 +41,7 @@ START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_tempe
 M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
-**Beispiel für Orca im nicht-nativen Bildschirmmodus**
+**Beispiel für Orca im Modus ohne nativen Bildschirm**
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 {single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
@@ -59,24 +59,26 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 [Bettnivellierung Optionen](/de/FAQ/#welche-optionen-stehen-für-die-bettnivellierung-zur-verfügung)
 
-#### Dies sind keine START_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_ZMOD_DATA](/de/Global/#parameter-für-den-start-des-drucks-aufbau-der-tabellenkarte-start_print) gesetzt werden:
+#### Dies sind keine START_PRINT-Parameter, sondern globale Flags/Parameter, die über [SAVE_ZMOD_DATA](/de/Global/#parameter-für-den-start-des-druckvorgangs-und-die-erstellung-einer-bettkarte-start_print) gesetzt werden:
 
 - [PRECLEAR](/de/Global/#preclear) - Verwendung der Düsenvorreinigung in [CLEAR_NOZZLE](/de/Main/#clear_nozzle) `0` = deaktivieren, `1` = aktivieren (Standard: `0`).
 - [CLEAR](/de/Global/#clear) - Düsenreinigungsalgorithmus auswählen (LINE_PURGE)
 - [PRINT_LEVELING](/de/Global/#print_leveling) - Bettnivellierung für jeden Druck aktivieren `0` = deaktivieren, `1` = aktivieren (Standard: `0`).
-- USE_KAMP](/de/Global/#use_kamp) - Wenn es möglich ist, eine adaptive Tabellenkarte (KAMP) anstelle einer vollständigen Tabellenkarte zu verwenden `0` = deaktivieren, `1` = aktivieren (Standard: `0`)
+- [USE_KAMP](/de/Global/#use_kamp) - Wenn es möglich ist, ein adaptives Bettnetz (KAMP) anstelle eines vollständigen Bettnetzes zu verwenden `0` = deaktivieren, `1` = aktivieren (Standard: `0`)
 - [DISABLE_PRIMING](/de/Global/#disable_priming) - Deaktiviert die Düsenreinigung `0` = deaktivieren, `1` = aktivieren (Standard: `0`)
-- [FORCE_MD5](/de/Global/#force_md5) - MD5-Hashes der Datei überprüfen (Standard: `1`).
+- [FORCE_MD5](/de/Global/#force_md5) - MD5-Hashes der Datei überprüfen und die Datei bei Fehler löschen (Standard: `1`).
+    > Hinweis: Nur beim Senden von G-Code. Für 3MF nicht erforderlich.
+
 
 ??? info "Download: Wählen Sie die passende Datei für Ihr System"
 
     1. Sie müssen eine Datei für Ihre Architektur und Ihr Betriebssystem auswählen und auf Ihren Computer herunterladen:
         * [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - **Windows**
-        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x                           zmod_preprocess-linux-amd64` auszuführen.
-        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Intel** Vergessen Sie nicht, `chmod +x                  zmod_preprocess-darwin-arm64` auszuführen.
-        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Silicon** Vergessen Sie nicht, `chmod +x                zmod_preprocess-darwin-amd64` auszuführen.
-        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py`             auszuführen.
-        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh`             auszuführen.
+        * [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - **Linux** Vergessen Sie nicht, `chmod +x zmod_preprocess-linux-amd64` auszuführen.
+        * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Apple Silicon** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-arm64` auszuführen.
+        * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Intel** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-amd64` auszuführen.
+        * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py` auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh` auszuführen.
      
 ??? tip "2. Konfiguration in Orca"
     In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
@@ -110,7 +112,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
         * `/home/benutzer/zmod_preprocess-linux-amd64`;
 
 - [DISABLE_SKEW](/de/Global/#disable_skew) - 1 - SKEW-Korrektur deaktivieren, 0 - Profil `skew_profile` laden (Makro `SKEW_PROFILE LOAD=skew_profile` wird aufgerufen) (1)
-- `AUTO_REBOOT` - automatischer Neustart nach dem Drucken: `0` = deaktivieren, `1` = aktivieren, `2` = Firmware-Neustart (Standard: `0`)
+- `AUTO_REBOOT` - automatischer Neustart nach dem Drucken: `0` = deaktivieren, `1` = aktivieren, `2` = `FIRMWARE_RESTART` (nur im Modus ohne nativen Bildschirm; mit nativem Bildschirm — `REBOOT`) (Standard: `0`)
 - `CLOSE_DIALOGS` - Automatisches Schließen von Dialogen: `0` = deaktivieren, `1` = langsam, `2` = schnell (erfordert die Aktivierung von "Nur lokales Netzwerk" auf dem Druckerbildschirm)
 *Für ein schnelles Schließen der Dialoge muss man zu `Einstellungen` -> `WiFi-Symbol` -> `Netzwerkmodus` -> **den Schieberegler** `Nur lokale Netzwerke` aktivieren (0).*
 
@@ -125,7 +127,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 1. Falls angegeben, wird ein Netz aus `MESH` geladen.
 2. Die Nivellierung wird übersprungen, wenn `SKIP_LEVELING = True`.
 3. Falls `FORCE_KAMP = True`, wird ein KAMP-Netz erstellt.
-4. Falls kein Netz geladen ist oder `FORCE_LEVELING = True`, wird ein vollständiges Netz erstellt.
+4. Andernfalls wird ein vollständiges Netz erstellt, falls kein Netz geladen ist (der native Bildschirm lädt immer `MESH_DATA`) oder `FORCE_LEVELING = True`. Das Netz selbst wird nicht gespeichert.
 
 ---
 
@@ -198,7 +200,7 @@ gcode:
 
 ---
 
-### ABBRUCH
+### CANCEL
 
 Drucken abbrechen
 
@@ -215,25 +217,25 @@ Parameter:
 
 *`PRECLEAR` (einstellbar über `SAVE_ZMOD_DATA PRECLEAR=1`) aktiviert die Vorreinigung. [Mehr erfahren](/de/Global/#preclear).*
 
-*Das Verfeinern des `CLEAR_NOZZLE`-Macros in `mod_data/user.cfg` wird die native Düsenbereinigung auf dem BED nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne Z-Mod funktioniert und daher keine Z-Mod-Makros verwendet*.
+*Das Verfeinern des `CLEAR_NOZZLE`-Macros in `mod_data/user.cfg` wird die native Düsenreinigung nicht verändern, wenn sie direkt vom nativen Bildschirm aufgerufen wird, da der native Bildschirm ohne Z-Mod funktioniert und daher keine Z-Mod-Makros verwendet*.
 
 ---
 
 ### LED_ON
 
-Schaltet die Hintergrundbeleuchtung ein
+Schaltet die Beleuchtung ein
 
 ---
 
 ### LED_OFF
 
-Hintergrundbeleuchtung ausschalten
+Beleuchtung ausschalten
 
 ---
 
 ### LED
 
-Einschalten der Hintergrundbeleuchtung um ein paar Prozent
+Beleuchtung auf einen bestimmten Prozentsatz einschalten
 
 - S - Prozent (50)
 
@@ -245,7 +247,7 @@ Druck unterbrechen
 
 ---
 
-### FORTSETZEN
+### RESUME
 
 Wiederaufnahme des Drucks nach einer Unterbrechung
 
@@ -255,7 +257,7 @@ Wiederaufnahme des Drucks nach einer Unterbrechung
 
 MIDI-Datei abspielen
 
-- `FILE` - Dateiname (Standard: `For_Elise.mid`) Dateien werden in mod_data/midi/ gespeichert
+- `FILE` - Dateiname (Standard: `For_Elise.mid`) Dateien werden in `mod_data/midi/` gespeichert
 
 ---
 
@@ -283,7 +285,7 @@ Bewirkt das schnelle Schließen von Dialogen auf dem ursprünglichen Bildschirm.
 
 Läuft schneller und führt nicht zum Aufhängen des Druckers.
 
-*Um Dialoge schnell zu schließen, gehen Sie über das Menü des Druckerbildschirms zu `Einstellungen` -> `WLAN-Symbol``-> `Netzwerkmodus` -> **Schalten Sie den Schieberegler** `Nur lokale Netzwerke` ein.
+*Um Dialoge schnell zu schließen, gehen Sie über das Menü des Druckerbildschirms zu `Einstellungen` -> `WLAN-Symbol` -> `Netzwerkmodus` -> **Schalten Sie den Schieberegler** `Nur lokale Netzwerke` ein.
 
 Wird auch über den [CLOSE_DIALOGS](/de/Global/#close_dialogs) gesteuert.
 

@@ -7,17 +7,17 @@
 2. den USB-Stick auf FAT/FAT16/FAT32(MBR) formatieren
 3. Legen Sie die Datei von [Native Firmware](/de/Native_FW/) in den Stammordner des USB-Flash-Laufwerks
 
-    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) für FF5m
-    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) für FF5m**Pro** Version
-    - [AD5X-1.1.7-1.1.0-3.0.6-20250912.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz) für AD5X
+    - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) für FF5M
+    - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) für FF5M **Pro**
+    - [AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz) für AD5X
     - [Creator5-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz) für Creator 5
     - [Creator5Pro-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz) für Creator 5 Pro
 
 4. Schalten Sie den Drucker aus
 5. Stecken Sie den USB-Stick in den Drucker
 6. Schalten Sie den Drucker ein
-7. Warten Sie, bis die native Firmware installiert ist.
-8. WiFi oder Lan einrichten *neuer Biber*
+7. Warten Sie, bis die native Firmware installiert ist. _Wenn es zu lange dauert oder gar nicht installiert wird, verwenden Sie einen anderen USB-Stick._
+8. WLAN oder LAN einrichten *neuer Biber*
 9. Laden Sie die neuesten Drucker-Updates herunter oder installieren Sie die Firmware 1.1.7 für AD5X bzw. 3.2.3 für [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz) / [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), wenn der [Drucker die Bettmitte nicht vor jedem Druckvorgang](/de/FAQ/#vor-jedem-druckvorgang-misst-der-drucker-die-mitte-des-druckbetts) messen soll.
 
 ---
@@ -31,14 +31,18 @@
 </div>
 
 1. **[Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)** - [Vorsicht AD5X](/de/Setup/#achtung-ad5x)
-2. formatieren Sie den USB-Stick auf FAT/FAT16/FAT32(MBR)
+2. Formatieren Sie den USB-Stick auf FAT/FAT16/FAT32(MBR)
 3. Legen Sie die [Datei](https://github.com/ghzserg/zmod/releases/) im Stammverzeichnis des USB-Flash ab.
 
     - für FF5M: Adventurer5M-**zmod**-\*.tgz
     - für FF5MPro: Adventurer5MPro-**zmod**-\*.tgz
     - für *[AD5X](/de/AD5X/)*: AD5X-**zmod**-\*.tgz
-    - für Creator5: Creator5-**zmod**-\*.tgz
-    - für Creator5 Pro: Creator5Pro-**zmod**-\*.tgz
+    - für Creator 5: Creator5-**zmod**-\*.tgz
+    - für Creator 5 Pro: Creator5Pro-**zmod**-\*.tgz
+
+    _Noch besser: Legen Sie alle 5 Dateien auf den USB-Stick — der Drucker wählt selbst die richtige aus._
+
+    > Wichtig: **Entpacken Sie die Dateien nicht!**
 
 4. Schalten Sie den Drucker aus
 5. Stecken Sie den USB-Stick in den Drucker
@@ -49,7 +53,9 @@
    
    <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
    
-   Auf dem AD5X/Creator 5/Creator 5 Pro kann die Installation bis zu **40 Minuten** dauern.
+   Auf dem AD5X/Creator 5/Creator 5 Pro kann die Installation bis zu **40 Minuten** dauern. _Wenn es zu lange dauert oder gar nicht installiert wird, verwenden Sie einen anderen USB-Stick._
+
+   Wenn Sie das Fenster mit dem grünen Haken verpasst haben und der Drucker automatisch neu gestartet ist, wird der Standardbildschirm geladen; in diesem Fall können Sie direkt zu Schritt 11 gehen.
 
 8. Entfernen Sie den USB-Stick
 9. Schalten Sie den Drucker aus
@@ -68,7 +74,7 @@
     
     <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
     
-    Oder geben Sie in der Konsole ````LANG LANG=ru``` für die passende Sprache ein.
+    Oder geben Sie in der Konsole ```LANG LANG=de``` für die passende Sprache ein.
     
     <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
 
@@ -100,11 +106,14 @@
     
     <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
 
-    Oder geben Sie in der Konsole ````ENABLE_PLUGIN name=recommend``` ein.
+    Oder geben Sie in der Konsole ```ENABLE_PLUGIN name=recommend``` ein.
 
     <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
 
-18. [Orca-Slicer anpassen](/de/Recommendations/#send-files-to-print-octoklipper)
+18. [Orca-Slicer anpassen](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
+
+    [Fertige Profile](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+
     Der gesamte Startcode muss durch diesen ersetzt werden:
 
     ```
@@ -133,15 +142,21 @@
 
     - **Host Type**: `Octo/Klipper`
     - **Printer Agent**: `Moonraker`
+
+    Für Creator 5 / Creator 5 Pro / AD5X:
+
+    - **Hostname**: `IP_printer`
+
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+    Für FF5M / FF5M Pro:
+
     - **Hostname**: `IP_printer:7125`
-    - **Device UI**: `IP_printer` or `IP_printer:80`
+    - **Device UI**: `IP_printer` oder `IP_printer:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
 
-    In Orca ab Version 2.4.2 deaktivieren Sie die Übertragung von 3MF-Dateien: `Druckerprofil` -> `Allgemeine Informationen` -> `Erweitert` -> `Use 3MF instead of G-code` deaktivieren (Häkchen entfernen).
-
-    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 19. [MD5-Kontrolle aktivieren](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
@@ -150,6 +165,7 @@
 20. [Lesen Sie die Empfehlungen](/de/Recommendations/)
 21. [FAQ lesen](/de/FAQ/)
 22. [Drucker-Kalibrierung](/de/SetupCalibrations/)
+23. Lesen Sie die Besonderheiten von [AD5X](/de/AD5X/) und [Creator 5 Pro](/de/C5PRO/)
 
 ### Achtung AD5X
 
@@ -235,7 +251,7 @@ Update über USB-Stick:
 5. Schalten Sie den Drucker ein
 6. Warten Sie den Neustart des Druckers ab (entfernen Sie den USB-Stick nicht)
 7. Warten Sie auf die Installation des Mods
-8. Wenn der Drucker schreibt, dass die Installation abgeschlossen ist
+8. Warten Sie, bis der Drucker meldet, dass die Installation erfolgreich abgeschlossen ist
 9. Ziehen Sie den USB-Stick heraus
 10. Schalten Sie den Drucker aus
 11. Schalten Sie den Drucker ein
@@ -253,7 +269,7 @@ Es wird empfohlen, **den Mod über das Makro `REMOVE_ZMOD`** zu entfernen, die E
 Achtung!
 
 - Wenn Sie Klipper 13 benutzen, ist es notwendig, ```UPDATE_MCU``` auszuführen. Dadurch wird die Situation vermieden, dass MCU und Klipper unterschiedliche Versionen haben.
-- Wenn Sie Plug-Ins aktiviert haben, müssen Sie diese zuerst deaktivieren ````DISABLE_PLUGIN name=g28_tenz````.
+- Wenn Sie Plug-Ins aktiviert haben, müssen Sie diese zuerst deaktivieren ```DISABLE_PLUGIN name=g28_tenz```.
 
 Entfernen Sie die Mod komplett ```REMOVE_ZMOD FULL=1```.
 
@@ -292,6 +308,8 @@ Wenn der native Bildschirm das Update nicht findet:
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
+Wenn Sie jedoch über den nativen Bildschirm und nicht per USB-Stick aktualisieren, führen Sie vor dem Ausschalten des Druckers das Makro ```RESET_PASSWD``` aus.
+
 ---
 
 ## Boot wiederherstellen
@@ -322,7 +340,7 @@ Wiederherstellungs-Algorithmus:
 
 ![](../images/connect.jpg)
 
-Sie MÜSSEN den Jumper (wenn Sie einen haben) von 5V auf 3,3V umstecken. **WARNUNG:** Eine 5-V-Eingangsspannung kann das Motherboard beschädigen!
+Sie MÜSSEN den Jumper (wenn Sie einen haben) von 5V auf 3,3V umstecken. **WARNUNG:** Bei 5 V müssen Sie die Hauptplatine austauschen!
 
 5. Schließen Sie den Konverter über Kreuz an:
 
@@ -386,12 +404,12 @@ reboot
 
 ## Hilfe Entwicklung
 
-[SBP, Bankkarte, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
+[SBP, Bankkarte, T-Pay](https://pay.cloudtips.ru/p/3cbf9e9f)
 
 <img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
 
 BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`.
 
-<a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a>
+<a href="https://boosty.to/ghzserg">Unterstützung über Boosty (internationale Visa/Mastercard)</a>
 
 <img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" />

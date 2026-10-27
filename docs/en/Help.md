@@ -2,14 +2,14 @@
 
 Open the Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) and ask it your question. It knows all the documentation.
 
-1. [Update Z-Mod and all plugins to the latest version](/Setup/#updating-the-mod)
+1. [Update Z-Mod and all plugins to the latest version](/Setup/#updating-the-mod) via Fluidd -> Settings -> Software Updates
 2. Clearly describe the issue: provide screenshots, photos, and a detailed textual explanation.
 3. Run [CLEAR_EMMC](/System/#clear_emmc) to clear previous logs.
 4. **Power off the printer completely.**
 5. Power the printer back on.
 6. Reproduce the issue.
 7. Run [TAR_CONFIG](/Zmod/#tar_config) to collect log files.
-8. Submit **one** post with your description and the generated `config-1.6.6-28.tar.gz` file. 1.6.6-28 - current version mod.
+8. Submit **one** post with your description and the generated `config-1.6.6-28.tar.gz` file, where 1.6.6-28 is the current version of the mod.
 9. [Open the issue here](https://github.com/ghzserg/zmod/issues).
 
 If it is impossible to execute `TAR_CONFIG`:

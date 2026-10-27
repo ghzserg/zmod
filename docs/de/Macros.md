@@ -13,9 +13,9 @@ Es kann aufgerufen werden:
 ---
 
 ### AIR_CIRCULATION_EXTERNAL
-[AIR_CIRCULATION_EXTERNAL](/de/Pro/#AIR_CIRCULATION_EXTERNAL)
+[AIR_CIRCULATION_EXTERNAL](/de/Pro/#air_circulation_external)
 
-### LUFT_UMLUFT_INTERN
+### AIR_CIRCULATION_INTERNAL
 [AIR_CIRCULATION_INTERNAL](/de/Pro/#air_circulation_internal)
 
 ### AIR_CIRCULATION_STOP
@@ -27,16 +27,16 @@ Es kann aufgerufen werden:
 ### BED_LEVEL_SCREWS_TUNE
 [BED_LEVEL_SCREWS_TUNE](/de/Calibrations/#bed_level_screws_tune)
 
-### RIEMEN_FORMER_KALIBRIERUNG
+### BELTS_SHAPER_CALIBRATION
 [BELTS_SHAPER_CALIBRATION](/de/Calibrations/#belts_shaper_calibration)
 
-### KAMERA_AUS
+### CAMERA_OFF
 [CAMERA_OFF](/de/Zmod/#camera_off)
 
-### KAMERA_EIN
+### CAMERA_ON
 [CAMERA_ON](/de/Zmod/#camera_on)
 
-### KAMERA_NEUSTART
+### CAMERA_RESTART
 [CAMERA_RESTART](/de/Zmod/#camera_restart)
 
 ### CANCEL
@@ -72,7 +72,7 @@ Es kann aufgerufen werden:
 ### DISPLAY_OFF
 [DISPLAY_OFF](/de/System/#display_off)
 
-### ANZEIGE_EIN
+### DISPLAY_ON
 [DISPLAY_ON](/de/System/#display_on)
 
 ### END_PRINT
@@ -93,10 +93,10 @@ Es kann aufgerufen werden:
 ### LED
 [LED](/de/Main/#led)
 
-### LED_AUS
+### LED_OFF
 [LED_OFF](/de/Main/#led_off)
 
-### LED_EIN
+### LED_ON
 [LED_ON](/de/Main/#led_on)
 
 ### LOAD_CELL_TARE

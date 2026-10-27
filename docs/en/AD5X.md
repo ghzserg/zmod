@@ -11,7 +11,7 @@
     - 🔧 [Basic Parameters](#basic-parameters-most-frequently-adjusted)
     - ⚙️ [Advanced Parameters](#advanced-parameters-do-not-adjust-if-unsure-of-the-result)
 
-7. [Add custom filament types](#7-add-custom-filament-types)
+7. [Add or remove filament types](#7-add-or-remove-filament-types)
 8. [Add custom colors](#8-add-custom-colors)
 9. [Fixing Trash Bin and Filament Cutting Knife Operation](#9-fixing-trash-bin-and-filament-cutting-knife-operation)
 
@@ -21,7 +21,7 @@
 10. [IFS commands](#10-ifs-commands)
 11. [IFS Firmware Recovery](#11-ifs-firmware-recovery)
 
-### [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md)
+### [Plugins](/Plugin/)
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Bambu Studio compatibility, better prime towers, accurate estimates, waste reduction
 - [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - Fork of Bambufy
@@ -38,7 +38,7 @@ Differences from AD5M:
 *   **Always use** `FAST_CLOSE_DIALOGS` (fast closing) instead of `CLOSE_DIALOGS` (slow closing).
 *   The `NEW_SAVE_CONFIG` macro **does not work**.
 *   To enable the camera, use ```CAMERA_ON VIDEO=video3``` or ```CAMERA_ON VIDEO=video0``` or ```CAMERA_ON VIDEO=video99```.
-*   Klipper may crash. Solution: 'Process Profile' -> 'Other' -> 'Output G-code' -> 'Exclude Models', uncheck.
+*   Klipper may crash. Solution: `Process Profile` -> `Other` -> `Output G-code` -> uncheck `Exclude Models`.
 
 ---
 
@@ -54,7 +54,7 @@ The printer has 4 spools (№1, №2, №3, №4). Only spools №1 and №3 are
 *   In the file, they will be named **T0** (first color) and **T1** (second color).
 *   In the menu, you’ll need to select:
     - **T0** → spool №1
-      - **T1** → spool №3
+    - **T1** → spool №3
 
 ---
 
@@ -132,7 +132,7 @@ This window opens **by itself** when you start printing.
 - `3: PETG ->` – the third color (black PETG), printed from spool 3 (orange PETG). Because there are no other PETG plastics in the printer.
 - `4: PETG-CF ->` – the fourth color (blue PETG-CF), printed from spool 1 (black PETG-CF). Because there are no other PETG-CF plastics in the printer.
 
-If the image looks like this
+If the image looks like this:
 
 <img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
 
@@ -282,18 +282,18 @@ For these settings to work, you need to **disable the printer's native display**
 2.  **`filament_drop_length` (Purge Length)**
 
     *   **In simple terms:** How many millimeters of filament the printer will purge into the waste bin to **clean the nozzle** from the previous color. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
-        *   **Tip:** Increase this value if colors mix during spool changes. Decrease it to reduce waste.
+    *   **Tip:** Increase this value if colors mix during spool changes. Decrease it to reduce waste.
 
 3.  **`filament_drop_length_add` (Additional Purge)**
 
     *   **In simple terms:** Extra purge length when switching **material types** (e.g., PLA to PETG), not just colors. This applies when loading colors outside of printing or before a print, or when changing colors with USE_TRASH_ON_PRINT set to 1.
-        *   **Why it’s needed:** Different materials don’t mix well, so deeper nozzle cleaning is required.
+    *   **Why it’s needed:** Different materials don’t mix well, so deeper nozzle cleaning is required.
 
 4.  **`nozzle_cleaning_length`** — The length (in mm) of filament pulled out of the extruder when cleaning the nozzle when the spool is no longer in use. **Default: 60 mm.**
 
 5.  **`filament_unload_into_tube`** — How much filament to unload from the 4-in-1 module when the extruder is no longer used. **Default: 70 mm.**
 
-    *   If you have a new version 4-in-1 module, increase `filament_unload_into_tube` or as a last resort increase `nozzle_cleaning_length`
+    *   If you have a new version 4-in-1 module, increase `filament_unload_into_tube` or, as a last resort, increase `nozzle_cleaning_length`
 
 ---
 
@@ -482,7 +482,7 @@ Replace **only** these values:
 [Alternative version of the instructions](/Setup/#ad5x-warning)
 
 1. Enter the command `_GOTO_TRASH` — the printer head will move to the trash bin.
-2. If the bin doesn't close. Сarefully move the head until the bin closes. You need use GCODE: ```G1 Y230.2```
+2. If the bin doesn't close, carefully move the head until the bin closes. Use GCODE: ```G1 Y230.2```
 3. Check what **Y** coordinate you now have.
 4. Subtract 229 from this number. The result will be your `yOffset`.
 5. Check what **X** coordinate you now have.
@@ -496,8 +496,8 @@ Examples:
 
 Write this number to the file `/rw/Adventurer5M.json`. The bin is calibrated.
 
-5. Enter the command: `UPDATE_FF_OFFSET` (this will update the settings).
-6. Then enter: `_GOTO_TRASH` (this will move to the trash bin).
+7. Enter the command: `UPDATE_FF_OFFSET` (this will update the settings).
+8. Then enter: `_GOTO_TRASH` (this will move to the trash bin).
 
 ---
 
@@ -506,21 +506,21 @@ Write this number to the file `/rw/Adventurer5M.json`. The bin is calibrated.
 [Alternative version of the instructions](/Setup/#ad5x-warning)
 
 1. Enter the command `_CUT_PRUTOK` — the head will move to the knife.
-2. You need use GCODE: ```G1 Y-7.7``` ```G1 X-1.7```, move the head until the knife activates.
+2. Using the screen, move the head until the knife activates. Use GCODE: ```G1 Y-7.7``` ```G1 X-1.7```
 3. Check what X and Y coordinates you have.
 4. For **Y**:
 
     - Subtract your Y-coordinate from **7.5** by absolute value.
-       - Example: if Y = -7.7, then `CutYOffset = 7.5 - 7.7 = -0.2`
-       - Example: if Y = -5.9, then `CutYOffset = 7.5 - 5.9 = 1.6`
-       - Formula: `CutYOffset = 7.5 + Y`
+        - Example: if Y = -7.7, then `CutYOffset = 7.5 - 7.7 = -0.2`
+        - Example: if Y = -5.9, then `CutYOffset = 7.5 - 5.9 = 1.6`
+        - Formula: `CutYOffset = 7.5 + Y`
 
 5. For **X**:
 
     - Subtract your X-coordinate from **2.5** by absolute value.
-       - Example: if X = -1.7, then `CutXOffset = 2.5 - 1.7 = 0.8`
-       - Example: if X = -2.8, then `CutXOffset = 2.5 - 2.8 = -0.3`
-       - Formula: `CutXOffset = 2.5 + X`
+        - Example: if X = -1.7, then `CutXOffset = 2.5 - 1.7 = 0.8`
+        - Example: if X = -2.8, then `CutXOffset = 2.5 - 2.8 = -0.3`
+        - Formula: `CutXOffset = 2.5 + X`
 
 Write these numbers to the file `/rw/Adventurer5M.json`. The knife is calibrated.
 
@@ -569,23 +569,23 @@ For these settings to work, you need to **disable the printer's native display**
 - `IFS_F11` - Remove filament
 - `IFS_F13` - IFS state
 - `IFS_F15` - Reset driver
-- `IFS_F18` - Filament purge everywhere
+- `IFS_F18` - Release filament in all channels
 - `IFS_F23` - Mark filament as inserted
 - `IFS_F24` - Filament clamp
-- `IFS_F39` - Filament purge
+- `IFS_F39` - Release filament
 - `IFS_F112` - Stop filament feed
 - `PURGE_PRUTOK_IFS` - Purge filament from IFS to the extruder
 - `REMOVE_PRUTOK_IFS` - Removes filament by filament number
 - `INSERT_PRUTOK_IFS` - Insert filament into IFS by filament number
-- `SET_CURRENT_PRUTOK` - Tell klipper which filament is currently active
-- `ANALOG_PRUTOK` - Load an analog rod
+- `SET_CURRENT_PRUTOK` - Tell Klipper which filament is currently active
+- `ANALOG_PRUTOK` - Load an equivalent filament
 - `IFS_MOTION` - Check if the filament has stopped or run out
 
 IFS module parameters:
 
 - debug - debugging (True, *False*)
-- silk_count - number of attempts to read a rod into IFS (*1*)
-- stall_count - number of attempts to count a rod as stopped (*1*)
+- silk_count - on which attempt to consider the filament present in IFS (*1*)
+- stall_count - on which attempt to consider the filament stopped (*1*)
 - retry_count - number of times to retry the command on error (*3*)
 - next_cmd_delay - duration to wait between processing IFS response and sending next command (*0.2*)
 - send_ff_terminator - enables or disables 0.2s delay + 0xFF send after an IFS command; may be required by very old IFS firmwares (True, *False*)
@@ -608,7 +608,7 @@ To recover the IFS firmware, you need an **ARM J-LINK V9** programmer.
 
 <img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
 
-Solder wires to the iFS board.
+Solder wires to the IFS board.
 
 <img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
 

@@ -11,7 +11,7 @@
     - 🔧 [Grundeinstellungen](#grundlegende-parameter-am-häufigsten-angepasst)
        - ⚙️ [Erweiterte Einstellungen](#erweiterte-parameter-nicht-anpassen-wenn-sie-sich-über-das-ergebnis-nicht-sicher-sind)
 
-7. [Fügen Sie Ihre Filamenttypen hinzu](#7-fügen-sie-ihre-ad5x-filamenttypen-hinzu)
+7. [Fügen Sie Ihre Filamenttypen hinzu](#7-filamenttypen-hinzufügen-oder-entfernen)
 8. [Fügen Sie Ihre Farben hinzu](#8-fügen-sie-ihre-ad5x-farben-hinzu)
 9. [Einparken im Korb und Schneiden des Filaments](#9-korrigiert-den-betrieb-mit-dem-abfallbehälter-und-dem-filamentschneider-ad5x)
 
@@ -25,7 +25,7 @@
 
 Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
 
-- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Futterturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
+- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
 - [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
 - [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung über das Heizbett
 - [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
@@ -39,7 +39,7 @@ Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PL
 Unterschiede zum AD5M:
 
 - Keine `Entware`.
-- Anstelle des Makros `CLOSE_DILALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DILAOGS` (schnelles Schließen) verwenden.
+- Anstelle des Makros `CLOSE_DIALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DIALOGS` (schnelles Schließen) verwenden.
 - Das Makro `NEW_SAVE_CONFIG` funktioniert **nicht**.
 - Um die Kamera einzuschalten, müssen Sie ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video99``` verwenden.
 - Klipper kann abstürzen. Lösung `Process Profile` :arrow_right:`Other` :arrow_right:`Output G-cod` :arrow_right:`Model Exclusion` das Häkchen ausschalten.
@@ -399,7 +399,7 @@ Dabei werden XXX, YYY, ZZZ durch die gewünschten Filamenttypen ersetzt (z.B. PL
 
 Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie ```mod_data/color/de.json``` (verwenden Sie Ihre Sprache anstelle von de):
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/de.json` (verwenden Sie Ihre Sprache anstelle von `de`):
 
 und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
 
@@ -482,27 +482,27 @@ Ersetzen Sie **nur** diese Werte:
 
 ---
 
-### Einstellung des AD5X-Abfallbehälter
+### Einstellung des AD5X-Abfallbehälters
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
 1. Geben Sie den Befehl `_GOTO_TRASH` ein - der Druckkopf fährt an den Abfallbehälter.
-2. Wenn sich der Abfallbehälter nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Abfallbehälter schließt. Sie müssen den GCODE verwenden: ```G1 Y230.2```.
+2. Wenn sich der Abfallbehälter nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Abfallbehälter schließt. Verwenden Sie GCODE: ```G1 Y230.2```
 3. Schauen Sie, welche **Y**-Koordinate Sie jetzt haben.
-4. Ziehen Sie 229 von dieser Zahl ab. Das Ergebnis ist Ihr "yOffset".
+4. Ziehen Sie 229 von dieser Zahl ab. Das Ergebnis ist Ihr `yOffset`.
 5. Schauen Sie, welche **X**-Koordinate Sie jetzt haben.
-6. Ziehen Sie 52.5 von dieser Zahl ab. Das Ergebnis ist Ihr "xOffset".
+6. Ziehen Sie 52.5 von dieser Zahl ab. Das Ergebnis ist Ihr `xOffset`.
 
 Beispiele:
 
-- Wenn Y = 230,2, dann ist `yOffset = 230,2 - 229 = 1,2`.
-- Wenn Y = 228,4, dann ist `yOffset = 228,4 - 229 = -0,6`.
-- Formel: yAbweichung = `Y - 229`.
+- Wenn Y = 230.2, dann ist `yOffset = 230.2 - 229 = 1.2`
+- Wenn Y = 228.4, dann ist `yOffset = 228.4 - 229 = -0.6`
+- Formel: `yOffset = Y - 229`
 
 Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehälter ist eingerichtet.
 
-5. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-6. Geben Sie anschließend: `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
+7. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
+8. Geben Sie anschließend `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
 
 ---
 
@@ -511,21 +511,21 @@ Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehält
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
 1. Geben Sie den Befehl `_CUT_PRUTOK` ein - der Druckkopf wird zur Position des Messers fahren.
-2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer aktiviert wird. Sie müssen GCODE verwenden: ```G1 Y-7.7``` ```G1 X-1.7```.
+2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer aktiviert wird. Verwenden Sie GCODE: ```G1 Y-7.7``` ```G1 X-1.7```
 3. Überprüfen Sie Ihre X- und Y-Koordinaten.
 4. Für **Y**:
 
-    - Subtrahieren Sie den Betrag von **7,5** von Ihrer Y-Koordinate.
-       - Beispiel: Wenn Y = -7,7, dann ist `CutYOffset = 7,5 - 7,7 = -0,2`.
-       - Beispiel: Wenn Y = -5,9, dann ist `CutYOffset = 7,5 - 5,9 = 1,6`.
-       - Formel: CutYOffset = 7,5 + Y".
+    - Ziehen Sie den Betrag Ihrer Y-Koordinate von **7.5** ab.
+        - Beispiel: Wenn Y = -7.7, dann ist `CutYOffset = 7.5 - 7.7 = -0.2`
+        - Beispiel: Wenn Y = -5.9, dann ist `CutYOffset = 7.5 - 5.9 = 1.6`
+        - Formel: `CutYOffset = 7.5 + Y`
 
 5. Für **X**:
 
-    - Subtrahieren Sie den Betrag von **2,5** von Ihrer X-Koordinate.
-       - Beispiel: Wenn X = -1,7, dann ist `CutXOffset = 2,5 - 1,7 = 0,8`.
-       - Beispiel: Wenn X = -2,8, dann ist `CutXOffset = 2,5 - 2,8 = -0,3`.
-       - Formel: CutXOffset = 2,5 + X".
+    - Ziehen Sie den Betrag Ihrer X-Koordinate von **2.5** ab.
+        - Beispiel: Wenn X = -1.7, dann ist `CutXOffset = 2.5 - 1.7 = 0.8`
+        - Beispiel: Wenn X = -2.8, dann ist `CutXOffset = 2.5 - 2.8 = -0.3`
+        - Formel: `CutXOffset = 2.5 + X`
 
 Schreiben Sie diese Werte in die Datei `/rw/Adventurer5M.json`. Das Messer ist kalibriert.
 
@@ -556,7 +556,7 @@ Starten Sie den Drucker neu und Sie sind fertig.
    
    Drücken Sie die "Set"-Taste
 
-5. Drücken Sie `Move the extruder to cutter stiker position` und halten Sie die Taste für 20 Sekunden gedrückt.
+5. Drücken Sie `Move the extruder to cutter striker position` und halten Sie die Taste für 20 Sekunden gedrückt.
 
 	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
 

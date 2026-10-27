@@ -17,8 +17,8 @@ Es kann aufgerufen werden durch:
 Kaltes Ziehen (Düsenreinigung) ohne Kraftaufwand.
 Implementierung von [diesem Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
-- Wählen Sie das zu reinigende Material (PETG, ABS, NEYLON).
-- Befolgen Sie die Anweisungen in der FLUIDD-Konsole.
+- Wählen Sie das zu reinigende Material (PETG, ABS, NYLON).
+- Befolgen Sie die Anweisungen in der Fluidd-Konsole.
 - Ziehen Sie die Rückstände aus der Düse
 
 ---

@@ -199,7 +199,7 @@ It can be called from:
 [ZSSH_RESTART](/Zmod/#zssh_restart)
 
 ### FIX_E0011
-[E0011](/Global/#fix_e0017)
+[E0011](/Global/#fix_e0011)
 
 ### FIX_E0017
 [E0017](/Global/#fix_e0017)

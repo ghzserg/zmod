@@ -21,7 +21,7 @@ Parameters:
 
 - `EXTRUDER_TEMP` — extruder temperature (default: `245`)
 - `BED_TEMP` — bed temperature (default: `80`)
-- `MESH` — bed mesh profile name (empty = no mesh loaded/created)
+- `MESH` — bed mesh profile name to load (empty = no mesh is loaded; if the profile does not exist, it will be created)
 - `FORCE_LEVELING` — force bed leveling (default: `False`)
 - `SKIP_LEVELING` — skip bed leveling entirely (overrides `FORCE_KAMP`/`FORCE_LEVELING`, default: `False`)
 - `FORCE_KAMP` — build an adaptive bed mesh (KAMP, default: `False`).
@@ -33,8 +33,8 @@ Parameters:
 
 **Notes:**
 
-- Any calibration (e.g., `FORCE_KAMP`/`FORCE_LEVELING`) triggers [CLEAR_NOZZLE](/Global/#clear_nozzle).
-- `[ZSSH_RELOAD](/Zmod/#zssh_reload)` is called during `START_PRINT` to restore SSH if needed.
+- Any calibration (e.g., `FORCE_KAMP`/`FORCE_LEVELING`) triggers [CLEAR_NOZZLE](/Main/#clear_nozzle).
+- [`ZSSH_RELOAD`](/Zmod/#zssh_reload) is called during `START_PRINT` to restore SSH if needed.
 
 **Example for Orca with native screen:**
 Replace the start G-code with:
@@ -70,21 +70,23 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 - `PRINT_LEVELING` — enable bed leveling for every print: `0` = disable, `1` = enable (default: `0`).
 - `USE_KAMP` — use adaptive bed mesh (KAMP) where possible: `0` = disable, `1` = enable (default: `0`).
 - `DISABLE_PRIMING` — disable nozzle priming: `0` = enable, `1` = disable (default: `0`).
-- `FORCE_MD5` — verify file MD5 hashes (default: `1`).
+- `FORCE_MD5` — verify file MD5 hashes and delete the file on mismatch (default: `1`).
+    > Note: Only applies when sending G-code. Not required for 3MF.
+
     1. Select and download the file for your architecture and operating system:
 
     - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-    - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
-    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
-    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
-    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+    - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to run ```chmod +x zmod_preprocess-linux-amd64```
+    - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+    - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Don't forget to run ```chmod +x zmod-preprocess.py```
     - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
     
     2. In Orca, you need to specify: `Process Profile` -> `Other` -> `Post Processing Scripts`.
     
     Here are the options for adding:
     
-    - ```"С:\path_to_file\zmod_preprocess-windows-amd64.exe";```
+    - ```"C:\path_to_file\zmod_preprocess-windows-amd64.exe";```
     - ```"C:\python_folder\python.exe" "C:\Scripts\zmod-preprocess.py";```
     - ```"/usr/bin/python3" "/home/user/zmod-preprocess.py";```
     - ```"/home/user/zmod-preprocess.py";```
@@ -92,10 +94,10 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     - ```"/home/user/zmod_preprocess-darwin-arm64";```
     - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-- `DISABLE_SKEW` — disable skew correction: `1` = disable, `0` = load `skew_profile` (default: `1`).
-- `AUTO_REBOOT` — auto-reboot after print: `0` = disable, `1` = enable, `2` = firmware restart (default: `0`).
-- `CLOSE_DIALOGS` — auto-close dialogs: `0` = disable, `1` = slow, `2` = fast (requires enabling "Local Network Only" on the printer screen).
-- `STOP_MOTOR` — disable motors after print: `0` = disable, `1` = enable (default: `1`).
+- `DISABLE_SKEW` — disable skew correction: `1` = disable, `0` = load `skew_profile` (calls `SKEW_PROFILE LOAD=skew_profile`) (default: `1`).
+- `AUTO_REBOOT` — auto-reboot after print: `0` = disable, `1` = enable, `2` = `FIRMWARE_RESTART` (screenless mode only; with the native screen — `REBOOT`) (default: `0`).
+- `CLOSE_DIALOGS` — auto-close dialogs: `0` = disable, `1` = slow, `2` = fast (requires enabling "Local Network Only" on the printer screen: Settings → WiFi icon → Network Mode) (default: `0`).
+- `STOP_MOTOR` — disable motors 25 seconds after print end/cancel: `0` = disable, `1` = enable (default: `1`).
 - `MIDI_START` — MIDI file to play on print start (e.g., `"start.mid"`).
 - `MIDI_END` — MIDI file to play on print end.
 
@@ -106,7 +108,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 1. Load mesh from `MESH` if specified.
 2. Skip leveling if `SKIP_LEVELING = True`.
 3. Build KAMP mesh if `FORCE_KAMP = True`.
-4. Build full mesh if no mesh is loaded or `FORCE_LEVELING = True`.
+4. Otherwise, build a full mesh if no mesh is loaded (the native screen always loads `MESH_DATA`) or `FORCE_LEVELING = True`. The mesh itself is not saved.
 
 ---
 ### END_PRINT
@@ -188,7 +190,9 @@ Parameters:
 - `EXTRUDER_TEMP` — extruder temperature (default: `230`)
 - `BED_TEMP` — bed temperature (default: `80`)
 
-*`PRECLEAR` (set via `SAVE_ZMOD_DATA PRECLEAR=1`) enables pre-cleaning. [Learn more](/Global/#save_zmod_data).*
+*`PRECLEAR` is not a `CLEAR_NOZZLE` parameter but a global flag set via `SAVE_ZMOD_DATA PRECLEAR=1`; it enables pre-cleaning. [Learn more](/Global/#preclear).*
+
+*Overriding the `CLEAR_NOZZLE` macro in `mod_data/user.cfg` does not change the native nozzle cleaning when it is started directly from the native screen: the native screen works without Z-Mod and therefore does not use Z-Mod macros.*
 
 ---
 ### LED_ON
@@ -232,21 +236,30 @@ Reboot the printer.
 ---
 ### CLOSE_DIALOGS
 
-Close dialogs on the native screen (slow method).
+Close dialogs on the native screen (slow method). Used to close the window at the end of a print or when a print is cancelled.
 *May cause printer freezes.*
+
+Implementation: @darksimpson
+
 Controlled by the [`CLOSE_DIALOGS`](/Global/#close_dialogs) global parameter.
 
 ---
 ### FAST_CLOSE_DIALOGS
 
-Close dialogs quickly (recommended).
+Close dialogs quickly (recommended). Used to close the window at the end of a print or when a print is cancelled. Works faster and does not freeze the printer.
+
+Implementation: @darksimpson
+
 *Enable "Local Network Only" in printer settings: **Settings → WiFi icon → Network Mode → Toggle "Local Network Only"**.*
 Controlled by the [`CLOSE_DIALOGS`](/Global/#close_dialogs) global parameter.
 
 ---
 ### NEW_SAVE_CONFIG
 
-Trigger `SAVE_CONFIG` without freezing the native screen.
+Trigger `SAVE_CONFIG` without freezing the native screen. Can be used to restart Klipper without freezing the native screen.
+
+Implementation: @darksimpson
+
 *May take ~1 minute and occasionally cause screen glitches.*
 
 ---

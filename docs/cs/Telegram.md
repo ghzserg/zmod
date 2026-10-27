@@ -10,7 +10,7 @@
 | **Procentuální průběh tisku** | + | + |
 | **Více tiskáren přes jednoho bota** | + | – |
 | **Notifikace přes jiné služby** | + | – |
-| **Splooman** | - | + |
+| **Spoolman** | - | + |
 
 ---
 
@@ -29,8 +29,8 @@ Nová verze automaticky generuje SSH klíče (používané pro přihlášení be
 
 Umístění klíčů:
 
-- `‎/mod_data/ssh.pub.txt` — veřejný klíč. Zkopírujte jeho obsah do souboru `~/.ssh/authorized_keys` na serveru.
-- `‎/mod_data/ssh.key` — soukromý klíč. Používá se tiskárnou pro připojení k serveru.
+- `/mod_data/ssh.pub.txt` — veřejný klíč. Zkopírujte jeho obsah do souboru `~/.ssh/authorized_keys` na serveru.
+- `/mod_data/ssh.key` — soukromý klíč. Používá se tiskárnou pro připojení k serveru.
 
 Samotné klíče nepotřebujete.
 Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími parametry:
@@ -40,7 +40,7 @@ Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími paramet
 - `SSH_USER` — uživatelské jméno na serveru
 - `VIDEO_PORT` — Port serveru pro příjem video streamu z kamery (výchozí: 8080)
 - `MOON_PORT` — Port serveru pro příjem dat z moonrakeru (výchozí: 7125)
-- `REMOTE_enN` — Příkaz k provedení na vzdáleném serveru
+- `REMOTE_RUN` — Příkaz k provedení na vzdáleném serveru
 
 Použití SSH spotřebuje přibližně 300 KB paměti.
 
@@ -292,7 +292,7 @@ Změny:
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-Jak získat bot_token a chat_id viz [zde](Telegram.md#bot-registration)
+Jak získat bot_token a chat_id viz [zde](Telegram.md#registrace-bota)
 
 Instalace:
 
@@ -347,7 +347,7 @@ Po restartu služba automaticky vytvoří nové klíče. Veřejný klíč (`ssh.
 
 ###### 3. Ověření připojení
 
-Po vymazání klíčů v tiskárně a aktualizaci souboru `authorized_keys` na serveru spusťte na tiskárně makro ZSSH. Připojení by nyní mělo fungovat bez chyby.
+Po vymazání klíčů v tiskárně a aktualizaci souboru `authorized_keys` na serveru spusťte na tiskárně makro ZSSH_ON. Připojení by nyní mělo fungovat bez chyby.
 
 
 #### Alternativa k botu

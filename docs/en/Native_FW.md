@@ -4,14 +4,21 @@
 
 ## How to install native firmware
 
-1. Reset the printer to default settings.
-2. Format a USB drive to FAT/FAT16/FAT32(MBR).
-3. Copy the appropriate file to the USB root directory
-4. Power off the printer.
-5. Insert the usb drive into printer usb port.
-6. Power on the printer.
+0. Before installing, it is best to reset the printer to default settings, if possible.
+1. Format a USB drive (a regular flash drive) to FAT32 or FAT/FAT16 (MBR).
+2. Copy the file to the root of the USB drive (no subfolders).
+3. Power off the printer.
+4. Insert the USB drive into the printer.
+5. Power on the printer.
+6. Wait until it has fully booted.
+7. Power the printer off and on.
+8. Perform the necessary [calibrations](/SetupCalibrations/).
 
 ## AD5X native firmware
+
+This is the Factory stock firmware for AD5X.
+
+If you don't want the printer to [probe the center of the bed before every print](/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed), install a firmware version no higher than 1.1.7.
 
 - [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
 - [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
@@ -29,6 +36,10 @@
 
 ## AD5M native firmware
 
+This is the Factory stock firmware for AD5M.
+
+If you don't want the printer to [probe the center of the bed before every print](/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed), install a firmware version no higher than 3.2.3.
+
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)
@@ -40,6 +51,10 @@
 
 ## AD5M Pro native firmware
 
+This is the Factory stock firmware for AD5M Pro.
+
+If you don't want the printer to [probe the center of the bed before every print](/FAQ/#before-each-print-the-printer-measures-the-center-of-the-bed), install a firmware version no higher than 3.2.3.
+
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
 - [3.2.4](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.4-2.2.3-20251114-Factory.tgz)
@@ -50,7 +65,7 @@
 
 ## Creator 5 stock firmware
 
-This is the Factory (factory) stock firmware for Creator 5
+This is the Factory stock firmware for Creator 5
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.7-1.2.9-20260810.tgz)
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
@@ -58,7 +73,7 @@ This is the Factory (factory) stock firmware for Creator 5
 
 ## Creator 5 Pro stock firmware
 
-This is the Factory (factory) stock firmware for Creator 5 Pro
+This is the Factory stock firmware for Creator 5 Pro
 
 - [1.9.7](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.7-1.2.9-20260810.tgz)
 - [1.9.8](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.8-1.2.9-20260819.tgz)
@@ -67,17 +82,18 @@ This is the Factory (factory) stock firmware for Creator 5 Pro
 
 # Unbricker
 
-Universal unbricker for FF5M / FF5MPro / AD5X / Creator 5 / Creator 5 Pro
+Universal unbricker for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Download the [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) file
 2. Format the USB drive to FAT32
-2. Extract [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) to the root of the USB drive
-3. Turn off the printer
-4. Insert the USB drive into the printer
-5. Wait for the firmware to flash (up to 40 minutes)
-6. Remove the USB drive from the printer
+3. Extract [Universal.zip](https://github.com/ghzserg/FF/releases/download/R/Universal.zip) to the root of the USB drive
+4. Turn off the printer
+5. Insert the USB drive into the printer
+6. Wait for the firmware to flash (up to 40 minutes)
+7. Remove the USB drive from the printer
+8. Turn the printer off and on
 
-If something went wrong, check the log files on the USB drive
+If something went wrong, check the log files on the USB drive.
 
 ## Installing Full Firmware on Creator 5 / Creator 5 Pro
 
@@ -85,16 +101,22 @@ If something went wrong, check the log files on the USB drive
 
 Installation takes a long time, up to an hour.
 
-1. Download to a USB flash drive:
+1. Copy all 3 files at once to a FAT32-formatted USB flash drive:
 
    - [Creator5-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-factory-1.9.7.tgz)
    - [Creator5Pro-factory-1.9.7.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory-1.9.7.tgz)
    - [Creator5Pro-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-factory.tar.xz)
 
-2. After updating, if you need to reflash the MCU, install:
+2. Power off the printer, insert the flash drive, power it on and wait for a full reboot. A Creator 5 will become a Creator 5 Pro — this is normal.
+
+3. After updating, if you need to reflash the MCU, install:
 
    - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
    - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
+
+4. To turn a Creator 5 back from Creator 5 Pro into the regular version:
+
+   - [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
 ## Installing full firmware on AD5X
 
@@ -102,7 +124,7 @@ This is not the original firmware, but an unbricking/recovery firmware. It shoul
 
 Installation takes a long time, up to an hour.
 
-Download to flash drive
+Copy both files to the flash drive at once:
 
 - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
@@ -114,7 +136,7 @@ This is not the original firmware, but an unbricking/recovery firmware. It shoul
 
 Installation takes a long time, up to an hour.
 
-1. Download to flash drive FF5M
+1. Copy all of the following files to a USB flash drive for the AD5M:
 
   - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
@@ -131,22 +153,22 @@ Installation takes a long time, up to an hour.
 
 # Universal Z-Mod Activator
 
-Universal activator for AD5x / Creator 5 / Creator 5 Pro
+Universal activator for AD5X / Creator 5 / Creator 5 Pro
 
 1. Download the [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) file
 2. Format the USB flash drive to FAT32
-2. Unpack [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) to the root of the flash drive
-3. Turn off the printer
-4. Insert the flash drive into the printer
-5. Wait for the firmware update
-6. Remove the flash drive from the printer
-7. Turn the printer off and on
+3. Unpack [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) to the root of the flash drive
+4. Turn off the printer
+5. Insert the flash drive into the printer
+6. Wait for the firmware update
+7. Remove the flash drive from the printer
+8. Turn the printer off and on
 
 If something went wrong, check the enable-zmod.log file on the flash drive
 
 ## AD5X/Creator 5/Creator 5 Pro enable Z-Mod
 
-Enabling zmod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware allows you to activate the mod without completely reinstalling it
+Enabling Z-Mod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware allows you to activate the mod without completely reinstalling it.
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -154,7 +176,7 @@ Enabling zmod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware
 
 ## SET XY
 
-For those who've lost their minds and moved their "home" (parking lot to the poop bin). Extract the archive contents to the root of a flash drive, insert the flash drive, and reboot the printer. The calibration will load. First, press Reset. Then, use the on-screen control buttons to adjust the correct head position. Press the Set button to lock this. Reboot the printer without the flash drive. Archive from official Flashforge support.
+For those whose ~~mind~~ "home" position has shifted (parking at the poop chute). Extract the archive contents to the root of a FAT32 flash drive, turn off the printer, insert the flash drive and turn the printer on. The calibration will load. First, press Reset. Then, use the on-screen control buttons to adjust the correct head position. Press the Set button to lock this. Reboot the printer without the flash drive. Archive from official FlashForge support.
 
 [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip)
 
@@ -207,7 +229,7 @@ Fix E0011 Off
 [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
 ## 5X IFS
-Backup IFS firmware
+IFS firmware archive
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
@@ -223,11 +245,13 @@ Backup IFS firmware
 
 ## MD5
 
+> Note: Only applies when sending G-code. Not required for 3MF.
+
 - [zmod_preprocess-windows-amd64.exe](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-windows-amd64.exe) - Windows
-- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to chmod +x zmod_preprocess-linux-amd64
-- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - MacOS (Intel). Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
-- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - MacOS Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - General-Python. Don't forget to run ```chmod +x zmod-preprocess.py```
+- [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Don't forget to run ```chmod +x zmod_preprocess-linux-amd64```
+- [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Don't forget to run ```chmod +x zmod_preprocess-darwin-arm64```
+- [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Don't forget to run ```chmod +x zmod_preprocess-darwin-amd64```
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Don't forget to run ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
 
 ## CONFIG
@@ -257,16 +281,16 @@ Removes leftover links from autostart
 
 ## LOG
 
-Universal log collection for AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+Universal log collection for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Download the [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) file
 2. Format the flash drive to FAT32
-2. Unpack [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) into the root of the flash drive
-3. Turn off the printer
-4. Insert the flash drive into the printer
-5. Wait for the firmware update to complete
-6. Remove the flash drive from the printer
-7. Turn the printer off and on
+3. Unpack [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) into the root of the flash drive
+4. Turn off the printer
+5. Insert the flash drive into the printer
+6. Wait for the firmware update to complete
+7. Remove the flash drive from the printer
+8. Turn the printer off and on
 
 If something went wrong, check the zmd_log.log file on the flash drive
 

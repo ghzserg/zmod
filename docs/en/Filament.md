@@ -34,6 +34,8 @@ Pause and filament change.
 
 Manage filament type, color, and loading/unloading of spools.
 
+Works only when the native screen is enabled.
+
 ---
 
 ### SET_PAUSE_NEXT_LAYER

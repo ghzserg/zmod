@@ -49,10 +49,10 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 - Automatische Aktualisierung von `Fluidd`/`Mainsail`/`Moonraker` und Z-Mod über das Netzwerk
 - [Entware](/de/FAQ/#z-mod-enthält-entware---wie-benutzt-man-es)
 - Fehler behoben [E0017](/de/Global/#fix_e0017)
-- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rückzug, Düsenreinigung, Dehnungsmessstreifen-Reset,        Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
-- Feste Lüftersteuerung für die Motorkühlung. Die Lüfter schalten sich automatisch ein, sobald die Motoren laufen. Bei der Standard-Firmware nur während des   Druckvorgangs.
+- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Dämpfersteuerung, Firmware-Rückzug, Düsenreinigung, Wägezellen-Reset, Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
+- Feste Lüftersteuerung für die Motorkühlung. Die Lüfter schalten sich automatisch ein, sobald die Motoren laufen. Bei der Standard-Firmware nur während des Druckvorgangs.
 - Adaptive Bettnivellierung [KAMP](/de/Calibrations/#kamp)
-- PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [BED](/de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
+- PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [Bett](/de/Calibrations/#pid_tune_bed) einschließlich über GuppyScreen/HelixScreen.
 - Implementierung von [COLDPULL/coldpull](/de/Filament/#coldpull) (Düsenreinigung) ohne Kraftaufwand. Durchführung von [dieser Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
@@ -63,13 +63,13 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. D
 - Telegram-Bot-Unterstützung
 - Klipper 13-Unterstützung
 - Alle Funktionen, die im Vergleich zu KlipperMod aufgeführt sind.
-- Die native Firmware sendet eine Menge Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von zmod mit GuppyScreen/HelixScreen vermieden werden.
+- Die native Firmware sendet eine Menge Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von Z-Mod mit GuppyScreen/HelixScreen vermieden werden.
 
 ---
 
 ## Speichern von Einstellungen
 
-Zugriff auf den Ordner **mod_data** über die fluidd-Weboberfläche.
+Zugriff auf den Ordner **mod_data** über die Fluidd-Weboberfläche.
 `Konfiguration` :arrow_right: `Konfigurationsdateien` :arrow_right: `mod_data`
 
 - Benutzerdefinierte Klipper-Einstellungen werden in `mod_data/user.cfg` gespeichert, wodurch `printer_base.cfg` und Z-Mod-Dateien überschrieben/ergänzt werden können.
@@ -88,7 +88,7 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 ## Bekannte Funktionen:
 
 - Bei Aktionen wie `M109` (Extruderheizung), `M190` (Bettheizung), PID-Kalibrierung oder jeglichem G-Code-Pausieren friert der Standardbildschirm ein.
-- Beim Neustart von Klipper wird der Standardbildschirm eingefroren (nach dem Speichern von Table Map, PID, Shaper, etc.), verwenden Sie [NEW_SAVE_CONFIG](/de/Main/#new_save_config) für den Neustart.
+- Beim Neustart von Klipper wird der Standardbildschirm eingefroren (nach dem Speichern von Bettnetz, PID, Shapern usw.), verwenden Sie [NEW_SAVE_CONFIG](/de/Main/#new_save_config) für den Neustart.
 - Nach dem Abbrechen eines Druckvorgangs drücken Sie auf dem nativen Bildschirm "OK" (verwenden Sie [CLOSE_DIALOGS](/de/Main/#close_dialogs) oder [FAST_CLOSE_DIALOGS](/de/Main/#fast_close_dialogs)).
 - Der Standardbildschirm lädt beim Starten eines Druckvorgangs immer das Profil `DEFAULT_MESH` und löscht das `DEFAULT` Profil nach dem Druckvorgang.
 
@@ -99,20 +99,26 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 - Entfernen Sie den gesamten Start-G-Code und verwenden Sie die Makros [START_PRINT](/de/Main/#start_print) und [END_PRINT](/de/Main/#end_print).
 - Die Standardkamera ist deaktiviert; verwenden Sie die Alternative über [CAMERA_ON](/de/Zmod/#camera_on) starten.
 - Gegebenenfalls ist es notwendig, den Parameter `Z_OFFSET` manuell in das Makro [START_PRINT](/de/Main/#start_print) zu schreiben oder den globalen Parameter [LOAD_ZOFFSET](/de/Global/#load_zoffset) zu verwenden, der den Z-Offset aus den globalen Parametern lädt, die zuvor über SET_GCODE_OFFSET gespeichert wurden. *crot*.
-- Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den nicht-nativen Bildschirmmodus übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den nicht-nativen Bildschirmmodus an.
+- Wenn Sie den Z-Offset vom nativen Bildschirmmodus in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset-Wert vom nativen Bildschirm und wendet ihn auf den Modus ohne nativen Bildschirm an.
 - Das Bettnetz wird beim Start automatisch geladen.
 - Das FlashForge-Protokoll wird nicht unterstützt (wird vom nativen Bildschirm verarbeitet). Verwenden Sie "Octo/Klipper".
 
     - **Host Type**: `Octo/Klipper`
     - **Printer Agent**: `Moonraker`
+
+    Für Creator 5 / Creator 5 Pro / AD5X:
+
+    - **Hostname**: `IP_printer`
+
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+    Für FF5M / FF5M Pro:
+
     - **Hostname**: `IP_printer:7125`
-    - **Device UI**: `IP_printer` or `IP_printer:80`
+    - **Device UI**: `IP_printer` oder `IP_printer:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
-    In Orca ab Version 2.4.2 deaktivieren Sie die Übertragung von 3MF-Dateien: `Druckerprofil` -> `Allgemeine Informationen` -> `Erweitert` -> `Use 3MF instead of G-code` deaktivieren (Häkchen entfernen).
-
-    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 ---
 
@@ -123,12 +129,12 @@ Der Drucker kann in zwei Modi betrieben werden:
 - Mit nativem Bildschirm - in diesem Fall wird fast die gesamte Logik über den nativen Bildschirm gesteuert und viele Dinge können nicht geändert werden.
 - Ohne nativen Bildschirm - in diesem Fall werden alle Funktionen vom Z-Mod gesteuert.
 Das bedeutet nicht, dass Sie den Bildschirm hardwaremäßig deaktivieren oder ihn durch einen anderen ersetzen müssen.
-Im nicht-nativen Bildschirmmodus können Sie den alternativen Software-Bildschirm von GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten und er wird ausgeschaltet.
+Im Modus ohne nativen Bildschirm können Sie den alternativen Software-Bildschirm GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten, dann bleibt er dunkel.
 
 !!! warning "Warnung"
     Deaktivieren Sie den Bildschirm nur, wenn Sie die Funktionen Bettnivellierung, Z-Offset und die Makros START_PRINT/END_PRINT vollständig verstehen.
     
-Unser Drucker hat 128 Megabyte Arbeitsspeicher, von denen die Hälfte vom System belegt wird und 13 Megabyte (20 in älteren Versionen der nativen Firmware) von der nativen Bildschirmsteuerung belegt werden.
+AD5M/AD5M Pro haben 128 Megabyte Arbeitsspeicher, von denen die Hälfte vom System belegt wird und 13 Megabyte (20 in älteren Versionen der nativen Firmware) von der nativen Bildschirmsteuerung belegt werden.
 
 Wenn wir den nativen Bildschirm deaktivieren [DISPLAY_OFF](/de/System/#display_off), sparen wir Speicher.
 
@@ -143,14 +149,14 @@ Lesen Sie [Merkmale der Version ohne nativen Bildschirm](#merkmale-der-version-o
 
 ---
 
-### Was ist MACROS? Wie man es ausführt, herunterlädt und benutzt.
+### Was ist ein MAKRO? Wie man es ausführt, herunterlädt und benutzt.
 
 Ein Makro ist ein kleines Programm in der Klipper/Gcode-Sprache.
 
 Es kann aufgerufen werden:
 
 - Aus einer GCODE-Datei
-- Von der Fluidd/Mainstaill-Konsole aus
+- Von der Fluidd/Mainsail-Konsole aus
 *Igel*
 
 [Makro-Liste](/de/Macros/)
@@ -165,7 +171,7 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
-Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die Düse und das Bed erwärmt werden sollen.
+Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die Düse und das Bett erwärmt werden sollen.
 *hippopotamus*
 
 ---
@@ -222,13 +228,13 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### So funktioniert der Z-Offset
 
-Lesen Sie den Artikel "[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/##wie-funktioniert-z-offset-auf-ihrem-drucker)".
+Lesen Sie den Artikel "[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/#wie-funktioniert-z-offset-auf-ihrem-drucker)".
 
 Bei Verwendung des Bildschirms beeinflusst die Modifikation den Z-Offset nicht. Der auf dem Bildschirm gespeicherte Z-Offset wird verwendet.
 
 Der Offset für native und nicht-native Bildschirme ist unterschiedlich; jeder Bildschirmtyp hat sein eigenes Verhalten und wird separat konfiguriert.
 
-Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den z-Offset vom nativen Bildschirm in den nicht-nativen Bildschirm-Modus zu kopieren.
+Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren.
 
 Es wird der auf dem Bildschirm gespeicherte z-Offset verwendet.
 
@@ -253,13 +259,13 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 Der native Bildschirm verwendet immer:
 
 - `MESH_DATA` - Voreinstellung
-- `DEFAULT` - wenn `Leveling` (Aufbau der Tabellenkarte vor dem Druck) angekreuzt ist, und nach dem Druck wird die `DEFAULT` Karte immer gelöscht.
+- `DEFAULT` - wenn `Leveling` (Messen des Bettnetzes vor dem Druck) angekreuzt ist, und nach dem Druck wird die `DEFAULT` Karte immer gelöscht.
 
 Ohne den nativen Bildschirm wird das automatische Mesh beim Start automatisch geladen.:
 
 - `auto` - sie wird automatisch geladen, wenn der Drucker eingeschaltet wird.
 
-Wenn Sie beim Drucken eine andere Karte verwenden wollen (z.B. `PETG_75`), dann:
+Wenn Sie beim Drucken ein anderes Bettnetz verwenden wollen (z.B. `PETG_75`), dann:
 
 - Schalten Sie die automatische Kalibrierung in den globalen Parametern aus.
 
@@ -279,18 +285,18 @@ Ich empfehle die Verwendung globaler Parameter, die einmal konfiguriert und bei 
 
 Parameter `PRINT_LEVELING`:
 
-- Entfernt die Bettnetzkarte bei jedem Druckvorgang
-- Wenn Sie mit dem Bildschirm arbeiten, wird die Bettnetzkarte vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten.
+- Entfernt die Bettnetz bei jedem Druckvorgang
+- Wenn Sie mit dem Bildschirm arbeiten, wird die Bettnetz vom nativen Bildschirm entfernt, so wie es der Fall wäre, wenn Sie eine Datei auf dem Bildschirm ausgewählt und das Kontrollkästchen `LEVELING` angeklickt hätten.
 - Wenn der Parameter 1 `SAVE_ZMOD_DATA PRINT_LEVELING=1` lautet, geht der Drucker beim Senden von Dateien über Orca/Fluidd/Mainsail davon aus, dass Sie die zu druckende Datei am Originalbildschirm ausgewählt und das Kontrollkästchen "Ausrichtung" aktiviert haben. Jedes Mal, wenn Sie in diesem Fall drucken, wird das Bettnetz erfasst.
-- Wenn Sie im nicht-nativen Bildschirmmodus arbeiten und das Makro [START_PRINT](/de/Main/#start_print) im anfänglichen G-Code verwenden, wird das Bettnetz ebenfalls bei jedem Druckvorgang gelöscht
+- Wenn Sie im Modus ohne nativen Bildschirm arbeiten und das Makro [START_PRINT](/de/Main/#start_print) im anfänglichen G-Code verwenden, wird das Bettnetz ebenfalls bei jedem Druckvorgang gelöscht
 
   Um diese Funktion zu aktivieren, müssen Sie einmal das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data), den Parameter [PRINT_LEVELING](/de/Global/#print_leveling)
 
   ```SAVE_ZMOD_DATA PRINT_LEVELING=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird das Bettnetz bei jedem Druck entfernt.
 
-- Um die Bettnetzkarte vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` :arrow_right:```Wifi-Symbol``` :arrow_right:```Netzwerkmodus``` :arrow_right:aktivieren Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
+- Um die Bettnetz vom nativen Bildschirm zu entfernen, gehen Sie zu ```Einstellungen``` :arrow_right:```Wifi-Symbol``` :arrow_right:```Netzwerkmodus``` :arrow_right:aktivieren Sie den Schieberegler ```Nur lokale Netzwerke``` über das Menü des Druckerbildschirms ein.
 
-- Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Bettnetzkarte beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
+- Wenn diese Option aktiviert ist, werden alle START_PRINT-Parameter, die sich auf die Erstellung/Verwendung einer Bettnetz beziehen, ignoriert (FORCE_LEVELING, FORCE_KAMP, SKIP_LEVELING, MESH).
 
 Parameter `USE_KAMP`:
 
@@ -299,7 +305,7 @@ Parameter `USE_KAMP`:
 
   Um diese Funktion zu aktivieren, müssen Sie das Makro [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data) einmal konfigurieren, Parameter [USE_KAMP](/de/Global/#use_kamp)
 
-  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird die adaptive Bettnetzkarte verwendet, wo immer dies möglich ist, auch wenn die Bettnetzkarte mit dem nativen Bildschirm über das Netzwerk erfasst wird.
+  ```SAVE_ZMOD_DATA USE_KAMP=1``` *(**muss in der Fluidd/Mainsail Konsole eingegeben werden**)*. In diesem Fall wird die adaptive Bettnetz verwendet, wo immer dies möglich ist, auch wenn die Bettnetz mit dem nativen Bildschirm über das Netzwerk erfasst wird.
 
 ---
 
@@ -307,9 +313,9 @@ Parameter `USE_KAMP`:
 
 Wenn Sie die globalen Parameter *(SAVE_ZMOD_DATA PRINT_LEVELING=0)* nicht verwenden wollen, stehen Ihnen die folgenden Parameter des Makros [START_PRINT](/de/Main/#start_print), das im Start-G-Code geschrieben wird, zur Verfügung.
 
-- FORCE_LEVELING - erzwingt den Aufbau einer Tabellenkarte, True - aufbauen, False - nicht aufbauen (False)
-- FORCE_KAMP - Start des Aufbaus der adaptiven Tabellenkarte, True - ja, False - nein (False).
-- SKIP_LEVELING - unter keiner Bedingung die Tabellenkarte aufbauen. Stärker als FORCE_KAMP und FORCE_LEVELING (False)
+- FORCE_LEVELING - erzwingt den Aufbau eines Bettnetzes, True - aufbauen, False - nicht aufbauen (False)
+- FORCE_KAMP - Aufbau eines adaptiven Bettnetzes, True - ja, False - nein (False).
+- SKIP_LEVELING - unter keiner Bedingung ein Bettnetz aufbauen. Stärker als FORCE_KAMP und FORCE_LEVELING (False)
 - MESH - Name der zu ladenden Table Map, wenn nicht angegeben, wird nichts geladen, wenn sie nicht existiert, wird sie erstellt ("").
 
 !!! warning "Warnung"
@@ -333,12 +339,12 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder} T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
-Algorithmus zum Entfernen der Bettnetzkarte im Macro [START_PRINT](/de/Main/#start_print):
+Algorithmus zum Entfernen der Bettnetz im Macro [START_PRINT](/de/Main/#start_print):
 
 1. Wenn MESH nicht leer ist, wird die Karte mit dem im Parameter MESH angegebenen Namen geladen
-2. Wenn `SKIP_LEVELING=True` - wird die Bettnetzkarte unter keinen Umständen entfernt
-3. Andernfalls, wenn `FORCE_CAMP=True` gesetzt ist, wird KAMP entfernt.
-4. Andernfalls, wenn die Bettnetzkarte nicht geladen ist (der native Kopf lädt immer die `MESH_DATA` Karte) oder wenn `FORCE_LEVELING=True`, wird der Aufbau der Bettnetzkarte gestartet, aber sie wird nicht selbst gespeichert
+2. Wenn `SKIP_LEVELING=True` - wird die Bettnetz unter keinen Umständen entfernt
+3. Andernfalls, wenn `FORCE_KAMP=True` gesetzt ist, wird KAMP erstellt.
+4. Andernfalls, wenn kein Bettnetz geladen ist (der native Bildschirm lädt immer das Netz `MESH_DATA`) oder wenn `FORCE_LEVELING=True`, wird ein Bettnetz erstellt, aber nicht gespeichert.
 
 ---
 
@@ -346,9 +352,9 @@ Algorithmus zum Entfernen der Bettnetzkarte im Macro [START_PRINT](/de/Main/#sta
 
 Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden wollen, stehen Ihnen die folgenden Makros zur Verfügung:
 
-- [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level) (Fluidd button `BED LEVELING`) - Entfernt das Bettnetz und reinigt die Düse bei der angegebenen Bett- und Extrudertemperatur. Die Heizung wird nach dem Entfernen des Bettnetz abgeschaltet.
+- [AUTO_FULL_BED_LEVEL](/de/Calibrations/#auto_full_bed_level) (Fluidd-Schaltfläche `BED LEVELING`) - Misst das Bettnetz und reinigt die Düse bei der angegebenen Bett- und Extrudertemperatur. Die Heizung wird nach dem Entfernen des Bettnetz abgeschaltet.
 
-- Das gleiche Makro kann mit der Schaltfläche Fluidd/Mainsail aufgerufen werden, es heißt `BED CALIBRATION`. Nachdem Sie die Bettnetz bei einer bestimmten Temperatur entnommen haben, können Sie die Schaltfläche `Save Parameters` drücken, und die Bettnetzkarte wird in der Datei `printer.cfg` gespeichert.
+- Das gleiche Makro kann mit der Schaltfläche Fluidd/Mainsail aufgerufen werden, es heißt `BED CALIBRATION`. Nachdem Sie das Bettnetz bei einer bestimmten Temperatur gemessen haben, können Sie die Schaltfläche `Save Parameters` drücken, und das Bettnetz wird in der Datei `printer.cfg` gespeichert.
 
    Sie kann auch in den Start-G-Code geschrieben werden:
    ```
@@ -363,7 +369,7 @@ Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden woll
   BED_TEMP=[bed_temperature_initial_layer_single]
   ```
 
-- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Entfernung der Bettnetzkarte durch das Standard-Klipper-Macro.
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Entfernung der Bettnetz durch das Standard-Klipper-Macro.
 
   **Es wird nicht empfohlen, es zu verwenden**, da keine Düsenreinigung durchgeführt wird, so dass die Ergebnisse falsch sein werden. **Adaptive Table Map von Orca, überhaupt nicht empfohlen**, da sie die Punktentfernung nicht zufällig vornimmt, was bedeutet, dass die Düse beim Drucken identischer Modelle jedes Mal an denselben Punkten misst, was zum Auftreten von Mikrolöchern und infolgedessen zu einer falschen Table Map führt.
 
@@ -375,9 +381,9 @@ Wenn Sie das Makro `START_PRINT` und die globalen Parameter nicht verwenden woll
 
 Um mit MESH zu arbeiten, gibt es Standard-KLIPPER-Macros:
 
-- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Bettnetzkarte entfernen
-- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - Bettnetzkarte ausgeben
-- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - Bettnetzkarte laden, löschen, speichern
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - Bettnetz entfernen
+- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - Bettnetz ausgeben
+- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - Bettnetz laden, löschen, speichern
 
 Wenn Sie eine Druckbettkarte mithilfe von KLIPPER-Befehlen im Filamentprofil laden, stellen Sie sicher, dass Sie in `START_PRINT` und im Filamentprofil dieselbe Druckbettkarte verwenden. Alternativ können Sie die Düsenreinigung in START_PRINT deaktivieren und separat im Filamentprofil ausführen.
 
@@ -437,7 +443,7 @@ Lesen: [Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt!
 | Parameter | Was bedeutet | Normaler Wert |
 |----------|------------|------------------|
 | WIDTH | Bildbreite | 640 |
-| `HÖHE` | Bildhöhe | 480 |
+| `HEIGHT` | Bildhöhe | 480 |
 | `FPS` | Wie viele Bilder pro Sekunde | 20 |
 | `VIDEO` | Kameranummer | video0 |
 | `FS` | Problemkameras reparieren (1 für ja, 0 für nein) | 0 |
@@ -494,7 +500,7 @@ Das Programm zeigt eine Liste der verfügbaren Kameras an.
 
 ### Ich habe einen Drucker installiert und Z-Mod hat meine Kamera versteckt! Ich konnte sie in Orca-FF sehen, aber jetzt ist sie weg!
  
-In der Weboberfläche (fluidd) gehen Sie zu `Einstellungen` :arrow_right: `Videokameras`.
+In der Weboberfläche (Fluidd) gehen Sie zu `Einstellungen` :arrow_right: `Videokameras`.
 
 Dort gibt es bereits eine Videokamera, `Sample_Settings_Camera`. Gehen Sie zu ihr und sehen Sie sich die Einstellungen an.
 
@@ -505,7 +511,7 @@ Dort gibt es bereits eine Videokamera, `Sample_Settings_Camera`. Gehen Sie zu ih
 - Schnappschuss-URL: `http://printer_ip_address:8080/?action=snapshot`
 - printer_ip_address - ersetzen Sie durch die IP-Adresse Ihres Druckers.
 
-In Versionen, die älter sind als `1.4.3`, können Sie auch angeben:
+In Versionen neuer als `1.4.3` können Sie auch angeben:
 
 - Streamtyp: `MJPEG-Stream`.
 - Stream-URL: `/webcam/?action=stream`.
@@ -514,7 +520,7 @@ In Versionen, die älter sind als `1.4.3`, können Sie auch angeben:
 Wenn Sie die Auflösung und die Bildrate anpassen, die Kamera des Telegram-Bots verwenden, den RAM-Verbrauch reduzieren oder parallele Verbindungen erlauben wollen, müssen Sie [Alternative Kamera](/de/FAQ/#was-ist-eine-alternative-kamera) verwenden. *Kroot*
 
 !!! info "Statische IP"
-    Legen Sie auf dem Router eine *statische IP-Adresse für den Drucker* fest, sonst ändert sie sich und die Kamera stürzt ab.
+    Legen Sie auf dem Router eine *statische IP-Adresse für den Drucker* fest, sonst ändert sie sich und die Kamera fällt aus.
 
 ---
 
@@ -562,7 +568,9 @@ Nach einem Neustart erscheint ein Fehler
 !! Cannot update MCU 'eboard' config as it is shutdown
 ```
 
-Neustart des Druckers im abnormalen Betriebsmodus.
+Ein Neustart des Druckers ist ein abnormaler Betriebsmodus.
+
+_Wenn Sie glauben, dass dieser Fehler während des Drucks aufgetreten ist, hat Ihre Heizung (nach langem Gebrauch) einen Kurzschluss, und der Drucker startet unbemerkt neu._
 
 Aus diesem Grund werden Sie aufgefordert, das Gerät aus- und wieder einzuschalten, wenn Sie die native Firmware installieren.
 
@@ -591,7 +599,7 @@ Um auf den Drucker zuzugreifen, geben Sie einfach die Drucker-IP ein, **ohne die
 
 #### Ich habe das Webinterface umgestellt und jetzt funktioniert nichts mehr.
 
-Wenn du das Interface mit dem Makro [WEB](/de/System/#web) umschaltest *whoosh*
+Wenn Sie die Weboberfläche mit dem Makro [WEB](/de/System/#web) umschalten *whoosh*
 
 1. Das erste, was zu tun ist, ist `Strg + F5` oder `Strg + Umschalt + R` oder `Option + Befehl + E` zu drücken.
 
@@ -723,7 +731,7 @@ Wenn Sie die Mod löschen, wird das ursprüngliche Logo wiederhergestellt. Wenn 
 
 Logo von Alberto Maciel:
 
-- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5M/AD5M Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
 - [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
 
 ---
@@ -752,7 +760,7 @@ Warum brauchen Sie diesen Sensor?
 
 - Er kann verwendet werden, um den Z-Offset über das [g28_tenz](https://github.com/ghzserg/g28_tenz) Plugin zu messen.
 - Sie können den Druck stoppen, wenn die Düse ein Teil trifft oder ein Teil abgerissen wird. [NOZZLE_CONTROL](/de/Global/#nozzle_control)
-- Ohne eine Neukalibrierung wird das Bed Mesh falsch vermessen.
+- Ohne eine Neukalibrierung wird das Bettnetz falsch vermessen.
 
 ---
 
@@ -773,11 +781,11 @@ Sie können die MCU-Version auf der Registerkarte `System` einsehen.
 
 <img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="https://github.com/user-attachments/assets/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a" />
 
-Du hast z.B. Klipper 13 laufen und verwendest die MCU von Klipper 11 oder 12.
+Sie verwenden z. B. Klipper 13, aber die MCU-Firmware stammt von Klipper 11 oder 12.
 
-Oder andersherum. Du hast einen nativen Klipper laufen - aber du hast die MCU für Klipper 13 geladen.
+Oder umgekehrt: Sie verwenden den nativen Klipper, haben aber die MCU-Firmware für Klipper 13 geladen.
 
-Wenn deine MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass du die MCU für Klipper 12 (AD5X) oder Klipper 11 (AD5M/AD5M Pro) geladen hast.
+Wenn Ihre MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass Sie die MCU für Klipper 12 (AD5X) oder Klipper 11 (AD5M/AD5M Pro) geladen hast.
 
 [Zum nativen Klipper wechseln](/de/Native_FW/#fix_klipper)
 
@@ -822,7 +830,7 @@ Darüber hinaus kann ein Filamentstopp im IFS folgende Ursachen haben:
 
 - Der Extruder ist mit Spule 1 bestückt, Spule 2 wird jedoch herausgezogen. Verwenden Sie [`SET_EXTRUDER_SLOT`](/de/AD5X/#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist), um den aktuellen Extruder-Slot zu synchronisieren.
 - Neues Filament wird eingeführt, während sich altes Filament noch im Extruder befindet.
-- Die 4-in-1-Module und ihre Schläuche haben unterschiedliche Längen. Passen Sie daher den Wert für `filament_unload_into_tube` in `mod_data/filament.json` an. Setzen Sie ihn auf **70 oder höher**. [Mehr lesen](/de/AD5X/#wichtigste-einstellungen-was-am-häufigsten-zu-ändern-ist-ad5x)
+- Die 4-in-1-Module und ihre Schläuche haben unterschiedliche Längen. Passen Sie daher den Wert für `filament_unload_into_tube` in `mod_data/filament.json` an. Setzen Sie ihn auf **70 oder höher**. [Mehr lesen](/de/AD5X/#grundlegende-parameter-am-häufigsten-angepasst)
 
 Das Problem kann auch durch die **Unfähigkeit, das Filament im IFS-Kanal zu entriegeln** bedingt sein.
 

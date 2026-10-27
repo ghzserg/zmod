@@ -16,8 +16,8 @@ Es kann aufgerufen werden durch:
 
 Eine alternative Implementierung der Kamera verwenden
 
-- `BREITE` – Bildbreite (Standard: `640`)
-- `HÖHE` – Bildhöhe (Standard: `480`)
+- `WIDTH` – Bildbreite (Standard: `640`)
+- `HEIGHT` – Bildhöhe (Standard: `480`)
 - `FPS` – Bilder pro Sekunde (Standard: `20`)
 - `VIDEO` – Videogerät (Standard: `video0`)
 - `FS` – `1` = Bildgrößenbegrenzer für instabile Kameras aktivieren, `0` = deaktivieren (Standard: `0`)
@@ -302,13 +302,22 @@ So erhalten Sie das Login und das Passwort:
 
 1. Verbinden Sie sich mit dem Bot [@zmod_help_bot](https://t.me/zmod_help_bot)
 2. Geben Sie den Befehl ```cloud``` ein - wenn Sie sich bereits registriert haben, wird Ihnen Ihr Benutzername angezeigt
-3. um einen Benutzer mit dem Namen ```test``` zu registrieren, geben Sie ein: ```cloud register test```.
+3. Um einen Benutzer mit dem Namen ```test``` zu registrieren, geben Sie ein: ```cloud register test```.
 4. Um das Passwort zurückzusetzen, geben Sie ein: ```cloud reset_password```.
 5. Um den aktuellen Benutzer zu entfernen, geben Sie ein: ```cloud remove```
 
+Wenn Telegram nicht verfügbar ist:
+
+1. Öffnen Sie [vk.com/zmod_official](https://vk.com/zmod_official)
+2. Schreiben Sie der Gruppe eine Nachricht
+3. Geben Sie den Befehl ```cloud``` ein - wenn Sie sich bereits registriert haben, wird Ihnen Ihr Benutzername angezeigt
+4. Um einen Benutzer mit dem Namen ```test``` zu registrieren, geben Sie ein: ```cloud register test```
+5. Um das Passwort zurückzusetzen, geben Sie ein: ```cloud reset_password```
+6. Um den aktuellen Benutzer zu entfernen, geben Sie ein: ```cloud remove```
+
 Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
 
-1. Gehen Sie zu [zmod.link](https://zmod.link/link//) und geben Sie Ihr Login und Passwort ein
+1. Gehen Sie zu [zmod.link](https://zmod.link/link/) und geben Sie Ihr Login und Passwort ein
    
    <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
 
@@ -316,7 +325,7 @@ Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
    
    <img width="569" height="502" alt="image" src="https://github.com/user-attachments/assets/72346ee6-dde6-4736-80b1-2eb2927bf983" />
 
-3. öffnen Sie den Drucker in der benachbarten Registerkarte und geben Sie in der Konsole des Druckers den Befehl ```ZLINK``` ein
+3. Öffnen Sie den Drucker in der benachbarten Registerkarte und geben Sie in der Konsole des Druckers den Befehl ```ZLINK``` ein
    
    <img width="1563" height="163" alt="{90DC4366-D258-4912-8028-22C589DF4E91}" src="https://github.com/user-attachments/assets/bee350ee-8d99-465c-9621-48788c6f7a9c" />
 
@@ -325,7 +334,7 @@ Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
    
    Beispiel:
 
-   - `Testdrucker`.
+   - `testprinter`
    - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
 
    
@@ -337,7 +346,7 @@ Wie man sich mit der Cloud verbindet [zmod.link](https://zmod.link/link/):
    
    <img width="558" height="652" alt="{CDC8146F-B9DF-44A1-9C0B-3E6828CD540E}" src="https://github.com/user-attachments/assets/ed92a80f-93cc-41b8-bde1-aa0b2b2c0ecc" />
    
-   In dem Beispiel ````zlink p=testprinter u=test m=10006 c=30006```.
+   Im Beispiel: ```zlink p=testprinter u=test m=10006 c=30006```
 
    Klicken Sie auf ```I have already pasted the string into the printer```
    

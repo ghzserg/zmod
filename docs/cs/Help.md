@@ -2,14 +2,14 @@
 
 Otevřete Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) a položte mu svou otázku. Zná celou dokumentaci.
 
-1. [Aktualizujte Z-Mod a všechny pluginy na nejnovější verzi](Setup.md#updating-the-mod)
+1. [Aktualizujte Z-Mod a všechny pluginy na nejnovější verzi](Setup.md#aktualizace-modu)
 2. Jasně popište problém: uveďte snímky obrazovky, fotografie a podrobné textové vysvětlení.
 3. Spusťte [CLEAR_EMMC](System.md#clear_emmc) pro vyčištění předchozích protokolů.
 4. **Zcela vypněte tiskárnu.**
 5. Znovu zapněte tiskárnu.
 6. Reprodukujte problém.
 7. Spusťte [TAR_CONFIG](Zmod.md#tar_config) pro sběr souborů protokolů.
-8. Odešlete **jeden** příspěvek s vaším popisem a generovaným souborem `config-1.6.6-28.tar.gz`. 1.6.6-28 - aktuální verze mod.
+8. Odešlete **jeden** příspěvek s vaším popisem a generovaným souborem `config-1.6.6-28.tar.gz`, kde 1.6.6-28 je aktuální verze modu.
 9. [Otevřete problém zde](https://github.com/ghzserg/zmod/issues).
 
 Pokud nelze provést `TAR_CONFIG`:
@@ -47,11 +47,11 @@ A musím začít se základní otázkou:
 
 > **„Dobře — jaké je značky, modelu a roku vaše auto?"**
 
-### Proč je to důležité — rozklad
+### Proč je důležité to rozebrat
 
 Naši „flotilu" tvoří **přes 100 jedinečných konfigurací**. Jen podle hlavních kategorií:
 
-- **5 různé modely tiskáren**:
+- **5 různých modelů tiskáren**:
 
   FF5M, FF5M Pro, AD5X, C5, C5Pro
 
@@ -128,7 +128,7 @@ Soubor config-x.y.z.tar je nutné přiložit k tiketu
 Abyste mi pomohli **přeskočit hádání a začít opravovat**, postupujte prosím podle tohoto kontrolního seznamu:
 
 ### 1. **Aktualizujte na nejnovější verzi**
-> Postupujte podle [oficiálního průvodce aktualizací](Setup.md#updating-the-mod).
+> Postupujte podle [oficiálního průvodce aktualizací](Setup.md#aktualizace-modu).
 
 ### 2. **Popište problém jasně a konkrétně**
 > ❌ Špatně: _„Nefunguje to.“_

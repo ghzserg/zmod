@@ -254,7 +254,7 @@
 - Изменен алгоритм тестирования стола перед печатью, введен новый глобальный параметр [MESH_TEST](/ru/Global/#mesh_test)
 - Исправлена ошибка [#13](https://github.com/ghzserg/zmod/issues/13) (Печать в воздухе после KAMP)
 - Исправлена ошибка [#14](https://github.com/ghzserg/zmod/issues/14) (Восстановление печати на родном экране)
-- Исправлена ошибка [#31](https://github.com/ghzserg/zmod/issues/27) (Фризы в GuppyScreen)
+- Исправлена ошибка [#31](https://github.com/ghzserg/zmod/issues/31) (Фризы в GuppyScreen)
 - Исправлена ошибка [#25](https://github.com/ghzserg/zmod/issues/25) (AD5X. Неправильно работает калибровка стола)
 - Исправлена ошибка [#26](https://github.com/ghzserg/zmod/issues/26) (AD5X. Нет спектрограммы ремней)
 - Исправлена ошибка [#27](https://github.com/ghzserg/zmod/issues/27) (AD5X. Ошибка инсталлятора)

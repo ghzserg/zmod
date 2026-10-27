@@ -51,14 +51,20 @@ Jakoukoliv funkci lze přepsat v `mod_data/user.cfg` nebo `printer.cfg`.
 
     - **Host Type**: `Octo/Klipper`
     - **Printer Agent**: `Moonraker`
+
+    Pro Creator 5 / Creator 5 Pro / AD5X:
+
+    - **Hostname**: `IP_printer`
+
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+
+    Pro FF5M / FF5M Pro:
+
     - **Hostname**: `IP_printer:7125`
-    - **Device UI**: `IP_printer` or `IP_printer:80`
+    - **Device UI**: `IP_printer` nebo `IP_printer:80`
 
     <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
-    V Orca verzi 2.4.2 a novější vypněte přenos souborů 3MF: `Profil tiskárny` -> `Obecné informace` -> `Rozšířené` -> zrušte zaškrtnutí `Use 3MF instead of G-code`.
-
-    <img width="462" height="521" alt="image" src="https://github.com/user-attachments/assets/36ec19d8-5263-4b18-b5b1-e45424c64785" />
 
 ---
 
@@ -99,7 +105,7 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Nicméně, Z-Mod pou�
 *   [Kalibrace shaperu s grafy](Calibrations.md#zshaper) s ohledem na [SCV](Global.md#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
 *   [Kontrola a oprava souborů/oprávnění/symbolických odkazů pro nativní souborový systém](System.md#check_system)
 *   Automatické aktualizace pro `Fluidd`/`Mainsail`/`Moonraker` a Z-Mod přes síť
-*   [Entware](FAQ.md#entware-in-zmod-how-to-use-it)
+*   [Entware](FAQ.md#entware-v-z-mod-jak-ho-používat)
 *   Opravena chyba [E0017](Global.md#fix_e0017)
 *   Navíc GuppyScreen/HelixScreen podporuje: kalibraci PID, ovládání tlumičů, rollback firmwaru, čištění trysky, reset tenzometru, nastavení šroubů, ColdPull, vylepšené vyrovnávání podložky
 *   Opravena funkce ventilátorů chlazení driverů. Automaticky se zapínají, když jsou motory v chodu. V nativním firmwaru - pouze během tisku.
@@ -176,7 +182,7 @@ Přes menu obrazovky tiskárny: `Nastavení` -> `Ikona WiFi` -> `Síťový reži
 
 Přečtěte si dokumentaci k [START_PRINT](Main.md#start_print) a [SAVE_ZMOD_DATA](Global.md#save_zmod_data), abyste využili pokročilé funkce Z-Mod.
 
-Pro firmwarovou retrakci si přečtěte [dokumentaci](FAQ.md#what-is-firmware-retraction) a přidejte do `Profilu filamentu` -> `Pokročilé` -> `Start G-kód filamentu`:
+Pro firmwarovou retrakci si přečtěte [dokumentaci](FAQ.md#mám-nainstalovanou-nejnovější-verzi-a-vývojář-říká-že-je-třeba-aktualizovat) a přidejte do `Profilu filamentu` -> `Pokročilé` -> `Start G-kód filamentu`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -283,7 +289,7 @@ V režimu bez nativní obrazovky můžete použít alternativní softwarovou obr
 
 **Vypnutí obrazovky šetří RAM, ale mění správu tisku (start/pauza/obnovení/zrušení/obnovení). Podle toho upravte startovní/koncový G-kód.** *los*
 
-Bez obrazovky se Z-offset z obrazovky neaplikuje. Použijte parametry [START_PRINT](Main.md#start_print) nebo globální nastavení. [Detaily](FAQ.md#how-does-z-offset-work)
+Bez obrazovky se Z-offset z obrazovky neaplikuje. Použijte parametry [START_PRINT](Main.md#start_print) nebo globální nastavení. [Detaily](FAQ.md#jak-funguje-z-offset)
 
 Přečtěte si [vlastnosti provozu bez obrazovky](#notes-on-screenless-version).
 
@@ -303,7 +309,7 @@ Alternativní kamera umožňuje měnit rozlišení, fps, povoluje více připoje
 - Vypněte nativní kameru na obrazovce tiskárny.
 - Spusťte makro [CAMERA_ON](Zmod.md#camera_on)
 
-Přečtěte si: [Nainstaloval jsem tiskárnu a Z-Mod mi skryl kameru!](FAQ.md#i-installed-the-printer-but-zmod-hid-my-camera-in-orca-ff-i-could-see-it-but-now-its-gone)
+Přečtěte si: [Nainstaloval jsem tiskárnu a Z-Mod mi skryl kameru!](FAQ.md#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
 
 #### Nastavení kamery
 
@@ -369,20 +375,26 @@ Program zobrazí seznam dostupných kamer.
 
 #### Nainstaloval jsem tiskárnu, ale Z-Mod mi skryl kameru! V Orca-FF jsem ji viděl, ale teď je pryč!
 
-Ve Fluidd: `Nastavení` -> `Kamery`. Vytvořte novou kameru s:
+Ve webovém rozhraní (Fluidd) přejděte do `Nastavení` -> `Kamery`.
 
+Už tam bude jedna kamera „Camera_settings_example“. Otevřete ji a podívejte se na nastavení.
+
+**Vytvořte novou kameru** s podobným nastavením jako „Camera_settings_example“:
+
+- Typ streamu: `MJPEG stream`
 - Stream URL: `http://vaše_IP:8080/?action=stream`
 - Snapshot URL: `http://vaše_IP:8080/?action=snapshot`
+- vaše_IP - nahraďte IP adresou vaší tiskárny.
 
-Ve verzích vyšších než `1.4.3` můžete také specifikovat:
+Ve verzích novějších než `1.4.3` můžete také specifikovat:
 
 - Typ streamu: `MJPEG stream`
 - Stream URL: `/webcam/?action=stream`
 - Snapshot URL: `/webcam/?action=snapshot`
 
-Pro pokročilé funkce použijte [alternativní kameru](Zmod.md#camera_on). *krtek*
+Pokud chcete nastavit rozlišení a FPS, používat kameru v Telegram botovi, snížit spotřebu RAM nebo povolit paralelní připojení, použijte [alternativní kameru](Zmod.md#camera_on). *krtek*
 
-Přiřaďte tiskárně na routeru statickou IP adresu.
+Přiřaďte tiskárně na routeru *statickou IP adresu*, jinak se změní a kamera přestane fungovat.
 
 ---
 
@@ -419,12 +431,14 @@ Proto se při instalaci původního firmwaru žádá, abyste tiskárnu vypnuli a
 
 Během restartu není odpojeno napájení od MCU, což znamená, že program uložený v MCU pokračuje v běhu. Tento program se snaží komunikovat s Klipperem, který je během restartu nedostupný, což způsobí zamrznutí nebo odpojení MCU.
 
-V tomto případě máte jednu možnost:
+_Pokud si myslíte, že se tato chyba objevila během tisku, má váš topný článek zkrat (po dlouhém používání) a tiskárna se restartuje, aniž byste si toho všimli._
 
-- Spusťte `FIRMWARE_RESTART` — to zamrazí původní obrazovku.
+V tomto případě zvolte jednu z možností:
+
+- Spusťte `FIRMWARE_RESTART` — to zamrazí nativní obrazovku.
 - Vypněte tiskárnu a znovu ji zapněte.
 
-Rozdíl mezi `REBOOT` a `FIRMWARE_RESTART` je, že `REBOOT` restartuje Linux a Klipper na základní desce, zatímco `FIRMWARE_RESTART` částečně restartuje Klipper a plně restartuje MCU.
+Rozdíl mezi `REBOOT` a `FIRMWARE_RESTART` je, že `REBOOT` restartuje Linux a Klipper na základní desce, zatímco `FIRMWARE_RESTART` restartuje Klipper a plně restartuje MCU.
 
 ---
 
@@ -451,7 +465,7 @@ Z-Mod používá následující porty:
 
 Pro přístup k tiskárně zadejte její IP adresu **bez specifikace portu**. *králík*
 
-[Jak konfigurovat v Orca](Recommendations.md#send-files-via-octoklipper-for-printing)
+[Jak konfigurovat v Orca](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
 ---
 
@@ -461,7 +475,7 @@ V Z-Modu má Fluidd/Mainsail posuvníky pro úpravu rychlosti a vzdálenosti fir
 
 Firmwarová retrakce umožňuje upravovat retrakci během tisku bez opětovného krájení.
 
-Místo příkazů jako `G1 E-.5 F2100` použijte `G10` pro retrakci a `G11` pro zrušení retrakce.
+Místo objemných příkazů jako `G1 E-.5 F2100` pro retrakci se používá krátký `G10` a místo `G1 E.5 F2100` pro zrušení retrakce `G11`.
 
 **Jak povolit v Orca:**
 `Nastavení tiskárny` -> `Obecné` -> `Pokročilé` -> Povolit `Použít firmwarovou retrakci`.
@@ -490,13 +504,18 @@ unretract_speed: 35
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
 
-Použijte `GET_RETRACTION` pro zobrazení aktuálního nastavení.
+Použijte `GET_RETRACTION` pro zobrazení aktuálního nastavení v terminálu.
+
+Variantu nahrazení retrakce připravil [@minicx](https://github.com/loss-and-quick/)
+```
+SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_extruder])}[filament_retraction_length[current_extruder]]{else}[retraction_length]{endif} RETRACT_SPEED={if not is_nil(filament_retraction_speed[current_extruder])}[filament_retraction_speed[current_extruder]]{else}[retraction_speed]{endif}
+```
 
 ---
 
 ### Po instalaci Z-Modu je moje obrazovka mrtvá a nereaguje na dotyky.
 
-- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](Recommendations.md#install-latest-native-firmware-and-zmod-updates)
+- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](Recommendations.md#nainstalujte-nejnovější-standardní-firmware-a-aktualizace-z-mod)
 - Přečtěte si [známé zvláštnosti](#known-peculiarities) *bizon*
 - Možná jste vypnuli obrazovku. Povolte ji pomocí makra [DISPLAY_ON](System.md#display_on)
 
@@ -504,7 +523,7 @@ Použijte `GET_RETRACTION` pro zobrazení aktuálního nastavení.
 
 ### Mám nainstalovanou nejnovější verzi a vývojář říká, že je třeba aktualizovat.
 
-- Ujistěte se, že jste vložili nejnovější verzi z flash disku
+- Ujistěte se, že jste nainstalovali nejnovější verzi z flash disku
 
 - **Přejděte do webového rozhraní**.
 ```
@@ -520,7 +539,7 @@ Nastavení-> Aktualizace softwaru-> Stiskněte Zkontrolovat aktualizace
 
 ### Chci odstranit Z-Mod - musím znovu kalibrovat?
 
-Ne - všechna nastavení jsou uložena
+Ne, všechna nastavení zůstanou zachována.
 
 ---
 
@@ -543,11 +562,6 @@ Ne - všechna nastavení jsou uložena
 
 ---
 
-### Známé funkce
-
-[Známé funkce](https://github.com/ghzserg/zmod#known-peculiarities)
-
----
 
 ### Specifika AD5X
 
@@ -560,7 +574,7 @@ Ne - všechna nastavení jsou uložena
 ### Nápověda
 ### Jak kontaktovat podporu
 
-1. [Aktualizujte Z-Mod na nejnovější verzi a všechny pluginy](Setup.md#updating-the-mod).
+1. [Aktualizujte Z-Mod na nejnovější verzi a všechny pluginy](Setup.md#aktualizace-modu).
 2. Přeložte mod do ruštiny ```LANG LANG=ru``` nebo angličtiny ```LANG LANG=en```
 3. Jasně popište problém (snímky obrazovky, fotky, text).
 4. Spusťte [CLEAR_EMMC](System.md#clear_emmc) pro vymazání logů.
@@ -595,7 +609,7 @@ Odstranění modu obnoví původní logo. Pokud se tak na AD5M nestane:
 
 Logo od Alberto Maciel:
 
-- [ADM5/AD4MPro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
+- [AD5M/AD5M Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5m)
 - [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/logo/ad5x)
 
 ---
@@ -658,6 +672,8 @@ V souladu s tím musí Z-Mod načíst nativní Klipper.
 - Uložte soubor
 - Vypněte a zapněte tiskárnu (nerestartujte!)
 
+<img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
+
 <img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/821eb1c7-8cba-4a22-951f-852b1cb6c8ef" />
 
 Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=13``` - tento příkaz nainstaluje nejnovější verzi MCU.
@@ -665,7 +681,7 @@ Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=13``` - ten
 Pokud vše ostatní selže a **Klipper nefunguje**:
 
 - Přepněte na nativní Klipper, jak je popsáno výše.
-- [Nainstalujte nativní tovární firmware](Native_FW.md#how-to-install-native-firmware), který nainstaluje nativní MCU.
+- [Nainstalujte nativní tovární firmware](Native_FW.md#jak-nainstalovat-nativní-firmware), který nainstaluje nativní MCU.
 
 ---
 
@@ -694,10 +710,10 @@ Zvyšte tuto hodnotu – některé tiskárny fungují dobře s výchozí hodnoto
 
 Kromě toho může být zastavení filamentu v IFS způsobeno:
 
-- Extruder je nabitý cívkou 1, ale vytahuje se cívka 2 — použijte [`SET_EXTRUDER_SLOT`](AD5X.md#5-how-to-manually-tell-the-printer-which-spool-is-loaded) k synchronizaci aktuálního slotu extruderu.
+- Extruder je nabitý cívkou 1, ale vytahuje se cívka 2 — použijte [`SET_EXTRUDER_SLOT`](AD5X.md#5-jak-ručně-sdělit-tiskárně-která-cívka-je-vložena) k synchronizaci aktuálního slotu extruderu.
 - Vkládá se nový filament, zatímco starý filament zůstává uvnitř extruderu.
 - Moduly 4 v 1 a jejich trubice mají různé délky, což vyžaduje úpravu `filament_unload_into_tube` v `mod_data/filament.json`. Nastavte ji na **70 nebo vyšší**.
-  ➜ [Více podrobností](AD5X.md#basic-parameters-most-frequently-adjusted)
+  ➜ [Více podrobností](AD5X.md#základní-parametry-nejčastěji-upravované)
 
 Problém může také pramenit z **nemožnosti odemknout filament v kanálu IFS**.
 
@@ -708,7 +724,7 @@ Mechanické příčiny zahrnují:
 
 Řešení: Odstraňte nečistoty, rozeberte mechanismus a správně znovu sestavte součásti.
 
-Po opravách otestujte tisk a chování zámku/odemčení filamentu pomocí [příkazů IFS](AD5X.md#10-ifs-commands).
+Po opravách otestujte tisk a chování zámku/odemčení filamentu pomocí [příkazů IFS](AD5X.md#10-příkazy-ifs).
 
 ---
 

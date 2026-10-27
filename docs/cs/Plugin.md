@@ -40,6 +40,27 @@ DISABLE_PLUGIN name=g28_tenz
 ```
 
 ---
+
+## PLUGINS
+
+Zobrazí nabídku správy pluginů.
+
+<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
+
+V této nabídce můžete zapínat, vypínat a úplně odstraňovat doplňkové pluginy.
+
+- Levý sloupec (aktivace): kliknutím plugin zapnete nebo vypnete.
+    - Zelené tlačítko — plugin je aktivní.
+    - Šedé tlačítko — plugin je vypnutý.
+- Pravý sloupec (aktualizace): zapíná nebo vypíná automatické aktualizace přes Moonraker.
+    - UPDATE: ON — aktualizace jsou zapnuté.
+    - UPDATE: OFF — aktualizace jsou vypnuté.
+
+**Jak plugin úplně odstranit:**
+
+Pokud plugin již nepotřebujete, přepněte obě jeho tlačítka na šedou (vypněte samotný plugin i jeho aktualizace), stiskněte SAVE (MOONRAKER RESTART) a poté restartujte tiskárnu. Systém automaticky smaže jeho složku z `mod_data/plugins/`.
+
+---
 ## Instalace klasických pluginů Klipperu s moduly Pythonu
 
 Pro klasické pluginy Klipperu, které pracují s moduly Pythonu (např. [klipper-led_effect](https://github.com/julianschill/klipper-led_effect)), je vyžadován speciální instalační proces, který zahrnuje vytvoření symbolického odkazu na modul Klipperu.

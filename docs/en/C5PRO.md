@@ -1,5 +1,5 @@
-#Creator5
-#Creator5 Pro
+# Creator5
+# Creator5 Pro
 
 !!! note
     This document is relevant for Creator 5 and Creator 5 Pro
@@ -9,21 +9,23 @@
 - The printer always works with **4 colors** (T0, T1, T2, T3). All four slots are available in the selection menu.
 - To turn on the camera, use `CAMERA_ON VIDEO=video67`.
 - Klipper may crash. Solution: `Process Profile` -> `Other` -> `Output G-code` -> `Exclude models` — uncheck the checkbox.
-- Instead of the `CLOSE_DILALOGS` macro (slow closing), always use `FAST_CLOSE_DILAOGS` (fast closing).
+- Instead of the `CLOSE_DIALOGS` macro (slow closing), always use `FAST_CLOSE_DIALOGS` (fast closing).
 - The `NEW_SAVE_CONFIG` macro does not work.
-- No support for Klipper 13
+- No support for Klipper 13; contributions are welcome.
 
 ---
 
 ## How to prepare a file in Orca
 
-- [Send files to print via Octo/Klipper.](/Recommendations/#send-files-to-print-via-octoklipper)
+- [Send files to print via Octo/Klipper.](/Recommendations/#send-files-via-octoklipper-for-printing)
 - [Orca Slicer Profiles](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 - [It is strongly recommended to enable the preprocessor](/Global/#force_md5)
 
 ---
 ## COLOR
 ## How to use the color and filament type selection menu
+
+<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
 
 <img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
 
@@ -33,12 +35,13 @@ Select the spool you want to work with (for example, spool 2):
 
 <img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
 
-You can perform four actions:
+You can perform five actions:
 
 - Change the spool color.
 - Change the plastic type (PLA, PETG, ABS, ...).
 - Pick up this extruder onto the carriage.
 - Load new filament into the extruder.
+- Remove this extruder from the carriage.
 
 **How to change color:**
 
@@ -51,7 +54,7 @@ After selection you will return back, and the spool color in the list should cha
 If the color did not change: close the window with the X and run the `COLOR` macro again. Sometimes the screen does not have time to refresh.
 
 **How to change type:**
-Click "Change type". Select a type from the list.
+Click "Change type". Select a type from the list. Types can be edited for screenless mode.
 
 <img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
 
@@ -78,7 +81,7 @@ This window opens automatically when you start printing, if the `SAVE_ZMOD_DATA 
 - `3: PETG ->` – the third color (black PETG), printed from spool 3 (orange PETG). Because there are no other PETG plastics in the printer.
 - `4: PETG-CF ->` – the fourth color (blue PETG-CF), printed from spool 1 (black PETG-CF). Because there are no other PETG-CF plastics in the printer.
 
-If the image looks like this
+If the image looks like this:
 
 <img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
 
@@ -112,7 +115,7 @@ Automatic calibration ranges from 0.01 to 0.04 and is useless for viscous plasti
 
 ## Fine tuning
 
-First you need to turn off the native printer screen using the `DISPLAY_OFF` macro.
+Does not work with the factory screen view, so you first need to [turn off the native printer screen](/System/#display_off) using the `DISPLAY_OFF` macro.
 
 **How to find these settings:**
 
@@ -129,7 +132,7 @@ In this file, for each plastic type (PLA, ABS, PETG, etc.) there is a list of nu
 | `temp` | 220 | Temperature to which the nozzle is heated to change filament. The value depends on the material type |
 | `temp_manual` | 250 | Purge temperature in manual mode (when loading through the menu). |
 | `temp_wait` | 120 | Idle temperature — the nozzle cools down to it after purging. |
-| `filament_drop_length` | 50 | **Drop length.** How many millimeters of plastic the printer will extrude into the trash bin to clean the nozzle from the old color. |
+| `filament_drop_length` | 50 | **Drop length.** How many millimeters of plastic the printer will extrude into the trash bin before printing; `0` disables moving to the trash bin. |
 | `filament_full_length` | 600 | **Tube length.** How many millimeters of plastic the printer will extrude after the filament runout sensor triggers |
 | `filament_tube_length` | 295 | Filament loading length when inserting a new spool. |
 
@@ -176,7 +179,7 @@ To prevent the color selection window from showing at the start of printing, use
 **SILENT**:
 - `0` — show the window (default)
 - `1` — do not show the window, use previously set colors
-- `2` — do not show the window, on auto-matching failure show the selection menu
+- `2` — do not show the window; if auto-matching fails, show the selection menu
 ```
 SAVE_ZMOD_DATA SILENT=1
 ```
@@ -194,6 +197,9 @@ You can also set the value:
 - `2` — check only the data prepared by the slicer script, without scanning the entire file
 **!If file scanning is disabled**, the printer does not know how many extruders are used, so **Auto PA will be run for all spools**
 
+!!! note
+    For 3MF files, auto-matching and scanning are enabled automatically
+
 ---
 
 To enable **automatic color matching** from the gcode file with physical spools, use the parameter
@@ -201,13 +207,17 @@ To enable **automatic color matching** from the gcode file with physical spools,
 ```
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
-You can configure your own values for pausing printing in silent mode by adding the following numbers:
+You can configure your own values for aborting printing in silent mode by adding the following numbers:
 - `1` — printing continues even if auto color assignment failed
 - `2` — At least one material does not match (for example, gcode says ABS, but you only have PLA loaded)
 - `4` — At least one color does not match at all (usually because file scanning is disabled)
 - `8` — At least one color matches poorly
 - `16` — The same physical spool was assigned to more than one tool index in the file
-For example, using the value `30` will pause printing in silent mode if any problems with automatic assignment occur, and `AUTO_ASSIGN_COLORS=10` (2+8) will pause printing if at least one material does not match + at least one color matches poorly.
+For example, using the value `30` will abort printing in silent mode if any problems with automatic assignment occur, and `AUTO_ASSIGN_COLORS=6` (2+4) will abort printing if at least one material does not match + at least one color does not match at all.
+
+!!! note
+    For 3MF files, auto-matching and scanning are enabled automatically
+
 
 ---
 
@@ -221,7 +231,7 @@ You can set the following values (in minutes):
 * `0` — function disabled (extruders do not turn off during idle)
 * `5`, `10`, `20`, `40`, `60` — time after which the unused extruder will be turned off
 
-**Important:** For this option to work correctly, **Ooze prevention** must be enabled in the slicer. Without it, the printer cannot correctly handle the temperature modes of idle hotends during filament change.
+**Important:** For this option to work correctly, **Ooze prevention** must be enabled in the slicer (`Print settings` > `Multimaterial` > `Ooze prevention`). Without it, the printer cannot correctly handle the temperature modes of idle hotends during filament change.
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
 
@@ -229,14 +239,14 @@ You can set the following values (in minutes):
 
 ## Change the number of attempts to pick up or put back the tool
 
-You need to add to `mod_data/user.cfg`:
+In the Fluidd web interface, open `mod_data/user.cfg` via "Configuration" in the left column and add the lines:
 
 ```
 [zmod_color]
 retry: 3
 ```
 
-Default is 5.
+Default is 5. `[Sections]` and macros in this file are not changed by firmware updates.
 
 ---
 
@@ -326,7 +336,7 @@ Extruder calibration allows the printer to know the exact position of each of th
 
 **What will happen:**
 
-- The printer will perform (G28).
+- The printer will perform homing (G28).
 - Heat the bed to 65°C.
 - Take each of the 4 extruders (T0–T3) in turn.
 - For each extruder: heat the nozzle, perform a purge, clean against the rubber, then use sensors to determine the exact X, Y and Z coordinates.
@@ -413,7 +423,7 @@ T_INFO
 
 ## Ventilation modes
 
-Creator5 Pro is equipped with a chamber ventilation system with several fans. Proper ventilation control is critically important for the print quality of different materials.
+Creator 5 Pro is equipped with a chamber ventilation system with several fans. Proper ventilation control is critically important for the print quality of different materials.
 
 **External intake (PLA, TPU):**
 
@@ -478,7 +488,7 @@ Thus, during multi-color printing with different materials, ventilation will aut
 
 ## Print acceleration
 
-Add to 'mod_data/user.cfg'
+To disable the firmware slowdowns on short perimeters, open the Fluidd web interface -> left column -> `Configuration` tab -> `mod_data`/`user.cfg` and add three lines:
 
 ```
 [printer]
@@ -486,13 +496,13 @@ short_move_limit: False
 short_extrude_move_limit: False
 ```
 
-This setting significantly speeds up printing, but can cause printer crashes when printing with fuzzy skin.
+Starting with factory firmware 1.9.9, this setting significantly speeds up printing, but can cause printer crashes when printing with fuzzy skin.
 
 ---
 
 ## Disabling fast head return and preheating
 
-Add to 'mod_data/user.cfg'
+Add to `mod_data/user.cfg`:
 
 ```
 [virtual_sdcard]
@@ -500,16 +510,20 @@ enable_speed_return: False
 enable_preheat: False
 ```
 
-- **enable_speed_return**: False — Disables forced return of the head to the model at 600 mm/s, removing the risk of strong kinematic impacts and breaking the hotend against printed parts (prime tower). Safe return trajectory control is fully passed to OrcaSlicer.
-- **enable_preheat**: False — Disables background scanning of Klipper files, unloading the CPU. The built-in function accelerated heating when using more than two nozzles in a short period, since the printer cannot heat more than two nozzles simultaneously. Predictive heating is calculated more accurately on the OrcaSlicer side.
+- **enable_speed_return**:
+    - `enable_speed_return: False` — the head returns to the model from the hotend pickup area at the speed and along the trajectory set in the slicer.
+    - `enable_speed_return: True` — the head returns to the model from the hotend pickup area at 600 mm/s along a trajectory chosen by the printer firmware (collisions with the edges of the prime tower are possible).
+- **enable_preheat**:
+    - `enable_preheat: False` — disables predictive background scanning of the G-code file during printing, unloading the CPU and disk. Predictive heating is calculated more accurately on the OrcaSlicer side.
+    - `enable_preheat: True` — uses predictive background scanning of the G-code file to preheat the next nozzle. Speeds up heating when more than two nozzles are used within a short time, since the printer cannot heat more than two nozzles simultaneously.
 
 ---
 
 ## Disabling the open door notification
 
-To remove notifications about an open cover or door in mode without the native screen
+To remove notifications about an open cover or door in screenless mode:
 
-Add to 'mod_data/user.cfg'
+Add to `mod_data/user.cfg`:
 
 ```
 [gcode_button topDoor]

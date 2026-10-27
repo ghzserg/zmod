@@ -45,14 +45,14 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
     - **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
     - **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Körperschwingungen, so dass Sie **schneller und ohne "Ringe "** an Modellen drucken können.
     - **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
-    - **Tischschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
+    - **Bettschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
 
 #### 3. Intelligente Funktionen für Zuverlässigkeit
 
 * **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
 * **Z-Mod:**
 
-    - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder einen Tisch berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
+    - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder das Bett berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
     - **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
     - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch Z-Mod-Dateien auf Beschädigungen..
     - **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
@@ -110,9 +110,9 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
 !!! danger
     *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers **riskieren**. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!
     
-    Wenn du nicht weißt, was das ist, nicht verstehst, warum du die Klipper-Webseite brauchst oder einfach nur mit der Standardversion zufrieden bist, installiere diesen Mod nicht, für alle anderen - **bitte lies die vollständige Anleitung**!
+    Wenn Sie nicht wissen, was das ist, nicht verstehen, wozu Sie die Klipper-Weboberfläche brauchen, oder einfach mit der Standardversion zufrieden sind, installieren Sie diesen Mod nicht. Für alle anderen — **bitte lesen Sie die Anleitung vollständig**!
     
-    Du hast den Mod installiert. Sie wollen nichts verstehen - Sie drucken, wie Sie es getan haben. Sie müssen überhaupt nichts anpassen oder ändern. Sie haben beschlossen, dass Sie bereit sind, weiterzumachen - Sie machen weiter - indem Sie die [Dokumentation](https://ghzserg.github.io/) lesen.
+    Sie haben den Mod installiert und wollen sich mit nichts beschäftigen — drucken Sie wie bisher. Sie müssen überhaupt nichts einstellen oder ändern. Wenn Sie bereit sind, weiterzugehen, — lesen Sie die [Dokumentation](/de/SetupCalibrations/).
 
 ## Bevor Sie beginnen
 
@@ -125,16 +125,16 @@ Diese Funktionen sind auf die Standard-Firmware portiert:
 3. Fehler beheben [E0011](/de/Global/#fix_e0011)
 4. behebt Fehler [E0017](/de/Global/#fix_e0017)
 5. [Deaktivieren von Drucker/Telemetrie/China_cloud-Updates](/de/Global/#china_cloud)
-6. [Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#return-printer-to-factory-settings-needed-for-installation-mod)
-7. [FF5M zu FF5MPro neu flashen](/de/Native_FW/#re-flash-5m-to-5mpro)
-8. [FF5MPro zu FF5M](/de/Native_FW/#übersetzen-5mpro-zu-5m)
+6. [Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)
+7. [FF5M zu FF5MPro neu flashen](/de/Native_FW/#5m-zu-5mpro-konvertieren)
+8. [FF5MPro zu FF5M](/de/Native_FW/#übersetzen-von-5mpro-in-5m)
 
 ### Kompatibilität
 Installiert auf einer sauberen Version:
 
 - FF5M/FF5MPro **mindestens 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3, 5.1.7, 5.1.9)
 - [AD5X](/de/AD5X/) **nur** (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 3.0.3, 3.0.9, 3.1.0, 3.1.5, 3.1.6, 3.1.7) _beliebige IFS-Version_
-- Creator 5/Creator 5 Pro **nur** (1.9.9, 2.0.0).
+- [Creator 5/Creator 5 Pro](/de/C5PRO/) **nur** (1.9.9, 2.0.0).
 
 Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
