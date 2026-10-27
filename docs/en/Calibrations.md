@@ -136,6 +136,6 @@ When the mesh calibration is performed, the starting zero is calibrated.
 
 ### LOAD_ZOFFSET_NATIVE 
 
-Move the z-offset from the native screen to screenless mode
+Move the z-offset from the native screen to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 [How Z-Offset Works on Your Printer](/SetupCalibrations/#how-z-offset-works-on-your-printer)

@@ -293,7 +293,7 @@ Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podlo�
 U této tiskárny **má Z-offset smysl pouze BĚHEM tisku**. Hodnoty, které vidíte na displeji nebo v rozhraní PŘED nebo PO tisku, jsou pouze orientační a neodpovídají skutečnosti.
 
 **Druhé nejdůležitější pravidlo:**
-**Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný**: každý žije vlastním životem. Při přechodu do režimu bez nativní obrazovky spusťte makro ```LOAD_ZOFFSET_NATIVE``` — přečte Z-offset z nativní obrazovky a přenese ho do režimu bez nativní obrazovky.
+**Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný**: každý žije vlastním životem. Při přechodu do režimu bez nativní obrazovky spusťte makro ```LOAD_ZOFFSET_NATIVE``` — přečte Z-offset z nativní obrazovky a přenese ho do režimu bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
 #### Nastavení Z-offsetu z nativní obrazovky tiskárny
 
@@ -325,7 +325,7 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 *   Seřizování Z-offsetu přes Fluidd/Mainsail při práci s nativní obrazovkou není vhodné, protože nativní obrazovka neví o existenci Fluidd/Mainsail.
 
 **Druhé důležité pravidlo:**
-**Z-offset v režimu s nativní obrazovkou a v režimu bez nativní obrazovky je odlišný; každý má své vlastní nastavení. Použijte ```LOAD_ZOFFSET_NATIVE``` pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky.**
+**Z-offset v režimu s nativní obrazovkou a v režimu bez nativní obrazovky je odlišný; každý má své vlastní nastavení. Použijte ```LOAD_ZOFFSET_NATIVE``` pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky.** _Pro Creator 5 / Creator 5 Pro není potřeba._
 
 #### Nastavení Z-offsetu přes Fluidd / Mainsail / GuppyScreen při provozu *bez nativní obrazovky*
 
@@ -343,7 +343,7 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-3.  Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE```, které přečte hodnotu Z-offsetu z nativní obrazovky a použije ji pro režim bez nativní obrazovky.
+3.  Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE```, které přečte hodnotu Z-offsetu z nativní obrazovky a použije ji pro režim bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
 **Hlavní výhody:**
 

@@ -317,7 +317,7 @@ Bei unserem Drucker ist der **Z-Offset NUR während des Drucks** relevant. Die W
 
 **Zweitwichtigste Regel:**
 
-**Der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist nicht derselbe**: Jeder lebt sein eigenes Leben. Führen Sie beim Wechsel in den Modus ohne nativen Bildschirm das Makro ```LOAD_ZOFFSET_NATIVE``` aus – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn in den Modus ohne nativen Bildschirm.
+**Der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist nicht derselbe**: Jeder lebt sein eigenes Leben. Führen Sie beim Wechsel in den Modus ohne nativen Bildschirm das Makro ```LOAD_ZOFFSET_NATIVE``` aus – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn in den Modus ohne nativen Bildschirm. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
 #### Anpassen des Z-Offsets vom nativen Bildschirm des Druckers
 
@@ -351,7 +351,7 @@ Der native Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Offsets.
 
 **Zweite wichtige Regel:**
 
-**Der Z-Offset im Modus mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist unterschiedlich,** jeder hat seine eigene Einstellung. Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren.
+**Der Z-Offset im Modus mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist unterschiedlich,** jeder hat seine eigene Einstellung. Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
 #### Einstellen des Z-Offsets über Fluidd / Mainsail / GuppyScreen beim Arbeiten **im Modus ohne nativen Bildschirm**
 
@@ -370,7 +370,7 @@ SAVE_ZMOD_DATA LOAD_ZOFFSET=1
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn.
+Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
 **Wichtigste Vorteile:**
 

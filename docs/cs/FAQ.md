@@ -45,7 +45,7 @@ Jakoukoliv funkci lze přepsat v `mod_data/user.cfg` nebo `printer.cfg`.
 - Odstraňte veškerý startovací G-code a použijte makra [START_PRINT](Main.md#start_print) a [END_PRINT](Main.md#end_print).
 - Nativní kamera je vypnutá; použijte alternativní kameru přes [CAMERA_ON](Zmod.md#camera_on).
 - AD5M/AD5X: v případě potřeby ručně nastavte `Z_OFFSET` v [START_PRINT](Main.md#start_print) nebo použijte [LOAD_ZOFFSET](Global.md#load_zoffset) k načtení uložených offsetů.
-- Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE``` – přečte Z-offset z nativní obrazovky a použije ho v režimu bez nativní obrazovky.
+- Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE``` – přečte Z-offset z nativní obrazovky a použije ho v režimu bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 - Síť podložky `auto` se načítá automaticky při startu.
 - Protokol FlashForge není podporován (zpracovává ho nativní obrazovka). Použijte „Octo/Klipper“:
 
@@ -197,7 +197,7 @@ Při použití nativní obrazovky mod do Z-offsetu nezasahuje; používá se Z-o
 
 Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný: každý žije vlastním životem a nastavuje se samostatně.
 
-Pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky použijte `LOAD_ZOFFSET_NATIVE`.
+Pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky použijte `LOAD_ZOFFSET_NATIVE`. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
 Úpravy Z-offsetu přes Fluidd/Mainsail/GuppyScreen/HelixScreen ovlivňují tisk pouze do restartu. Neměňte ho, pokud nerozumíte, kam se tryska pohybuje.
 

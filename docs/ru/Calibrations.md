@@ -140,6 +140,6 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 ### LOAD_ZOFFSET_NATIVE
 
-Перенести настройки z-offset с родного экрана в режим без экрана
+Перенести настройки z-offset с родного экрана в режим без экрана. _Для Creator 5 / Creator 5 Pro не требуется._
 
 [Как работает Z-Offset на вашем принтере](/ru/SetupCalibrations/#как-работает-z-offset-на-вашем-принтере)

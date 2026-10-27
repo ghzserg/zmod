@@ -99,7 +99,7 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 - Entfernen Sie den gesamten Start-G-Code und verwenden Sie die Makros [START_PRINT](/de/Main/#start_print) und [END_PRINT](/de/Main/#end_print).
 - Die Standardkamera ist deaktiviert; starten Sie die alternative Kamera mit [CAMERA_ON](/de/Zmod/#camera_on).
 - Gegebenenfalls ist es notwendig, den Parameter `Z_OFFSET` manuell in das Makro [START_PRINT](/de/Main/#start_print) zu schreiben oder den globalen Parameter [LOAD_ZOFFSET](/de/Global/#load_zoffset) zu verwenden, der den Z-Offset aus den globalen Parametern lädt, die zuvor über SET_GCODE_OFFSET gespeichert wurden. *crot*.
-- Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset vom nativen Bildschirm und wendet ihn auf den Modus ohne nativen Bildschirm an.
+- Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf. Es liest den Z-Offset vom nativen Bildschirm und wendet ihn auf den Modus ohne nativen Bildschirm an. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 - Das Bettnetz wird beim Start automatisch geladen.
 - Das FlashForge-Protokoll wird nicht unterstützt (es wird vom nativen Bildschirm verarbeitet). Verwenden Sie „Octo/Klipper“.
 
@@ -234,7 +234,7 @@ Bei Verwendung des nativen Bildschirms beeinflusst der Mod den Z-Offset nicht; e
 
 Der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist unterschiedlich: Jeder lebt sein eigenes Leben und wird separat eingestellt.
 
-Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren.
+Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
 Z-Offset-Anpassungen über Fluidd/Mainsail/GuppyScreen/HelixScreen sind **nur bis zum Neustart** wirksam. Ändern Sie ihn nicht, ohne zu verstehen, wohin sich die Düse bewegt.
 

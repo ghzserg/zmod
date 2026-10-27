@@ -142,6 +142,6 @@ Bei der Bettnetzkalibrierung wird auch der Nullpunkt kalibriert.
 
 ### LOAD_ZOFFSET_NATIVE
 
-Übertragen der Z-Offset-Einstellungen vom nativen Bildschirm in den Modus ohne nativen Bildschirm
+Übertragen der Z-Offset-Einstellungen vom nativen Bildschirm in den Modus ohne nativen Bildschirm. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
 [Wie funktioniert Z-Offset auf Ihrem Drucker](/de/SetupCalibrations/#wie-funktioniert-z-offset-auf-ihrem-drucker)

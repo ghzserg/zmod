@@ -136,6 +136,6 @@ Při kalibraci sítě se kalibruje i nulový bod.
 
 ### LOAD_ZOFFSET_NATIVE 
 
-Zkopíruje Z-offset z nativní obrazovky do režimu bez nativní obrazovky.
+Zkopíruje Z-offset z nativní obrazovky do režimu bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
 [Jak funguje Z-Offset na vaší tiskárně](SetupCalibrations.md#jak-funguje-z-offset-na-vaší-tiskárně)

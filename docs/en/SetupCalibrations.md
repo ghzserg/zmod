@@ -293,7 +293,7 @@ Simply put, it is the **precise distance between the nozzle tip and the bed** at
 On our printer, **Z-Offset is ONLY relevant DURING printing**. The values you see on the screen or in the interface BEFORE or AFTER printing are for reference only and do not reflect the actual situation.
 
 **The Second Most Important Rule:**
-**The Z-Offset with the native screen and in screenless mode is not the same**: each lives its own life. When switching to screenless mode, run the ```LOAD_ZOFFSET_NATIVE``` macro — it reads the Z-Offset from the native screen and applies it to screenless mode.
+**The Z-Offset with the native screen and in screenless mode is not the same**: each lives its own life. When switching to screenless mode, run the ```LOAD_ZOFFSET_NATIVE``` macro — it reads the Z-Offset from the native screen and applies it to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 #### Adjusting Z-Offset from the Stock Printer Screen
 
@@ -325,7 +325,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 *   Adjusting the Z-Offset via Fluidd/Mainsail while using the native screen is not advisable, because the native screen is not aware of the existence of Fluidd/Mainsail.
 
 **Second important rule:**
-**The Z-Offset for native-screen mode and screenless mode is different; each has its own setting.** Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-Offset from the native screen to screenless mode.
+**The Z-Offset for native-screen mode and screenless mode is different; each has its own setting.** Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-Offset from the native screen to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 #### Adjusting Z-Offset via Fluidd / Mainsail / GuppyScreen when operating *without the stock screen*
 
@@ -343,7 +343,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
     <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
 
-3.  If you want to transfer z-offset from the native screen to screenless mode, call the macro ```LOAD_ZOFFSET_NATIVE``` — it will read the z-offset value from the native screen and apply it to screenless mode.
+3.  If you want to transfer z-offset from the native screen to screenless mode, call the macro ```LOAD_ZOFFSET_NATIVE``` — it will read the z-offset value from the native screen and apply it to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 **Key Advantages:**
 

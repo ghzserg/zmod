@@ -44,7 +44,7 @@ Any function can be overridden in `mod_data/user.cfg` or `printer.cfg`
 - Remove all start gcode and use [START_PRINT](/Main/#start_print) and [END_PRINT](/Main/#end_print) macros.
 - Stock camera disabled; use the alternative via [CAMERA_ON](/Zmod/#camera_on).
 - AD5M/AD5X: If needed, manually set `Z_OFFSET` in [START_PRINT](/Main/#start_print) or use [LOAD_ZOFFSET](/Global/#load_zoffset) to load saved offsets.
-- If you want to transfer z-offset from the native screen to screenless mode, call the macro ```LOAD_ZOFFSET_NATIVE``` — it will read the z-offset value from the native screen and apply it to screenless mode.
+- If you want to transfer z-offset from the native screen to screenless mode, call the macro ```LOAD_ZOFFSET_NATIVE``` — it will read the z-offset value from the native screen and apply it to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 - Bed mesh `auto` loads automatically on startup.
 - FlashForge protocol is unsupported (handled by the screen). Use "Octo/Klipper":
 
@@ -84,7 +84,7 @@ AD5M/AD5M Pro have 128 MB of RAM; half of it is used by the system, and native s
 **Disabling the screen saves RAM but changes print management (start/pause/resume/cancel/recovery, file upload, power-loss recovery). Modify start/end G-code accordingly.** *elk*
 
 Without the screen, Z-offset from the screen isn't applied. Use [START_PRINT](/Main/#start_print) parameters or global settings. [Details](/FAQ/#how-does-z-offset-work)
-To transfer the z-offset from the native screen to screenless mode, run ```LOAD_ZOFFSET_NATIVE``` — it reads the z-offset from the native screen and applies it to screenless mode.
+To transfer the z-offset from the native screen to screenless mode, run ```LOAD_ZOFFSET_NATIVE``` — it reads the z-offset from the native screen and applies it to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 Read [features of screenless operation](#screenless-version-notes).
 
@@ -230,7 +230,7 @@ When using the screen, the mod doesn't interfere with z-offset. The z-offset sav
 
 The Z-offset for native-screen mode and screenless mode is not the same: each lives its own life and is configured separately.
 
-Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from the native screen to screenless mode.
+Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from the native screen to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
 Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen only apply until reboot. Changing it without understanding nozzle movement is not recommended.
 
