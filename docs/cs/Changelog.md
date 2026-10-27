@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+      - [Verze 1.7.5](#verze-175)
       - [Verze 1.7.4](#verze-174)
       - [Verze 1.7.3](#verze-173)
       - [Verze 1.7.2](#verze-172)
@@ -49,6 +50,33 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.5
+28.10.2026
+
+* Z-Mod: Podpora formátu 3MF
+* Z-Mod: Při tisku 3MF probíhá přiřazení barev okamžitě — [preprocesor](Global.md#force_md5) už není potřeba
+* Z-Mod: Rychlý KAMP — zapíná se automaticky a funguje bez pomalého vylučování objektů. U 3MF jsou data pro KAMP k dispozici okamžitě, u G-code po prohledání souboru
+* C5Pro: Podpora až 100 barev v souboru s přiřazením ke 4 extruderům
+* Nové makro [PLUGINS](Global.md#plugins) — nabídka správy pluginů
+* Nové makro [_USER_PREPARE_PRINT](Main.md#_user_prepare_print) — volá se před odesláním souboru k tisku
+* Nový globální parametr [PURGE_ALL_EXTRUDERS](Global.md#purge_all_extruders) — profouknutí všech použitých extruderů při startu tisku
+* Nový globální parametr [UNUSED_EXTRUDERS_OFF_TIME](Global.md#unused_extruders_off_time) — vypnutí ohřevu nečinných extruderů po nastavené době
+* Telegram bot podpory [@zmod_help_bot](https://t.me/zmod_help_bot) nyní využívá AI
+* Fluidd: Podpora 3MF
+* Mainsail: Podpora 3MF
+* Moonraker: Podpora 3MF
+* Opravy chyb
+
+**Změny přijaté do hlavních projektů:**
+
+* Fluidd: seskupování akčních tlačítek v dialozích prompt [#1977](https://github.com/fluidd-core/fluidd/pull/1977)
+* Mainsail: podpora HEX barev ve třetím parametru prompt maker, společně s @function3d [#2687](https://github.com/mainsail-crew/mainsail/pull/2687)
+* OrcaSlicer (bude ve verzi 2.5.0, nyní v betě):
+    * Tolerance zjednodušení obrysů vylučovaných objektů je nyní uživatelským nastavením [#16503](https://github.com/OrcaSlicer/OrcaSlicer/pull/16503)
+    * Pro AD5M/AD5M Pro, AD5X, Creator 5 / 5 Pro nastavena tolerance 0.2 mm — méně bodů obrysu, více objektů na podložce bez chyby „Timer too close“ [#16687](https://github.com/OrcaSlicer/OrcaSlicer/pull/16687)
+    * Skripty postprocesingu se aplikují na G-code uvnitř .gcode.3mf [#16464](https://github.com/OrcaSlicer/OrcaSlicer/pull/16464)
+    * Opraven posun bbox první vrstvy v plate_N.json na všech podložkách kromě první [#16860](https://github.com/OrcaSlicer/OrcaSlicer/pull/16860)
 
 ### Verze 1.7.4
 24.09.2026 

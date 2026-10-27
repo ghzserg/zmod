@@ -1,6 +1,7 @@
 # Changelog
 
 - [Version History](#version-history)
+    - [Version 1.7.5](#version-175)
     - [Version 1.7.4](#version-174)
     - [Version 1.7.3](#version-173)
     - [Version 1.7.2](#version-172)
@@ -49,6 +50,33 @@
 ---
 
 ## Version History
+
+### Version 1.7.5
+28.10.2026
+
+* Z-Mod: 3MF support
+* Z-Mod: With 3MF, color mapping is instant — the [preprocessor](/Global/#force_md5) is no longer needed
+* Z-Mod: Fast KAMP — enabled automatically and works without slow object exclusion. For 3MF the KAMP data is available instantly, for G-code — after the file is scanned
+* C5Pro: Support for up to 100 colors in a file, mapped to 4 extruders
+* New macro [PLUGINS](/Global/#plugins) — plugin management menu
+* New macro [_USER_PREPARE_PRINT](/Main/#_user_prepare_print) — called before the file is sent to print
+* New global parameter [PURGE_ALL_EXTRUDERS](/Global/#purge_all_extruders) — purge all used extruders at print start
+* New global parameter [UNUSED_EXTRUDERS_OFF_TIME](/Global/#unused_extruders_off_time) — turn off heating of idle extruders after a set time
+* The support Telegram bot [@zmod_help_bot](https://t.me/zmod_help_bot) is now AI-powered
+* Fluidd: 3MF support
+* Mainsail: 3MF support
+* Moonraker: 3MF support
+* Bug fixes
+
+**Upstream contributions:**
+
+* Fluidd: prompt action button grouping [#1977](https://github.com/fluidd-core/fluidd/pull/1977)
+* Mainsail: HEX colors in the third parameter of macro prompts, together with @function3d [#2687](https://github.com/mainsail-crew/mainsail/pull/2687)
+* OrcaSlicer (coming in 2.5.0, currently in beta):
+    * Exclude-object outline tolerance is now a user setting [#16503](https://github.com/OrcaSlicer/OrcaSlicer/pull/16503)
+    * Tolerance set to 0.2 mm for AD5M/AD5M Pro, AD5X, Creator 5 / 5 Pro — fewer outline points, more objects per plate without "Timer too close" [#16687](https://github.com/OrcaSlicer/OrcaSlicer/pull/16687)
+    * Post-processing scripts are applied to G-code packed into .gcode.3mf [#16464](https://github.com/OrcaSlicer/OrcaSlicer/pull/16464)
+    * Fixed the first-layer bbox in plate_N.json being shifted on every plate after the first [#16860](https://github.com/OrcaSlicer/OrcaSlicer/pull/16860)
 
 ### Version 1.7.4
 24.09.2026

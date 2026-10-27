@@ -231,6 +231,8 @@ Um die Heizung ungenutzter Extruder beim Mehrfarbdruck automatisch auszuschalten
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
+Mehr dazu: [UNUSED_EXTRUDERS_OFF_TIME](/de/Global/#unused_extruders_off_time).
+
 Sie können die folgenden Werte festlegen (in Minuten):
 * `0` — Funktion deaktiviert (Extruder werden während des Leerlaufs nicht ausgeschaltet)
 * `5`, `10`, `20`, `40`, `60` — Zeit, nach der der ungenutzte Extruder ausgeschaltet wird

@@ -92,6 +92,9 @@ Speciální test po diagonále pro analýzu a porovnání frekvenčních profil�
 ---
 ### KAMP
 
+!!! note "Rychlý KAMP"
+    KAMP se zapíná automaticky a funguje bez pomalého vylučování objektů. U 3MF jsou data pro KAMP k dispozici okamžitě, u G-code po prohledání souboru.
+
 Adaptivní kalibrace sítě podložky s čištěním trysky.
 Parametry:
 

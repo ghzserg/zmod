@@ -170,6 +170,9 @@ Beispiel: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`.
 
 ##### SCAN_FILE_COLORS
 
+!!! note "3MF"
+    Bei 3MF-Dateien erfolgen Scannen und Farbzuordnung sofort; der [Präprozessor](/de/Global/#force_md5) wird nicht benötigt.
+
 Ermöglicht das Scannen von G-Code-Dateien, um die verwendeten Werkzeugwechselbefehle (T0, T1 usw.) und die ihnen im Slicer zugewiesenen Farben und Materialien zu ermitteln: 0 (aus), 1 (an), 2 (kein vollständiges Scannen, nur die vom Slicer-Skript vorbereiteten Daten werden gelesen).
 
 [Siehe Einrichtung der Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
@@ -222,6 +225,23 @@ Ist Auto PA aktiviert ([PRINT_AUTOPA](/de/Global/#print_autopa) oder die Schaltf
 
 Beispiel: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
+---
+
+##### UNUSED_EXTRUDERS_OFF_TIME
+
+Nur Creator 5 / Creator 5 Pro
+
+Heizung ungenutzter Extruder beim Mehrfarbdruck nach einer festgelegten Zeit (in Minuten) abschalten:
+
+- 0 - nicht abschalten
+- 5, 10, 20, 40, 60 - nach wie vielen Minuten Leerlauf die Extruderheizung abgeschaltet wird
+
+Im Menü wird der Parameter als „Ungenutzte Extruder nach N Min. ausschalten“ angezeigt.
+
+Damit die Funktion korrekt arbeitet, muss im Slicer **Ooze prevention** aktiviert sein (`Druckeinstellungen` > `Multimaterial` > `Ooze prevention`).
+
+Beispiel: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
+
 ### Parameter für den Start des Druckvorgangs und die Erstellung einer Bettkarte [START_PRINT]:
 
 ##### MIDI_START
@@ -266,6 +286,9 @@ Beispiel: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
 ---
 
 ##### USE_KAMP
+
+!!! note "Schnelles KAMP"
+    KAMP wird automatisch aktiviert und funktioniert ohne den langsamen Objektausschluss. Bei 3MF stehen die KAMP-Daten sofort zur Verfügung, bei G-Code nach dem Scannen der Datei.
 
 Wo möglich, ein adaptives Bettnetz (KAMP) anstelle des vollständigen Bettnetzes verwenden:
 

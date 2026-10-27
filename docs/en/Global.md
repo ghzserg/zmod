@@ -139,6 +139,9 @@ Example: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
+!!! note "3MF"
+    For 3MF files, scanning and color mapping are instant; the [preprocessor](/Global/#force_md5) is not needed.
+
 Enables scanning gcode files for which toolchange commands (T0, T1, etc) are used, and what colors and materials they are mapped to in the slicer: 0 (disable), 1 (enable), 2 (disable full scan, but look for data prepared by slicer script)
 
 [See preprocessing](/Recommendations/#enable-md5-checksum-control)
@@ -185,6 +188,23 @@ When Auto PA is enabled ([PRINT_AUTOPA](/Global/#print_autopa) or the `Auto PA` 
 
 Example: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
+---
+
+##### UNUSED_EXTRUDERS_OFF_TIME
+
+Creator 5 / Creator 5 Pro only
+
+Turn off heating of idle extruders during multi-color printing after a set time (in minutes):
+
+- 0 - do not turn off
+- 5, 10, 20, 40, 60 - after how many idle minutes the extruder heating is turned off
+
+In the menu the parameter is shown as "Turn off idle extruders in N min".
+
+For correct operation, **Ooze prevention** must be enabled in the slicer (`Print settings` > `Multimaterial` > `Ooze prevention`).
+
+Example: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
+
 ### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START
@@ -221,6 +241,9 @@ Example: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
 
 ---
 ##### USE_KAMP
+
+!!! note "Fast KAMP"
+    KAMP is enabled automatically and works without slow object exclusion. For 3MF the KAMP data is available instantly, for G-code — after the file is scanned.
 
 Use Adaptive Mesh (KAMP) instead of full bed mesh where possible: 0 (no), 1 (yes) (0).
 Recommended to set `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` to align purge location with KAMP mesh.

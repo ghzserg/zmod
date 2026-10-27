@@ -98,6 +98,9 @@ Führt einen speziellen Test entlang der Diagonalen durch, um die Frequenzprofil
 
 ### KAMP
 
+!!! note "Schnelles KAMP"
+    KAMP wird automatisch aktiviert und funktioniert ohne den langsamen Objektausschluss. Bei 3MF stehen die KAMP-Daten sofort zur Verfügung, bei G-Code nach dem Scannen der Datei.
+
 Adaptive Bettnetzkalibrierung mit Düsenreinigung.
 Parameter:
 

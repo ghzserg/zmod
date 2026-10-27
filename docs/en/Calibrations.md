@@ -92,6 +92,9 @@ CoreXY belt frequency analysis using a half-axis test.
 ---
 ### KAMP
 
+!!! note "Fast KAMP"
+    KAMP is enabled automatically and works without slow object exclusion. For 3MF the KAMP data is available instantly, for G-code — after the file is scanned.
+
 Adaptive bed mesh calibration with nozzle cleaning.
 Parameters:
 

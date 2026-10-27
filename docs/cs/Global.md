@@ -141,6 +141,9 @@ Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
+!!! note "3MF"
+    U souborů 3MF probíhá prohledání a přiřazení barev okamžitě; [preprocesor](Global.md#force_md5) není potřeba.
+
 Zapne prohledávání G-code souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (vypnout), 1 (zapnout), 2 (bez úplného prohledávání, jen data připravená skriptem sliceru)
 
 [Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
@@ -187,6 +190,23 @@ Když je zapnuté Auto PA ([PRINT_AUTOPA](Global.md#print_autopa) nebo tlačítk
 
 Příklad: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
+---
+
+##### UNUSED_EXTRUDERS_OFF_TIME
+
+Pouze Creator 5 / Creator 5 Pro
+
+Vypnout ohřev nečinných extruderů při vícebarevném tisku po nastavené době (v minutách):
+
+- 0 - nevypínat
+- 5, 10, 20, 40, 60 - po kolika minutách nečinnosti se ohřev extruderu vypne
+
+V menu se parametr zobrazuje jako „Vypnout nečinné extrudery za N min“.
+
+Pro správnou funkci musí být ve sliceru zapnuta funkce **Ooze prevention** (`Nastavení tisku` > `Multimateriál` > `Ooze prevention`).
+
+Příklad: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
+
 ### Parametry startu tisku a měření sítě podložky [START_PRINT]:
 
 ##### MIDI_START
@@ -222,6 +242,9 @@ Příklad: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
 
 ---
 ##### USE_KAMP
+
+!!! note "Rychlý KAMP"
+    KAMP se zapíná automaticky a funguje bez pomalého vylučování objektů. U 3MF jsou data pro KAMP k dispozici okamžitě, u G-code po prohledání souboru.
 
 Použít adaptivní mesh (KAMP) místo plného sítě podložky, kde je to možné: 0 (ne), 1 (ano) (0).
 Doporučuje se nastavit `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v oblasti KAMP.

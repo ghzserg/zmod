@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#änderungsprotokolle-ausführlich)
+		- [Version 1.7.5](#version-175)
 		- [Version 1.7.4](#version-174)
 		- [Version 1.7.3](#version-173)
 		- [Version 1.7.2](#version-172)
@@ -49,6 +50,34 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.5"
+	### Version 1.7.5
+	28.10.2026
+
+	* Z-Mod: Unterstützung für das 3MF-Format
+	* Z-Mod: Beim Drucken von 3MF erfolgt die Farbzuordnung sofort – der [Präprozessor](/de/Global/#force_md5) wird nicht mehr benötigt
+	* Z-Mod: Schnelles KAMP – wird automatisch aktiviert und funktioniert ohne den langsamen Objektausschluss. Bei 3MF stehen die KAMP-Daten sofort zur Verfügung, bei G-Code nach dem Scannen der Datei
+	* C5Pro: Unterstützung für bis zu 100 Farben in einer Datei mit Zuordnung zu 4 Extrudern
+	* Neues Makro [PLUGINS](/de/Global/#plugins) – Menü zur Plugin-Verwaltung
+	* Neues Makro [_USER_PREPARE_PRINT](/de/Main/#_user_prepare_print) – wird aufgerufen, bevor die Datei zum Drucken gesendet wird
+	* Neuer globaler Parameter [PURGE_ALL_EXTRUDERS](/de/Global/#purge_all_extruders) – Spülen aller verwendeten Extruder beim Druckstart
+	* Neuer globaler Parameter [UNUSED_EXTRUDERS_OFF_TIME](/de/Global/#unused_extruders_off_time) – Heizung ungenutzter Extruder nach einer festgelegten Zeit abschalten
+	* Der Support-Telegram-Bot [@zmod_help_bot](https://t.me/zmod_help_bot) arbeitet jetzt mit KI
+	* Fluidd: Unterstützung für 3MF
+	* Mainsail: Unterstützung für 3MF
+	* Moonraker: Unterstützung für 3MF
+	* Fehlerbehebungen
+
+	**In die Hauptprojekte übernommene Änderungen:**
+
+	* Fluidd: Gruppierung von Aktionsschaltflächen in Prompt-Dialogen [#1977](https://github.com/fluidd-core/fluidd/pull/1977)
+	* Mainsail: HEX-Farben im dritten Parameter von Makro-Prompts, gemeinsam mit @function3d [#2687](https://github.com/mainsail-crew/mainsail/pull/2687)
+	* OrcaSlicer (kommt in 2.5.0, derzeit in der Beta):
+	    * Die Toleranz für die Vereinfachung der Objektausschluss-Konturen ist jetzt eine Benutzereinstellung [#16503](https://github.com/OrcaSlicer/OrcaSlicer/pull/16503)
+	    * Toleranz für AD5M/AD5M Pro, AD5X, Creator 5 / 5 Pro auf 0.2 mm gesetzt – weniger Konturpunkte, mehr Objekte auf dem Bett ohne den Fehler „Timer too close“ [#16687](https://github.com/OrcaSlicer/OrcaSlicer/pull/16687)
+	    * Nachbearbeitungsskripte werden auf den G-Code in .gcode.3mf angewendet [#16464](https://github.com/OrcaSlicer/OrcaSlicer/pull/16464)
+	    * Verschiebung der Bounding Box der ersten Schicht in plate_N.json auf allen Platten außer der ersten behoben [#16860](https://github.com/OrcaSlicer/OrcaSlicer/pull/16860)
 
 ??? note "Version 1.7.4"
 	### Version 1.7.4

@@ -231,6 +231,8 @@ Chcete-li automaticky vypnout ohřev nepoužívaných extruderů při vícebarev
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
+Podrobnosti: [UNUSED_EXTRUDERS_OFF_TIME](Global.md#unused_extruders_off_time).
+
 Můžete nastavit následující hodnoty (v minutách):
 * `0` — funkce vypnuta (extrudery se během nečinnosti nevypínají)
 * `5`, `10`, `20`, `40`, `60` — doba, po které bude nepoužívaný extruder vypnut

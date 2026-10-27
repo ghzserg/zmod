@@ -231,6 +231,8 @@ To automatically turn off heating of unused extruders during multi-color printin
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
+Details: [UNUSED_EXTRUDERS_OFF_TIME](/Global/#unused_extruders_off_time).
+
 You can set the following values (in minutes):
 * `0` — function disabled (extruders do not turn off during idle)
 * `5`, `10`, `20`, `40`, `60` — time after which the unused extruder will be turned off

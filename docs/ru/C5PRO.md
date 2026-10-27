@@ -316,6 +316,8 @@ SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
+Подробнее: [UNUSED_EXTRUDERS_OFF_TIME](/ru/Global/#unused_extruders_off_time).
+
 Вы можете установить следующие значения (в минутах):
 * `0` — функция отключена (экструдеры не выключаются во время простоя)
 * `5`, `10`, `20`, `40`, `60` — время, через которое неиспользуемый экструдер будет отключен
