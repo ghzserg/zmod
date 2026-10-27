@@ -286,6 +286,9 @@ Nyní bude tiskárna před každým tiskem měřit síť pouze v oblasti, kde se
 
 ### Jak funguje Z-offset na vaší tiskárně
 
+!!! note "Creator 5 / Creator 5 Pro"
+    U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
+
 **Co je Z-offset?**
 Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podložkou** ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnout – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). [Více zde](FAQ.md#jak-funguje-z-offset)
 
@@ -351,6 +354,9 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 *   **Žádné ruční příkazy nejsou potřeba.** Není nutné používat příkazy `Z_OFFSET_APPLY_PROBE` ani `Z_OFFSET_APPLY_ENDSTOP`. Vše probíhá automaticky „na pozadí“.
 
 #### Z-offset jednoduše:
+
+!!! note "Creator 5 / Creator 5 Pro"
+    U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
 
 *   **Z-offset upravujte pouze během tisku první vrstvy.**
 *   **Při práci s nativní obrazovkou upravujte Z-offset na ní.**

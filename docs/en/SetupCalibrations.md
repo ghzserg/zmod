@@ -286,6 +286,9 @@ Now, before each print, the printer will take a bed mesh only where there are ob
 
 ### How Z-Offset Works on Your Printer
 
+!!! note "Creator 5 / Creator 5 Pro"
+    On Creator 5 / Creator 5 Pro the Z-offset with the native screen and in screenless mode is the same — they are fully synchronized. If the native screen is disabled, you can change the Z-offset during printing via GuppyScreen, HelixScreen, Fluidd or Mainsail — it will be saved.
+
 **What is Z-Offset?**
 Simply put, it is the **precise distance between the nozzle tip and the bed** at the moment the printer considers them to have "touched." The correct Z-Offset ensures that the first layer of plastic adheres perfectly to the bed – not too low (the nozzle will scrape the bed) and not too high (the plastic won't stick). [Learn more](/FAQ/#how-does-z-offset-work)
 
@@ -351,6 +354,9 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 *   **No manual commands required.** You do NOT need to use the `Z_OFFSET_APPLY_PROBE` or `Z_OFFSET_APPLY_ENDSTOP` commands. Everything happens "under the hood."
 
 #### About Z-Offset in Simple Terms:
+
+!!! note "Creator 5 / Creator 5 Pro"
+    On Creator 5 / Creator 5 Pro the Z-offset with the native screen and in screenless mode is the same — they are fully synchronized. If the native screen is disabled, you can change the Z-offset during printing via GuppyScreen, HelixScreen, Fluidd or Mainsail — it will be saved.
 
 *   **Adjust Z-Offset only during the first layer printing.**
 *   **When working with the stock screen — adjust z-offset on it.**

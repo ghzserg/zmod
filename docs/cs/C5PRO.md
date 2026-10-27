@@ -12,6 +12,7 @@
 - Místo makra `CLOSE_DIALOGS` (pomalé zavírání) vždy používejte `FAST_CLOSE_DIALOGS` (rychlé zavírání).
 - Makro `NEW_SAVE_CONFIG` nefunguje.
 - Klipper 13 není podporován; pomoc s vývojem je vítána.
+- U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
 
 ---
 

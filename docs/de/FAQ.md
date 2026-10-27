@@ -228,6 +228,9 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### So funktioniert der Z-Offset
 
+!!! note "Creator 5 / Creator 5 Pro"
+    Beim Creator 5 / Creator 5 Pro ist der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm identisch – beide sind vollständig synchronisiert. Ist der native Bildschirm deaktiviert, können Sie den Z-Offset während des Drucks über GuppyScreen, HelixScreen, Fluidd oder Mainsail ändern – er wird gespeichert.
+
 Lesen Sie den Artikel „[Wie Z-Offset auf unserem Drucker funktioniert](/de/SetupCalibrations/#wie-funktioniert-z-offset-auf-ihrem-drucker)“.
 
 Bei Verwendung des nativen Bildschirms beeinflusst der Mod den Z-Offset nicht; es wird der auf dem Bildschirm gespeicherte Z-Offset verwendet.

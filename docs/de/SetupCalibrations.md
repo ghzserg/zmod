@@ -307,6 +307,9 @@ Vor jedem Druckvorgang nimmt der Drucker nun nur dort ein Bettnetz auf, wo Objek
 
 ### Wie funktioniert Z-Offset auf Ihrem Drucker?
 
+!!! note "Creator 5 / Creator 5 Pro"
+    Beim Creator 5 / Creator 5 Pro ist der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm identisch – beide sind vollständig synchronisiert. Ist der native Bildschirm deaktiviert, können Sie den Z-Offset während des Drucks über GuppyScreen, HelixScreen, Fluidd oder Mainsail ändern – er wird gespeichert.
+
 **Was ist Z-Offset?**
 
 Einfach ausgedrückt handelt es sich um den **exakten Abstand zwischen der Düsenspitze und dem Druckbett** in dem Moment, in dem der Drucker annimmt, dass sie sich „berühren“. Ein korrekter Z-Offset gewährleistet, dass die erste Kunststoffschicht perfekt auf dem Druckbett haftet - nicht zu niedrig (die Düse berührt das Druckbett) und nicht zu hoch (der Kunststoff haftet nicht). [Mehr lesen](/de/FAQ/#so-funktioniert-der-z-offset)
@@ -378,6 +381,9 @@ Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschir
 * **Es sind keine manuellen Befehle erforderlich.** Sie müssen NICHT die Befehle `Z_OFFSET_APPLY_PROBE` oder `Z_OFFSET_APPLY_ENDSTOP` verwenden. Alles passiert „unter der Haube“.
 
 #### Z-Offset in einfachen Worten:
+
+!!! note "Creator 5 / Creator 5 Pro"
+    Beim Creator 5 / Creator 5 Pro ist der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm identisch – beide sind vollständig synchronisiert. Ist der native Bildschirm deaktiviert, können Sie den Z-Offset während des Drucks über GuppyScreen, HelixScreen, Fluidd oder Mainsail ändern – er wird gespeichert.
 
 * **Z-Offset nur beim Drucken der ersten Schicht einstellen.**
 * **Wenn Sie mit dem nativen Bildschirm arbeiten, passen Sie den Z-Offset auf dem nativen Bildschirm an.**

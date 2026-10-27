@@ -438,6 +438,9 @@ Beispiel: `SAVE_ZMOD_DATA DISABLE_SKEW=1`.
 
 ##### LOAD_ZOFFSET
 
+!!! note "Creator 5 / Creator 5 Pro"
+    Beim Creator 5 / Creator 5 Pro ist der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm identisch – beide sind vollständig synchronisiert. Ist der native Bildschirm deaktiviert, können Sie den Z-Offset während des Drucks über GuppyScreen, HelixScreen, Fluidd oder Mainsail ändern – er wird gespeichert.
+
 Z-Offset aus den globalen Parametern laden, die zuvor über SET_GCODE_OFFSET gespeichert wurden:
 
 - 1 - ja

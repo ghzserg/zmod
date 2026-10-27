@@ -356,6 +356,9 @@ Example: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 ---
 ##### LOAD_ZOFFSET
 
+!!! note "Creator 5 / Creator 5 Pro"
+    On Creator 5 / Creator 5 Pro the Z-offset with the native screen and in screenless mode is the same — they are fully synchronized. If the native screen is disabled, you can change the Z-offset during printing via GuppyScreen, HelixScreen, Fluidd or Mainsail — it will be saved.
+
 Load Z-offset from global parameters saved via SET_GCODE_OFFSET: 1 (yes), 0 (no) (1).
 
 [How Z-Offset Works](/FAQ/#how-does-z-offset-work)

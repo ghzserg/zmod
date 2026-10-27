@@ -224,6 +224,9 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### How does Z-Offset work?
 
+!!! note "Creator 5 / Creator 5 Pro"
+    On Creator 5 / Creator 5 Pro the Z-offset with the native screen and in screenless mode is the same — they are fully synchronized. If the native screen is disabled, you can change the Z-offset during printing via GuppyScreen, HelixScreen, Fluidd or Mainsail — it will be saved.
+
 Read the article: [How Z-Offset Works on Your Printer](/SetupCalibrations/#how-z-offset-works-on-your-printer)
 
 When using the screen, the mod doesn't interfere with z-offset. The z-offset saved on the screen is used.

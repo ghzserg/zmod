@@ -12,6 +12,7 @@
 - Statt des Makros `CLOSE_DIALOGS` (langsames Schließen) immer `FAST_CLOSE_DIALOGS` (schnelles Schließen) verwenden.
 - Das Makro `NEW_SAVE_CONFIG` funktioniert nicht.
 - Keine Unterstützung für Klipper 13; Mitarbeit ist willkommen.
+- Beim Creator 5 / Creator 5 Pro ist der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm identisch – beide sind vollständig synchronisiert. Ist der native Bildschirm deaktiviert, können Sie den Z-Offset während des Drucks über GuppyScreen, HelixScreen, Fluidd oder Mainsail ändern – er wird gespeichert.
 
 ---
 

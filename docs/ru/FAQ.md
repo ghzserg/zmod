@@ -232,6 +232,9 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### Как работает Z-Offset
 
+!!! note "Creator 5 / Creator 5 Pro"
+    На Creator 5 / Creator 5 Pro Z-offset на родном экране и в режиме без родного экрана одинаковый — они полностью синхронизированы. Если родной экран отключён, Z-offset можно менять во время печати через GuppyScreen, HelixScreen, Fluidd или Mainsail — он сохранится.
+
 Прочитайте статью "[Как работает Z-Offset на вашем принтере](/ru/SetupCalibrations/#как-работает-z-offset-на-вашем-принтере)"
 
 При работе с экраном мод никак не вмешивается в работу z-offset.

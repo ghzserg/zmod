@@ -193,6 +193,9 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 
 ### Jak funguje Z-Offset?
 
+!!! note "Creator 5 / Creator 5 Pro"
+    U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
+
 Při použití nativní obrazovky mod do Z-offsetu nezasahuje; používá se Z-offset uložený na obrazovce.
 
 Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný: každý žije vlastním životem a nastavuje se samostatně.

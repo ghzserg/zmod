@@ -372,6 +372,9 @@ Igor Polunovskiy
 
 ##### LOAD_ZOFFSET
 
+!!! note "Creator 5 / Creator 5 Pro"
+    На Creator 5 / Creator 5 Pro Z-offset на родном экране и в режиме без родного экрана одинаковый — они полностью синхронизированы. Если родной экран отключён, Z-offset можно менять во время печати через GuppyScreen, HelixScreen, Fluidd или Mainsail — он сохранится.
+
 Загружать Z-offset из глобальных параметров, сохраненных ранее через SET_GCODE_OFFSET. 1 - да, 0 - нет (1)
 
 [Как работает Z-Offset](/ru/FAQ/#как-работает-z-offset)
