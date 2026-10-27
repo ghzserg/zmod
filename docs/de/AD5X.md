@@ -6,28 +6,28 @@
 4. [Menü Drucken (`PRINT`)](#4-menü-drucken-makro-print-ad5x)
     - [Globale AD5X-Parameter](#globale-ad5x-parameter)
 5. [Manuelle Angabe der Spule](#5-wie-man-dem-drucker-ad5x-manuell-mitteilt-welche-spule-eingelegt-ist)
-6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-so-konfigurieren-sie-das-abfallfilament-beim-filamentwechsel)
+6. [Einstellen der Abfallmenge beim Filamentwechsel](#6-so-konfigurieren-sie-den-abfall-beim-filamentwechsel)
 
     - 🔧 [Grundeinstellungen](#grundlegende-parameter-am-häufigsten-angepasst)
-       - ⚙️ [Erweiterte Einstellungen](#erweiterte-parameter-nicht-anpassen-wenn-sie-sich-über-das-ergebnis-nicht-sicher-sind)
+       - ⚙️ [Erweiterte Einstellungen](#erweiterte-parameter-nicht-ändern-wenn-sie-sich-über-das-ergebnis-nicht-sicher-sind)
 
-7. [Fügen Sie Ihre Filamenttypen hinzu](#7-filamenttypen-hinzufügen-oder-entfernen)
-8. [Fügen Sie Ihre Farben hinzu](#8-fügen-sie-ihre-ad5x-farben-hinzu)
-9. [Einparken im Korb und Schneiden des Filaments](#9-korrigiert-den-betrieb-mit-dem-abfallbehälter-und-dem-filamentschneider-ad5x)
+7. [Filamenttypen hinzufügen oder entfernen](#7-filamenttypen-hinzufügen-oder-entfernen)
+8. [Eigene Farben hinzufügen](#8-eigene-ad5x-farben-hinzufügen)
+9. [Parken am Abfallbehälter und Schneiden des Filaments](#9-korrektur-der-arbeit-mit-abfallbehälter-und-filamentschneider-ad5x)
 
     - [Über das Engineering-Menü der nativen Firmware](#abfallbehälter-setup-auf-nativer-ad5x-firmware)
-       - [Über Flash auf nativer Firmware](Setup/#achtung-ad5x)
+       - [Über einen USB-Stick auf nativer Firmware](/de/Setup/#achtung-ad5x)
 
 10. [IFS-Befehle](#10-ifs-befehle)
 11. [IFS-Firmware wiederherstellen](#11-ifs-firmware-wiederherstellen)
 
 [Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md):
 
-Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden.
+Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden:
 
-- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - Kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
-- [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) ist eine Abspaltung von BamBufy
-- [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung über das Heizbett
+- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
+- [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) – ein Fork von Bambufy
+- [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung auf dem Heizbett
 - [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
 
 Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PLUGINS` aus.
@@ -39,10 +39,10 @@ Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PL
 Unterschiede zum AD5M:
 
 - Keine `Entware`.
-- Anstelle des Makros `CLOSE_DIALOGS` (langsames Schließen), **immer** `FAST_CLOSE_DIALOGS` (schnelles Schließen) verwenden.
+- Anstelle des Makros `CLOSE_DIALOGS` (langsames Schließen) **immer** `FAST_CLOSE_DIALOGS` (schnelles Schließen) verwenden.
 - Das Makro `NEW_SAVE_CONFIG` funktioniert **nicht**.
 - Um die Kamera einzuschalten, müssen Sie ```CAMERA_ON VIDEO=video3``` oder ```CAMERA_ON VIDEO=video0``` oder ```CAMERA_ON VIDEO=video99``` verwenden.
-- Klipper kann abstürzen. Lösung `Process Profile` :arrow_right:`Other` :arrow_right:`Output G-cod` :arrow_right:`Model Exclusion` das Häkchen ausschalten.
+- Klipper kann abstürzen. Lösung: `Prozessprofil` :arrow_right: `Sonstiges` :arrow_right: `G-Code-Ausgabe` :arrow_right: Häkchen bei `Objekte ausschließen` entfernen.
 
 ---
 
@@ -50,13 +50,13 @@ Unterschiede zum AD5M:
 
 [Dateien zum Drucken über "Octo/Klipper" senden](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper).
 
-**Sie müssen die unbenutzte Spulen aus der Liste in Orca entfernen.**
+**Entfernen Sie die nicht benutzten Spulen aus der Liste in Orca.**
 
 **Beispiel:**
 Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die Farben der Spulen Nr. 1 und Nr. 3 benötigt.
 
 * In der Datei werden sie als **T0** (erste Farbe) und **T1** (zweite Farbe) bezeichnet.
-* Im Menü müssen Sie für **T0** -> Spool #1 und für **T1** -> Spool #3 auswählen.
+* Im Menü wählen Sie für **T0** -> Spule #1 und für **T1** -> Spule #3.
 
 ---
 
@@ -70,8 +70,8 @@ Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die F
 
 <img width="800" height="480" alt="Farbe" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" />
 
-* `Extruder: 1 (PETG/Orange)` - Dies bedeutet, dass der Drucker jetzt mit orangefarbenem PETG-Kunststoff von Spule Nummer 1 gefüllt ist.
-* `IFS: True` - Das automatische Filamentzufuhrsystem funktioniert.
+* `Extruder: 1 (PETG/Orange)` - Der Drucker ist jetzt mit orangefarbenem PETG von Spule Nummer 1 geladen.
+* `IFS: True` - Das automatische Filamentzufuhrsystem ist aktiv.
 
 **Wählen Sie nun die Spule aus, mit der Sie arbeiten möchten (z. B. Spule 2).**
 
@@ -79,28 +79,28 @@ Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die F
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" />
 
-Sie haben vier Optionen zur Auswahl:
+Sie können vier Aktionen ausführen:
 
 1.  **Die Farbe** der Spule ändern.
-2.  **Ändern Sie die Art** des Kunststoffs (z. B. von PLA zu PETG).
-3.  **Laden** Sie das Filament in den Drucker.
-4.  **Entladen** Sie das Filament aus dem Drucker.
+2.  **Den Typ** des Kunststoffs ändern (z. B. von PLA zu PETG).
+3.  Filament in den Drucker **laden**.
+4.  Filament aus dem Drucker **entladen**.
 
 **Wie man die Farbe ändert:**
 
 1.  Drücken Sie **"Farbe ändern"**.
-2.  **Wählen Sie eine Farbe aus der Liste aus.** Dadurch wird sichergestellt, dass Drucker und Bildschirm Ihre Farbauswahl erkennen.
+2.  **Wählen Sie eine Farbe aus der Liste aus.** So erkennen Drucker und Bildschirm Ihre Farbwahl am besten.
 
 <img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
 
-3.  Nach der Auswahl gehen Sie zurück und die Farbe der Spule in der Liste **sollte sich ändern**.
+3.  Nach der Auswahl kehren Sie zurück, und die Farbe der Spule in der Liste **ändert sich**.
 <img width="556" height="545" alt="bild" src="https://github.com/user-attachments/assets/f32a9239-44c6-449d-bbf7-5f453f149ef7" />
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" />
 
-**Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Farbmakro `Color` neu. Manchmal wird der Bildschirm nicht sofort aktualisiert.
+**Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Makro `COLOR` erneut. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
 **So ändern Sie den Typ:**
 
@@ -111,29 +111,29 @@ Sie haben vier Optionen zur Auswahl:
 
 <img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
 
-**Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Farbmakro `Color` neu. Manchmal wird der Bildschirm nicht sofort aktualisiert.
+**Wenn sich der Typ nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Makro `COLOR` erneut. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
 !!! tip "**Tipp:**"
 	Wenn Sie **die gleiche Farbe und den gleichen Typ** für mehrere Spulen angeben, wechselt der Drucker automatisch zur nächsten Spule, wenn die erste aufgebraucht ist. 
-	Dies wird als **"Endlosspulenmodus "** bezeichnet.
+	Das nennt man **„Endlosspulenmodus“**.
 
 ---
 
 ## **4. Menü "Drucken" (Makro `PRINT`) AD5X**
 
-Dieses Fenster öffnet sich **von selbst**, wenn Sie mit dem Drucken beginnen.
+Dieses Fenster öffnet sich **automatisch**, wenn Sie den Druck starten.
 
 <img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
 
-**So verstehen Sie, was hier steht:**
+**Was hier angezeigt wird:**
 
 - In der linken Spalte stehen Werkzeugnummern und Farben aus der Datei, die vom Slicer übergeben wurden.
 - In der rechten Spalte stehen Spulennummern und Farben, die am Drucker geladen/verwendet werden.
 - `Cube.gcode` – das ist der Name der Datei, die gedruckt wird.
 - `1: PETG ->` – das ist die erste Farbe aus der Datei (oranges PETG). Sie wird mit Filament von Spule 3 gedruckt (oranges PETG).
-- `2: PLA ->` – das ist die zweite Farbe (graues PLA). Sie wird mit Filament von Spule 4 gedruckt (blaues PLA). Da sich keine anderen PLA-Kunststoffe im Drucker befinden.
-- `3: PETG ->` – die dritte Farbe (schwarzes PETG), gedruckt von Spule 3 (oranges PETG). Da sich keine anderen PETG-Kunststoffe im Drucker befinden.
-- `4: PETG-CF ->` – die vierte Farbe (blaues PETG-CF), gedruckt von Spule 1 (schwarzes PETG-CF). Da sich keine anderen PETG-CF-Kunststoffe im Drucker befinden.
+- `2: PLA ->` – das ist die zweite Farbe (graues PLA). Sie wird mit Filament von Spule 4 gedruckt (blaues PLA), da sich keine anderen PLA-Kunststoffe im Drucker befinden.
+- `3: PETG ->` – die dritte Farbe (schwarzes PETG), gedruckt von Spule 3 (oranges PETG), da sich keine anderen PETG-Kunststoffe im Drucker befinden.
+- `4: PETG-CF ->` – die vierte Farbe (blaues PETG-CF), gedruckt von Spule 1 (schwarzes PETG-CF), da sich keine anderen PETG-CF-Kunststoffe im Drucker befinden.
 
 Wenn das Bild so aussieht
 
@@ -146,7 +146,7 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 
 [Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
-**So wechseln Sie die Farbspule während des Druckvorgangs:**
+**So wechseln Sie die Spule für eine Farbe vor dem Druck:**
 
 **Klicken Sie einfach auf das gewünschte T** (z. B. T1) und wählen Sie eine andere Spule aus der Liste aus.
 <img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" />
@@ -173,9 +173,9 @@ SAVE_ZMOD_DATA AUTOINSERT=0
 
 Um zu verhindern, dass Filament während des Druckvorgangs in den Abfall entsorgt wird, verwenden Sie den Parameter [USE_TRASH_ON_PRINT](/de/Global/#use_trash_on_print).
 
-- 0 – Es findet keine Materialentnahme im Abfallbehälter statt. Der Druckkopf fährt während Farbwechseln der ersten Schicht weiterhin zum Abfallbehälter, um Klumpenbildung zu vermeiden. Falls dies bei jeder Schicht auftritt, überprüfen Sie bitte Ihren Start- und Schichtwechsel-G-Code!
-- 1 – Bei Farbwechseln erfolgt eine Materialentnahme im Abfallbehälter. Bei jedem Farbwechsel werden zwei Entnahmen mit einer Länge entsprechend der in filament.json festgelegten `filament_drop_length` (plus `filament_drop_length_add` bei unterschiedlichen Materialien) durchgeführt.
-- 2 – Nach dem Einbringen der neuen Farbe fährt der Druckkopf zum Abfallbehälter und übergibt die Steuerung anschließend wieder an den Slicer. Dieser Modus sollte nur mit einem für diesen Modus vorgesehenen Slicer-Profil verwendet werden.
+- 0 – Es wird nicht in den Abfallbehälter gespült. Bei Farbwechseln in der ersten Schicht fährt der Druckkopf dennoch zum Abfallbehälter, um Klumpen zu vermeiden. Passiert das bei jeder Schicht, prüfen Sie Ihren Start- und Schichtwechsel-G-Code!
+- 1 – Bei Farbwechseln wird in den Abfallbehälter gespült. Bei jedem Farbwechsel erfolgen zwei Spülungen mit einer Länge entsprechend der in filament.json festgelegten `filament_drop_length` (plus `filament_drop_length_add` bei unterschiedlichen Materialien) durchgeführt.
+- 2 – Nach dem Laden der neuen Farbe fährt der Druckkopf zum Abfallbehälter und übergibt die Steuerung anschließend wieder an den Slicer. Dieser Modus sollte nur mit einem für diesen Modus vorgesehenen Slicer-Profil verwendet werden.
 
 ```gcode
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
@@ -187,38 +187,38 @@ Um das Filament nach Abschluss des Druckvorgangs zu entfernen, verwenden Sie den
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls die Datei nicht nach diesen Informationen durchsucht werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#allowed_tool_count).
+Um festzulegen, wie viele Werkzeuge im Farbauswahlfenster angezeigt werden (falls diese Information nicht aus der Datei gelesen werden kann), verwenden Sie den Parameter [ALLOWED_TOOL_COUNT](/de/Global/#allowed_tool_count).
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einrichtung der Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Mit dem Parameter [SCAN_FILE_COLORS](/de/Global/#scan_file_colors) können Sie die gcode-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Sie können den Wert auch auf 2 setzen, um nur die vom Slicer-Skript vorbereiteten Daten zu scannen, ohne die gesamten Dateien zu scannen.
+Mit dem Parameter [SCAN_FILE_COLORS](/de/Global/#scan_file_colors) können Sie G-Code-Dateien nach Werkzeug-, Farb- und Materialinformationen durchsuchen. Mit dem Wert 2 werden nur die vom Slicer-Skript vorbereiteten Daten gelesen, ohne die ganze Datei zu scannen.
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einrichtung der Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-Mit dem Parameter [AUTO_ASSIGN_COLORS](/de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der Gcode-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im stillen Modus unterbrochen, wenn es Probleme mit der automatischen Zuweisung gibt.
+Mit dem Parameter [AUTO_ASSIGN_COLORS](/de/Global/#auto_assign_colors) können Sie die automatische Zuordnung von Farben aus der G-Code-Datei zu physischen Spulen aktivieren. Das Scannen von Dateien muss aktiviert sein, damit diese Funktion funktioniert. Bei einem Wert von 30 wird der Druck im leisen Modus abgebrochen, wenn es Probleme mit der automatischen Zuordnung gibt.
 
-Sie können Ihre eigenen Werte für die Unterbrechung des Druckvorgangs im stillen Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
+Sie können eigene Werte für den Druckabbruch im leisen Modus konfigurieren, indem Sie die folgenden Zahlen addieren:
 
-* 2 (Mindestens ein Material stimmt nicht überein, z. B. wenn in der gcode-Datei ABS angegeben ist, Sie aber nur PLA geladen haben, oder die Materialdaten nicht geladen werden konnten)
+* 2 (Mindestens ein Material stimmt nicht überein, z. B. wenn in der G-Code-Datei ABS angegeben ist, Sie aber nur PLA geladen haben, oder die Materialdaten nicht geladen werden konnten)
 * 4 (Mindestens eine Farbe stimmt überhaupt nicht überein, in der Regel weil das Scannen von Dateien deaktiviert oder fehlgeschlagen ist)
-* 8 (Mindestens eine Farbe passt möglicherweise schlecht.)
+* 8 (Mindestens eine Farbe stimmt schlecht überein)
 * 16 (Mindestens eine physische Spule wurde in der Datei mehr als einem Werkzeugindex zugeordnet.)
 
-[Siehe Einstellung für die Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
+[Siehe Einrichtung der Vorverarbeitung](/de/Recommendations/#aktivieren-sie-die-md5-kontrolle)
 
 ```gcode
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
-Wird ein Befehl zum Farbwechsel aufgerufen und soll auf die bereits geladene Farbe zurückgegriffen werden, wird der Vorgang in der Regel übersprungen, da er sinnlos ist. Falls Sie den vollständigen Farbwechselvorgang aktivieren möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](/de/Global/#always_full_color_change).
+Wird ein Farbwechsel auf die bereits geladene Farbe aufgerufen, wird er normalerweise übersprungen, da er sinnlos ist. Falls Sie trotzdem den vollständigen Farbwechsel ausführen möchten, verwenden Sie den Parameter [ALWAYS_FULL_COLOR_CHANGE](/de/Global/#always_full_color_change).
 
 ```gcode
 SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
@@ -238,21 +238,21 @@ SET_EXTRUDER_SLOT SLOT=1
 
 **Was das bedeutet:**
 
-* `SET_EXTRUDER_SLOT` ist ein Befehl, der sagt: "Drucker, speichere die Spule!
-* `SLOT=1` ist die Nummer der Spule, die Sie gerade nachgefüllt haben. **Die Nummer kann geändert werden!**
+* `SET_EXTRUDER_SLOT` ist ein Befehl, der sagt: „Drucker, merke dir die Spule!“
+* `SLOT=1` ist die Nummer der Spule, die Sie gerade eingelegt haben. **Die Nummer kann geändert werden!**
 
 **Beispiele:**
 
-* Wenn Sie Filament von Spule Nummer 3 aufgefüllt haben, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=3`.
+* Wenn Sie Filament von Spule Nummer 3 eingelegt haben, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=3`.
 * Wenn von der Spule Nummer 2, geben Sie ein: `SET_EXTRUDER_SLOT SLOT=2`.
 
 Nach diesem Befehl weiß der Drucker, welche Spule aktiv ist, und verwechselt keine Farben mehr.
 
-## **6. So konfigurieren Sie das Abfallfilament beim Filamentwechsel**
+## **6. So konfigurieren Sie den Abfall beim Filamentwechsel**
 
-Diese Einstellungen werden benötigt, um beim Wechseln der Spulen weniger Filament zu verschwenden. Um sie zu ändern, müssen Sie zunächst **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
+Diese Einstellungen werden benötigt, um beim Wechseln der Spulen weniger Filament zu verschwenden. Um sie zu ändern, müssen Sie zunächst **den nativen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Im bildschirmlosen Modus sind die Sensoren verfügbar und aktiviert:
+Im Modus ohne nativen Bildschirm sind folgende Sensoren verfügbar und aktiv:
 
 - `Head Switch Sensor` - Vorhandensein von Filament im Extruder
 - `IFS-Bewegungssensor` - Filamentbewegung im IFS
@@ -260,27 +260,27 @@ Im bildschirmlosen Modus sind die Sensoren verfügbar und aktiviert:
 **Wie Sie diese Einstellungen finden:**
 
 1.  Klicken Sie auf die Registerkarte **"Konfiguration"**.
-2.  Suchen Sie den Ordner **"mod_data "** und öffnen Sie ihn.
+2.  Suchen Sie den Ordner **`mod_data`** und öffnen Sie ihn.
 3.  Suchen und öffnen Sie in diesem Ordner die Datei **`filament.json`**.
 
 ![Wo finde ich die Datei](https://github.com/user-attachments/assets/109b0f0a-c87d-4f5c-9333-ebfbb8065b87)
 
-In dieser Datei gibt es eine Liste von Nummern für jede Art von Kunststoff (PLA, ABS, PETG, etc.). Hier ist ihre Bedeutung:
+In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine Liste von Werten. Ihre Bedeutung:
 
 ---
 
 #### **Grundlegende Parameter (am häufigsten angepasst):**
 
-Damit diese Einstellungen funktionieren, müssen Sie **das Display des Druckers deaktivieren**. Verwenden Sie dazu das Makro `DISPLAY_OFF`.
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm des Druckers deaktivieren**. Verwenden Sie dazu das Makro `DISPLAY_OFF`.
 
 1. **`temp`** – Düsentemperatur beim Filamentwechsel. **Der Standardwert ist materialabhängig.**
 
 2. **`filament_drop_length` (Spüllänge)**
 
-* **Einfach erklärt:** Wie viele Millimeter Filament der Drucker in den Abfallbehälter befördert, um die Düse von der vorherigen Farbe zu reinigen. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor dem Druck sowie beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
+* **Einfach erklärt:** Wie viele Millimeter Filament der Drucker in den Abfallbehälter extrudiert, um die Düse von der vorherigen Farbe zu reinigen. Dies gilt beim Laden von Farben außerhalb des Druckvorgangs oder vor dem Druck sowie beim Farbwechsel, wenn USE_TRASH_ON_PRINT auf 1 gesetzt ist.
 
 !!! tip "**Tipp:**"
-	Erhöhen Sie diesen Wert, wenn sich die Farben beim Spulenwechsel vermischen. Verringern Sie ihn, um Abfall zu vermeiden.
+	Erhöhen Sie diesen Wert, wenn sich die Farben beim Spulenwechsel vermischen. Verringern Sie ihn, um Abfall zu reduzieren.
 
 3. **`filament_drop_length_add` (Zusätzliche Spülung)**
 
@@ -291,23 +291,23 @@ Damit diese Einstellungen funktionieren, müssen Sie **das Display des Druckers 
 
 4. **`nozzle_cleaning_length`** – Die Länge (in mm) des Filaments, das beim Reinigen der Düse aus dem Extruder gezogen wird, wenn die Spule nicht mehr verwendet wird. **Standard: 60 mm.**
 
-5. **`filament_unload_into_tube`** – Die Menge an Filament, die aus dem 4-in-1-Modul entnommen wird, wenn der Extruder nicht mehr verwendet wird. **Standardwert: 70 mm.**
+5. **`filament_unload_into_tube`** – Die Länge des Filaments, die ins 4-in-1-Modul zurückgezogen wird, wenn der Extruder nicht mehr verwendet wird. **Standardwert: 70 mm.**
 
 * Wenn Sie ein neueres 4-in-1-Modul verwenden, erhöhen Sie `filament_unload_into_tube` oder, als letzte Möglichkeit, `nozzle_cleaning_length`.
 
 ---
 
-##### **Erweiterte Parameter (Nicht anpassen, wenn Sie sich über das Ergebnis nicht sicher sind):**
+##### **Erweiterte Parameter (nicht ändern, wenn Sie sich über das Ergebnis nicht sicher sind):**
 
-Damit diese Einstellungen funktionieren, müssen Sie **das native Display des Druckers** mithilfe des Makros `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm des Druckers** mithilfe des Makros `DISPLAY_OFF` deaktivieren.
 
 * **`filament_tube_length`** – Gesamtlänge des PTFE-Schlauchs vom IFS-Modul zum Extruder. Nützlich für nicht standardmäßige Schläuche. **Standardwert: 1000 mm.**
-* **`filament_unload_before_cutting`** – Filament-Hubweg **vor** dem Schneiden. **Standardwert: 0 mm.**
-* **`filament_unload_after_cutting`** – Filament-Hubweg **nach** dem Schneiden, bevor das Filament in den Abfallbehälter befördert wird. **Standardwert: 5 mm.**
+* **`filament_unload_before_cutting`** – Rückzug des Filaments **vor** dem Schneiden. **Standardwert: 0 mm.**
+* **`filament_unload_after_cutting`** – Rückzug des Filaments **nach** dem Schneiden, bevor das Filament in den Abfallbehälter befördert wird. **Standardwert: 5 mm.**
 * **`filament_unload_after_drop`** – Rückzugsdistanz nach dem Spülen, um Nachlaufen zu verhindern. **Standardwert: 3 mm.**
 * **`filament_extruder_speed`** – Geschwindigkeit (in mm/min), mit der Filament in den Extruder geladen wird. **Standardwert: 300 mm/min (5 mm/s).**
 * **`filament_ifs_speed`** – Geschwindigkeit (in mm/min), mit der das IFS-Modul arbeitet. **Standardwert: 1200 mm/min (20 mm/s).**
-* **`filament_fan_speed`** – Lüfterdrehzahl (0–255) während des Spülens zur Kühlung von Nachlaufen. **Standardwert: 102.**
+* **`filament_fan_speed`** – Lüfterdrehzahl (0–255) während des Spülens zum Abkühlen des ausgetretenen Kunststoffs. **Standardwert: 102.**
 * **`filament_autoinsert_empty_length`** – Filamentlänge, die beim automatischen Laden in einen leeren Extruder eingezogen wird. **Standardwert: 600 mm.**
 
 * **`filament_autoinsert_full_length`** – Filamentlänge, die beim Filamentwechsel eingezogen wird. **Standardwert: 550 mm.**
@@ -326,15 +326,15 @@ Damit diese Einstellungen funktionieren, müssen Sie **das native Display des Dr
 
 #### **Slicer-gesteuerte Reinigung (Purge)**
 
-Es ist möglich, die Reinigung stattdessen vom Slicer steuern zu lassen, indem andere `USE_TRASH_ON_PRINT`-Einstellungen anstelle des Standardwerts `1` verwendet werden.
+Die Reinigung kann stattdessen vom Slicer gesteuert werden, indem man für `USE_TRASH_ON_PRINT` einen anderen Wert als den Standardwert `1` verwendet.
 
 ##### Nopoop-Modus (`SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`)
 
-In diesem Modus wird vom Drucker während des Farbwechsels keine Reinigung durchgeführt. Der Drucker schneidet das Filament ab, kehrt zum Reinigungsturm (Prime Tower) zurück, um das Filament ent- und zuladen, und setzt den Druck dann sofort von dort aus fort.
+In diesem Modus wird vom Drucker während des Farbwechsels keine Reinigung durchgeführt. Der Drucker schneidet das Filament ab, kehrt zum Reinigungsturm (Prime Tower) zurück, um das Filament zu ent- und zu laden, und setzt den Druck dann sofort von dort aus fort.
 
 In der ersten Schicht fährt der Drucker während des Filamentwechsels stattdessen zum Abwurfschacht, kehrt aber danach zum Reinigungsturm zurück, ohne "Poop" (Abfall) zu produzieren.
 
-Um das alte Filament in diesem Modus ordnungsgemäß zu reinigen, wird empfohlen, die Option **"Reinigung im Reinigungsturm" (Purge into prime tower)** in den Einstellungen von OrcaSlicer zu aktivieren. Diese finden Sie in den Druckereinstellungen unter dem Reiter **"Multimaterial"**. Sie können dann die Einstellung **"Flush Volumes"** verwenden, um die Reinigungsmengen anzupassen. Wenn Sie den automatisch berechneten Spülmengen einen festen Betrag hinzufügen möchten, können Sie dies tun, indem Sie das **"Düsenvolumen" (Nozzle Volume)** unter dem Reiter **"Allgemein"** der Druckereinstellungen festlegen.
+Um das alte Filament in diesem Modus ordnungsgemäß zu reinigen, wird empfohlen, die Option **"Reinigung im Reinigungsturm" (Purge into prime tower)** in den Einstellungen von OrcaSlicer zu aktivieren. Sie finden sie in den Druckereinstellungen auf der Registerkarte **"Multimaterial"**. Sie können dann die Einstellung **"Flush Volumes"** verwenden, um die Reinigungsmengen anzupassen. Wenn Sie den automatisch berechneten Spülmengen einen festen Betrag hinzufügen möchten, können Sie dies tun, indem Sie das **"Düsenvolumen" (Nozzle Volume)** unter dem Reiter **"Allgemein"** der Druckereinstellungen festlegen.
 
 Es ist normal, dass Ihr Reinigungsturm bei Verwendung dieser Option erheblich größer als gewöhnlich ist, insbesondere bei geringen Schichthöhen.
 
@@ -346,7 +346,7 @@ Diese Option wird nur in ***OrcaSlicer*** unterstützt; sie kann in ***Bambu Stu
 
 In diesem Modus führt der Drucker während des Farbwechsels keine eigene Reinigung durch. Der Drucker schneidet das Filament ab, fährt zum Abwurfschacht und übergibt die Steuerung wieder an den Slicer.
 
-Dieser Modus erfordert eine entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Abwurf (Pooping) und die anschließende Rückkehr zum Reinigungsturm verwaltet. Verwenden Sie diesen Modus NICHT mit einer G-Code-Datei, die nicht speziell dafür gesliced wurde.
+Dieser Modus erfordert eine entsprechende Unterstützung durch das Druckerprofil im Slicer; insbesondere ist ein Filamentwechsel-G-Code erforderlich, der den Abwurf (Pooping) und die anschließende Rückkehr zum Reinigungsturm verwaltet. Verwenden Sie diesen Modus NICHT mit G-Code, der nicht speziell dafür gesliced wurde.
 
 Bei der Verwendung von OrcaSlicer können Optionen wie **"In Infill reinigen"** in diesem Modus nicht verwendet werden. Dies ist ein Fehler in OrcaSlicer und kann nicht durch Z-Mod behoben werden. In Bambu Studio funktionieren sie korrekt.
 
@@ -361,11 +361,11 @@ Diese Profile entsprechen weitgehend den Standard-AD5X-Profilen, mit folgenden A
 
 - Alle benutzerdefinierten Z-Mod-G-Codes hinzugefügt, einschließlich des entsprechenden Filamentwechsel-G-Codes für ```USE_TRASH_ON_PRINT=2```
 - **"Reinigung im Reinigungsturm"** aktiviert (nur OrcaSlicer)
-- Automatische Einstellung des korrekten ```USE_TRASH_ON_PRINT``` Wertes zu Beginn des Drucks.
+- Automatisches Setzen des korrekten ```USE_TRASH_ON_PRINT```-Werts zu Beginn des Drucks
 - Z-Hop-Typ auf Normal eingestellt
 - Düsenvolumen auf 144 eingestellt
-- Filament-Entladezeit auf 66s eingestellt für genauere Schätzungen (basierend auf den Standardeinstellungen der filament.json)
-- Lüfter-Anlaufzeit auf 1,5s und Kickstart auf 0,5s eingestellt (nur OrcaSlicer)
+- Filament-Entladezeit auf 66 s eingestellt für genauere Schätzungen (basierend auf den Standardwerten in filament.json)
+- Lüfter-Anlaufzeit auf 1,5 s und Kickstart auf 0,5 s eingestellt (nur OrcaSlicer)
 
 In OrcaSlicer können Sie zwischen den beiden Modi wechseln, indem Sie die Einstellung "Reinigung im Reinigungsturm" ändern. Wenn diese aktiviert ist, wird der Nopoop-Modus verwendet. Wenn sie deaktiviert ist, wird der Poop-Modus verwendet. Das Profil stellt den korrekten USE_TRASH_ON_PRINT-Wert zu Beginn eines Drucks automatisch für Sie ein.
 
@@ -375,35 +375,33 @@ Bei der Verwendung von Bambu Studio wird nur der Poop-Modus unterstützt.
 
 ## **7. Filamenttypen hinzufügen oder entfernen**
 
-Damit diese Einstellungen funktionieren, müssen Sie **den systemeigenen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um einen neuen Filamenttyp hinzuzufügen, fügen Sie Folgendes in der ```mod_data/user.cfg``` hinzu:
+Um einen neuen Filamenttyp hinzuzufügen, fügen Sie Folgendes in `mod_data/user.cfg` hinzu:
 ```
 [zmod_ifs]
 filament_NEWTYPE: 300
 ```
-Dabei wird NEWTYPE durch den gewünschten Filamenttyp (z.B. HIPS) ersetzt und die Zahl ist die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments.
+Dabei wird `NEWTYPE` durch den gewünschten Filamenttyp (z. B. HIPS) ersetzt, und die Zahl ist die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments.
 
-Um einen Filamenttyp auszublenden, fügen Sie Folgendes in der ```mod_data/user.cfg``` hinzu:
+Um einen Filamenttyp auszublenden, fügen Sie Folgendes in `mod_data/user.cfg` hinzu:
 ```
 [zmod_color]
 hide_filament_types: XXX,YYY,ZZZ
 ```
-Dabei werden XXX, YYY, ZZZ durch die gewünschten Filamenttypen ersetzt (z.B. PLA-CF,PETG-CF,SILK). Sie können dies verwenden, um die Standardtypen auszublenden oder um Typen auszublenden, die Sie manuell über die oben genannte Einstellung hinzugefügt haben. Dadurch wird der Filamenttyp nicht deaktiviert; er wird lediglich im Typauswahlmenü ausgeblendet.
+Dabei werden `XXX`, `YYY`, `ZZZ` durch die gewünschten Filamenttypen ersetzt (z. B. `PLA-CF,PETG-CF,SILK`). Sie können dies verwenden, um die Standardtypen auszublenden oder um Typen auszublenden, die Sie manuell über die oben genannte Einstellung hinzugefügt haben. Dadurch wird der Filamenttyp nicht deaktiviert; er wird lediglich im Typauswahlmenü ausgeblendet.
 
 ```IFS_PRINT_DEFAULTS``` - gibt die verfügbaren Filamenttypen und deren Schmelztemperaturen aus
 
 ---
 
-## **8. Fügen Sie Ihre AD5X-Farben hinzu**
+## **8. Eigene AD5X-Farben hinzufügen**
 
-Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
-Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/de.json` (verwenden Sie Ihre Sprache anstelle von `de`):
+Um eine Farbe hinzuzufügen oder umzubenennen, öffnen Sie `mod_data/color/de.json` (verwenden Sie Ihre Sprache anstelle von `de`) und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende um.
 
-und fügen Sie eine neue Farbe hinzu oder benennen Sie eine bestehende Farbe um.
-
-Um den Namen einer Farbe anzuzeigen, muss der Farbname mit einem Unterstrich ```_``` beginnen.
+Damit der Farbname auf den Schaltflächen angezeigt wird, muss er mit einem Unterstrich `_` beginnen.
 
 Beispiel:
 ```
@@ -436,27 +434,27 @@ Beispiel:
 }
 ```
 
-Die Aufschrift ```_transparent``` wird auf den Schaltflächen angezeigt
+Die Beschriftung `_transparent` wird auf den Schaltflächen angezeigt.
 
 ---
 
-## 9. Korrigiert den Betrieb mit dem Abfallbehälter und dem Filamentschneider AD5X
+## 9. Korrektur der Arbeit mit Abfallbehälter und Filamentschneider AD5X
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-Der Abfallbehälter und die Messerkoordinaten können bei verschiedenen AD5X-Druckern unterschiedlich sein. Manchmal kann der Unterschied bis zu 4 mm betragen.
+Die Koordinaten von Abfallbehälter und Messer können bei verschiedenen AD5X-Druckern unterschiedlich sein. Manchmal kann der Unterschied bis zu 4 mm betragen.
 
-Dies ist der Grund dafür:
+Das führt dazu, dass:
 
-- Das Filament gelangt möglicherweise nicht in den Abfallbehälter;
-- Das Messer schneidet das Filament nicht;
-- Der Druckkopf kann gegen die Wand stoßen.
+- das Filament nicht in den Abfallbehälter gelangt;
+- das Messer das Filament nicht schneidet;
+- der Druckkopf gegen die Wand stoßen kann.
 
-Um dies zu beheben, müssen Sie:
+So beheben Sie das:
 
-1. Z-Mod aktualisieren.
-2. öffnen Sie die Datei `/rw/Adventurer5M.json`.
-3. finden Sie die Zeilen wie:
+1. Aktualisieren Sie Z-Mod.
+2. Öffnen Sie die Datei `/rw/Adventurer5M.json`.
+3. Suchen Sie Zeilen wie:
 ```json
 {
 	"CutXOffset" : 0.5,
@@ -477,7 +475,7 @@ Ersetzen Sie **nur** diese Werte:
 "yOffset": 0.0,
 ```
 
-4. Geben Sie den Befehl: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
+4. Geben Sie den Befehl `UPDATE_FF_OFFSET` ein (damit werden die Einstellungen aktualisiert).
 5. Geben Sie dann ein: `_GOTO_TRASH` (der Drucker fährt zum Abfallbehälter).
 
 ---
@@ -486,11 +484,11 @@ Ersetzen Sie **nur** diese Werte:
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-1. Geben Sie den Befehl `_GOTO_TRASH` ein - der Druckkopf fährt an den Abfallbehälter.
+1. Geben Sie den Befehl `_GOTO_TRASH` ein – der Druckkopf fährt zum Abfallbehälter.
 2. Wenn sich der Abfallbehälter nicht schließt, bewegen Sie den Druckkopf vorsichtig, bis sich der Abfallbehälter schließt. Verwenden Sie GCODE: ```G1 Y230.2```
-3. Schauen Sie, welche **Y**-Koordinate Sie jetzt haben.
+3. Prüfen Sie, welche **Y**-Koordinate Sie jetzt haben.
 4. Ziehen Sie 229 von dieser Zahl ab. Das Ergebnis ist Ihr `yOffset`.
-5. Schauen Sie, welche **X**-Koordinate Sie jetzt haben.
+5. Prüfen Sie, welche **X**-Koordinate Sie jetzt haben.
 6. Ziehen Sie 52.5 von dieser Zahl ab. Das Ergebnis ist Ihr `xOffset`.
 
 Beispiele:
@@ -502,7 +500,7 @@ Beispiele:
 Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehälter ist eingerichtet.
 
 7. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-8. Geben Sie anschließend `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
+8. Geben Sie anschließend `_GOTO_TRASH` ein (der Drucker fährt erneut zum Abfallbehälter).
 
 ---
 
@@ -510,7 +508,7 @@ Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehält
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)
 
-1. Geben Sie den Befehl `_CUT_PRUTOK` ein - der Druckkopf wird zur Position des Messers fahren.
+1. Geben Sie den Befehl `_CUT_PRUTOK` ein – der Druckkopf fährt zum Messer.
 2. Benutzen Sie den Bildschirm, um den Kopf zu bewegen, bis das Messer aktiviert wird. Verwenden Sie GCODE: ```G1 Y-7.7``` ```G1 X-1.7```
 3. Überprüfen Sie Ihre X- und Y-Koordinaten.
 4. Für **Y**:
@@ -529,10 +527,10 @@ Schreiben Sie diese Zahl in die Datei `/rw/Adventurer5M.json`. Der Abfallbehält
 
 Schreiben Sie diese Werte in die Datei `/rw/Adventurer5M.json`. Das Messer ist kalibriert.
 
-6. Geben Sie den Befehl ein: `UPDATE_FF_OFFSET` (damit werden die Einstellungen aktualisiert).
-7. Geben Sie anschließend: `_GOTO_TRASH` ein (dies bringt den Drucker zurück in den Abfallbehälter).
+6. Geben Sie den Befehl `UPDATE_FF_OFFSET` ein (damit werden die Einstellungen aktualisiert).
+7. Geben Sie anschließend `_GOTO_TRASH` ein (der Drucker fährt zum Abfallbehälter).
 
-Starten Sie den Drucker neu und Sie sind fertig.
+Starten Sie den Drucker neu – fertig.
 
 ---
 
@@ -542,7 +540,7 @@ Starten Sie den Drucker neu und Sie sind fertig.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
 
-2. Gehen Sie zu Registerkarte 6
+2. Wechseln Sie zur Registerkarte 6
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
 
@@ -554,13 +552,13 @@ Starten Sie den Drucker neu und Sie sind fertig.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
    
-   Drücken Sie die "Set"-Taste
+   Drücken Sie die Taste „Set“.
 
 5. Drücken Sie `Move the extruder to cutter striker position` und halten Sie die Taste für 20 Sekunden gedrückt.
 
 	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
 
-6. Stellen Sie den Schneidkopf ein. Drücken Sie `CutX` – der Schneidkopf sollte das Filament ohne Durchrutschen oder Anschlagen durchtrennen.
+6. Stellen Sie das Messer ein. Drücken Sie `CutX` – das Messer sollte das Filament ohne Durchrutschen oder Anschlagen durchtrennen.
    
    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
    
@@ -570,33 +568,33 @@ Starten Sie den Drucker neu und Sie sind fertig.
 
 ## **10. IFS-Befehle**
 
-Damit diese Einstellungen funktionieren, müssen Sie **den druckereigenen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm** mit dem Makro `DISPLAY_OFF` deaktivieren.
 
 - `IFS_F10` - Filament einlegen
 - `IFS_F11` - Filament entfernen
 - `IFS_F13` - IFS-Status
 - `IFS_F15` - Treiber zurücksetzen
-- `IFS_F18` - Filament komplett spülen
+- `IFS_F18` - Filament in allen Kanälen freigeben
 - `IFS_F23` - Filament als eingelegt markieren
-- `IFS_F24` - Filament-Halterung (Andruckhebel)
-- `IFS_F39` - Filament spülen
+- `IFS_F24` - Filament andrücken
+- `IFS_F39` - Filament freigeben
 - `IFS_F112` - Filamentzufuhr stoppen
 - `PURGE_PRUTOK_IFS` - Filament vom IFS zum Extruder spülen
 - `REMOVE_PRUTOK_IFS` - Filament anhand der Filamentnummer entfernen
 - `INSERT_PRUTOK_IFS` - Filament anhand der Filamentnummer in das IFS einlegen
 - `SET_CURRENT_PRUTOK` - Klipper mitteilen, welches Filament aktuell aktiv ist
-- `ANALOG_PRUTOK` - Lädt ein ähnliches Filament
+- `ANALOG_PRUTOK` - Gleichwertiges Filament laden
 - `IFS_MOTION` - Prüfen, ob das Filament gestoppt hat oder ausgegangen ist
 
 Parameter des IFS-Moduls:
 
 - debug - Fehlersuche (True, *False*)
-- silk_count - Anzahl der Versuche, einen Stab in das IFS einzulesen (*1*)
-- stall_count - Anzahl der Versuche, einen Stab als angehalten zu zählen (*1*)
+- silk_count - ab welchem Versuch das Filament als im IFS vorhanden gilt (*1*)
+- stall_count - ab welchem Versuch das Filament als angehalten gilt (*1*)
 - retry_count - Anzahl der Wiederholungen des Befehls bei einem Fehler (*3*)
 - next_cmd_delay - Wartezeit zwischen der Verarbeitung der IFS-Antwort und dem Senden des nächsten Befehls (*0.2*)
 - send_ff_terminator - aktiviert oder deaktiviert eine Verzögerung von 0,2 s + das Senden von 0xFF nach einem IFS-Befehl; kann von sehr alter IFS-Firmware benötigt werden (True, *False*)
-- filament_NEWFILAMENT - Einen neuen Filamenttyp hinzufügen. Parameter - Lade- und Entladetemperatur für dieses Material.
+- filament_NEWFILAMENT - neuen Filamenttyp hinzufügen; Parameter – Lade- und Entladetemperatur für dieses Material.
 
 Eingestellt über `mod_data/user.cfg`:
 ```
@@ -615,7 +613,7 @@ Um die IFS-Firmware wiederherzustellen, benötigen Sie ein **ARM J-LINK V9** Pro
 
 <img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
 
-Löten der Drähte an die iFS-Platine
+Löten Sie Drähte an die IFS-Platine.
 
 <img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
 
@@ -631,15 +629,15 @@ Anschließen:
 - Zielgerät - `Nations N32G455RE`.
 - Zielschnittstelle: `SWD`
 - Geschwindigkeit: `4000`
-- Kreuzen Sie das erste Kästchen an.
-- Deaktivieren Sie das zweite Kästchen
+- Erstes Kästchen ankreuzen
+- Zweites Kästchen deaktivieren
 
-1. Verbinden Sie
-2. Wählen Sie [Flash-Datei](/de/Native_FW/#5x-ifs). **Vergessen Sie nicht, sie zu entpacken**.
-3. drücken Sie **F7** und warten Sie, bis das Gerät geflasht ist
+1. Verbinden
+2. Wählen Sie die [Firmware-Datei](/de/Native_FW/#5x-ifs). **Vergessen Sie nicht, sie zu entpacken**.
+3. Drücken Sie **F7** und warten Sie, bis das Flashen abgeschlossen ist.
 
-## IFS: Sensorfehler: Serieller Kommunikationsfehler: Lesen fehlgeschlagen: Gerät meldet Lesebereitschaft, hat aber keine Daten zurückgegeben (Gerät getrennt oder Mehrfachzugriff auf Port?).
+## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)
 
 Dieser Fehler tritt auf, wenn der native Bildschirm und der Mod gleichzeitig auf den IFS zugreifen.
 
-Es empfiehlt sich, die native Display Ausschaltzeit auf 10 Sekunden zu reduzieren. ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```.
+Es empfiehlt sich, die Ausschaltzeit des nativen Bildschirms auf 10 Sekunden zu verringern: ```SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=10```

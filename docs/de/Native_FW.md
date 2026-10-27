@@ -1,4 +1,4 @@
-# Native firmware
+# Native Firmware
 
 [Hier ist die native Firmware für die Drucker AD5M, AD5M Pro und AD5X](https://github.com/ghzserg/FF/releases/R)
 
@@ -104,7 +104,7 @@ Falls etwas schiefgelaufen ist, die Log-Dateien auf dem USB-Stick überprüfen.
 
 ## Installation der vollständigen Firmware auf Creator 5 / Creator 5 Pro
 
-**Dies ist NICHT die originale Factory-Firmware, sondern ein Tool zum Entblocken des Druckers.** Sie sollte nur installiert werden, wenn der Drucker überhaupt nicht startet.
+**Dies ist NICHT die originale Factory-Firmware, sondern ein Werkzeug zur Wiederbelebung des Druckers.** Installieren Sie sie nur, wenn der Drucker überhaupt nicht startet.
 
 Die Installation dauert lange, bis zu einer Stunde.
 
@@ -116,7 +116,7 @@ Die Installation dauert lange, bis zu einer Stunde.
 
 2. Schalten Sie den Drucker aus, stecken Sie den USB-Stick ein, schalten Sie ihn ein und warten Sie auf einen vollständigen Neustart. Ein Creator 5 wird dabei zum Creator 5 Pro — das ist normal.
 
-3. Nach dem Update, wenn Sie den MCU neu flashen müssen, installieren Sie:
+3. Wenn Sie nach dem Update die MCU neu flashen müssen, installieren Sie:
 
    - [Creator5](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
    - [Creator5Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
@@ -135,9 +135,9 @@ Kopieren Sie beide Dateien gleichzeitig auf den USB-Stick:
 
 - [AD5X-factory-1.0.9.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory-1.0.9.tgz)
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
-- Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
+- Wenn nach dem Update die MCU neu geflasht werden muss, installieren Sie [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
-## Installation der vollständigen Firmware auf dem FF5M
+## Installation der vollständigen Firmware auf dem AD5M / AD5M Pro
 
 Dies ist nicht die Original-Firmware, sondern eine Wiederherstellungs-Firmware. Installieren Sie sie nur, wenn der Drucker überhaupt nicht mehr startet.
 
@@ -147,30 +147,30 @@ Die Installation kann bis zu einer Stunde dauern.
 
   - [Adventurer5M-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory-3.1.3.tgz)
   - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
-  - `config.tar`, falls Sie dies zuvor über `TAR_CONFIG` durchgeführt haben.
+  - `config.tar`, falls Sie diese Datei zuvor über `TAR_CONFIG` erstellt haben
 
-2. Laden Sie folgende Dateien auf einen USB-Stick für den FF5MPro (der Drucker wechselt dabei auf die FF5M-Firmware-Version; wie Sie zurückwechseln, lesen Sie unten):
+2. Kopieren Sie folgende Dateien auf einen USB-Stick für den AD5M Pro (der Drucker wechselt dabei auf die FF5M-Firmware-Version; wie Sie zurückwechseln, lesen Sie unten):
 
    - [Adventurer5MPro-factory-3.1.3.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-factory-3.1.3.tgz)
    - [Adventurer5M-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-factory.tar.xz)
    - `config.tar`, falls Sie diese Datei zuvor über `TAR_CONFIG` erstellt haben
 
-3. Nach dem Update, falls ein erneutes Flashen des Mikrocontrollers erforderlich ist, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
+3. Wenn nach dem Update die MCU neu geflasht werden muss, installieren Sie [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
 # Universeller Z-Mod-Aktivator
 
-Universeller Aktivator für AD5x / Creator 5 / Creator 5 Pro
+Universeller Aktivator für AD5X / Creator 5 / Creator 5 Pro
 
 1. Datei [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) herunterladen
-2. USB-Stick in Fat32 formatieren
-2. [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) in das Stammverzeichnis des USB-Sticks entpacken
-3. Drucker ausschalten
-4. USB-Stick in den Drucker einstecken
-5. Auf das Firmware-Update warten
-6. USB-Stick aus dem Drucker entfernen
-7. Drucker aus- und wieder einschalten
+2. USB-Stick auf FAT32 formatieren
+3. [Universal_enable-zmod.zip](https://github.com/ghzserg/FF/releases/download/R/Universal_enable-zmod.zip) in das Stammverzeichnis des USB-Sticks entpacken
+4. Drucker ausschalten
+5. USB-Stick in den Drucker einstecken
+6. Auf das Firmware-Update warten
+7. USB-Stick aus dem Drucker entfernen
+8. Drucker aus- und wieder einschalten
 
-Wenn etwas schiefgelaufen ist, die Datei enable-zmod.log auf dem USB-Stick überprüfen
+Wenn etwas schiefgelaufen ist, die Datei `enable-zmod.log` auf dem USB-Stick überprüfen.
 
 ## Z-Mod auf AD5X/Creator 5/Creator 5 Pro aktivieren
 
@@ -180,7 +180,7 @@ Durch Aktivieren von Z-Mod auf dem AD5X/Creator 5/Creator 5 Pro nach einem Firmw
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-## XY installieren
+## SET XY
 
 Für alle, deren ~~Verstand~~ „Home“-Position verrutscht ist (Parkposition am Abfallschacht): Entpacken Sie den Archivinhalt in das Stammverzeichnis eines FAT32-USB-Sticks, schalten Sie den Drucker aus, stecken Sie den Stick ein und schalten Sie den Drucker ein. Die Kalibrierung wird geladen. Drücken Sie zuerst die Reset-Taste. Stellen Sie anschließend mithilfe der Bedienelemente auf dem Bildschirm die korrekte Druckkopfposition ein. Drücken Sie die Set-Taste, um die Position zu fixieren. Starten Sie den Drucker ohne den USB-Stick neu. Archiv vom offiziellen FlashForge-Support.
 
@@ -188,7 +188,7 @@ Für alle, deren ~~Verstand~~ „Home“-Position verrutscht ist (Parkposition a
 
 ## Root
 
-- Anmeldung: root
+- Benutzername: root
 - Passwort: root
 
 - [Adventurer5M-root](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-root.tgz)
@@ -201,12 +201,12 @@ Für alle, deren ~~Verstand~~ „Home“-Position verrutscht ist (Parkposition a
 
 [fix_e0011](/de/Global/#fix_e0011)
 
-E0011 beheben Ein
+Fix E0011 einschalten:
 
 - [Adventurer5M-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
 - [Adventurer5MPro-e0011-on.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
 
-Fix E0011 Aus
+Fix E0011 ausschalten (wie im Original):
 
 - [Adventurer5M-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
 - [Adventurer5MPro-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
@@ -222,15 +222,15 @@ Fix E0011 Aus
 
 [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
 
-## Übersetzen von 5MPro in 5M
+## 5MPro zu 5M konvertieren
 
 [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
-## Konvertierung von Creator 5 in Creator 5 Pro
+## Creator 5 zu Creator 5 Pro konvertieren
 
 [Creator5-to_c5pro.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-to_c5pro.tgz)
 
-## Konvertierung von Creator 5 Pro in Creator 5
+## Creator 5 Pro zu Creator 5 konvertieren
 
 [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
@@ -239,7 +239,7 @@ IFS-Firmware-Archiv
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
-- [IFS-Firmware-Reparaturanleitung](/de/AD5X/#11-ifs-firmware-wiederherstellen)
+- [Anleitung zur Wiederherstellung der IFS-Firmware](/de/AD5X/#11-ifs-firmware-wiederherstellen)
 
 ## 5X G-Code
 
@@ -258,7 +258,7 @@ IFS-Firmware-Archiv
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-arm64``` auszuführen
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Vergessen Sie nicht, ```chmod +x zmod_preprocess-darwin-amd64``` auszuführen
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Vergessen Sie nicht, ```chmod +x zmod-preprocess.py``` auszuführen.
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/macOS Bash. Vergessen Sie nicht, ```chmod +x zmod-preprocess.sh``` auszuführen.
 
 ## CONFIG
 ### Native Konfigurationsdateien
@@ -270,7 +270,7 @@ IFS-Firmware-Archiv
 ## FIX_LOOP
 ### Boot-Wiederherstellung
 
-Entfernt übrig gebliebene Links aus dem Autostart
+Entfernt übrig gebliebene Verknüpfungen aus dem Autostart.
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_loop.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_loop.tgz)
@@ -287,22 +287,22 @@ Entfernt übrig gebliebene Links aus dem Autostart
 
 ## LOG
 
-Universelle Protokollerfassung für AD5M / AD5M Pro / AD5x / Creator 5 / Creator 5 Pro
+Universelle Protokollerfassung für AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 1. Laden Sie die Datei [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) herunter
-2. Formatieren Sie das Flash-Laufwerk auf FAT32
-2. Entpacken Sie [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) in das Stammverzeichnis des Flash-Laufwerks
-3. Schalten Sie den Drucker aus
-4. Stecken Sie das Flash-Laufwerk in den Drucker
-5. Warten Sie, bis die Firmware aktualisiert wurde
-6. Ziehen Sie das Flash-Laufwerk aus dem Drucker
-7. Schalten Sie den Drucker aus und wieder ein
+2. Formatieren Sie den USB-Stick auf FAT32
+3. Entpacken Sie [Universal-log.zip](https://github.com/ghzserg/FF/releases/download/R/Universal-log.zip) in das Stammverzeichnis des USB-Sticks
+4. Schalten Sie den Drucker aus
+5. Stecken Sie den USB-Stick in den Drucker
+6. Warten Sie, bis die Firmware aktualisiert wurde
+7. Ziehen Sie den USB-Stick aus dem Drucker
+8. Schalten Sie den Drucker aus und wieder ein
 
-Wenn etwas schiefgelaufen ist, sehen Sie sich die Datei zmd_log.log auf dem Flash-Laufwerk an
+Wenn etwas schiefgelaufen ist, sehen Sie sich die Datei `zmd_log.log` auf dem USB-Stick an.
 
-Die Datei config-x.y.z.tar muss dem Ticket beigefügt werden
+Die Datei `config-x.y.z.tar` muss dem Ticket beigefügt werden.
 
-### Ermöglicht das Abrufen von Log-Dateien, wenn Klipper nicht funktioniert
+### Log-Dateien abrufen, wenn Klipper nicht funktioniert
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-log.tgz)
@@ -311,7 +311,7 @@ Die Datei config-x.y.z.tar muss dem Ticket beigefügt werden
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-log.tgz)
 
 ## REM_ZMOD
-### ZMOD entfernen
+### Z-Mod entfernen
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-rem_zmod.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-rem_zmod.tgz)

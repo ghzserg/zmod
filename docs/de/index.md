@@ -8,19 +8,19 @@ hide:
 
 <img width="660" height="263" alt="Logo" src="https://github.com/user-attachments/assets/2befbddc-c055-4006-9864-90ab3b182512" />
 
-[Z-Mod LINK verfügbar unter diesem Link ->](https://zmod.link/link/)
+[Z-Mod LINK ist unter diesem Link verfügbar ->](https://zmod.link/link/)
 
 ### **Z-Mod für FlashForge AD5M/AD5M PRO/AD5X/Creator 5/Creator 5 Pro: Volle Kontrolle über Ihren Drucker**
 
-Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist Z-Mod eine leistungsstarke und kostenlose Lösung, die Ihren Drucker von "benutzerdefiniert" auf "professionell" umstellt.
+Herzlichen Glückwunsch zum Kauf eines FlashForge Druckers! Die native Firmware eignet sich hervorragend für den Einstieg, aber wenn Sie das **volle Potenzial** Ihres Geräts ausschöpfen möchten, ist Z-Mod eine leistungsstarke und kostenlose Lösung, die Ihren Drucker vom „Haushaltsgerät“ zum „Profiwerkzeug“ macht.
 
 ### Was ist Z-Mod?
 
-Z-Mod ist eine benutzerdefinierte Firmware (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
+Z-Mod ist eine inoffizielle Firmware-Erweiterung (Modifikation), die zusätzlich zur Originalsoftware installiert wird. Sie ersetzt sie nicht, sondern **erweitert** sie, indem sie eine große Anzahl von Funktionen hinzufügt, die von fortgeschrittenen Druckern bekannt sind, während sie alle Vorteile und den Komfort der nativen Schnittstelle beibehält.
 
 *Z-Mod: Qui non legit, non intrat*
 
-> **Warum „Z-Mod"?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
+> **Warum „Z-Mod“?** Der Autor ist seit über 20 Jahren unter dem Nicknamen [zserg](https://zserg.ru/) bekannt. Als es Zeit war, dem Mod einen Namen zu geben, lag die Antwort auf der Hand: erster Buchstabe des Nicknamens plus „mod". Kein versteckter Sinn, keine Symbolik — es ist wirklich genau so einfach, wie es klingt.
 
 ### Hauptvorteile von Z-Mod gegenüber nativer Firmware
 
@@ -28,43 +28,43 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
 
 #### 1. Volle Fernsteuerung
 
-* **Native Firmware:** Sie können Dateien über Wi-Fi senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
-* **Z-Mod:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können dort auch andere Slicer wie den OrcaSlicer nutzen.
+* **Native Firmware:** Sie können Dateien über WLAN senden, aber nur über Orca FF oder die FlashForge-App (die aufgrund von Serverproblemen möglicherweise nicht verfügbar ist).
+* **Z-Mod:** Sie haben die volle Kontrolle auf all Ihren Geräten – **egal ob im Browser, auf dem Computer oder dem Smartphone** – und können auch andere Slicer wie OrcaSlicer nutzen.
 
-    - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, auf denen Sie alle Druckinformationen, die Temperatur, die Steuerung der Lüftergeschwindigkeiten, das Bewegen der Achsen und vollen Zugriff auf die Befehlskonsole sehen.
+    - **Fluidd / Mainsail:** Benutzerfreundliche Weboberflächen, mit allen Druckinformationen, Temperaturen, Lüftersteuerung, Achsbewegung und vollem Zugriff auf die Befehlskonsole.
     - **Dateiversand über "Octo/Klipper":** Integration mit Orca Slicer und anderen Slicern für den direkten G-Code-Versand.
-    - **Zugang zum Drucker-Webinterface über Internet** Cloud-Service [zmod.link](https://zmod.link)
-    - **Benachrichtigung an Telegram und 100+ andere Dienste** [plugin notify](https://github.com/ghzserg/notify/blob/main/Readme.md)
+    - **Zugriff auf die Weboberfläche des Druckers über das Internet:** Cloud-Dienst [zmod.link](https://zmod.link)
+    - **Benachrichtigungen in Telegram und über 100 anderen Diensten:** [Plugin notify](https://github.com/ghzserg/notify/blob/main/Readme.md)
 
 #### 2. Erweiterte Kalibrierungs- und Nivellierungssysteme
 
 * **Native Firmware:** Einfache automatische Druckbettnivellierung (ABL).
 * **Z-Mod:**
 
-    - **Adaptive Nivellierung (KAMP):** Der Drucker erstellt keine Karte der Bedunregelmäßigkeiten über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
-    - **PID-Kalibrierung:** Feineinstellung der Extruder- und Druckbetttemperatur für stabile Temperaturen ohne Schwankungen.
-    - **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Körperschwingungen, so dass Sie **schneller und ohne "Ringe "** an Modellen drucken können.
-    - **Band-Spektrogramm:** Analysiert den Zustand der Druckerbänder für eine vorbeugende Wartung.
+    - **Adaptive Nivellierung (KAMP):** Der Drucker misst die Unebenheiten des Bettes nicht über die gesamte Fläche, sondern nur in dem Bereich, in dem sich Ihr Modell befindet. Das **spart Zeit** und verbessert die Genauigkeit.
+    - **PID-Kalibrierung:** Feinabstimmung der Temperaturregelung von Extruder und Druckbett für stabile Temperaturen ohne Schwankungen.
+    - **Vibrationsreduzierer (Input Shaper):** Analysiert und kompensiert Rahmenschwingungen, sodass Sie **schneller und ohne „Ringing“** drucken können.
+    - **Riemen-Spektrogramm:** Analysiert den Zustand der Riemen für eine vorbeugende Wartung.
     - **Bettschraubenjustierung:** Ermöglicht es Ihnen, das Druckbett in 10 Minuten zu nivellieren.
 
 #### 3. Intelligente Funktionen für Zuverlässigkeit
 
-* **Firmware:** Einfache Sensoren für den Filamentabschluss. Keine Kontrolle über die Firmware und die übertragenen Dateien - was zu Druckfehlern führt.
+* **Native Firmware:** Einfache Filamentsensoren. Keine Kontrolle über die Integrität der Firmware und der übertragenen Dateien – was zu Druckfehlern führt.
 * **Z-Mod:**
 
-    - **Düsenkontrolle:** Das System kann mit Hilfe von Kraftmesszellen erkennen, dass die Düse ein gedrucktes Teil oder das Bett berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
-    - **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich den Ort des Stromausfalls und kann nach dem Wiedereinschalten des Stroms weiterdrucken.
-    - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch Z-Mod-Dateien auf Beschädigungen..
-    - **Kontrolle der an den Drucker übertragenen Dateien:** MD5-Summenkontrolle bei der Übertragung von Dateien.
+    - **Düsenkontrolle:** Das System kann mit Hilfe von Wägezellen erkennen, dass die Düse ein gedrucktes Teil oder das Bett berührt hat, und den Druck **automatisch stoppen**, um Bruch zu verhindern.
+    - **Wiederherstellung nach Stromausfall:** Der Drucker merkt sich die Position beim Stromausfall und kann nach dem Wiedereinschalten weiterdrucken.
+    - **Firmware-Integritätsprüfung:** Überprüft sowohl die Original-Firmware als auch Z-Mod-Dateien auf Beschädigungen.
+    - **Kontrolle der an den Drucker übertragenen Dateien:** Prüfung der MD5-Summe bei der Übertragung.
 
 #### 4. Flexible Handhabung von Filamenten (speziell für AD5X)
 
 * **Native Firmware:** Spulensteuerung über Standardmenü.
 * **Z-Mod (für AD5X):**
 
-    - **Smart Colour Menu (`COLOR`):** Visuelle Auswahl von Spule, Farbwechsel und Kunststofftyp direkt über das Webinterface.
-    - **"Endlosspulenmodus":** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
-    - **Feinabfall-Einstellung:** Sie können die Menge an Kunststoff, die der Drucker beim Farbwechsel ausspült, reduzieren und so Material sparen.
+    - **Intelligentes Farbmenü (`COLOR`):** Visuelle Auswahl von Spule, Farbe und Kunststofftyp direkt über die Weboberfläche.
+    - **„Endlosspulen“-Modus:** Wenn Sie mehrere Spulen desselben Kunststoffs haben, wechselt der Drucker automatisch zur nächsten, wenn die erste leer ist.
+    - **Feineinstellung des Abfalls:** Sie können die Menge an Kunststoff, die der Drucker beim Farbwechsel ausspült, reduzieren und so Material sparen.
 
 #### 5. Ökosystem und Integration
 
@@ -74,38 +74,38 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
     - **Telegram-Bot:** Erhalten Sie Benachrichtigungen über den Beginn und das Ende des Drucks, Fotos von der Kamera direkt in Telegram.
     - **Plugin-Unterstützung:** Installieren Sie zusätzliche Plugins (wie `bambufy` für eine bessere Kompatibilität mit Bambu Studio).
     - **Alternative Kamera:** Passen Sie die Auflösung und die FPS an und reduzieren Sie die Speicherbelastung für stabiles Streaming.
-    - **Musikwiedergabe:** Spielt Musik, wenn der Druck beginnt oder endet
+    - **Musikwiedergabe:** Spielt Musik zu Beginn oder am Ende des Drucks.
 
 #### 6. Optimierung und Kontrolle
 
 * **Native Firmware:** Eingeschränkte Einstellungen.
 * **Z-Mod:**
 
-    - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128MB).
-    - **GuppyScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
-    - **HelixScreen:** Eine alternative Schnittstelle für den Druckerbildschirm mit erweiterten Funktionen.
+    - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128 MB).
+    - **GuppyScreen:** Eine alternative Oberfläche für den Druckerbildschirm mit erweiterten Funktionen.
+    - **HelixScreen:** Eine weitere alternative Oberfläche für den Druckerbildschirm mit erweiterten Funktionen.
     - **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
-    - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicing ist nicht erforderlich..
-    - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker ist jederzeit möglich
+    - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicen ist nicht erforderlich.
+    - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker jederzeit.
 
 #### 7. Klipper 13
 
 * **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
 * **Z-Mod:**
   
-    - Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version
+    - Behebt Fehler im nativen Klipper und ermöglicht die Verwendung einer moderneren Version.
 
 ---
 
-### Résumé: Für wen ist Z-Mod?
+### Fazit: Für wen ist Z-Mod?
 
-| Wenn Sie… | Z-Mod gibt Ihnen… |
+| Wenn Sie … sind | Z-Mod gibt Ihnen … |
 | :--- | :--- |
 | **Einsteiger** | Einfache Fernsteuerung und automatische Kalibrierungen für gleichbleibende Qualität gleich beim ersten Mal. |
 | **Enthusiast** | Volle Kontrolle über jeden Aspekt des Drucks, mit erweiterten Funktionen für die Feinabstimmung und das Experimentieren mit der Geschwindigkeit. |
 | **AD5X-Besitzer** | Die ultimative Kontrolle über den Mehrfarbendruck und reduzierte Filamentkosten. |
 
-**Z-Mod setzt die native Firmware nicht außer Kraft,** sondern wird zu einem Add-on, das Ihnen die **Wahl** gibt, auf die alte Art zu arbeiten, über den Bildschirm, oder alle modernen 3D-Druck-Tools zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
+**Z-Mod ersetzt die native Firmware nicht,** sondern ist eine Erweiterung, die Ihnen die **Wahl** lässt: wie gewohnt über den Bildschirm zu arbeiten oder alle modernen 3D-Druck-Werkzeuge zu nutzen. Dies ist der nächste logische Schritt für jeden FlashForge-Besitzer, der das Beste aus seinem Drucker herausholen möchte.
 
 !!! danger
     *Wenn Sie diesen Mod auf Ihrem AD5M (Pro) / [AD5X](/de/AD5X/) installieren wollen, beachten Sie bitte, dass Sie den Verlust Ihrer Garantie oder eine Beschädigung Ihres Druckers **riskieren**. Es geschieht auf eigene Gefahr, wenn Sie diesen Mod ausprobieren wollen!
@@ -116,21 +116,21 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
 
 ## Bevor Sie beginnen
 
-#### Sie brauchen den Mod nicht zu installieren, wenn Sie nur die folgenden Probleme mit der nativen Firmware beheben müssen
+#### Sie brauchen den Mod nicht zu installieren, wenn Sie nur die folgenden Probleme der nativen Firmware beheben möchten
 
 Diese Funktionen sind auf die Standard-Firmware portiert:
 
-1. Ich möchte Klipper. (Klipper ist bereits im Drucker vorhanden, aber es gibt keine Web-Schnittstelle)
+1. Ich möchte Klipper. (Klipper ist bereits im Drucker vorhanden, aber es gibt keine Weboberfläche)
 2. [Root installieren](/de/Native_FW/#root)
 3. Fehler beheben [E0011](/de/Global/#fix_e0011)
-4. behebt Fehler [E0017](/de/Global/#fix_e0017)
-5. [Deaktivieren von Drucker/Telemetrie/China_cloud-Updates](/de/Global/#china_cloud)
+4. Fehler beheben [E0017](/de/Global/#fix_e0017)
+5. [Druckerupdates/Telemetrie/chinesische Cloud deaktivieren](/de/Global/#china_cloud)
 6. [Drucker auf Werkseinstellungen zurücksetzen](/de/Setup/#drucker-auf-werkseinstellungen-zurücksetzen-erforderlich-für-die-installation-des-mods)
 7. [FF5M zu FF5MPro neu flashen](/de/Native_FW/#5m-zu-5mpro-konvertieren)
-8. [FF5MPro zu FF5M](/de/Native_FW/#übersetzen-von-5mpro-in-5m)
+8. [FF5MPro zu FF5M](/de/Native_FW/#5mpro-zu-5m-konvertieren)
 
 ### Kompatibilität
-Installiert auf einer sauberen Version:
+Wird auf einer sauberen Firmware-Version installiert:
 
 - FF5M/FF5MPro **mindestens 2.7.5** (2.7.5, 2.7.6, 2.7.7, 2.7.8, 2.7.9, 3.1.3, 3.1.4, 3.1.5, 3.1.9, **3.2.3**, 3.2.4, 3.2.5, 3.2.6, 3.2.7, 5.0.3, 5.1.7, 5.1.9)
 - [AD5X](/de/AD5X/) **nur** (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 3.0.3, 3.0.9, 3.1.0, 3.1.5, 3.1.6, 3.1.7) _beliebige IFS-Version_
@@ -138,19 +138,19 @@ Installiert auf einer sauberen Version:
 
 Native Firmware ist [hier](/de/Native_FW/) verfügbar.
 
-## Mods installieren/aktualisieren/deinstallieren
+## Mod installieren/aktualisieren/deinstallieren
 
-[Mods installieren/aktualisieren/deinstallieren](/de/Setup/)
+[Mod installieren/aktualisieren/deinstallieren](/de/Setup/)
  
 ## Häufig gestellte Fragen
 
-[Muss man lesen](/de/FAQ/)
+[Unbedingt lesen](/de/FAQ/)
 
 ## Empfehlungen zur Verbesserung der Druckerstabilität
 
-[Lesen - wenn etwas nicht richtig funktioniert](/de/Recommendations/)
+[Lesen, wenn etwas nicht richtig funktioniert](/de/Recommendations/)
 
-## Plug-ins
+## Plugins
 
 Z-Mod unterstützt [Plugins](/de/Plugin/)
 
@@ -158,13 +158,13 @@ Z-Mod unterstützt [Plugins](/de/Plugin/)
 
 - Root basiert auf der Implementierung von [@darksimpson](https://t.me/darksimpson). Login und Passwort: root. [Link](https://t.me/c/2000598629/12695/186253)
 - Beeper basiert auf der Implementierung von [@drmax_gc](https://t.me/drmax_gc). M300. M356 Für Elise. [Link](https://t.me/FF_5M_5M_Pro/1/333800)
-- MD5-Prüfung von Igor Polunovskiy eingebunden. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
+- MD5-Prüfung von Igor Polunovskiy. [Link](https://t.me/FF_5M_5M_Pro/12695/272417)
 - [GuppyScreen](https://github.com/ballaswag/guppyscreen)
 
 Der Mod verwendet Entwicklungen von [KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/), ist jedoch keine Weiterentwicklung davon und auch nicht mit ihm kompatibel — weder in der Makrosyntax noch binär.
 
-## Hilfe zur Entwicklung
+## Unterstützung der Entwicklung
 
 Da einige Leute danach gefragt haben, nehme ich Spenden an, aber bitte denken Sie daran, dass ich an Z-Mod zum Spaß arbeite, nicht für Geld. Ich werde keine Spenden annehmen, um an bestimmten Fehlern oder Funktionen zu arbeiten.
 
-Verfügbare Möglichkeiten zur Unterstützung finden sich auf einer separaten [Seite](/de/Sponsor/)
+Die Möglichkeiten zur Unterstützung finden Sie auf einer separaten [Seite](/de/Sponsor/)

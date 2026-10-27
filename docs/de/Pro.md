@@ -2,10 +2,10 @@
 
 Ein Makro ist ein kleines Programm in der Sprache Klipper/Gcode.
 
-Es kann aufgerufen werden durch:
+Es kann aufgerufen werden:
 
-- Aus der GCODE-Datei
-- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
+- aus der G-Code-Datei
+- über die Fluidd/Mainsail-Konsole (drücken Sie in Fluidd die lateinische Taste „C“)
 
 !!! info "Hinweis"
     *Der Wert in Klammern ist der Standardwert.*
@@ -14,16 +14,16 @@ Es kann aufgerufen werden durch:
 
 ### AIR_CIRCULATION_INTERNAL
 
-Interne Zirkulation einschalten
+Interne Luftumwälzung einschalten
 
 ---
 
 ### AIR_CIRCULATION_EXTERNAL
 
-Externe Umluft einschalten
+Externe Luftzirkulation einschalten
 
 ---
 
 ### AIR_CIRCULATION_STOP
 
-Umluft ausschalten
+Luftzirkulation ausschalten

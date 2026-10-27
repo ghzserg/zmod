@@ -1,7 +1,7 @@
 ---
-ausblenden:
+hide:
 
-  - Navigation
+  - navigation
 ---
 
 <div class="video-embed">

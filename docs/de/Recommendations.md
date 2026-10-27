@@ -1,7 +1,7 @@
 # Empfehlungen
 ## Empfehlungen zur Verbesserung der Druckerstabilität
 
-Die Empfehlungen gelten sowohl für native als auch für Z-Mod-Firmware.
+Die Empfehlungen gelten sowohl für die native Firmware als auch für Z-Mod.
 
 ---
 
@@ -20,25 +20,25 @@ Aktivieren Sie den Modellausschluss in Orca:
 
 Nur die neueste Version des Mods wird unterstützt.
 
-Der Autor hat nicht die Ressourcen, um alle Versionen zu unterstützen, also [installiere die neueste native Firmware und das Z-Mod-Update](/de/Setup/).
+Der Autor hat nicht die Ressourcen, um alle Versionen zu unterstützen, also [installieren Sie die neueste native Firmware und das Z-Mod-Update](/de/Setup/).
 
-### Ersetzen Sie Spiral/Automatic Z-Hop.
+### Ersetzen Sie Spiral/Automatisch beim Z-Hop
 
 Der Drucker unterstützt dies nicht.
 
-In Orca. `Druckerprofil` -> `Extruder 1` -> `Z-Achsen-Hubtyp`. Stellen Sie `Normal` oder `Schräg` ein.
+In Orca: `Druckerprofil` -> `Extruder 1` -> `Z-Achsen-Hubtyp`. Stellen Sie `Normal` oder `Schräg` ein.
 
 ---
 
-### Deaktivieren Sie "Bogen_Bewegung" (arc_move).
+### Deaktivieren Sie Bögen (arc_move)
 
-Der Drucker unterstützt sie, aber sie verringern die Druckqualität und verursachen gelegentlich Druckfehler.
+Der Drucker unterstützt sie, aber sie verschlechtern die Druckqualität und verursachen gelegentlich Druckfehler.
 
-In Orca. `Prozessprofil` -> `Qualität` -> `Präzision` -> `"Arc_move approximation"` das Häkchen entfernen.
+In Orca: `Prozessprofil` -> `Qualität` -> `Präzision` -> Häkchen bei `Bogenanpassung (Arc fitting)` entfernen.
 
 ---
 
-### Deaktivieren Sie die eingebaute Kamera auf dem Druckerbildschirm.
+### Deaktivieren Sie die eingebaute Kamera auf dem Druckerbildschirm
 
 Sie verbraucht mehr Speicher und die Bildqualität ist schlecht.
 
@@ -57,9 +57,9 @@ Führen Sie dann das Makro [CAMERA_ON](/de/Zmod/#camera_on) aus.
 
 ### LAN-Modus-Fehler
 
-Diese Dienste sind instabil und können zeitweise die Verbindung verlieren. Wiederverbindungsversuche können den Drucker mit Anfragen in der Warteschlange überlasten und Fehler verursachen.
+Diese Dienste arbeiten instabil und verlieren zeitweise die Verbindung. Beim erneuten Verbinden überlasten die aufgestauten Anfragen den Drucker und verursachen Fehler.
 
-Durch die Deaktivierung dieser Dienste wird außerdem ein schnelleres Schließen des Dialogs nach dem Druckvorgang ermöglicht und die native Bettnivellierung über den Bildschirm unterstützt.
+Durch die Deaktivierung dieser Dienste werden außerdem Dialoge nach dem Druck schneller geschlossen, und das Messen des Bettnetzes über den nativen Bildschirm wird möglich.
 
 **Auf dem Druckerbildschirm:**
 
@@ -77,7 +77,7 @@ Alternativ können Sie Folgendes verwenden:
 
 ---
 
-### Aktivieren Sie die [MD5]-Kontrolle.
+### Aktivieren Sie die [MD5]-Kontrolle
 
 Igor Polunovskiy
 
@@ -95,11 +95,11 @@ Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SA
         * [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - **macOS Apple Silicon** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-arm64` auszuführen.
         * [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - **macOS Intel** Vergessen Sie nicht, `chmod +x zmod_preprocess-darwin-amd64` auszuführen.
         * [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - **Universal Python** Vergessen Sie nicht, `chmod +x zmod-preprocess.py` auszuführen.
-        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/MacOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh` auszuführen.
+        * [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - **Linux/macOS Bash** Vergessen Sie nicht, `chmod +x zmod-preprocess.sh` auszuführen.
      
 ??? tip "2. Konfiguration in Orca"
     In Orca müssen Sie den Pfad zum Skript an folgender Stelle angeben:
-    `Prozessprofil` :arrow_right: `Andere` :arrow_right: `Nachverarbeitungsskripte`.
+    `Prozessprofil` :arrow_right: `Sonstiges` :arrow_right: `Nachbearbeitungsskripte`.
 
     **Hier sind die Optionen, die Sie hinzufügen müssen (je nach System):**
 
@@ -136,9 +136,9 @@ Es wird empfohlen, den [globalen Parameter FORCE_MD5](/de/Global/#force_md5) `SA
 
 ---
 
-### Senden Sie Dateien zum Drucken über "Octo/Klipper".
+### Senden Sie Dateien zum Drucken über "Octo/Klipper"
 
-Das native FF-Protokoll sendet gelegentlich defekte Dateien und erzeugt auch keine Bilder und Metadaten für den Telegram-Bot.
+Das native FF-Protokoll überträgt gelegentlich beschädigte Dateien und erzeugt keine Vorschaubilder und Metadaten für den Telegram-Bot.
 
 In Orca: Klicken Sie auf das WLAN-Symbol neben dem Drucker:
 
@@ -158,11 +158,11 @@ Für FF5M / FF5M Pro:
 
 <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
 
-Wenn Mainsail verwendet wird, dann geben Sie nur diese Miniaturgrößen an: ```140x110/PNG, 64x64/PNG```.
+Wenn Mainsail verwendet wird, geben Sie nur diese Miniaturgrößen an: ```140x110/PNG, 64x64/PNG```.
 
-In Orca, ```Druckerprofil```:arrow_right:```Allgemeine Informationen```:arrow_right:```Erweitert```:arrow_right:```G-Code Thumbnails```.
+In Orca: ```Druckerprofil```:arrow_right:```Allgemeine Informationen```:arrow_right:```Erweitert```:arrow_right:```G-Code Thumbnails```.
 
-Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
+Beachten Sie, dass der native Bildschirm dann keine Miniaturbilder mehr anzeigt.
 
 
 ---
@@ -171,23 +171,23 @@ Beachten Sie, dass der native Bildschirm keine Miniaturbilder mehr anzeigt.
 
 [E0017](/de/Global/#fix_e0017)
 
-Es ist bereits standardmäßig aktiviert
+Sie ist bereits standardmäßig aktiviert.
 
 ---
 
 ### Fehlerbehebung E0011 einschalten
 
-Sollte `E0011` und `Communication timeout during homing` beheben.
+Soll `E0011` und `Communication timeout during homing` beheben.
 
 [E0011](/de/Global/#fix_e0011)
 
 ---
 
-### Überprüfen Sie die Korrektheit der nativen Betriebssystemdateien
+### Prüfen Sie die Integrität der Systemdateien
 
-Da der Drucker in der Firmware nicht korrekt heruntergefahren wurde, kann das Dateisystem beschädigt sein.
+Da die Firmware den Drucker nicht korrekt herunterfährt, kann das Dateisystem beschädigt werden.
 
-Dies führt zu einer Reihe von kleineren oder größeren Fehlern.
+Das führt zu kleineren und größeren Fehlern.
 
 Das Makro [CHECK_SYSTEM](/de/System/#check_system) prüft die MD5-Summe der Dateien und zeigt an, welche Dateien beschädigt wurden.
 
@@ -195,16 +195,16 @@ Es prüft auch, ob die symbolischen Links korrekt sind und korrigiert sie automa
 
 ---
 
-### Aktivieren Sie die Düsenaufprallkontrolle auf das Bett.
+### Aktivieren Sie die Düsenaufprallkontrolle
 
-Die Steuerung ist standardmäßig deaktiviert.
+Die Kontrolle ist standardmäßig deaktiviert.
 
-Aktiviert durch das Makro [NOZZLE_CONTROL](/de/Global/#nozzle_control)
+Aktivierung mit dem Makro [NOZZLE_CONTROL](/de/Global/#nozzle_control)
 
 `NOZZLE_CONTROL WEIGHT=1500`
 
-Die Steuerung schaltet den Klipper ab, wenn die Düse beginnt, die Platte zu zerkratzen oder sich das Teil vom Bett löst.
+Die Kontrolle schaltet Klipper ab, wenn die Düse beginnt, die Platte zu zerkratzen oder sich das Teil vom Bett löst.
 
 Nach dem Einschalten wird sie beim Drucken automatisch aktiviert.
 
-Es ist besonders empfehlenswert, die Steuerung für diejenigen einzuschalten, die die Düsenvorreinigung verwenden.
+Es ist besonders empfehlenswert, die Kontrolle für diejenigen einzuschalten, die die Düsenvorreinigung verwenden.

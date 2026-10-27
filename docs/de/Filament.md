@@ -2,10 +2,10 @@
 
 Ein Makro ist ein kleines Programm in der Sprache Klipper/Gcode.
 
-Es kann aufgerufen werden durch:
+Es kann aufgerufen werden:
 
-- Aus der GCODE-Datei
-- Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben "C" in Fluidd)
+- aus der G-Code-Datei
+- über die Fluidd/Mainsail-Konsole (drücken Sie in Fluidd die lateinische Taste „C“)
 
 !!! info "Hinweis"
     *Der Wert in Klammern ist der Standardwert.*
@@ -14,18 +14,18 @@ Es kann aufgerufen werden durch:
 
 ### COLDPULL
 
-Kaltes Ziehen (Düsenreinigung) ohne Kraftaufwand.
+Cold Pull (Düsenreinigung) ohne Kraftaufwand.
 Implementierung von [diesem Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 - Wählen Sie das zu reinigende Material (PETG, ABS, NYLON).
 - Befolgen Sie die Anweisungen in der Fluidd-Konsole.
-- Ziehen Sie die Rückstände aus der Düse
+- Ziehen Sie die Rückstände aus der Düse.
 
 ---
 
 ### M600
 
-Pause und Filament ersetzen
+Pause und Filamentwechsel
 
 ---
 
@@ -35,13 +35,13 @@ Pause und Filament ersetzen
 
 Steuert den Kunststofftyp, die Kunststofffarbe und das Laden und Entladen des Filaments von farbigen Spulen.
 
-Funktioniert nur bei Betrieb im nativen Bildschirmmodus
+Funktioniert nur mit aktiviertem nativen Bildschirm.
 
 ---
 
 ### SET_PAUSE_NEXT_LAYER
 
-Makro auf der nächsten Ebene pausieren/auslösen:
+Pause/Makro auf der nächsten Schicht auslösen:
 
 - `ENABLE` — `0` = deaktivieren, `1` = aktivieren (Standard: `1`)
 - `MACRO` — aufzurufendes Makro (z. B. `PAUSE`)
@@ -50,17 +50,17 @@ Makro auf der nächsten Ebene pausieren/auslösen:
 
 ### SET_PAUSE_AT_LAYER
 
-Pause bei einer bestimmten Layernummer aktivieren/deaktivieren:
+Pause bei einer bestimmten Schichtnummer aktivieren/deaktivieren:
 
 - `ENABLE` — `0` = deaktivieren, `1` = aktivieren (Standard: `1`)
 - `MACRO` — aufzurufendes Makro (z. B. `PAUSE`)
-- `LAYER` — Ziel-Layernummer (Standard: `0`)
+- `LAYER` — Ziel-Schichtnummer (Standard: `0`)
 
 ---
 !!! warning "Warnung"
     Damit diese Funktionen funktionieren, müssen Sie den Startcode ergänzen:
 	
-	Maschinen Start G-Code:
+	Maschinen-Start-G-Code:
     ```
     SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
     ```
