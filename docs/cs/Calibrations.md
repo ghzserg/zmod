@@ -2,10 +2,10 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej vyvolat z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzoly Fluidd/Mainsail (stiskněte anglické písmeno `C` v Fluiddu)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Hodnota v závorkách je výchozí hodnota*
@@ -19,18 +19,18 @@ Lze jej vyvolat z:
 
 ### BED_LEVEL_SCREWS_TUNE
 
-Kalibrace vyrovnání šroubů podložky ([průvodce](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe)).
+Vyrovnání podložky pomocí šroubů ([návod](https://www.klipper3d.org/Manual_Level.html#adjusting-bed-leveling-screws-using-the-bed-probe)).
 Parametry:
 
-- `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `240`)
+- `EXTRUDER_TEMP` — teplota extruderu (výchozí: `240`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
-Měří vzdálenost mezi tryskou a šrouby podložky, poskytuje pokyny k nastavení, uchovává teploty, aby se zabránilo opětovnému zahřívání, a čeká na potvrzení uživatele. Uživatelé musí ručně resetovat teploty po dokončení.
+Měří vzdálenost mezi tryskou a šrouby podložky, dává pokyny k nastavení, drží teploty, aby nebylo nutné znovu ohřívat, a čeká na potvrzení uživatele. Po dokončení je třeba teploty ručně vynulovat.
 
 ---
 ### LOAD_CELL_TARE
 
-Resetovat váhu čidla zatížení. Používá se během kalibrace podložky.
+Vynuluje váhu tenzometrů. Používá se při kalibraci podložky.
 
 ---
 ### PID_TUNE_BED
@@ -55,7 +55,7 @@ Parametry:
 - `TEMPERATURE` — teplota extruderu (výchozí: `245`)
 - `COOLER` — otáčky ventilátoru (0-100, výchozí: `100`)
 
-Kalibrujte PID na vaší obvyklé teplotě tisku a s nastaveným chlazením.
+Kalibrujte PID při teplotě, při které tisknete, a s chlazením, které používáte.
 Automaticky volá `SAVE_CONFIG` po kalibraci.
 
 Chcete-li vypnout automatické ukládání, použijte:
@@ -66,28 +66,28 @@ PID_CALIBRATE HEATER=extruder TARGET={temperature}
 ---
 ### ZSHAPER
 
-Kalibrace Input Shaper.
-Výsledky jsou uloženy v:
+Kalibrace Input Shaperu.
+Výsledky se ukládají na kartě „Konfigurace“ -> `mod_data`:
 
 - `calibration_data_x.png`
 - `calibration_data_y.png`
 - Soubory CSV
 
-Přečtěte si [fix_scv](Global.md#fix_scv)
+Přečtěte si o [FIX_SCV](Global.md#fix_scv)
 
-[Nástroj vizualizace grafu](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases).
+[Program pro zobrazení grafů](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases).
 
 ---
 ### BELTS_SHAPER_CALIBRATION
 
-Analýza frekvence řemenů CoreXY pomocí testu na půl osy.
+Speciální test po diagonále pro analýzu a porovnání frekvenčních profilů řemenů u tiskáren CoreXY.
 
 - `SPECTROGRAM` — `0` = vypnout spektrogram, `1` = zapnout (výchozí: `1`)
 
 **Požadavky:**
 
 - 256 MB RAM
-- Povolena SWAP
+- Zapnutý SWAP
 
 ---
 ### KAMP
@@ -95,7 +95,7 @@ Analýza frekvence řemenů CoreXY pomocí testu na půl osy.
 Adaptivní kalibrace sítě podložky s čištěním trysky.
 Parametry:
 
-- `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `240`)
+- `EXTRUDER_TEMP` — teplota extruderu (výchozí: `240`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
 **Použití v Orca:**
@@ -104,7 +104,7 @@ Přidejte jako první řádek:
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-**Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` a `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` k využití oblastí pro čištění.
+**Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` a `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v měřené oblasti.
 
 [Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
@@ -116,8 +116,8 @@ Parametry:
 
 - `EXTRUDER_TEMP` — teplota extruderu (výchozí: `230`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
-- `PROFILE` — název profilu meshe (výchozí: `auto`)
-- `SAVE` - automaticky ukládat síť podložky (`1`)
+- `PROFILE` — název profilu sítě (výchozí: `auto`)
+- `SAVE` — automaticky uložit síť podložky (výchozí: `1`)
 
 **Použití v Orca:**
 ```gcode
@@ -128,7 +128,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 **Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
-Po provedení kalibrace sítě se kalibruje počáteční nula.
+Při kalibraci sítě se kalibruje i nulový bod.
 
 [Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
@@ -136,6 +136,6 @@ Po provedení kalibrace sítě se kalibruje počáteční nula.
 
 ### LOAD_ZOFFSET_NATIVE 
 
-Zkopíruje z-offset z nativní obrazovky do režimu bez obrazovky
+Zkopíruje Z-offset z nativní obrazovky do režimu bez nativní obrazovky.
 
 [Jak funguje Z-Offset na vaší tiskárně](SetupCalibrations.md#jak-funguje-z-offset-na-vaší-tiskárně)

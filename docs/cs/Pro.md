@@ -2,10 +2,10 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej vyvolat z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzoly Fluidd/Mainsail (stiskněte písmeno `C` v Fluiddu)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Hodnota v závorkách je výchozí hodnota*
@@ -14,14 +14,14 @@ Lze jej vyvolat z:
 
 ### AIR_CIRCULATION_INTERNAL
 
-Povolte vnitřní cirkulaci vzduchu.
+Zapne vnitřní cirkulaci vzduchu.
 
 ---
 ### AIR_CIRCULATION_EXTERNAL
 
-Povolte externí cirkulaci vzduchu.
+Zapne vnější cirkulaci vzduchu.
 
 ---
 ### AIR_CIRCULATION_STOP
 
-Zakázat cirkulaci vzduchu.
+Vypne cirkulaci vzduchu.

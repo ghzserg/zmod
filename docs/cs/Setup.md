@@ -1,4 +1,4 @@
-# Nastavení
+# Instalace
 
 ---
 
@@ -6,7 +6,7 @@
 
 0. [Odinstalujte KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), pokud byl dříve nainstalován.
 1. Obnovte výchozí nastavení tiskárny.
-2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
+2. Naformátujte USB disk na FAT/FAT16/FAT32 (MBR).
 3. Zkopírujte příslušný soubor z [nativního firmwaru](Native_FW.md) do kořenového adresáře USB:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) pro FF5M
@@ -16,11 +16,11 @@
     - [Creator5Pro-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz) pro Creator 5 Pro
 
 4. Vypněte tiskárnu.
-5. Vložte USB disk do USB portu tiskárny.
+5. Vložte USB disk do tiskárny.
 6. Zapněte tiskárnu.
 7. Počkejte, až se dokončí instalace standardního firmwaru. _Pokud to trvá příliš dlouho nebo se firmware vůbec nenainstaluje, použijte jiný flash disk._
 8. Nakonfigurujte Wi‑Fi nebo LAN.
-9. Získejte nejnovější aktualizace tiskárny nebo nainstalujte firmware 1.1.7 pro AD5X nebo 3.2.3 pro [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), pokud nechcete, aby tiskárna [měřila střed lože před každým tiskem](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky).
+9. Získejte nejnovější aktualizace tiskárny nebo nainstalujte firmware 1.1.7 pro AD5X nebo 3.2.3 pro [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky).
 
 ---
 
@@ -32,13 +32,13 @@
     <iframe width="560" height="315" src="https://www.youtube.com/embed/2sfb2OtY7wM" title="Install zmod to AD5X / AD5M / AD5M Pro @Belovv_ilya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-1. **[Obnovte tovární nastavení tiskárny](#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace).**  [Varování pro AD5X](#varování-ad5x)
-2. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
-3. Zkopírujte soubor [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:
+1. **[Obnovte tovární nastavení tiskárny](#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace).** [Varování pro AD5X](#varování-ad5x)
+2. Naformátujte USB disk na FAT/FAT16/FAT32 (MBR).
+3. Zkopírujte [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB:
 
-    - Pro FF5M: Adventurer5M-**zmod**-*.tgz
+    - Pro FF5M: Adventurer5M-**zmod**-\*.tgz
     - Pro FF5M Pro: Adventurer5MPro-**zmod**-\*.tgz
-    - Pro [AD5X](AD5X.md): AD5X-**zmod**-*.tgz
+    - Pro [AD5X](AD5X.md): AD5X-**zmod**-\*.tgz
     - Pro Creator 5: Creator5-**zmod**-\*.tgz
     - Pro Creator 5 Pro: Creator5Pro-**zmod**-\*.tgz
 
@@ -49,7 +49,7 @@
 4. Vypněte tiskárnu.
 5. Vložte USB disk.
 6. Zapněte tiskárnu.
-7. Počkejte, až se dokončí instalace modulu.
+7. Počkejte, až se dokončí instalace modu.
 
    <img width="800" height="480" alt="install" src="https://github.com/user-attachments/assets/9d6b9ad7-e9ec-4bc2-bd8f-54c945b5add5" />
    
@@ -66,7 +66,7 @@
     <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
     <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
     
-    Pokud se webové rozhraní neotevře, znamená to, že standardní firmware tuto funkci zakázal. Chcete-li ji povolit, zkopírujte soubor na USB flash disk a [aktivujte mod](Native_FW.md#ad5xcreator-5creator-5-pro-enable-z-mod).
+    Pokud se webové rozhraní neotevře, nativní firmware mod deaktivoval. Chcete-li ho znovu zapnout, zkopírujte na USB flash disk soubor a [aktivujte mod](Native_FW.md#aktivace-z-mod-na-ad5xcreator-5creator-5-pro).
 
     - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
     - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -84,26 +84,26 @@
 
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
     
-    Zde jsou uvedeny parametry použité na začátku tisku, na konci tisku a globální nastavení. Doporučujeme pouze zkontrolovat nastavení – neměňte je, pokud to není nutné. Popis jednotlivých parametrů naleznete [zde](Global.md).
+    Zde jsou uvedeny parametry pro začátek a konec tisku a globální parametry. Doporučujeme je zatím jen pročíst a neměnit. Popis jednotlivých parametrů naleznete [zde](Global.md).
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
 
-    Musíte přejít na poslední obrazovku a stisknout tlačítko „OK“ nebo „Reboot“. Pokud tento krok přeskočíte, okno se bude zobrazovat při každém spuštění systému.
+    Projděte až na poslední obrazovku a stiskněte „OK“ nebo „Reboot“. Jinak se toto okno bude zobrazovat při každém spuštění.
     <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
 
     Chcete-li toto okno později znovu zobrazit, zadejte do konzole: `GLOBAL`
 
-14. Přejděte do části „Nastavení“ → „Aktualizace firmwaru“.
+14. Přejděte do „Nastavení“ → „Aktualizace softwaru“.
 15. Klikněte na „Zkontrolovat aktualizace“ a počkejte, až se kontrola dokončí.
 16. Klikněte na „Aktualizovat“ a aktualizujte všechny komponenty.
 
     <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
 
-    Pokud se objeví mnoho chyb, je to normální. Pluginy nejsou součástí firmwaru a stahují se samostatně. Klikněte znovu na „Zkontrolovat aktualizace“ a poté obnovte a aktualizujte každý modul samostatně. Během tohoto procesu se tiskárna restartuje.
+    Pokud se objeví mnoho chyb, je to normální. Pluginy nejsou součástí firmwaru a stahují se samostatně. Klikněte znovu na „Zkontrolovat aktualizace“ a poté pluginy postupně obnovte a aktualizujte. Během tohoto procesu se tiskárna restartuje.
 
     <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
 
-17. Povolte [doporučené pluginy](https://github.com/ghzserg/recommend/blob/main/Readme.md)
+17. Zapněte [plugin s doporučeními](https://github.com/ghzserg/recommend/blob/main/Readme.md)
 
     <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
 
@@ -113,7 +113,7 @@
 
 18. [Odesílání souborů k tisku pomocí „Octo/Klipper“](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
-    **Musíte přepnout na protokol Octo/Klipper**:
+    **Přepněte na protokol Octo/Klipper**:
     
     - **Host Type**: `Octo/Klipper`
     - **Printer Agent**: `Moonraker`
@@ -135,7 +135,7 @@
 
 19. [Hotové profily](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
 
-    Celý startovací kód by měl být nahrazen tímto:
+    Celý startovací kód nahraďte tímto:
     ```
     START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
     M190 S[bed_temperature_initial_layer_single]
@@ -143,15 +143,15 @@
     SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
     ```
     
-    ```START_PRINT EXTRUDER_TEMP=... BED_TEMP=...``` by mělo být napsáno na jednom řádku
+    ```START_PRINT EXTRUDER_TEMP=... BED_TEMP=...``` musí být na jednom řádku
     
-    Koncový kód by měl vypadat takto:
+    Koncový kód nahraďte tímto:
 
     ```END_PRINT```
     
     <img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/0dfd8840-c183-4d33-92aa-46f882b8c32c" /> 
     
-    Kód před změnou vrstvy na tento:
+    G-code před změnou vrstvy nahraďte tímto:
 
     ```SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}``` 
     
@@ -170,15 +170,15 @@
 
 [@Khamai](https://t.me/Khamai)
 
-Po instalaci nativního firmwaru nemusí být tisková hlava správně umístěna vůči odpadnímu koši na filament. (páčka uzávěru koše nemusí být zcela zatlačena, filament může být vytlačován na podložku atd.).
-[Prostřednictvím debug menu ve standardním firmwaru](AD5X.md#nastavení-koše-v-továrním-firmwaru-ad5x)
+Po instalaci nativního firmwaru nemusí být tisková hlava správně umístěna u odpadního koše (uzávěr koše se nemusí úplně zavřít, filament může být vytlačován na podložku atd.).
+[Přes servisní menu nativního firmwaru](AD5X.md#nastavení-koše-v-továrním-firmwaru-ad5x)
 
-Pokud se setkáte s tímto problémem, musíte kalibrovat polohu tiskové hlavy pomocí následujícího algoritmu:
+V takovém případě kalibrujte parkovací polohu takto:
 
 1. Stáhněte archiv [Set.XY.Offset.zip](https://github.com/ghzserg/FF/releases/download/R/Set.XY.Offset.zip) a rozbalte jej do kořenového adresáře flash disku.
 2. Vložte flash disk do vypnuté tiskárny a zapněte ji.
 3. Na displeji tiskárny se zobrazí kalibrační rozhraní. Stiskněte tlačítko Reset.
-4. Pomocí ovládacích šipek umístěte tiskovou hlavu proti přijímači tak, aby tisková hlava pevně přitlačovala páčku uzávěru, tryska byla za pohyblivým uzávěrem a uzávěr byl v jedné rovině s přední plochou koše.
+4. Pomocí šipek zaparkujte tiskovou hlavu u koše tak, aby dostatečně tlačila na páčku uzávěru, tryska byla za pohyblivým uzávěrem a uzávěr byl v jedné rovině s přední plochou koše.
 5. Stiskněte tlačítko Set (Nastavit) pro potvrzení výsledku kalibrace.
 6. Vyjměte flash disk a restartujte tiskárnu.
 
@@ -186,7 +186,7 @@ Pokud se setkáte s tímto problémem, musíte kalibrovat polohu tiskové hlavy 
 
 ## Aktualizace modu
 
-Pokud se zobrazí hlášení („Aktualizujte Z-Mod přes USB“), musíte provést aktualizaci přes USB, i když jste ji nedávno provedli.
+Pokud se zobrazí hlášení `Aktualizujte Z-Mod přes USB`, musíte aktualizovat přes USB, i když jste aktualizovali nedávno.
 
 **Aktualizace přes USB zachová všechna data.**
 
@@ -209,7 +209,7 @@ Pokud se zobrazí mnoho chyb, je to normální.
 
 Pluginy nejsou součástí firmwaru a stahují se samostatně.
 
-Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny moduly jeden po druhém. Během tohoto procesu se tiskárna restartuje.
+Klikněte na `Zkontrolovat aktualizace`. Poté pluginy postupně obnovte a aktualizujte. Během tohoto procesu se tiskárna restartuje.
 
 <img width="671" height="223" alt="image" src="https://github.com/user-attachments/assets/5744dc8e-ba58-4359-b78a-652be846ca07" />
 
@@ -220,14 +220,16 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 **Manuální aktualizace přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
+1. Naformátujte USB disk na FAT/FAT16/FAT32 (MBR).
 2. Zkopírujte [soubor modu](https://github.com/ghzserg/zmod/releases/) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.
 5. Zapněte tiskárnu.
-6. Počkejte na restart a instalaci.
-7. Vyjměte USB disk.
-8. Vypněte a znovu zapněte tiskárnu.
+6. Počkejte na restart tiskárny (USB disk nevyjímejte).
+7. Počkejte, až tiskárna oznámí úspěšnou instalaci.
+8. Vyjměte USB disk.
+9. Vypněte a znovu zapněte tiskárnu.
+10. Přejděte do Fluidd/Mainsail → „Nastavení“ → „Aktualizace softwaru“, klikněte na „Zkontrolovat aktualizace“ a nainstalujte nejnovější aktualizace Z-Mod.
 
 ---
 
@@ -240,14 +242,14 @@ Klikněte na `Zkontrolovat aktualizace`. Poté obnovte a aktualizujte všechny m
 
 Pozor!
 
-- Pokud používáte Klipper 13, musíte spustit ```UPDATE_MCU```. Tím zabráníte tomu, aby MCU a Klipper měly různé verze.
-- Pokud máte povolené pluginy, musíte je nejdříve deaktivovat pomocí ```DISABLE_PLUGIN name=g28_tenz```.
+- Pokud používáte Klipper 13, spusťte ```UPDATE_MCU```. Tím zabráníte tomu, aby MCU a Klipper měly různé verze.
+- Pokud máte zapnuté pluginy, nejprve je vypněte pomocí ```DISABLE_PLUGIN name=g28_tenz```.
 
 Úplné odstranění modu: ```REMOVE_ZMOD FULL=1```
 
 **Odstranění přes USB:**
 
-1. Naformátujte USB disk na FAT/FAT16/FAT32(MBR).
+1. Naformátujte USB disk na FAT/FAT16/FAT32 (MBR).
 2. Zkopírujte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/rem_zmod/flashforge_init.sh) do kořenového adresáře USB.
 3. Vypněte tiskárnu.
 4. Vložte USB disk.
@@ -263,7 +265,7 @@ Pozor!
    ```DISABLE_PLUGIN name=plugin_name```
 
 2. Pokud používáte **Klipper 13**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
-3. Povolení čínských cloudových služeb (pokud chcete aktualizovat přes nativní dotykový displej):
+3. Zapněte čínské cloudové služby (pokud chcete aktualizovat přes nativní obrazovku):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 
 Pokud nativní obrazovka aktualizace nenajde:
@@ -271,7 +273,7 @@ Pokud nativní obrazovka aktualizace nenajde:
 - Vaše sériové číslo zatím nebylo zahrnuto do distribuce aktualizace
 - [Nainstalujte aktualizaci nativního firmwaru z USB disku](Native_FW.md)
 
-**U [AD5X](AD5X.md)/Creator 5/Creator 5 Pro je nutná aktivace modu [Z-Mod](Native_FW.md) z USB disku – po aktualizaci nativního firmwaru.**
+**U [AD5X](AD5X.md)/Creator 5/Creator 5 Pro je po aktualizaci nativního firmwaru nutná [aktivace Z-Mod](Native_FW.md) z USB disku.**
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -301,7 +303,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Zkuste obnovit firmware instalací plného firmwaru:
 
-- [FF5M](Native_FW.md#instalace-úplného-firmwaru-na-ff5m)
+- [AD5M / AD5M Pro](Native_FW.md#instalace-úplného-firmwaru-na-ad5m--ad5m-pro)
 - [AD5X](Native_FW.md#instalace-úplného-firmwaru-na-ad5x)
 
 **Postup:**
@@ -316,7 +318,7 @@ Zkuste obnovit firmware instalací plného firmwaru:
 
 ![](../images/connect.jpg)
 
-**VAROVÁNÍ:** Napájení 5V poškodí základní desku!
+**VAROVÁNÍ:** Převodník musí pracovat s 3,3 V. Při 5 V shoří procesor a bude nutné vyměnit základní desku! Pokud má převodník propojku, POVINNĚ ji přepněte z 5V na 3,3V.
 
 5. Připojte převodník křížem:
 
@@ -330,7 +332,7 @@ Zkuste obnovit firmware instalací plného firmwaru:
 
 ![](../images/port.jpg)
 
-7. Otevřete PuTTY:
+7. Otevřete [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html):
 
     - **Typ připojení**: Serial
     - **Rychlost**: 115200
@@ -351,7 +353,7 @@ Zkuste obnovit firmware instalací plného firmwaru:
     mount -o remount,rw /
     ```
 
-12. Opravte poškozené soubory (např. smažte chybné skripty):
+12. Opravte, co je rozbité, např. smažte chybný skript nebo skript kamery, pokud start selhává kvůli kameře:
     ```
     rm -f /etc/init.d/S01bad_script
     rm -f /usr/data/zmod/zmod/.shell/S98camera

@@ -2,10 +2,10 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej spustit z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzole Fluidd/Mainsail (stiskněte anglické písmeno `C` ve Fluidd)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Hodnota v závorkách je výchozí hodnota*
@@ -14,7 +14,7 @@ Lze jej spustit z:
 
 ### LANG
 
-Nastavte jazyk pro provoz Z-Mod.
+Nastaví jazyk Z-Mod.
 
 - LANG - jazyk: en (angličtina), ru (ruština), de (němčina), fr (francouzština), it (italština), es (španělština), zh (čínština), ja (japonština), ko (korejština), pt (portugalština), cs (čeština), tr (turečtina)
 
@@ -28,14 +28,16 @@ LANG LANG=en
 
 Změna časového pásma.
 
-- ZONE - časové pásmo (např. Europe/Prague)
+- ZONE - časové pásmo (výchozí: `Asia/Yekaterinburg`)
+
+Více: [SET_TIMEZONE](System.md#set_timezone).
 
 ---
 ### NOZZLE_CONTROL
 
-Kontrola kolize trysky s podložkou nebo oddělení dílu.
+Ochrana při nárazu trysky do podložky nebo odtržení dílu.
 
-Nouzové vypnutí, pokud hmotnost překročí nastavený limit.
+Nouzové vypnutí tiskárny při zjištění překročení hmotnosti (AD5M a AD5X).
 
 - WEIGHT - hmotnost v gramech (1500)
 
@@ -45,29 +47,33 @@ Nastavte `NOZZLE_CONTROL WEIGHT=0` pro vypnutí této funkce.
 
 *Kontrola je vypnutá, dokud není makro poprvé spuštěno.*
 
+Po prvním spuštění se kontrola při tisku zapíná automaticky.
+
 Při použití nativní obrazovky restartuje spuštění makra tiskárnu.
 
 Bez nativní obrazovky restartuje Klipper (jsou upraveny konfigurační soubory).
 
-Funguje automaticky, ale pro Gcode jsou k dispozici další makra:
+Funguje automaticky; pro G-code jsou k dispozici další makra:
 
-- `ZCONTROL_ON` - povolit kontrolu
-- `ZCONTROL_OFF` - zakázat kontrolu
+- `ZCONTROL_ON` - zapnout kontrolu
+- `ZCONTROL_OFF` - vypnout kontrolu
 - `ZCONTROL_STATUS` - zkontrolovat stav
 - `ZCONTROL_PAUSE` - pozastavit při spuštění (pouze po vyprázdnění fronty příkazů; nepoužívejte na počátečních vrstvách)
-- `ZCONTROL_ABORT` - přerušit Klipper při spuštění
-- `ZCONTROL_AUTO` - Při spuštění zastaví Klipper (pokud je výška Z < `ZCONTROL_Z`) nebo zavolá PAUSE, pokud je z >= `ZCONTROL_Z`
+- `ZCONTROL_ABORT` - při spuštění zastavit Klipper
+- `ZCONTROL_AUTO` - při spuštění zastaví Klipper (pokud je výška Z < `ZCONTROL_Z`) nebo zavolá PAUSE, pokud je z >= `ZCONTROL_Z`
 - `ZCONTROL_Z Z=10` - Nastavit výšku Z.
 - `SAVE_ZMOD_DATA ZCONTROL_Z=10` - Uložit výšku Z. Pokud nechcete povolit pauzu, nastavte `SAVE_ZMOD_DATA ZCONTROL_Z=230`
 
-Pro povolení kontroly trysky na počátečních vrstvách přidejte `ZCONTROL_PAUSE` ve sliceru na požadované vrstvě.
+Chcete-li v prvních vrstvách místo přerušení použít pauzu, přidejte `ZCONTROL_PAUSE` ve sliceru do požadované vrstvy.
+
+_Hláška „Kontrola není aktivní“ znamená, že kontrola se právě nepoužívá; během tisku se zapne automaticky._
 
 ---
 
 ### GET_ZMOD_DATA
 
-Získat globální parametry/příznaky Z-Mod.
-Po spuštění se v konzoli zobrazí uložené parametry aplikované za běhu.
+Zobrazí globální parametry/příznaky Z-Mod.
+Po spuštění se v konzoli zobrazí uložené a aktuálně použité hodnoty.
 
 `Fluidd` -> `Makra` -> `Hlavní` -> `Z-Mod PARAMETRY`
 
@@ -106,7 +112,7 @@ Po změně parametrů se doporučuje restartovat tiskárnu.
 
 Uložit globální parametry/příznaky Z-Mod (aplikují se při každém tisku).
 
-Nepřidávejte toto makro do startovního/koncového G-kódu nebo do souborů G-kódu. Spouštějte ho z konzole Fluidd/Mainsail. Parametry se ukládají do `mod_data/variables.cfg` po vypnutí (**neupravujte ručně**).
+Nepřidávejte toto makro do startovacího/koncového G-code ani do souborů G-code. Spouštějte ho z konzole Fluidd/Mainsail. Parametry se ukládají do paměti tiskárny v souboru `mod_data/variables.cfg` a vypnutím se neztratí, takže je nemusíte zadávat pokaždé (**soubor neupravujte ručně — rozbijete Klipper nebo mod**).
 
 **Pro úpravu parametrů:**
 
@@ -117,27 +123,27 @@ Nepřidávejte toto makro do startovního/koncového G-kódu nebo do souborů G-
 
 ---
 
-### Parametry nabídky výběru barvy tisku ###
+### Parametry nabídky výběru barvy
 
 **Všechny parametry nabídky výběru barvy jsou pouze pro AD5X.**
 
 ##### ALLOWED_TOOL_COUNT
 
-Počet nástrojů, které se mají zobrazit v nabídce výběru barvy. Týká se to příkazů T0, T1 atd. v souboru gcode, nikoli fyzických cívek ve vašem IFS.
+Počet nástrojů, které se mají zobrazit v nabídce výběru barvy. Týká se to příkazů T0, T1 atd. v souboru G-code, nikoli fyzických cívek ve vašem IFS.
 
-Pokud Z-Mod dokáže úspěšně prohledat soubor pro použité nástroje, toto bude přepsáno a zobrazí se nástroje použité v souboru.
+Pokud Z-Mod úspěšně zjistí použité nástroje ze souboru, tato hodnota se přepíše a zobrazí se jen nástroje použité v souboru.
 
 Toto nastavení nelze použít, když je povolena nativní obrazovka.
 
-[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
+[Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 
 ##### SCAN_FILE_COLORS
 
-Povolí prohledávání gcode souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (zakázat), 1 (povolit), 2 (zakázat úplné prohledávání, ale hledat data připravená skriptem sliceru)
+Zapne prohledávání G-code souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (vypnout), 1 (zapnout), 2 (bez úplného prohledávání, jen data připravená skriptem sliceru)
 
-[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
+[Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA SCAN_FILE_COLORS=0`
 
@@ -149,18 +155,18 @@ Příklad: `SAVE_ZMOD_DATA COLOR_MENU_1_BASED=1`
 
 ##### AUTO_ASSIGN_COLORS
 
-Určuje, zda se má pokusit o automatické mapování příkazů pro změnu nástroje (T0, T1 atd.) na fyzický filament vložený ve vašem IFS při zahájení tisku. Pokud jste nepovolili tichý režim, nabídka výběru barvy se stále objeví; toto nastavení ovlivňuje pouze výchozí výběry: 0 (zakázat), 1 (povolit)
+Určuje, zda se při zahájení tisku automaticky přiřadí příkazů pro změnu nástroje (T0, T1 atd.) k fyzickému filamentu zavedenému ve vašem IFS. Pokud jste nepovolili tichý režim, nabídka výběru barvy se stále objeví; toto nastavení ovlivňuje pouze předvybrané hodnoty: 0 (vypnout), 1 (zapnout)
 
-Toto nastavení se bude vztahovat i na tisky spuštěné v tichém režimu. Můžete ho nakonfigurovat tak, aby přerušil tisk, pokud se vyskytnou určité chyby s automatickým přiřazením: 2 (přerušit, pokud nelze spárovat žádný materiál, povolit nesoulad barev), 30 (přerušit při jakýchkoli problémech)
+Toto nastavení se bude vztahovat i na tisky spuštěné v tichém režimu. Můžete ho nakonfigurovat tak, aby přerušil tisk, pokud se vyskytnou určité chyby s automatickým přiřazením: 2 (přerušit, pokud nelze spárovat materiál; nesoulad barev povolit), 30 (přerušit při jakýchkoli problémech)
 
 Pro vlastní hodnoty pro chybové stavy v tichém režimu sečtěte následující hodnoty, abyste určili správné nastavení:
 
 * 2 (Alespoň jeden materiál nelze spárovat; např. gcode soubor specifikuje ABS, ale máte vložený pouze PLA; nebo data o materiálu nelze načíst)
 * 4 (Alespoň jednu barvu nelze vůbec spárovat, obvykle kvůli zakázanému nebo neúspěšnému prohledávání souborů)
-* 8 (Alespoň jedna barva je potenciálně špatně spárována)
+* 8 (Alespoň jedna barva odpovídá špatně)
 * 16 (Alespoň jedna fyzická cívka byla přiřazena k více než jednomu indexu nástroje v souboru)
 
-[Viz předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
+[Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
 Příklad: `SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=0`
 
@@ -181,26 +187,26 @@ Když je zapnuté Auto PA ([PRINT_AUTOPA](Global.md#print_autopa) nebo tlačítk
 
 Příklad: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
-### Parametry startu tisku/mapování podložky [START_PRINT]:
+### Parametry startu tisku a měření sítě podložky [START_PRINT]:
 
 ##### MIDI_START
 
-Přehrát MIDI při startu tisku (""), 0 pro zakázání.
+Přehrát MIDI při startu tisku (""), 0 pro vypnutí.
 
 Příklad: `SAVE_ZMOD_DATA MIDI_START=Pain-Shut-your-mouth.mid`
 
 ---
 ##### PRECLEAR
 
-Povolit předčištění trysky v CLEAR_NOZZLE: 0 (ne), 1 (ano) (0).
+Zapnout předčištění trysky v CLEAR_NOZZLE: 0 (ne), 1 (ano) (0).
 
 Příklad: `SAVE_ZMOD_DATA PRECLEAR=0`
 
 ---
 ##### PRINT_LEVELING
 
-Vytvořit mesh podložky před každým tiskem (pomocí nativní obrazovky, pokud je povolena): 0 (ne), 1 (ano) (0).
-*Pro vyrovnávání podložky pomocí nativní obrazovky povolte "Pouze lokální síť" přes menu tiskárny: Nastavení -> Ikona WiFi -> Síťový režim.*
+Vytvořit síť podložky před každým tiskem (pomocí nativní obrazovky, pokud je povolena): 0 (ne), 1 (ano) (0).
+*Aby nativní obrazovka mohla měřit síť podložky, zapněte v menu tiskárny „Pouze místní síť“: Nastavení -> Ikona Wi-Fi -> Režim sítě.*
 
 Příklad: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
 
@@ -208,17 +214,19 @@ Příklad: `SAVE_ZMOD_DATA PRINT_LEVELING=1`
 ##### PRINT_AUTOPA
 Pouze pro Creator 5 / Creator 5 Pro
 
-Vybrat PA (Pressure Advance) při každém tisku: 0-ne, 1-ano (0). 
+Určit PA (Pressure Advance) při každém tisku: 0 (ne), 1 (ano) (0). 
 
-*Aby Auto PA fungovalo z nativní obrazovky, přejděte v menu tiskárny na kartu „Nastavení“ -> „Ikona WiFi“ -> „Síťový režim“ -> zapněte posuvník „Pouze lokální sítě“*
+*Aby Auto PA fungovalo z nativní obrazovky, zapněte v menu tiskárny „Nastavení“ -> „Ikona Wi-Fi“ -> „Režim sítě“ -> přepínač „Pouze místní síť“.*
 
 Příklad: `SAVE_ZMOD_DATA PRINT_AUTOPA=1`
 
 ---
 ##### USE_KAMP
 
-Použít adaptivní mesh (KAMP) místo plného meshe podložky, kde je to možné: 0 (ne), 1 (ano) (0).
-Doporučuje se nastavit `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby se umístění čištění shodovalo s KAMP meshem.
+Použít adaptivní mesh (KAMP) místo plného sítě podložky, kde je to možné: 0 (ne), 1 (ano) (0).
+Doporučuje se nastavit `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v oblasti KAMP.
+
+*Umožňuje KAMP i při měření sítě přes síť z nativní obrazovky.*
 
 Příklad: `SAVE_ZMOD_DATA USE_KAMP=1`
 
@@ -226,53 +234,53 @@ Příklad: `SAVE_ZMOD_DATA USE_KAMP=1`
 
 ##### MESH_TEST
 
-Testovat mesh podložky před tiskem:
+Testovat síť podložky před tiskem:
 
-- 0 - Ne
+- 0 - nekontrolovat
 - 1 - Test BEZ automatického ladění Z-Offsetu (výchozí)
-- 2 - Test BEZ automatického ladění Z-Offsetu, pokud se mesh neshoduje, spustí se KAMP
+- 2 - Test BEZ automatického ladění Z-Offsetu, pokud síť neodpovídá, spustí se KAMP
 - 3 - Test S automatickým laděním Z-Offsetu, s čištěním trysky
-- 4 - Test S automatickým laděním Z-Offsetu, s čištěním trysky, pokud se mesh neshoduje, spustí se KAMP
+- 4 - Test S automatickým laděním Z-Offsetu, s čištěním trysky, pokud síť neodpovídá, spustí se KAMP
 
 **Automatické ladění Z-Offsetu**
 
 Algoritmus pro automatickou kalibraci Z-Offsetu:
 
-1.  **Zdrojová data:** V paměti tiskárny je uložen mesh podložky (obvykle 25 bodů) získaný při posledním vyrovnávání.
+1.  **Zdrojová data:** V paměti tiskárny je uložen síť podložky (obvykle 25 bodů) získaný při posledním měření.
 2.  **Příprava:**
 
     *   U AD5M/AD5X je tryska nahřátá na pracovní teplotu, otřena o podložku a ochlazena na teplotu měření: [TEMP_TEST_MAX](/cs/Global/#temp_test_max) (výchozí 151), pokud je cílová teplota trysky vyšší než 230°C, jinak [TEMP_TEST_MIN](/cs/Global/#temp_test_min) (výchozí 121).
-    *   U Creator 5 / Creator 5 Pro se aktivní extrudér odloží.
+    *   U Creator 5 / Creator 5 Pro se aktivní extruder odloží.
 
 3.  **Výběr měřicího bodu:**
 
-    *   Použije se **středový** bod meshe.
+    *   Použije se **středový** bod sítě.
 
 4.  **Měření a porovnání:**
 
     *   Na vybraném bodě se provede nové měření sondou (PROBE).
-    *   Získaná hodnota se porovná s hodnotou uloženou v meshi podložky.
+    *   Získaná hodnota se porovná s hodnotou uloženou v síti podložky.
 
 5.  **Korekce offsetu:**
 
     *   Pokud je odchylka **menší než 0,3 mm**, rozdíl se přičte k aktuální hodnotě Z-Offsetu.
-    *   Pokud je odchylka **větší nebo rovna 0,3 mm**, systém považuje uložený mesh za zastaralý a, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
+    *   Pokud je odchylka **větší nebo rovna 0,3 mm**, systém považuje uloženou síť za zastaralý a, pokud to nastavení dovoluje, automaticky zahájí nové měření sítě podložky (KAMP).
 
 **Bez automatického ladění Z-Offsetu**
 
-Algoritmus validace meshe podložky:
+Algoritmus validace sítě podložky:
 
 1.  **Měření:** Na aktuálním bodě se provede standardní měření sondou (PROBE).
-2.  **Validace:** Získaná hodnota Z se zkontroluje na konzistenci s načteným meshem.
-3.  **Kritérium:** Hodnota musí být v rozsahu od (minimum meshe - 0,21 mm) do (maximum meshe + 0,21 mm).
+2.  **Validace:** Získaná hodnota Z se zkontroluje na konzistenci s načtenou sítí.
+3.  **Kritérium:** Hodnota musí být v rozsahu od (minimum sítě - 0,21 mm) do (maximum sítě + 0,21 mm).
 4.  **Výsledek:**
 
-    *   **Úspěch:** Mesh je považován za správný, tisk pokračuje.
-    *   **Neúspěch:** Je vydáno varování a tisk se zastaví nebo, pokud to nastavení dovoluje, automaticky zahájí nové vyrovnávání podložky (KAMP).
+    *   **Úspěch:** Síť je považována za správnou, tisk pokračuje.
+    *   **Neúspěch:** Je vydáno varování a tisk se zastaví nebo, pokud to nastavení dovoluje, automaticky zahájí nové měření sítě podložky (KAMP).
 
 **Poznámky ke kontrole bez automatického ladění:**
 
-*   Tato kontrola je hrubý odhad. Je určena k detekci kritických chyb, například když je načten mesh pro PEI list pro tlusté sklo a naopak.
+*   Tato kontrola je hrubý odhad. Je určena k detekci kritických chyb, například když je načtena síť pro PEI desku pro tlusté sklo a naopak.
 *   **Nespoléhejte na tuto kontrolu jako na absolutní ochranu.**
 *   Při použití chytrého čištění (KAMP) se čekání na ohřev odehrává poblíž místa čištění, nikoli v rohu podložky.
 *   Kontrola probíhá s horkou tryskou.
@@ -292,7 +300,7 @@ Tento parametr se nenastavuje přes `SAVE_ZMOD_DATA` — zadejte příkaz v konz
 Příklad: `SAVE_VARIABLE VARIABLE=temp_test_min VALUE=110`
 
 *   Doporučený rozsah: 100-150. Nová hodnota platí od dalšího tisku, restart není potřeba.
-*   Používá se pouze při čištění trysky ([MESH_TEST](/cs/Global/#mesh_test) 3/4). V režimech 1/2 (výchozí) se mapa kontroluje při plné tiskové teplotě bez ochlazení.
+*   Používá se pouze při čištění trysky ([MESH_TEST](/cs/Global/#mesh_test) 3/4). V režimech 1/2 (výchozí) se síť kontroluje při plné tiskové teplotě bez ochlazení.
 
 ---
 
@@ -310,7 +318,9 @@ Příklad: `SAVE_VARIABLE VARIABLE=temp_test_max VALUE=140`
 
 Igor Polunovskiy
 
-Ověřit MD5 hash souboru a při neshodě smazat: 0 (zakázat), 1 (povolit) (1).
+> Poznámka: Platí pouze při odesílání G-code. Pro 3MF není potřeba.
+
+Ověřit MD5 součet souboru a při neshodě ho smazat: 0 (vypnout), 1 (zapnout) (1).
 
 1. Vyberte a stáhněte soubor pro vaši architekturu a operační systém:
 
@@ -318,10 +328,10 @@ Ověřit MD5 hash souboru a při neshodě smazat: 0 (zakázat), 1 (povolit) (1).
 - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Nezapomeňte `chmod +x zmod_preprocess-linux-amd64`
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-arm64`
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit `chmod +x zmod_preprocess-darwin-amd64`
-- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Obecný Python. Nezapomeňte spustit `chmod +x zmod-preprocess.py`
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit `chmod +x zmod-preprocess.sh`
+- [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Univerzální Python. Nezapomeňte spustit `chmod +x zmod-preprocess.py`
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/macOS Bash. Nezapomeňte spustit `chmod +x zmod-preprocess.sh`
 
-2. V Orce musíte specifikovat: `Process Profile` -> `Other` -> `Post Processing Scripts`.
+2. V Orce zadejte: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
 Zde jsou možnosti pro přidání:
 
@@ -338,7 +348,7 @@ Příklad: `SAVE_ZMOD_DATA FORCE_MD5=1`
 ---
 ##### DISABLE_SKEW
 
-1 (zakázat korekci SKEW), 0 (načíst `skew_profile` přes `SKEW_PROFILE LOAD=skew_profile`) (1).
+1 (vypnout korekci SKEW), 0 (načíst `skew_profile` přes `SKEW_PROFILE LOAD=skew_profile`) (1).
 
 [Detaily](https://www.klipper3d.org/Skew_Correction.html)
 
@@ -356,20 +366,22 @@ Příklad: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 ---
 ##### DISABLE_PRIMING
 
-Zakázat přípravu trysky extruzí: 0 (ne), 1 (ano) (0).
+Vypnout předtlačení (priming) trysky: 0 (ne), 1 (ano) (0).
+
+[Podrobnosti](/cs/Global/#clear)
 
 Příklad: `SAVE_ZMOD_DATA DISABLE_PRIMING=0`
 
 ---
 ##### CLEAR
 
-Vybrat algoritmus čištění trysky (LINE_PURGE):
+Výběr algoritmu předtlačení trysky (LINE_PURGE):
 
 - _CLEAR1 - styl Orca
 - _CLEAR2 - styl skupiny FF
 - _CLEAR3 - alternativa skupiny FF
 - _CLEAR4 - kód Shreidera (zprava nahoře doprava dolů)
-- _CLEAR_TRAP - Pro kartáče (zprava nahoře doprava dolů)
+- _CLEAR_TRAP - pro kartáče (zprava nahoře doprava dolů)
 - LINE_PURGE - čištění KAMP
 
 Pokud používáte `KAMP`, čištění se vynutí na `LINE_PURGE` (místo _CLEAR1, _CLEAR2, _CLEAR3, _CLEAR4).
@@ -390,7 +402,7 @@ _Pro vypnutí předtlačení trysky linkou použijte [DISABLE_PRIMING](/cs/Globa
 
 ##### MIDI_END
 
-Přehrát MIDI na konci tisku (""), 0 pro zakázání.
+Přehrát MIDI na konci tisku (""), 0 pro vypnutí.
 
 Příklad: `SAVE_ZMOD_DATA MIDI_END=Pain-Shut-your-mouth.mid`
 
@@ -443,7 +455,7 @@ Příklad: `SAVE_ZMOD_DATA MOTION_SENSOR=1`
 
 Pouze AD5X
 
-Nezobrazovat okno pro výběr barvy při spuštění tisku
+Určuje, zda se při spuštění tisku zobrazí okno výběru barvy:
 
 - 0 - zobrazit okno (výchozí)
 - 1 - nezobrazovat okno, použít dříve nastavené barvy
@@ -457,10 +469,10 @@ Příklad: `SAVE_ZMOD_DATA SILENT=0`
 
 Pouze AD5X
 
-Automaticky načíst filament
+Automaticky zavádět filament:
 
-- 0 - Automaticky nenačítat filament
-- 1 - Automaticky načíst filament (výchozí)
+- 0 - nezavádět automaticky
+- 1 - zavádět automaticky (výchozí)
 
 Příklad: `SAVE_ZMOD_DATA AUTOINSERT=0`
 
@@ -481,13 +493,13 @@ Příklad: `SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0`
 
 Pouze AD5X
 
-Pouze při běhu bez nativního displeje
+Pouze při běhu bez nativní obrazovky
 
-Použít koš při změně barvy během tisku
+Používat odpadní koš při změně barvy během tisku:
 
-- 0 - žádné čištění v odpadním žlabu
-- 1 - čištění v odpadním žlabu (výchozí)
-- 2 - přejezd k odpadnímu žlabu po změně barvy, ale bez čištění
+- 0 - nečistit do odpadního koše
+- 1 - čistit do odpadního koše (výchozí)
+- 2 - po změně barvy přejet k odpadnímu koši, ale nečistit
 
 Příklad: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
@@ -497,7 +509,7 @@ Příklad: `SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0`
 
 Pouze AD5X
 
-Pouze při běhu bez nativního displeje
+Pouze při běhu bez nativní obrazovky
 
 Vysunout filament po dokončení tisku:
 
@@ -510,7 +522,7 @@ Příklad: `SAVE_ZMOD_DATA REMOVE_FILAMENT=1`
 
 ##### FIX_SCV
 
-Opravit nesprávné SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) při vykreslování grafů zrychlení a výpočtu input shaperů.
+Opravit nesprávné SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) při vykreslování grafů zrychlení a výpočtu Input Shaperů.
 
 - 0 - ponechat parametr jako v továrním nastavení (5)
 - 1 - použít `square_corner_velocity` z `mod_data/user.cfg` nebo `printer.base.cfg`
@@ -519,17 +531,17 @@ Příklad: `SAVE_ZMOD_DATA FIX_SCV=1`
 
 V naší tiskárně je `square_corner_velocity: 25`, ale výpočty grafů shaperu a zrychlení jsou založeny na `SCV = 5`.
 
-To primárně ovlivňuje zobrazená zrychlení a vypočítané úrovně vyhlazování.
+Ovlivňuje to hlavně zobrazená zrychlení a vypočítané vyhlazení.
 `shaper_type_x`, `shaper_freq_x`, `shaper_type_y`, `shaper_freq_y` zůstávají nezměněny.
 
-Nicméně, se správnými výpočty klesnou výsledná zrychlení přibližně o polovinu.
+Se správným výpočtem však vypočtená zrychlení klesnou přibližně na polovinu.
 
 Doporučení: přidejte následující do `mod_data/user.cfg`:
 ```
 [printer]
 square_corner_velocity: 9
 ```
-To snižuje rychlosti v zatáčkách a obecně zlepšuje kvalitu tisku s mírným kompromisem v rychlosti.
+Sníží se rychlost v rozích a celkově se zlepší kvalita tisku za cenu mírně nižší rychlosti.
 
 ---
 
@@ -537,11 +549,11 @@ To snižuje rychlosti v zatáčkách a obecně zlepšuje kvalitu tisku s mírný
 
 Na některých verzích firmwaru se Wi-Fi občas nespustí.
 
-Pro opravu se připojte k Wi-Fi síti přes nativní obrazovku.
+Pro opravu se nejprve připojte k Wi-Fi síti přes nativní obrazovku a poté:
 
-1. Zavolat `SAVE_ZMOD_DATA WIFI=1`
-2. Vypnout tiskárnu
-3. Zapnout tiskárnu
+1. Zavolejte `SAVE_ZMOD_DATA WIFI=1`
+2. Vypněte tiskárnu
+3. Zapněte tiskárnu
 
 - 0 — použít Wi-Fi z nativní obrazovky
 - 1 — použít Wi-Fi přes Z-Mod
@@ -557,14 +569,14 @@ Běžné příčiny chyby E0011 (Timer too close):
 
 Specifické příčiny:
 
-- Zamrzlá základní deska Nations MCU nebo eboard. `Ztracena komunikace s MCU 'mcu'`. Řešení: Restart. Vyměňte základní desku (`mcu`) nebo desku extruderu (`eboard`).
+- Zamrzlé MCU základní desky nebo desky extruderu. `Lost communication with MCU 'mcu'`. Řešení: restart; výměna základní desky (`mcu`) nebo desky extruderu (`eboard`).
 - Přetížení CPU hostitele (výpočty shaperu/vykreslování grafů).
 - Přetížení EMMC (operace git, zálohování, nahrávání velkých souborů během tisku atd.).
-- Nedostatek RAM. Řešení: Přepájejte CPU a upgradujte na 256MB RAM.
+- Nedostatek RAM. Řešení: přepájení procesoru na verzi s 256 MB RAM.
 - Poškozený kabel extruderu. Řešení: Vyměňte/opravte kabel.
-- Uvolněné připojení kabelu desky extruderu. Řešení: Vyměňte desku extruderu.
-- Načítání dat SWAP (SWAP je na EMMC, která pracuje rychlostí 10 MB/s; data SWAP během výpočtů shaperu mohou dosáhnout 25MB). Řešení: Vypněte SWAP, pokud máte 256MB RAM pomocí `SAVE_ZMOD_DATA USE_SWAP=0`.
-- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace) nebo použijte mod [UPDATE_MCU](System.md#update_mcu).
+- Uvolněný konektor kabelu desky extruderu. Řešení: Vyměňte desku extruderu.
+- Načítání dat SWAP (SWAP je na EMMC, která pracuje rychlostí 10 MB/s; data SWAP během výpočtů shaperu mohou dosáhnout 25MB). Řešení: pokud máte 256 MB RAM, vypněte SWAP pomocí `SAVE_ZMOD_DATA USE_SWAP=0`.
+- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace) nebo pomocí makra [UPDATE_MCU](System.md#update_mcu).
 
 Opravit chyby E0011 a `Communication timeout during homing`. Změna tohoto parametru restartuje tiskárnu. 0-ne, 1-ano (0):
 
@@ -575,21 +587,21 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0011=1`
 
 Tato chyba se může také objevit:
 
-- Velký objem vyloučení modelů: Řešení `Process profile` -> `Other` -> `Output G-cod` -> zrušte zaškrtnutí `Exclude models`.
+- Velký počet vylučitelných objektů. Řešení: `Process profile` -> `Other` -> `G-code output` -> zrušte zaškrtnutí `Exclude objects`.
 - Pokud jste vypnuli swap na FF5M/FF5MPro.
 
   Spusťte makro `MEM` a podívejte se, zda je swap a jakou má velikost.
 
-  Povolte swap, pokud je vypnutý: `SAVE_ZMOD_DATA USE_SWAP=1`
+  Zapněte swap, pokud je vypnutý: `SAVE_ZMOD_DATA USE_SWAP=1`
 
 - Pokud na FF5M/FF5MPro spouštíte plný test, tedy kalibraci PID, měření sítě podložky a kalibraci shaperů současně.
 
-  Je lepší provést všechny kalibrace [zde podle těchto pokynů](SetupCalibrations.md#printer-calibration-for-beginners)
+  Je lepší provést všechny kalibrace [podle tohoto návodu](SetupCalibrations.md#printer-calibration-for-beginners)
 
 - Pokud používáte Klipper 13 na AD5X. V tom případě se můžete vrátit k nativnímu Klipperu příkazem `UPDATE_MCU FORCE=12`.
 - Pokud se používá fuzzy skin a procesor nestíhá počítat trasu. Vypněte fuzzy skin nebo upravte jeho parametry.
 
-Chyba `Communication timeout during homing` se může objevit kvůli vysoké latenci komunikace mezi hostitelem a MCU. Doba odezvy by měla konzistentně zůstat pod 10ms. Dočasné špičky latence mohou způsobit selhání homingu.
+Chyba `Communication timeout during homing` se může objevit kvůli vysoké latenci komunikace mezi hostitelem a MCU. Doba odezvy by měla trvale zůstat pod 10 ms. Dočasné špičky latence mohou způsobit selhání homingu.
 
 `TRSYNC_TIMEOUT` je parametr Klipperu (výchozí: 0.025 s), který kompenzuje systémové zpoždění.
 
@@ -597,12 +609,12 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 
 **Jak opravit na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32(MBR).
-- Uložte soubor `flashforge_init.sh` na USB:
+- Naformátujte USB disk na FAT32 (MBR).
+- Uložte na USB soubor `flashforge_init.sh`:
     - [Opravit parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-      - [Obnovit tovární parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-      - [Opravit parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-      - [Obnovit tovární parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+    - [Obnovit tovární parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+    - [Opravit parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+    - [Obnovit tovární parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
 
 - Vypněte tiskárnu.
 - Vložte USB do tiskárny.
@@ -633,10 +645,10 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Jak opravit na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32(MBR).
+- Naformátujte USB disk na FAT32 (MBR).
 - Uložte příslušný soubor na USB:
     - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz) pro FlashForge 5M
-      - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) pro FlashForge 5M Pro
+    - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz) pro FlashForge 5M Pro
 
 - Vypněte tiskárnu.
 - Vložte USB do tiskárny.
@@ -656,7 +668,7 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 ---
 ##### LED
 
-Jas LED při spuštění (50).
+Jas LED po zapnutí (50).
 
 Příklad: `SAVE_ZMOD_DATA LED=50`
 
@@ -675,62 +687,62 @@ Příklad: `SAVE_ZMOD_DATA WEB_SCREEN=1`
 ---
 ##### MIDI_ON
 
-Přehrát MIDI při spuštění (""). Použijte `0` pro zakázání.
+Přehrát MIDI při zapnutí tiskárny (""). Pro vypnutí použijte `0`.
 
 Příklad: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
 
 ---
 ##### NEW_SAVE_CONFIG
 
-Použít alternativní SAVE_CONFIG (vyvolá `SAVE_CONFIG` bez zamrznutí nativní obrazovky). [NEW_SAVE_CONFIG](Main.md#new_save_config) pro kalibraci PID: 0-ne, 1-ano (0).
+Při kalibraci PID použít alternativní [NEW_SAVE_CONFIG](Main.md#new_save_config) (provede `SAVE_CONFIG` bez zamrznutí nativní obrazovky): 0 (ne), 1 (ano) (0).
 
 Příklad: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
 
 ---
 ##### USE_SWAP
 
-Povolit SWAP (1):
+Používat SWAP (1):
 
-- 0 - ne (*Pouze pro upgradovanou 256MB RAM*)
+- 0 - ne (*pouze pro přepájený procesor s 256 MB RAM*)
 - 1 - ano, na EMMC
-- 2 - ano, preferovat USB FLASH
+- 2 - ano, přednostně na USB FLASH (_pro odvážné; ve skutečnosti asi o 90 % pomalejší než EMMC_)
 
 Příklad: `SAVE_ZMOD_DATA USE_SWAP=1`
 
 ---
 ##### CHINA_CLOUD
 
-Povolit čínské cloudové služby: 0-ne, 1-ano (1).
+Zapnout čínské cloudové služby: 0 (ne), 1 (ano) (1).
 
 Příklad: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Zakázat čínské cloudy](Recommendations.md#zakažte-čínské-cloudové-služby)
+[Vypnout čínské cloudy](Recommendations.md#zakažte-čínské-cloudové-služby)
 
 I když jsou všechny cloudové možnosti vypnuty přes obrazovku, tiskárna se stále snaží posílat fotky, videa a telemetrii na čínské servery.
 
-Nastavení tohoto parametru na 0 částečně zakáže tyto "funkce".
+Nastavení tohoto parametru na 0 tyto „funkce“ částečně vypne.
 
-**Pokud jsou čínské cloudy zakázány, tiskárna nebude kontrolovat aktualizace továrního firmwaru.**
+**Pokud jsou čínské cloudy vypnuté, tiskárna nebude kontrolovat aktualizace továrního firmwaru.**
 
-Pro aktualizaci továrního firmwaru povolte čínské cloudy pomocí `SAVE_ZMOD_DATA CHINA_CLOUD=1`, restartujte a pokračujte v aktualizaci.
+Pro aktualizaci továrního firmwaru zapněte čínské cloudy pomocí `SAVE_ZMOD_DATA CHINA_CLOUD=1`, restartujte a pokračujte v aktualizaci.
 
 Místo toho můžete použít:
 
 - [zmod.link](Zmod.md#zlink) - cloud pro správu tiskáren přes Fluidd/Mainsail.
 - [Telegram bot](Telegram.md).
 
-**Jak zakázat čínské cloudy na továrním firmwaru:**
+**Jak vypnout čínské cloudy na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32(MBR).
+- Naformátujte USB disk na FAT32 (MBR).
 - Umístěte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/rem/flashforge_init.sh) na USB.
 - Vypněte tiskárnu.
 - Vložte USB do tiskárny.
 - Zapněte tiskárnu (jednou se restartuje).
 - Vyjměte USB.
 
-**Jak povolit čínské cloudy na továrním firmwaru:**
+**Jak zapnout čínské cloudy na továrním firmwaru:**
 
-- Naformátujte USB disk jako FAT32(MBR).
+- Naformátujte USB disk na FAT32 (MBR).
 - Umístěte [flashforge_init.sh](https://github.com/ghzserg/zmod/blob/main/Native_firmware/cloud/orig/flashforge_init.sh) na USB.
 - Postupujte stejně jako výše.
 
@@ -741,7 +753,7 @@ Nastavit prioritu procesu Klipper: 1 (nejnižší) až 40 (nejvyšší) (20).
 
 Příklad: `SAVE_ZMOD_DATA NICE=20`
 
-Vyšší priorita přiděluje více zdrojů Klipperu, ale může způsobit odpojení Moonrakeru a kamery.
+Čím vyšší priorita, tím více prostředků Klipper dostane, ale tím častěji padají Moonraker a kamera.
 
 Pro uživatele Linuxu:
 ```
@@ -758,14 +770,14 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 Nastavit dobu (v sekundách), po které se nativní obrazovka v režimu bez nativní obrazovky vypne. Výchozí: 180.
 
-Poznámka: Nativní obrazovka potřebuje alespoň 5 sekund na konfiguraci WiFi.
+Poznámka: Nativní obrazovka potřebuje alespoň 5 sekund na nastavení Wi-Fi.
 
 Příklad: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
 ##### PRO_POWEROFF_TIMEOUT
 
-Nastavit časový limit (v minutách) pro automatické vypnutí FF5M Pro. Výchozí: 0 (zakázáno).
+Doba (v minutách), po které FF5M Pro vypne napájení. Výchozí: 0 (vypnuto).
 
 Příklad: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
 
@@ -773,8 +785,8 @@ Příklad: `SAVE_ZMOD_DATA PRO_POWEROFF_TIMEOUT=10`
 
 ##### SAVE_MOONRAKER
 
-- 0 - Načíst rozložení tlačítek maker ze Z-Mod (výchozí).
-- 1 - Povolit ukládání změn tlačítek maker lokálně ve Fluidd/Moonraker.
+- 0 - načítat rozložení tlačítek maker ze Z-Mod (výchozí)
+- 1 - změny tlačítek maker se ukládají lokálně ve Fluidd/Moonraker
 
 Lokálně uložená makra jsou uložena v samostatné sekci.
 
@@ -784,8 +796,8 @@ Příklad: `SAVE_ZMOD_DATA SAVE_MOONRAKER=1`
 
 ##### SAVE_FILAMENT_SENSORS
 
-- 0 - Neukládat stav senzorů filamentu po restartu; budou vždy povoleny (výchozí)
-- 1 - Uložit stav senzorů po restartu. Pokud senzor zakážete, bude zakázán i po restartu.
+- 0 - neukládat stav senzorů filamentu přes restart; budou vždy zapnuté (výchozí)
+- 1 - ukládat stav senzorů přes restart; vypnutý senzor zůstane vypnutý i po restartu
 
 Příklad: `SAVE_ZMOD_DATA SAVE_FILAMENT_SENSORS=1`
 

@@ -1,22 +1,22 @@
 # Pluginy v Z-Modu
 
-Každý uživatel může vytvořit a připojit svůj vlastní plugin do **zmod**.
+Každý uživatel může vytvořit a připojit svůj vlastní plugin do **Z-Mod**.
 
 Pluginy obsažené v Z-Mod:
 
-1. [Recommend](https://github.com/ghzserg/recommend) - Doporučená nastavení k okamžitému použití po instalaci modu.
+1. [Recommend](https://github.com/ghzserg/recommend) - Nastavení doporučená ihned po instalaci modu.
 2. [G28_tenz](https://github.com/ghzserg/g28_tenz) – Parkování osy Z pomocí tenzometrů.
 3. [Nopoop](https://github.com/ghzserg/nopoop) - Maximální snížení odpadu od ninjamida.
 4. [TimeLapse](https://github.com/ghzserg/timelapse) - Moonraker Timelapse.
-5. [Notify](https://github.com/ghzserg/notify) - Přijímání oznámení v Telegramu a více než 100 dalších službách.
+5. [Notify](https://github.com/ghzserg/notify) - Oznámení v Telegramu a ve více než 100 dalších službách.
 
-Externí pluginy, které nevyvíjí autor Z-Mod.
+Externí pluginy, které nevyvíjí autor Z-Mod:
 
 1. [Bambufy](https://github.com/function3d/bambufy/blob/master/README_ru.md) - Kompatibilní s Bambu Studio, vylepšuje správu čisticí věže, poskytuje přesné odhady doby tisku a spotřeby materiálu, snižuje odpad, podporuje Mainsail, rychlé změny barev a pokročilé tiskařské funkce. NELZE POUŽÍT S NATIVNÍ OBRAZOVKOU.
-2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - fork pluginu BamBufy.
+2. [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README_ru.md) - fork pluginu Bambufy.
 3. [Dryer](https://github.com/pantata/dryer) - Sušení filamentu pomocí vyhřívané podložky
 4. [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Doplněk pro podporu [hardwarového modu IFS Jacker](https://github.com/ninjamida/ifs-jacker), který umožňuje automatickou detekci počtu dostupných kanálů a integraci ventilátorů, LED a senzorů připojených přes IFS Jacker do Klipperu.
-5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – alternative Bildschirmimplementierung
+5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – alternativní implementace obrazovky
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin pro rychlejší změnu barev na AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin pro připojení sušičky [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
 8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Vypíše ostatní sloty IFS na AD5X se stejnou barvou a materiálem. Filament nepřepíná.
@@ -117,7 +117,7 @@ Nahraďte:
 
 **Krok 4: Restartujte Klipper**
 
-Po vytvoření symbolického odkazu musíte restartovat Klipper pomocí tlačítka pro restart v webovém rozhraní Fluidd/Mainsail.
+Po vytvoření symbolického odkazu musíte restartovat Klipper pomocí tlačítka pro restart ve webovém rozhraní Fluidd/Mainsail.
 
 ### Důležité poznámky
 
@@ -134,9 +134,7 @@ Příklad pluginu: https://github.com/ghzserg/g28_tenz
 
 ### Přidání pluginu
 
-V souboru
-```mod_data/user.moonraker.conf```
-přidejte následující sekci:
+Do souboru `mod_data/user.moonraker.conf` přidejte následující sekci:
 
 ```ini
 [update_manager g28_tenz]

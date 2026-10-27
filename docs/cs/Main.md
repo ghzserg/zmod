@@ -2,10 +2,10 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej vyvolat z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzoly Fluidd/Mainsail (stiskněte písmeno `C` v Fluiddu)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Hodnota v závorkách je výchozí hodnota*
@@ -19,17 +19,17 @@ Nahradí výchozí spouštěcí G-code.
 
 Parametry:
 
-- `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `245`)
+- `EXTRUDER_TEMP` — teplota extruderu (výchozí: `245`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 - `MESH` — název profilu sítě podložky, který se má načíst (prázdné = nic se nenačte; pokud profil neexistuje, vytvoří se)
 - `FORCE_LEVELING` — vynutit vyrovnání podložky (výchozí: `False`)
 - `SKIP_LEVELING` — úplně přeskočit vyrovnání podložky (přepíše `FORCE_KAMP`/`FORCE_LEVELING`, výchozí: `False`)
 - `FORCE_KAMP` — vytvořit adaptivní síť podložky (KAMP, výchozí: `False`).
-  *Doporučuje se přidat `SAVE_ZMOD_DATA CLEAR=LINE_PURGE` pro použití čisticích oblastí pro KAMP.*
+  *Doporučuje se nastavit `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v oblasti KAMP.*
 
-- `Z_OFFSET` — nastavit Z offset (výchozí: `0.0`)
-- `INTERNAL` - Pro verzi PRO při provozu bez nativní obrazovky, 1 - povolit vnitřní recirkulaci (0)
-- `EXTERNAL` - Pro verzi PRO při provozu bez nativní obrazovky, 1 - povolit externí recirkulaci (0)
+- `Z_OFFSET` — nastavit Z-offset (výchozí: `0.0`)
+- `INTERNAL` - Pro verzi PRO při provozu bez nativní obrazovky, 1 - zapnout vnitřní cirkulaci vzduchu (0)
+- `EXTERNAL` - Pro verzi PRO při provozu bez nativní obrazovky, 1 - zapnout vnější cirkulaci vzduchu (0)
 
 **Poznámky:**
 
@@ -37,7 +37,7 @@ Parametry:
 - [`ZSSH_RELOAD`](Zmod.md#zssh_reload) se volá během `START_PRINT` pro obnovení SSH, pokud je potřeba.
 
 **Příklad pro Orca Slicer s nativní obrazovkou:**
-Nahraďte spouštěcí G-code s:
+Nahraďte spouštěcí G-code tímto:
 ```gcode
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 M190 S[bed_temperature_initial_layer_single]
@@ -63,13 +63,13 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 ---
 
-#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-startu-tiskumapování-podložky-start_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-startu-tisku-a-měření-sítě-podložky-start_print)):
 
 - `PRECLEAR` — předčištění trysky v `CLEAR_NOZZLE`: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `CLEAR` — metoda čištění trysky (`LINE_PURGE`).
-- `PRINT_LEVELING` — povolit vyrovnání podložky pro každý tisk: `0` = vypnout, `1` = zapnout (výchozí: `0`).
+- `PRINT_LEVELING` — měřit síť podložky při každém tisku: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `USE_KAMP` — použít adaptivní síť podložky (KAMP), kde je to možné: `0` = vypnout, `1` = zapnout (výchozí: `0`).
-- `DISABLE_PRIMING` — vypnout přípravu (priming) trysky: `0` = zapnout, `1` = vypnout (výchozí: `0`).
+- `DISABLE_PRIMING` — vypnout předtlačení (priming) trysky: `0` = předtlačení zapnuté, `1` = vypnuté (výchozí: `0`).
 - `FORCE_MD5` — ověřit MD5 hashe souborů a při chybě soubor smazat (výchozí: `1`).
     > Poznámka: Platí pouze při odesílání G-code. Pro 3MF není potřeba.
 
@@ -79,10 +79,10 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     - [zmod_preprocess-linux-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-linux-amd64) - Linux. Nezapomeňte spustit `chmod +x zmod_preprocess-linux-amd64`
     - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-arm64```
     - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
-    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Obecný Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
-    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
+    - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Univerzální Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
+    - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/macOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
     
-    2. V Orca Sliceru musíte zadat: `Process Profile` -> `Other` -> `Post Processing Scripts`.
+    2. V Orca Sliceru zadejte: `Process Profile` -> `Other` -> `Post Processing Scripts`.
     
     Zde jsou možnosti pro přidání:
     
@@ -94,9 +94,9 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     - ```"/home/user/zmod_preprocess-darwin-arm64";```
     - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-- `DISABLE_SKEW` — vypnout korekci zkosení (skew): `1` = vypnout, `0` = načíst `skew_profile` (volá `SKEW_PROFILE LOAD=skew_profile`) (výchozí: `1`).
+- `DISABLE_SKEW` — vypnout korekci zkosení (SKEW): `1` = vypnout, `0` = načíst `skew_profile` (volá `SKEW_PROFILE LOAD=skew_profile`) (výchozí: `1`).
 - `AUTO_REBOOT` — automatický restart po tisku: `0` = vypnout, `1` = zapnout, `2` = `FIRMWARE_RESTART` (pouze v režimu bez nativní obrazovky; s nativní obrazovkou — `REBOOT`) (výchozí: `0`).
-- `CLOSE_DIALOGS` — automatické zavírání dialogů: `0` = vypnout, `1` = pomalé, `2` = rychlé (vyžaduje povolení "Pouze místní síť" na obrazovce tiskárny: Nastavení → Ikona WiFi → Režim sítě) (výchozí: `0`).
+- `CLOSE_DIALOGS` — automatické zavírání dialogů: `0` = vypnout, `1` = pomalé, `2` = rychlé (vyžaduje zapnutí „Pouze místní síť“ na obrazovce tiskárny: Nastavení → Ikona Wi-Fi → Režim sítě) (výchozí: `0`).
 - `STOP_MOTOR` — vypnutí motorů 25 sekund po skončení/zrušení tisku: `0` = vypnout, `1` = zapnout (výchozí: `1`).
 - `MIDI_START` — MIDI soubor k přehrání na začátku tisku (např. `"start.mid"`).
 - `MIDI_END` — MIDI soubor k přehrání na konci tisku.
@@ -143,9 +143,9 @@ gcode:
 
 ### _USER_START_PRINT
 
-Vlastní makro pro uživatelsky definované akce na začátku tisku.
+Uživatelské makro pro vlastní akce na začátku tisku.
 
-Toto makro je automaticky voláno na konci makra `START_PRINT`. Použijte jej k rozšíření standardního procesu inicializace tisku o vlastní příkazy.
+Toto makro je automaticky voláno na konci makra `START_PRINT`. Slouží k rozšíření standardní přípravy tisku o vlastní příkazy.
 
 **Běžné případy použití:**
 
@@ -165,14 +165,14 @@ gcode:
     # Další vlastní akce
 ```
 
-**Poznámka:** Ve výchozím stavu je toto makro prázdné a uživatel si jej může přepsat podle svých potřeb.
+**Poznámka:** Ve výchozím stavu je makro prázdné a uživatel ho může přepsat podle svých potřeb.
 
 ---
 ### _USER_END_PRINT
 
-Vlastní makro pro uživatelsky definované akce na konci tisku.
+Uživatelské makro pro vlastní akce na konci tisku.
 
-Toto makro je automaticky voláno na konci makra `END_PRINT`. Použijte jej k rozšíření standardního procesu dokončení tisku o vlastní příkazy.
+Toto makro je automaticky voláno na konci makra `END_PRINT`. Slouží k rozšíření standardního dokončení tisku o vlastní příkazy.
 
 **Běžné případy použití:**
 
@@ -192,7 +192,7 @@ gcode:
     # Nebo jiné vlastní příkazy
 ```
 
-**Poznámka:** Ve výchozím stavu je toto makro prázdné a uživatel si jej může přepsat podle svých potřeb.
+**Poznámka:** Ve výchozím stavu je makro prázdné a uživatel ho může přepsat podle svých potřeb.
 
 ---
 ### CANCEL
@@ -202,10 +202,10 @@ Zruší aktuální tisk.
 ---
 ### CLEAR_NOZZLE
 
-Čištění trysky (jako ve standardním firmwaru).
+Čištění trysky (jako v nativním firmwaru).
 Parametry:
 
-- `EXTRUDER_TEMP` — teplota extrudéru (výchozí: `230`)
+- `EXTRUDER_TEMP` — teplota extruderu (výchozí: `230`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
 *`PRECLEAR` není parametr `CLEAR_NOZZLE`, ale globální příznak nastavovaný přes `SAVE_ZMOD_DATA PRECLEAR=1`; povoluje předčištění. [Zjistit více](Global.md#preclear).*
@@ -225,7 +225,7 @@ Vypne LED osvětlení.
 ---
 ### LED
 
-Nastaví jas LED.
+Zapne osvětlení na zadanou úroveň jasu.
 
 - `S` — procento jasu (výchozí: `50`).
 
@@ -268,7 +268,7 @@ Rychle zavře dialogy (doporučeno). Používá se k zavření okna na konci tis
 
 Implementace: @darksimpson
 
-*Povolte "Pouze místní síť" v nastavení tiskárny: **Nastavení → Ikona WiFi → Režim sítě → Přepnout "Pouze místní síť"**.*
+*Na obrazovce tiskárny zapněte „Pouze místní síť“: **Nastavení → Ikona Wi-Fi → Režim sítě → přepínač „Pouze místní síť“**.*
 Ovládáno globálním parametrem [`CLOSE_DIALOGS`](Global.md#close_dialogs).
 
 ---

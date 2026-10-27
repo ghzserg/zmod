@@ -2,12 +2,12 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej spustit z:
+Lze ho vyvolat:
 
-- GCODE souboru
-- Konzole Fluidd/Mainsail (stiskněte anglické písmeno `C` ve Fluidd)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
-!!! poznámka
+!!! note "Poznámka"
     *Hodnota v závorkách je výchozí hodnota*
 
 ---
@@ -28,23 +28,23 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 
 **GuppyScreen** (alternativní implementace obrazovky):
 
-- Podporuje všechny funkce nativní obrazovky kromě konfigurace WiFi.
+- Podporuje všechny funkce nativní obrazovky kromě nastavení Wi-Fi.
 - Používá 9 MB RAM (oproti 23 MB u nativní obrazovky).
 - Nezamrzá při restartu Klipperu.
 - Obsahuje další funkce, např. seznam všech maker včetně vašich vlastních.
 - Doporučeno pro pracovní postupy bez nativní obrazovky.
-- Lepší obnova tisku po přerušeních.
+- Lepší obnova přerušených tisků.
 - Založeno na [tomto forku](https://github.com/ghzserg/guppyscreen_ff5m).
 
-**[HelixScreen](https://github.com/prestonbrown/helixscreen)** (alternativní implementace obrazovky):
+**[HelixScreen](https://github.com/prestonbrown/helixscreen)** – další alternativní implementace obrazovky.
 
 **Varování:**
 
-- Nevypínejte obrazovku, pokud plně nerozumíte nivelaci podložky, Z-offsetu a makrům `START_PRINT`/`END_PRINT`.
+- Nevypínejte obrazovku, pokud plně nerozumíte vyrovnávání podložky, Z-offsetu a makrům `START_PRINT`/`END_PRINT`.
 - Nepřidávejte toto makro do startovacího G-code.
 - Po restartu nativní obrazovka ještě 10 sekund běží, ale Z-offset neovlivňuje, protože tisk přes ni neprobíhá.
 
-Upravte čas aktivace pomocí globálního parametru [`DISPLAY_OFF_TIMEOUT`](Global.md#display_off_timeout).
+Dobu aktivace lze upravit globálním parametrem [`DISPLAY_OFF_TIMEOUT`](Global.md#display_off_timeout).
 
 Nastavte `START_PRINT` a potřebný Z-offset přes jeho parametry nebo přes globální parametry.
 
@@ -77,7 +77,7 @@ Parametry:
 Vymaže úložiště EMMC.
 Parametry:
 
-- `LOG` — vymazat log soubory: `1` = ano, `0` = ne (výchozí: `1`).
+- `LOG` — vymazat logy: `1` = ano, `0` = ne (výchozí: `1`).
 - `ANY` — vymazat všechny soubory (G-code, obrázky, videa): `1` = ano, `0` = ne (výchozí: `0`).
 
 ---
@@ -99,16 +99,16 @@ Přepíná mezi webovými rozhraními Fluidd a Mainsail.
 
 Po spuštění makra:
 
-- Stiskněte Ctrl + F5 nebo Ctrl + Shift + R nebo Option + Command + E
-- Pokud máte problém v Orca, stiskněte Ctrl + F5 nebo Ctrl + Shift + R nebo Option + Command + E
+- V prohlížeči stiskněte Ctrl + F5, Ctrl + Shift + R nebo Option + Command + E.
+- Pokud problém přetrvává v Orca, stiskněte tam také Ctrl + F5, Ctrl + Shift + R nebo Option + Command + E.
 
-Pokud používáte Mainsail, specifikujte pouze tyto velikosti náhledů: ```140x110/PNG, 64x64/PNG```
+Pokud používáte Mainsail, zadejte pouze tyto velikosti náhledů: ```140x110/PNG, 64x64/PNG```
 
 V Orca: `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thumbnails`
 
-Všimněte si, že nativní obrazovka již nebude zobrazovat náhledy.
+Upozorňujeme, že nativní obrazovka pak již nebude zobrazovat náhledy.
 
-Pozor! Autor používá Fluidd; Mainsail je testován pouze uživateli. Pokud máte s Mainsail problémy, vytvořte [ticket](Help.md)
+Pozor! Autor používá Fluidd; Mainsail je testován pouze uživateli. Pokud máte s Mainsail problémy, vytvořte [tiket](Help.md)
 
 ---
 ### SET_TIMEZONE
@@ -143,9 +143,9 @@ Ověří integritu souboru pomocí kontrolního součtu MD5.
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-arm64```
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Univerzální Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/macOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
 
-2. V Orca musíte specifikovat: `Process Profile` -> `Other` -> `Post Processing Scripts`.
+2. V Orca je třeba zadat: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
 Pokud cesta obsahuje mezery, uzavřete celou cestu do uvozovek — je ale lepší mezery v názvech složek nepoužívat.
 
@@ -170,22 +170,22 @@ Aktualizuje MCU tiskárny.
 
 Změní firmware MCU z nativní verze Klipperu (11 pro FF5M/FF5MPRO, 12 pro AD5X) na Klipper 13 a zpět.
 
-Klipper 13 (ve výchozím nastavení zakázán).
+Klipper 13 je ve výchozím nastavení vypnutý.
 
 Parametr FORCE:
 
-- 11 - načte firmware Klipper 11 - FF5M
-- 12 - načte firmware Klipper 12 - AD5X
-- 13 - načte firmware Klipper 13
+- 11 - nahraje firmware pro Klipper 11 - FF5M
+- 12 - nahraje firmware pro Klipper 12 - AD5X
+- 13 - nahraje firmware pro Klipper 13
 
-Bez parametrů změní firmware na opačnou verzi.
+Bez parametru přepne na druhou verzi firmwaru.
 
-Příklad: `UPDATE_MCU FORCE=13` vynutí stažení firmwaru Klipper 13.
+Příklad: `UPDATE_MCU FORCE=13` vynutí nahrání firmwaru pro Klipper 13.
 
 Pokud nerozumíte, jak [obnovit nativní Klipper z USB flash disku](Native_FW.md#fix_klipper), nespouštějte tento příkaz.
 Před aktualizací Klipperu si přečtěte [změny v nových verzích](https://www.klipper3d.org/Releases.html); standardní konfigurační soubory není nutné upravovat.
 
-Pokud se něco pokazí, jediná cesta zpět je přes [tovární nastavení](Native_FW.md).
+Pokud se něco pokazí, jediná cesta zpět vede přes [tovární firmware](Native_FW.md).
 
 Po spuštění makra:
 
@@ -203,13 +203,13 @@ Obnoví heslo SSH uživatele `root` na `root`.
 ---
 ### CHECK_SYSTEM
 
-Diagnostikuje integritu souborů OS.
+Zkontroluje integritu systémových souborů.
 
 - `RESTORE` — `0` = bez opravy, `1` = opravit poškozené soubory (výchozí: `0`).
 
 Kontroly:
 
-- Oprávnění souborů/MD5 hashe.
+- Oprávnění souborů / MD5 součty.
 - Oprávnění adresářů.
 - Symbolické odkazy.
 

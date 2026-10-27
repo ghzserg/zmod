@@ -2,10 +2,10 @@
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej vyvolat z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzoly Fluidd/Mainsail (stiskněte písmeno `C` v Fluiddu).
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Výchozí hodnoty jsou zobrazeny v závorkách.*
@@ -199,7 +199,7 @@ Lze jej vyvolat z:
 [ZSSH_RESTART](Zmod.md#zssh_restart)
 
 ### FIX_E0011
-[E0011](Global.md#fix_e0017)
+[E0011](Global.md#fix_e0011)
 
 ### FIX_E0017
 [E0017](Global.md#fix_e0017)

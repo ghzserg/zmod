@@ -7,7 +7,7 @@ Es kann aufgerufen werden:
 - Aus der GCODE-Datei
 - Von der Fluidd/Mainsail-Konsole (drücken Sie den englischen Buchstaben `C` in Fluidd)
 
-!!! Hinweis
+!!! note "Hinweis"
     *Der Wert in Klammern ist der Standardwert.
 
 ---

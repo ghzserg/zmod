@@ -1,7 +1,7 @@
 # Doporučení
 ## Doporučení ke zlepšení stability tiskárny
 
-Tato doporučení se vztahují na původní firmware i Z-Mod.
+Tato doporučení platí pro nativní firmware i pro Z-Mod.
 
 ---
 
@@ -9,14 +9,14 @@ Tato doporučení se vztahují na původní firmware i Z-Mod.
 
 Povolte vyloučení objektů v Orce:
 
-- `Process Profile` -> `Other` -> `Custom G-code` -> Zaškrtněte `Exclude objects`
-- `Process Profile` -> `Other` -> `Custom G-code` -> Zaškrtněte `Label objects`
+- `Process Profile` -> `Other` -> `G-code output` -> Zaškrtněte `Exclude objects`
+- `Process Profile` -> `Other` -> `G-code output` -> Zaškrtněte `Label objects`
 
 <img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
 
 ---
 
-### Nainstalujte nejnovější standardní firmware a aktualizace Z-Mod.
+### Nainstalujte nejnovější standardní firmware a aktualizace Z-Mod
 
 Aktivně podporována je pouze nejnovější verze Z-Mod.
 
@@ -33,12 +33,12 @@ Tiskárna tuto funkci nepodporuje.
 
 ---
 
-### Zakažte aproximaci "Arc Move"
+### Vypněte oblouky (arc_move)
 
-Ačkoli tiskárna podporuje pohyby oblouku, snižují kvalitu tisku a mohou způsobit chyby.
+Tiskárna obloukové pohyby podporuje, ale zhoršují kvalitu tisku a občas způsobují chyby.
 
 **V Orce:**
-`Process Profile` -> `Quality` -> `Precision` -> Zrušte zaškrtnutí `Arc Move Approximation`.
+`Process Profile` -> `Quality` -> `Precision` -> Zrušte zaškrtnutí `Arc fitting`.
 
 ---
 
@@ -58,11 +58,11 @@ Poté spusťte makro [CAMERA_ON](Zmod.md#camera_on).
 
 ### Zakažte čínské cloudové služby
 
-### Chyba režimu Lan
+### Chyba režimu LAN
 
-Tyto služby jsou nestabilní a mohou se přerušit. Pokusy o opětovné připojení mohou přetížit tiskárnu frontou požadavků a způsobit chyby.
+Tyto služby jsou nestabilní a občas ztrácejí spojení. Při opětovném připojení nahromaděné požadavky přetíží tiskárnu a způsobí chyby.
 
-Jejich vypnutí také umožňuje rychlejší zavření dialogů po tisku a nativní vyrovnání podložky přes obrazovku.
+Jejich vypnutí také zrychlí zavírání dialogů po tisku a umožní měření sítě podložky přes nativní obrazovku.
 
 **Na obrazovce tiskárny:**
 
@@ -95,7 +95,7 @@ Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SA
 - [zmod_preprocess-darwin-arm64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-arm64) - macOS Apple Silicon. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-arm64```
 - [zmod_preprocess-darwin-amd64](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod_preprocess-darwin-amd64) - macOS Intel. Nezapomeňte spustit ```chmod +x zmod_preprocess-darwin-amd64```
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Univerzální Python. Nezapomeňte spustit ```chmod +x zmod-preprocess.py```
-- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
+- [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/macOS Bash. Nezapomeňte spustit ```chmod +x zmod-preprocess.sh```
 
 2. V Orce musíte zadat: `Process Profile` -> `Other` -> `Post Processing Scripts`.
 
@@ -121,7 +121,7 @@ Zde jsou možnosti přidání:
 
 ### Odeslání souborů k tisku prostřednictvím „Octo/Klipper“
 
-Nativní protokol FF občas přenáší poškozené soubory a postrádá podporu metadat pro bot Telegramu.
+Nativní protokol FF občas přenáší poškozené soubory a nevytváří náhledy ani metadata pro Telegram bota.
 
 **V Orca:**
 
@@ -146,7 +146,7 @@ Nativní protokol FF občas přenáší poškozené soubory a postrádá podporu
 
 Pokud používáte Mainsail, zadejte pouze tyto velikosti miniatur: ```140x110/PNG, 64x64/PNG```
 
-V Orca, `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thumbnails`
+V Orca: `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thumbnails`
 
 Vezměte na vědomí, že na nativní obrazovce se již nebudou zobrazovat miniatury.
 
@@ -155,7 +155,7 @@ Vezměte na vědomí, že na nativní obrazovce se již nebudou zobrazovat minia
 
 ### Povolit opravu chyby E0017
 
-[E0017 Fix](Global.md#fix_e0017)
+[Oprava E0017](Global.md#fix_e0017)
 
 Ve výchozím nastavení povoleno.
 
@@ -163,9 +163,9 @@ Ve výchozím nastavení povoleno.
 
 ### Povolit opravu chyby E0011
 
-Řeší chyby `E0011` a `Časový limit komunikace během návratu do výchozí polohy`.
+Řeší chyby `E0011` a `Communication timeout during homing`.
 
-[E0011 Fix](Global.md#fix_e0011)
+[Oprava E0011](Global.md#fix_e0011)
 
 ---
 
@@ -173,7 +173,7 @@ Ve výchozím nastavení povoleno.
 
 Nesprávné vypnutí tiskárny může poškodit souborový systém, což může vést k menším nebo větším chybám.
 
-Makro [CHECK_SYSTEM](System.md#check_system) kontroluje MD5 hash souboru a v případě potřeby opravuje symbolické odkazy.
+Makro [CHECK_SYSTEM](System.md#check_system) kontroluje MD5 součty souborů a v případě potřeby opravuje symbolické odkazy.
 
 ---
 
@@ -187,4 +187,4 @@ NOZZLE_CONTROL WEIGHT=1500
 
 Po zapnutí se při tisku aktivuje automaticky.
 
-Tím se zastaví Klipper, pokud tryska poškrábe podložku nebo se uvolní část. **Důrazně doporučeno pro uživatele, kteří používají rutiny předběžného čištění trysek.**
+Tím se zastaví Klipper, pokud tryska začne škrábat podložku nebo se odtrhne díl. **Důrazně doporučeno pro uživatele, kteří používají předčištění trysky.**

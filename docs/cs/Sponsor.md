@@ -1,6 +1,6 @@
 # Podpora vývoje
 
-Protože se lidé ptají, přijímám dary, ale prosím pamatujte, že na Z-Modu pracuji pro zábavu a ne pro peníze. Nepřijímám dary za práci na konkrétních chybách nebo funkcích.
+Protože se lidé ptají, přijímám dary, ale pamatujte prosím, že na Z-Modu pracuji pro zábavu a ne pro peníze. Nepřijímám dary za práci na konkrétních chybách nebo funkcích.
 
 [Sbírka na Creator 5 Pro pro spuštění Z-Mod na této tiskárně ->>>](https://github.com/ghzserg/zmod/discussions/554)
 
@@ -22,14 +22,14 @@ Velké díky komunitě [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) za zakoupení [
 - [@moscowpan](https://t.me/moscowpan) 
 - Bulat M.
 
-[BTC sponzor](https://github.com/ghzserg/zmod/discussions/151):
+[BTC sponzoři](https://github.com/ghzserg/zmod/discussions/151):
 
 - [@cackmobile](https://github.com/cackmobile)
 - [@ck0neGit](https://github.com/ck0neGit)
 - [@xyzroe](https://github.com/xyzroe)
 - [@emsilva](https://github.com/emsilva)
 
-[Boosty sponsor](https://github.com/ghzserg/zmod/discussions/554):
+[Boosty sponzoři](https://github.com/ghzserg/zmod/discussions/554):
 
 - [@Wideopentuning](https://github.com/Wideopentuning)
 - [@edzeg](https://github.com/edzeg)

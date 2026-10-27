@@ -1,17 +1,17 @@
-#Creator5
-#Creator5 Pro
+# Creator5
+# Creator5 Pro
 
 !!! note
     Tento dokument je relevantní pro Creator 5 a Creator 5 Pro
 
-## Důležité vlastnosti
+## Důležité zvláštnosti
 
 - Tiskárna vždy pracuje se **4 barvami** (T0, T1, T2, T3). Všechny čtyři sloty jsou dostupné v menu výběru.
 - Pro zapnutí kamery použijte `CAMERA_ON VIDEO=video67`.
-- Možný pád Klipperu. Řešení: `Profil procesu` -> `Ostatní` -> `Výstupní G-code` -> `Vyloučení modelů` — vypněte zaškrtávací políčko.
+- Možný pád Klipperu. Řešení: `Profil procesu` -> `Ostatní` -> `Výstup G-code` -> zrušte zaškrtnutí `Vyloučení objektů`.
 - Místo makra `CLOSE_DIALOGS` (pomalé zavírání) vždy používejte `FAST_CLOSE_DIALOGS` (rychlé zavírání).
 - Makro `NEW_SAVE_CONFIG` nefunguje.
-- Žádná podpora Klipperu 13
+- Klipper 13 není podporován; pomoc s vývojem je vítána.
 
 ---
 
@@ -45,16 +45,16 @@ Můžete provést pět akcí:
 
 **Jak změnit barvu:**
 
-Klikněte na „Změnit barvu“. Vyberte barvu ze seznamu. Tak vám tiskárna a původní obrazovka porozumí nejlépe.
+Klikněte na „Změnit barvu“. Vyberte barvu ze seznamu. Tak barvu nejlépe rozpozná tiskárna i nativní obrazovka.
 
 <img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
 
-Po výběru se vrátíte zpět a barva cívky v seznamu by se měla změnit.
+Po výběru se vrátíte zpět a barva cívky v seznamu se změní.
 
 Pokud se barva nezměnila: zavřete okno křížkem a spusťte makro `COLOR` znovu. Někdy se obrazovka nestihne aktualizovat.
 
 **Jak změnit typ:**
-Klikněte na „Změnit typ“. Vyberte typ ze seznamu.
+Klikněte na „Změnit typ“. Vyberte typ ze seznamu. Typy lze upravit pro režim bez nativní obrazovky.
 
 <img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
 
@@ -67,25 +67,25 @@ Pokud se typ nezměnil: zavřete okno křížkem a spusťte makro `COLOR` znovu.
 ## PRINT
 ## Menu tisku
 
-Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `SAVE_ZMOD_DATA SILENT=0` ve výchozím stavu.
+Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `SAVE_ZMOD_DATA SILENT=0` (výchozí).
 
 <img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
 
-**Jak pochopit, co je zde napsáno:**
+**Co se zde zobrazuje:**
 
 - V levém sloupci jsou čísla nástrojů a barvy ze souboru předané ze sliceru.
 - V pravém sloupci jsou čísla cívek a barvy načtené/použité na tiskárně.
 - `Cube.gcode` – to je název souboru, který se tiskne.
 - `1: PETG ->` – to je první barva ze souboru (oranžový PETG). Tiskne se filamentem z cívky 3 (oranžový PETG).
-- `2: PLA ->` – to je druhá barva (šedý PLA). Tiskne se filamentem z cívky 4 (modrý PLA). Protože v tiskárně nejsou žádné jiné PLA plasty.
-- `3: PETG ->` – třetí barva (černý PETG), tiskne se z cívky 3 (oranžový PETG). Protože v tiskárně nejsou žádné jiné PETG plasty.
-- `4: PETG-CF ->` – čtvrtá barva (modrý PETG-CF), tiskne se z cívky 1 (černý PETG-CF). Protože v tiskárně nejsou žádné jiné PETG-CF plasty.
+- `2: PLA ->` – to je druhá barva (šedý PLA). Tiskne se filamentem z cívky 4 (modrý PLA), protože v tiskárně není žádný jiný PLA.
+- `3: PETG ->` – třetí barva (černý PETG), tiskne se z cívky 3 (oranžový PETG), protože v tiskárně není žádný jiný PETG.
+- `4: PETG-CF ->` – čtvrtá barva (modrý PETG-CF), tiskne se z cívky 1 (černý PETG-CF), protože v tiskárně není žádný jiný PETG-CF.
 
-Pokud obrázek vypadá takto
+Pokud obrázek vypadá takto:
 
 <img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
 
-Znamená to, že máte vypnutou volbu automatického přiřazení barev a/nebo skenování souborů. Můžete kliknout na tlačítko `AUTO_SELECT_COLORS` nebo ji zapnout v globálních parametrech:
+znamená to, že máte vypnutou volbu automatického přiřazení barev a/nebo skenování souborů. Můžete kliknout na tlačítko `AUTO_SELECT_COLORS` nebo ji zapnout v globálních parametrech:
 ```
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 ```
@@ -100,16 +100,17 @@ V menu tisku jsou dvě důležitá tlačítka:
 
 **Leveling (síť podložky):**
 
-- `Snímat síť podložky` — před tiskem bude automaticky vytvořena mapa podložky.
+- `Snímat síť podložky` — před tiskem se automaticky změří síť podložky.
 - `Nesnímat síť podložky` — použije se dříve uložená síť.
 
-**Auto PA (Automatický výběr Pressure Advance):**
+**Auto PA (automatické určení Pressure Advance):**
 
-- Pokud je tlačítko `Auto PA` aktivní (zelené), tiskárna **před začátkem tisku** automaticky vybere optimální hodnotu Pressure Advance pro každý použitý extruder.
+- Pokud je tlačítko `Auto PA` aktivní (zelené), tiskárna **před začátkem tisku** automaticky určí optimální hodnotu Pressure Advance pro každý použitý extruder.
 - Proces trvá několik minut, ale výrazně zlepšuje kvalitu rohů a tenkých prvků.
 - Pokud je `Auto PA` vypnuté, použijí se hodnoty PA ze sliceru.
 
-Automatická kalibrace probíhá od 0,01 do 0,04 a pro viskózní plasty, jako je PETG, je nepoužitelná
+!!! note
+    Automatická kalibrace probíhá v rozsahu 0.01–0.04 a pro viskózní plasty, jako je PETG, je nepoužitelná.
 
 
 **Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](Global.md#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
@@ -132,11 +133,11 @@ V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. 
 
 | Parametr | Výchozí | Popis |
 |---|---|---|
-| `temp` | 220 | Teplota, na kterou se tryska zahřeje pro výměnu filamentu. Hodnota závisí na typu materiálu |
+| `temp` | 220 | Teplota, na kterou se tryska zahřeje pro výměnu filamentu. Hodnota závisí na typu materiálu. |
 | `temp_manual` | 250 | Teplota proplachu v ručním režimu (při načítání přes menu). |
 | `temp_wait` | 120 | Teplota nečinnosti — na tuto teplotu tryska vychladne po proplachu. |
-| `filament_drop_length` | 50 | **Délka odhozu.** Kolik milimetrů plastu tiskárna vytlačí do odpadního koše, aby očistila trysku od staré barvy. |
-| `filament_full_length` | 600 | **Délka trubice.** Kolik milimetrů plastu tiskárna vytlačí po aktivaci senzoru konce filamentu |
+| `filament_drop_length` | 50 | **Délka odpadu.** Kolik milimetrů plastu tiskárna vytlačí do odpadního koše před začátkem tisku; `0` vypne přejezd k odpadnímu koši. |
+| `filament_full_length` | 600 | **Délka trubice.** Kolik milimetrů plastu tiskárna vytlačí po sepnutí senzoru konce filamentu. |
 | `filament_tube_length` | 295 | Délka načtení filamentu při vložení nové cívky. |
 
 **Výchozí teploty pro různé materiály:**
@@ -167,7 +168,7 @@ V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. 
 | `trash_x` | 275.0 | Souřadnice X odpadního koše. |
 | `trash_y` | 254.0 | Souřadnice Y odpadního koše. |
 | `trash_z` | 10.0 | Souřadnice Z odpadního koše. |
-| `wiper_x` | 266.50 | Souřadnice X místa pro čištění trysky (guma). |
+| `wiper_x` | 266.50 | Souřadnice X místa pro čištění trysky (gumová stěrka). |
 | `wiper_y` | 13.80 | Souřadnice Y místa pro čištění trysky. |
 | `wiper_z` | 1.0 | Souřadnice Z místa pro čištění trysky. |
 | `fan_speed` | 255.0 | Rychlost ventilátoru (od 0 do 255) při chlazení trysky po proplachu. |
@@ -178,7 +179,7 @@ V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. 
 
 ## Globální parametry
 
-Aby se okno výběru barvy nezobrazovalo při začátku tisku, použijte globální parametr
+Zda se při začátku tisku zobrazí okno výběru barvy, určuje globální parametr
 **SILENT**:
 - `0` — zobrazit okno (výchozí)
 - `1` — nezobrazovat okno, použít dříve nastavené barvy
@@ -194,7 +195,7 @@ Chcete-li zapnout skenování G-code souborů na přítomnost informací o nást
 ```
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
-Můžete také nastavit hodnotu:
+Možné hodnoty:
 - `0` — parametr vypnout
 - `1` — plné skenování G-code souboru
 - `2` — kontrolovat pouze data připravená skriptem sliceru, bez skenování celého souboru
@@ -212,10 +213,10 @@ SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 Můžete nastavit vlastní hodnoty pro přerušení tisku v tichém režimu sečtením následujících čísel:
 - `1` — tisk pokračuje, i když automatické přiřazení barev selhalo
-- `2` — Alespoň jeden materiál neodpovídá (například v G-code je uveden ABS, ale máte načtený pouze PLA)
-- `4` — Alespoň jedna barva vůbec neodpovídá (obvykle proto, že je vypnuté skenování souborů)
-- `8` — Alespoň jedna barva odpovídá špatně
-- `16` — Stejná fyzická cívka byla přiřazena více než jednomu indexu nástroje v souboru
+- `2` — alespoň jeden materiál neodpovídá (například v G-code je uveden ABS, ale máte načtený pouze PLA)
+- `4` — alespoň jedna barva vůbec neodpovídá (obvykle proto, že je vypnuté skenování souborů)
+- `8` — alespoň jedna barva odpovídá špatně
+- `16` — stejná fyzická cívka byla přiřazena více než jednomu indexu nástroje v souboru
 Například použití hodnoty `30` povede ke zrušení tisku v tichém režimu, pokud nastanou jakékoli problémy s automatickým přiřazením, a `AUTO_ASSIGN_COLORS=6` (2+4) zruší tisk, pokud alespoň jeden materiál neodpovídá + alespoň jedna barva neodpovídá vůbec.
 
 !!! note
@@ -223,7 +224,7 @@ Například použití hodnoty `30` povede ke zrušení tisku v tichém režimu, 
 
 ---
 
-Chcete-li automaticky vypnout ohřev nepoužívaných extruderů při vícebarevném tisku, použijte parametr **unused_extruders_off_time**. Nastavuje dobu čekání (v minutách), po které bude nečinný nástroj vypnut, aby se zabránilo degradaci filamentu a zbytečnému provozu.
+Chcete-li automaticky vypnout ohřev nepoužívaných extruderů při vícebarevném tisku, použijte parametr **unused_extruders_off_time**. Nastavuje dobu čekání (v minutách), po které bude nečinný nástroj vypnut, aby se zabránilo degradaci filamentu a zbytečnému ohřevu.
 
 ```
 SAVE_ZMOD_DATA unused_extruders_off_time=5
@@ -241,20 +242,20 @@ Můžete nastavit následující hodnoty (v minutách):
 
 ## Změna počtu pokusů o uchopení nebo odložení nástroje
 
-Je třeba přidat do `mod_data/user.cfg`:
+Ve webovém rozhraní Fluidd otevřete v levém sloupci „Konfigurace“ soubor `mod_data/user.cfg` a přidejte:
 
 ```
 [zmod_color]
 retry: 3
 ```
 
-Výchozí je 5.
+Výchozí je 5. `[Sekce]` a makra v tomto souboru se aktualizací firmwaru nemění.
 
 ---
 
 ## Přidání vlastních typů filamentu
 
-Aby tato nastavení fungovala, je třeba vypnout původní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
+Aby tato nastavení fungovala, je třeba vypnout nativní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
 
 Pro přidání nového typu filamentu přidejte do `mod_data/user.cfg`:
 
@@ -263,7 +264,7 @@ Pro přidání nového typu filamentu přidejte do `mod_data/user.cfg`:
 filament_NEWTYPE: 300
 ```
 
-Kde `NEWTYPE` nahraďte požadovaným typem filamentu (například `HIPS`) a číslo je teplota extruderu pro načtení, vyjmutí a proplach tohoto filamentu. Na základě této hodnoty se automaticky vypočítají `temp_manual` (+30) a `temp_wait` (−100).
+Kde `NEWTYPE` nahraďte požadovaným typem filamentu (například `HIPS`) a číslo je teplota extruderu pro zavedení, vysunutí a proplach tohoto filamentu. Na základě této hodnoty se automaticky vypočítají `temp_manual` (+30) a `temp_wait` (−100).
 
 Pro skrytí typu filamentu přidejte do `mod_data/user.cfg`:
 
@@ -278,11 +279,11 @@ Kde `XXX`, `YYY`, `ZZZ` nahraďte požadovanými typy filamentu (například `PL
 
 ## Přidání vlastních barev
 
-Aby tato nastavení fungovala, je třeba vypnout původní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
+Aby tato nastavení fungovala, je třeba vypnout nativní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
 
 Pro přidání nebo přejmenování barvy otevřete `mod_data/color/cs.json` (místo `cs` použijte svůj jazyk) a přidejte novou barvu nebo přejmenujte existující.
 
-Aby se název barvy zobrazoval, musí název barvy začínat podtržítkem `_`.
+Aby se název barvy zobrazoval na tlačítkách, musí začínat podtržítkem `_`.
 
 **Příklad:**
 ```json
@@ -321,7 +322,7 @@ Nápis `_průhledná` se zobrazí na tlačítkách.
 
 ## Kalibrace extruderů
 
-Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čtyř trysek vůči sobě navzájem. To je nezbytné pro kvalitní vícebarevný tisk.
+Díky kalibraci extruderů tiskárna zná přesnou vzájemnou polohu všech čtyř trysek. To je nezbytné pro kvalitní vícebarevný tisk.
 
 **Kdy je třeba kalibrovat:**
 - Po výměně nebo opravě extruderu.
@@ -338,10 +339,10 @@ Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čty
 
 **Co se stane:**
 
-- Tiskárna provede (G28).
+- Tiskárna provede najetí do výchozí polohy (G28).
 - Zahřeje podložku na 65 °C.
-- Postupně vezme každý ze 4 extruderů (T0–T3).
-- Pro každý extruder: zahřeje trysku, provede proplach, očistí o gumu a poté pomocí senzorů určí přesné souřadnice X, Y a Z.
+- Postupně nasadí každý ze 4 extruderů (T0–T3).
+- Pro každý extruder: zahřeje trysku, provede proplach, očistí ji o gumovou stěrku a poté pomocí senzorů určí přesné souřadnice X, Y a Z.
 - Výsledky se automaticky zapíší do souboru `rw/extruder.json`.
 - Na konci tiskárna vypíše do konzole nalezené posuny pro každý extruder.
 
@@ -351,7 +352,7 @@ Kalibrace extruderů umožňuje tiskárně přesně znát polohu každé ze čty
 |---|---|---|
 | `BED_TEMP` | 65.0 | Teplota podložky při kalibraci |
 | `SEARCH` | 14.0 | Poloměr hledání senzoru (mm) |
-| `HOVER` | 0.6 | Výška vznášení nad bodem |
+| `HOVER` | 0.6 | Výška nad měřeným bodem |
 | `SAFE_Z` | 10.0 | Bezpečná výška Z |
 
 **Příklad s parametry:**
@@ -379,11 +380,11 @@ Kde `T=0` je číslo extruderu (0–3), který bude během kalibrace použit.
 
 **Co se stane:**
 
-- Tiskárna vezme zadaný extruder.
+- Tiskárna nasadí zadaný extruder.
 - Vynuluje všechny G-code posuny.
 - Přesune hlavu do středu podložky (X130 Y130).
 - Spustí automatickou kalibraci rezonancí (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
-- Vrátí extruder na místo.
+- Odloží extruder zpět.
 - Uloží konfiguraci (`SAVE_CONFIG`).
 
 > **Tip:** Kalibraci VFA doporučujeme provést, když se na povrchu tisku objeví viditelné vertikální pruhy.
@@ -416,7 +417,7 @@ T_INFO
 - `home` — extruder je na svém místě (v parkovací kapse).
 - `HEAD` — extruder je nasazen na tiskové hlavě.
 - `?` — neurčitý stav (senzory nezareagovaly).
-- `ERROR (both)` — chyba: extruder je současně doma i na hlavě (desynchronizace senzorů).
+- `ERROR (both)` — chyba: extruder je současně hlášen jako zaparkovaný i na hlavě (senzory nejsou synchronní).
 - `Door` — stav předních dvířek (`Close` / `Open`).
 - `Top` — stav horního krytu (`Close` / `Open`).
 - `Offset` — aktuální G-code posuny podél os X, Y, Z.
@@ -425,9 +426,9 @@ T_INFO
 
 ## Režimy ventilace
 
-Creator5 Pro je vybaven systémem ventilace komory s několika ventilátory. Správné řízení ventilace je kriticky důležité pro kvalitu tisku různých materiálů.
+Creator 5 Pro je vybaven systémem ventilace komory s několika ventilátory. Správné řízení ventilace je kriticky důležité pro kvalitu tisku různých materiálů.
 
-**Externí přívod (PLA, TPU):**
+**Vnější ventilace (PLA, TPU):**
 
 Makro `AIR_CIRCULATION_EXTERNAL` zapíná odsávání z komory a přívod čerstvého vzduchu. Je potřeba pro PLA a TPU, aby plast rychle chladl a nezměkl teplem komory.
 ```
@@ -442,7 +443,7 @@ AIR_CIRCULATION_EXTERNAL
 
 **Vnitřní cirkulace (ABS, ASA):**
 
-Makro `AIR_CIRCULATION_INTERNAL` zapíná vnitřní cirkulaci a ohřev komory. Je potřeba pro ABS a ASA, aby se zabránilo delaminaci a deformaci z teplotních rozdílů.
+Makro `AIR_CIRCULATION_INTERNAL` zapíná vnitřní cirkulaci a ohřev komory. Je potřeba pro ABS a ASA, aby se zabránilo delaminaci a kroucení vlivem teplotních rozdílů.
 ```
 AIR_CIRCULATION_INTERNAL
 ```
@@ -523,7 +524,7 @@ enable_preheat: False
 
 ## Vypnutí oznámení o otevřených dvířkách
 
-Chcete-li odstranit oznámení o otevřeném krytu nebo dvířkách v režimu bez původní obrazovky
+Chcete-li odstranit oznámení o otevřeném krytu nebo dvířkách v režimu bez nativní obrazovky:
 
 Přidejte do `mod_data/user.cfg`:
 

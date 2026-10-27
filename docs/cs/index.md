@@ -11,14 +11,14 @@ hide:
 
 ### **Z-Mod pro FlashForge AD5M/AD5M PRO/AD5X/Creator 5/Creator 5 Pro: Plná kontrola nad vaší tiskárnou**
 
-Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro začátek, ale pokud chcete odemknout plný potenciál vašeho zařízení, Z-Mod je výkonné a bezplatné řešení, které promění vaši tiskárnu z „uživatelsky přívětivé“ na „profesionální úroveň“.
+Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro začátek, ale pokud chcete odemknout plný potenciál vašeho zařízení, Z-Mod je výkonné a bezplatné řešení, které z vaší tiskárny udělá z „domácího spotřebiče“ „profesionální nástroj“.
 
 ### Co je Z-Mod?
 Z-Mod je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní.
 
 *Z-Mod: Qui non legit, non intrat*
 
-> **Proč „Z-Mod"?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod". Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
+> **Proč „Z-Mod“?** Autor je přes 20 let znám pod přezdívkou [zserg](https://zserg.ru/). Když přišel čas pojmenovat mod, odpověď byla zřejmá: první písmeno přezdívky plus „mod“. Žádný skrytý význam, žádná symbolika — je to opravdu přesně tak jednoduché, jak to vypadá.
 
 ### Klíčové výhody Z-Mod oproti továrnímu firmwaru
 Zde je, co získáte instalací Z-Mod:
@@ -28,7 +28,7 @@ Zde je, co získáte instalací Z-Mod:
 **Z-Mod**: Kompletní ovládání přes prohlížeč z vašeho PC nebo telefonu:
 
 - **Fluidd / Mainsail**: Intuitivní webová rozhraní zobrazující živé statistiky tisku, teploty, ovládání rychlosti ventilátoru, pohyb os a plný přístup ke konzoli.
-- **Nahrávání souborů ve stylu Octo/Klipper**: Bezproblémová integrace s Orca Slicer a dalšími slicery pro přímý přenos G-code souborů.
+- **Odesílání souborů přes „Octo/Klipper“**: Bezproblémová integrace s Orca Slicer a dalšími slicery pro přímý přenos G-code souborů.
 - **Přístup k webovému rozhraní tiskárny přes internet** pomocí cloudové služby [zmod.link](https://zmod.link)
 - **Oznámení v Telegramu a více než 100 dalších službách** [plugin notify](https://github.com/ghzserg/notify/)
 
@@ -36,19 +36,19 @@ Zde je, co získáte instalací Z-Mod:
 **Tovární firmware**: Základní automatické vyrovnávání podložky (ABL).
 **Z-Mod**:
 
-- **Adaptivní síť (KAMP)**: Tiskárna generuje mapu sítě pouze nad oblastí, kde se nachází váš model — šetří čas a zlepšuje přesnost.
+- **Adaptivní síť (KAMP)**: Tiskárna měří síť podložky jen v oblasti, kde se nachází váš model — šetří čas a zlepšuje přesnost.
 - **Ladění PID**: Přesná kalibrace tepelného chování extruderu a podložky pro stabilní teploty bez kmitání.
 - **Input Shaping**: Analyzuje a kompenzuje vibrace rámu, což umožňuje rychlejší tisk bez artefaktů „zvonění“.
 - **Spektrogram řemenů**: Diagnostikuje stav řemenů pro prediktivní údržbu.
-- **Nastavení sklonu šroubů**: Plně vyrovnejte podložku za méně než 10 minut.
+- **Vyrovnání podložky šrouby**: Vyrovnejte podložku za méně než 10 minut.
 
 #### 3. Inteligentní funkce spolehlivosti
-**Tovární firmware**: Základní detekce docházejícího filamentu. Žádné kontroly integrity firmwaru nebo souborů → možné zaseknutí tisku.
+**Tovární firmware**: Základní detekce docházejícího filamentu. Žádná kontrola integrity firmwaru a přenesených souborů → chyby tisku.
 **Z-Mod**:
 
-- **Detekce kolize trysky**: Používá tenzometry k detekci kolizí trysky s tiskem nebo podložkou — a automaticky pozastaví tisk, aby se předešlo poškození.
+- **Detekce kolize trysky**: Používá tenzometry k detekci kolizí trysky s tiskem nebo podložkou — a automaticky zastaví tisk, aby se předešlo poškození.
 - **Obnovení po ztrátě napájení**: Pamatuje si poslední pozici tisku a pokračuje po obnovení napájení.
-- **Kontrola integrity firmwaru**: Ověřuje jak tovární firmware, tak soubory Z-Mod, aby se předešlo poškození.
+- **Kontrola integrity firmwaru**: Ověřuje tovární firmware i soubory Z-Mod, zda nejsou poškozené.
 - **Kontrola integrity G-code souborů**: Ověřuje MD5 kontrolní součty během přenosu souborů.
 
 #### 4. Flexibilní manipulace s filamentem (zejména pro AD5X)
@@ -57,7 +57,7 @@ Zde je, co získáte instalací Z-Mod:
 
 - **Chytré menu COLOR**: Vizuálně vybírejte cívky, změny barev a typy materiálů přímo z webového UI.
 - **Režim nekonečné cívky**: Pokud více cívek používá stejný materiál, tiskárna se automaticky přepne na další, jakmile aktuální dojde.
-- **Jemně laděné ovládání čištění**: Snižte objem čisticího filamentu během změn barev, čímž šetříte materiál.
+- **Jemné nastavení odpadu**: Snižte objem čisticího filamentu během změn barev, čímž šetříte materiál.
 
 #### 5. Ekosystém a integrace
 **Tovární firmware**: Uzavřený systém.
@@ -72,9 +72,9 @@ Zde je, co získáte instalací Z-Mod:
 **Tovární firmware**: Omezená konfigurovatelnost.
 **Z-Mod**:
 
-- **Vypnutí továrního LCD**: Uvolňuje RAM (kritické na AD5M s pouze 128 MB).
+- **Vypnutí nativní obrazovky**: Uvolňuje RAM (kritické na AD5M s pouze 128 MB).
 - **GuppyScreen**: Vylepšené náhradní UI pro displej tiskárny.
-- **HelixScreen**: Vylepšené náhradní UI pro displej tiskárny.
+- **HelixScreen**: Další náhradní UI pro displej tiskárny.
 - **Prohlížení logů**: Plné systémové logy pro diagnostiku.
 - **Firmwarová retrakce**: Upravujte parametry retrakce za chodu, není třeba znovu slicovat.
 - **Plný ROOT přístup**: Vždy je k dispozici plná kontrola nad systémem.
@@ -106,15 +106,15 @@ Z-Mod *nenahrazuje* tovární firmware — vylepšuje ho a dává vám na **výb
 
 ## Než začnete
 
-#### NEINSTALUJTE tento mod, pokud vám stačí následující opravy továrního firmwaru
+#### Mod nemusíte instalovat, pokud potřebujete jen následující opravy továrního firmwaru
 
 Tyto funkce jsou přeneseny do továrního firmwaru:
 
-1. Chci nainstalovat Klipper. (Klipper je již v tiskárně, ale chybí webové rozhraní)
+1. Chci Klipper. (Klipper už v tiskárně je, ale chybí webové rozhraní)
 2. [Instalovat root](Native_FW.md#root)
 3. [Oprava chyby E0011](Global.md#fix_e0011)
 4. [Oprava chyby E0017](Global.md#fix_e0017)
-5. [Vypnout aktualizace/telemetrii/čínské cloudy tiskárny](Global.md#china_cloud)
+5. [Vypnout aktualizace/telemetrii/čínský cloud tiskárny](Global.md#china_cloud)
 6. [Tovární reset](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace)
 7. [Převést FF5M na FF5MPro](Native_FW.md#5m-na-5mpro)
 8. [Převést FF5MPro na FF5M](Native_FW.md#5mpro-na-5m)
@@ -156,6 +156,6 @@ Mod využívá poznatky z [KlipperMod](https://github.com/xblax/flashforge_ad5m_
 
 ## Podpořte vývoj
 
-Protože se lidé ptali, přijímám dary, ale pamatujte, že na Z-Mod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.
+Protože se lidé ptali, přijímám dary, ale pamatujte prosím, že na Z-Mod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.
 
 Dostupné metody podpory najdete na samostatné [stránce](Sponsor.md)

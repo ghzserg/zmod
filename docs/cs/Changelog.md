@@ -53,9 +53,9 @@
 ### Verze 1.7.4
 24.09.2026 
 
-* C5Pro: Funguje vše co na AD5X, kromě Klipperu 13 
+* C5Pro: Funguje vše, co na AD5X, kromě Klipperu 13 
 * C5Pro: Přidán režim bez nativní obrazovky 
-* C5Pro: Přidány kalibrace: extruderů, vfa 
+* C5Pro: Přidány kalibrace: extruderů, VFA 
 * C5Pro: Streamování obrazovky tiskárny 
 * AD5X: Streamování obrazovky tiskárny 
 * GuppyScreen: Podpora pro více extruderů
@@ -63,27 +63,27 @@
 ### Verze 1.7.3
 09.09.2026
 
-* Podpora alfa verzí pro Creator 5 / Creator 5 Pro (žádná podpora pro headless režim, 13 clipperů, ne všechna makra testována)
+* Alfa podpora Creator 5 / Creator 5 Pro (bez podpory režimu bez nativní obrazovky a Klipperu 13, ne všechna makra otestována)
 * AD5M: Podpora pro nativní firmware 5.1.9
 * AD5X: Zrychlení cyklu dotazování od @ninjamida
 
 ### Verze 1.7.2
 16.08.2026
 
-* Aktualizováno Fluidd/Mainsail/Klipper
+* Aktualizovány Fluidd/Mainsail/Klipper
 
 
 ### Verze 1.7.1
 14.05.2026
 
-* Aktualizováno Fluidd/Mainsail/Klipper
-* Obnovení konfigurace GuppyScreen při vymazání uživatelem
+* Aktualizovány Fluidd/Mainsail/Klipper
+* Automatické obnovení konfigurace GuppyScreen, pokud ji uživatel smaže
 * Ochrana Klipperu před OOM-killerem
 * Výpis událostí načtení/vymazání `BED_MESH` do konzole
 * Zápis `dmesg` do archivu konfigurace
 * Oprava funkce Wi-Fi
 * Indikace `SAVE_CONFIG...` při ukládání
-* Kontrola zaseknutí tenzometrických snímačů
+* Kontrola zaseknutí tenzometrů
 * Snížení podložky o 5 mm při pozastavení z nativní obrazovky
 * Makro `IP` – výpis IP adresy do konzole po spuštění
 * Rebranding: `ZMOD` → `Z-Mod`
@@ -91,7 +91,7 @@
 ### Verze 1.7.0
 15.03.2026
 
-* Aktualizováno Fluidd/Mainsail/Klipper
+* Aktualizovány Fluidd/Mainsail/Klipper
 * [NoPoop 2](/cs/AD5X/#čištění-řízené-slicerem-slicer-controlled-purge) od @ninjamida
 * HelixScreen - alternativní obrazovka. (`ENABLE_EXTRA_PLUGINS`, `DISPLAY_OFF HELIX=1`)
 * Na vydání této verze se významně podílel @xyzroe
@@ -99,43 +99,43 @@
 ### Verze 1.6.6
 27.01.2026
 
-* Aktualizován Fluidd/Mainsail/Klipper
+* Aktualizovány Fluidd/Mainsail/Klipper
 * Aktualizace pro Klipper, Fluidd, Mainsail a Moonraker jsou nezávislé na aktualizacích modu
 
 ### Verze 1.6.5
 14.01.2026
 
-* Aktualizován Fluidd/Mainsail/Klipper
+* Aktualizovány Fluidd/Mainsail/Klipper
 * Jsou k dispozici další nastavení kamery
-* Automatický výběr Z offsetu
+* Automatické ladění Z-offsetu
 
 ### Verze 1.6.4
 11.12.2025
 
-* Vylepšená snadnost nastavení a použití
+* Jednodušší nastavení a použití
 * Aktualizace Fluidd/Mainsail/Klipper
 * Plugin notify
-* Odstraněn praskavý zvuk IFS
+* Odstraněno praskání IFS
 
 ### Verze 1.6.3
 25.11.2025 — Z-Mod slaví první rok!
 
 * [zmod.link](https://zmod.link/link/) | [ZLINK](Zmod.md#zlink) — vzdálený přístup k tiskárně přes cloud
 * Makro [SCREEN](System.md#screen) — pořízení snímku obrazovky tiskárny
-* Makro [LOAD_ZOFFSET_NATIVE](Calibrations.md#load_zoffset_native) — přenos nastavení Z-offsetu z nativní obrazovky do režimu bez obrazovky
+* Makro [LOAD_ZOFFSET_NATIVE](Calibrations.md#load_zoffset_native) — přenos nastavení Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky
 * [AD5X](AD5X.md): Přidán globální parametr [REMOVE_FILAMENT](Global.md#remove_filament) — vysunutí filamentu po dokončení tisku
 * Přidán [plugin doporučených nastavení](https://github.com/ghzserg/recommend)
 * Přidána podpora českého jazyka
 * Implementována kontrola verze MCU pro Klipper 13
-* [AD5X](AD5X.md): Přidáno tlačítko pro vyrovnávání
+* [AD5X](AD5X.md): Přidáno tlačítko pro měření sítě podložky
 * [AD5X](AD5X.md): Opravy pro Klipper 13
 * [AD5X](AD5X.md): Vylepšení čištění trysky
-* [AD5X](AD5X.md): Odstraněn skřípavý zvuk IFS
+* [AD5X](AD5X.md): Odstraněno praskání IFS
 * `CAMERA_ON VIDEO=video99` — test všech dostupných kamer
 * Kontrola aktualizací po dokončení tisku
-* Při provádění vyrovnávání podložky přes Fluidd/Mainsail se tenzometry vynulují — ale uživatel musí předem ručně vyčistit trysku a předehřát podložku
+* Při měření sítě podložky přes Fluidd/Mainsail se tenzometry vynulují — ale uživatel musí předem ručně vyčistit trysku a předehřát podložku
 * Opraven `PURGE_LINE` — již netiskne přes podpory
-* Opravena kolize s okrajem rámu při opakovaném tisku
+* Opraven náraz do okraje při opakovaném tisku
 * Opraveno zobrazení tenzometrů — zabraňuje absurdním hodnotám v řádech tun
 * Opraveno vypínání ventilátoru komory po dokončení tisku
 * Opraveno zobrazení zbývajícího času v GuppyScreen pro jiné než ruské lokalizace
@@ -145,17 +145,17 @@
 
 * [Podpora pluginů](/cs/Plugin/)
 * [Plugin g28_tenz](https://github.com/ghzserg/g28_tenz) - Parkování osy Z pomocí tenzometrů
-* [Plugin bambufy](https://github.com/function3d/bambufy) - Kompatibilní s Bambu Studio a Orca Slicer, zlepšuje ovládání věže, poskytuje přesné odhady času a spotřeby materiálu, snižuje odpad, podporuje rychlé změny barev a nabízí pokročilé funkce tisku. Od @function3d
+* [Plugin bambufy](https://github.com/function3d/bambufy) - Kompatibilní s Bambu Studio a Orca Slicer, zlepšuje správu čisticí věže, poskytuje přesné odhady času a spotřeby materiálu, snižuje odpad, podporuje rychlé změny barev a nabízí pokročilé funkce tisku. Od @function3d
 * [Plugin nopoop](https://github.com/ghzserg/nopoop) - Maximální snížení odpadu od @ninjamida
 * Fluidd: Podpora barev
 * Mainsail: Podpora barev od @function3d, opraveny chyby 404 po obnovení
 * Guppy: Podpora barev. Opravena integrace HA.
 * Přidáno automatické připojování flash disků při práci s Guppy
-* Přidáno povolení [WiFi](Global.md#wifi) přímo bez použití nativní obrazovky
-* [AD5X](AD5X.md): Vyřešen problém s odpadní nádobou a řezáním filamentu v nových revizích
+* Přidána možnost zapnout [Wi-Fi](Global.md#wifi) přímo bez nativní obrazovky
+* [AD5X](AD5X.md): Vyřešeny problémy s odpadním košem a řezáním filamentu v nových revizích
 * [AD5X](AD5X.md): Podpora barev při obnovení tisku
 * [AD5X](AD5X.md): Možnost vytvářet [vlastní typy filamentů a barev](AD5X.md#7-přidat-nebo-odebrat-typy-filamentů) při práci bez nativní obrazovky
-* Aktualizován Klipper a Moonraker
+* Aktualizovány Klipper a Moonraker
 * Přidána podpora pro ens160.py od @minicx
 * Přidán portugalský jazyk
 * Opravy chyb
@@ -164,41 +164,41 @@
 ### Verze 1.6.1
 06.09.2025
 
-- [AD5X ](AD5X.md) - Podpora Klipper 13. [UPDATE_MCU](System.md#update_mcu)
-- [AD5X ](AD5X.md) - Teplotní senzor v hlavě
-- [AD5X](AD5X.md) - Práce bez nativní obrazovky. IFS funguje plně s nastavením resetovaného množství
+- [AD5X](AD5X.md) - Podpora Klipperu 13. [UPDATE_MCU](System.md#update_mcu)
+- [AD5X](AD5X.md) - Teplotní senzor v hlavě
+- [AD5X](AD5X.md) - Práce bez nativní obrazovky. IFS plně funguje, s nastavitelným množstvím proplachu
 - Drobné opravy
 
 ### Verze 1.6.0
 14.08.2025
 
-- AD5M - Podpora Klipper 13. [UPDATE_MCU](System.md#update_mcu)
+- AD5M - Podpora Klipperu 13. [UPDATE_MCU](System.md#update_mcu)
 - AD5M - Teplotní senzor v hlavě
 - Drobné opravy
 
-Díky za podporu mcu [@darksimpson](https://github.com/darksimpson)
+Díky za podporu MCU: [@darksimpson](https://github.com/darksimpson)
 
-Díky za podporu tenz [@minicx](https://github.com/loss-and-quick/)
+Díky za podporu tenzometrů: [@minicx](https://github.com/loss-and-quick/)
 
 ### Verze 1.5.4
 28.06.2025
 
 - AD5X - zvuk funguje
 - AD5X - tenzometry a kontrola nárazu trysky do podložky fungují
-- AD5X - telegram bot funguje
+- AD5X - Telegram bot funguje
 - AD5X - senzor přítomnosti filamentu funguje
 - AD5X - kalibrace PID podložky funguje
 - AD5X - obnoveno čištění trysky při měření sítě podložky
 - AD5X - testován provoz modu na firmwaru 1.0.9, 1.1.0, 1.1.1
 - AD5X - vytvořen [flash disk instalující verzi obrazovky 1.0.7 a všechny ostatní moduly verze 1.1.1](Native_FW.md)
-- AD5x - vytvořen [flash disk pro resetování tiskárny do továrního nastavení](Native_FW.md)
+- AD5X - vytvořen [flash disk pro resetování tiskárny do továrního nastavení](Native_FW.md)
 - AD5X - vytvořen [flash disk pro aktivaci modu po aktualizaci nativního firmwaru](Native_FW.md)
 
 ### Verze 1.5.3
 03.06.2025
 
 * Opravena chyba Klipperu [#119](https://github.com/ghzserg/zmod/issues/119), kvůli které bylo nutné se v názvech objektů vyhýbat nelatinkovým znakům
-* Kontrola trysky je nyní povolena při tisku z obrazovky okamžitě
+* Kontrola trysky je nyní aktivní i při tisku z obrazovky
 * Drobné kosmetické opravy
 
 ### Verze 1.5.2
@@ -210,7 +210,7 @@ Díky za podporu tenz [@minicx](https://github.com/loss-and-quick/)
 * **AD5X** Oprava chyby HOME
 * Aktualizace Moonrakeru
 * Změna zrychlení parkování
-* Výchozí povolený CHINA_CLOUD
+* CHINA_CLOUD ve výchozím stavu zapnutý
 
 ### Verze 1.5.1
 23.04.2025
@@ -223,9 +223,9 @@ Díky za podporu tenz [@minicx](https://github.com/loss-and-quick/)
 - **AD5X**: oprava driver_fan
 - **AD5X**: oprava _HOME
 - Kosmetické opravy CHECK_MD5
-- Vrácení chamber_fan do moonrakeru
+- chamber_fan vrácen do Moonrakeru
 - Oprava vyloučení objektů
-- Oprava guppyscreen pro různé jazyky
+- Oprava GuppyScreen pro různé jazyky
 
 ### Verze 1.5.0
 17.04.2025
@@ -314,7 +314,7 @@ Podpora jazyků rozhraní:
 08.02.2025
 
 - Podpora [GuppyScreen](System.md#display_off)
-- Klipper 12, [v testovacím režimu](Macros.md#update_mcu) (ve výchozím stavu vypnutý). Nefunguje v něm: ohřev extrudéru, teplota extrudéru, váhy.
+- Klipper 12, [v testovacím režimu](Macros.md#update_mcu) (ve výchozím stavu vypnutý). Nefunguje v něm: ohřev extruderu, teplota extruderu, váhy.
 - SSH klient a SSH server `dropbear` nahrazeny aktuální verzí.
 - `mjpg_streamer` nahrazen verzí s patchem od Alexandra, která snižuje spotřebu paměti 2-4krát.
 - Opraveno vylučování objektů od Igor Polunovskiy (nyní se zohledňují podpory).
@@ -361,7 +361,7 @@ Podpora jazyků rozhraní:
 - Nový globální parametr [CHINA_CLOUD](Global.md#china_cloud) - umožňuje vypnout čínské cloudy
 - Přepsána aktualizace konfigurace tiskárny
 - Na verzi Pro nyní správně fungují ventilátory chlazení. Výchozí úhly 165/105
-- Při kalibraci extrudéru se nyní nastavuje rychlost ventilátoru
+- Při kalibraci extruderu se nyní nastavuje rychlost ventilátoru
 - Čas a časové pásmo v Moonraker nyní odpovídají času Klipperu
 - Na kartě `Informace o systému` se zobrazuje verze nativního firmwaru.
 - Mod je méně upovídaný
@@ -371,7 +371,7 @@ Podpora jazyků rozhraní:
 
 - Do [AUTO_REBOOT](Global.md#auto_reboot) přidán parametr umožňující restart firmwaru
 - G28 se v makrech volá jen když je to potřeba
-- Algoritmus MD5 byl téměř celý přepsán. Kontrola MD5 nyní funguje odkudkoli a nevyžaduje ohřev podložky ani extrudéru
+- Algoritmus MD5 byl téměř celý přepsán. Kontrola MD5 nyní funguje odkudkoli a nevyžaduje ohřev podložky ani extruderu
 - Vylepšené makro [MEM](Macros.md#mem): nyní vypisuje paměť Moonraker, Klipper, obrazovky a využití SWAP
 - Proces Klipper má vyšší prioritu než ostatní procesy
 - Globální parametr [PRINT_LEVELING](Global.md#print_leveling) nyní funguje i v režimu bez nativní obrazovky
@@ -492,7 +492,7 @@ Podpora jazyků rozhraní:
 
 - Opraveno umístění logů
 - Opraveno makro [LOAD_CELL_TARE](Macros.md#load_cell_tare)
-- Opraveno makro kalibrace PID extrudéru a podložky
+- Opraveno makro kalibrace PID extruderu a podložky
 - Makro [CLEAR_NOZZLE](Macros.md#clear_nozzle) - čištění trysky jako v nativním firmwaru
 - Makro [KAMP](Calibrations.md#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single]. Adaptivní síť podložky s čištěním trysky.
 - [AUTO_FULL_BED_LEVEL](Calibrations.md#auto_full_bed_level) - makro kompletně přepsáno
@@ -504,7 +504,7 @@ Podpora jazyků rozhraní:
 - Makro STOP - vypne motory, zapisuje se do koncového gcode
 - Makro [ZSHAPER](Calibrations.md#zshaper) - kalibrace shaperů a export CSV do /mod_data v konfiguraci. Další analýza přes [Klipper-Input-Shaping-Assistant](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
 - Makro [LOAD_CELL_TARE](Macros.md#load_cell_tare) - reset tenzometrů
-- Opravena kalibrace podložky. Nyní lze nastavit teplotu podložky a extrudéru pro kalibraci. Výchozí 120/80
+- Opravena kalibrace podložky. Nyní lze nastavit teplotu podložky a extruderu pro kalibraci. Výchozí 120/80
 - Opraveno vypínání obrazovky v režimu bez nativní obrazovky. Vypne se po 4 minutách.
 
 ### Verze 0.1.4

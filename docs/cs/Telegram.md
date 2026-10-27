@@ -1,6 +1,6 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Funkce / Schopnost | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](Telegram.md) |
+| Funkce | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](Telegram.md) |
 | :--- | :---: | :---: |
 | **Vyžaduje externí server** | – | + |
 | **Vzdálené ovládání tiskárny** | – (možné přes [zmod.link](https://zmod.link/link/)) | + |
@@ -19,18 +19,16 @@ Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https
 ## Telegram Bot
 ### Popis
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
-
 Hlavní myšlenka:
-Naše hardware je velmi pomalé a má omezenou paměť. Proto je nepraktické spouštět moonraker-telegram-bot přímo na hardwaru.
-Nicméně jej můžeme spustit na externím serveru. To vyžaduje jakýkoliv server (fyzický/virtuální), ke kterému má tiskárna přístup přes SSH.
+Naše tiskárna je velmi pomalá a má omezenou paměť. Proto je nepraktické spouštět moonraker-telegram-bot přímo na ní.
+Nicméně jej můžeme spustit na externím serveru. K tomu stačí jakýkoli server (fyzický/virtuální), ke kterému má tiskárna přístup přes SSH.
 
 Nová verze automaticky generuje SSH klíče (používané pro přihlášení bez hesla).
 
 Umístění klíčů:
 
 - `/mod_data/ssh.pub.txt` — veřejný klíč. Zkopírujte jeho obsah do souboru `~/.ssh/authorized_keys` na serveru.
-- `/mod_data/ssh.key` — soukromý klíč. Používá se tiskárnou pro připojení k serveru.
+- `/mod_data/ssh.key` — soukromý klíč. Tiskárna ho používá pro připojení k serveru.
 
 Samotné klíče nepotřebujete.
 Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími parametry:
@@ -39,13 +37,13 @@ Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími paramet
 - `SSH_PORT` — SSH port na serveru (výchozí: 22)
 - `SSH_USER` — uživatelské jméno na serveru
 - `VIDEO_PORT` — Port serveru pro příjem video streamu z kamery (výchozí: 8080)
-- `MOON_PORT` — Port serveru pro příjem dat z moonrakeru (výchozí: 7125)
+- `MOON_PORT` — Port serveru pro příjem dat z Moonrakeru (výchozí: 7125)
 - `REMOTE_RUN` — Příkaz k provedení na vzdáleném serveru
 
 Použití SSH spotřebuje přibližně 300 KB paměti.
 
 **Pokud jsou tiskárna a server ve stejné síti, SSH není nutné. Viz konfigurační soubor [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf).**
-Stáhněte konfigurační soubor z tiskárny na `mod/telegram/`. [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+Konfigurační soubor lze stáhnout z tiskárny ze složky `mod/telegram/`. [Ukázková konfigurace](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
 ---
 
@@ -55,7 +53,7 @@ Jak zaregistrovat svého bota:
 1. Přejděte na [@BotFather](https://t.me/BotFather)
 2. Pošlete `/newbot`
 3. Zadejte libovolné jméno
-4. Zadejte jméno bota (musí končit `_bot`, např. `ff5msuper_bot`)
+4. Zadejte uživatelské jméno bota (musí končit na `_bot`, např. `ff5msuper_bot`)
 5. Obdržíte dlouhé ID — přidejte jej do parametru `bot_token` v nastavení bota.
 
 ---
@@ -79,7 +77,7 @@ apt update && apt install wget -y
 Tento skript:
 
 1. Nainstaluje Docker
-2. Stáhne [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) a [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) [Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+2. Stáhne [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) a [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) [Ukázková konfigurace](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 3. Vytvoří uživatele `tbot`
 4. Provede vás registrací bota a požádá o `bot_token`
 5. Provede vás získáním `chat_id` a požádá o něj
@@ -88,7 +86,7 @@ Tento skript:
 Přidejte SSH klíče ručně.
 
 ---
-#### Krok za krokem instalace Telegram bota
+#### Instalace Telegram bota krok za krokem
 
 Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
 
@@ -116,9 +114,9 @@ chmod 777 config log timelapse_finished timelapse
 
 6. Zkopírujte [telegram.conf](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.conf) z `mod/telegram/` do `config/` a upravte jej.
 
-[Ukázkový-konfig](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
+[Ukázková konfigurace](https://github.com/nlef/moonraker-telegram-bot/wiki/Sample-config)
 
-Pro více detailů o konfiguraci bota viz [zde](https://github.com/nlef/moonraker-telegram-bot/wiki).
+Více o konfiguraci bota najdete [zde](https://github.com/nlef/moonraker-telegram-bot/wiki).
 
 7. Spusťte bota:
 ```bash
@@ -190,7 +188,7 @@ nebo
 docker compose down && docker compose up -d
 ```
 
-Na tiskárně přidejte do `mod_data/user.moonraker.conf`
+Na tiskárně přidejte do `mod_data/user.moonraker.conf`:
 
 `external_IP` — externí IP adresa serveru, na kterém běží Docker.
 
@@ -206,7 +204,7 @@ sync_rate: 5
 
 Upravte soubor [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml)
 
-Specifikujte své časové pásmo. Příklad souboru uvádí ```TZ=Asia/Yekaterinburg```
+Zadejte své časové pásmo. V ukázkovém souboru je ```TZ=Asia/Yekaterinburg```
 
 ```docker-compose down && docker-compose up -d``` nebo ```docker compose down && docker compose up -d```
 
@@ -214,18 +212,18 @@ Specifikujte své časové pásmo. Příklad souboru uvádí ```TZ=Asia/Yekateri
 
 Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
 
-Stáhněte Debian Minimal/IOT obrazy s Armbian z webu [https://www.armbian.com/download/](https://www.armbian.com/download/)
+Stáhněte obraz Debian Minimal/IOT s Armbianem z webu [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
 Nainstalujte Armbian na SD kartu pomocí balenaEtcher z [https://etcher.balena.io/](https://etcher.balena.io/)
 
-Spusťte systém, nastavte heslo root a vytvořte nového uživatele
+Spusťte systém, nastavte heslo uživatele root a vytvořte nového uživatele.
 
 Pokračujte pod uživatelem root:
 ```
 su - root
 ```
 
-Nakonfigurujte Wi-Fi, pokud nebylo nastaveno během vytváření uživatele:
+Nastavte Wi-Fi, pokud jste to neudělali při vytváření uživatele:
 ```
 sudo armbian-config
 ```
@@ -256,7 +254,7 @@ Nastavte SSH klíče:
 mkdir -p .ssh
 cat > .ssh/authorized_keys
 ```
-Zadejte veřejný klíč ze souboru `mod_data/ssh.pub.txt` na vašem hostitelském systému, poté stiskněte **CTRL+D**
+Vložte veřejný klíč ze souboru `mod_data/ssh.pub.txt`, poté stiskněte `Ctrl + D`.
 
 Restartujte systém:
 ```
@@ -269,19 +267,19 @@ sudo reboot
 
 Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
 
-Stáhněte a nainstalujte helm [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
+Stáhněte a nainstalujte Helm: [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
-Naklonujte helm chart z repozitáře
+Naklonujte repozitář s Helm chartem:
 ```
 git clone https://github.com/aldiserg/zmod_ff5m_tg_bot.git
 ```
 Změny:
 
-1. persistence.enabled změňte na "false", pokud neplánujete ukládat časosběry
+1. persistence.enabled změňte na "false", pokud neplánujete trvale ukládat časosběry
 
 2. persistence.volumes...storageClass změňte, pokud budete používat externí úložiště
 
-2. configMapAsFile.data.telegram.conf - toto je hlavní konfigurační soubor, mělo by být změněno několik řádků:
+3. configMapAsFile.data.telegram.conf - hlavní konfigurační soubor; změňte v něm několik řádků:
    ```
    [bot]
    server: 3D_printer_host:7125
@@ -296,7 +294,7 @@ Jak získat bot_token a chat_id viz [zde](Telegram.md#registrace-bota)
 
 Instalace:
 
-Měli byste být ve složce helm chart pro spuštění příkazu install/upgrade
+Příkazy install/upgrade spouštějte ve složce s Helm chartem.
 ```
 helm upgrade --install zmod_ff5m_tg_bot ./ -n default -f values.yaml
 ```

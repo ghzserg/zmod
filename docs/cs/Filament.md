@@ -1,11 +1,11 @@
-<h1 align="center">Vlákno</h1>
+<h1 align="center">Filament</h1>
 
 Makro je malý program napsaný v jazyce Klipper/Gcode.
 
-Lze jej vyvolat z:
+Lze ho vyvolat:
 
-- Souboru GCODE
-- Konzoly Fluidd/Mainsail (stiskněte anglické písmeno `C` v Fluiddu)
+- ze souboru G-code
+- z konzole Fluidd/Mainsail (ve Fluiddu stiskněte latinské písmeno `C`)
 
 !!! note
     *Hodnota v závorkách je výchozí hodnota*
@@ -14,17 +14,17 @@ Lze jej vyvolat z:
 
 ### COLDPULL
 
-Studený tah (čištění trysky) bez síly.
-Implementuje [tento algoritmus](https://t.me/FF_5M_5M_Pro/2836/447172).
+Cold pull (čištění trysky) bez použití síly.
+Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172).
 
-- Vyberte čistící materiál (PETG, ABS, NYLON)
-- Postupujte podle pokynů v konzole Fluidd
-- Odstraňte zbytky z trysky
+- Vyberte čisticí materiál (PETG, ABS, NYLON).
+- Postupujte podle pokynů v konzoli Fluidd.
+- Vytáhněte zbytky z trysky.
 
 ---
 ### M600
 
-Pozastavit a změnit vlákno.
+Pozastavení a výměna filamentu.
 
 ---
 
@@ -32,35 +32,35 @@ Pozastavit a změnit vlákno.
 
 *Pouze AD5X*
 
-Správa typu vlákna, barvy a načítání/vyklopení z barevných cívek.
-Funguje pouze v režimu nativní obrazovky.
+Správa typu a barvy filamentu a jeho zavádění/vysouvání z barevných cívek.
+Funguje pouze se zapnutou nativní obrazovkou.
 
 ---
 
 ### SET_PAUSE_NEXT_LAYER
 
-Nastavit pozastavení/spustit makro na další vrstvě:
+Pozastavení/spuštění makra v další vrstvě:
 
 - `ENABLE` — `0` = vypnout, `1` = zapnout (výchozí: `1`)
-- `MACRO` — makro pro volání (např. `PAUSE`)
+- `MACRO` — makro, které se má zavolat (např. `PAUSE`)
 
 ---
 ### SET_PAUSE_AT_LAYER
 
-Povolit/zakázat pozastavení v určité vrstvě:
+Zapnutí/vypnutí pozastavení v určité vrstvě:
 
 - `ENABLE` — `0` = vypnout, `1` = zapnout (výchozí: `1`)
-- `MACRO` — makro pro volání (např. `PAUSE`)
+- `MACRO` — makro, které se má zavolat (např. `PAUSE`)
 - `LAYER` — číslo cílové vrstvy (výchozí: `0`)
 
 ---
 !!! warning
-    Chcete-li aktivovat tyto funkce, přidejte následující do svého spouštěcího kódu:
+    Aby tyto funkce fungovaly, doplňte startovací kód:
     ```
     SET_PRINT_STATS_INFO TOTAL_LAYER=[total_layer_count]
     ```
     
-    Přidejte do kódu změny vrstvy:
+    Do G-code pro změnu vrstvy přidejte:
     ```
     SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
     ```
