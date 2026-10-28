@@ -19,7 +19,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod:
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – alternativní implementace obrazovky
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin pro rychlejší změnu barev na AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin pro připojení sušičky [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
-8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Vypíše ostatní sloty IFS na AD5X se stejnou barvou a materiálem. Filament nepřepíná.
+8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Vypíše ostatní sloty IFS na AD5X se stejnou barvou a materiálem. Filament nepřepíná.
 9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Zobrazuje sloty IFS na AD5X nebo tiskové hlavy Creator 5 jako linky AFC v panelech AFC v Mainsail a Fluidd, včetně zavádění/vysouvání, barvy, materiálu a cívek Spoolman.
 
 Chcete-li povolit repozitář externích pluginů, spusťte příkaz `PLUGINS`.
