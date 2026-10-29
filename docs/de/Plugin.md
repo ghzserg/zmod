@@ -19,7 +19,7 @@ Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden:
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) – eine alternative Bildschirmimplementierung
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Plugin für schnelleren Farbwechsel auf dem AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Plugin zum Anschließen des Trockners [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
-8. [Print Buddy](https://github.com/catduckgnaf/print-buddy) - Meldet andere AD5X-IFS-Slots mit derselben Farbe und demselben Material. Wechselt kein Filament.
+8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Meldet andere AD5X-IFS-Slots mit derselben Farbe und demselben Material. Wechselt kein Filament.
 9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Zeigt die IFS-Slots des AD5X oder die Werkzeugköpfe des Creator 5 als AFC-Lanes in den AFC-Panels von Mainsail und Fluidd, mit Laden/Entladen, Farbe, Material und Spoolman-Spulen.
 
 Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PLUGINS` aus.
