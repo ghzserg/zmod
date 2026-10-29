@@ -19,7 +19,7 @@
 ## How to prepare a file in Orca
 
 - [Send files to print via Octo/Klipper.](/Recommendations/#send-files-via-octoklipper-for-printing)
-- [Orca Slicer Profiles](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+- [Orca Slicer Profiles](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 - [It is strongly recommended to enable the preprocessor](/Global/#force_md5)
 
 ---

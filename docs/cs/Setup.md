@@ -135,7 +135,7 @@
     <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
     
 
-19. [Hotové profily](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+19. [Hotové profily](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 
     Celý startovací kód nahraďte tímto:
     ```

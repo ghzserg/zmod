@@ -19,7 +19,7 @@
 ## Jak připravit soubor v Orca
 
 - [Odesílejte soubory k tisku přes Octo/Klipper.](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
-- [Profily pro Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+- [Profily pro Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 - [Důrazně doporučujeme zapnout preprocesor](/cs/Global/#force_md5)
 
 ---

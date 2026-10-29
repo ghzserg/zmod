@@ -19,7 +19,7 @@
 ## Wie man eine Datei in Orca vorbereitet
 
 - [Dateien über Octo/Klipper zum Drucken senden.](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
-- [Profile für Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+- [Profile für Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 - [Es wird dringend empfohlen, den Präprozessor zu aktivieren](/de/Global/#force_md5)
 
 ---

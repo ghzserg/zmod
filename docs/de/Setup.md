@@ -114,7 +114,7 @@
 
 18. [OrcaSlicer einrichten](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper)
 
-    [Fertige Profile](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+    [Fertige Profile](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 
     Der gesamte Startcode muss durch diesen ersetzt werden:
 

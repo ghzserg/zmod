@@ -116,7 +116,7 @@
 
 19. [Настройте Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
 
-	[Готовые профили](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/Creator_5)
+	[Готовые профили](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
     
     Весь стартовый код нужно заменить на этот:
 
