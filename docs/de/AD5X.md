@@ -21,16 +21,12 @@
 10. [IFS-Befehle](#10-ifs-befehle)
 11. [IFS-Firmware wiederherstellen](#11-ifs-firmware-wiederherstellen)
 
-[Plugins](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_en.md):
+[Plugins](/de/Plugin/):
 
-Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden:
-
-- [Bambufy](https://github.com/function3d/bambufy/blob/master/README.md) - kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt Mainsail, schnelle Farbwechsel und erweiterte Druckfunktionen. KANN NICHT MIT DEM NATIVEN BILDSCHIRM VERWENDET WERDEN.
-- [lessWaste](https://github.com/Hrybmo/lessWaste/blob/master/README.md) – ein Fork von Bambufy
-- [Dryer](https://github.com/pantata/dryer) - Filamenttrocknung auf dem Heizbett
-- [IFS Jacker](https://github.com/ninjamida/ifs_jacker_plugin) – Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs-jacker). Es ermöglicht die automatische Erkennung der verfügbaren Kanalanzahl sowie die Klipper-Integration für Lüfter, LEDs und Sensoren, die über einen IFS Jacker verbunden sind.
-
-Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PLUGINS` aus.
+- [**bambufy**](https://github.com/function3d/bambufy) - kompatibel mit Bambu Studio, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsschätzungen, reduziert Abfall, unterstützt schnellen Farbwechsel und erweiterte Druckfunktionen.
+- [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - ein Fork von bambufy
+- [**nopoop**](https://github.com/ghzserg/nopoop) - maximale Abfallreduzierung von ninjamida
+- [**IFS Jacker**](https://github.com/ninjamida/ifs_jacker_plugin) — Plugin zur Unterstützung des [IFS Jacker Hardware-Mods](https://github.com/ninjamida/ifs_jacker)
 
 ---
 

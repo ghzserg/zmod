@@ -214,12 +214,12 @@ Parameters:
 - `VIDEO_PORT` — remote server port for video streaming (default: `8080`)
 - `MOON_PORT` — remote server port for Moonraker (default: `7125`)
 - `REMOTE_RUN` — command to execute on the remote server (default: `"NONE"`).
-  Example: Use `./ff5m.sh bot1` (located in `mod/telegram/`) to restart the Telegram bot.
+  Example: Use the [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/ff5m.sh) script: `./ff5m.sh bot1` (located in `mod/telegram/`) to restart the Telegram bot.
 
 **Setup script (if not installed via one-command):**
 ```bash
 su - tbot  # Switch to the bot service user
-wget --cache=off -q -O ff5m.sh https://raw.githubusercontent.com/ghzserg/zmod_ff5m/main/telegram/ff5m.sh
+wget --cache=off -q -O ff5m.sh https://raw.githubusercontent.com/ghzserg/zmod_ff5m/refs/heads/main/telegram/ff5m.sh
 chmod +x ff5m.sh
 ```
 

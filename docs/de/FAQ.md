@@ -41,6 +41,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Z
 #### Was es in Z-Mod gibt, aber nicht in KlipperMod:
 
 - Unterstützung für [AD5X](/de/AD5X/)
+- Unterstützung für [Creator 5 / Creator 5 Pro](/de/C5PRO/)
 - Unterstützung für [die folgenden Sprachen](/de/Global/#lang): Englisch, Deutsch, Französisch, Italienisch, Spanisch, Chinesisch, Japanisch, Koreanisch, Portugiesisch, Tschechisch, Türkisch, Russisch.
 - Betrieb mit dem nativen Bildschirm
 - [Druckwiederherstellung nach Stromausfall](/de/Zmod/#zrestore)

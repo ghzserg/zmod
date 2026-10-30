@@ -18,15 +18,13 @@
 
 ## Jak připravit soubor v Orca
 
-- [Odesílejte soubory k tisku přes Octo/Klipper.](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
+- [Odesílejte soubory k tisku přes Octo/Klipper.](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 - [Profily pro Orca Slicer](https://github.com/ghzserg/zmod_preprocess/tree/main/profiles/)
 - [Důrazně doporučujeme zapnout preprocesor](/cs/Global/#force_md5)
 
 ---
 ## COLOR
 ## Jak používat menu pro výběr barvy a typu filamentu
-
-<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
 
 <img width="794" height="900" alt="image" src="../../images/e5a72e1c-5274-449d-8a47-1d3f5b649550.png" />
 
@@ -114,7 +112,7 @@ V menu tisku jsou dvě důležitá tlačítka:
     Automatická kalibrace probíhá v rozsahu 0.01–0.04 a pro viskózní plasty, jako je PETG, je nepoužitelná.
 
 
-**Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](Global.md#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
+**Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](/cs/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
 ---
 
@@ -231,7 +229,7 @@ Chcete-li automaticky vypnout ohřev nepoužívaných extruderů při vícebarev
 SAVE_ZMOD_DATA unused_extruders_off_time=5
 ```
 
-Podrobnosti: [UNUSED_EXTRUDERS_OFF_TIME](Global.md#unused_extruders_off_time).
+Podrobnosti: [UNUSED_EXTRUDERS_OFF_TIME](/cs/Global/#unused_extruders_off_time).
 
 Můžete nastavit následující hodnoty (v minutách):
 * `0` — funkce vypnuta (extrudery se během nečinnosti nevypínají)

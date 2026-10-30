@@ -30,7 +30,7 @@ Kalibrujte konkrétně pro podmínky, ve kterých běžně tisknete:
 
 **Jak kalibraci provést?**
 
--   Použijte speciální příkaz (makro) [PID_TUNE_EXTRUDER](Calibrations.md#pid_tune_extruder)
+-   Použijte speciální příkaz (makro) [PID_TUNE_EXTRUDER](/cs/Calibrations/#pid_tune_extruder)
 
 -   Zadáte jej ručně do konzole, nebo použijete tlačítko v rozhraní, pokud je k dispozici:
     <img width="283" height="265" alt="image" src="../../images/20b8a3c8-4726-44b0-b986-34881d95cb18.png" />
@@ -72,7 +72,7 @@ Stejně jako u extruderu platí: kalibrujte na teplotu, kterou nejčastěji pou�
 
 **Jak kalibraci provést?**
 
--   Použijte makro [PID_TUNE_BED](Calibrations.md#pid_tune_bed)
+-   Použijte makro [PID_TUNE_BED](/cs/Calibrations/#pid_tune_bed)
 
 -   Zadáte jej do konzole nebo stisknete tlačítko v rozhraní (často vedle tlačítka pro kalibraci extruderu):
 
@@ -104,7 +104,7 @@ Vaše podložka je uchycena několika šrouby. Pokud jsou dotaženy nestejně, p
 3.  Podle pokynů šrouby upravíte.
 4.  Proces se opakuje, dokud není podložka dokonale vyrovnaná.
 
-**Nastavení pro [BED_LEVEL_SCREWS_TUNE](Calibrations.md#bed_level_screws_tune):**
+**Nastavení pro [BED_LEVEL_SCREWS_TUNE](/cs/Calibrations/#bed_level_screws_tune):**
 
 *   `EXTRUDER_TEMP=130` — teplota extruderu. Je potřeba kvůli tepelné roztažnosti trysky, která by jinak zkreslila měření. Nastavte teplotu, při které z trysky nevytéká filament.
 *   `BED_TEMP=80` — teplota podložky. Podložka se také při ohřevu roztahuje, proto kalibrujte při teplotě, na kterou běžně tisknete.
@@ -127,7 +127,7 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
 
     <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
-    [Tento obrázek se zobrazuje pouze v Klipper 13](System.md#update_mcu)
+    [Tento obrázek se zobrazuje pouze v Klipper 13](/cs/System/#update_mcu)
 
 -   Po prvním kole tiskárna počká, až šrouby upravíte. Jakmile jsou všechny nastavené, **stiskněte tlačítko pro opakování** a tiskárna zkontroluje výsledek. Opakujte, dokud nejsou hodnoty perfektní.
 
@@ -153,7 +153,7 @@ Vestavěné nástroje ve Fluidd a Mainsail nejsou pro naše tiskárny vhodné, p
 *   neumí pracovat s **tenzometry** (zajišťují přesnou detekci dotyku);
 *   neprovádějí **čištění trysky** před měřením, což může ovlivnit přesnost kvůli zbytkům plastu.
 
-Naše makro [AUTO_FULL_BED_LEVEL](Calibrations.md#auto_full_bed_level) počítá s obojím!
+Naše makro [AUTO_FULL_BED_LEVEL](/cs/Calibrations/#auto_full_bed_level) počítá s obojím!
 
 **Důležitá nastavení:**
 Síť podložky je třeba vytvářet za stejných podmínek, za jakých tisknete – tedy na vyhřáté podložce a s horkým extruderem, protože kov se teplem mírně roztahuje. Mapa pořízená při 60 °C se výrazně liší od té při 110 °C.
@@ -183,7 +183,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 **Co se zde děje:**
 
-*   [START_PRINT](Main.md#start_print) – hlavní startovací makro
+*   [START_PRINT](/cs/Main/#start_print) – hlavní startovací makro
 *   Řádek `START_PRINT... MESH=80` říká tiskárně: „Začni tisk a načti síť podložky s názvem `80`“.
 *   `[nozzle_temperature_initial_layer]` a `[bed_temperature_initial_layer_single]` jsou proměnné ze sliceru, které automaticky doplní vaše nastavené hodnoty pro první vrstvu.
 *   Důležité je, aby parametr `MESH=` odkazoval na stejný název profilu (v našem příkladu `80`), který jste použili v `AUTO_FULL_BED_LEVEL`.
@@ -208,7 +208,7 @@ V tomto případě se načte síť odpovídající teplotě podložky.
 ### Adaptivní měření podložky (KAMP)
 
 **Proč je to potřeba?**
-[KAMP](Calibrations.md#kamp) je chytrý systém, který neměří síť po celé ploše podložky, ale jen v oblasti, kde se budou tisknout vaše modely! To výrazně urychluje přípravu tisku, zejména na velkých tiskárnách, a přitom zachovává všechny výhody přesné sítě podložky.
+[KAMP](/cs/Calibrations/#kamp) je chytrý systém, který neměří síť po celé ploše podložky, ale jen v oblasti, kde se budou tisknout vaše modely! To výrazně urychluje přípravu tisku, zejména na velkých tiskárnách, a přitom zachovává všechny výhody přesné sítě podložky.
 
 **Jak to funguje:**
 
@@ -233,7 +233,7 @@ Ve většině případů není nutné vytvářet síť podložky před každým 
 
 **1. Zapnutí adaptivní kalibrace (KAMP)**
 
-Aktivujte tuto volbu, aby tiskárna používala KAMP, kde je to možné: [SAVE_ZMOD_DATA USE_KAMP=1](Global.md#use_kamp).
+Aktivujte tuto volbu, aby tiskárna používala KAMP, kde je to možné: [SAVE_ZMOD_DATA USE_KAMP=1](/cs/Global/#use_kamp).
 
 ```gcode
 SAVE_ZMOD_DATA USE_KAMP=1
@@ -248,7 +248,7 @@ Nastavte OrcaSlicer:
 
 **2. Zapnutí kalibrace před každým tiskem**
 
-Pokud chcete, aby tiskárna automaticky vytvářela síť podložky před každým tiskem (např. při časté výměně plátů), aktivujte tuto funkci: [SAVE_ZMOD_DATA PRINT_LEVELING=1](Global.md#print_leveling).
+Pokud chcete, aby tiskárna automaticky vytvářela síť podložky před každým tiskem (např. při časté výměně plátů), aktivujte tuto funkci: [SAVE_ZMOD_DATA PRINT_LEVELING=1](/cs/Global/#print_leveling).
 
 ```gcode
 SAVE_ZMOD_DATA PRINT_LEVELING=1
@@ -266,7 +266,7 @@ M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : 
 
 **3. Chytré čištění před tiskem**
 
-Přidejte toto nastavení, aby tiskárna použila stejnou oblast pro čištění trysky, kde právě změřila síť podložky. Ušetříte místo i čas: [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](Global.md#clear).
+Přidejte toto nastavení, aby tiskárna použila stejnou oblast pro čištění trysky, kde právě změřila síť podložky. Ušetříte místo i čas: [SAVE_ZMOD_DATA CLEAR=LINE_PURGE](/cs/Global/#clear).
 
 ```gcode
 SAVE_ZMOD_DATA CLEAR=LINE_PURGE
@@ -290,7 +290,7 @@ Nyní bude tiskárna před každým tiskem měřit síť pouze v oblasti, kde se
     U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
 
 **Co je Z-offset?**
-Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podložkou** ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnout – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). [Více zde](FAQ.md#jak-funguje-z-offset)
+Jednoduše řečeno, je to **přesná vzdálenost mezi špičkou trysky a podložkou** ve chvíli, kdy tiskárna vyhodnotí jejich dotyk. Správně nastavený Z-offset zajistí, že první vrstva plastu bude perfektně přilnout – ani příliš nízko (tryska škrábe podložku), ani příliš vysoko (plast se nelepí). [Více zde](/cs/FAQ/#jak-funguje-z-offset)
 
 **Nejdůležitější pravidlo:**
 U této tiskárny **má Z-offset smysl pouze BĚHEM tisku**. Hodnoty, které vidíte na displeji nebo v rozhraní PŘED nebo PO tisku, jsou pouze orientační a neodpovídají skutečnosti.
@@ -304,7 +304,7 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
 **Aby tiskárna vybrala offset automaticky, spusťte měření sítě podložky z nativní obrazovky.**
 
-<img width="800" height="480" alt="image" src="../../images/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241.png" />
+<img width="800" height="480" alt="image" src="../../images/7e5f1ba4-832e-493b-94be-14aadf67ad4e.png" />
 
 **Jak upravit:**
 
@@ -334,7 +334,7 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
 **Jak to funguje:**
 
-1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen, je potřeba jednorázově aktivovat speciální nastavení [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](Global.md#load_zoffset):
+1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen, je potřeba jednorázově aktivovat speciální nastavení [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/cs/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
@@ -386,7 +386,7 @@ Grafy a výpočty Input Shaperu v Klipperu standardně používají hodnotu `squ
 
 **Co s tím?**
 
-1.  **Oprava výpočtů:** Aktivujte opravu pro správné zobrazení grafů: [SAVE_ZMOD_DATA FIX_SCV=1](Global.md#fix_scv).
+1.  **Oprava výpočtů:** Aktivujte opravu pro správné zobrazení grafů: [SAVE_ZMOD_DATA FIX_SCV=1](/cs/Global/#fix_scv).
     ```gcode
     SAVE_ZMOD_DATA FIX_SCV=1
     ```
@@ -405,7 +405,7 @@ Nezapomeňte tiskárnu restartovat!
 
 #### Jak používat makro `ZSHAPER`
 
-[ZSHAPER](Calibrations.md#zshaper) – toto makro rozvibruje tiskárnu různými frekvencemi, změří odezvu a vytvoří grafy pro určení ideálních parametrů Input Shaperu pro osy X a Y.
+[ZSHAPER](/cs/Calibrations/#zshaper) – toto makro rozvibruje tiskárnu různými frekvencemi, změří odezvu a vytvoří grafy pro určení ideálních parametrů Input Shaperu pro osy X a Y.
 
 **Specifika pro tiskárny s malou pamětí (AD5M, AD5M Pro):**
 Aby nedošlo k přetížení systému, **kalibrujte osy zvlášť**.

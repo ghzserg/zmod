@@ -20,7 +20,7 @@ Povolte vyloučení objektů v Orce:
 
 Aktivně podporována je pouze nejnovější verze Z-Mod.
 
-Vývojář nemá dostatek zdrojů na údržbu starších verzí, proto [nainstalujte nejnovější standardní firmware a aktualizace Z-Mod](Setup.md).
+Vývojář nemá dostatek zdrojů na údržbu starších verzí, proto [nainstalujte nejnovější standardní firmware a aktualizace Z-Mod](/cs/Setup/).
 
 ---
 
@@ -49,10 +49,10 @@ Vestavěná kamera spotřebovává příliš mnoho paměti a nabízí nízkou kv
 **Na obrazovce tiskárny:**
 `Settings` -> `Camera Tab` -> Deaktivujte přepínače `Camera` a `Video`.
 
-Poté spusťte makro [CAMERA_ON](Zmod.md#camera_on).
+Poté spusťte makro [CAMERA_ON](/cs/Zmod/#camera_on).
 
-- [Co je alternativní kamera?](FAQ.md#co-je-to-alternativní-kamera)
-- [Nainstaloval jsem Z-Mod a moje kamera zmizela! Fungovala v Orca-FF!](FAQ.md#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
+- [Co je alternativní kamera?](/cs/FAQ/#co-je-to-alternativní-kamera)
+- [Nainstaloval jsem Z-Mod a moje kamera zmizela! Fungovala v Orca-FF!](/cs/FAQ/#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
 
 ---
 
@@ -71,10 +71,10 @@ Jejich vypnutí také zrychlí zavírání dialogů po tisku a umožní měřen�
 
 Místo toho můžete použít:
 
-- [zmod.link](Zmod.md#zlink) - cloud pro správu tiskáren prostřednictvím Fluidd/Mainsail.
-- [Telegram bot](Telegram.md).
+- [zmod.link](/cs/Zmod/#zlink) - cloud pro správu tiskáren prostřednictvím Fluidd/Mainsail.
+- [Telegram bot](/cs/Telegram/).
 
-[Více o čínských cloudových službách](Global.md#china_cloud).
+[Více o čínských cloudových službách](/cs/Global/#china_cloud).
 
 ---
 
@@ -84,9 +84,9 @@ Igor Polunovskiy
 
 > Poznámka: Platí pouze při odesílání G-code. Pro 3MF není potřeba.
 
-Přidejte [CHECK_MD5](System.md#check_md5) do svého pracovního postupu.
+Přidejte [CHECK_MD5](/cs/System/#check_md5) do svého pracovního postupu.
 
-Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Doporučuje se použít [globální parametr FORCE_MD5](/cs/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 1. Vyberte a stáhněte soubor pro vaši architekturu a operační systém:
 
@@ -111,7 +111,7 @@ Zde jsou možnosti přidání:
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-[Detaily](System.md#check_md5)
+[Detaily](/cs/System/#check_md5)
 
 <img width="476" height="355" alt="image" src="../../images/0b59a617-5613-4def-aa01-7fe038898863.png" />
 
@@ -155,7 +155,7 @@ Vezměte na vědomí, že na nativní obrazovce se již nebudou zobrazovat minia
 
 ### Povolit opravu chyby E0017
 
-[Oprava E0017](Global.md#fix_e0017)
+[Oprava E0017](/cs/Global/#fix_e0017)
 
 Ve výchozím nastavení povoleno.
 
@@ -165,7 +165,7 @@ Ve výchozím nastavení povoleno.
 
 Řeší chyby `E0011` a `Communication timeout during homing`.
 
-[Oprava E0011](Global.md#fix_e0011)
+[Oprava E0011](/cs/Global/#fix_e0011)
 
 ---
 
@@ -173,13 +173,13 @@ Ve výchozím nastavení povoleno.
 
 Nesprávné vypnutí tiskárny může poškodit souborový systém, což může vést k menším nebo větším chybám.
 
-Makro [CHECK_SYSTEM](System.md#check_system) kontroluje MD5 součty souborů a v případě potřeby opravuje symbolické odkazy.
+Makro [CHECK_SYSTEM](/cs/System/#check_system) kontroluje MD5 součty souborů a v případě potřeby opravuje symbolické odkazy.
 
 ---
 
 ### Povolit detekci kolize trysky
 
-Ve výchozím nastavení je tato funkce vypnuta. Zapněte ji pomocí makra [NOZZLE_CONTROL](Global.md#nozzle_control):
+Ve výchozím nastavení je tato funkce vypnuta. Zapněte ji pomocí makra [NOZZLE_CONTROL](/cs/Global/#nozzle_control):
 
 ```
 NOZZLE_CONTROL WEIGHT=1500

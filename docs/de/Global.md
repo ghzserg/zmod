@@ -760,11 +760,11 @@ Die Standarddatei `/opt/klipper/klippy/mcu.py` setzt `TRSYNC_TIMEOUT = 0.025`. D
 
 - [Parameter Adventurer5M korrigieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
 
-- [Standardparameter Adventurer5M wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+- [Standardparameter Adventurer5M wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
 
 - [Parameter Adventurer5MPro korrigieren](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
 
-- [Standardparameter Adventurer5MPro wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+- [Standardparameter Adventurer5MPro wiederherstellen](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
 - Schalten Sie den Drucker aus.
 - Stecken Sie den USB-Stick in den Drucker.
@@ -779,7 +779,7 @@ Die Standarddatei `/opt/klipper/klippy/mcu.py` setzt `TRSYNC_TIMEOUT = 0.025`. D
 
 **Manuelle Behebung mit der Standard-Firmware:**
 
-- Installieren Sie [root](/de/Native_FW/#root).
+- Installieren Sie [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 
 - Stellen Sie mit [WinSCP](https://winscp.net/eng/download.php) eine SSH-Verbindung zum Drucker her.
 
@@ -830,7 +830,7 @@ Beispiel: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Manuelle Reparatur der Standard-Firmware:**
 
-- Installieren Sie [root](/de/Native_FW/#root).
+- Installieren Sie [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 
 - Stellen Sie mit [WinSCP](https://winscp.net/eng/download.php) eine SSH-Verbindung zum Drucker her.
 

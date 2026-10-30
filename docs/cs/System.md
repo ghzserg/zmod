@@ -34,7 +34,7 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 - Obsahuje další funkce, např. seznam všech maker včetně vašich vlastních.
 - Doporučeno pro pracovní postupy bez nativní obrazovky.
 - Lepší obnova přerušených tisků.
-- Založeno na [tomto forku](https://github.com/ghzserg/guppyscreen_ff5m).
+- Založeno na [tomto forku](https://github.com/ghzserg/guppyscreen_ff5m), který vychází z [původního repozitáře](https://github.com/ballaswag/guppyscreen) a dalšího [forku](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** – další alternativní implementace obrazovky.
 
@@ -44,11 +44,11 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 - Nepřidávejte toto makro do startovacího G-code.
 - Po restartu nativní obrazovka ještě 10 sekund běží, ale Z-offset neovlivňuje, protože tisk přes ni neprobíhá.
 
-Dobu aktivace lze upravit globálním parametrem [`DISPLAY_OFF_TIMEOUT`](Global.md#display_off_timeout).
+Dobu aktivace lze upravit globálním parametrem [`DISPLAY_OFF_TIMEOUT`](/cs/Global/#display_off_timeout).
 
 Nastavte `START_PRINT` a potřebný Z-offset přes jeho parametry nebo přes globální parametry.
 
-[Zjistěte více o režimech obrazovky](FAQ.md#jak-se-liší-z-mod-od-klippermodnativního-firmwaru).
+[Zjistěte více o režimech obrazovky](/cs/FAQ/#jak-se-liší-z-mod-od-klippermodnativního-firmwaru).
 
 ---
 ### MEM
@@ -108,7 +108,7 @@ V Orca: `Printer Profile` -> `General Information` -> `Advanced` -> `G-Code Thum
 
 Upozorňujeme, že nativní obrazovka pak již nebude zobrazovat náhledy.
 
-Pozor! Autor používá Fluidd; Mainsail je testován pouze uživateli. Pokud máte s Mainsail problémy, vytvořte [tiket](Help.md)
+Pozor! Autor používá Fluidd; Mainsail je testován pouze uživateli. Pokud máte s Mainsail problémy, vytvořte [tiket](/cs/Help/)
 
 ---
 ### SET_TIMEZONE
@@ -119,7 +119,7 @@ Nastaví časové pásmo.
 
 Příklad: `SET_TIMEZONE ZONE=Europe/Prague`. `SET_TIMEZONE` bez parametrů vypíše seznam dostupných pásem.
 
-Časové pásmo umožňuje [GuppyScreen](System.md#display_off) spočítat, kdy tisk skončí.
+Časové pásmo umožňuje [GuppyScreen](/cs/System/#display_off) spočítat, kdy tisk skončí.
 
 ---
 ### CHECK_MD5
@@ -128,7 +128,7 @@ Igor Polunovskiy
 
 > Poznámka: Platí pouze při odesílání G-code. Pro 3MF není potřeba.
 
-Doporučuje se použít [globální parametr FORCE_MD5](Global.md#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
+Doporučuje se použít [globální parametr FORCE_MD5](/cs/Global/#force_md5) `SAVE_ZMOD_DATA FORCE_MD5=1`
 
 Ověří integritu souboru pomocí kontrolního součtu MD5.
 
@@ -159,9 +159,11 @@ Zde jsou možnosti přidání:
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
+Zdrojové kódy: [https://github.com/ghzserg/zmod_preprocess](https://github.com/ghzserg/zmod_preprocess)
+
 3. Přidejte `CHECK_MD5` nebo `CHECK_MD5 DELETE=true` do vašeho startovacího G-code. Pokud používáte makro `START_PRINT`, není to nutné — kontrola proběhne automaticky.
 
-**Poznámka:** Ve výchozím nastavení povoleno pomocí [`FORCE_MD5`](Global.md#force_md5).
+**Poznámka:** Ve výchozím nastavení povoleno pomocí [`FORCE_MD5`](/cs/Global/#force_md5).
 
 ---
 ### UPDATE_MCU
@@ -182,10 +184,10 @@ Bez parametru přepne na druhou verzi firmwaru.
 
 Příklad: `UPDATE_MCU FORCE=13` vynutí nahrání firmwaru pro Klipper 13.
 
-Pokud nerozumíte, jak [obnovit nativní Klipper z USB flash disku](Native_FW.md#fix_klipper), nespouštějte tento příkaz.
+Pokud nerozumíte, jak [obnovit nativní Klipper z USB flash disku](/cs/Native_FW/#fix_klipper), nespouštějte tento příkaz.
 Před aktualizací Klipperu si přečtěte [změny v nových verzích](https://www.klipper3d.org/Releases.html); standardní konfigurační soubory není nutné upravovat.
 
-Pokud se něco pokazí, jediná cesta zpět vede přes [tovární firmware](Native_FW.md).
+Pokud se něco pokazí, jediná cesta zpět vede přes [tovární firmware](/cs/Native_FW/).
 
 Po spuštění makra:
 

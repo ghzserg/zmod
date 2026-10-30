@@ -7,7 +7,7 @@
 0. [Odinstalujte KlipperMod](https://github.com/xblax/flashforge_ad5m_klipper_mod/blob/master/docs/UNINSTALL.md), pokud byl dříve nainstalován.
 1. Obnovte výchozí nastavení tiskárny.
 2. Naformátujte USB disk na FAT/FAT16/FAT32 (MBR).
-3. Zkopírujte příslušný soubor z [nativního firmwaru](Native_FW.md) do kořenového adresáře USB:
+3. Zkopírujte příslušný soubor z [nativního firmwaru](/cs/Native_FW/) do kořenového adresáře USB:
 
     - [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz) pro FF5M
     - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) pro FF5M **Pro**
@@ -20,7 +20,7 @@
 6. Zapněte tiskárnu.
 7. Počkejte, až se dokončí instalace standardního firmwaru. _Pokud to trvá příliš dlouho nebo se firmware vůbec nenainstaluje, použijte jiný flash disk._
 8. Nakonfigurujte Wi‑Fi nebo LAN.
-9. Získejte nejnovější aktualizace tiskárny nebo nainstalujte firmware 1.1.7 pro AD5X nebo 3.2.3 pro [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky).
+9. Získejte nejnovější aktualizace tiskárny nebo nainstalujte firmware 1.1.7 pro AD5X nebo 3.2.3 pro [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.2.3-2.2.3-20251016-Factory.tgz)/[AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz), pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](/cs/FAQ/#před-každým-tiskem-tiskárna-měří-střed-podložky).
 
 ---
 
@@ -66,7 +66,7 @@
     <img width="800" height="480" alt="main" src="../../images/a0466fa8-03e8-458d-8cc5-c1efb8f565ac.png" />
     <img width="800" height="480" alt="ip" src="../../images/1d7dd5fa-86f4-4b1a-bd42-364619b20229.png" />
     
-    Pokud se webové rozhraní neotevře, nativní firmware mod deaktivoval. Chcete-li ho znovu zapnout, zkopírujte na USB flash disk soubor a [aktivujte mod](Native_FW.md#aktivace-z-mod-na-ad5xcreator-5creator-5-pro).
+    Pokud se webové rozhraní neotevře, nativní firmware mod deaktivoval. Chcete-li ho znovu zapnout, zkopírujte na USB flash disk soubor a [aktivujte mod](/cs/Native_FW/#aktivace-z-mod-na-ad5xcreator-5creator-5-pro).
 
     - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
     - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -80,13 +80,13 @@
     
     <img width="881" height="502" alt="image" src="../../images/cf3f797d-80e0-4864-85b4-cd28886590f4.png" />
     
-    Nastavte časové pásmo: ```SET_TIMEZONE ZONE=Europe/Prague``` (seznam pásem: `SET_TIMEZONE` bez parametrů). [Podrobnosti](System.md#set_timezone)
+    Nastavte časové pásmo: ```SET_TIMEZONE ZONE=Europe/Prague``` (seznam pásem: `SET_TIMEZONE` bez parametrů). [Podrobnosti](/cs/System/#set_timezone)
 
 13. Nakonfigurujte mod
 
     <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="../../images/a79ec692-a284-4cb8-a0ad-3be10f33d813.png" />
     
-    Zde jsou uvedeny parametry pro začátek a konec tisku a globální parametry. Doporučujeme je zatím jen pročíst a neměnit. Popis jednotlivých parametrů naleznete [zde](Global.md).
+    Zde jsou uvedeny parametry pro začátek a konec tisku a globální parametry. Doporučujeme je zatím jen pročíst a neměnit. Popis jednotlivých parametrů naleznete [zde](/cs/Global/).
 
     <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="../../images/3a8028bf-b078-4edc-827b-07e9d49c52f9.png" />
 
@@ -113,7 +113,7 @@
 
     <img width="864" height="87" alt="image" src="../../images/ca96c67f-cc58-4655-8fdf-9554d1a489a3.png" />
 
-18. [Odesílání souborů k tisku pomocí „Octo/Klipper“](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
+18. [Odesílání souborů k tisku pomocí „Octo/Klipper“](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
     **Přepněte na protokol Octo/Klipper**:
     
@@ -159,13 +159,13 @@
     
     <img width="449" height="153" alt="image" src="../../images/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8.png" />
 
-20. [Povolit ověření MD5](Recommendations.md#povolit-kontrolu-kontrolního-součtu-md5)
+20. [Povolit ověření MD5](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
     <img width="476" height="355" alt="image" src="../../images/0b59a617-5613-4def-aa01-7fe038898863.png" />
 
-21. [Přečtěte si doporučení](Recommendations.md)
-22. [Přečtěte si často kladené otázky](FAQ.md)
-23. [Zkalibrujte tiskárnu](SetupCalibrations.md)
+21. [Přečtěte si doporučení](/cs/Recommendations/)
+22. [Přečtěte si často kladené otázky](/cs/FAQ/)
+23. [Zkalibrujte tiskárnu](/cs/SetupCalibrations/)
 24. Přečtěte si zvláštnosti [AD5X](AD5X.md) a [Creator 5 Pro](C5PRO.md)
 
 ### Varování AD5X
@@ -192,7 +192,7 @@ Pokud se zobrazí hlášení `Aktualizujte Z-Mod přes USB`, musíte aktualizova
 
 **Aktualizace přes USB zachová všechna data.**
 
-**Nejjednodušší metoda:** Použijte makro [ZFLASH](Zmod.md#zflash). Vložte USB disk, restartujte tiskárnu a spusťte `ZFLASH`. Makro provede následující:
+**Nejjednodušší metoda:** Použijte makro [ZFLASH](/cs/Zmod/#zflash). Vložte USB disk, restartujte tiskárnu a spusťte `ZFLASH`. Makro provede následující:
 
 - Zkontroluje nejnovější verzi.
 - Stáhne nejnovější verzi pro váš model tiskárny.
@@ -237,8 +237,8 @@ Klikněte na `Zkontrolovat aktualizace`. Poté pluginy postupně obnovte a aktua
 
 ## Odstranění nebo dočasné vypnutí modu
 
-- **[SKIP_ZMOD](Zmod.md#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
-- **[REMOVE_ZMOD](Zmod.md#remove_zmod)**: Kompletně odinstaluje mod.
+- **[SKIP_ZMOD](/cs/Zmod/#skip_zmod)**: Restartuje tiskárnu bez spuštění Moonraker/Fluidd.
+- **[REMOVE_ZMOD](/cs/Zmod/#remove_zmod)**: Kompletně odinstaluje mod.
 
 **Doporučená metoda:** Použijte makro `REMOVE_ZMOD`. Odstranění přes USB použijte pouze v případě, že makra nejsou dostupná (_po odstranění přes USB může zůstat logo Z-Mod při spuštění_).
 
@@ -273,9 +273,9 @@ Pozor!
 Pokud nativní obrazovka aktualizace nenajde:
 
 - Vaše sériové číslo zatím nebylo zahrnuto do distribuce aktualizace
-- [Nainstalujte aktualizaci nativního firmwaru z USB disku](Native_FW.md)
+- [Nainstalujte aktualizaci nativního firmwaru z USB disku](/cs/Native_FW/)
 
-**U [AD5X](AD5X.md)/Creator 5/Creator 5 Pro je po aktualizaci nativního firmwaru nutná [aktivace Z-Mod](Native_FW.md) z USB disku.**
+**U [AD5X](AD5X.md)/Creator 5/Creator 5 Pro je po aktualizaci nativního firmwaru nutná [aktivace Z-Mod](/cs/Native_FW/) z USB disku.**
 
 - [AD5X-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-enable-zmod.tgz)
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
@@ -286,6 +286,10 @@ Pokud však aktualizujete z nativní obrazovky, a ne z USB disku, spusťte před
 ---
 
 ## Podpořte vývoj modu
+
+[SBP, bankovní karta, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
+
+<img width="262" height="262" alt="qrCode" src="../../images/e7c1ebf3-3a54-4b46-b071-06656ac06ae1.png" />
 
 BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
@@ -301,12 +305,14 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 **Příznaky:** Tiskárna se zasekne na úvodní obrazovce a není dostupná přes LAN.
 
+![resized-image](../../images/f63b16e6-2425-41c8-a166-226fb041f5ad.jpg)
+
 ![](../../images/ff.jpg)
 
 Zkuste obnovit firmware instalací plného firmwaru:
 
-- [AD5M / AD5M Pro](Native_FW.md#instalace-úplného-firmwaru-na-ad5m--ad5m-pro)
-- [AD5X](Native_FW.md#instalace-úplného-firmwaru-na-ad5x)
+- [AD5M / AD5M Pro](/cs/Native_FW/#instalace-úplného-firmwaru-na-ad5m--ad5m-pro)
+- [AD5X](/cs/Native_FW/#instalace-úplného-firmwaru-na-ad5x)
 
 **Postup:**
 

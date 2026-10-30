@@ -26,8 +26,6 @@
 ## COLOR
 ## Wie man das Menü zur Auswahl von Farbe und Filamenttyp verwendet
 
-<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
-
 <img width="794" height="900" alt="image" src="../../images/e5a72e1c-5274-449d-8a47-1d3f5b649550.png" />
 
 <img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="../../images/fd77a89c-08d6-4da5-8eac-3017ca563657.png" />

@@ -16,12 +16,12 @@
 9. [Oprava práce s odpadním košem a nožem na filament](#9-oprava-práce-s-odpadním-košem-a-nožem-na-filament)
 
     - [Nastavení koše v továrním firmwaru AD5X](#nastavení-koše-v-továrním-firmwaru-ad5x)
-       - [Přes USB disk v továrním firmwaru](Setup.md#varování-ad5x)
+       - [Přes USB disk v továrním firmwaru](/cs/Setup/#varování-ad5x)
 
 10. [Příkazy IFS](#10-příkazy-ifs)
 11. [Obnova firmwaru IFS](#11-obnova-firmwaru-ifs)
 
-### [Pluginy](Plugin.md)
+### [Pluginy](/cs/Plugin/)
 
 - [**bambufy**](https://github.com/function3d/bambufy) - Kompatibilita s Bambu Studio, lepší správa čisticí věže, přesné odhady, méně odpadu
 - [**lessWaste**](https://github.com/Hrybmo/lessWaste/) - fork pluginu Bambufy
@@ -44,7 +44,7 @@ Rozdíly oproti AD5M:
 
 ## **2. Jak připravit soubor v Orca**
 
-[Odesílejte soubory k tisku přes „Octo/Klipper“](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
+[Odesílejte soubory k tisku přes „Octo/Klipper“](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
 **Odstraňte nepoužívané cívky ze seznamu v Orce.**
 
@@ -153,7 +153,7 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 
 ### Globální parametry AD5X
 
-Zda se na začátku tisku zobrazí dialog výběru barvy, určuje globální parametr [SILENT](Global.md#silent):
+Zda se na začátku tisku zobrazí dialog výběru barvy, určuje globální parametr [SILENT](/cs/Global/#silent):
 
 - 0 – zobrazit dialog (výchozí)
 - 1 – nezobrazovat dialog, použít dříve nastavené barvy
@@ -163,13 +163,13 @@ Zda se na začátku tisku zobrazí dialog výběru barvy, určuje globální par
 SAVE_ZMOD_DATA SILENT=1
 ```
 
-Pro vypnutí automatického zavádění filamentu do extruderu použijte globální parametr [AUTOINSERT](Global.md#autoinsert):
+Pro vypnutí automatického zavádění filamentu do extruderu použijte globální parametr [AUTOINSERT](/cs/Global/#autoinsert):
 
 ```gcode
 SAVE_ZMOD_DATA AUTOINSERT=0
 ```
 
-Chcete-li při tisku vypnout vytlačování filamentu do koše, použijte parametr [USE_TRASH_ON_PRINT](Global.md#use_trash_on_print).
+Chcete-li při tisku vypnout vytlačování filamentu do koše, použijte parametr [USE_TRASH_ON_PRINT](/cs/Global/#use_trash_on_print).
 
 - 0 - K čištění do odpadu nedojde. Tisková hlava přesto při změnách barvy v první vrstvě přejede k odpadnímu žlabu, aby se omezil výskyt shluků plastu. Pokud k tomu dochází v každé vrstvě, zkontrolujte svůj startovací G-code a G-code pro změnu vrstvy!
 - 1 - Během změn barev dojde k vyčištění do odpadního žlabu. Při každé změně barvy proběhnou dvě čištění o délce rovné `filament_drop_length` ve filament.json (plus `filament_drop_length_add`, pokud jsou materiály odlišné).
@@ -179,13 +179,13 @@ Chcete-li při tisku vypnout vytlačování filamentu do koše, použijte parame
 SAVE_ZMOD_DATA USE_TRASH_ON_PRINT=0
 ```
 
-Chcete-li po dokončení tisku vysunout filament, použijte parametr [REMOVE_FILAMENT](Global.md#remove_filament).
+Chcete-li po dokončení tisku vysunout filament, použijte parametr [REMOVE_FILAMENT](/cs/Global/#remove_filament).
 
 ```gcode
 SAVE_ZMOD_DATA REMOVE_FILAMENT=1
 ```
 
-Chcete-li nastavit, kolik nástrojů se zobrazí v okně pro výběr barvy (pokud tuto informaci nelze ze souboru zjistit), použijte parametr [ALLOWED_TOOL_COUNT](Global.md#allowed_tool_count).
+Chcete-li nastavit, kolik nástrojů se zobrazí v okně pro výběr barvy (pokud tuto informaci nelze ze souboru zjistit), použijte parametr [ALLOWED_TOOL_COUNT](/cs/Global/#allowed_tool_count).
 
 [Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
@@ -193,7 +193,7 @@ Chcete-li nastavit, kolik nástrojů se zobrazí v okně pro výběr barvy (poku
 SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=16
 ```
 
-Chcete-li zapnout prohledávání G-code souborů kvůli informacím o nástrojích, barvách a materiálech, použijte parametr [SCAN_FILE_COLORS](Global.md#scan_file_colors). Hodnota 2 načte jen data připravená skriptem sliceru, bez prohledávání celého souboru.
+Chcete-li zapnout prohledávání G-code souborů kvůli informacím o nástrojích, barvách a materiálech, použijte parametr [SCAN_FILE_COLORS](/cs/Global/#scan_file_colors). Hodnota 2 načte jen data připravená skriptem sliceru, bez prohledávání celého souboru.
 
 [Viz nastavení předzpracování](/cs/Recommendations/#povolit-kontrolu-kontrolního-součtu-md5)
 
@@ -201,7 +201,7 @@ Chcete-li zapnout prohledávání G-code souborů kvůli informacím o nástroj�
 SAVE_ZMOD_DATA SCAN_FILE_COLORS=1
 ```
 
-Chcete-li automaticky přiřadit barvy z G-code souboru k fyzickým cívkám, použijte parametr [AUTO_ASSIGN_COLORS](Global.md#auto_assign_colors). Aby fungoval, musí být zapnuté prohledávání souborů. Použití hodnoty 30 přeruší tisk v tichém režimu, pokud dojde k jakémukoli problému s automatickým přiřazením.
+Chcete-li automaticky přiřadit barvy z G-code souboru k fyzickým cívkám, použijte parametr [AUTO_ASSIGN_COLORS](/cs/Global/#auto_assign_colors). Aby fungoval, musí být zapnuté prohledávání souborů. Použití hodnoty 30 přeruší tisk v tichém režimu, pokud dojde k jakémukoli problému s automatickým přiřazením.
 
 Vlastní podmínky přerušení v tichém režimu nastavíte sečtením následujících hodnot:
 
@@ -216,7 +216,7 @@ Vlastní podmínky přerušení v tichém režimu nastavíte sečtením následu
 SAVE_ZMOD_DATA AUTO_ASSIGN_COLORS=30
 ```
 
-Pokud příkaz ke změně barvy přepíná na již zavedenou barvu, výměna se obvykle přeskočí jako zbytečná. Pokud přesto chcete provádět plnou výměnu barvy, použijte parametr [ALWAYS_FULL_COLOR_CHANGE](Global.md#always_full_color_change).
+Pokud příkaz ke změně barvy přepíná na již zavedenou barvu, výměna se obvykle přeskočí jako zbytečná. Pokud přesto chcete provádět plnou výměnu barvy, použijte parametr [ALWAYS_FULL_COLOR_CHANGE](/cs/Global/#always_full_color_change).
 
 ```gcode
 SAVE_ZMOD_DATA ALWAYS_FULL_COLOR_CHANGE=0
@@ -429,7 +429,7 @@ Text `_průhledná` se zobrazí na tlačítkách.
 
 ## 9. Oprava práce s odpadním košem a nožem na filament
 
-[Alternativní verze pokynů](Setup.md#varování-ad5x)
+[Alternativní verze pokynů](/cs/Setup/#varování-ad5x)
 
 Různé tiskárny AD5X mohou mít různé souřadnice pro odpadnímu koši a nůž. Někdy může být rozdíl až 4 mm.
 
@@ -471,7 +471,7 @@ Nahraďte **pouze** tyto hodnoty:
 
 ### Kalibrace odpadního koše
 
-[Alternativní verze pokynů](Setup.md#varování-ad5x)
+[Alternativní verze pokynů](/cs/Setup/#varování-ad5x)
 
 1. Zadejte příkaz `_GOTO_TRASH` — hlava tiskárny se přesune k odpadní nádobce.
 2. Pokud se koš nezavře, opatrně posouvejte hlavu, dokud se nezavře. Použijte GCODE: ```G1 Y230.2```
@@ -495,7 +495,7 @@ Zapište toto číslo do souboru `/rw/Adventurer5M.json`. Koš je zkalibrován.
 
 ### Kalibrace nože
 
-[Alternativní verze pokynů](Setup.md#varování-ad5x)
+[Alternativní verze pokynů](/cs/Setup/#varování-ad5x)
 
 1. Zadejte příkaz `_CUT_PRUTOK` — hlava se přesune k noži.
 2. Pomocí obrazovky posouvejte hlavu, dokud se nůž neaktivuje. Použijte GCODE: ```G1 Y-7.7``` ```G1 X-1.7```
@@ -620,7 +620,7 @@ Připojte:
 - Zrušte zaškrtnutí druhého políčka.
 
 1. Připojte.
-2. Vyberte [soubor firmwaru](Native_FW.md#5x-ifs). **Nezapomeňte jej rozbalit**.
+2. Vyberte [soubor firmwaru](/cs/Native_FW/#5x-ifs). **Nezapomeňte jej rozbalit**.
 3. Stiskněte **F7** a počkejte na dokončení flashování.
 
 ## IFS: sensor error: Serial communication error: read failed: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

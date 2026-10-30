@@ -20,7 +20,7 @@ Přístup do složky **mod_data** přes webové rozhraní Fluidd:
 - Vlastní nastavení Klipperu patří do `mod_data/user.cfg`, kterým lze přepsat/doplnit `printer.base.cfg` a soubory Z-Mod.
 - Vlastní nastavení Moonrakeru patří do `mod_data/user.moonraker.conf`.
 - Vlastní MIDI soubory jsou uloženy v `mod_data/midi/`.
-- Globální nastavení modu se ukládají pomocí makra [SAVE_ZMOD_DATA](Global.md#save_zmod_data).
+- Globální nastavení modu se ukládají pomocí makra [SAVE_ZMOD_DATA](/cs/Global/#save_zmod_data).
 - Kód spouštěný při vypnutí tiskárny: `mod_data/power_off.sh`.
 - Kód spouštěný při zapnutí tiskárny: `mod_data/power_on.sh`.
 
@@ -33,8 +33,8 @@ Jakoukoliv funkci lze přepsat v `mod_data/user.cfg` nebo `printer.cfg`.
 ## Známé zvláštnosti: {#known-peculiarities}
 
 - Během akcí jako `M109` (nahřívání extruderu), `M190` (nahřívání podložky), kalibrace PID nebo jakékoli pauzy v G-code nativní obrazovka zamrzne.
-- Restart Klipperu (po uložení sítě podložky, PID, shaperů atd.) nativní obrazovku zamrazí (pro restarty použijte [NEW_SAVE_CONFIG](Main.md#new_save_config) nebo [globální parametr](Global.md#new_save_config)).
-- Po zrušení tisku stiskněte "OK" na tovární obrazovce (použijte [CLOSE_DIALOGS](Main.md#close_dialogs) nebo [FAST_CLOSE_DIALOGS](Main.md#fast_close_dialogs)).
+- Restart Klipperu (po uložení sítě podložky, PID, shaperů atd.) nativní obrazovku zamrazí (pro restarty použijte [NEW_SAVE_CONFIG](/cs/Main/#new_save_config) nebo [globální parametr](/cs/Global/#new_save_config)).
+- Po zrušení tisku stiskněte "OK" na tovární obrazovce (použijte [CLOSE_DIALOGS](/cs/Main/#close_dialogs) nebo [FAST_CLOSE_DIALOGS](/cs/Main/#fast_close_dialogs)).
 
 - Tovární obrazovka vždy načte profil `DEFAULT_MESH` při zahájení tisku a po tisku smaže profil `Default`.
 
@@ -42,9 +42,9 @@ Jakoukoliv funkci lze přepsat v `mod_data/user.cfg` nebo `printer.cfg`.
 
 ## Poznámky k režimu bez nativní obrazovky: {#notes-on-screenless-version}
 
-- Odstraňte veškerý startovací G-code a použijte makra [START_PRINT](Main.md#start_print) a [END_PRINT](Main.md#end_print).
-- Nativní kamera je vypnutá; použijte alternativní kameru přes [CAMERA_ON](Zmod.md#camera_on).
-- AD5M/AD5X: v případě potřeby ručně nastavte `Z_OFFSET` v [START_PRINT](Main.md#start_print) nebo použijte [LOAD_ZOFFSET](Global.md#load_zoffset) k načtení uložených offsetů.
+- Odstraňte veškerý startovací G-code a použijte makra [START_PRINT](/cs/Main/#start_print) a [END_PRINT](/cs/Main/#end_print).
+- Nativní kamera je vypnutá; použijte alternativní kameru přes [CAMERA_ON](/cs/Zmod/#camera_on).
+- AD5M/AD5X: v případě potřeby ručně nastavte `Z_OFFSET` v [START_PRINT](/cs/Main/#start_print) nebo použijte [LOAD_ZOFFSET](/cs/Global/#load_zoffset) k načtení uložených offsetů.
 - Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE``` – přečte Z-offset z nativní obrazovky a použije ho v režimu bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 - Síť podložky `auto` se načítá automaticky při startu.
 - Protokol FlashForge není podporován (zpracovává ho nativní obrazovka). Použijte „Octo/Klipper“:
@@ -99,19 +99,20 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Z-Mod sice používá
 #### Co je v Z-Mod, ale ne v KlipperMod:
 
 *   Podpora [AD5X](AD5X.md)
-*   Podpora [následujících jazyků](Global.md#lang): Angličtina, Němčina, Francouzština, Italština, Španělština, Čínština, Japonština, Korejština, Portugalština, Čeština, Turečtina, Ruština
+*   Podpora [Creator 5 / Creator 5 Pro](C5PRO.md)
+*   Podpora [následujících jazyků](/cs/Global/#lang): Angličtina, Němčina, Francouzština, Italština, Španělština, Čínština, Japonština, Korejština, Portugalština, Čeština, Turečtina, Ruština
 *   Práce s nativní obrazovkou
-*   [Obnovení tisku po výpadku napájení](Zmod.md#zrestore)
-*   [Kalibrace shaperu s grafy](Calibrations.md#zshaper) s ohledem na [SCV](Global.md#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
-*   [Kontrola a oprava souborů/oprávnění/symbolických odkazů pro nativní souborový systém](System.md#check_system)
+*   [Obnovení tisku po výpadku napájení](/cs/Zmod/#zrestore)
+*   [Kalibrace shaperu s grafy](/cs/Calibrations/#zshaper) s ohledem na [SCV](/cs/Global/#fix_scv) ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer))
+*   [Kontrola a oprava souborů/oprávnění/symbolických odkazů pro nativní souborový systém](/cs/System/#check_system)
 *   Automatické aktualizace pro `Fluidd`/`Mainsail`/`Moonraker` a Z-Mod přes síť
-*   [Entware](FAQ.md#entware-v-z-mod-jak-ho-používat)
-*   Oprava chyby [E0017](Global.md#fix_e0017)
+*   [Entware](/cs/FAQ/#entware-v-z-mod-jak-ho-používat)
+*   Oprava chyby [E0017](/cs/Global/#fix_e0017)
 *   Navíc GuppyScreen/HelixScreen podporuje: kalibraci PID, ovládání shaperů, firmwarovou retrakci, čištění trysky, reset tenzometrů, nastavení šroubů, ColdPull, vylepšené měření sítě podložky
 *   Opravené řízení ventilátorů chlazení driverů. Zapínají se automaticky, když jsou motory aktivní. V nativním firmwaru - pouze během tisku.
-*   Adaptivní síť podložky [KAMP](Calibrations.md#kamp)
-*   Kalibrace PID pro [extruder](Calibrations.md#pid_tune_extruder) a [podložku](Calibrations.md#pid_tune_bed), včetně přes GuppyScreen/HelixScreen
-*   [COLDPULL](Filament.md#coldpull) (čištění trysky) bez použití síly. Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172)
+*   Adaptivní síť podložky [KAMP](/cs/Calibrations/#kamp)
+*   Kalibrace PID pro [extruder](/cs/Calibrations/#pid_tune_extruder) a [podložku](/cs/Calibrations/#pid_tune_bed), včetně přes GuppyScreen/HelixScreen
+*   [COLDPULL](/cs/Filament/#coldpull) (čištění trysky) bez použití síly. Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 #### Co je v Z-Mod, ale ne v nativním firmwaru:
 
@@ -133,7 +134,7 @@ Lze ho vyvolat:
 - z konzole Fluidd/Mainsail
 *ježek*
 
-[Seznam maker](Macros.md)
+[Seznam maker](/cs/Macros/)
 
 ---
 
@@ -180,9 +181,9 @@ SAVE_ZMOD_DATA CLOSE_DIALOGS=2 PRINT_LEVELING=1 USE_KAMP=1
 ```
 Přes menu obrazovky tiskárny: `Nastavení` -> `Ikona Wi-Fi` -> `Režim sítě` -> zapnout `Pouze místní síť`.
 
-Přečtěte si dokumentaci k [START_PRINT](Main.md#start_print) a [SAVE_ZMOD_DATA](Global.md#save_zmod_data), abyste využili pokročilé funkce Z-Mod.
+Přečtěte si dokumentaci k [START_PRINT](/cs/Main/#start_print) a [SAVE_ZMOD_DATA](/cs/Global/#save_zmod_data), abyste využili pokročilé funkce Z-Mod.
 
-Pro firmwarovou retrakci si přečtěte [Co je to firmwarová retrakce](FAQ.md#co-je-to-firmwarová-retrakce) a přidejte do `Profilu filamentu` -> `Pokročilé` -> `Start G-code filamentu`:
+Pro firmwarovou retrakci si přečtěte [Co je to firmwarová retrakce](/cs/FAQ/#co-je-to-firmwarová-retrakce) a přidejte do `Profilu filamentu` -> `Pokročilé` -> `Start G-code filamentu`:
 ```
 SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 ```
@@ -196,6 +197,8 @@ SET_RETRACTION RETRACT_LENGTH=[filament_retraction_length]
 !!! note "Creator 5 / Creator 5 Pro"
     U Creator 5 / Creator 5 Pro je Z-offset s nativní obrazovkou i v režimu bez nativní obrazovky stejný – oba jsou plně synchronizované. Pokud je nativní obrazovka vypnutá, můžete Z-offset měnit během tisku přes GuppyScreen, HelixScreen, Fluidd nebo Mainsail – uloží se.
 
+Přečtěte si článek „[Jak funguje Z-offset na vaší tiskárně](/cs/SetupCalibrations/#jak-funguje-z-offset-na-vaší-tiskárně)“
+
 Při použití nativní obrazovky mod do Z-offsetu nezasahuje; používá se Z-offset uložený na obrazovce.
 
 Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný: každý žije vlastním životem a nastavuje se samostatně.
@@ -204,9 +207,9 @@ Pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazo
 
 Úpravy Z-offsetu přes Fluidd/Mainsail/GuppyScreen/HelixScreen ovlivňují tisk pouze do restartu. Neměňte ho, pokud nerozumíte, kam se tryska pohybuje.
 
-Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluidd/Mainsail/GuppyScreen/HelixScreen) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](Global.md#load_zoffset) (ve výchozím stavu vypnutý; zapnete ho pomocí `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](Main.md#start_print).
+Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluidd/Mainsail/GuppyScreen/HelixScreen) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](/cs/Global/#load_zoffset) (ve výchozím stavu vypnutý; zapnete ho pomocí `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](/cs/Main/#start_print).
 
-Z-offset lze také nastavit pomocí parametrů [START_PRINT](Main.md#start_print):
+Z-offset lze také nastavit pomocí parametrů [START_PRINT](/cs/Main/#start_print):
 
 - Z_OFFSET - Nastaví Z-offset (0.0)
 
@@ -226,9 +229,9 @@ Bez nativní obrazovky se síť `auto` načte automaticky při startu.
 
 Chcete-li použít jinou síť, vypněte automatické měření (`SAVE_ZMOD_DATA PRINT_LEVELING=0`):
 
-- Specifikujte pomocí parametru `MESH` v [START_PRINT](Main.md#start_print). Např. `START_PRINT MESH=my_80_degree_mesh`
+- Specifikujte pomocí parametru `MESH` v [START_PRINT](/cs/Main/#start_print). Např. `START_PRINT MESH=my_80_degree_mesh`
 - Načtěte pomocí `BED_MESH_PROFILE LOAD=my_80_degree_mesh` v profilu filamentu. Zajistěte konzistenci mezi profilem a `START_PRINT`, nebo vypněte čištění trysky v `START_PRINT`.
-- Síť předem změřte pomocí [AUTO_FULL_BED_LEVEL](Calibrations.md#auto_full_bed_level). Např. `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh`
+- Síť předem změřte pomocí [AUTO_FULL_BED_LEVEL](/cs/Calibrations/#auto_full_bed_level). Např. `AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=230 BED_TEMP=80 PROFILE=my_80_degree_mesh`
 
 #### Přes globální parametry
 Použijte parametry `PRINT_LEVELING` a `USE_KAMP`. Zapnete je pomocí:
@@ -260,9 +263,27 @@ Příklady:
 #### Přes makra a tlačítka ve Fluidd
 Použijte:
 
-- [AUTO_FULL_BED_LEVEL](Calibrations.md#auto_full_bed_level) (tlačítko `BED LEVELING` ve Fluidd)
-- [KAMP](Calibrations.md#kamp)
+- [AUTO_FULL_BED_LEVEL](/cs/Calibrations/#auto_full_bed_level) (tlačítko `BED LEVELING` ve Fluidd)
+- [KAMP](/cs/Calibrations/#kamp)
 - Standardní Klipper makra (**nedoporučeno**)
+
+---
+
+#### Použití standardních příkazů Klipperu
+
+Pro práci s MESH existují standardní makra Klipperu:
+
+- [BED_MESH_CALIBRATE](https://www.klipper3d.org/G-Codes.html#bed_mesh_calibrate) - změřit síť podložky
+- [BED_MESH_OUTPUT](https://www.klipper3d.org/G-Codes.html#bed_mesh_output) - vypsat síť podložky
+- [BED_MESH_PROFILE](https://www.klipper3d.org/G-Codes.html#bed_mesh_profile) - načíst, smazat, uložit síť podložky
+
+Pokud síť načítáte příkazy Klipperu v profilu filamentu, ujistěte se, že v `START_PRINT` i v profilu filamentu používáte stejnou síť, nebo v START_PRINT vypněte čištění trysky a spouštějte ho samostatně přes profil filamentu.
+
+Důrazně doporučujeme přečíst si možnosti čištění trysky:
+
+- [CLEAR_NOZZLE](/cs/Main/#clear_nozzle) - Čištění trysky jako v nativním firmwaru
+- Parametr [PRECLEAR](/cs/Global/#preclear) - Dodatečné čištění trysky při měření sítě podložky.
+- Parametr [CLEAR](/cs/Global/#clear) - čtyři algoritmy (lze přidat vlastní) čištění trysky linkou před tiskem.
 
 ---
 
@@ -270,10 +291,10 @@ Použijte:
 
 Dokumentaci málokdo čte, i když je v ní zodpovězeno 90 % otázek. Abych ověřil, zda ji někdo opravdu četl, jsou v textu skryta jména zvířat. Pokud jste sem byli odkázáni, přečtěte si dokumentaci a uveďte zvíře u vaší otázky – pak určitě dostanete pomoc:
 
-- [FAQ](FAQ.md)
-- [Doporučení](Recommendations.md)
-- [Nastavení/Aktualizace/Odinstalace](Setup.md)
-- [Makra](Macros.md)
+- [FAQ](/cs/FAQ/)
+- [Doporučení](/cs/Recommendations/)
+- [Nastavení/Aktualizace/Odinstalace](/cs/Setup/)
+- [Makra](/cs/Macros/)
 - [Známé zvláštnosti](#known-peculiarities)
 
 ---
@@ -292,7 +313,7 @@ V režimu bez nativní obrazovky můžete použít alternativní softwarovou obr
 
 **Vypnutí obrazovky šetří RAM, ale mění správu tisku (start/pauza/pokračování/zrušení/obnova po výpadku napájení, přenos souborů). Podle toho upravte startovní/koncový G-code.** *los*
 
-Bez nativní obrazovky se Z-offset z obrazovky nepoužije. Použijte parametry [START_PRINT](Main.md#start_print) nebo globální nastavení. [Detaily](FAQ.md#jak-funguje-z-offset)
+Bez nativní obrazovky se Z-offset z obrazovky nepoužije. Použijte parametry [START_PRINT](/cs/Main/#start_print) nebo globální nastavení. [Detaily](/cs/FAQ/#jak-funguje-z-offset)
 
 Přečtěte si [zvláštnosti provozu bez nativní obrazovky](#notes-on-screenless-version).
 
@@ -307,12 +328,12 @@ Nativní kamera, která se zapíná z obrazovky, má řadu nevýhod:
 - Pouze jedno připojení ke kameře. Když ji otevřete v Orce, v prohlížeči ji už neuvidíte
 - Periodické výpadky obrazu
 
-Alternativní kamera umožňuje měnit rozlišení a FPS, podporuje více připojení, nekomprimuje obraz, snadno se restartuje a nastavuje [makrem](Zmod.md#camera_on). *zajíc*
+Alternativní kamera umožňuje měnit rozlišení a FPS, podporuje více připojení, nekomprimuje obraz, snadno se restartuje a nastavuje [makrem](/cs/Zmod/#camera_on). *zajíc*
 
 - Vypněte nativní kameru na obrazovce tiskárny.
-- Spusťte makro [CAMERA_ON](Zmod.md#camera_on).
+- Spusťte makro [CAMERA_ON](/cs/Zmod/#camera_on).
 
-Přečtěte si: [Nainstaloval jsem tiskárnu a Z-Mod mi skryl kameru!](FAQ.md#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
+Přečtěte si: [Nainstaloval jsem tiskárnu a Z-Mod mi skryl kameru!](/cs/FAQ/#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
 
 #### Nastavení kamery
 
@@ -395,7 +416,7 @@ Ve verzích novějších než `1.4.3` můžete také specifikovat:
 - Stream URL: `/webcam/?action=stream`
 - Snapshot URL: `/webcam/?action=snapshot`
 
-Pokud chcete nastavit rozlišení a FPS, používat kameru v Telegram botovi, snížit spotřebu RAM nebo povolit paralelní připojení, použijte [alternativní kameru](Zmod.md#camera_on). *krtek*
+Pokud chcete nastavit rozlišení a FPS, používat kameru v Telegram botovi, snížit spotřebu RAM nebo povolit paralelní připojení, použijte [alternativní kameru](/cs/Zmod/#camera_on). *krtek*
 
 Přiřaďte tiskárně na routeru *statickou IP adresu*, jinak se změní a kamera přestane fungovat.
 
@@ -447,7 +468,7 @@ Rozdíl mezi `REBOOT` a `FIRMWARE_RESTART` je, že `REBOOT` restartuje Linux a K
 
 ### Přepnul jsem webové rozhraní a teď nic nefunguje
 
-Pokud jste přepnuli rozhraní pomocí makra [WEB](System.md#web) *vychuchol*:
+Pokud jste přepnuli rozhraní pomocí makra [WEB](/cs/System/#web) *vychuchol*:
 
 1. Stiskněte `Ctrl + F5` nebo `Ctrl + Shift + R` nebo `Option + Command + E`
 2. Pokud problém přetrvává v Orca, stiskněte znovu `Ctrl + F5` nebo `Ctrl + Shift + R` nebo `Option + Command + E`. *liška*
@@ -468,13 +489,17 @@ Z-Mod používá následující porty:
 
 Pro přístup k tiskárně zadejte její IP adresu **bez specifikace portu**. *králík*
 
-[Jak nastavit Orca](Recommendations.md#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
+[Jak nastavit Orca](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper)
 
 ---
 
 ### Co je to firmwarová retrakce?
 
-V Z-Modu má Fluidd/Mainsail posuvníky pro úpravu rychlosti a vzdálenosti firmwarové retrakce. Na tisk mají vliv jen tehdy, pokud byl G-code slicován se zapnutou firmwarovou retrakcí.
+V Z-Modu má Fluidd/Mainsail posuvníky pro úpravu rychlosti a vzdálenosti firmwarové retrakce.
+
+![](../../images/retract.jpg)
+
+Na tisk mají vliv jen tehdy, pokud byl G-code slicován se zapnutou firmwarovou retrakcí.
 
 Firmwarová retrakce umožňuje upravovat retrakci během tisku bez opětovného slicování.
 
@@ -518,9 +543,9 @@ SET_RETRACTION RETRACT_LENGTH={if not is_nil(filament_retraction_length[current_
 
 ### Po instalaci Z-Modu je moje obrazovka mrtvá a nereaguje na dotyky
 
-- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](Recommendations.md#nainstalujte-nejnovější-standardní-firmware-a-aktualizace-z-mod)
+- [Nainstalujte nejnovější nativní firmware a aktualizace Z-Mod](/cs/Recommendations/#nainstalujte-nejnovější-standardní-firmware-a-aktualizace-z-mod)
 - Přečtěte si [známé zvláštnosti](#known-peculiarities) *bizon*
-- Možná jste obrazovku vypnuli. Zapněte ji pomocí makra [DISPLAY_ON](System.md#display_on)
+- Možná jste obrazovku vypnuli. Zapněte ji pomocí makra [DISPLAY_ON](/cs/System/#display_on)
 
 ---
 
@@ -577,7 +602,7 @@ Ne, všechna nastavení zůstanou zachována.
 ### Nápověda
 ### Jak kontaktovat podporu
 
-[Návod byl přesunut](Help.md)
+[Návod byl přesunut](/cs/Help/)
 
 ---
 
@@ -632,7 +657,7 @@ K čemu je tento senzor?
 
  - Lze ho použít k měření Z-offsetu přes plugin [g28_tenz](https://github.com/ghzserg/g28_tenz)
 
-- Můžete zastavit tisk, pokud tryska narazí na díl nebo se díl odtrhne. [NOZZLE_CONTROL](Global.md#nozzle_control)
+- Můžete zastavit tisk, pokud tryska narazí na díl nebo se díl odtrhne. [NOZZLE_CONTROL](/cs/Global/#nozzle_control)
 - Bez resetu tenzometrů bude síť podložky změřena nesprávně.
 
 ---
@@ -675,7 +700,7 @@ Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=13``` – t
 Pokud vše ostatní selže a **Klipper nefunguje**:
 
 - Přepněte na nativní Klipper, jak je popsáno výše.
-- [Nainstalujte nativní tovární firmware](Native_FW.md#jak-nainstalovat-nativní-firmware) – nainstaluje se tím i nativní firmware MCU.
+- [Nainstalujte nativní tovární firmware](/cs/Native_FW/#jak-nainstalovat-nativní-firmware) – nainstaluje se tím i nativní firmware MCU.
 
 ---
 
@@ -740,8 +765,8 @@ Toto je chování nativního firmwaru od verzí:
 
 Řešení:
 
-- [Vraťte nativní firmware](Native_FW.md) na verzi **1.1.7** pro AD5X, **3.2.3** pro FF5M/FF5MPro
-- [Vypněte nativní obrazovku](System.md#display_off)
+- [Vraťte nativní firmware](/cs/Native_FW/) na verzi **1.1.7** pro AD5X, **3.2.3** pro FF5M/FF5MPro
+- [Vypněte nativní obrazovku](/cs/System/#display_off)
 
 ---
 
@@ -761,6 +786,6 @@ Chcete-li zjistit, o jakou chybu přesně jde:
 - Přejděte do konzole a přečtěte si text chyby
 - Otevřete Telegram bota [@zmod_help_bot](http://t.me/zmod_help_bot) a zadejte text chyby nebo si popis vyhledejte sami v dokumentaci
 
-Pokud chybu nedokážete opravit, [vytvořte tiket](Help.md).
+Pokud chybu nedokážete opravit, [vytvořte tiket](/cs/Help/).
 
 [Nativní konfigurace](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)

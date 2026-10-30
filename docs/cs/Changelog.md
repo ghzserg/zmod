@@ -55,13 +55,13 @@
 28.10.2026
 
 * Z-Mod: Podpora formátu 3MF
-* Z-Mod: Při tisku 3MF probíhá přiřazení barev okamžitě — [preprocesor](Global.md#force_md5) už není potřeba
+* Z-Mod: Při tisku 3MF probíhá přiřazení barev okamžitě — [preprocesor](/cs/Global/#force_md5) už není potřeba
 * Z-Mod: Rychlý KAMP — zapíná se automaticky a funguje bez pomalého vylučování objektů. U 3MF jsou data pro KAMP k dispozici okamžitě, u G-code po prohledání souboru
 * C5Pro: Podpora až 100 barev v souboru s přiřazením ke 4 extruderům
-* Nové makro [PLUGINS](Global.md#plugins) — nabídka správy pluginů
-* Nové makro [_USER_PREPARE_PRINT](Main.md#_user_prepare_print) — volá se před odesláním souboru k tisku
-* Nový globální parametr [PURGE_ALL_EXTRUDERS](Global.md#purge_all_extruders) — profouknutí všech použitých extruderů při startu tisku
-* Nový globální parametr [UNUSED_EXTRUDERS_OFF_TIME](Global.md#unused_extruders_off_time) — vypnutí ohřevu nečinných extruderů po nastavené době
+* Nové makro [PLUGINS](/cs/Global/#plugins) — nabídka správy pluginů
+* Nové makro [_USER_PREPARE_PRINT](/cs/Main/#_user_prepare_print) — volá se před odesláním souboru k tisku
+* Nový globální parametr [PURGE_ALL_EXTRUDERS](/cs/Global/#purge_all_extruders) — profouknutí všech použitých extruderů při startu tisku
+* Nový globální parametr [UNUSED_EXTRUDERS_OFF_TIME](/cs/Global/#unused_extruders_off_time) — vypnutí ohřevu nečinných extruderů po nastavené době
 * Telegram bot podpory [@zmod_help_bot](https://t.me/zmod_help_bot) nyní využívá AI
 * Fluidd: Podpora 3MF
 * Mainsail: Podpora 3MF
@@ -148,10 +148,10 @@
 ### Verze 1.6.3
 25.11.2025 — Z-Mod slaví první rok!
 
-* [zmod.link](https://zmod.link/link/) | [ZLINK](Zmod.md#zlink) — vzdálený přístup k tiskárně přes cloud
-* Makro [SCREEN](System.md#screen) — pořízení snímku obrazovky tiskárny
-* Makro [LOAD_ZOFFSET_NATIVE](Calibrations.md#load_zoffset_native) — přenos nastavení Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky
-* [AD5X](AD5X.md): Přidán globální parametr [REMOVE_FILAMENT](Global.md#remove_filament) — vysunutí filamentu po dokončení tisku
+* [zmod.link](https://zmod.link/link/) | [ZLINK](/cs/Zmod/#zlink) — vzdálený přístup k tiskárně přes cloud
+* Makro [SCREEN](/cs/System/#screen) — pořízení snímku obrazovky tiskárny
+* Makro [LOAD_ZOFFSET_NATIVE](/cs/Calibrations/#load_zoffset_native) — přenos nastavení Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky
+* [AD5X](AD5X.md): Přidán globální parametr [REMOVE_FILAMENT](/cs/Global/#remove_filament) — vysunutí filamentu po dokončení tisku
 * Přidán [plugin doporučených nastavení](https://github.com/ghzserg/recommend)
 * Přidána podpora českého jazyka
 * Implementována kontrola verze MCU pro Klipper 13
@@ -179,7 +179,7 @@
 * Mainsail: Podpora barev od @function3d, opraveny chyby 404 po obnovení
 * Guppy: Podpora barev. Opravena integrace HA.
 * Přidáno automatické připojování flash disků při práci s Guppy
-* Přidána možnost zapnout [Wi-Fi](Global.md#wifi) přímo bez nativní obrazovky
+* Přidána možnost zapnout [Wi-Fi](/cs/Global/#wifi) přímo bez nativní obrazovky
 * [AD5X](AD5X.md): Vyřešeny problémy s odpadním košem a řezáním filamentu v nových revizích
 * [AD5X](AD5X.md): Podpora barev při obnovení tisku
 * [AD5X](AD5X.md): Možnost vytvářet [vlastní typy filamentů a barev](AD5X.md#7-přidat-nebo-odebrat-typy-filamentů) při práci bez nativní obrazovky
@@ -192,7 +192,7 @@
 ### Verze 1.6.1
 06.09.2025
 
-- [AD5X](AD5X.md) - Podpora Klipperu 13. [UPDATE_MCU](System.md#update_mcu)
+- [AD5X](AD5X.md) - Podpora Klipperu 13. [UPDATE_MCU](/cs/System/#update_mcu)
 - [AD5X](AD5X.md) - Teplotní senzor v hlavě
 - [AD5X](AD5X.md) - Práce bez nativní obrazovky. IFS plně funguje, s nastavitelným množstvím proplachu
 - Drobné opravy
@@ -200,7 +200,7 @@
 ### Verze 1.6.0
 14.08.2025
 
-- AD5M - Podpora Klipperu 13. [UPDATE_MCU](System.md#update_mcu)
+- AD5M - Podpora Klipperu 13. [UPDATE_MCU](/cs/System/#update_mcu)
 - AD5M - Teplotní senzor v hlavě
 - Drobné opravy
 
@@ -218,9 +218,9 @@ Díky za podporu tenzometrů: [@minicx](https://github.com/loss-and-quick/)
 - AD5X - kalibrace PID podložky funguje
 - AD5X - obnoveno čištění trysky při měření sítě podložky
 - AD5X - testován provoz modu na firmwaru 1.0.9, 1.1.0, 1.1.1
-- AD5X - vytvořen [flash disk instalující verzi obrazovky 1.0.7 a všechny ostatní moduly verze 1.1.1](Native_FW.md)
-- AD5X - vytvořen [flash disk pro resetování tiskárny do továrního nastavení](Native_FW.md)
-- AD5X - vytvořen [flash disk pro aktivaci modu po aktualizaci nativního firmwaru](Native_FW.md)
+- AD5X - vytvořen [flash disk instalující verzi obrazovky 1.0.7 a všechny ostatní moduly verze 1.1.1](/cs/Native_FW/)
+- AD5X - vytvořen [flash disk pro resetování tiskárny do továrního nastavení](/cs/Native_FW/)
+- AD5X - vytvořen [flash disk pro aktivaci modu po aktualizaci nativního firmwaru](/cs/Native_FW/)
 
 ### Verze 1.5.3
 03.06.2025
@@ -274,14 +274,14 @@ Podpora jazyků rozhraní:
 ### Verze 1.4.2
 19.03.2025
 
-- Vylepšená [detekce kolize trysky](Global.md#nozzle_control) s volitelnou pauzou místo vypnutí. Úkol [#23](https://github.com/ghzserg/zmod/issues/23).
+- Vylepšená [detekce kolize trysky](/cs/Global/#nozzle_control) s volitelnou pauzou místo vypnutí. Úkol [#23](https://github.com/ghzserg/zmod/issues/23).
 - Kontrola trysky nefunguje na AD5X, viz [#75](https://github.com/ghzserg/zmod/discussions/75#discussion-8196449)
 - Vylepšená funkce kontroly systému.
 - Aktualizované barevné schéma Fluidd.
-- Přidán globální parametr [SAVE_MOONRAKER](Global.md#save_moonraker) - umožňuje vlastní rozložení tlačítek maker.
+- Přidán globální parametr [SAVE_MOONRAKER](/cs/Global/#save_moonraker) - umožňuje vlastní rozložení tlačítek maker.
 - **AD5X**: Funguje GuppyScreen.
-- **AD5X**: Nové makro [COLOR](Filament.md#color) - správa typu a barvy plastu, zavádění a vysouvání filamentu z barevných cívek.
-- Změněn algoritmus testování podložky před tiskem, nový globální parametr [MESH_TEST](Global.md#mesh_test).
+- **AD5X**: Nové makro [COLOR](/cs/Filament/#color) - správa typu a barvy plastu, zavádění a vysouvání filamentu z barevných cívek.
+- Změněn algoritmus testování podložky před tiskem, nový globální parametr [MESH_TEST](/cs/Global/#mesh_test).
 - Opraveno:
     - [#13](https://github.com/ghzserg/zmod/issues/13) (Tisk ve vzduchu po KAMP).
     - [#14](https://github.com/ghzserg/zmod/issues/14) (Obnovení tisku na nativní obrazovce).
@@ -311,16 +311,16 @@ Podpora jazyků rozhraní:
 04.03.2025
 
 - Aktualizace Moonraker, Fluidd, Python
-- [Obnovení tisku po výpadku napájení](Zmod.md#zrestore)
-- [Spektrogram řemenů](Macros.md#belts_shaper_calibration)
+- [Obnovení tisku po výpadku napájení](/cs/Zmod/#zrestore)
+- [Spektrogram řemenů](/cs/Macros/#belts_shaper_calibration)
 - Kontrola vložené desky: ověřuje, že síť podložky přibližně odpovídá aktuálně vložené desce
-- Podpora [senzoru pohybu filamentu](Global.md#motion_sensor)
+- Podpora [senzoru pohybu filamentu](/cs/Global/#motion_sensor)
 - GuppyScreen: vylučování objektů, výpis chyb, retrakce z firmwaru, kalibrace PID, reset hmotnosti, podpora FF5M Pro
-- Spuštění makra v [další vrstvě](Macros.md#set_pause_next_layer) nebo [v konkrétní vrstvě](Macros.md#set_pause_at_layer)
+- Spuštění makra v [další vrstvě](/cs/Macros/#set_pause_next_layer) nebo [v konkrétní vrstvě](/cs/Macros/#set_pause_at_layer)
 - Logování všech zpráv nativní obrazovky v Klipperu a odpovědí na ně
 - Změněn algoritmus kalibrace shaperů, grafy shaperů zohledňují SCV
 - Makro MUTE - vypnutí zvuku do restartu
-- Nový parametr - [doba vypnutí nativní obrazovky](Global.md#display_off_timeout)
+- Nový parametr - [doba vypnutí nativní obrazovky](/cs/Global/#display_off_timeout)
 - Nový soubor `mod_data/power_off.sh` - umožňuje psát kód, který se spustí při vypnutí tiskárny
 - Při použití KAMP je zapnuto chytré parkování
 - Opraveno odstranění, vypnutí a úplné odstranění modu
@@ -341,39 +341,39 @@ Podpora jazyků rozhraní:
 ### Verze 1.3.0
 08.02.2025
 
-- Podpora [GuppyScreen](System.md#display_off)
-- Klipper 12, [v testovacím režimu](Macros.md#update_mcu) (ve výchozím stavu vypnutý). Nefunguje v něm: ohřev extruderu, teplota extruderu, váhy.
+- Podpora [GuppyScreen](/cs/System/#display_off)
+- Klipper 12, [v testovacím režimu](/cs/Macros/#update_mcu) (ve výchozím stavu vypnutý). Nefunguje v něm: ohřev extruderu, teplota extruderu, váhy.
 - SSH klient a SSH server `dropbear` nahrazeny aktuální verzí.
 - `mjpg_streamer` nahrazen verzí s patchem od Alexandra, která snižuje spotřebu paměti 2-4krát.
 - Opraveno vylučování objektů od Igor Polunovskiy (nyní se zohledňují podpory).
-- Grafy shaperů zohledňují SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](Global.md#fix_scv).
-- [CHECK_SYSTEM](System.md#check_system) - přidána kontrola oprávnění souborů a adresářů, kontrola odkazů a obnova.
+- Grafy shaperů zohledňují SCV ([square_corner_velocity](https://www.klipper3d.org/Config_Reference.html#printer)) [FIX_SCV](/cs/Global/#fix_scv).
+- [CHECK_SYSTEM](/cs/System/#check_system) - přidána kontrola oprávnění souborů a adresářů, kontrola odkazů a obnova.
 - Odstraněno makro SOFT_REMOVE.
 - Aktualizace Moonraker, Fluidd, Mainsail
 
 ### Verze 1.1.2
 03.02.2025
 
-- Nové makro [CHECK_SYSTEM](System.md#check_system) - kontrola operačního systému tiskárny na poškozené soubory.
-- Nové makro [NOZZLE_CONTROL](Global.md#nozzle_control) - nouzové vypnutí tiskárny při odtržení dílu nebo nárazu trysky do podložky.
-- Nové makro [UPDATE_MCU](Macros.md#update_mcu) - aktualizace MCU tiskárny.
-- Nový globální příznak [NICE](Global.md#nice) - priorita procesu Klipper, 1 - nejnižší, 40 - nejvyšší (20).
-- Nový globální příznak [FIX_E0011](Global.md#fix_e0011) - oprava chyby E0011 a také `Communication timeout during homing`
+- Nové makro [CHECK_SYSTEM](/cs/System/#check_system) - kontrola operačního systému tiskárny na poškozené soubory.
+- Nové makro [NOZZLE_CONTROL](/cs/Global/#nozzle_control) - nouzové vypnutí tiskárny při odtržení dílu nebo nárazu trysky do podložky.
+- Nové makro [UPDATE_MCU](/cs/Macros/#update_mcu) - aktualizace MCU tiskárny.
+- Nový globální příznak [NICE](/cs/Global/#nice) - priorita procesu Klipper, 1 - nejnižší, 40 - nejvyšší (20).
+- Nový globální příznak [FIX_E0011](/cs/Global/#fix_e0011) - oprava chyby E0011 a také `Communication timeout during homing`
 - Vyčištění smazaných souborů ze souborového systému tiskárny zrychluje EMMC.
 - Spousta drobných oprav
 
 ### Verze 1.1.1
 24.01.2025
 
-- Opraven problém s pořadím, když se zpětné volání zablokuje v obsluze tlačítek [#6440](https://github.com/Klipper3d/klipper/pull/6440), který našel [Alexander K](https://github.com/drA1ex) - [LOAD_CELL_TARE](Macros.md#load_cell_tare) nyní funguje správně.
+- Opraven problém s pořadím, když se zpětné volání zablokuje v obsluze tlačítek [#6440](https://github.com/Klipper3d/klipper/pull/6440), který našel [Alexander K](https://github.com/drA1ex) - [LOAD_CELL_TARE](/cs/Macros/#load_cell_tare) nyní funguje správně.
 - Odstraněny globální parametry: `ALTER_CELL_TARE`, `IGNORE_CELL_TARE`, `CELL_WEIGHT`
 - Prodloužen timeout zsend. Vypisují se další zprávy.
 - G28 nyní nejdříve zaparkuje Z, potom X a Y
-- Nové makro [CAMERA_RESTART](Macros.md#camera_restart) - restart alternativní implementace kamery
+- Nové makro [CAMERA_RESTART](/cs/Macros/#camera_restart) - restart alternativní implementace kamery
 - Opraven kód zrušení tisku bez nativní obrazovky
 - Implementace EXCLUDE_OBJECT_DEFINE od Igor Polunovskiy
 - Při opakovaném tisku se motory nevypínají a tiskárna se nerestartuje, i když je to nastaveno v globálních parametrech
-- Makro [TEST_EMMC](Macros.md#test_emmc) vypisuje opotřebení EMMC
+- Makro [TEST_EMMC](/cs/Macros/#test_emmc) vypisuje opotřebení EMMC
 - Opraveno vypnutí čínských cloudů
 
 ### Verze 1.1.0
@@ -386,7 +386,7 @@ Podpora jazyků rozhraní:
 - Reset tenzometrů nyní pouze na nahřáté podložce
 - Nový globální parametr `ALTER_CELL_TARE`. Umožňuje obejít chybu resetu tenzometrů.
 - Nový globální parametr `CELL_WEIGHT` určuje hmotnost, při které se kalibrace tenzometrů neprovádí
-- Nový globální parametr [CHINA_CLOUD](Global.md#china_cloud) - umožňuje vypnout čínské cloudy
+- Nový globální parametr [CHINA_CLOUD](/cs/Global/#china_cloud) - umožňuje vypnout čínské cloudy
 - Přepsána aktualizace konfigurace tiskárny
 - Na verzi Pro nyní správně fungují ventilátory chlazení. Výchozí úhly 165/105
 - Při kalibraci extruderu se nyní nastavuje rychlost ventilátoru
@@ -397,31 +397,31 @@ Podpora jazyků rozhraní:
 ### Verze 1.0.5
 13.01.2025
 
-- Do [AUTO_REBOOT](Global.md#auto_reboot) přidán parametr umožňující restart firmwaru
+- Do [AUTO_REBOOT](/cs/Global/#auto_reboot) přidán parametr umožňující restart firmwaru
 - G28 se v makrech volá jen když je to potřeba
 - Algoritmus MD5 byl téměř celý přepsán. Kontrola MD5 nyní funguje odkudkoli a nevyžaduje ohřev podložky ani extruderu
-- Vylepšené makro [MEM](Macros.md#mem): nyní vypisuje paměť Moonraker, Klipper, obrazovky a využití SWAP
+- Vylepšené makro [MEM](/cs/Macros/#mem): nyní vypisuje paměť Moonraker, Klipper, obrazovky a využití SWAP
 - Proces Klipper má vyšší prioritu než ostatní procesy
-- Globální parametr [PRINT_LEVELING](Global.md#print_leveling) nyní funguje i v režimu bez nativní obrazovky
-- Makro [BED_LEVEL_SCREWS_TUNE](Calibrations.md#bed_level_screws_tune) nyní správně používá teplotu
-- Makro [TEST_EMMC](Macros.md#test_emmc) umí testovat EMMC, USB flash i RAM.
+- Globální parametr [PRINT_LEVELING](/cs/Global/#print_leveling) nyní funguje i v režimu bez nativní obrazovky
+- Makro [BED_LEVEL_SCREWS_TUNE](/cs/Calibrations/#bed_level_screws_tune) nyní správně používá teplotu
+- Makro [TEST_EMMC](/cs/Macros/#test_emmc) umí testovat EMMC, USB flash i RAM.
 - Swap lze nyní (ale není nutné) umístit na USB flash
-- Makro [CLEAR_EMMC](System.md#clear_emmc) - mazání logů a/nebo GCODE
-- Řešení problému [E0017](Global.md#fix_e0017)
+- Makro [CLEAR_EMMC](/cs/System/#clear_emmc) - mazání logů a/nebo GCODE
+- Řešení problému [E0017](/cs/Global/#fix_e0017)
 
 ### Verze 1.0.4
 05.01.2025
 
-- Podpora [retrakce z firmwaru](FAQ.md#co-je-to-firmwarová-retrakce)
-- Řešení problému [E0017](Global.md#fix_e0017)
+- Podpora [retrakce z firmwaru](/cs/FAQ/#co-je-to-firmwarová-retrakce)
+- Řešení problému [E0017](/cs/Global/#fix_e0017)
 - Automatické zapnutí chlazení driverů při zapnutí motorů. Řeší kalibraci shaperů bez chlazení na stocku.
-- Nové makro [TEST_EMMC](Macros.md#test_emmc) - zapíše SIZE MB na EMMC a vypíše rychlost čtení/zápisu.
-- Nové makro [CLEAR_EMMC](System.md#clear_emmc) - vyčistí EMMC.
-- Automatický [restart bota při práci přes SSH](Macros.md#zssh_on)
+- Nové makro [TEST_EMMC](/cs/Macros/#test_emmc) - zapíše SIZE MB na EMMC a vypíše rychlost čtení/zápisu.
+- Nové makro [CLEAR_EMMC](/cs/System/#clear_emmc) - vyčistí EMMC.
+- Automatický [restart bota při práci přes SSH](/cs/Macros/#zssh_on)
 - [Automatické mazání](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) videí starších než 10 dní v botovi.
 - Nastavení [požadovaného časového pásma](https://github.com/ghzserg/zmod_ff5m/blob/1.4/telegram/docker-compose.yml) v botovi
-- Automatický přechod z čištění KAMP [LINE_PURGE](Global.md#clear) na _CLEAR2, pokud nejsou nalezeny objekty
-- Opraveno [SKIP_ZMOD](Macros.md#skip_zmod)
+- Automatický přechod z čištění KAMP [LINE_PURGE](/cs/Global/#clear) na _CLEAR2, pokud nejsou nalezeny objekty
+- Opraveno [SKIP_ZMOD](/cs/Macros/#skip_zmod)
 - Aktualizace Fluidd/Mainsail už nevyžaduje restart
 - Přepnutí z Fluidd na Mainsail už nevyžaduje restart
 - Z-Mod upozorní na soubory, které používají oblouky
@@ -433,7 +433,7 @@ Podpora jazyků rozhraní:
 23.12.2024
 
 - Nový systém aktualizací a instalace; téměř všechny aktualizace lze nyní získat přes síť
-- Nový parametr makra [CAMERA_ON](Zmod.md#camera_on), VIDEO - video zařízení (video0)
+- Nový parametr makra [CAMERA_ON](/cs/Zmod/#camera_on), VIDEO - video zařízení (video0)
 
 ### Verze 0.2.4
 21.12.2024
@@ -448,20 +448,20 @@ Podpora jazyků rozhraní:
 19.12.2024
 
 - Z-Mod automaticky hlásí, zda je nutná aktualizace z flash disku
-- Vylepšené makro [M600](Macros.md#m600) - výměna filamentu s pauzou během tisku
+- Vylepšené makro [M600](/cs/Macros/#m600) - výměna filamentu s pauzou během tisku
 - Vylepšená kontrola MD5 - nyní se zobrazí zpráva, pokud MD5 není nalezen
 
 ### Verze 0.2.2
 17.12.2024
 
-- Nové makro [FAST_CLOSE_DIALOGS](Macros.md#fast_close_dialogs) - rychlé zavírání dialogů nativní obrazovky. Používá se k zavření okna na konci tisku nebo při jeho zrušení. *Pro rychlé zavírání přejděte na obrazovce tiskárny do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě".* Implementace: @darksimpson
+- Nové makro [FAST_CLOSE_DIALOGS](/cs/Macros/#fast_close_dialogs) - rychlé zavírání dialogů nativní obrazovky. Používá se k zavření okna na konci tisku nebo při jeho zrušení. *Pro rychlé zavírání přejděte na obrazovce tiskárny do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě".* Implementace: @darksimpson
 - Nové makro `LEVELING_PRINT_FILE` - tisk souboru s měřením sítě podložky z nativní obrazovky. *Pro LEVELING_PRINT_FILE přejděte na obrazovce tiskárny do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě"*
-- Nové makro [COLDPULL](Filament.md#coldpull) - cold pull (čištění trysky) bez násilí. Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172)
-- Nové parametry [SAVE_ZMOD_DATA](Global.md#save_zmod_data):
-    - [PRINT_LEVELING](Global.md#save_zmod_data) - při každém tisku měřit síť podložky nativní obrazovkou 0-ne, 1-ano (0). *Pro měření sítě z nativní obrazovky přejděte do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě"*
-    - [USE_KAMP](Global.md#save_zmod_data) - kde je to možné, použít adaptivní síť podložky (KAMP) místo plné sítě 0-ne, 1-ano (0). *Umožňuje použít KAMP při měření sítě přes síť z nativní obrazovky*
-    - [CLOSE_DIALOGS](Global.md#save_zmod_data) - automaticky zavírat dialogy na konci a při zrušení tisku 0-ne, 1-ano pomalu, 2-ano rychle. *Pro rychlé zavírání přejděte do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě"* (0).
-    - [USE_SWAP](Global.md#save_zmod_data) - použít SWAP 0-ne, 1-ano (1). *Pokud nemáte přepájený procesor, je SWAP povinný*
+- Nové makro [COLDPULL](/cs/Filament/#coldpull) - cold pull (čištění trysky) bez násilí. Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172)
+- Nové parametry [SAVE_ZMOD_DATA](/cs/Global/#save_zmod_data):
+    - [PRINT_LEVELING](/cs/Global/#save_zmod_data) - při každém tisku měřit síť podložky nativní obrazovkou 0-ne, 1-ano (0). *Pro měření sítě z nativní obrazovky přejděte do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě"*
+    - [USE_KAMP](/cs/Global/#save_zmod_data) - kde je to možné, použít adaptivní síť podložky (KAMP) místo plné sítě 0-ne, 1-ano (0). *Umožňuje použít KAMP při měření sítě přes síť z nativní obrazovky*
+    - [CLOSE_DIALOGS](/cs/Global/#save_zmod_data) - automaticky zavírat dialogy na konci a při zrušení tisku 0-ne, 1-ano pomalu, 2-ano rychle. *Pro rychlé zavírání přejděte do "Nastavení" -> "Ikona WiFi" -> "Režim sítě" a zapněte "Pouze místní sítě"* (0).
+    - [USE_SWAP](/cs/Global/#save_zmod_data) - použít SWAP 0-ne, 1-ano (1). *Pokud nemáte přepájený procesor, je SWAP povinný*
 
 ### Verze 0.2.1.1
 10.12.2024
@@ -470,15 +470,15 @@ Podpora jazyků rozhraní:
 - Oprava instalace
 - Opraven SHUTDOWN z hlavního menu
 - Nový skript [addMD5.sh](https://github.com/ghzserg/zmod_ff5m/blob/1.4/addMD5.sh) - kontrola MD5 pro macOS/Linux - díky Alexandrovi
-- Nový parametr [STOP_MOTOR](Global.md#save_zmod_data) - automaticky vypnout motory 25 sekund po skončení/zrušení tisku.
-- Nový parametr [AUTO_REBOOT](Global.md#save_zmod_data) - automaticky restartovat tiskárnu 1,5 minuty po tisku.
-- Nový parametr [PRECLEAR](Global.md#save_zmod_data) - použít předčištění trysky v START_PRINT
+- Nový parametr [STOP_MOTOR](/cs/Global/#save_zmod_data) - automaticky vypnout motory 25 sekund po skončení/zrušení tisku.
+- Nový parametr [AUTO_REBOOT](/cs/Global/#save_zmod_data) - automaticky restartovat tiskárnu 1,5 minuty po tisku.
+- Nový parametr [PRECLEAR](/cs/Global/#save_zmod_data) - použít předčištění trysky v START_PRINT
 - Nová hudba: BattleCity, IndianaJones, WeWillRockYou od [@drmax_gc](https://t.me/drmax_gc)
 
 ### Verze 0.2.1
 10.12.2024
 
-- Grafy shaperů přímo z tiskárny. Makro [ZSHAPER](Calibrations.md#zshaper)
+- Grafy shaperů přímo z tiskárny. Makro [ZSHAPER](/cs/Calibrations/#zshaper)
 - Oprava chyby v režimu bez nativní obrazovky
 
 ### Verze 0.2.0
@@ -488,12 +488,12 @@ Podpora jazyků rozhraní:
 - Přidány mc, opkg, gdb
 - Restart přes horní menu Fluidd
 - Opravy chyb
-- Výrazné přepracování makra [START_PRINT](Main.md#start_print)
-- Makro [NEW_SAVE_CONFIG](Macros.md#new_save_config) - uložit změny/restartovat Klipper bez zamrznutí nativní obrazovky. Implementace: @darksimpson
-- Makro [CLOSE_DIALOGS](Macros.md#close_dialogs) - zavřít okna na konci a při zrušení tisku. Implementace: @darksimpson
-- Makro [STOP_ZMOD](Macros.md#stop_zmod) - vypnout Moonraker
-- Makro [START_ZMOD](Macros.md#start_zmod) - zapnout Moonraker
-- Makro [SAVE_ZMOD_DATA](Global.md#save_zmod_data) - uložit parametry Z-Mod
+- Výrazné přepracování makra [START_PRINT](/cs/Main/#start_print)
+- Makro [NEW_SAVE_CONFIG](/cs/Macros/#new_save_config) - uložit změny/restartovat Klipper bez zamrznutí nativní obrazovky. Implementace: @darksimpson
+- Makro [CLOSE_DIALOGS](/cs/Macros/#close_dialogs) - zavřít okna na konci a při zrušení tisku. Implementace: @darksimpson
+- Makro [STOP_ZMOD](/cs/Macros/#stop_zmod) - vypnout Moonraker
+- Makro [START_ZMOD](/cs/Macros/#start_zmod) - zapnout Moonraker
+- Makro [SAVE_ZMOD_DATA](/cs/Global/#save_zmod_data) - uložit parametry Z-Mod
     - CLOSE_DIALOGS - automaticky zavírat dialogy na konci a při zrušení tisku 0-ne, 1-ano (0)
     - NEW_SAVE_CONFIG - použít alternativní NEW_SAVE_CONFIG při kalibraci PID 0-ne, 1-ano (0)
     - LED - jas LED při zapnutí (50)
@@ -505,33 +505,33 @@ Podpora jazyků rozhraní:
 04.12.2024
 
 - Podpora připojení Telegram bota
-- Makro [ZSSH_ON](Macros.md#zssh_on) - ZSSH_ON SSH_SERVER SSH_PORT SSH_USER VIDEO_PORT MOON_PORT
-- Makro [ZSSH_OFF](Macros.md#zssh_off) - vypnout SSH klienta
-- Makro [ZSSH_RESTART](Macros.md#zssh_restart) - restart SSH klienta
+- Makro [ZSSH_ON](/cs/Macros/#zssh_on) - ZSSH_ON SSH_SERVER SSH_PORT SSH_USER VIDEO_PORT MOON_PORT
+- Makro [ZSSH_OFF](/cs/Macros/#zssh_off) - vypnout SSH klienta
+- Makro [ZSSH_RESTART](/cs/Macros/#zssh_restart) - restart SSH klienta
 
 ### Verze 0.1.7
 03.12.2024
 
 - Mnoho oprav maker
-- Makro [STOP_ZMOD](Macros.md#stop_zmod) - dočasně vypne Fluidd/Mainsail a Moonraker
+- Makro [STOP_ZMOD](/cs/Macros/#stop_zmod) - dočasně vypne Fluidd/Mainsail a Moonraker
 
 ### Verze 0.1.6
 02.12.2024
 
 - Opraveno umístění logů
-- Opraveno makro [LOAD_CELL_TARE](Macros.md#load_cell_tare)
+- Opraveno makro [LOAD_CELL_TARE](/cs/Macros/#load_cell_tare)
 - Opraveno makro kalibrace PID extruderu a podložky
-- Makro [CLEAR_NOZZLE](Macros.md#clear_nozzle) - čištění trysky jako v nativním firmwaru
-- Makro [KAMP](Calibrations.md#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single]. Adaptivní síť podložky s čištěním trysky.
-- [AUTO_FULL_BED_LEVEL](Calibrations.md#auto_full_bed_level) - makro kompletně přepsáno
+- Makro [CLEAR_NOZZLE](/cs/Macros/#clear_nozzle) - čištění trysky jako v nativním firmwaru
+- Makro [KAMP](/cs/Calibrations/#kamp) extruder_temp=[nozzle_temperature_initial_layer] bed_temp=[bed_temperature_initial_layer_single]. Adaptivní síť podložky s čištěním trysky.
+- [AUTO_FULL_BED_LEVEL](/cs/Calibrations/#auto_full_bed_level) - makro kompletně přepsáno
 
 ### Verze 0.1.5
 30.11.2024
 
 - Přidán Mainsail. Přepínání makrem WEB
 - Makro STOP - vypne motory, zapisuje se do koncového gcode
-- Makro [ZSHAPER](Calibrations.md#zshaper) - kalibrace shaperů a export CSV do /mod_data v konfiguraci. Další analýza přes [Klipper-Input-Shaping-Assistant](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
-- Makro [LOAD_CELL_TARE](Macros.md#load_cell_tare) - reset tenzometrů
+- Makro [ZSHAPER](/cs/Calibrations/#zshaper) - kalibrace shaperů a export CSV do /mod_data v konfiguraci. Další analýza přes [Klipper-Input-Shaping-Assistant](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases)
+- Makro [LOAD_CELL_TARE](/cs/Macros/#load_cell_tare) - reset tenzometrů
 - Opravena kalibrace podložky. Nyní lze nastavit teplotu podložky a extruderu pro kalibraci. Výchozí 120/80
 - Opraveno vypínání obrazovky v režimu bez nativní obrazovky. Vypne se po 4 minutách.
 
@@ -542,16 +542,16 @@ Podpora jazyků rozhraní:
 - Opravena chyba instalátoru, který v předchozí verzi mohl odstranit [heater_bed] z konfiguračních souborů
 - Nové obrázky při instalaci. Vytvořil [@drmax_gc](https://t.me/drmax_gc)
 - Makra rozdělena do kategorií a přeložena do ruštiny
-- Makro [DATE_GET](Macros.md#date_get) - zobrazit aktuální čas
-- Makro [DATE_SET](Macros.md#date_set) - nastavit aktuální čas
-- Makro [CAMERA_ON](Zmod.md#camera_on) - použít alternativní implementaci kamery
-- Makro [CAMERA_OFF](Macros.md#camera_off) - vypnout alternativní implementaci kamery
+- Makro [DATE_GET](/cs/Macros/#date_get) - zobrazit aktuální čas
+- Makro [DATE_SET](/cs/Macros/#date_set) - nastavit aktuální čas
+- Makro [CAMERA_ON](/cs/Zmod/#camera_on) - použít alternativní implementaci kamery
+- Makro [CAMERA_OFF](/cs/Macros/#camera_off) - vypnout alternativní implementaci kamery
 
 ### Verze 0.1.3
 28.11.2024
 
 - Přidáno přehrávání MIDI. Soubory jsou v mod_data/midi - přístup přes kartu „Konfigurace“. Díky [@drmax_gc](https://t.me/drmax_gc)
-- Makro [PLAY_MIDI](Macros.md#play_midi). Přehraje melodii: PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
+- Makro [PLAY_MIDI](/cs/Macros/#play_midi). Přehraje melodii: PLAY_MIDI FILE=Pain-Shut-your-mouth.mid
 - Makro `SOFT_REMOVE`. Odstraní pouze Z-Mod, ponechá audio, md5, root
 - Po aktualizaci se nastavení Moonraker zachovají
 - Uživatelská nastavení Klipperu přesunuta do mod_data/user.cfg
@@ -564,11 +564,11 @@ Podpora jazyků rozhraní:
 27.11.2024
 
 - Podpora práce s vypnutým nativním displejem. Ušetří 20 MB RAM. Režim zapnete makrem DISPLAY_OFF. Klipper se restartuje a použije alternativní konfigurační soubory. Doporučuje se změřit síť podložky a uložit ji do profilu default. Po restartu bude obrazovka po 5 minutách nedostupná a načte se síť podložky z profilu default.
-- Makro [MEM](Macros.md#mem) - ukáže, kolik paměti se používá a kterou aplikací.
-- Makro [DISPLAY_ON](System.md#display_on) - vrátí obrazovku do standardního režimu, tiskárna se restartuje
-- Makro [LED](Macros.md#led) - zapne osvětlení na 50 %
-- Makro [LED_ON](Macros.md#led_on) - zapne osvětlení na 100 %
-- Makro [LED_OFF](Macros.md#led_off) - vypne osvětlení
+- Makro [MEM](/cs/Macros/#mem) - ukáže, kolik paměti se používá a kterou aplikací.
+- Makro [DISPLAY_ON](/cs/System/#display_on) - vrátí obrazovku do standardního režimu, tiskárna se restartuje
+- Makro [LED](/cs/Macros/#led) - zapne osvětlení na 50 %
+- Makro [LED_ON](/cs/Macros/#led_on) - zapne osvětlení na 100 %
+- Makro [LED_OFF](/cs/Macros/#led_off) - vypne osvětlení
 
 ### Verze 0.0.9-fix
 25.11.2024
@@ -581,8 +581,8 @@ Podpora jazyků rozhraní:
 - Pauza při tisku, zpracovávaná přes nativní obrazovku
 - Obnovení po pauze, zpracovávané přes nativní obrazovku
 - Zrušení tisku, zpracovávané přes nativní obrazovku
-- [REBOOT](Macros.md#reboot) - makro pro restart tiskárny
-- [SHUTDOWN](Macros.md#shutdown) - makro pro vypnutí tiskárny
-- [SKIP_ZMOD](Macros.md#skip_zmod) - makro pro restart bez spuštění Moonraker a Fluidd
-- [REMOVE_ZMOD](Macros.md#remove_zmod) - makro pro odstranění modu
+- [REBOOT](/cs/Macros/#reboot) - makro pro restart tiskárny
+- [SHUTDOWN](/cs/Macros/#shutdown) - makro pro vypnutí tiskárny
+- [SKIP_ZMOD](/cs/Macros/#skip_zmod) - makro pro restart bez spuštění Moonraker a Fluidd
+- [REMOVE_ZMOD](/cs/Macros/#remove_zmod) - makro pro odstranění modu
 - Opraveno: "Po pauze kvůli senzoru pohybu filamentu se tisk obnoví, ale tiskne ve vzduchu asi 3 cm nad místem, kde má"

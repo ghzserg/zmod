@@ -235,7 +235,7 @@ Parameter:
 - `MOON_PORT` – Port des entfernten Servers für Moonraker (Standard: `7125`)
 - `REMOTE_RUN` – Befehl, der auf dem entfernten Server ausgeführt werden soll (Standard: `"NONE"`).
 
-Beispiel: Verwenden Sie `./ff5m.sh bot1` (im Verzeichnis `mod/telegram/`), um den Telegram-Bot neu zu starten.
+Beispiel: Verwenden Sie das Skript [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/ff5m.sh): `./ff5m.sh bot1` (im Verzeichnis `mod/telegram/`), um den Telegram-Bot neu zu starten.
 
 **Setup-Skript (falls der Bot nicht mit einem Befehl installiert wurde):**
 ```bash

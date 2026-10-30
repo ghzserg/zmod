@@ -13,13 +13,13 @@
 5. Zapněte tiskárnu.
 6. Počkejte, až se úplně spustí.
 7. Vypněte a zapněte tiskárnu.
-8. Proveďte potřebné [kalibrace](SetupCalibrations.md).
+8. Proveďte potřebné [kalibrace](/cs/SetupCalibrations/).
 
 ### Nativní firmware pro AD5X
 
 Toto je tovární (Factory) firmware pro AD5X.
 
-Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 1.1.7.
+Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](/cs/FAQ/#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 1.1.7.
 
 - [1.0.2](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.2-1.0.2-20250120-Factory.tgz)
 - [1.0.7](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.0.7-1.0.3-20250408-Factory.tgz)
@@ -39,7 +39,7 @@ Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](
 
 Toto je tovární (Factory) firmware pro AD5M.
 
-Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 3.2.3.
+Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](/cs/FAQ/#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 3.2.3.
 
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.1.9](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
@@ -54,7 +54,7 @@ Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](
 
 Toto je tovární (Factory) firmware pro AD5M Pro.
 
-Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](FAQ.md#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 3.2.3.
+Pokud nechcete, aby tiskárna [před každým tiskem měřila střed podložky](/cs/FAQ/#před-každým-tiskem-tiskárna-měří-střed-podložky), instalujte verzi firmwaru nejvýše 3.2.3.
 
 - [3.1.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz)
 - [3.2.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.2.3-2.2.3-20251017-Factory.tgz)
@@ -196,7 +196,7 @@ Pro ty, kterým ~~ujela střecha~~ se posunula „domovská“ pozice (parkován
 ## Různé
 ### Nativní firmware pro opravu E0011
 
-[fix_e0011](Global.md#fix_e0011)
+[fix_e0011](/cs/Global/#fix_e0011)
 
 Zapnutí opravy E0011
 
@@ -210,7 +210,7 @@ Vypnutí opravy E0011
 
 ### Nativní firmware pro opravu E0017
 
-[fix_e0017](Global.md#fix_e0017)
+[fix_e0017](/cs/Global/#fix_e0017)
 
 - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz)
 - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz)

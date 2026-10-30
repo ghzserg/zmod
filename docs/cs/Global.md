@@ -30,7 +30,7 @@ Změna časového pásma.
 
 - ZONE - časové pásmo (výchozí: `Asia/Yekaterinburg`)
 
-Více: [SET_TIMEZONE](System.md#set_timezone).
+Více: [SET_TIMEZONE](/cs/System/#set_timezone).
 
 ---
 ### NOZZLE_CONTROL
@@ -142,7 +142,7 @@ Příklad: `SAVE_ZMOD_DATA ALLOWED_TOOL_COUNT=4`
 ##### SCAN_FILE_COLORS
 
 !!! note "3MF"
-    U souborů 3MF probíhá prohledání a přiřazení barev okamžitě; [preprocesor](Global.md#force_md5) není potřeba.
+    U souborů 3MF probíhá prohledání a přiřazení barev okamžitě; [preprocesor](/cs/Global/#force_md5) není potřeba.
 
 Zapne prohledávání G-code souborů pro zjištění, které příkazy pro změnu nástroje (T0, T1 atd.) jsou použity a na jaké barvy a materiály jsou ve sliceru namapovány: 0 (vypnout), 1 (zapnout), 2 (bez úplného prohledávání, jen data připravená skriptem sliceru)
 
@@ -186,7 +186,7 @@ Profouknutí extruderů při startu tisku:
 
 Profukují se extrudery, které se účastní přiřazení barev ze souboru k fyzickým cívkám. Pokud je na jednu cívku přiřazeno více barev, extruder se profoukne jen jednou.
 
-Když je zapnuté Auto PA ([PRINT_AUTOPA](Global.md#print_autopa) nebo tlačítko `Auto PA` v menu tisku), všechny použité extrudery se profouknou už během kalibrace PA, proto tento parametr nemá žádný vliv.
+Když je zapnuté Auto PA ([PRINT_AUTOPA](/cs/Global/#print_autopa) nebo tlačítko `Auto PA` v menu tisku), všechny použité extrudery se profouknou už během kalibrace PA, proto tento parametr nemá žádný vliv.
 
 Příklad: `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
@@ -385,7 +385,7 @@ Příklad: `SAVE_ZMOD_DATA DISABLE_SKEW=1`
 
 Načíst Z-offset z globálních parametrů uložených přes SET_GCODE_OFFSET: 1 (ano), 0 (ne) (1).
 
-[Jak funguje Z-Offset](FAQ.md#jak-funguje-z-offset)
+[Jak funguje Z-Offset](/cs/FAQ/#jak-funguje-z-offset)
 
 Příklad: `SAVE_ZMOD_DATA LOAD_ZOFFSET=0`
 
@@ -602,7 +602,7 @@ Specifické příčiny:
 - Poškozený kabel extruderu. Řešení: Vyměňte/opravte kabel.
 - Uvolněný konektor kabelu desky extruderu. Řešení: Vyměňte desku extruderu.
 - Načítání dat SWAP (SWAP je na EMMC, která pracuje rychlostí 10 MB/s; data SWAP během výpočtů shaperu mohou dosáhnout 25MB). Řešení: pokud máte 256 MB RAM, vypněte SWAP pomocí `SAVE_ZMOD_DATA USE_SWAP=0`.
-- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace) nebo pomocí makra [UPDATE_MCU](System.md#update_mcu).
+- Pád firmwaru MCU. Řešení: Přeinstalujte firmware MCU pomocí [továrního resetu](/cs/Setup/#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace) nebo pomocí makra [UPDATE_MCU](/cs/System/#update_mcu).
 
 Opravit chyby E0011 a `Communication timeout during homing`. Změna tohoto parametru restartuje tiskárnu. 0-ne, 1-ano (0):
 
@@ -622,7 +622,7 @@ Tato chyba se může také objevit:
 
 - Pokud na FF5M/FF5MPro spouštíte plný test, tedy kalibraci PID, měření sítě podložky a kalibraci shaperů současně.
 
-  Je lepší provést všechny kalibrace [podle tohoto návodu](SetupCalibrations.md#printer-calibration-for-beginners)
+  Je lepší provést všechny kalibrace [podle tohoto návodu](/cs/SetupCalibrations/#printer-calibration-for-beginners)
 
 - Pokud používáte Klipper 13 na AD5X. V tom případě se můžete vrátit k nativnímu Klipperu příkazem `UPDATE_MCU FORCE=12`.
 - Pokud se používá fuzzy skin a procesor nestíhá počítat trasu. Vypněte fuzzy skin nebo upravte jeho parametry.
@@ -638,9 +638,9 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 - Naformátujte USB disk na FAT32 (MBR).
 - Uložte na USB soubor `flashforge_init.sh`:
     - [Opravit parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-    - [Obnovit tovární parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+    - [Obnovit tovární parametr Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
     - [Opravit parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-    - [Obnovit tovární parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+    - [Obnovit tovární parametr Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
 - Vypněte tiskárnu.
 - Vložte USB do tiskárny.
@@ -651,7 +651,7 @@ Tovární soubor `/opt/klipper/klippy/mcu.py` nastavuje `TRSYNC_TIMEOUT = 0.025`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](/cs/Native_FW/#root).
+- Nainstalujte [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/mcu.py`.
 - Najděte `TRSYNC_TIMEOUT = 0.025` a změňte ho na `TRSYNC_TIMEOUT = 0.1`.
@@ -685,7 +685,7 @@ Příklad: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Ruční oprava na továrním firmwaru:**
 
-- Nainstalujte [root](/cs/Native_FW/#root).
+- Nainstalujte [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 - Použijte [WinSCP](https://winscp.net/eng/download.php) pro SSH do tiskárny.
 - Upravte `/opt/klipper/klippy/toolhead.py`.
 - Najděte `LOOKAHEAD_FLUSH_TIME = 0.5` a změňte ho na `LOOKAHEAD_FLUSH_TIME = 0.150`.
@@ -720,7 +720,7 @@ Příklad: `SAVE_ZMOD_DATA MIDI_ON=Pain-Shut-your-mouth.mid`
 ---
 ##### NEW_SAVE_CONFIG
 
-Při kalibraci PID použít alternativní [NEW_SAVE_CONFIG](Main.md#new_save_config) (provede `SAVE_CONFIG` bez zamrznutí nativní obrazovky): 0 (ne), 1 (ano) (0).
+Při kalibraci PID použít alternativní [NEW_SAVE_CONFIG](/cs/Main/#new_save_config) (provede `SAVE_CONFIG` bez zamrznutí nativní obrazovky): 0 (ne), 1 (ano) (0).
 
 Příklad: `SAVE_ZMOD_DATA NEW_SAVE_CONFIG=0`
 
@@ -742,7 +742,7 @@ Zapnout čínské cloudové služby: 0 (ne), 1 (ano) (1).
 
 Příklad: `SAVE_ZMOD_DATA CHINA_CLOUD=0`
 
-[Vypnout čínské cloudy](Recommendations.md#zakažte-čínské-cloudové-služby)
+[Vypnout čínské cloudy](/cs/Recommendations/#zakažte-čínské-cloudové-služby)
 
 I když jsou všechny cloudové možnosti vypnuty přes obrazovku, tiskárna se stále snaží posílat fotky, videa a telemetrii na čínské servery.
 
@@ -754,8 +754,8 @@ Pro aktualizaci továrního firmwaru zapněte čínské cloudy pomocí `SAVE_ZMO
 
 Místo toho můžete použít:
 
-- [zmod.link](Zmod.md#zlink) - cloud pro správu tiskáren přes Fluidd/Mainsail.
-- [Telegram bot](Telegram.md).
+- [zmod.link](/cs/Zmod/#zlink) - cloud pro správu tiskáren přes Fluidd/Mainsail.
+- [Telegram bot](/cs/Telegram/).
 
 **Jak vypnout čínské cloudy na továrním firmwaru:**
 

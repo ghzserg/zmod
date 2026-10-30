@@ -42,8 +42,8 @@ Spotřeba RAM u standardní kamery:
 *Mnoho kamer z AliExpressu/Ozonu/Wildberries vždy spotřebuje 18 MiB.*
 
 !!! note "Poznámka"
-    - [Co je alternativní kamera?](FAQ.md#co-je-to-alternativní-kamera)
-    - [Nainstaloval jsem tiskárnu a Z-Mod skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](FAQ.md#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
+    - [Co je alternativní kamera?](/cs/FAQ/#co-je-to-alternativní-kamera)
+    - [Nainstaloval jsem tiskárnu a Z-Mod skryl mou kameru! Viděl jsem ji v Orca-FF a nyní je pryč!](/cs/FAQ/#nainstaloval-jsem-tiskárnu-ale-z-mod-mi-skryl-kameru-v-orca-ff-jsem-ji-viděl-ale-teď-je-pryč)
 
 `Camera Off Waiting...` - tato zpráva se zobrazí, pokud stream kamery ještě není k dispozici. Kamera se spouští až po Klipperu, během zobrazení informací o globálních parametrech. To je normální.
 
@@ -213,12 +213,12 @@ Parametry:
 - `VIDEO_PORT` — port vzdáleného serveru pro video streaming (výchozí: `8080`)
 - `MOON_PORT` — port vzdáleného serveru pro Moonraker (výchozí: `7125`)
 - `REMOTE_RUN` — příkaz k provedení na vzdáleném serveru (výchozí: `"NONE"`).
-  Příklad: Použijte `./ff5m.sh bot1` (umístěno v `mod/telegram/`) pro restart Telegram bota.
+  Příklad: Použijte skript [ff5m.sh](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/ff5m.sh): `./ff5m.sh bot1` (umístěno v `mod/telegram/`) pro restart Telegram bota.
 
 **Skript nastavení (pokud není nainstalován jedním příkazem):**
 ```bash
 su - tbot  # Přepněte na uživatele bot service
-wget --cache=off -q -O ff5m.sh https://raw.githubusercontent.com/ghzserg/zmod_ff5m/main/telegram/ff5m.sh
+wget --cache=off -q -O ff5m.sh https://raw.githubusercontent.com/ghzserg/zmod_ff5m/refs/heads/main/telegram/ff5m.sh
 chmod +x ff5m.sh
 ```
 
@@ -229,7 +229,7 @@ ZSSH_ON SSH_SERVER=remote.server.ru SSH_PORT=22 SSH_USER=tbot VIDEO_PORT=8080 MO
 
 SSH se spustí 3 minuty po startu Klipperu a automaticky se restartuje na začátku tisku (přes makro `START_PRINT`).
 
-[Více o Telegram botovi](Telegram.md)
+[Více o Telegram botovi](/cs/Telegram/)
 
 ---
 ### ZSSH_OFF

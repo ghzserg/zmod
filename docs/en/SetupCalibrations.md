@@ -304,7 +304,7 @@ The stock screen is the primary tool for Z-Offset adjustment. It automatically m
 
 **To make the printer select the offset automatically, you need to start building the bed mesh from the native screen.**
 
-<img width="800" height="480" alt="image" src="../../images/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241.png" />
+<img width="800" height="480" alt="image" src="../../images/7e5f1ba4-832e-493b-94be-14aadf67ad4e.png" />
 
 **How to Adjust:**
 

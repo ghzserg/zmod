@@ -183,7 +183,7 @@
 	### Version 1.6.2
 	27.10.2025
 	
-	* [Plugin-Unterstützung](https://github.com/ghzserg/g28_tenz/blob/main/Plugin_ru.md)
+	* [Plugin-Unterstützung](/de/Plugin/)
 	* [Plugin g28_tenz](https://github.com/ghzserg/g28_tenz) - Parken der Z-Achse durch Wägezellen
 	* [Plugin bambufy](https://github.com/function3d/bambufy) - Kompatibel mit Bambu Studio und Orca Slicer, verbessert die Kontrolle des Reinigungsturms, bietet genaue Zeit- und Materialverbrauchsabschätzung, reduziert Abfall, unterstützt schnelle Farbwechsel und erweiterte Druckfunktionen. Von @function3d.
 	* [Plugin nopoop](https://github.com/ghzserg/nopoop) - maximale Abfallreduzierung von @ninjamida
@@ -304,7 +304,7 @@
 	- Geänderter Algorithmus für den Betttest vor dem Drucken, neuer globaler Parameter [MESH_TEST](/de/Global/#mesh_test) eingeführt
 	- Fehler [#13](https://github.com/ghzserg/zmod/issues/13) behoben (Drucken in der Luft nach KAMP)
 	- Fehler [#14](https://github.com/ghzserg/zmod/issues/14) behoben (Druckwiederherstellung auf dem nativen Bildschirm)
-	- Fehler behoben [#31](https://github.com/ghzserg/zmod/issues/27) (Einfrieren im GuppyScreen)
+	- Fehler behoben [#31](https://github.com/ghzserg/zmod/issues/31) (Einfrieren im GuppyScreen)
 	- Fehler [#25](https://github.com/ghzserg/zmod/issues/25) behoben (AD5X. Bettkalibrierung funktioniert nicht richtig)
 	- Fehler [#26](https://github.com/ghzserg/zmod/issues/26) behoben (AD5X. Kein Riemenspektrogramm)
 	- Fehler [#27](https://github.com/ghzserg/zmod/issues/27) behoben (AD5X. Installer-Fehler)

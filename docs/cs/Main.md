@@ -33,8 +33,8 @@ Parametry:
 
 **Poznámky:**
 
-- Jakákoli kalibrace (např. `FORCE_KAMP`/`FORCE_LEVELING`) spustí [CLEAR_NOZZLE](Main.md#clear_nozzle).
-- [`ZSSH_RELOAD`](Zmod.md#zssh_reload) se volá během `START_PRINT` pro obnovení SSH, pokud je potřeba.
+- Jakákoli kalibrace (např. `FORCE_KAMP`/`FORCE_LEVELING`) spustí [CLEAR_NOZZLE](/cs/Main/#clear_nozzle).
+- [`ZSSH_RELOAD`](/cs/Zmod/#zssh_reload) se volá během `START_PRINT` pro obnovení SSH, pokud je potřeba.
 
 **Příklad pro Orca Slicer s nativní obrazovkou:**
 Nahraďte spouštěcí G-code tímto:
@@ -59,11 +59,11 @@ Přidejte do G-code pro změnu vrstvy:
 SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 ```
 
-[Možnosti vyrovnání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
+[Možnosti vyrovnání podložky](/cs/FAQ/#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 
-#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-startu-tisku-a-měření-sítě-podložky-start_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](/cs/Global/#parametry-startu-tisku-a-měření-sítě-podložky-start_print)):
 
 - `PRECLEAR` — předčištění trysky v `CLEAR_NOZZLE`: `0` = vypnout, `1` = zapnout (výchozí: `0`).
 - `CLEAR` — metoda čištění trysky (`LINE_PURGE`).
@@ -115,7 +115,7 @@ SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}
 
 Nahradí výchozí koncový G-code.
 
-#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](Global.md#parametry-koncezrušení-tisku-end_print)):
+#### Globální příznaky (nastavte pomocí [`SAVE_ZMOD_DATA`](/cs/Global/#parametry-koncezrušení-tisku-end_print)):
 
 - `AUTO_REBOOT` — automatický restart po tisku (stejné jako výše).
 - `CLOSE_DIALOGS` — automatické zavírání dialogů (stejné jako výše).
@@ -208,7 +208,7 @@ Parametry:
 - `EXTRUDER_TEMP` — teplota extruderu (výchozí: `230`)
 - `BED_TEMP` — teplota podložky (výchozí: `80`)
 
-*`PRECLEAR` není parametr `CLEAR_NOZZLE`, ale globální příznak nastavovaný přes `SAVE_ZMOD_DATA PRECLEAR=1`; povoluje předčištění. [Zjistit více](Global.md#preclear).*
+*`PRECLEAR` není parametr `CLEAR_NOZZLE`, ale globální příznak nastavovaný přes `SAVE_ZMOD_DATA PRECLEAR=1`; povoluje předčištění. [Zjistit více](/cs/Global/#preclear).*
 
 *Přepsání makra `CLEAR_NOZZLE` v `mod_data/user.cfg` nezmění nativní čištění trysky spuštěné přímo z nativní obrazovky: nativní obrazovka funguje bez Z-Mod, a proto makra Z-Mod nepoužívá.*
 
@@ -259,7 +259,7 @@ Zavře dialogy na nativní obrazovce (pomalá metoda). Používá se k zavření
 
 Implementace: @darksimpson
 
-Ovládáno globálním parametrem [`CLOSE_DIALOGS`](Global.md#close_dialogs).
+Ovládáno globálním parametrem [`CLOSE_DIALOGS`](/cs/Global/#close_dialogs).
 
 ---
 ### FAST_CLOSE_DIALOGS
@@ -269,7 +269,7 @@ Rychle zavře dialogy (doporučeno). Používá se k zavření okna na konci tis
 Implementace: @darksimpson
 
 *Na obrazovce tiskárny zapněte „Pouze místní síť“: **Nastavení → Ikona Wi-Fi → Režim sítě → přepínač „Pouze místní síť“**.*
-Ovládáno globálním parametrem [`CLOSE_DIALOGS`](Global.md#close_dialogs).
+Ovládáno globálním parametrem [`CLOSE_DIALOGS`](/cs/Global/#close_dialogs).
 
 ---
 ### NEW_SAVE_CONFIG

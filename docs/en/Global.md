@@ -637,9 +637,9 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 - Format a USB drive as FAT32(MBR).
 - Save the `flashforge_init.sh` file to the USB:
     - [Fix parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
-    - [Restore stock parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-on.tgz)
+    - [Restore stock parameter Adventurer5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
     - [Fix parameter Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
-    - [Restore stock parameter Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-on.tgz)
+    - [Restore stock parameter Adventurer5MPro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
 - Power off the printer.
 - Insert the USB into the printer.
@@ -650,7 +650,7 @@ Stock file `/opt/klipper/klippy/mcu.py` sets `TRSYNC_TIMEOUT = 0.025`. The patch
 
 **Manual fix on stock firmware:**
 
-- Install [root](/Native_FW/#root).
+- Install [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/mcu.py`.
 - Locate `TRSYNC_TIMEOUT = 0.025` and change it to `TRSYNC_TIMEOUT = 0.1`.
@@ -684,7 +684,7 @@ Example: `SAVE_ZMOD_DATA FIX_E0017=1`
 
 **Manual fix on stock firmware:**
 
-- Install [root](/Native_FW/#root).
+- Install [root](https://github.com/ghzserg/zmod/tree/main/Native_firmware/root).
 - Use [WinSCP](https://winscp.net/eng/download.php) to SSH into the printer.
 - Edit `/opt/klipper/klippy/toolhead.py`.
 - Locate `LOOKAHEAD_FLUSH_TIME = 0.5` and change it to `LOOKAHEAD_FLUSH_TIME = 0.150`.

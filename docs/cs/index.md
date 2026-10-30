@@ -14,7 +14,7 @@ hide:
 Gratulujeme k nákupu tiskárny FlashForge! Tovární firmware je skvělý pro začátek, ale pokud chcete odemknout plný potenciál vašeho zařízení, Z-Mod je výkonné a bezplatné řešení, které z vaší tiskárny udělá z „domácího spotřebiče“ „profesionální nástroj“.
 
 ### Co je Z-Mod?
-Z-Mod je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní.
+Z-Mod je vlastní modifikace firmwaru instalovaná *na* tovární software. **Nenahrazuje** původní firmware — místo toho ho rozšiřuje a přidává obrovské množství funkcí známých z pokročilých tiskáren, přičemž zachovává výhody a snadnost použití nativního rozhraní. Pokud chcete ještě více, [vítejte v dokumentaci](/cs/SetupCalibrations/) se spoustou nastavení.
 
 *Z-Mod: Qui non legit, non intrat*
 
@@ -102,7 +102,7 @@ Z-Mod *nenahrazuje* tovární firmware — vylepšuje ho a dává vám na **výb
     
     Pokud nevíte, co to je, nerozumíte, proč je potřeba webové rozhraní Klipper, nebo jste prostě spokojeni s továrním firmwarem, NENAINSTALUJTE tuto modifikaci. Pro všechny ostatní – **prosím, pečlivě si přečtěte celé pokyny!**
     
-    Po instalaci modu, pokud se nechcete zabývat detaily – prostě tiskněte jako obvykle. Nejsou vyžadovány žádné další konfigurace ani změny. Pokud se rozhodnete prozkoumat více – pokračujte čtením [dokumentace](SetupCalibrations.md).
+    Po instalaci modu, pokud se nechcete zabývat detaily – prostě tiskněte jako obvykle. Nejsou vyžadovány žádné další konfigurace ani změny. Pokud se rozhodnete prozkoumat více – pokračujte čtením [dokumentace](/cs/SetupCalibrations/).
 
 ## Než začnete
 
@@ -111,13 +111,13 @@ Z-Mod *nenahrazuje* tovární firmware — vylepšuje ho a dává vám na **výb
 Tyto funkce jsou přeneseny do továrního firmwaru:
 
 1. Chci Klipper. (Klipper už v tiskárně je, ale chybí webové rozhraní)
-2. [Instalovat root](Native_FW.md#root)
-3. [Oprava chyby E0011](Global.md#fix_e0011)
-4. [Oprava chyby E0017](Global.md#fix_e0017)
-5. [Vypnout aktualizace/telemetrii/čínský cloud tiskárny](Global.md#china_cloud)
-6. [Tovární reset](Setup.md#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace)
-7. [Převést FF5M na FF5MPro](Native_FW.md#5m-na-5mpro)
-8. [Převést FF5MPro na FF5M](Native_FW.md#5mpro-na-5m)
+2. [Instalovat root](/cs/Native_FW/#root)
+3. [Oprava chyby E0011](/cs/Global/#fix_e0011)
+4. [Oprava chyby E0017](/cs/Global/#fix_e0017)
+5. [Vypnout aktualizace/telemetrii/čínský cloud tiskárny](/cs/Global/#china_cloud)
+6. [Tovární reset](/cs/Setup/#obnovení-továrního-nastavení-tiskárny-nutné-pro-instalaci-modifikace)
+7. [Převést FF5M na FF5MPro](/cs/Native_FW/#5m-na-5mpro)
+8. [Převést FF5MPro na FF5M](/cs/Native_FW/#5mpro-na-5m)
 
 
 ### Kompatibilita
@@ -127,23 +127,23 @@ Kompatibilní s čistými verzemi firmwaru:
 - [AD5X](AD5X.md): pouze (1.0.2, 1.0.7, 1.0.8, 1.0.9, 1.1.1, 1.1.6, **1.1.7**, 1.1.9, 1.2.0, 1.2.1, 1.2.2, 1.2.3, 3.0.3, 3.0.9, 3.1.0, 3.1.5, 3.1.6, 3.1.7) _verze IFS libovolná_
 - [Creator 5/Creator 5 Pro](C5PRO.md) **pouze** (1.9.9, 2.0.0).
 
-Soubory nativního firmwaru se nacházejí [zde](Native_FW.md).
+Soubory nativního firmwaru se nacházejí [zde](/cs/Native_FW/).
 
 ## Instalace/Aktualizace/Odstranění
 
-[Průvodce instalací/aktualizací/odstraněním](Setup.md)
+[Průvodce instalací/aktualizací/odstraněním](/cs/Setup/)
 
 ## FAQ
 
-[Musíte si přečíst](FAQ.md)
+[Musíte si přečíst](/cs/FAQ/)
 
 ## Doporučení pro stabilitu tiskárny
 
-[Přečtěte si, pokud narazíte na problémy](Recommendations.md)
+[Přečtěte si, pokud narazíte na problémy](/cs/Recommendations/)
 
 ## Pluginy
 
-Z-Mod podporuje [Pluginy](Plugin.md)
+Z-Mod podporuje [Pluginy](/cs/Plugin/)
 
 ## Použité doplňky
 
@@ -158,4 +158,4 @@ Mod využívá poznatky z [KlipperMod](https://github.com/xblax/flashforge_ad5m_
 
 Protože se lidé ptali, přijímám dary, ale pamatujte prosím, že na Z-Mod pracuji pro zábavu a ne pro peníze. Nebudu přijímat dary za práci na konkrétních chybách nebo funkcích.
 
-Dostupné metody podpory najdete na samostatné [stránce](Sponsor.md)
+Dostupné metody podpory najdete na samostatné [stránce](/cs/Sponsor/)

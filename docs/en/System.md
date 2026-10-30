@@ -34,7 +34,7 @@ Use the button with a parameter selector in the "Macros" list, or a console comm
 - Includes extra features, such as a list of all macros, including your own.
 - Recommended for screenless workflows.
 - Better print recovery after interruptions.
-- Based on [this fork](https://github.com/ghzserg/guppyscreen_ff5m).
+- Based on [this fork](https://github.com/ghzserg/guppyscreen_ff5m), which is built on the [original repository](https://github.com/ballaswag/guppyscreen) and another [fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** (alternative screen implementation)
 

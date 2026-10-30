@@ -320,6 +320,8 @@ Autoren der Anleitungen: [@darksimpson](https://t.me/darksimpson), [Alexander](h
 
 Für alle, deren Drucker beim Einschalten auf dem Startbildschirm hängen bleibt und per LAN-Kabel nicht erreichbar ist.
 
+![resized-image](../../images/f63b16e6-2425-41c8-a166-226fb041f5ad.jpg)
+
 ![](../../images/ff.jpg)
 
 Versuchen Sie, die Firmware über eine vollständige Firmware-Installation wiederherzustellen:

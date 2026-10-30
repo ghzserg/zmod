@@ -13,7 +13,7 @@ Lze ho vyvolat:
 ---
 
 !!! tip
-    [Kalibrace tiskárny pro začátečníky](SetupCalibrations.md#printer-calibration-for-beginners)
+    [Kalibrace tiskárny pro začátečníky](/cs/SetupCalibrations/#printer-calibration-for-beginners)
 
 ---
 
@@ -39,7 +39,7 @@ Kalibrace PID podložky.
 
 - `TEMPERATURE` — teplota podložky (výchozí: `80`)
 
-Automaticky volá `SAVE_CONFIG` po kalibraci. Viz také [NEW_SAVE_CONFIG](Main.md#new_save_config).
+Automaticky volá `SAVE_CONFIG` po kalibraci. Viz také [NEW_SAVE_CONFIG](/cs/Main/#new_save_config).
 
 Chcete-li vypnout automatické ukládání, použijte:
 ```gcode
@@ -73,7 +73,7 @@ Výsledky se ukládají na kartě „Konfigurace“ -> `mod_data`:
 - `calibration_data_y.png`
 - Soubory CSV
 
-Přečtěte si o [FIX_SCV](Global.md#fix_scv)
+Přečtěte si o [FIX_SCV](/cs/Global/#fix_scv)
 
 [Program pro zobrazení grafů](https://github.com/theycallmek/Klipper-Input-Shaping-Assistant/releases).
 
@@ -107,9 +107,9 @@ Přidejte jako první řádek:
 KAMP EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 ```
 
-**Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` a `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v měřené oblasti.
+**Doporučeno:** Použijte [START_PRINT](/cs/Main/#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1 USE_KAMP=1` a `SAVE_ZMOD_DATA CLEAR=LINE_PURGE`, aby čištění probíhalo v měřené oblasti.
 
-[Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
+[Možnosti vyrovnávání podložky](/cs/FAQ/#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 ### AUTO_FULL_BED_LEVEL
@@ -129,11 +129,11 @@ M190 S[bed_temperature_initial_layer_single]
 M104 S[nozzle_temperature_initial_layer] T{single_extruder_multi_material ? 0 : initial_extruder}
 ```
 
-**Doporučeno:** Použijte [START_PRINT](Main.md#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
+**Doporučeno:** Použijte [START_PRINT](/cs/Main/#start_print) s `SAVE_ZMOD_DATA PRINT_LEVELING=1`.
 
 Při kalibraci sítě se kalibruje i nulový bod.
 
-[Možnosti vyrovnávání podložky](FAQ.md#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
+[Možnosti vyrovnávání podložky](/cs/FAQ/#jaké-jsou-možnosti-pro-vyrovnávání-podložky)
 
 ---
 
@@ -141,4 +141,4 @@ Při kalibraci sítě se kalibruje i nulový bod.
 
 Zkopíruje Z-offset z nativní obrazovky do režimu bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
-[Jak funguje Z-Offset na vaší tiskárně](SetupCalibrations.md#jak-funguje-z-offset-na-vaší-tiskárně)
+[Jak funguje Z-Offset na vaší tiskárně](/cs/SetupCalibrations/#jak-funguje-z-offset-na-vaší-tiskárně)

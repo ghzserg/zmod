@@ -574,7 +574,11 @@ To access the printer, enter its IP address **without specifying a port**. *rabb
 
 ### What is Firmware Retraction?
 
-In Z-Mod, Fluidd/Mainsail has sliders to adjust firmware retraction speed and distance. These do not affect prints unless the G-code file is sliced with firmware retraction enabled.
+In Z-Mod, Fluidd/Mainsail has sliders to adjust firmware retraction speed and distance.
+
+![](../../images/retract.jpg)
+
+These do not affect prints unless the G-code file is sliced with firmware retraction enabled.
 
 Firmware retraction allows adjusting retraction during printing without reslicing.
 

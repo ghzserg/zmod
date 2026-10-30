@@ -1,6 +1,6 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Funkce | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](Telegram.md) |
+| Funkce | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](/cs/Telegram/) |
 | :--- | :---: | :---: |
 | **Vyžaduje externí server** | – | + |
 | **Vzdálené ovládání tiskárny** | – (možné přes [zmod.link](https://zmod.link/link/)) | + |
@@ -31,7 +31,7 @@ Umístění klíčů:
 - `/mod_data/ssh.key` — soukromý klíč. Tiskárna ho používá pro připojení k serveru.
 
 Samotné klíče nepotřebujete.
-Jednoduše zavolejte makro [ZSSH_ON](Zmod.md#zssh_on) s následujícími parametry:
+Jednoduše zavolejte makro [ZSSH_ON](/cs/Zmod/#zssh_on) s následujícími parametry:
 
 - `SSH_SERVER` — IP nebo hostname vašeho serveru
 - `SSH_PORT` — SSH port na serveru (výchozí: 22)
@@ -146,7 +146,7 @@ usermod -a -G docker tbot
 
 ---
 #### Spuštění ZSSH na tiskárně
-Po nastavení spusťte makro [ZSSH_ON](Zmod.md#zssh_on) na tiskárně s požadovanými parametry.
+Po nastavení spusťte makro [ZSSH_ON](/cs/Zmod/#zssh_on) na tiskárně s požadovanými parametry.
 
 SSH se automaticky restartuje 3 minuty po každém restartu.
 
@@ -290,7 +290,7 @@ Změny:
    host: http://3D_printer_host:8080/?action=stream
    host_snapshot: http://3D_printer_host:8080/?action=snapshot
    ```
-Jak získat bot_token a chat_id viz [zde](Telegram.md#registrace-bota)
+Jak získat bot_token a chat_id viz [zde](/cs/Telegram/#registrace-bota)
 
 Instalace:
 

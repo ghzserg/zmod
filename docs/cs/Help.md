@@ -2,13 +2,13 @@
 
 Otevřete Telegram bot [@zmod_help_bot](http://t.me/zmod_help_bot) a položte mu svou otázku. Zná celou dokumentaci.
 
-1. [Aktualizujte Z-Mod a všechny pluginy na nejnovější verzi](Setup.md#aktualizace-modu)
+1. [Aktualizujte Z-Mod a všechny pluginy na nejnovější verzi](/cs/Setup/#aktualizace-modu)
 2. Jasně popište problém: uveďte snímky obrazovky, fotografie a podrobné textové vysvětlení.
-3. Spusťte [CLEAR_EMMC](System.md#clear_emmc) pro vyčištění předchozích protokolů.
+3. Spusťte [CLEAR_EMMC](/cs/System/#clear_emmc) pro vyčištění předchozích protokolů.
 4. **Zcela vypněte tiskárnu.**
 5. Znovu zapněte tiskárnu.
 6. Reprodukujte problém.
-7. Spusťte [TAR_CONFIG](Zmod.md#tar_config) pro sběr souborů protokolů.
+7. Spusťte [TAR_CONFIG](/cs/Zmod/#tar_config) pro sběr souborů protokolů.
 8. Odešlete **jeden** příspěvek s vaším popisem a generovaným souborem `config-1.6.6-28.tar.gz`, kde 1.6.6-28 je aktuální verze modu.
 9. [Založte hlášení zde](https://github.com/ghzserg/zmod/issues).
 
@@ -111,7 +111,7 @@ To je **neefektivní**, **zpomaluje pomoc** a **frustruje všechny**.
 Abyste mi pomohli **přeskočit hádání a začít opravovat**, postupujte prosím podle tohoto kontrolního seznamu:
 
 ### 1. **Aktualizujte na nejnovější verzi**
-> Postupujte podle [oficiálního průvodce aktualizací](Setup.md#aktualizace-modu).
+> Postupujte podle [oficiálního průvodce aktualizací](/cs/Setup/#aktualizace-modu).
 
 ### 2. **Popište problém jasně a konkrétně**
 > ❌ Špatně: _„Nefunguje to.“_
