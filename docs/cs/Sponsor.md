@@ -4,10 +4,10 @@ Protože se lidé ptají, přijímám dary, ale pamatujte prosím, že na Z-Modu
 
 [Sbírka na Creator 5 Pro pro spuštění Z-Mod na této tiskárně ->>>](https://github.com/ghzserg/zmod/discussions/554)
 
-| <a href="https://boosty.to/ghzserg">Podpora přes Boosty (mezinárodní Visa/Mastercard)</a> | <img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" /> |
+| <a href="https://boosty.to/ghzserg">Podpora přes Boosty (mezinárodní Visa/Mastercard)</a> | <img width="150" height="150" alt="ghzserg-donate" src="../../images/86e7fe3a-327b-4a0e-b8c4-ee74078167c0.png" /> |
 | :----: | :----: |
-| Podpořte vývoj modu: BTC `bc1qm5ukaw5svn7z7zm6ddagxw9l99mwac6zctm47e` | <img width="262" height="262" alt="BTC" src="https://github.com/user-attachments/assets/fa8fc602-732f-4e7f-accb-fa146a4f34b3" /> |
-| <a href="https://pay.cloudtips.ru/p/3cbf9e9f">Na vývoj Z-Mod: SBP, bankovní karta, T-Pay</a> | <img width="262" height="262" alt="CloudTips" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" /> |
+| Podpořte vývoj modu: BTC `bc1qm5ukaw5svn7z7zm6ddagxw9l99mwac6zctm47e` | <img width="262" height="262" alt="BTC" src="../../images/fa8fc602-732f-4e7f-accb-fa146a4f34b3.png" /> |
+| <a href="https://pay.cloudtips.ru/p/3cbf9e9f">Na vývoj Z-Mod: SBP, bankovní karta, T-Pay</a> | <img width="262" height="262" alt="CloudTips" src="../../images/e7c1ebf3-3a54-4b46-b071-06656ac06ae1.png" /> |
 
 Velké díky komunitě [FF_5M_5M_Pro](https://t.me/FF_5M_5M_Pro) za zakoupení [AD5X](AD5X.md) pro vývoj, zastoupené:
 

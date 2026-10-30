@@ -55,14 +55,14 @@ Any function can be overridden in `mod_data/user.cfg` or `printer.cfg`
 
     - **Hostname**: `IP_printer`
 
-    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
     For FF5M / FF5M Pro:
 
     - **Hostname**: `IP_printer:7125`
     - **Device UI**: `IP_printer` or `IP_printer:80`
     
-    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 
 ---
@@ -628,7 +628,7 @@ Settings-> Software updates-> Press Check for update
 - Update all components *tree climber*
 - Reboot the printer
 
-<img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+<img width="1239" height="535" alt="image" src="../../images/b42c4ce9-1c0a-45c0-a20c-36919a27d648.png" />
 
 ---
 
@@ -735,9 +735,9 @@ The essence of all these errors is that the Klipper version does not match the M
 
 You can view the MCU version in the System tab.
 
-<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="https://github.com/user-attachments/assets/80e6a573-b372-4620-a7bc-7cbf020bc874" />
+<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="../../images/80e6a573-b372-4620-a7bc-7cbf020bc874.png" />
 
-<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="https://github.com/user-attachments/assets/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a" />
+<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
 For example, you are running Klipper 13, but the MCU used is from Klipper 11 or 12.
 
@@ -753,9 +753,9 @@ Accordingly, Z-Mod needs to load native Klipper.
 - Save the file
 - Turn the printer off and on (do not reboot!)
 
-<img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
+<img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
-<img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/821eb1c7-8cba-4a22-951f-852b1cb6c8ef" />
+<img width="422" height="570" alt="image" src="../../images/821eb1c7-8cba-4a22-951f-852b1cb6c8ef.png" />
 
 If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - this command will install the latest MCU version.
 

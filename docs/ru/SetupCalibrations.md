@@ -5,7 +5,7 @@
 В общем случае ничего калибровать не нужно, но если вы хотите настроить принтер лучше, то читайте дальше:
 
 Если вы прошли стартовые калибровки:
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb" />
+<img width="800" height="480" alt="image" src="../../images/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb.png" />
 
 То у вас уже:
 
@@ -33,7 +33,7 @@
 - Используйте специальную команду (макрос) [PID_TUNE_EXTRUDER](/ru/Calibrations/#pid_tune_extruder)
 
 - Её можно ввести вручную в консоль или нажать на кнопку в интерфейсе, если она у вас есть:
-    <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
+    <img width="283" height="265" alt="image" src="../../images/20b8a3c8-4726-44b0-b986-34881d95cb18.png" />
 
 - Сама команда выглядит так (это пример!):
     ```gcode
@@ -76,7 +76,7 @@ max_power: 0.6
 
 - Его также можно ввести в консоль или вызвать кнопкой в интерфейсе (часто она находится рядом с кнопкой для калибровки экструдера):
 
-    <img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" />
+    <img width="227" height="192" alt="image" src="../../images/77dd8332-1912-41df-a94e-469ebfa2f895.png" />
 
 - Команда для стола выглядит еще проще:
     ```gcode
@@ -115,7 +115,7 @@ max_power: 0.6
 
 - Введите команду в консоль или нажмите кнопку:
 
-    <img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" />
+    <img width="344" height="310" alt="image" src="../../images/6757eb4e-53b7-4b08-903f-75491b4daace.png" />
 
     ```gcode
     BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
@@ -125,7 +125,7 @@ max_power: 0.6
     * Принтер нагреет экструдер и стол до заданных температур.
     * Он начнет процедуру и будет показывать вам, какой винт и насколько нужно подкрутить (например: "clockwise" - по часовой, "counter-clockwise" - против часовой).
 
-    <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
+    <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
     [Такая картинка появляется только на Klipper 13](https://wiki.zmod.link/ru/System/#update_mcu)
 
@@ -136,7 +136,7 @@ max_power: 0.6
     * **Обязательно самостоятельно установите температуры экструдера и стола на ноль через меню управления!**
     * **Карта стола и z-offset станут некорректными**. Запустите с **родного экрана** калибровку уровня.
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
+    <img width="800" height="480" alt="image" src="../../images/2d17f77f-a98b-450d-a7e5-72a0a37e47de.png" />
 
 ---
 
@@ -167,7 +167,7 @@ _Если меняете одну пластину на другую (или с�
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 ```
 
-<img width="302" height="342" alt="image" src="https://github.com/user-attachments/assets/643b7bbc-992d-40cb-9404-1fed185ad0ea" />
+<img width="302" height="342" alt="image" src="../../images/643b7bbc-992d-40cb-9404-1fed185ad0ea.png" />
 
 В этом примере мы строим карту для печати на столе 80°C и сохраняем её под именем `80`.
 
@@ -249,7 +249,7 @@ SAVE_ZMOD_DATA USE_KAMP=1
 - `Профиль процесса` -> `Прочее` -> `Выходной G-код` -> `Исключение моделей` включить галочку
 - `Профиль процесса` -> `Прочее` -> `Выходной G-код` -> `Помечать модели` включить галочку
 
-<img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
+<img width="285" height="171" alt="image" src="../../images/faceef98-2791-4975-bf72-425f4a2b1dfa.png" />
 
 **2. Включение калибровки перед каждой печатью**
 
@@ -310,18 +310,18 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 **Чтобы принтер подобрал Z-Offset автоматически, нужно запустить построение карты стола с родного экрана.**
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7e5f1ba4-832e-493b-94be-14aadf67ad4e" />
+<img width="800" height="480" alt="image" src="../../images/7e5f1ba4-832e-493b-94be-14aadf67ad4e.png" />
 
 **Как отрегулировать:**
 
 1. Регулировка возможна **только во время печати**.
 2. Нажмите на **правый нижний квадрат** на сенсорном экране.
     
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/ae62aced-07af-489f-99b1-ce91cd55027d" />
+    <img width="800" height="480" alt="image" src="../../images/ae62aced-07af-489f-99b1-ce91cd55027d.png" />
 
 3. Затем нажмите на **иконку "карандаш"**, чтобы отредактировать значение Z-Offset.
     
-    <img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/7d185d47-6c60-4d57-8901-923971a9ee7f" />
+    <img width="800" height="474" alt="image" src="../../images/7d185d47-6c60-4d57-8901-923971a9ee7f.png" />
 
 4. Вносите изменения, ориентируясь на качество укладки первого слоя.
 
@@ -350,9 +350,9 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 2. После включения этой опции вы можете регулировать Z-Offset прямо во время печати в Fluidd/Mainsail или через панель регулировки в GuppyScreen/HelixScreen.
 
-    <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
+    <img width="418" height="73" alt="image" src="../../images/96d644b3-9c52-44d1-9a7c-18ccbac61796.png" />
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
+    <img width="800" height="480" alt="image" src="../../images/0f282f39-dec1-4488-9317-4e1395747277.png" />
 
 3. Если вы хотите перенести z-offset с родного экрана в режим без родного экрана, вызовите макрос ```LOAD_ZOFFSET_NATIVE``` — он считает значение z-offset с родного экрана и применит его для режима без родного экрана. _Для Creator 5 / Creator 5 Pro не требуется._
 
@@ -446,7 +446,7 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 **Где посмотреть графики?**
 После выполнения `ZSHAPER` графики и CSV-файлы появятся на вкладке **"Конфигурация" -> mod_data** в вашем веб-интерфейсе (Fluidd/Mainsail).
 
-<img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" />
+<img width="996" height="596" alt="image" src="../../images/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3.png" />
 
 **Подробная инструкция по чтению графиков:** [https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md](https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md)
 
@@ -454,9 +454,9 @@ SAVE_ZMOD_DATA USE_KAMP=1 PRINT_LEVELING=1 CLEAR=LINE_PURGE
 
 Если вас всё устраивает, просто нажмите кнопку **`SAVE CONFIG & RESTART`** в веб-интерфейсе, и принтер сам запишет рекомендованные параметры.
 
-<img width="324" height="68" alt="image" src="https://github.com/user-attachments/assets/9c76d5f7-0021-4e03-b495-6736f49dc1c9" />
+<img width="324" height="68" alt="image" src="../../images/9c76d5f7-0021-4e03-b495-6736f49dc1c9.png" />
 
-<img width="745" height="389" alt="image" src="https://github.com/user-attachments/assets/b5b55e95-52af-4ee0-b34e-5bc6077d8d10" />
+<img width="745" height="389" alt="image" src="../../images/b5b55e95-52af-4ee0-b34e-5bc6077d8d10.png" />
 
 **Вариант 2: Ручная настройка**
 

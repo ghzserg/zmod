@@ -5,7 +5,7 @@
 Obecně není nutné nic kalibrovat, ale pokud chcete svou tiskárnu vyladit, čtěte dále:
 
 Pokud jste dokončili úvodní kalibrace:
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb" />
+<img width="800" height="480" alt="image" src="../../images/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb.png" />
 
 Pak již máte:
 
@@ -33,7 +33,7 @@ Kalibrujte konkrétně pro podmínky, ve kterých běžně tisknete:
 -   Použijte speciální příkaz (makro) [PID_TUNE_EXTRUDER](Calibrations.md#pid_tune_extruder)
 
 -   Zadáte jej ručně do konzole, nebo použijete tlačítko v rozhraní, pokud je k dispozici:
-    <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
+    <img width="283" height="265" alt="image" src="../../images/20b8a3c8-4726-44b0-b986-34881d95cb18.png" />
 
 -   Příkaz vypadá takto (příklad!):
     ```gcode
@@ -76,7 +76,7 @@ Stejně jako u extruderu platí: kalibrujte na teplotu, kterou nejčastěji pou�
 
 -   Zadáte jej do konzole nebo stisknete tlačítko v rozhraní (často vedle tlačítka pro kalibraci extruderu):
 
-    <img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" />
+    <img width="227" height="192" alt="image" src="../../images/77dd8332-1912-41df-a94e-469ebfa2f895.png" />
 
 -   Příkaz pro podložku je ještě jednodušší:
     ```gcode
@@ -115,7 +115,7 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
 
 -   Zadejte příkaz do konzole nebo stiskněte tlačítko:
 
-    <img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" />
+    <img width="344" height="310" alt="image" src="../../images/6757eb4e-53b7-4b08-903f-75491b4daace.png" />
 
     ```gcode
     BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
@@ -125,7 +125,7 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
     *   Tiskárna zahřeje extruder i podložku na zadané teploty.
     *   Spustí proceduru a zobrazí, kterým šroubem a jak otáčet (např. „clockwise“ – po směru hodinových ručiček, „counter-clockwise“ – proti směru).
 
-    <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
+    <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
     [Tento obrázek se zobrazuje pouze v Klipper 13](System.md#update_mcu)
 
@@ -136,7 +136,7 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
     *   **Nezapomeňte ručně nastavit teploty extruderu i podložky na nulu v ovládacím menu!**
     *   **Síť podložky i Z-offset budou nyní neplatné**. Spusťte měření sítě podložky z **nativní obrazovky**.
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
+    <img width="800" height="480" alt="image" src="../../images/2d17f77f-a98b-450d-a7e5-72a0a37e47de.png" />
 
 ---
 
@@ -167,7 +167,7 @@ Síť podložky je třeba vytvářet za stejných podmínek, za jakých tisknete
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 ```
 
-<img width="302" height="342" alt="image" src="https://github.com/user-attachments/assets/643b7bbc-992d-40cb-9404-1fed185ad0ea" />
+<img width="302" height="342" alt="image" src="../../images/643b7bbc-992d-40cb-9404-1fed185ad0ea.png" />
 
 V tomto příkladu vytváříme síť pro tisk při 80 °C a ukládáme ji pod názvem `80`.
 
@@ -244,7 +244,7 @@ Nastavte OrcaSlicer:
 - `Process Profile` -> `Other` -> `G-code output` -> zaškrtněte `Exclude objects`
 - `Process Profile` -> `Other` -> `G-code output` -> zaškrtněte `Label objects`
 
-<img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
+<img width="285" height="171" alt="image" src="../../images/faceef98-2791-4975-bf72-425f4a2b1dfa.png" />
 
 **2. Zapnutí kalibrace před každým tiskem**
 
@@ -304,18 +304,18 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
 **Aby tiskárna vybrala offset automaticky, spusťte měření sítě podložky z nativní obrazovky.**
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241" />
+<img width="800" height="480" alt="image" src="../../images/81cb7bdd-e8c4-4d2f-a5b4-38e12fe72241.png" />
 
 **Jak upravit:**
 
 1.  Úprava je možná **pouze během tisku**.
 2.  Stiskněte **pravý dolní čtverec** na dotykové obrazovce.
     
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/ae62aced-07af-489f-99b1-ce91cd55027d" />
+    <img width="800" height="480" alt="image" src="../../images/ae62aced-07af-489f-99b1-ce91cd55027d.png" />
 
 3.  Poté stiskněte ikonu **tužky** pro editaci hodnoty Z-offsetu.
     
-    <img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/7d185d47-6c60-4d57-8901-923971a9ee7f" />
+    <img width="800" height="474" alt="image" src="../../images/7d185d47-6c60-4d57-8901-923971a9ee7f.png" />
 
 4.  Upravujte podle kvality první vrstvy.
 
@@ -342,9 +342,9 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
 2.  Po povolení této volby můžete Z-offset upravovat přímo během tisku ve Fluidd/Mainsail nebo v panelu úprav v GuppyScreen/HelixScreen.
 
-    <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
+    <img width="418" height="73" alt="image" src="../../images/96d644b3-9c52-44d1-9a7c-18ccbac61796.png" />
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
+    <img width="800" height="480" alt="image" src="../../images/0f282f39-dec1-4488-9317-4e1395747277.png" />
 
 3.  Pokud chcete přenést Z-offset z nativní obrazovky do režimu bez nativní obrazovky, spusťte makro ```LOAD_ZOFFSET_NATIVE```, které přečte hodnotu Z-offsetu z nativní obrazovky a použije ji pro režim bez nativní obrazovky. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
@@ -438,7 +438,7 @@ Aby nedošlo k přetížení systému, **kalibrujte osy zvlášť**.
 **Kde najdete grafy?**
 Po spuštění `ZSHAPER` se grafy a CSV soubory objeví na kartě **„Konfigurace“ -> mod_data** ve vašem webovém rozhraní (Fluidd/Mainsail).
 
-<img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" />
+<img width="996" height="596" alt="image" src="../../images/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3.png" />
 
 **Podrobný návod na čtení grafů:** [https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md](https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md)
 
@@ -446,9 +446,9 @@ Po spuštění `ZSHAPER` se grafy a CSV soubory objeví na kartě **„Konfigura
 
 Pokud vám vše vyhovuje, stačí kliknout na **`SAVE CONFIG & RESTART`** v rozhraní a tiskárna automaticky zapíše doporučené parametry.
 
-<img width="324" height="68" alt="image" src="https://github.com/user-attachments/assets/9c76d5f7-0021-4e03-b495-6736f49dc1c9" />
+<img width="324" height="68" alt="image" src="../../images/9c76d5f7-0021-4e03-b495-6736f49dc1c9.png" />
 
-<img width="745" height="389" alt="image" src="https://github.com/user-attachments/assets/b5b55e95-52af-4ee0-b34e-5bc6077d8d10" />
+<img width="745" height="389" alt="image" src="../../images/b5b55e95-52af-4ee0-b34e-5bc6077d8d10.png" />
 
 **Možnost 2: Ruční nastavení**
 

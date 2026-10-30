@@ -98,7 +98,7 @@ Nach der Ausführung des Makros zeigt die Konsole die gespeicherten und aktuell 
 
 Zeigt das Menü zur Plugin-Verwaltung an.
 
-<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="https://github.com/user-attachments/assets/a23b06e2-abe3-4ff0-93c7-079d2d057e1b" />
+<img width="849" height="838" alt="{9D0BE78C-816B-4F22-B3F1-8FC678AD8977}" src="../../images/a23b06e2-abe3-4ff0-93c7-079d2d057e1b.png" />
 
 In diesem Menü können Sie zusätzliche Plugins aktivieren, deaktivieren und vollständig entfernen.
 

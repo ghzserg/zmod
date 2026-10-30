@@ -59,22 +59,22 @@
 
 ## **3. Как пользоваться меню выбора цвета (макрос `COLOR`) AD5X**
 
-<img width="874" height="286" alt="image" src="https://github.com/user-attachments/assets/c0538a17-88a9-4aee-a65c-cff4cc1773d0" />
+<img width="874" height="286" alt="image" src="../../images/c0538a17-88a9-4aee-a65c-cff4cc1773d0.png" />
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29" />
+<img width="800" height="480" alt="image" src="../../images/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29.png" />
 
-<img width="563" height="550" alt="image" src="https://github.com/user-attachments/assets/cc0c951f-48c1-469d-8940-90832ad1d3f5" />
+<img width="563" height="550" alt="image" src="../../images/cc0c951f-48c1-469d-8940-90832ad1d3f5.png" />
 
-<img width="800" height="480" alt="color" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" />
+<img width="800" height="480" alt="color" src="../../images/4145baef-a695-49e6-a914-c12dd3f6b8a4.png" />
 
 *   `Extruder: 1 (PETG/Orange)` – Это значит, что сейчас в принтер заправлен оранжевый пластик PETG из катушки номер 1.
 *   `IFS: True` – Система автоматической подачи филамента работает.
 
 **Теперь выберите катушку, с которой хотите работать (например, катушка 2):**
 
-<img width="568" height="455" alt="image" src="https://github.com/user-attachments/assets/f7ea3ed0-28a5-48d5-99db-eade0a199e99" />
+<img width="568" height="455" alt="image" src="../../images/f7ea3ed0-28a5-48d5-99db-eade0a199e99.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" />
+<img width="800" height="480" alt="screenshot" src="../../images/c42cbefa-a29c-4df0-a62a-d99842c13961.png" />
 
 Можно сделать четыре действия:
 
@@ -88,14 +88,14 @@
 1. Нажмите «Изменить цвет».
 2. **Выберите цвет из списка.** Так принтер и родной экран поймут вас лучше всего.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
+<img width="800" height="480" alt="screenshot" src="../../images/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d.png" />
 
 3. После выбора вы вернетесь назад, и цвет катушки в списке **должен поменяться**.
-<img width="556" height="545" alt="image" src="https://github.com/user-attachments/assets/f32a9239-44c6-449d-bbf7-5f453f149ef7" />
+<img width="556" height="545" alt="image" src="../../images/f32a9239-44c6-449d-bbf7-5f453f149ef7.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" />
+<img width="800" height="480" alt="screenshot" src="../../images/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6.png" />
 
 **Если цвет не поменялся:** закройте окно крестиком и запустите макрос `COLOR` снова. Иногда экран не успевает обновиться.
 
@@ -104,9 +104,9 @@
 1. Нажмите «Изменить тип».
 2. **Выберите тип из списка.**
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
+<img width="800" height="480" alt="screenshot" src="../../images/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4.png" />
 
 **Если тип не поменялся:** закройте окно крестиком и запустите макрос `COLOR` снова. Иногда экран не успевает обновиться.
 
@@ -118,7 +118,7 @@
 
 Это окно открывается **само**, когда вы начинаете печать.
 
-<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
+<img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **Как понять, что тут написано:**
 
@@ -132,7 +132,7 @@
 
 Если изображение выглядит так:
 
-<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="../../images/15b072f2-a63d-4514-b2e3-fd9c426b9fdb.png" />
 
 Это значит, что у вас выключена опция автосопоставления цветов и/или сканирование файлов. Можно нажать на кнопку `AUTO_SELECT_COLORS` или включить в глобальных параметрах:
 ```
@@ -144,9 +144,9 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 **Если нужно поменять катушку для цвета прямо во время печати:**
 
 * Просто **нажмите на нужный T** (например, T1) и выберите другую катушку из списка.
-<img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" />
+<img width="553" height="550" alt="image" src="../../images/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
+<img width="800" height="480" alt="screenshot" src="../../images/a87d6115-87e4-4cb1-af3e-b194edefb42b.png" />
 
 ### Глобальные параметры AD5X
 
@@ -258,7 +258,7 @@ SET_EXTRUDER_SLOT SLOT=1
 2. Найдите и откройте папку **`mod_data`**.
 3. В этой папке найдите и откройте файл **`filament.json`**.
 
-![Где найти файл](https://github.com/user-attachments/assets/109b0f0a-c87d-4f5c-9333-ebfbb8065b87)
+![Где найти файл](../../images/109b0f0a-c87d-4f5c-9333-ebfbb8065b87.png)
 
 В этом файле для каждого типа пластика (PLA, ABS, PETG и т.д.) есть список чисел. Вот что они значат:
 
@@ -450,7 +450,7 @@ hide_filament_types: XXX,YYY,ZZZ
 	"zProbeOffset" : 0.004999995231628418
 },
 ```
-<img width="504" height="241" alt="image" src="https://github.com/user-attachments/assets/8647b1fe-594c-4bb3-91ee-560cfe4a58fd" />
+<img width="504" height="241" alt="image" src="../../images/8647b1fe-594c-4bb3-91ee-560cfe4a58fd.png" />
 
 Заменить **только** эти значения:
 ```json
@@ -523,27 +523,27 @@ hide_filament_types: XXX,YYY,ZZZ
 
 1. Перейти на вкладку "i" и нажать кнопку `Status`
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
+   <img width="800" height="480" alt="image" src="../../images/08a99d33-c970-4e86-933d-0064b447f5b7.png" />
 
 2. Перейти на 6 вкладку
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
+   <img width="800" height="480" alt="image" src="../../images/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c.png" />
 
 3. Зажмите `Move the extruder to waste tray position` и держите 20 секунд
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+   <img width="800" height="480" alt="image" src="../../images/81213d65-bf06-4d33-8e4a-eb3aae2782d7.png" />
 
 4. Отрегулируйте положение головы в корзине так, чтобы она закрывалась. Стрелками управления припаркуйте печатающую голову к приемнику таким образом, чтобы печатающая голова достаточно прижимала рычажок шторки, сопло было за подвижной шторкой, а сама шторка была на одном уровне с передней поверхностью приемника.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
+   <img width="800" height="480" alt="image" src="../../images/7b506200-0d61-4b88-aaf8-40475e3ad463.png" />
    
    Нажмите кнопку `Set`
 
 5. Зажмите `Move the extruder to cutter stiker position` и держите 20 секунд
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+   <img width="800" height="480" alt="image" src="../../images/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c.png" />
 
 6. Отрегулируйте нож. Нажмите `CutX` - нож должен отрезать филамент без сдвигов и ударов.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
+   <img width="800" height="480" alt="image" src="../../images/a0c1939e-dada-48cb-8789-df43999bf99b.png" />
    
    Нажмите кнопку `Set`
 
@@ -592,13 +592,13 @@ filament_NEWTYPE: 300
 
 Для восстановления прошивки IFS нужен программатор **ARM J-LINK V9**
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" />
+<img width="800" height="800" alt="image" src="../../images/ae91768b-00d8-4e36-a62d-3056a7e117bf.png" />
 
-<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
+<img width="960" height="479" alt="image" src="../../images/f623fa41-4bc3-40a4-a434-5d8ad717792b.png" />
 
 Припаиваем провода к плате IFS
 
-<img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
+<img width="579" height="774" alt="image" src="../../images/cb2b2f72-9eba-4831-8cea-072813b6e0e3.png" />
 
 Подключаем:
 
@@ -607,7 +607,7 @@ filament_NEWTYPE: 300
 - VCC к 3.3
 - GND к GND
 
-<img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+<img width="346" height="390" src="../../images/19438d58-9879-48e5-8acc-bfb21ce4549c.png" />
 
 - Target Device - `Nations N32G455RE`
 - Target interface: `SWD`

@@ -5,7 +5,7 @@
 Im Allgemeinen brauchen Sie nichts zu kalibrieren, aber wenn Sie Ihren Drucker besser einrichten wollen, lesen Sie weiter:
 
 Wenn Sie die Einsteigerkalibrierungen durchlaufen haben:
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb" />
+<img width="800" height="480" alt="image" src="../../images/c0c63cc4-c4b3-46d4-a3e7-6485d8bf26bb.png" />
 
 Dann haben Sie das bereits:
 
@@ -34,7 +34,7 @@ Kalibrieren Sie für die genauen Bedingungen, unter denen Sie drucken:
 
 - Sie können ihn manuell in der Konsole eingeben oder auf die Schaltfläche in der Oberfläche klicken, falls vorhanden:
 
-  <img width="283" height="265" alt="image" src="https://github.com/user-attachments/assets/20b8a3c8-4726-44b0-b986-34881d95cb18" />
+  <img width="283" height="265" alt="image" src="../../images/20b8a3c8-4726-44b0-b986-34881d95cb18.png" />
 
 - Der Befehl selbst sieht wie folgt aus (dies ist ein Beispiel!):
 
@@ -81,7 +81,7 @@ Hier gilt die gleiche Regel wie beim Extruder: Kalibrieren Sie die Temperatur, d
 
 - Es kann auch in die Konsole eingegeben oder über eine Schaltfläche in der Benutzeroberfläche aufgerufen werden (oft neben der Schaltfläche zum Kalibrieren des Extruders):
 
-    <img width="227" height="192" alt="image" src="https://github.com/user-attachments/assets/77dd8332-1912-41df-a94e-469ebfa2f895" />
+    <img width="227" height="192" alt="image" src="../../images/77dd8332-1912-41df-a94e-469ebfa2f895.png" />
 
 - Der Befehl für das Bett sieht noch einfacher aus:
     ```gcode
@@ -122,7 +122,7 @@ Vor der Kalibrierung müssen Sie die Düse reinigen, da sonst die Messungen nich
 
 - Geben Sie den Befehl in der Konsole ein oder drücken Sie die Schaltfläche:
 
-    <img width="344" height="310" alt="image" src="https://github.com/user-attachments/assets/6757eb4e-53b7-4b08-903f-75491b4daace" />
+    <img width="344" height="310" alt="image" src="../../images/6757eb4e-53b7-4b08-903f-75491b4daace.png" />
 
 ```gcode
 BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
@@ -132,7 +132,7 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
     * Der Drucker heizt den Extruder und das Heizbett auf die eingestellten Temperaturen auf.
     * Er startet den Vorgang und zeigt Ihnen an, welche Schraube Sie um wie viel Grad drehen müssen (z. B. „clockwise“ – im Uhrzeigersinn, „counter-clockwise“ – gegen den Uhrzeigersinn).
 
-    <img width="621" height="394" alt="image" src="https://github.com/user-attachments/assets/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b" />
+    <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
     [Dieses Bild erscheint nur unter Klipper 13](/de/System/#update_mcu)
 
@@ -143,7 +143,7 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
   *   **Setzen Sie die Extruder- und Betttemperaturen selbst über das Steuerungsmenü auf Null!**
   *   **Das Bettnetz und der Z-Offset werden ungültig.** Starten Sie die Bettnivellierung **vom Standardbildschirm** aus.
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/2d17f77f-a98b-450d-a7e5-72a0a37e47de" />
+    <img width="800" height="480" alt="image" src="../../images/2d17f77f-a98b-450d-a7e5-72a0a37e47de.png" />
 
 ---
 
@@ -175,7 +175,7 @@ Das Bettnetz muss unter denselben Bedingungen erstellt werden, unter denen Sie a
 AUTO_FULL_BED_LEVEL EXTRUDER_TEMP=255 BED_TEMP=80 PROFILE=80
 ```
 
-<img width="302" height="342" alt="image" src="https://github.com/user-attachments/assets/0fa6cdd8-2098-48e3-8281-8587fb153b0f" />
+<img width="302" height="342" alt="image" src="../../images/0fa6cdd8-2098-48e3-8281-8587fb153b0f.png" />
 
 In diesem Beispiel erstellen wir ein Netz zum Drucken bei 80 °C Betttemperatur und speichern sie unter dem Namen `80`.
 
@@ -260,7 +260,7 @@ Orca einrichten:
 - ```Prozessprofil``` :arrow_right: ```Sonstiges``` :arrow_right:```G-Code Ausgabe``` :arrow_right:```Objekte beschriften``` – Häkchen setzen
 - ```Prozessprofil``` :arrow_right:```Sonstiges``` :arrow_right:```G-Code Ausgabe``` :arrow_right:```Objekte ausschließen``` – Häkchen setzen
 
-<img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
+<img width="285" height="171" alt="image" src="../../images/faceef98-2791-4975-bf72-425f4a2b1dfa.png" />
 
 **2. Aktivieren Sie die Kalibrierung vor jedem Druck**
 
@@ -328,18 +328,18 @@ Der native Bildschirm ist das wichtigste Werkzeug zur Einstellung des Z-Offsets.
 
 **Damit der Drucker den Z-Offset automatisch einstellt, müssen Sie die Bettnetz-Messung über den nativen Bildschirm starten.**
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7e5f1ba4-832e-493b-94be-14aadf67ad4e" />
+<img width="800" height="480" alt="image" src="../../images/7e5f1ba4-832e-493b-94be-14aadf67ad4e.png" />
 
 **Anpassen:**
 
 1.  Die Einstellung ist **nur während des Drucks** möglich.
 2.  Drücken Sie auf dem Touchscreen auf das **untere rechte Quadrat**.
     
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/ae62aced-07af-489f-99b1-ce91cd55027d" />
+    <img width="800" height="480" alt="image" src="../../images/ae62aced-07af-489f-99b1-ce91cd55027d.png" />
 
 3.  Klicken Sie dann auf das **Bleistiftsymbol**, um den Z-Offset-Wert zu bearbeiten.
     
-    <img width="800" height="474" alt="image" src="https://github.com/user-attachments/assets/7d185d47-6c60-4d57-8901-923971a9ee7f" />
+    <img width="800" height="474" alt="image" src="../../images/7d185d47-6c60-4d57-8901-923971a9ee7f.png" />
 
 4.  Passen Sie den Wert anhand der Qualität der ersten Schicht an.
 
@@ -369,9 +369,9 @@ SAVE_ZMOD_DATA LOAD_ZOFFSET=1
 
 2.  Sobald diese Option aktiviert ist, können Sie den Z-Offset direkt während des Drucks in Fluidd/Mainsail oder über das Einstellungsfeld in GuppyScreen/HelixScreen anpassen.
 
-    <img width="418" height="73" alt="image" src="https://github.com/user-attachments/assets/96d644b3-9c52-44d1-9a7c-18ccbac61796" />
+    <img width="418" height="73" alt="image" src="../../images/96d644b3-9c52-44d1-9a7c-18ccbac61796.png" />
 
-    <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/0f282f39-dec1-4488-9317-4e1395747277" />
+    <img width="800" height="480" alt="image" src="../../images/0f282f39-dec1-4488-9317-4e1395747277.png" />
 
 Wenn Sie den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm übertragen wollen, rufen Sie das Makro ```LOAD_ZOFFSET_NATIVE``` auf – es liest den Z-Offset vom nativen Bildschirm und überträgt ihn. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
@@ -472,7 +472,7 @@ ZSHAPER Y=1 X=0
 
 Nach dem Ausführen von `ZSHAPER` erscheinen die Grafiken und CSV-Dateien auf der Registerkarte **"Konfiguration" :arrow_right: mod_data** in Ihrer Weboberfläche (Fluidd/Mainsail).
 
-<img width="996" height="596" alt="image" src="https://github.com/user-attachments/assets/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3" />
+<img width="996" height="596" alt="image" src="../../images/7e1dbdf8-5de5-4ce6-8f4a-2c37b320b8b3.png" />
 
 **Ausführliche Anleitung zum Lesen der Grafiken:** [https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md](https://github.com/Tombraider2006/klipperFB6/blob/main/accel_graph/readme.md)
 
@@ -480,9 +480,9 @@ Nach dem Ausführen von `ZSHAPER` erscheinen die Grafiken und CSV-Dateien auf de
 
 Wenn Sie mit allem zufrieden sind, klicken Sie einfach auf die Schaltfläche **„KONFIG. SPEICHERN & NEU STARTEN“** in der Weboberfläche – der Drucker speichert die empfohlenen Einstellungen selbstständig.
 
-<img width="324" height="68" alt="image" src="https://github.com/user-attachments/assets/9c76d5f7-0021-4e03-b495-6736f49dc1c9" />
+<img width="324" height="68" alt="image" src="../../images/9c76d5f7-0021-4e03-b495-6736f49dc1c9.png" />
 
-<img width="745" height="389" alt="image" src="https://github.com/user-attachments/assets/b5b55e95-52af-4ee0-b34e-5bc6077d8d10" />
+<img width="745" height="389" alt="image" src="../../images/b5b55e95-52af-4ee0-b34e-5bc6077d8d10.png" />
 
 **Option 2: Manuelle Anpassung**
 

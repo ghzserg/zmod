@@ -60,22 +60,22 @@ The printer has 4 spools (№1, №2, №3, №4). Only spools №1 and №3 are
 
 ## **3. How to Use the Color Selection Menu (Macro `COLOR`)**
 
-<img width="874" height="286" alt="image" src="https://github.com/user-attachments/assets/c0538a17-88a9-4aee-a65c-cff4cc1773d0" />
+<img width="874" height="286" alt="image" src="../../images/c0538a17-88a9-4aee-a65c-cff4cc1773d0.png" />
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29" />
+<img width="800" height="480" alt="image" src="../../images/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29.png" />
 
-<img width="563" height="550" alt="image" src="https://github.com/user-attachments/assets/cc0c951f-48c1-469d-8940-90832ad1d3f5" />
+<img width="563" height="550" alt="image" src="../../images/cc0c951f-48c1-469d-8940-90832ad1d3f5.png" />
 
-<img width="800" height="480" alt="color" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" />
+<img width="800" height="480" alt="color" src="../../images/4145baef-a695-49e6-a914-c12dd3f6b8a4.png" />
 
 *   `Extruder: 1 (PETG/Orange)` – This means the printer is currently loaded with orange PETG filament from spool №1.
 *   `IFS: True` – The automatic filament feeding system is active.
 
 **Now select the spool you want to work with (e.g., spool 2):**
 
-<img width="568" height="455" alt="image" src="https://github.com/user-attachments/assets/f7ea3ed0-28a5-48d5-99db-eade0a199e99" />
+<img width="568" height="455" alt="image" src="../../images/f7ea3ed0-28a5-48d5-99db-eade0a199e99.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" />
+<img width="800" height="480" alt="screenshot" src="../../images/c42cbefa-a29c-4df0-a62a-d99842c13961.png" />
 
 You can perform four actions:
 
@@ -89,15 +89,15 @@ You can perform four actions:
 1.  Click "Change Color".
 2.  **Select a color from the list.** This ensures the printer and native screen understand your selection.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
+<img width="800" height="480" alt="screenshot" src="../../images/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d.png" />
 
 3.  After selection, you’ll return to the menu, and the spool’s color **should update**.
-<img width="556" height="545" alt="image" src="https://github.com/user-attachments/assets/f32a9239-44c6-449d-bbf7-5f453f149ef7" />
+<img width="556" height="545" alt="image" src="../../images/f32a9239-44c6-449d-bbf7-5f453f149ef7.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" />
+<img width="800" height="480" alt="screenshot" src="../../images/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6.png" />
 
 **If the color doesn’t change:** Close the window with the "X" button and restart the `COLOR` macro. Sometimes the screen doesn’t refresh immediately.
 
@@ -106,9 +106,9 @@ You can perform four actions:
 1.  Click "Change Type".
 2.  **Select a material type from the list.**
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
+<img width="800" height="480" alt="screenshot" src="../../images/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4.png" />
 
 **If the type doesn’t change:** Close the window with the "X" button and restart the `COLOR` macro. Sometimes the screen doesn’t refresh immediately.
 
@@ -120,7 +120,7 @@ You can perform four actions:
 
 This window opens **by itself** when you start printing.
 
-<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
+<img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **How to understand what is written here:**
 
@@ -134,7 +134,7 @@ This window opens **by itself** when you start printing.
 
 If the image looks like this:
 
-<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="../../images/15b072f2-a63d-4514-b2e3-fd9c426b9fdb.png" />
 
 This means that you have disabled the auto color matching option and/or file scanning. You can click the `AUTO_SELECT_COLORS` button or enable it in global parameters:
 ```
@@ -146,9 +146,9 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 **To change the spool for a color during printing:**
 
 *   Simply **click the target T** (e.g., T1) and select another spool from the list.
-<img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" />
+<img width="553" height="550" alt="image" src="../../images/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956.png" />
 
-<img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
+<img width="800" height="480" alt="screenshot" src="../../images/a87d6115-87e4-4cb1-af3e-b194edefb42b.png" />
 
 ---
 
@@ -268,7 +268,7 @@ In screen-off mode, these sensors are enabled:
 2.  Navigate to the **`mod_data`** folder.
 3.  Open the **`filament.json`** file.
 
-![File Location](https://github.com/user-attachments/assets/109b0f0a-c87d-4f5c-9333-ebfbb8065b87)
+![File Location](../../images/109b0f0a-c87d-4f5c-9333-ebfbb8065b87.png)
 
 In this file, each material type (PLA, ABS, PETG, etc.) has a list of values. Here’s what they mean:
 
@@ -462,7 +462,7 @@ To fix this, you need to:
         "zProbeOffset" : 0.004999995231628418
 },
 ```
-<img width="504" height="241" alt="image" src="https://github.com/user-attachments/assets/8647b1fe-594c-4bb3-91ee-560cfe4a58fd  " />
+<img width="504" height="241" alt="image" src="../../images/8647b1fe-594c-4bb3-91ee-560cfe4a58fd.png" />
 
 Replace **only** these values:
 ```json
@@ -535,27 +535,27 @@ Restart the printer — everything is ready.
 
 1. Go to the "i" tab and press the `Status` button
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
+   <img width="800" height="480" alt="image" src="../../images/08a99d33-c970-4e86-933d-0064b447f5b7.png" />
    
 2. Go to the 6th tab
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
+   <img width="800" height="480" alt="image" src="../../images/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c.png" />
    
 3. Press and hold `Move the extruder to waste tray position` for 20 seconds
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+   <img width="800" height="480" alt="image" src="../../images/81213d65-bf06-4d33-8e4a-eb3aae2782d7.png" />
    
 4. Adjust the head position in the waste tray so that it closes. Using the control arrows, park the print head at the receiver in such a way that the print head sufficiently presses the shutter lever, the nozzle is behind the moving shutter, and the shutter itself is flush with the front surface of the receiver.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
+   <img width="800" height="480" alt="image" src="../../images/7b506200-0d61-4b88-aaf8-40475e3ad463.png" />
    
    Press the `Set` button.
    
 5. Press and hold `Move the extruder to cutter striker position` for 20 seconds
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+   <img width="800" height="480" alt="image" src="../../images/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c.png" />
    
 6. Adjust the cutter. Press `CutX` — the cutter should cut the filament without slipping or striking.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
+   <img width="800" height="480" alt="image" src="../../images/a0c1939e-dada-48cb-8789-df43999bf99b.png" />
    
    Press the `Set` button.
 
@@ -604,13 +604,13 @@ filament_NEWTYPE: 300
 
 To recover the IFS firmware, you need an **ARM J-LINK V9** programmer.
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" />
+<img width="800" height="800" alt="image" src="../../images/ae91768b-00d8-4e36-a62d-3056a7e117bf.png" />
 
-<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
+<img width="960" height="479" alt="image" src="../../images/f623fa41-4bc3-40a4-a434-5d8ad717792b.png" />
 
 Solder wires to the IFS board.
 
-<img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
+<img width="579" height="774" alt="image" src="../../images/cb2b2f72-9eba-4831-8cea-072813b6e0e3.png" />
 
 Connect:
 
@@ -619,7 +619,7 @@ Connect:
 - VCC to 3.3
 - GND to GND
 
-<img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+<img width="346" height="390" src="../../images/19438d58-9879-48e5-8acc-bfb21ce4549c.png" />
 
 - Target Device - `Nations N32G455RE`
 - Target interface: `SWD`

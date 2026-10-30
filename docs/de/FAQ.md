@@ -110,14 +110,14 @@ Jede Funktion kann in `mod_data/user.cfg` oder `printer.cfg` überschrieben werd
 
     - **Hostname**: `IP_printer`
 
-    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
     Für FF5M / FF5M Pro:
 
     - **Hostname**: `IP_printer:7125`
     - **Device UI**: `IP_printer` oder `IP_printer:80`
 
-    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 
 ---
@@ -557,7 +557,7 @@ Drehen: 90
 
 - Starten Sie den Drucker neu
 
-<img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+<img width="1239" height="535" alt="image" src="../../images/b42c4ce9-1c0a-45c0-a20c-36919a27d648.png" />
 
 ---
 
@@ -649,7 +649,7 @@ Verzeichnisse, die von Entware erstellt und verwendet werden:
 
 - In Z-Mod verfügt Fluidd/Mainsail über Schieberegler zur Anpassung von Rückzugsgeschwindigkeit und -distanz per Firmware. 
 
-![](../images/retract.jpg)
+![](../../images/retract.jpg)
 
 - Diese Einstellungen wirken sich nur dann auf den Druck aus, wenn die G-Code-Datei mit aktiviertem Firmware-Rückzug gesliced wurde.
 
@@ -777,9 +777,9 @@ Allen diesen Fehlern ist gemeinsam, dass die Klipper-Version nicht zur MCU-Versi
 
 Sie können die MCU-Version auf der Registerkarte `System` einsehen.
 
-<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="https://github.com/user-attachments/assets/80e6a573-b372-4620-a7bc-7cbf020bc874" />
+<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="../../images/80e6a573-b372-4620-a7bc-7cbf020bc874.png" />
 
-<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="https://github.com/user-attachments/assets/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a" />
+<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
 Sie verwenden z. B. Klipper 13, aber die MCU-Firmware stammt von Klipper 11 oder 12.
 
@@ -795,7 +795,7 @@ Dementsprechend muss Z-Mod den nativen Klipper laden.
 - Speichern Sie die Datei
 - Schalten Sie den Drucker aus und schalten Sie ihn wieder ein (**nicht neu starten!**).
 
-<img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
+<img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
 Wenn das nicht der Fall ist und Klipper läuft, führen Sie ```UPDATE_MCU FORCE=13``` aus – dieser Befehl installiert die aktuelle MCU-Version.
 

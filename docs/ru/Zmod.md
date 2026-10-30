@@ -28,7 +28,7 @@
 
 Чтобы включить камеру, нужно использовать ```CAMERA_ON VIDEO=video0``` или ```CAMERA_ON VIDEO=video3``` или ```CAMERA_ON VIDEO=video99```
 
-<img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
+<img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="../../images/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88.png" />
 
 Если камера не работает, то смотрите логи `mod_data/log/cam/`
 
@@ -306,15 +306,15 @@ SSH запускается через 3 минуты после старта Kli
 
 1. Зайдите на сайт [zmod.link](https://zmod.link/link/) и введите логин и пароль
    
-   <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
+   <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="../../images/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2.png" />
 
 2. Нажмите кнопку "Добавить принтер"
    
-   <img width="569" height="502" alt="image" src="https://github.com/user-attachments/assets/72346ee6-dde6-4736-80b1-2eb2927bf983" />
+   <img width="569" height="502" alt="image" src="../../images/72346ee6-dde6-4736-80b1-2eb2927bf983.png" />
 
 3. Откройте в соседней вкладке принтер и в консоли принтера введите команду ```ZLINK```
    
-   <img width="1563" height="163" alt="{90DC4366-D258-4912-8028-22C589DF4E91}" src="https://github.com/user-attachments/assets/bee350ee-8d99-465c-9621-48788c6f7a9c" />
+   <img width="1563" height="163" alt="{90DC4366-D258-4912-8028-22C589DF4E91}" src="../../images/bee350ee-8d99-465c-9621-48788c6f7a9c.png" />
 
 4. Скопируйте ключ в буфер обмена - он выделен на скриншоте
 5. Введите имя принтера и ключ, который скопировали на предыдущем шаге
@@ -325,13 +325,13 @@ SSH запускается через 3 минуты после старта Kli
    - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
 
    
-   <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="https://github.com/user-attachments/assets/b6401b71-5827-480d-ba1c-b7114f87177b" />
+   <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="../../images/b6401b71-5827-480d-ba1c-b7114f87177b.png" />
    
    Нажмите кнопку "Добавить принтер"
 
 6. Скопируйте команду, которую выдал сайт, и вставьте её в консоль принтера
    
-   <img width="558" height="652" alt="{CDC8146F-B9DF-44A1-9C0B-3E6828CD540E}" src="https://github.com/user-attachments/assets/ed92a80f-93cc-41b8-bde1-aa0b2b2c0ecc" />
+   <img width="558" height="652" alt="{CDC8146F-B9DF-44A1-9C0B-3E6828CD540E}" src="../../images/ed92a80f-93cc-41b8-bde1-aa0b2b2c0ecc.png" />
    
    В примере ```zlink p=testprinter u=test m=10006 c=30006```
 
@@ -343,7 +343,7 @@ SSH запускается через 3 минуты после старта Kli
 
 7. Теперь у вас есть возможность подключаться к Fluidd или Mainsail через интернет
    
-   <img width="526" height="654" alt="{CA6FC599-6060-4E3B-B525-EBB76D8780A1}" src="https://github.com/user-attachments/assets/0208dbad-8627-4636-b971-cfe0c5d7f8bd" />
+   <img width="526" height="654" alt="{CA6FC599-6060-4E3B-B525-EBB76D8780A1}" src="../../images/0208dbad-8627-4636-b971-cfe0c5d7f8bd.png" />
    
    Достаточно выбрать нужную кнопку.
 
@@ -351,6 +351,6 @@ PS: Камера может прогрузиться позже, чем инте
 
 PPS: Если что-то работает не так, то обновите страницу Ctrl + F5 и зайдите на [zmod.link](https://zmod.link/link/)
 
-   <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
+   <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="../../images/0d48b9be-a9df-4bfd-a38a-6d883ab31e73.png" />
 
-   <img width="500" height="393" alt="{D03D643F-907C-4A6D-A48E-D881AAC33268}" src="https://github.com/user-attachments/assets/69f9d8d5-67ca-476e-b362-e35abb1d4832" />
+   <img width="500" height="393" alt="{D03D643F-907C-4A6D-A48E-D881AAC33268}" src="../../images/69f9d8d5-67ca-476e-b362-e35abb1d4832.png" />

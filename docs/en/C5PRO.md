@@ -26,15 +26,15 @@
 ## COLOR
 ## How to use the color and filament type selection menu
 
-<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
+<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
 
-<img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
+<img width="794" height="900" alt="image" src="../../images/e5a72e1c-5274-449d-8a47-1d3f5b649550.png" />
 
-<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
+<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="../../images/fd77a89c-08d6-4da5-8eac-3017ca563657.png" />
 
 Select the spool you want to work with (for example, spool 2):
 
-<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
+<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="../../images/81084141-88b8-4d65-b583-495796f0d4fa.png" />
 
 You can perform five actions:
 
@@ -48,7 +48,7 @@ You can perform five actions:
 
 Click "Change color". Select a color from the list. This way the printer and the native screen will understand you best.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
 After selection you will return back, and the spool color in the list should change.
 
@@ -57,7 +57,7 @@ If the color did not change: close the window with the X and run the `COLOR` mac
 **How to change type:**
 Click "Change type". Select a type from the list. Types can be edited for screenless mode.
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
 If the type did not change: close the window with the X and run the `COLOR` macro again. Sometimes the screen does not have time to refresh.
 
@@ -70,7 +70,7 @@ If the type did not change: close the window with the X and run the `COLOR` macr
 
 This window opens automatically when you start printing, if the `SAVE_ZMOD_DATA SILENT=0` parameter is set by default.
 
-<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
+<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **How to understand what is written here:**
 
@@ -84,7 +84,7 @@ This window opens automatically when you start printing, if the `SAVE_ZMOD_DATA 
 
 If the image looks like this:
 
-<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
+<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="../../images/a1bdc9e5-314d-4e69-9a73-5010faf4b233.png" />
 
 This means that you have disabled the auto color matching option and/or file scanning. You can click the `AUTO_SELECT_COLORS` button or enable it in global parameters:
 ```
@@ -127,7 +127,7 @@ Does not work with the factory screen view, so you first need to [turn off the n
 2. Find and open the `mod_data` folder.
 3. In this folder, find and open the `filament.json` file.
 
-<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="https://github.com/user-attachments/assets/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de" />
+<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="../../images/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de.png" />
 
 In this file, for each plastic type (PLA, ABS, PETG, etc.) there is a list of numbers. Here is what they mean:
 
@@ -239,7 +239,7 @@ You can set the following values (in minutes):
 
 **Important:** For this option to work correctly, **Ooze prevention** must be enabled in the slicer (`Print settings` > `Multimaterial` > `Ooze prevention`). Without it, the printer cannot correctly handle the temperature modes of idle hotends during filament change.
 
-<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
 ---
 

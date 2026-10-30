@@ -26,15 +26,15 @@
 ## COLOR
 ## Wie man das Menü zur Auswahl von Farbe und Filamenttyp verwendet
 
-<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
+<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
 
-<img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
+<img width="794" height="900" alt="image" src="../../images/e5a72e1c-5274-449d-8a47-1d3f5b649550.png" />
 
-<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
+<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="../../images/fd77a89c-08d6-4da5-8eac-3017ca563657.png" />
 
 Wählen Sie die Spule aus, mit der Sie arbeiten möchten (zum Beispiel Spule 2):
 
-<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
+<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="../../images/81084141-88b8-4d65-b583-495796f0d4fa.png" />
 
 Sie können fünf Aktionen ausführen:
 
@@ -48,7 +48,7 @@ Sie können fünf Aktionen ausführen:
 
 Klicken Sie auf „Farbe ändern“. Wählen Sie eine Farbe aus der Liste. So erkennen der Drucker und der native Bildschirm die Farbe am besten.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
 Nach der Auswahl kehren Sie zurück, und die Farbe der Spule in der Liste ändert sich.
 
@@ -57,7 +57,7 @@ Wenn sich die Farbe nicht geändert hat: Schließen Sie das Fenster mit dem X un
 **Wie man den Typ ändert:**
 Klicken Sie auf „Typ ändern“. Wählen Sie einen Typ aus der Liste. Die Typen können für den Modus ohne nativen Bildschirm angepasst werden.
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
 Wenn sich der Typ nicht geändert hat: Schließen Sie das Fenster mit dem X und starten Sie das Makro `COLOR` erneut. Manchmal schafft es der Bildschirm nicht, sich zu aktualisieren.
 
@@ -70,7 +70,7 @@ Wenn sich der Typ nicht geändert hat: Schließen Sie das Fenster mit dem X und 
 
 Dieses Fenster öffnet sich automatisch, wenn Sie mit dem Drucken beginnen, sofern der Parameter `SAVE_ZMOD_DATA SILENT=0` (Standard) gesetzt ist.
 
-<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
+<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **Was hier angezeigt wird:**
 
@@ -84,7 +84,7 @@ Dieses Fenster öffnet sich automatisch, wenn Sie mit dem Drucken beginnen, sofe
 
 Wenn das Bild so aussieht:
 
-<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
+<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="../../images/a1bdc9e5-314d-4e69-9a73-5010faf4b233.png" />
 
 bedeutet das, dass Sie die Option zur automatischen Farbzuordnung und/oder das Scannen von Dateien deaktiviert haben. Sie können auf die Schaltfläche `AUTO_SELECT_COLORS` klicken oder sie in den globalen Parametern aktivieren:
 ```
@@ -128,7 +128,7 @@ Funktioniert nicht mit dem Werksbildschirm, daher müssen Sie zuerst [den native
 2. Suchen und öffnen Sie den Ordner `mod_data`.
 3. Suchen und öffnen Sie in diesem Ordner die Datei `filament.json`.
 
-<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="https://github.com/user-attachments/assets/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de" />
+<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="../../images/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de.png" />
 
 In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine Liste von Zahlen. Hier ist, was sie bedeuten:
 
@@ -239,7 +239,7 @@ Sie können die folgenden Werte festlegen (in Minuten):
 
 **Wichtig:** Damit diese Option korrekt funktioniert, muss im Slicer die Funktion **Ooze prevention** (Verhinderung des Auslaufens von Kunststoff) aktiviert sein (`Druckeinstellungen` > `Multimaterial` > `Ooze prevention`). Ohne sie kann der Drucker die Temperaturen der ungenutzten Hotends während des Filamentwechsels nicht korrekt verarbeiten.
 
-<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
 ---
 

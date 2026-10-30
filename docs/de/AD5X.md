@@ -62,22 +62,22 @@ Im Drucker befinden sich 4 Spulen (#1, #2, #3, #4). Zum Drucken werden nur die F
 
 ## **3. Verwendung des Farbauswahlmenüs (Makro "COLOR") AD5X**
 
-<img width="874" height="286" alt="image" src="https://github.com/user-attachments/assets/c0538a17-88a9-4aee-a65c-cff4cc1773d0" />
+<img width="874" height="286" alt="image" src="../../images/c0538a17-88a9-4aee-a65c-cff4cc1773d0.png" />
 
-<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29" />
+<img width="800" height="480" alt="image" src="../../images/b6eb3ddd-ad7d-4cc2-b1b5-9f1aef918b29.png" />
 
-<img width="563" height="550" alt="image" src="https://github.com/user-attachments/assets/cc0c951f-48c1-469d-8940-90832ad1d3f5" />
+<img width="563" height="550" alt="image" src="../../images/cc0c951f-48c1-469d-8940-90832ad1d3f5.png" />
 
-<img width="800" height="480" alt="Farbe" src="https://github.com/user-attachments/assets/4145baef-a695-49e6-a914-c12dd3f6b8a4" />
+<img width="800" height="480" alt="Farbe" src="../../images/4145baef-a695-49e6-a914-c12dd3f6b8a4.png" />
 
 * `Extruder: 1 (PETG/Orange)` - Der Drucker ist jetzt mit orangefarbenem PETG von Spule Nummer 1 geladen.
 * `IFS: True` - Das automatische Filamentzufuhrsystem ist aktiv.
 
 **Wählen Sie nun die Spule aus, mit der Sie arbeiten möchten (z. B. Spule 2).**
 
-<img width="568" height="455" alt="image" src="https://github.com/user-attachments/assets/f7ea3ed0-28a5-48d5-99db-eade0a199e99" />
+<img width="568" height="455" alt="image" src="../../images/f7ea3ed0-28a5-48d5-99db-eade0a199e99.png" />
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/c42cbefa-a29c-4df0-a62a-d99842c13961" />
+<img width="800" height="480" alt="Bildschirmfoto" src="../../images/c42cbefa-a29c-4df0-a62a-d99842c13961.png" />
 
 Sie können vier Aktionen ausführen:
 
@@ -91,14 +91,14 @@ Sie können vier Aktionen ausführen:
 1.  Drücken Sie **"Farbe ändern"**.
 2.  **Wählen Sie eine Farbe aus der Liste aus.** So erkennen Drucker und Bildschirm Ihre Farbwahl am besten.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d" />
+<img width="800" height="480" alt="Bildschirmfoto" src="../../images/f51f91a2-4131-4ba3-a8a0-3b9519f61f6d.png" />
 
 3.  Nach der Auswahl kehren Sie zurück, und die Farbe der Spule in der Liste **ändert sich**.
-<img width="556" height="545" alt="bild" src="https://github.com/user-attachments/assets/f32a9239-44c6-449d-bbf7-5f453f149ef7" />
+<img width="556" height="545" alt="bild" src="../../images/f32a9239-44c6-449d-bbf7-5f453f149ef7.png" />
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6" />
+<img width="800" height="480" alt="Bildschirmfoto" src="../../images/4fa7bb58-ee03-4613-ba06-a5af9b2ddfa6.png" />
 
 **Wenn sich die Farbe nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Makro `COLOR` erneut. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
@@ -107,9 +107,9 @@ Sie können vier Aktionen ausführen:
 1.  Klicken Sie auf **"Typ ändern"**.
 2.  **Wählen Sie einen Typ aus der Liste aus.**
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4" />
+<img width="800" height="480" alt="Bildschirmfoto" src="../../images/2d7b4f12-a8f1-4c99-a555-7c422bd5ffe4.png" />
 
 **Wenn sich der Typ nicht ändert:** Schließen Sie das Fenster mit der Schaltfläche „X“ und starten Sie das Makro `COLOR` erneut. Manchmal wird der Bildschirm nicht sofort aktualisiert.
 
@@ -123,7 +123,7 @@ Sie können vier Aktionen ausführen:
 
 Dieses Fenster öffnet sich **automatisch**, wenn Sie den Druck starten.
 
-<img width="845" height="1046" alt="image" src="https://github.com/user-attachments/assets/541ca73c-2492-4f72-839e-30af8e2ffeb8" />
+<img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **Was hier angezeigt wird:**
 
@@ -137,7 +137,7 @@ Dieses Fenster öffnet sich **automatisch**, wenn Sie den Druck starten.
 
 Wenn das Bild so aussieht
 
-<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="https://github.com/user-attachments/assets/15b072f2-a63d-4514-b2e3-fd9c426b9fdb" />
+<img width="846" height="564" alt="{D869D7CB-8387-48C0-A636-7FD30401E088}" src="../../images/15b072f2-a63d-4514-b2e3-fd9c426b9fdb.png" />
 
 bedeutet das, dass Sie die Option zur automatischen Farbzuordnung und/oder das Scannen von Dateien deaktiviert haben. Sie können auf die Schaltfläche `AUTO_SELECT_COLORS` klicken oder sie in den globalen Parametern aktivieren:
 ```
@@ -149,9 +149,9 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 **So wechseln Sie die Spule für eine Farbe vor dem Druck:**
 
 **Klicken Sie einfach auf das gewünschte T** (z. B. T1) und wählen Sie eine andere Spule aus der Liste aus.
-<img width="553" height="550" alt="image" src="https://github.com/user-attachments/assets/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956" />
+<img width="553" height="550" alt="image" src="../../images/4d831fdb-6ff5-4a0d-ac9e-10154d1c7956.png" />
 
-<img width="800" height="480" alt="Bildschirmfoto" src="https://github.com/user-attachments/assets/a87d6115-87e4-4cb1-af3e-b194edefb42b" />
+<img width="800" height="480" alt="Bildschirmfoto" src="../../images/a87d6115-87e4-4cb1-af3e-b194edefb42b.png" />
 
 ### Globale AD5X-Parameter
 
@@ -263,7 +263,7 @@ Im Modus ohne nativen Bildschirm sind folgende Sensoren verfügbar und aktiv:
 2.  Suchen Sie den Ordner **`mod_data`** und öffnen Sie ihn.
 3.  Suchen und öffnen Sie in diesem Ordner die Datei **`filament.json`**.
 
-![Wo finde ich die Datei](https://github.com/user-attachments/assets/109b0f0a-c87d-4f5c-9333-ebfbb8065b87)
+![Wo finde ich die Datei](../../images/109b0f0a-c87d-4f5c-9333-ebfbb8065b87.png)
 
 In dieser Datei gibt es für jeden Kunststofftyp (PLA, ABS, PETG usw.) eine Liste von Werten. Ihre Bedeutung:
 
@@ -465,7 +465,7 @@ So beheben Sie das:
 	"zProbeOffset" : 0.004999995231628418
 },
 ```
-<img width="504" height="241" alt="image" src="https://github.com/user-attachments/assets/8647b1fe-594c-4bb3-91ee-560cfe4a58fd" />
+<img width="504" height="241" alt="image" src="../../images/8647b1fe-594c-4bb3-91ee-560cfe4a58fd.png" />
 
 Ersetzen Sie **nur** diese Werte:
 ```json
@@ -538,29 +538,29 @@ Starten Sie den Drucker neu – fertig.
 
 1. Gehen Sie auf die Registerkarte "i" und drücken Sie die Schaltfläche "Status".
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/08a99d33-c970-4e86-933d-0064b447f5b7" />
+   <img width="800" height="480" alt="image" src="../../images/08a99d33-c970-4e86-933d-0064b447f5b7.png" />
 
 2. Wechseln Sie zur Registerkarte 6
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c" />
+   <img width="800" height="480" alt="image" src="../../images/a0eb4b8f-552b-4e58-86d7-2b47b8b0035c.png" />
 
 3. Drücken Sie die Taste `Extruder in Abfallbehälterposition bringen` und halten Sie sie 20 Sekunden lang gedrückt.
 
-	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/81213d65-bf06-4d33-8e4a-eb3aae2782d7" />
+	<img width="800" height="480" alt="image" src="../../images/81213d65-bf06-4d33-8e4a-eb3aae2782d7.png" />
 
 4. Positionieren Sie den Druckkopf im Abfallbehälter so, dass dieser sich schließt. Parken Sie den Druckkopf mithilfe der Steuerungspfeile so am Gehäuse, dass er den Verschlusshebel ausreichend betätigt, die Düse sich hinter dem beweglichen Verschluss befindet und der Verschluss bündig mit der Vorderseite des Gehäuses abschließt.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/7b506200-0d61-4b88-aaf8-40475e3ad463" />
+   <img width="800" height="480" alt="image" src="../../images/7b506200-0d61-4b88-aaf8-40475e3ad463.png" />
    
    Drücken Sie die Taste „Set“.
 
 5. Drücken Sie `Move the extruder to cutter striker position` und halten Sie die Taste für 20 Sekunden gedrückt.
 
-	<img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c" />
+	<img width="800" height="480" alt="image" src="../../images/e61c61c0-f1a1-4535-b9ef-37baa4ab1d8c.png" />
 
 6. Stellen Sie das Messer ein. Drücken Sie `CutX` – das Messer sollte das Filament ohne Durchrutschen oder Anschlagen durchtrennen.
    
-   <img width="800" height="480" alt="image" src="https://github.com/user-attachments/assets/a0c1939e-dada-48cb-8789-df43999bf99b" />
+   <img width="800" height="480" alt="image" src="../../images/a0c1939e-dada-48cb-8789-df43999bf99b.png" />
    
    Drücken Sie die Taste `Set`.
 
@@ -609,13 +609,13 @@ filament_NEWTYPE: 300
 
 Um die IFS-Firmware wiederherzustellen, benötigen Sie ein **ARM J-LINK V9** Programmiergerät.
 
-<img width="800" height="800" alt="image" src="https://github.com/user-attachments/assets/ae91768b-00d8-4e36-a62d-3056a7e117bf" />
+<img width="800" height="800" alt="image" src="../../images/ae91768b-00d8-4e36-a62d-3056a7e117bf.png" />
 
-<img width="960" height="479" alt="image" src="https://github.com/user-attachments/assets/f623fa41-4bc3-40a4-a434-5d8ad717792b" />
+<img width="960" height="479" alt="image" src="../../images/f623fa41-4bc3-40a4-a434-5d8ad717792b.png" />
 
 Löten Sie Drähte an die IFS-Platine.
 
-<img width="579" height="774" alt="image" src="https://github.com/user-attachments/assets/cb2b2f72-9eba-4831-8cea-072813b6e0e3" />
+<img width="579" height="774" alt="image" src="../../images/cb2b2f72-9eba-4831-8cea-072813b6e0e3.png" />
 
 Anschließen:
 
@@ -624,7 +624,7 @@ Anschließen:
 - VCC an 3,3
 - GND an GND
 
-<img width="346" height="390" src="https://github.com/user-attachments/assets/19438d58-9879-48e5-8acc-bfb21ce4549c" />
+<img width="346" height="390" src="../../images/19438d58-9879-48e5-8acc-bfb21ce4549c.png" />
 
 - Zielgerät - `Nations N32G455RE`.
 - Zielschnittstelle: `SWD`

@@ -26,15 +26,15 @@
 ## COLOR
 ## Jak používat menu pro výběr barvy a typu filamentu
 
-<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
+<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
 
-<img width="794" height="900" alt="image" src="https://github.com/user-attachments/assets/e5a72e1c-5274-449d-8a47-1d3f5b649550" />
+<img width="794" height="900" alt="image" src="../../images/e5a72e1c-5274-449d-8a47-1d3f5b649550.png" />
 
-<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
+<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="../../images/fd77a89c-08d6-4da5-8eac-3017ca563657.png" />
 
 Vyberte cívku, se kterou chcete pracovat (například cívka 2):
 
-<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
+<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="../../images/81084141-88b8-4d65-b583-495796f0d4fa.png" />
 
 Můžete provést pět akcí:
 
@@ -48,7 +48,7 @@ Můžete provést pět akcí:
 
 Klikněte na „Změnit barvu“. Vyberte barvu ze seznamu. Tak barvu nejlépe rozpozná tiskárna i nativní obrazovka.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
 Po výběru se vrátíte zpět a barva cívky v seznamu se změní.
 
@@ -57,7 +57,7 @@ Pokud se barva nezměnila: zavřete okno křížkem a spusťte makro `COLOR` zno
 **Jak změnit typ:**
 Klikněte na „Změnit typ“. Vyberte typ ze seznamu. Typy lze upravit pro režim bez nativní obrazovky.
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
 Pokud se typ nezměnil: zavřete okno křížkem a spusťte makro `COLOR` znovu. Někdy se obrazovka nestihne aktualizovat.
 
@@ -70,7 +70,7 @@ Pokud se typ nezměnil: zavřete okno křížkem a spusťte makro `COLOR` znovu.
 
 Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `SAVE_ZMOD_DATA SILENT=0` (výchozí).
 
-<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
+<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **Co se zde zobrazuje:**
 
@@ -84,7 +84,7 @@ Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `
 
 Pokud obrázek vypadá takto:
 
-<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
+<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="../../images/a1bdc9e5-314d-4e69-9a73-5010faf4b233.png" />
 
 znamená to, že máte vypnutou volbu automatického přiřazení barev a/nebo skenování souborů. Můžete kliknout na tlačítko `AUTO_SELECT_COLORS` nebo ji zapnout v globálních parametrech:
 ```
@@ -128,7 +128,7 @@ Nefunguje s tovární obrazovkou, proto je nejprve třeba [vypnout nativní obra
 2. Najděte a otevřete složku `mod_data`.
 3. V této složce najděte a otevřete soubor `filament.json`.
 
-<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="https://github.com/user-attachments/assets/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de" />
+<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="../../images/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de.png" />
 
 V tomto souboru je pro každý typ plastu (PLA, ABS, PETG atd.) seznam čísel. Zde je jejich význam:
 
@@ -239,7 +239,7 @@ Můžete nastavit následující hodnoty (v minutách):
 
 **Důležité:** Pro správnou funkci této volby musí být ve sliceru zapnuta funkce **Ooze prevention** (Prevence vytékání plastu) (`Nastavení tisku` > `Multimateriál` > `Ooze prevention`). Bez ní tiskárna nedokáže správně zpracovat teplotní režimy nečinných hotendů během výměny filamentu.
 
-<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
 ---
 

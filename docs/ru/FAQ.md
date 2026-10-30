@@ -111,14 +111,14 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 
   - Имя хоста: `IP_принтера`
 
-    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
   Для FF5M / FF5M Pro:
 
   - Имя хоста: `IP_принтера:7125`
   - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
-    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 ---
 
@@ -156,14 +156,14 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 
   - Имя хоста: `IP_принтера`
 
-  <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+  <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
   Для FF5M / FF5M Pro:
 
   - Имя хоста: `IP_принтера:7125`
   - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
-  <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+  <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 ---
 
@@ -549,7 +549,7 @@ rotation: 90
 - Обновите все компоненты *древолаз*
 - Перезагрузите принтер
 
-<img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+<img width="1239" height="535" alt="image" src="../../images/b42c4ce9-1c0a-45c0-a20c-36919a27d648.png" />
 
 ---
 
@@ -656,7 +656,7 @@ export PATH="$PATH:/opt/bin/:/opt/sbin/"
 
 В Z-Mod во Fluidd/Mainsail есть ползунки управления скоростью и величиной отката из прошивки.
 
-![](../images/retract.jpg)
+![](../../images/retract.jpg)
 
 Они не влияют на печать и не отображают настройки ретракта из Orca, если g-code файл нарезан без использования параметров отката из прошивки.
 
@@ -788,9 +788,9 @@ WeightValue - это значение на тензодатчиках в гра�
 
 Посмотреть версию MCU можно на вкладке `Система`
 
-<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="https://github.com/user-attachments/assets/80e6a573-b372-4620-a7bc-7cbf020bc874" />
+<img width="700" height="396" alt="{9CCFD772-CCDB-42ED-B952-DA15231DCF68}" src="../../images/80e6a573-b372-4620-a7bc-7cbf020bc874.png" />
 
-<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="https://github.com/user-attachments/assets/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a" />
+<img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
 Например, у вас запущен Klipper 13, а используется MCU от 11 или 12 Klipper.
 
@@ -806,7 +806,7 @@ WeightValue - это значение на тензодатчиках в гра�
 - Сохраняем файл
 - Выключаем принтер и включаем его (не перезагружаем!)
 
-<img width="422" height="570" alt="image" src="https://github.com/user-attachments/assets/6a96aa9d-7d07-4bf7-8039-042d28f4a87f" />
+<img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
 Если это не так и Klipper работает, то делаем ```UPDATE_MCU FORCE=13``` - эта команда установит актуальную версию MCU
 

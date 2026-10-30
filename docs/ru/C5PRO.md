@@ -29,7 +29,7 @@
 
 Это окно открывается само, когда вы начинаете печать, если установлен параметр `SAVE_ZMOD_DATA SILENT=0` (по умолчанию).
 
-<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="https://github.com/user-attachments/assets/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8" />
+<img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **Что написано в меню печати:**
 
@@ -43,7 +43,7 @@
 
 Если изображение выглядит так:
 
-<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="https://github.com/user-attachments/assets/a1bdc9e5-314d-4e69-9a73-5010faf4b233" />
+<img width="837" height="571" alt="{013853B5-7E63-4AA0-9C1E-2243920F9FAD}" src="../../images/a1bdc9e5-314d-4e69-9a73-5010faf4b233.png" />
 
 Это значит, что у вас выключена опция автосопоставления цветов и/или сканирование файлов. Можно нажать на кнопку `AUTO_SELECT_COLORS` или командой, введённой в консоль, включить в глобальных параметрах:
 ```
@@ -80,13 +80,13 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 ## COLOR
 ## Меню выбора цвета и типа филамента
 
-<img width="900" height="900" alt="ColorWeb" src="https://github.com/user-attachments/assets/93be6d16-8c78-48b5-b1ca-6068e1e7e538" />
+<img width="900" height="900" alt="ColorWeb" src="../../images/93be6d16-8c78-48b5-b1ca-6068e1e7e538.png" />
 
-<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="https://github.com/user-attachments/assets/fd77a89c-08d6-4da5-8eac-3017ca563657" />
+<img width="554" height="502" alt="{7A4A77A2-1F88-4110-9502-24FA941B9A67}" src="../../images/fd77a89c-08d6-4da5-8eac-3017ca563657.png" />
 
 Выберите катушку, с которой хотите работать (например, катушка 2):
 
-<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="https://github.com/user-attachments/assets/81084141-88b8-4d65-b583-495796f0d4fa" />
+<img width="559" height="466" alt="{355F6AEF-00B2-4EFE-841E-23516CAC64FA}" src="../../images/81084141-88b8-4d65-b583-495796f0d4fa.png" />
 
 Можно сделать пять действий:
 
@@ -100,7 +100,7 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 
 Нажмите «Изменить цвет». Выберите цвет из списка.
 
-<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="https://github.com/user-attachments/assets/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68" />
+<img width="844" height="431" alt="{A27DB9D5-1C03-43D0-AF0D-5D2E16E6FFE4}" src="../../images/d9a0ab97-3f78-4b51-b1a4-c4c2c4dc2b68.png" />
 
 После выбора вы вернетесь назад, и цвет катушки филамента в списке должен поменяться.
 
@@ -110,7 +110,7 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 
 Нажмите «Изменить тип». Выберите тип из списка. Типы можно редактировать для режима без родного экрана.
 
-<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="https://github.com/user-attachments/assets/f4359f48-c998-4e52-a119-e088b38f0a26" />
+<img width="848" height="511" alt="{95B6566B-4FC0-4811-BC6A-E65B79E3DED7}" src="../../images/f4359f48-c998-4e52-a119-e088b38f0a26.png" />
 
 Если тип не поменялся: закройте окно крестиком и запустите макрос `COLOR` снова. Иногда родной экран не успевает обновиться.
 
@@ -126,7 +126,7 @@ SAVE_ZMOD_DATA SCAN_FILE_COLORS=1 AUTO_ASSIGN_COLORS=1
 - Найдите и откройте папку `mod_data` - тут хранятся все настройки мода.
 - Откройте файл `filament.json`.
 
-<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="https://github.com/user-attachments/assets/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de" />
+<img width="480" height="826" alt="{F5EAE8D4-1A9F-4E6C-99A1-B609A331E82D}" src="../../images/4b7b5f91-b3ff-4c75-824d-4ec06e2ac6de.png" />
 
 В этом файле для каждого типа пластика (PLA, ABS, PETG и т.д.) есть список чисел. Вот что они значат:
 
@@ -325,7 +325,7 @@ SAVE_ZMOD_DATA unused_extruders_off_time=5
 **Важно:** Для корректной работы этой опции обязательно должна быть включена функция в слайсере **Ooze prevention**
 (`Настройки печати` > `Многоцвет` > `Предотвращение течи материала`). Без нее принтер не сможет правильно обрабатывать температурные режимы простаивающих хотендов во время смены филамента.
 
-<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="https://github.com/user-attachments/assets/6340a479-62a8-4476-93f1-c4054a279618" />
+<img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
 ---
 

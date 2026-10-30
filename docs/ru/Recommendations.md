@@ -12,7 +12,7 @@
 - `Профиль процесса` -> `Прочее` -> `Выходной G-код` -> `Исключение моделей` включить галочку
 - `Профиль процесса` -> `Прочее` -> `Выходной G-код` -> `Помечать модели` включить галочку
 
-<img width="285" height="171" alt="image" src="https://github.com/user-attachments/assets/faceef98-2791-4975-bf72-425f4a2b1dfa" />
+<img width="285" height="171" alt="image" src="../../images/faceef98-2791-4975-bf72-425f4a2b1dfa.png" />
 
 ---
 
@@ -112,7 +112,7 @@ Igor Polunovskiy
 - ```"/home/user/zmod_preprocess-darwin-arm64";```
 - ```"/home/user/zmod_preprocess-linux-amd64";```
 
-<img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
+<img width="476" height="355" alt="image" src="../../images/0b59a617-5613-4def-aa01-7fe038898863.png" />
 
 [Подробнее](/ru/System/#check_md5)
 
@@ -132,14 +132,14 @@ Igor Polunovskiy
 
 - Имя хоста: `IP_принтера`
 
-<img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+<img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
 Для FF5M / FF5M Pro:
 
 - Имя хоста: `IP_принтера:7125`
 - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
-<img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+<img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 Если используется Mainsail, то пропишите только эти размеры миниатюр: ```140x110/PNG, 64x64/PNG```
 

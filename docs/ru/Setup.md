@@ -51,9 +51,9 @@
 6. Включить принтер
 7. Дождаться установки мода
 
-   <img width="800" height="480" alt="install" src="https://github.com/user-attachments/assets/9d6b9ad7-e9ec-4bc2-bd8f-54c945b5add5" />
+   <img width="800" height="480" alt="install" src="../../images/9d6b9ad7-e9ec-4bc2-bd8f-54c945b5add5.png" />
    
-   <img width="800" height="480" alt="screenshot" src="https://github.com/user-attachments/assets/19d66329-72f9-4e92-aba6-35b7820ce9a0" />
+   <img width="800" height="480" alt="screenshot" src="../../images/19d66329-72f9-4e92-aba6-35b7820ce9a0.png" />
    
    На AD5X/Creator 5/Creator 5 Pro установка может занимать до 40 минут. _Если ставится долго или не ставится вообще - смените флешку_
 
@@ -63,8 +63,8 @@
 10. Выключить принтер
 11. Включить принтер
 12. **Открыть в браузере IP-адрес принтера**
-    <img width="800" height="480" alt="main" src="https://github.com/user-attachments/assets/a0466fa8-03e8-458d-8cc5-c1efb8f565ac" />
-    <img width="800" height="480" alt="ip" src="https://github.com/user-attachments/assets/1d7dd5fa-86f4-4b1a-bd42-364619b20229" />
+    <img width="800" height="480" alt="main" src="../../images/a0466fa8-03e8-458d-8cc5-c1efb8f565ac.png" />
+    <img width="800" height="480" alt="ip" src="../../images/1d7dd5fa-86f4-4b1a-bd42-364619b20229.png" />
     
     Если веб-интерфейс не открывается, значит, родная прошивка деактивировала мод. Чтобы его включить, нужно записать на USB-флешку файл:
 
@@ -74,45 +74,45 @@
      
 13. Переведите мод на ваш язык.
     
-    <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="https://github.com/user-attachments/assets/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6" />
+    <img width="564" height="583" alt="{8E14F84D-E8D1-4129-B192-AA335243A3D9}" src="../../images/e6dd3f8a-3cc3-4a05-b5fb-ad8ba372ede6.png" />
     
     Или в консоли наберите ```LANG LANG=ru```
     
-    <img width="881" height="502" alt="image" src="https://github.com/user-attachments/assets/cf3f797d-80e0-4864-85b4-cd28886590f4" />
+    <img width="881" height="502" alt="image" src="../../images/cf3f797d-80e0-4864-85b4-cd28886590f4.png" />
     
     Установите часовой пояс: ```SET_TIMEZONE ZONE=Europe/Moscow``` (список зон — `SET_TIMEZONE` без параметров). [Подробнее](/ru/System/#set_timezone)
 
 14. Настройте мод
     
-    <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="https://github.com/user-attachments/assets/a79ec692-a284-4cb8-a0ad-3be10f33d813" />
+    <img width="558" height="219" alt="{B34D2AF2-F2A6-433D-B9F8-86A83389D5A7}" src="../../images/a79ec692-a284-4cb8-a0ad-3be10f33d813.png" />
     
     Тут отображаются параметры, которые используются при старте, окончании печати и глобальные параметры. Рекомендуется просто прочитать настройки, но не менять их. Значение каждой настройки можно [посмотреть тут](/ru/Global/)
 
-    <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="https://github.com/user-attachments/assets/3a8028bf-b078-4edc-827b-07e9d49c52f9" />
+    <img width="561" height="443" alt="{623507C1-D3AB-4FEF-9A92-E949A85DCB49}" src="../../images/3a8028bf-b078-4edc-827b-07e9d49c52f9.png" />
 
     Нужно дойти до последнего экрана и нажать `Ok` или `Reboot`. Если этого не сделать, то это окно будет появляться при каждой загрузке
 
-    <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="https://github.com/user-attachments/assets/72d386a4-18ba-40a9-8f85-a6109a4e4c57" />
+    <img width="564" height="228" alt="{BCEBDCCC-0703-46F3-8B7B-3BC58E78F27A}" src="../../images/72d386a4-18ba-40a9-8f85-a6109a4e4c57.png" />
 
     Если хотите снова увидеть это окно, наберите в консоли `GLOBAL`
 
 15. Перейдите в `Настройки` -> `Обновления ПО` 
 16. Нажмите `Проверить обновления`, подождите, пока обновления проверяются
 17. Нажать **Обновление** и обновить все компоненты.
-    <img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+    <img width="1239" height="535" alt="image" src="../../images/b42c4ce9-1c0a-45c0-a20c-36919a27d648.png" />
 
     Если показывает много ошибок, то это нормально. Плагины не входят в состав прошивки и скачиваются отдельно. Нужно нажать `Проверить обновления`.
     И по одному восстановить и обновить все модули. Принтер при этом будет перезагружаться.
     
-    <img width="671" height="844" alt="image" src="https://github.com/user-attachments/assets/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee" />
+    <img width="671" height="844" alt="image" src="../../images/d6fe3ad0-64be-4c07-8f5e-53647a6bd6ee.png" />
 
 18. Активируйте [плагин с рекомендациями](https://github.com/ghzserg/recommend/blob/main/Readme_ru.md)
     
-    <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="https://github.com/user-attachments/assets/dade8a2e-fc67-4df5-aad4-85cc5cd81d66" />
+    <img width="560" height="224" alt="{E27E192D-3FC2-49AC-BEAF-F7B574FFEF45}" src="../../images/dade8a2e-fc67-4df5-aad4-85cc5cd81d66.png" />
 
     Или введите в консоли ```ENABLE_PLUGIN name=recommend```
 
-    <img width="864" height="87" alt="image" src="https://github.com/user-attachments/assets/ca96c67f-cc58-4655-8fdf-9554d1a489a3" />
+    <img width="864" height="87" alt="image" src="../../images/ca96c67f-cc58-4655-8fdf-9554d1a489a3.png" />
 
 19. [Настройте Orca](/ru/Recommendations/#отправляйте-файлы-на-печать-через-octoklipper)
 
@@ -133,17 +133,17 @@
 
     ```END_PRINT```
 
-    <img width="612" height="443" alt="image" src="https://github.com/user-attachments/assets/0dfd8840-c183-4d33-92aa-46f882b8c32c" />
+    <img width="612" height="443" alt="image" src="../../images/0dfd8840-c183-4d33-92aa-46f882b8c32c.png" />
 
     Код перед сменой слоя на этот:
 
     ```SET_PRINT_STATS_INFO CURRENT_LAYER={layer_num + 1}```
 
-    <img width="449" height="153" alt="image" src="https://github.com/user-attachments/assets/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8" />
+    <img width="449" height="153" alt="image" src="../../images/705fb49e-2c6b-451b-9b99-9d8d1f0e80f8.png" />
 
     Включить исключение объектов:
     
-    <img width="473" height="395" alt="image" src="https://github.com/user-attachments/assets/ca4c5330-dc88-4372-a3c8-51527ae76146" />
+    <img width="473" height="395" alt="image" src="../../images/ca4c5330-dc88-4372-a3c8-51527ae76146.png" />
 
     Необходимо переключиться на протокол `Octo/Klipper`:
 
@@ -153,20 +153,20 @@
     
       - Имя хоста: `IP_принтера`
 
-    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="https://github.com/user-attachments/assets/1c26beca-9aff-4c7c-846d-273efa8624f8" />
+    <img width="612" height="447" alt="{D625ED9D-902D-4412-A99E-20FB0C5ED85F}" src="../../images/1c26beca-9aff-4c7c-846d-273efa8624f8.png" />
 
     Для FF5M / FF5M Pro:
 
       - Имя хоста: `IP_принтера:7125`
       - Url-адрес хоста: `IP_принтера` или `IP_принтера:80`
 
-    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="https://github.com/user-attachments/assets/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1" />
+    <img width="678" height="471" alt="{8FB1D8A5-A02F-41A8-8309-CD556007FD1B}" src="../../images/a9c3fc5e-3ec0-41ed-bbd7-779ee210c9a1.png" />
 
 20. [Включите контроль MD5](/ru/Recommendations/#включите-контроль-md5)
    
     >Замечание: Только при отправке G-Code. Для 3mf не требуется.
     
-    <img width="476" height="355" alt="image" src="https://github.com/user-attachments/assets/0b59a617-5613-4def-aa01-7fe038898863" />
+    <img width="476" height="355" alt="image" src="../../images/0b59a617-5613-4def-aa01-7fe038898863.png" />
 
 21. [Прочитайте рекомендации](/ru/Recommendations/)
 22. [Прочитайте FAQ](/ru/FAQ/)
@@ -209,7 +209,7 @@
 - Новая версия установится автоматически после перезагрузки (флешку вытаскивать нет необходимости, ее можно оставить в принтере для следующих обновлений)
 - Далее переходите во Fluidd/Mainsail на вкладку `Настройки` -> `Обновление ПО`. Нажмите `Проверить обновления` и установите последние обновления `Z-Mod`
 
-<img width="1239" height="535" alt="image" src="https://github.com/user-attachments/assets/b42c4ce9-1c0a-45c0-a20c-36919a27d648" />
+<img width="1239" height="535" alt="image" src="../../images/b42c4ce9-1c0a-45c0-a20c-36919a27d648.png" />
 
 Если показывает много ошибок, то это нормально.
 
@@ -217,7 +217,7 @@
 
 Нужно нажать `Проверить обновления`. И по одному восстановить и обновить модули. Принтер при этом будет перезагружаться.
 
-<img width="671" height="223" alt="image" src="https://github.com/user-attachments/assets/5744dc8e-ba58-4359-b78a-652be846ca07" />
+<img width="671" height="223" alt="image" src="../../images/5744dc8e-ba58-4359-b78a-652be846ca07.png" />
 
 Посмотреть текущую версию операционной системы мода можно на вкладке "Система" -> "Дистрибутив"
 
@@ -253,13 +253,13 @@
 
 [СБП, Банковская карта, T-pay](https://pay.cloudtips.ru/p/3cbf9e9f)
 
-<img width="262" height="262" alt="qrCode" src="https://github.com/user-attachments/assets/e7c1ebf3-3a54-4b46-b071-06656ac06ae1" />
+<img width="262" height="262" alt="qrCode" src="../../images/e7c1ebf3-3a54-4b46-b071-06656ac06ae1.png" />
 
 BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 <a href="https://boosty.to/ghzserg">Support via Boosty (international Visa/Mastercard)</a>
 
-<img width="150" height="150" alt="ghzserg-donate" src="https://github.com/user-attachments/assets/86e7fe3a-327b-4a0e-b8c4-ee74078167c0" />
+<img width="150" height="150" alt="ghzserg-donate" src="../../images/86e7fe3a-327b-4a0e-b8c4-ee74078167c0.png" />
 
 ---
 
@@ -316,9 +316,9 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 Для тех, у кого принтер при включении зависает на заставке и недоступен по LAN-кабелю.
 
-![resized-image](https://github.com/user-attachments/assets/f63b16e6-2425-41c8-a166-226fb041f5ad)
+![resized-image](../../images/f63b16e6-2425-41c8-a166-226fb041f5ad.jpg)
 
-![](../images/ff.jpg)
+![](../../images/ff.jpg)
 
 Попробуйте восстановить прошивку через установку полной прошивки:
 
@@ -330,14 +330,14 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 1. **Обесточить принтер**
 2. Подготовить преобразователь UART/USB (нужен на 3.3V или с джампером 5V/3.3V)
 
-![](../images/ch340.jpg)
+![](../../images/ch340.jpg)
 
 **ВНИМАНИЕ!** Конвертер должен быть на 3.3 вольта: подадите 5 вольт — и процессор сгорит!
 
 3. Открыть заднюю стенку FlashForge
 4. Подключиться к выводу UART на плате (подключаем RX, TX, GND, **3.3V не подключать**)
 
-![](../images/connect.jpg)
+![](../../images/connect.jpg)
 
 ОБЯЗАТЕЛЬНО ПЕРЕКИДЫВАЕМ ДЖАМПЕР (если он у вас есть) С 5V НА 3.3V. Если подадите 5V, то попадёте на замену материнской платы.
 Как должно выглядеть подключение в конечном итоге:
@@ -346,11 +346,11 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - GND преобразователя к GND на плате
 - 3.3V никуда не подключается
 
-![](../images/connect_photo.jpg)
+![](../../images/connect_photo.jpg)
 
 5. В системе должен появиться новый COM-порт.
 
-![](../images/port.jpg)
+![](../../images/port.jpg)
 
 6. Запускаем программу [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html), там вписываем ваш COM-порт (в примере выше COM6), скорость `115200`, тип подключения - `Serial`.
 

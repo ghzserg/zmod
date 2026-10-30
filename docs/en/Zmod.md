@@ -29,7 +29,7 @@ Parameters:
 
 To enable the camera, use ```CAMERA_ON VIDEO=video0``` or ```CAMERA_ON VIDEO=video3``` or ```CAMERA_ON VIDEO=video99```.
 
-<img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="https://github.com/user-attachments/assets/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88" />
+<img width="734" height="221" alt="{D2A001DD-7C89-4AB9-9CB9-741B7007B0B4}" src="../../images/e8ddbbd3-ebbf-4b4e-86cc-2a62365a4a88.png" />
 
 If the camera does not work, check the logs in `mod_data/log/cam/`
 
@@ -292,15 +292,15 @@ How to connect to the cloud [zmod.link](https://zmod.link/link/):
 
 1. Go to the website [zmod.link](https://zmod.link/link/) and enter your login and password
 
-   <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="https://github.com/user-attachments/assets/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2" />
+   <img width="547" height="615" alt="{264D6782-600F-4700-B9D2-0582F7427FD2}" src="../../images/d8d3f51e-4fc7-4e1e-8fa7-dfc07ddbeab2.png" />
 
 2. Click the "Add Printer" button
 
-   <img width="569" height="502" alt="image" src="https://github.com/user-attachments/assets/72346ee6-dde6-4736-80b1-2eb2927bf983" />
+   <img width="569" height="502" alt="image" src="../../images/72346ee6-dde6-4736-80b1-2eb2927bf983.png" />
 
 3. Open the printer in a separate tab and in the printer console, enter the command ```ZLINK```
 
-   <img width="1563" height="163" alt="{90DC4366-D258-4912-8028-22C589DF4E91}" src="https://github.com/user-attachments/assets/bee350ee-8d99-465c-9621-48788c6f7a9c" />
+   <img width="1563" height="163" alt="{90DC4366-D258-4912-8028-22C589DF4E91}" src="../../images/bee350ee-8d99-465c-9621-48788c6f7a9c.png" />
 
 4. Copy the key to the clipboard - it is highlighted in the screenshot
 5. Enter the printer name and the key you copied in the previous step
@@ -310,13 +310,13 @@ How to connect to the cloud [zmod.link](https://zmod.link/link/):
    - `testprinter`
    - `ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDxX5XzNDXg+sbTArdiOzFpMtHXzgAhfC2N2ogS4TUsQYV4AD6HfSFL3J4ISNZ2DgesZf35rfH1I/qI2ckQVGlE=`
 
-   <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="https://github.com/user-attachments/assets/b6401b71-5827-480d-ba1c-b7114f87177b" />
+   <img width="557" height="775" alt="{E4FC2206-84BC-4134-92C2-B4253D8F23E5}" src="../../images/b6401b71-5827-480d-ba1c-b7114f87177b.png" />
 
    Click the "Add Printer" button
 
 6. Copy the command provided by the website and paste it into the printer console
 
-   <img width="558" height="652" alt="{CDC8146F-B9DF-44A1-9C0B-3E6828CD540E}" src="https://github.com/user-attachments/assets/ed92a80f-93cc-41b8-bde1-aa0b2b2c0ecc" />
+   <img width="558" height="652" alt="{CDC8146F-B9DF-44A1-9C0B-3E6828CD540E}" src="../../images/ed92a80f-93cc-41b8-bde1-aa0b2b2c0ecc.png" />
 
    In the example: ```zlink p=testprinter u=test m=10006 c=30006```
 
@@ -328,7 +328,7 @@ How to connect to the cloud [zmod.link](https://zmod.link/link/):
 
 7. Now you have the ability to connect to Fluidd or Mainsail via the internet
 
-   <img width="526" height="654" alt="{CA6FC599-6060-4E3B-B525-EBB76D8780A1}" src="https://github.com/user-attachments/assets/0208dbad-8627-4636-b971-cfe0c5d7f8bd" />
+   <img width="526" height="654" alt="{CA6FC599-6060-4E3B-B525-EBB76D8780A1}" src="../../images/0208dbad-8627-4636-b971-cfe0c5d7f8bd.png" />
 
    Just select the desired button.
 
@@ -336,6 +336,6 @@ PS: The camera may load later than the interface — this is normal.
 
 PPS: If something is not working correctly, refresh the page with Ctrl + F5 and go to [zmod.link](https://zmod.link/link/)
 
-   <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="https://github.com/user-attachments/assets/0d48b9be-a9df-4bfd-a38a-6d883ab31e73" />
+   <img width="540" height="449" alt="{30D01CA4-3E9E-40EC-BCD1-9A8597DCCFDE}" src="../../images/0d48b9be-a9df-4bfd-a38a-6d883ab31e73.png" />
 
-   <img width="500" height="393" alt="{D03D643F-907C-4A6D-A48E-D881AAC33268}" src="https://github.com/user-attachments/assets/69f9d8d5-67ca-476e-b362-e35abb1d4832" />
+   <img width="500" height="393" alt="{D03D643F-907C-4A6D-A48E-D881AAC33268}" src="../../images/69f9d8d5-67ca-476e-b362-e35abb1d4832.png" />
