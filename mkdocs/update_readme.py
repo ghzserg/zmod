@@ -108,6 +108,7 @@ def process(source: str, target: str, lang_link: str = "") -> None:
     content = replace_logo_link(content, lang_link)
     content = convert_admonitions(content)
     content = fix_relative_links(content)
+    content = content.replace("../../images/", "docs/images/")
 
     with open(target, "w", encoding="utf-8") as f:
         f.write(content)

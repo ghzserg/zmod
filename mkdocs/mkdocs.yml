@@ -13,6 +13,7 @@ theme:
   favicon: images/fav.png
   icon:
     edit: material/pencil
+  font: false
   features:
     - navigation.tabs
     - navigation.tabs.sticky
