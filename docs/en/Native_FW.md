@@ -1,8 +1,9 @@
 # Native firmware
+## Native firmware
 
 [Here is the native firmware for AD5M, AD5M Pro, AD5X printers](https://github.com/ghzserg/FF/releases/R)
 
-## How to install native firmware
+### How to install native firmware
 
 0. Before installing, it is best to reset the printer to default settings, if possible.
 1. Format a USB drive (a regular flash drive) to FAT32 or FAT/FAT16 (MBR).
@@ -14,7 +15,7 @@
 7. Power the printer off and on.
 8. Perform the necessary [calibrations](/SetupCalibrations/).
 
-## AD5X native firmware
+### AD5X native firmware
 
 This is the Factory stock firmware for AD5X.
 
@@ -34,7 +35,7 @@ If you don't want the printer to [probe the center of the bed before every print
 - [3.0.9](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.0.9-1.1.1-3.0.7-20260417.tgz)
 - [3.1.0](https://github.com/ghzserg/FF/releases/download/R/AD5X-3.1.0-1.1.1-3.0.7-20260515.tgz)
 
-## AD5M native firmware
+### AD5M native firmware
 
 This is the Factory stock firmware for AD5M.
 
@@ -49,7 +50,7 @@ If you don't want the printer to [probe the center of the bed before every print
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.0.3-2.2.3-20260122.tgz)
 - [5.1.1](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-5.1.1-2.2.3-20260417.tgz)
 
-## AD5M Pro native firmware
+### AD5M Pro native firmware
 
 This is the Factory stock firmware for AD5M Pro.
 
@@ -63,7 +64,7 @@ If you don't want the printer to [probe the center of the bed before every print
 - [5.0.3](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.0.3-2.2.3-20260122.tgz)
 - [5.1.2](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-5.1.2-2.2.3-20260418.tgz)
 
-## Creator 5 stock firmware
+### Creator 5 stock firmware
 
 This is the Factory stock firmware for Creator 5
 
@@ -71,7 +72,7 @@ This is the Factory stock firmware for Creator 5
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz)
 - [2.0.0](https://github.com/ghzserg/FF/releases/download/R/Creator5-2.0.0-1.3.1-20261014.tgz)
 
-## Creator 5 Pro stock firmware
+### Creator 5 Pro stock firmware
 
 This is the Factory stock firmware for Creator 5 Pro
 
@@ -80,7 +81,7 @@ This is the Factory stock firmware for Creator 5 Pro
 - [1.9.9](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz)
 - [2.0.0](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-2.0.0-1.3.1-20261014.tgz)
 
-# Unbricker
+## Unbricker
 
 Universal unbricker for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
@@ -95,7 +96,7 @@ Universal unbricker for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
 If something went wrong, check the log files on the USB drive.
 
-## Installing Full Firmware on Creator 5 / Creator 5 Pro
+### Installing Full Firmware on Creator 5 / Creator 5 Pro
 
 **This is NOT the original Factory firmware, but a printer unbricking tool.** It should only be installed if the printer does not start at all.
 
@@ -118,7 +119,7 @@ Installation takes a long time, up to an hour.
 
    - [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
-## Installing full firmware on AD5X
+### Installing full firmware on AD5X
 
 This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
 
@@ -130,7 +131,7 @@ Copy both files to the flash drive at once:
 - [AD5X-factory.tar.xz](https://github.com/ghzserg/FF/releases/download/R/AD5X-factory.tar.xz)
 - After the update, if you need to reflash the MCU, install [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz)
 
-## Installing full firmware on FF5M
+### Installing full firmware on FF5M
 
 This is not the original firmware, but an unbricking/recovery firmware. It should only be installed if the printer does not boot up at all.
 
@@ -151,7 +152,7 @@ Installation takes a long time, up to an hour.
 
 3. After the update, if you need to reflash the MCU, install [Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.9-2.2.3-20250807-Factory.tgz)
 
-# Universal Z-Mod Activator
+## Activator
 
 Universal activator for AD5X / Creator 5 / Creator 5 Pro
 
@@ -166,7 +167,7 @@ Universal activator for AD5X / Creator 5 / Creator 5 Pro
 
 If something went wrong, check the enable-zmod.log file on the flash drive
 
-## AD5X/Creator 5/Creator 5 Pro enable Z-Mod
+### AD5X/Creator 5/Creator 5 Pro enable Z-Mod
 
 Enabling Z-Mod on AD5X/Creator 5/Creator 5 Pro after updating the native firmware allows you to activate the mod without completely reinstalling it.
 
@@ -174,7 +175,7 @@ Enabling Z-Mod on AD5X/Creator 5/Creator 5 Pro after updating the native firmwar
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-## SET XY
+### SET XY
 
 For those whose ~~mind~~ "home" position has shifted (parking at the poop chute). Extract the archive contents to the root of a FAT32 flash drive, turn off the printer, insert the flash drive and turn the printer on. The calibration will load. First, press Reset. Then, use the on-screen control buttons to adjust the correct head position. Press the Set button to lock this. Reboot the printer without the flash drive. Archive from official FlashForge support.
 
@@ -191,7 +192,8 @@ For those whose ~~mind~~ "home" position has shifted (parking at the poop chute)
 - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-root.tgz)
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-root.tgz)
 
-## E0011 native firmware 
+## Miscellaneous
+### E0011 native firmware 
 
 [fix_e0011](/Global/#fix_e0011)
 
@@ -205,37 +207,37 @@ Fix E0011 Off
 - [Adventurer5M-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0011-off.tgz)
 - [Adventurer5MPro-e0011-off.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0011-off.tgz)
 
-## E0017 native firmware
+### E0017 native firmware
 
 [fix_e0017](/Global/#fix_e0017)
 
 - [Adventurer5M-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-e0017-4.tgz)
 - [Adventurer5MPro-e0017-4.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-e0017-4.tgz)
 
-## 5M to 5MPro
+### 5M to 5MPro
 
 [Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-3.1.3-2.2.3-20250107-Factory-5M2PRO.tgz)
 
-## 5MPro to 5M
+### 5MPro to 5M
 
 [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory-PRO25M.tgz)
 
-## Conversion from Creator 5 to Creator 5 Pro
+### Conversion from Creator 5 to Creator 5 Pro
 
 [Creator5-to_c5pro.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-to_c5pro.tgz)
 
-## Conversion from Creator 5 Pro to Creator 5
+### Conversion from Creator 5 Pro to Creator 5
 
 [Creator5Pro-to_c5.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-to_c5.tgz)
 
-## 5X IFS
+### 5X IFS
 IFS firmware archive
 
 - [3.0.6](https://github.com/ghzserg/FF/releases/download/R/ifc_3.0.6.zip)
 
 - [IFS Firmware Recovery](/AD5X/#11-ifs-firmware-recovery)
 
-## G-code
+### G-code
 
 - [3DBenchy_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/3DBenchy_PLA.3mf)
 - [FlashForge-TestModel-01.3mf](https://github.com/ghzserg/FF/releases/download/R/FlashForge-TestModel-01.3mf)
@@ -243,7 +245,7 @@ IFS firmware archive
 - [Earphone.support_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/Earphone.support_PLA.3mf)
 - [FISH_PLA.3mf](https://github.com/ghzserg/FF/releases/download/R/FISH_PLA.3mf)
 
-## MD5
+### MD5
 
 > Note: Only applies when sending G-code. Not required for 3MF.
 
@@ -254,15 +256,15 @@ IFS firmware archive
 - [zmod-preprocess.py](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.py) - Universal Python. Don't forget to run ```chmod +x zmod-preprocess.py```
 - [zmod-preprocess.sh](https://github.com/ghzserg/zmod_preprocess/releases/latest/download/zmod-preprocess.sh) - Linux/MacOS Bash. Don't forget to run ```chmod +x zmod-preprocess.sh```
 
-## CONFIG
-### Native configuration files
+### CONFIG
+#### Native configuration files
 
 - [AD5X](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ad5x)
 - [AD5M/Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/ff5m)
 - [Creator 5 Pro](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/creator5pro)
 
-## FIX_LOOP
-### Boot Recovery
+### FIX_LOOP
+#### Boot Recovery
 
 Removes leftover links from autostart
 
@@ -270,8 +272,8 @@ Removes leftover links from autostart
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_loop.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_loop.tgz)
 
-## FIX_UPDATE_MCU
-### Fix for Persistent MCU Updates
+### FIX_UPDATE_MCU
+#### Fix for Persistent MCU Updates
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_update_mcu.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_update_mcu.tgz)
@@ -279,7 +281,7 @@ Removes leftover links from autostart
 - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-update_mcu.tgz)
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-update_mcu.tgz)
 
-## LOG
+### LOG
 
 Universal log collection for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
 
@@ -296,7 +298,7 @@ If something went wrong, check the zmd_log.log file on the flash drive
 
 The config-x.y.z.tar file must be attached to the ticket
 
-### Allows retrieving log files if Klipper is not working
+#### Allows retrieving log files if Klipper is not working
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-log.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-log.tgz)
@@ -304,15 +306,15 @@ The config-x.y.z.tar file must be attached to the ticket
 - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-log.tgz)
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-log.tgz)
 
-## REM_ZMOD
-### Remove ZMOD
+### REM_ZMOD
+#### Remove ZMOD
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-rem_zmod.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-rem_zmod.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-rem_zmod.tgz)
 
-## FIX_KLIPPER
-### Restore Original Klipper
+### FIX_KLIPPER
+#### Restore Original Klipper
 
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
