@@ -30,6 +30,9 @@ It can be called from:
 ### BELTS_SHAPER_CALIBRATION
 [BELTS_SHAPER_CALIBRATION](/Calibrations/#belts_shaper_calibration)
 
+### CALIBRATE_EXTRUDERS
+[CALIBRATE_EXTRUDERS](/C5PRO/)
+
 ### CAMERA_OFF
 [CAMERA_OFF](/Zmod/#camera_off)
 
@@ -81,8 +84,26 @@ It can be called from:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/Main/#fast_close_dialogs)
 
+### FIX_E0011
+[E0011](/Global/#fix_e0011)
+
+### FIX_E0017
+[E0017](/Global/#fix_e0017)
+
+### FIX_KLIPPER
+[FIX_KLIPPER](/Native_FW/#fix_klipper)
+
+### FIX_LOOP
+[FIX_LOOP](/Native_FW/#fix_loop)
+
+### FIX_UPDATE_MCU
+[FIX_UPDATE_MCU](/Native_FW/#fix_update_mcu)
+
 ### GET_ZMOD_DATA
 [GET_ZMOD_DATA](/Global/#get_zmod_data)
+
+### GLOBAL
+[GLOBAL](/Global/#global)
 
 ### KAMP
 [KAMP](/Calibrations/#kamp)
@@ -101,6 +122,12 @@ It can be called from:
 
 ### LOAD_CELL_TARE
 [LOAD_CELL_TARE](/Calibrations/#load_cell_tare)
+
+### LOAD_ZOFFSET_NATIVE
+[LOAD_ZOFFSET_NATIVE](/Calibrations/#load_zoffset_native)
+
+### LOG
+[LOG](/Native_FW/#log)
 
 ### M600
 [M600](/Filament/#m600)
@@ -126,11 +153,23 @@ It can be called from:
 ### PLAY_MIDI
 [PLAY_MIDI](/Main/#play_midi)
 
+### PLUGINS
+[PLUGINS](/Global/#plugins)
+
+### PRINT
+[PRINT](/AD5X/#4-print-menu-macro-print)
+
 ### REBOOT
 [REBOOT](/Main/#reboot)
 
 ### REMOVE_ZMOD
 [REMOVE_ZMOD](/Zmod/#remove_zmod)
+
+### REM_ZMOD
+[REM_ZMOD](/Native_FW/#rem_zmod)
+
+### RESET_PASSWD
+[RESET_PASSWD](/System/#reset_passwd)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](/Zmod/#restore_tar_config)
@@ -140,6 +179,9 @@ It can be called from:
 
 ### SAVE_ZMOD_DATA
 [SAVE_ZMOD_DATA](/Global/#save_zmod_data)
+
+### SCREEN
+[SCREEN](/System/#screen)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](/Filament/#set_pause_at_layer)
@@ -152,6 +194,9 @@ It can be called from:
 
 ### SHUTDOWN
 [SHUTDOWN](/Main/#shutdown)
+
+### SKEW_PROFILE
+[SKEW_PROFILE](/Global/#disable_skew)
 
 ### SKIP_ZMOD
 [SKIP_ZMOD](/Zmod/#skip_zmod)
@@ -171,6 +216,12 @@ It can be called from:
 ### TEST_EMMC
 [TEST_EMMC](/System/#test_emmc)
 
+### T_INFO
+[T_INFO](/C5PRO/#t_info-macro)
+
+### UPDATE_FF_OFFSET
+[UPDATE_FF_OFFSET](/AD5X/)
+
 ### UPDATE_MCU
 [UPDATE_MCU](/System/#update_mcu)
 
@@ -179,6 +230,12 @@ It can be called from:
 
 ### ZFLASH
 [ZFLASH](/Zmod/#zflash)
+
+### ZLINK
+[ZLINK](/Zmod/#zlink)
+
+### ZLINK_OFF
+[ZLINK_OFF](/Zmod/#zlink)
 
 ### ZRESTORE
 [ZRESTORE](/Zmod/#zrestore)
@@ -198,8 +255,8 @@ It can be called from:
 ### ZSSH_RESTART
 [ZSSH_RESTART](/Zmod/#zssh_restart)
 
-### FIX_E0011
-[E0011](/Global/#fix_e0011)
+### Z_OFFSET_APPLY_ENDSTOP
+[Z_OFFSET_APPLY_ENDSTOP](/SetupCalibrations/)
 
-### FIX_E0017
-[E0017](/Global/#fix_e0017)
+### Z_OFFSET_APPLY_PROBE
+[Z_OFFSET_APPLY_PROBE](/SetupCalibrations/)

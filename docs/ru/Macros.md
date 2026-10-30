@@ -30,6 +30,9 @@
 ### BELTS_SHAPER_CALIBRATION
 [BELTS_SHAPER_CALIBRATION](/ru/Calibrations/#belts_shaper_calibration)
 
+### CALIBRATE_EXTRUDERS
+[CALIBRATE_EXTRUDERS](/ru/C5PRO/)
+
 ### CAMERA_OFF
 [CAMERA_OFF](/ru/Zmod/#camera_off)
 
@@ -81,8 +84,26 @@
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/ru/Main/#fast_close_dialogs)
 
+### FIX_E0011
+[E0011](/ru/Global/#fix_e0011)
+
+### FIX_E0017
+[E0017](/ru/Global/#fix_e0017)
+
+### FIX_KLIPPER
+[FIX_KLIPPER](/ru/Native_FW/#fix_klipper)
+
+### FIX_LOOP
+[FIX_LOOP](/ru/Native_FW/#fix_loop)
+
+### FIX_UPDATE_MCU
+[FIX_UPDATE_MCU](/ru/Native_FW/#fix_update_mcu)
+
 ### GET_ZMOD_DATA
 [GET_ZMOD_DATA](/ru/Global/#get_zmod_data)
+
+### GLOBAL
+[GLOBAL](/ru/Global/#global)
 
 ### KAMP
 [KAMP](/ru/Calibrations/#kamp)
@@ -101,6 +122,12 @@
 
 ### LOAD_CELL_TARE
 [LOAD_CELL_TARE](/ru/Calibrations/#load_cell_tare)
+
+### LOAD_ZOFFSET_NATIVE
+[LOAD_ZOFFSET_NATIVE](/ru/Calibrations/#load_zoffset_native)
+
+### LOG
+[LOG](/ru/Native_FW/#log)
 
 ### M600
 [M600](/ru/Filament/#m600)
@@ -126,11 +153,23 @@
 ### PLAY_MIDI
 [PLAY_MIDI](/ru/Main/#play_midi)
 
+### PLUGINS
+[PLUGINS](/ru/Global/#plugins)
+
+### PRINT
+[PRINT](/ru/AD5X/#4-меню-печати-макрос-print-ad5x)
+
 ### REBOOT
 [REBOOT](/ru/Main/#reboot)
 
 ### REMOVE_ZMOD
 [REMOVE_ZMOD](/ru/Zmod/#remove_zmod)
+
+### REM_ZMOD
+[REM_ZMOD](/ru/Native_FW/#rem_zmod)
+
+### RESET_PASSWD
+[RESET_PASSWD](/ru/System/#reset_passwd)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](/ru/Zmod/#restore_tar_config)
@@ -140,6 +179,9 @@
 
 ### SAVE_ZMOD_DATA
 [SAVE_ZMOD_DATA](/ru/Global/#save_zmod_data)
+
+### SCREEN
+[SCREEN](/ru/System/#screen)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](/ru/Filament/#set_pause_at_layer)
@@ -152,6 +194,9 @@
 
 ### SHUTDOWN
 [SHUTDOWN](/ru/Main/#shutdown)
+
+### SKEW_PROFILE
+[SKEW_PROFILE](/ru/Global/#disable_skew)
 
 ### SKIP_ZMOD
 [SKIP_ZMOD](/ru/Zmod/#skip_zmod)
@@ -171,6 +216,12 @@
 ### TEST_EMMC
 [TEST_EMMC](/ru/System/#test_emmc)
 
+### T_INFO
+[T_INFO](/ru/C5PRO/#макрос-t_info)
+
+### UPDATE_FF_OFFSET
+[UPDATE_FF_OFFSET](/ru/AD5X/)
+
 ### UPDATE_MCU
 [UPDATE_MCU](/ru/System/#update_mcu)
 
@@ -179,6 +230,12 @@
 
 ### ZFLASH
 [ZFLASH](/ru/Zmod/#zflash)
+
+### ZLINK
+[ZLINK](/ru/Zmod/#zlink)
+
+### ZLINK_OFF
+[ZLINK_OFF](/ru/Zmod/#zlink)
 
 ### ZRESTORE
 [ZRESTORE](/ru/Zmod/#zrestore)
@@ -198,9 +255,8 @@
 ### ZSSH_RESTART
 [ZSSH_RESTART](/ru/Zmod/#zssh_restart)
 
-### FIX_E0011
-[E0011](/ru/Global/#fix_e0011)
+### Z_OFFSET_APPLY_ENDSTOP
+[Z_OFFSET_APPLY_ENDSTOP](/ru/SetupCalibrations/)
 
-### FIX_E0017
-[E0017](/ru/Global/#fix_e0017)
-
+### Z_OFFSET_APPLY_PROBE
+[Z_OFFSET_APPLY_PROBE](/ru/SetupCalibrations/)

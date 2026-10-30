@@ -30,6 +30,9 @@ Lze ho vyvolat:
 ### BELTS_SHAPER_CALIBRATION
 [BELTS_SHAPER_CALIBRATION](Calibrations.md#belts_shaper_calibration)
 
+### CALIBRATE_EXTRUDERS
+[CALIBRATE_EXTRUDERS](C5PRO.md)
+
 ### CAMERA_OFF
 [CAMERA_OFF](Zmod.md#camera_off)
 
@@ -81,8 +84,26 @@ Lze ho vyvolat:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](Main.md#fast_close_dialogs)
 
+### FIX_E0011
+[E0011](Global.md#fix_e0011)
+
+### FIX_E0017
+[E0017](Global.md#fix_e0017)
+
+### FIX_KLIPPER
+[FIX_KLIPPER](Native_FW.md#fix_klipper)
+
+### FIX_LOOP
+[FIX_LOOP](Native_FW.md#fix_loop)
+
+### FIX_UPDATE_MCU
+[FIX_UPDATE_MCU](Native_FW.md#fix_update_mcu)
+
 ### GET_ZMOD_DATA
 [GET_ZMOD_DATA](Global.md#get_zmod_data)
+
+### GLOBAL
+[GLOBAL](Global.md#global)
 
 ### KAMP
 [KAMP](Calibrations.md#kamp)
@@ -101,6 +122,12 @@ Lze ho vyvolat:
 
 ### LOAD_CELL_TARE
 [LOAD_CELL_TARE](Calibrations.md#load_cell_tare)
+
+### LOAD_ZOFFSET_NATIVE
+[LOAD_ZOFFSET_NATIVE](Calibrations.md#load_zoffset_native)
+
+### LOG
+[LOG](Native_FW.md#log)
 
 ### M600
 [M600](Filament.md#m600)
@@ -126,11 +153,23 @@ Lze ho vyvolat:
 ### PLAY_MIDI
 [PLAY_MIDI](Main.md#play_midi)
 
+### PLUGINS
+[PLUGINS](Global.md#plugins)
+
+### PRINT
+[PRINT](AD5X.md#4-menu-tisku-print)
+
 ### REBOOT
 [REBOOT](Main.md#reboot)
 
 ### REMOVE_ZMOD
 [REMOVE_ZMOD](Zmod.md#remove_zmod)
+
+### REM_ZMOD
+[REM_ZMOD](Native_FW.md#rem_zmod)
+
+### RESET_PASSWD
+[RESET_PASSWD](System.md#reset_passwd)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](Zmod.md#restore_tar_config)
@@ -140,6 +179,9 @@ Lze ho vyvolat:
 
 ### SAVE_ZMOD_DATA
 [SAVE_ZMOD_DATA](Global.md#save_zmod_data)
+
+### SCREEN
+[SCREEN](System.md#screen)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](Filament.md#set_pause_at_layer)
@@ -152,6 +194,9 @@ Lze ho vyvolat:
 
 ### SHUTDOWN
 [SHUTDOWN](Main.md#shutdown)
+
+### SKEW_PROFILE
+[SKEW_PROFILE](Global.md#disable_skew)
 
 ### SKIP_ZMOD
 [SKIP_ZMOD](Zmod.md#skip_zmod)
@@ -171,6 +216,12 @@ Lze ho vyvolat:
 ### TEST_EMMC
 [TEST_EMMC](System.md#test_emmc)
 
+### T_INFO
+[T_INFO](C5PRO.md#makro-t_info)
+
+### UPDATE_FF_OFFSET
+[UPDATE_FF_OFFSET](AD5X.md)
+
 ### UPDATE_MCU
 [UPDATE_MCU](System.md#update_mcu)
 
@@ -179,6 +230,12 @@ Lze ho vyvolat:
 
 ### ZFLASH
 [ZFLASH](Zmod.md#zflash)
+
+### ZLINK
+[ZLINK](Zmod.md#zlink)
+
+### ZLINK_OFF
+[ZLINK_OFF](Zmod.md#zlink)
 
 ### ZRESTORE
 [ZRESTORE](Zmod.md#zrestore)
@@ -198,8 +255,8 @@ Lze ho vyvolat:
 ### ZSSH_RESTART
 [ZSSH_RESTART](Zmod.md#zssh_restart)
 
-### FIX_E0011
-[E0011](Global.md#fix_e0011)
+### Z_OFFSET_APPLY_ENDSTOP
+[Z_OFFSET_APPLY_ENDSTOP](SetupCalibrations.md)
 
-### FIX_E0017
-[E0017](Global.md#fix_e0017)
+### Z_OFFSET_APPLY_PROBE
+[Z_OFFSET_APPLY_PROBE](SetupCalibrations.md)

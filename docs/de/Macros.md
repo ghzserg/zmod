@@ -30,6 +30,9 @@ Es kann aufgerufen werden:
 ### BELTS_SHAPER_CALIBRATION
 [BELTS_SHAPER_CALIBRATION](/de/Calibrations/#belts_shaper_calibration)
 
+### CALIBRATE_EXTRUDERS
+[CALIBRATE_EXTRUDERS](/de/C5PRO/)
+
 ### CAMERA_OFF
 [CAMERA_OFF](/de/Zmod/#camera_off)
 
@@ -81,8 +84,26 @@ Es kann aufgerufen werden:
 ### FAST_CLOSE_DIALOGS
 [FAST_CLOSE_DIALOGS](/de/Main/#fast_close_dialogs)
 
+### FIX_E0011
+[E0011](/de/Global/#fix_e0011)
+
+### FIX_E0017
+[E0017](/de/Global/#fix_e0017)
+
+### FIX_KLIPPER
+[FIX_KLIPPER](/de/Native_FW/#fix_klipper)
+
+### FIX_LOOP
+[FIX_LOOP](/de/Native_FW/#fix_loop)
+
+### FIX_UPDATE_MCU
+[FIX_UPDATE_MCU](/de/Native_FW/#fix_update_mcu)
+
 ### GET_ZMOD_DATA
 [GET_ZMOD_DATA](/de/Global/#get_zmod_data)
+
+### GLOBAL
+[GLOBAL](/de/Global/#global)
 
 ### KAMP
 [KAMP](/de/Calibrations/#kamp)
@@ -101,6 +122,12 @@ Es kann aufgerufen werden:
 
 ### LOAD_CELL_TARE
 [LOAD_CELL_TARE](/de/Calibrations/#load_cell_tare)
+
+### LOAD_ZOFFSET_NATIVE
+[LOAD_ZOFFSET_NATIVE](/de/Calibrations/#load_zoffset_native)
+
+### LOG
+[LOG](/de/Native_FW/#log)
 
 ### M600
 [M600](/de/Filament/#m600)
@@ -126,11 +153,23 @@ Es kann aufgerufen werden:
 ### PLAY_MIDI
 [PLAY_MIDI](/de/Main/#play_midi)
 
+### PLUGINS
+[PLUGINS](/de/Global/#plugins)
+
+### PRINT
+[PRINT](/de/AD5X/#4-menü-drucken-makro-print-ad5x)
+
 ### REBOOT
 [REBOOT](/de/Main/#reboot)
 
 ### REMOVE_ZMOD
 [REMOVE_ZMOD](/de/Zmod/#remove_zmod)
+
+### REM_ZMOD
+[REM_ZMOD](/de/Native_FW/#rem_zmod)
+
+### RESET_PASSWD
+[RESET_PASSWD](/de/System/#reset_passwd)
 
 ### RESTORE_TAR_CONFIG
 [RESTORE_TAR_CONFIG](/de/Zmod/#restore_tar_config)
@@ -140,6 +179,9 @@ Es kann aufgerufen werden:
 
 ### SAVE_ZMOD_DATA
 [SAVE_ZMOD_DATA](/de/Global/#save_zmod_data)
+
+### SCREEN
+[SCREEN](/de/System/#screen)
 
 ### SET_PAUSE_AT_LAYER
 [SET_PAUSE_AT_LAYER](/de/Filament/#set_pause_at_layer)
@@ -152,6 +194,9 @@ Es kann aufgerufen werden:
 
 ### SHUTDOWN
 [SHUTDOWN](/de/Main/#shutdown)
+
+### SKEW_PROFILE
+[SKEW_PROFILE](/de/Global/#disable_skew)
 
 ### SKIP_ZMOD
 [SKIP_ZMOD](/de/Zmod/#skip_zmod)
@@ -171,6 +216,12 @@ Es kann aufgerufen werden:
 ### TEST_EMMC
 [TEST_EMMC](/de/System/#test_emmc)
 
+### T_INFO
+[T_INFO](/de/C5PRO/#makro-t_info)
+
+### UPDATE_FF_OFFSET
+[UPDATE_FF_OFFSET](/de/AD5X/)
+
 ### UPDATE_MCU
 [UPDATE_MCU](/de/System/#update_mcu)
 
@@ -179,6 +230,12 @@ Es kann aufgerufen werden:
 
 ### ZFLASH
 [ZFLASH](/de/Zmod/#zflash)
+
+### ZLINK
+[ZLINK](/de/Zmod/#zlink)
+
+### ZLINK_OFF
+[ZLINK_OFF](/de/Zmod/#zlink)
 
 ### ZRESTORE
 [ZRESTORE](/de/Zmod/#zrestore)
@@ -198,9 +255,8 @@ Es kann aufgerufen werden:
 ### ZSSH_RESTART
 [ZSSH_RESTART](/de/Zmod/#zssh_restart)
 
-### FIX_E0011
-[E0011](/de/Global/#fix_e0011)
+### Z_OFFSET_APPLY_ENDSTOP
+[Z_OFFSET_APPLY_ENDSTOP](/de/SetupCalibrations/)
 
-### FIX_E0017
-[E0017](/de/Global/#fix_e0017)
-
+### Z_OFFSET_APPLY_PROBE
+[Z_OFFSET_APPLY_PROBE](/de/SetupCalibrations/)
