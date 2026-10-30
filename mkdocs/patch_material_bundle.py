@@ -44,12 +44,31 @@ def find_material_bundle_dir() -> Path:
     return bundle_dir
 
 
+# Search loads sitemap.xml relative to the current page, which breaks on nested
+# pages (e.g. /Native_FW/sitemap.xml). Use the language root instead:
+# /sitemap.xml for English and /<lang>/sitemap.xml for other locales.
+SITEMAP_ORIGINAL = 'new URL("sitemap.xml",e)'
+SITEMAP_REPLACEMENT = (
+    'new URL(((p)=>"/"+(["ru","de","cs","pt"].includes(p)?p+"/":"")+"sitemap.xml")'
+    '(new URL(e).pathname.split("/")[1]||""),e)'
+)
+
+
 def patch_bundle_content(content: str) -> tuple[str, bool]:
     if PATCH_REPLACEMENT in content and "slice(0,10)" not in content:
-        return content, True
+        ok_lazy = True
+    else:
+        content, count = LAZY_PATTERN.subn(PATCH_REPLACEMENT, content, count=1)
+        ok_lazy = count == 1
 
-    patched, count = LAZY_PATTERN.subn(PATCH_REPLACEMENT, content, count=1)
-    return patched, count == 1
+    if SITEMAP_REPLACEMENT in content:
+        ok_sitemap = True
+    else:
+        ok_sitemap = content.count(SITEMAP_ORIGINAL) == 1
+        if ok_sitemap:
+            content = content.replace(SITEMAP_ORIGINAL, SITEMAP_REPLACEMENT, 1)
+
+    return content, ok_lazy and ok_sitemap
 
 
 def run_patch() -> int:
