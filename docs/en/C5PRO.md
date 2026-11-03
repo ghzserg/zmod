@@ -68,6 +68,8 @@ If the type did not change: close the window with the X and run the `COLOR` macr
 
 This window opens automatically when you start printing, if the `SAVE_ZMOD_DATA SILENT=0` parameter is set by default.
 
+Alternative: with the [ORCA_FF](/Global/#orca_ff) parameter, spools for colors are chosen right in OrcaSlicer or Flash Studio when sending a print.
+
 <img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **How to understand what is written here:**

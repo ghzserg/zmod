@@ -973,7 +973,7 @@ Beispiel: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 Nur AD5X / Creator 5 / Creator 5 Pro
 
-Emulator des nativen Bildschirms für Flash Studio und OrcaSlicer im Betrieb ohne nativen Bildschirm. Wie mit dem nativen Bildschirm können Sie den Drucker im Netzwerk finden, Dateien mit Farbzuordnung zum Drucken senden, den Druckstatus sehen und den Druck steuern.
+Emulator des nativen Bildschirms für OrcaSlicer und Flash Studio im Betrieb ohne nativen Bildschirm. Ermöglicht es, die Spulen für die Farben direkt im Slicer beim Senden zum Druck zu wählen (statt im Druckmenü von Fluidd) und mit dem Drucker aus Flash Studio zu arbeiten: ihn im Netzwerk finden, Dateien senden, den Druck überwachen und steuern.
 
 Funktioniert nur bei [deaktiviertem nativen Bildschirm](/de/System/#display_off) (`DISPLAY_OFF`).
 
@@ -983,6 +983,13 @@ Funktioniert nur bei [deaktiviertem nativen Bildschirm](/de/System/#display_off)
 Die Änderung wird nach einem Neustart des Druckers wirksam.
 
 Beispiel: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+Verbindung im Slicer:
+
+- Host-Typ: `FlashForge`
+- Hostname: `IP_printer`
+- API-Schlüssel / Passwort: `zmod` (oder die Daten vom nativen Bildschirm)
+- Seriennummer: `zmod` (oder die Seriennummer des Druckers)
 
 ---
 

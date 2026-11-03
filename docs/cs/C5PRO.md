@@ -68,6 +68,8 @@ Pokud se typ nezměnil: zavřete okno křížkem a spusťte makro `COLOR` znovu.
 
 Toto okno se otevře samo, když začnete tisknout, pokud je nastaven parametr `SAVE_ZMOD_DATA SILENT=0` (výchozí).
 
+Alternativa: s parametrem [ORCA_FF](/cs/Global/#orca_ff) se cívky pro barvy vybírají přímo v OrcaSliceru nebo Flash Studiu při odeslání k tisku.
+
 <img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **Co se zde zobrazuje:**

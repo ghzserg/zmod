@@ -119,6 +119,8 @@ Sie können vier Aktionen ausführen:
 
 Dieses Fenster öffnet sich **automatisch**, wenn Sie den Druck starten.
 
+Alternative: Mit dem Parameter [ORCA_FF](/de/Global/#orca_ff) werden die Spulen für die Farben direkt in OrcaSlicer oder Flash Studio beim Senden zum Druck gewählt.
+
 <img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **Was hier angezeigt wird:**

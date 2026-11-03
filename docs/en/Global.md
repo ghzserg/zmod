@@ -804,7 +804,7 @@ Example: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 AD5X / Creator 5 / Creator 5 Pro only
 
-Native screen emulator for Flash Studio and OrcaSlicer when the native screen is off. Just like with the native screen, it lets you discover the printer on the network, send files to print with color mapping, see the print status and control the print.
+Native screen emulator for OrcaSlicer and Flash Studio when the native screen is off. Lets you choose spools for colors right in the slicer when sending a print (instead of the Fluidd print menu) and work with the printer from Flash Studio: discover it on the network, send files, monitor and control the print.
 
 Works only when the [native screen is disabled](/System/#display_off) (`DISPLAY_OFF`).
 
@@ -814,6 +814,13 @@ Works only when the [native screen is disabled](/System/#display_off) (`DISPLAY_
 The change takes effect after the printer is rebooted.
 
 Example: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+Connection in the slicer:
+
+- Host type: `FlashForge`
+- Hostname: `IP_printer`
+- API key / password: `zmod` (or the data from the native screen)
+- Serial number: `zmod` (or the printer serial number)
 
 ---
 

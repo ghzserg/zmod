@@ -805,7 +805,7 @@ Příklad: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 Pouze AD5X / Creator 5 / Creator 5 Pro
 
-Emulátor nativní obrazovky pro Flash Studio a OrcaSlicer v režimu bez nativní obrazovky. Stejně jako s nativní obrazovkou umožňuje najít tiskárnu v síti, odesílat soubory k tisku s mapováním barev, sledovat stav tisku a ovládat ho.
+Emulátor nativní obrazovky pro OrcaSlicer a Flash Studio v režimu bez nativní obrazovky. Umožňuje vybírat cívky pro barvy přímo ve sliceru při odeslání k tisku (místo menu tisku ve Fluidd) a pracovat s tiskárnou z Flash Studia: najít ji v síti, odesílat soubory, sledovat tisk a ovládat ho.
 
 Funguje pouze s [vypnutou nativní obrazovkou](/cs/System/#display_off) (`DISPLAY_OFF`).
 
@@ -815,6 +815,13 @@ Funguje pouze s [vypnutou nativní obrazovkou](/cs/System/#display_off) (`DISPLA
 Změna se projeví po restartu tiskárny.
 
 Příklad: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+Připojení ve sliceru:
+
+- Typ hostitele: `FlashForge`
+- Název hostitele: `IP_printer`
+- API klíč / heslo: `zmod` (nebo údaje z nativní obrazovky)
+- Sériové číslo: `zmod` (nebo sériové číslo tiskárny)
 
 ---
 

@@ -68,6 +68,8 @@ Wenn sich der Typ nicht geändert hat: Schließen Sie das Fenster mit dem X und 
 
 Dieses Fenster öffnet sich automatisch, wenn Sie mit dem Drucken beginnen, sofern der Parameter `SAVE_ZMOD_DATA SILENT=0` (Standard) gesetzt ist.
 
+Alternative: Mit dem Parameter [ORCA_FF](/de/Global/#orca_ff) werden die Spulen für die Farben direkt in OrcaSlicer oder Flash Studio beim Senden zum Druck gewählt.
+
 <img width="851" height="582" alt="{8C3C174F-A553-405C-8228-7BC8EB293094}" src="../../images/d8089f7d-fcf5-4a47-b664-a27db8b7e9d8.png" />
 
 **Was hier angezeigt wird:**

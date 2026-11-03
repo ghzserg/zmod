@@ -119,6 +119,8 @@ Můžete provést čtyři akce:
 
 Toto okno se otevře **samo**, když spustíte tisk.
 
+Alternativa: s parametrem [ORCA_FF](/cs/Global/#orca_ff) se cívky pro barvy vybírají přímo v OrcaSliceru nebo Flash Studiu při odeslání k tisku.
+
 <img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **Co se zde zobrazuje:**

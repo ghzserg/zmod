@@ -120,6 +120,8 @@ You can perform four actions:
 
 This window opens **by itself** when you start printing.
 
+Alternative: with the [ORCA_FF](/Global/#orca_ff) parameter, spools for colors are chosen right in OrcaSlicer or Flash Studio when sending a print.
+
 <img width="845" height="1046" alt="image" src="../../images/541ca73c-2492-4f72-839e-30af8e2ffeb8.png" />
 
 **How to understand what is written here:**
