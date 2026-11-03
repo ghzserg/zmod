@@ -19,7 +19,7 @@
 5. [HelixScreen](https://github.com/prestonbrown/helixscreen) - альтернативная реализация экрана
 6. [QuickSwap](https://github.com/ninjamida/quickswap-5x) - Плагин для более быстрой смены цветов на AD5X
 7. [Flook32](https://github.com/ghzserg/flook32_plugin) - Плагин для подключения сушилки [Flook32](https://github.com/schreider/flook32) [En](https://github.com/ghzserg/flook32)
-8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy для любого принтера: вставьте ссылку на модель в Discord, Telegram, Matrix или веб-интерфейс, и Print Handy нарежет её, подберёт катушки из Spoolman, спросит перед печатью, проследит по камере за «спагетти» и подшутит над вашей моделью.
+8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy для любого принтера: вставьте ссылку на модель в Discord, Telegram или Matrix, и Print Handy нарежет её, подберёт катушки из Spoolman, спросит перед печатью, проследит по камере за «спагетти» и подшутит над вашей моделью.
 9. [Zmod AFC Lite](https://github.com/DIEHARDave/zmod_afclite) - Показывает слоты IFS на AD5X или головы Creator 5 как линии AFC в панелях AFC Mainsail и Fluidd: загрузка/выгрузка, цвет, материал и катушки Spoolman.
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `PLUGINS`.
