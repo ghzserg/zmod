@@ -969,6 +969,23 @@ Beispiel: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
 
+##### ORCA_FF
+
+Nur AD5X / Creator 5 / Creator 5 Pro
+
+Emulator des nativen Bildschirms für Flash Studio und OrcaSlicer im Betrieb ohne nativen Bildschirm. Wie mit dem nativen Bildschirm können Sie den Drucker im Netzwerk finden, Dateien mit Farbzuordnung zum Drucken senden, den Druckstatus sehen und den Druck steuern.
+
+Funktioniert nur bei [deaktiviertem nativen Bildschirm](/de/System/#display_off) (`DISPLAY_OFF`).
+
+- 0 - Nicht verwenden (Standard)
+- 1 - Verwenden
+
+Die Änderung wird nach einem Neustart des Druckers wirksam.
+
+Beispiel: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Zeit (in Minuten), nach der sich der FF5M Pro automatisch ausschaltet. Standardwert: 0 (deaktiviert).

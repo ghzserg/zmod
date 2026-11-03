@@ -800,6 +800,23 @@ Note: The native screen needs at least 5 seconds to configure WiFi.
 Example: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
+##### ORCA_FF
+
+AD5X / Creator 5 / Creator 5 Pro only
+
+Native screen emulator for Flash Studio and OrcaSlicer when the native screen is off. Just like with the native screen, it lets you discover the printer on the network, send files to print with color mapping, see the print status and control the print.
+
+Works only when the [native screen is disabled](/System/#display_off) (`DISPLAY_OFF`).
+
+- 0 - Do not use (default)
+- 1 - Use
+
+The change takes effect after the printer is rebooted.
+
+Example: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Set the timeout (in minutes) for FF5M Pro to auto-power off. Default: 0 (disabled).

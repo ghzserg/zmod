@@ -801,6 +801,23 @@ Poznámka: Nativní obrazovka potřebuje alespoň 5 sekund na nastavení Wi-Fi.
 Příklad: `SAVE_ZMOD_DATA DISPLAY_OFF_TIMEOUT=120`
 
 ---
+##### ORCA_FF
+
+Pouze AD5X / Creator 5 / Creator 5 Pro
+
+Emulátor nativní obrazovky pro Flash Studio a OrcaSlicer v režimu bez nativní obrazovky. Stejně jako s nativní obrazovkou umožňuje najít tiskárnu v síti, odesílat soubory k tisku s mapováním barev, sledovat stav tisku a ovládat ho.
+
+Funguje pouze s [vypnutou nativní obrazovkou](/cs/System/#display_off) (`DISPLAY_OFF`).
+
+- 0 - Nepoužívat (výchozí)
+- 1 - Používat
+
+Změna se projeví po restartu tiskárny.
+
+Příklad: `SAVE_ZMOD_DATA ORCA_FF=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Doba (v minutách), po které FF5M Pro vypne napájení. Výchozí: 0 (vypnuto).
