@@ -434,6 +434,29 @@ Die Beschriftung `_transparent` wird auf den Schaltflächen angezeigt.
 
 ---
 
+## Filament-Synchronisierung mit OrcaSlicer AD5X
+
+Damit diese Einstellungen funktionieren, müssen Sie **den nativen Bildschirm des Druckers** mit dem Makro `DISPLAY_OFF` deaktivieren.
+
+Der Parameter `orca_lanes` veröffentlicht die IFS-Slots in der Moonraker-Datenbank. OrcaSlicer liest von dort Farbe und Typ des Filaments für die Schaltfläche „Filament synchronisieren“, wenn der Drucker über [Octo/Klipper](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper) (Agent `Moonraker`) oder über den Typ `FlashForge` hinzugefügt wurde.
+
+- `True` - Slots veröffentlichen (Standard)
+- `False` - nicht veröffentlichen
+
+Wenn die Farben von HelixScreen verwaltet werden (`helix = 1`), wird die Veröffentlichung unabhängig von `orca_lanes` übersprungen, damit dessen Daten nicht überschrieben werden.
+
+Zum Deaktivieren in `mod_data/user.cfg` hinzufügen:
+
+```
+[zmod_color]
+orca_lanes: False
+```
+
+??? info "Details"
+    Die Slots werden im Namespace `lane_data` im selben Format wie bei AFC und Happy Hare geschrieben: Slot 1 → `lane0`, …, Slot 4 → `lane3`, z. B. `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. Beim Start von Klipper werden alle Slots veröffentlicht, danach bei jeder Farb- oder Typänderung nur der geänderte Slot. Ein Slot mit Typ `?` wird entfernt, das Vorhandensein von Filament laut Sensoren wird nicht berücksichtigt. Die externe Spule wird nicht veröffentlicht.
+
+---
+
 ## 9. Korrektur der Arbeit mit Abfallbehälter und Filamentschneider AD5X
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)

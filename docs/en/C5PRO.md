@@ -254,6 +254,29 @@ Default is 5. `[Sections]` and macros in this file are not changed by firmware u
 
 ---
 
+## Filament sync with OrcaSlicer
+
+Does not work with the factory screen view, so you first need to [turn off the native printer screen](/System/#display_off) using the `DISPLAY_OFF` macro.
+
+The `orca_lanes` parameter publishes the extruder slots to the Moonraker database. OrcaSlicer reads filament color and type from there for the "Sync filament" button when the printer is added via [Octo/Klipper](/Recommendations/#send-files-via-octoklipper-for-printing) (agent `Moonraker`) or via the `FlashForge` type.
+
+- `True` - publish slots (default)
+- `False` - do not publish
+
+If colors are managed by HelixScreen (`helix = 1`), publishing is skipped regardless of `orca_lanes`, so its data is not overwritten.
+
+To disable, add to `mod_data/user.cfg`:
+
+```
+[zmod_color]
+orca_lanes: False
+```
+
+??? info "Details"
+    Slots are written to the `lane_data` namespace in the same format as AFC and Happy Hare: slot 1 → `lane0`, …, slot 4 → `lane3`, for example `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. All slots are published when Klipper starts, then only the changed slot on every color or type change. A slot with type `?` is removed, filament presence from sensors is not taken into account. The color matched to the printer palette is sent.
+
+---
+
 ## Add your own filament types
 
 For these settings to work, you need to turn off the native printer screen using the `DISPLAY_OFF` macro.

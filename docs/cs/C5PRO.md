@@ -254,6 +254,29 @@ Výchozí je 5. `[Sekce]` a makra v tomto souboru se aktualizací firmwaru nemě
 
 ---
 
+## Synchronizace filamentu s OrcaSlicerem
+
+Nefunguje s tovární obrazovkou, proto je nejprve třeba [vypnout nativní obrazovku tiskárny](/cs/System/#display_off) pomocí makra `DISPLAY_OFF`.
+
+Parametr `orca_lanes` publikuje sloty extruderů do databáze Moonrakeru. OrcaSlicer z ní bere barvu a typ filamentu pro tlačítko „Synchronizovat filament“, pokud je tiskárna přidána přes [Octo/Klipper](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper) (agent `Moonraker`) nebo přes typ `FlashForge`.
+
+- `True` - publikovat sloty (výchozí)
+- `False` - nepublikovat
+
+Pokud barvy spravuje HelixScreen (`helix = 1`), publikování se přeskočí bez ohledu na `orca_lanes`, aby se nepřepsala jeho data.
+
+Pro vypnutí přidejte do `mod_data/user.cfg`:
+
+```
+[zmod_color]
+orca_lanes: False
+```
+
+??? info "Podrobnosti"
+    Sloty se zapisují do namespace `lane_data` ve stejném formátu jako u AFC a Happy Hare: slot 1 → `lane0`, …, slot 4 → `lane3`, například `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. Při startu Klipperu se publikují všechny sloty, poté při každé změně barvy nebo typu jen změněný slot. Slot s typem `?` se odstraní, přítomnost filamentu podle senzorů se nebere v úvahu. Posílá se barva přizpůsobená paletě tiskárny.
+
+---
+
 ## Přidání vlastních typů filamentu
 
 Aby tato nastavení fungovala, je třeba vypnout nativní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.

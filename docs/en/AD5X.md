@@ -435,6 +435,29 @@ The text ```_transparent``` will be displayed on buttons.
 
 ---
 
+## Filament sync with OrcaSlicer
+
+For these settings to work, you need to **disable the printer’s native screen** using the `DISPLAY_OFF` macro.
+
+The `orca_lanes` parameter publishes the IFS slots to the Moonraker database. OrcaSlicer reads filament color and type from there for the "Sync filament" button when the printer is added via [Octo/Klipper](/Recommendations/#send-files-via-octoklipper-for-printing) (agent `Moonraker`) or via the `FlashForge` type.
+
+- `True` - publish slots (default)
+- `False` - do not publish
+
+If colors are managed by HelixScreen (`helix = 1`), publishing is skipped regardless of `orca_lanes`, so its data is not overwritten.
+
+To disable, add to `mod_data/user.cfg`:
+
+```
+[zmod_color]
+orca_lanes: False
+```
+
+??? info "Details"
+    Slots are written to the `lane_data` namespace in the same format as AFC and Happy Hare: slot 1 → `lane0`, …, slot 4 → `lane3`, for example `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. All slots are published when Klipper starts, then only the changed slot on every color or type change. A slot with type `?` is removed, filament presence from sensors is not taken into account. The external spool is not published.
+
+---
+
 ## 9. Fixing Trash Bin and Filament Cutting Knife Operation
 
 [Alternative version of the instructions](/Setup/#ad5x-warning)
