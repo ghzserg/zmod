@@ -325,3 +325,12 @@ Die Datei `config-x.y.z.tar` muss dem Ticket beigefügt werden.
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_klipper.tgz)
+
+1. Laden Sie die Datei für Ihr Modell herunter und legen Sie sie in das Stammverzeichnis eines USB-Sticks (FAT32)
+2. Drucker ausschalten
+3. USB-Stick einstecken
+4. Drucker einschalten
+5. Auf die Meldung auf dem Bildschirm warten
+6. **Drucker ausschalten**
+7. 10 Sekunden warten
+8. Drucker einschalten

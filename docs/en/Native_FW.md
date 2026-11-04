@@ -319,3 +319,12 @@ The config-x.y.z.tar file must be attached to the ticket
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_klipper.tgz)
+
+1. Download the file for your model and put it in the root of a USB flash drive (FAT32)
+2. Turn off the printer
+3. Insert the flash drive
+4. Turn on the printer
+5. Wait for the message on the screen
+6. **Turn off the printer**
+7. Wait 10 seconds
+8. Turn on the printer

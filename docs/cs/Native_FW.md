@@ -320,3 +320,12 @@ Soubor `config-x.y.z.tar` je nutné přiložit k tiketu.
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_klipper.tgz)
+
+1. Stáhněte soubor pro svůj model a uložte ho do kořene flash disku (FAT32)
+2. Vypněte tiskárnu
+3. Vložte flash disk
+4. Zapněte tiskárnu
+5. Počkejte na zprávu na obrazovce
+6. **Vypněte tiskárnu**
+7. Počkejte 10 sekund
+8. Zapněte tiskárnu

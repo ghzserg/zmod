@@ -324,3 +324,12 @@ Fix E0011 Off
 - [AD5M](https://github.com/ghzserg/FF/releases/download/R/Adventurer5M-fix_klipper.tgz)
 - [AD5M Pro](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-fix_klipper.tgz)
 - [AD5X](https://github.com/ghzserg/FF/releases/download/R/AD5X-fix_klipper.tgz)
+
+1. Скачать файл для своей модели и положить в корень флешки (FAT32)
+2. Выключить принтер
+3. Вставить флешку
+4. Включить принтер
+5. Дождаться сообщения на экране
+6. **Выключить принтер**
+7. Подождать 10 секунд
+8. Включить принтер
