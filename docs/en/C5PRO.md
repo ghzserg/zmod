@@ -243,6 +243,19 @@ You can set the following values (in minutes):
 
 ---
 
+Shapers from Klipper 13 are enabled by the parameter:
+
+**KLIPPER_C5**:
+
+- `0` — do not use (default).
+- `1` — use shapers from Klipper 13.
+
+```
+SAVE_ZMOD_DATA KLIPPER_C5=1
+```
+
+---
+
 ## Change the number of attempts to pick up or put back the tool
 
 In the Fluidd web interface, open `mod_data/user.cfg` via "Configuration" in the left column and add the lines:

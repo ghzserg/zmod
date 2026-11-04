@@ -243,6 +243,19 @@ Sie können die folgenden Werte festlegen (in Minuten):
 
 ---
 
+Shaper aus Klipper 13 werden mit dem Parameter aktiviert:
+
+**KLIPPER_C5**:
+
+- `0` — nicht verwenden (Standard).
+- `1` — Shaper aus Klipper 13 verwenden.
+
+```
+SAVE_ZMOD_DATA KLIPPER_C5=1
+```
+
+---
+
 ## Anzahl der Versuche ändern, das Werkzeug aufzunehmen oder abzulegen
 
 Öffnen Sie in der Fluidd-Weboberfläche über „Konfiguration“ in der linken Spalte die Datei `mod_data/user.cfg` und fügen Sie hinzu:

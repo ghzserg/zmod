@@ -993,6 +993,19 @@ Verbindung im Slicer:
 
 ---
 
+##### KLIPPER_C5
+
+Nur Creator 5 / Creator 5 Pro
+
+Shaper aus Klipper 13 verwenden.
+
+- 0 - Nicht verwenden (Standard)
+- 1 - Verwenden
+
+Beispiel: `SAVE_ZMOD_DATA KLIPPER_C5=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Zeit (in Minuten), nach der sich der FF5M Pro automatisch ausschaltet. Standardwert: 0 (deaktiviert).

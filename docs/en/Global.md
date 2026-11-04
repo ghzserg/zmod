@@ -824,6 +824,19 @@ Connection in the slicer:
 
 ---
 
+##### KLIPPER_C5
+
+Creator 5 / Creator 5 Pro only
+
+Use shapers from Klipper 13.
+
+- 0 - Do not use (default)
+- 1 - Use
+
+Example: `SAVE_ZMOD_DATA KLIPPER_C5=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Set the timeout (in minutes) for FF5M Pro to auto-power off. Default: 0 (disabled).

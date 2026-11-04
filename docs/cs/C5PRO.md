@@ -243,6 +243,19 @@ Můžete nastavit následující hodnoty (v minutách):
 
 ---
 
+Shapery z Klipperu 13 zapíná parametr:
+
+**KLIPPER_C5**:
+
+- `0` — nepoužívat (výchozí).
+- `1` — používat shapery z Klipperu 13.
+
+```
+SAVE_ZMOD_DATA KLIPPER_C5=1
+```
+
+---
+
 ## Změna počtu pokusů o uchopení nebo odložení nástroje
 
 Ve webovém rozhraní Fluidd otevřete v levém sloupci „Konfigurace“ soubor `mod_data/user.cfg` a přidejte:

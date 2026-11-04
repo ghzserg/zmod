@@ -864,6 +864,19 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 ---
 
+##### KLIPPER_C5
+
+Только Creator 5 / Creator 5 Pro
+
+Использовать шейперы из Klipper 13.
+
+- 0 - Не использовать (по умолчанию)
+- 1 - Использовать
+
+Пример: `SAVE_ZMOD_DATA KLIPPER_C5=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Устанавливает время в минутах, через которое FF5M Pro отключит питание. (0)

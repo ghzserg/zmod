@@ -825,6 +825,19 @@ Připojení ve sliceru:
 
 ---
 
+##### KLIPPER_C5
+
+Pouze Creator 5 / Creator 5 Pro
+
+Používat shapery z Klipperu 13.
+
+- 0 - Nepoužívat (výchozí)
+- 1 - Používat
+
+Příklad: `SAVE_ZMOD_DATA KLIPPER_C5=1`
+
+---
+
 ##### PRO_POWEROFF_TIMEOUT
 
 Doba (v minutách), po které FF5M Pro vypne napájení. Výchozí: 0 (vypnuto).
