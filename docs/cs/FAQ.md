@@ -794,35 +794,41 @@ Pokud chybu nedokážete opravit, [vytvořte tiket](/cs/Help/).
 
 Pouze AD5M / AD5M Pro, ve výchozím stavu zapnuto. Na AD5X, Creator 5 a Creator 5 Pro není potřeba: tam je eMMC už rychlá.
 
-Ve výchozím stavu běží eMMC na 25 MHz, čtení kolem 11 MB/s. Z-Mod zapíná režim HS52 na 50 MHz: standardní režim eMMC (do 52 MHz), který FlashForge nezapnul. Čtení se zrychlí zhruba 2krát, až na ~22 MB/s.
+Ve výchozím stavu běží eMMC na 25 MHz, čtení kolem 11 MB/s. Zapíná se režim HS52 na 50 MHz: standardní režim eMMC (do 52 MHz), který FlashForge nezapnul. Čtení se zrychlí zhruba 2krát, až na ~22 MB/s.
 
 Jak to funguje:
 
-1. Po instalaci Z-Mod připraví test. Tiskárna se sama nerestartuje.
-2. Při dalším startu běží eMMC na 50 MHz a Z-Mod ji otestuje: zapíše a přečte 128 MB a porovná kontrolní součet. Je potřeba aspoň 256 MB volného místa v `/data`, jinak se test odloží.
+1. Po instalaci se připraví test. Tiskárna se sama nerestartuje.
+2. Při dalším startu běží eMMC na 50 MHz a otestuje se: zapíše a přečte se 128 MB a porovná se kontrolní součet. Je potřeba aspoň 256 MB volného místa v `/data`, jinak se test odloží.
 3. Test prošel: dál eMMC vždy běží na 50 MHz. Test neprošel nebo čip režim nepodporuje: zůstane 25 MHz, bez dalších pokusů.
 
-Ochrana proti zamrznutí: 50 MHz se zapíná jen pro jeden další start a znovu po každém úspěšném startu. Pokud tiskárna při startu zamrzne, vypněte ji a zapněte: nastartuje ve výchozím režimu. Po 3 neúspěšných startech za sebou se funkce sama vypne. Pokud Z-Mod odstraníte, tiskárna se po jednom startu sama vrátí k výchozímu nastavení.
+Ochrana proti zamrznutí: 50 MHz se zapíná jen pro jeden další start a znovu po každém úspěšném startu. Pokud tiskárna při startu zamrzne, vypněte ji a zapněte: nastartuje ve výchozím režimu. Po 3 neúspěšných startech za sebou se funkce sama vypne. Při odstranění modu se výchozí nastavení startu obnoví automaticky.
 
 !!! warning "Riziko"
     U nestabilního čipu může dojít k poškození dat ještě před dokončením testu. Režim je v mezích standardu, proto je riziko nízké.
 
 - Vypnout: vytvořte soubor `mod_data/emmc/disable.txt`. Další start proběhne ve výchozím režimu. Smažte soubor pro opětovné zapnutí.
-- Zopakovat test: smažte všechny soubory z `mod_data/emmc/` a dvakrát restartujte tiskárnu.
+- Zopakovat test: smažte všechny soubory z `mod_data/emmc/` a dvakrát restartujte tiskárnu. Po aktualizaci algoritmu se test zopakuje sám.
 - Log: `mod_data/log/emmc/emmc.log`
 
-??? info "Podrobnosti"
-    Výsledky na AD5M (Hynix HAG2e), čtení 128 MB:
+**DDR52** (volba): zhruba 2krát rychlejší než HS52, až ~44 MB/s. Zapnout: vytvořte soubor `mod_data/emmc/ddr.txt`, test proběhne při dalším startu. Pokud DDR52 nefunguje, `ddr.txt` se sám smaže a eMMC se vrátí na HS52. Vypnout: smažte `ddr.txt`, jeden start ještě proběhne v DDR52, pak HS52 s testem. Ověřeno jen na Hynix HAG2e.
 
-    | | 25 MHz (výchozí) | 50 MHz HS52 |
-    |---|---|---|
-    | Čas | 11,2 s (~11,4 MB/s) | 5,69 s (~22,5 MB/s) |
+??? info "Podrobnosti"
+    Rychlost na AD5M (Hynix HAG2e):
+
+    | Režim | Frekvence / napětí | Čtení | Zápis |
+    |---|---|---|---|
+    | Výchozí | 25 MHz / 1,8 V | ~11,5 MB/s | ~10,6 MB/s |
+    | HS52 (přednastaveno) | 50 MHz / 3,3 V | ~22,5 MB/s | — |
+    | DDR52 (`ddr.txt`) | 50 MHz / 1,8 V | ~43,9 MB/s | ~42,6 MB/s |
+
+    Výš to nejde: DDR52 je podle standardu omezen na 52 MHz a HS400 vyžaduje 8bitovou sběrnici, AD5M má 4bitovou.
 
     HS200 se nepoužívá: na některých čipech (například FORESEE PSE6A0SL) nefunguje a jádro pak rovnou spadne na 25 MHz a HS52 přeskočí. HS52 podporuje každá eMMC.
 
-    Soubor `sunxi.dtb` se nemění: U-Boot předává jádru svůj pracovní DTB, proto ho Z-Mod upravuje příkazy U-Bootu přes env, a jen pro jeden start.
+    Soubor `sunxi.dtb` na disku se nemění: DTB se upravuje v paměti příkazy U-Bootu přes env, a jen pro jeden start. Způsob úpravy se volí automaticky podle velikosti paměti tiskárny (128 nebo 256 MB), nic není třeba nastavovat.
 
-    Zkontrolovat aktuální režim (`clock`, `timing spec`: 1 = high-speed):
+    Zkontrolovat aktuální režim (`clock`, `timing spec`: 1 = HS52, 8 = DDR52, 9 = HS200 (výchozí)):
 
     ```
     cat /sys/kernel/debug/mmc0/ios

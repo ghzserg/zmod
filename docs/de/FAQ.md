@@ -894,35 +894,41 @@ Wenn Sie den Fehler nicht beheben können, [erstellen Sie ein Ticket](#wie-konta
 
 Nur AD5M / AD5M Pro, standardmäßig aktiviert. Beim AD5X, Creator 5 und Creator 5 Pro nicht nötig: dort ist die eMMC bereits schnell.
 
-Standardmäßig läuft die eMMC mit 25 MHz, Lesen mit etwa 11 MB/s. Z-Mod aktiviert den Modus HS52 mit 50 MHz: ein Standardmodus der eMMC (bis 52 MHz), den FlashForge nicht aktiviert hat. Das Lesen wird etwa 2-mal schneller, bis ~22 MB/s.
+Standardmäßig läuft die eMMC mit 25 MHz, Lesen mit etwa 11 MB/s. Aktiviert wird der Modus HS52 mit 50 MHz: ein Standardmodus der eMMC (bis 52 MHz), den FlashForge nicht eingeschaltet hat. Das Lesen wird etwa 2-mal schneller, bis ~22 MB/s.
 
 So funktioniert es:
 
-1. Nach der Installation bereitet Z-Mod einen Test vor. Der Drucker startet nicht von selbst neu.
-2. Beim nächsten Start läuft die eMMC mit 50 MHz und Z-Mod testet sie: schreibt und liest 128 MB und vergleicht die Prüfsumme. Es werden mindestens 256 MB freier Speicher in `/data` benötigt, sonst wird der Test verschoben.
+1. Nach der Installation wird ein Test vorbereitet. Der Drucker startet nicht von selbst neu.
+2. Beim nächsten Start läuft die eMMC mit 50 MHz und wird getestet: 128 MB werden geschrieben und gelesen, die Prüfsumme wird verglichen. Es werden mindestens 256 MB freier Speicher in `/data` benötigt, sonst wird der Test verschoben.
 3. Test bestanden: danach läuft die eMMC immer mit 50 MHz. Test nicht bestanden oder der Chip unterstützt den Modus nicht: es bleibt bei 25 MHz, ohne weitere Versuche.
 
-Schutz vor Hängern: 50 MHz wird nur für den nächsten einzelnen Start aktiviert und nach jedem erfolgreichen Start erneut. Wenn der Drucker beim Start hängt, schalten Sie ihn aus und wieder ein: er startet im Standardmodus. Nach 3 fehlgeschlagenen Starts in Folge deaktiviert sich die Funktion selbst. Wird Z-Mod entfernt, kehrt der Drucker nach einem Start von selbst zu den Standardeinstellungen zurück.
+Schutz vor Hängern: 50 MHz wird nur für den nächsten einzelnen Start aktiviert und nach jedem erfolgreichen Start erneut. Wenn der Drucker beim Start hängt, schalten Sie ihn aus und wieder ein: er startet im Standardmodus. Nach 3 fehlgeschlagenen Starts in Folge deaktiviert sich die Funktion selbst. Beim Entfernen des Mods werden die Standard-Starteinstellungen automatisch wiederhergestellt.
 
 !!! warning "Risiko"
     Bei einem instabilen Chip sind Datenschäden möglich, bevor der Test abgeschlossen ist. Der Modus liegt innerhalb des Standards, daher ist das Risiko gering.
 
 - Deaktivieren: die Datei `mod_data/emmc/disable.txt` anlegen. Der nächste Start erfolgt im Standardmodus. Datei löschen, um wieder zu aktivieren.
-- Test wiederholen: alle Dateien aus `mod_data/emmc/` löschen und den Drucker zweimal neu starten.
+- Test wiederholen: alle Dateien aus `mod_data/emmc/` löschen und den Drucker zweimal neu starten. Nach einer Aktualisierung des Algorithmus wird der Test automatisch wiederholt.
 - Log: `mod_data/log/emmc/emmc.log`
 
-??? info "Details"
-    Ergebnisse beim AD5M (Hynix HAG2e), Lesen von 128 MB:
+**DDR52** (Option): etwa 2-mal schneller als HS52, bis ~44 MB/s. Aktivieren: die Datei `mod_data/emmc/ddr.txt` anlegen, der Test läuft beim nächsten Start. Funktioniert DDR52 nicht, wird `ddr.txt` automatisch gelöscht und die eMMC kehrt zu HS52 zurück. Deaktivieren: `ddr.txt` löschen, ein Start erfolgt noch in DDR52, danach HS52 mit Test. Nur mit Hynix HAG2e getestet.
 
-    | | 25 MHz (Standard) | 50 MHz HS52 |
-    |---|---|---|
-    | Zeit | 11,2 s (~11,4 MB/s) | 5,69 s (~22,5 MB/s) |
+??? info "Details"
+    Geschwindigkeit beim AD5M (Hynix HAG2e):
+
+    | Modus | Frequenz / Spannung | Lesen | Schreiben |
+    |---|---|---|---|
+    | Standard | 25 MHz / 1,8 V | ~11,5 MB/s | ~10,6 MB/s |
+    | HS52 (voreingestellt) | 50 MHz / 3,3 V | ~22,5 MB/s | — |
+    | DDR52 (`ddr.txt`) | 50 MHz / 1,8 V | ~43,9 MB/s | ~42,6 MB/s |
+
+    Mehr geht nicht: DDR52 ist laut Standard auf 52 MHz begrenzt, und HS400 benötigt einen 8-Bit-Bus, der AD5M hat einen 4-Bit-Bus.
 
     HS200 wird nicht verwendet: bei manchen Chips (z. B. FORESEE PSE6A0SL) funktioniert er nicht, und der Kernel fällt dann direkt auf 25 MHz zurück und überspringt HS52. HS52 wird von jeder eMMC unterstützt.
 
-    Die Datei `sunxi.dtb` wird nicht verändert: U-Boot übergibt dem Kernel seinen eigenen Arbeits-DTB, daher ändert Z-Mod ihn mit U-Boot-Befehlen über env, und nur für einen Start.
+    Die Datei `sunxi.dtb` auf dem Datenträger wird nicht verändert: der DTB wird im Speicher mit U-Boot-Befehlen über env geändert, und nur für einen Start. Die Methode wird automatisch nach der Speichergröße des Druckers (128 oder 256 MB) gewählt, nichts muss eingestellt werden.
 
-    Aktuellen Modus prüfen (`clock`, `timing spec`: 1 = high-speed):
+    Aktuellen Modus prüfen (`clock`, `timing spec`: 1 = HS52, 8 = DDR52, 9 = HS200 (Standard)):
 
     ```
     cat /sys/kernel/debug/mmc0/ios

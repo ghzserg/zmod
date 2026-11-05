@@ -860,35 +860,41 @@ If you can't fix it, [you need to create a ticket](/Help/).
 
 AD5M / AD5M Pro only, enabled by default. Not needed on AD5X, Creator 5 and Creator 5 Pro: their eMMC is already fast.
 
-By default the eMMC runs at 25 MHz, reading at about 11 MB/s. Z-Mod enables HS52 mode at 50 MHz: a standard eMMC mode (up to 52 MHz) that FlashForge did not enable. Reading becomes about 2 times faster, up to ~22 MB/s.
+By default the eMMC runs at 25 MHz, reading at about 11 MB/s. HS52 mode is enabled at 50 MHz: a standard eMMC mode (up to 52 MHz) that FlashForge did not enable. Reading becomes about 2 times faster, up to ~22 MB/s.
 
 How it works:
 
-1. After installation, Z-Mod prepares a test. The printer does not reboot by itself.
-2. On the next boot the eMMC runs at 50 MHz and Z-Mod tests it: writes and reads 128 MB and compares the checksum. At least 256 MB of free space in `/data` is required, otherwise the test is postponed.
+1. After installation, a test is prepared. The printer does not reboot by itself.
+2. On the next boot the eMMC runs at 50 MHz and is tested: 128 MB is written and read and the checksum compared. At least 256 MB of free space in `/data` is required, otherwise the test is postponed.
 3. Test passed: from then on the eMMC always runs at 50 MHz. Test failed or the chip does not support the mode: it stays at 25 MHz, with no further attempts.
 
-Hang protection: 50 MHz is enabled only for the next single boot, and again after every successful boot. If the printer hangs while booting, turn it off and on: it will boot in stock mode. After 3 failed boots in a row the feature disables itself. If Z-Mod is removed, the printer returns to stock settings by itself after one boot.
+Hang protection: 50 MHz is enabled only for the next single boot, and again after every successful boot. If the printer hangs while booting, turn it off and on: it will boot in stock mode. After 3 failed boots in a row the feature disables itself. When the mod is removed, the stock boot settings are restored automatically.
 
 !!! warning "Risk"
     On an unstable chip, data corruption is possible before the test finishes. The mode is within the standard, so the risk is low.
 
 - Disable: create the file `mod_data/emmc/disable.txt`. The next boot will be in stock mode. Delete the file to enable it again.
-- Repeat the test: delete all files from `mod_data/emmc/` and reboot the printer twice.
+- Repeat the test: delete all files from `mod_data/emmc/` and reboot the printer twice. After an algorithm update the test is repeated automatically.
 - Log: `mod_data/log/emmc/emmc.log`
 
-??? info "Details"
-    Results on AD5M (Hynix HAG2e), reading 128 MB:
+**DDR52** (option): about 2 times faster than HS52, up to ~44 MB/s. Enable: create the file `mod_data/emmc/ddr.txt`, the test runs on the next boot. If DDR52 does not work, `ddr.txt` is deleted automatically and the eMMC returns to HS52. Disable: delete `ddr.txt`, one more boot will still be in DDR52, then HS52 with a test. Tested only on Hynix HAG2e.
 
-    | | 25 MHz (stock) | 50 MHz HS52 |
-    |---|---|---|
-    | Time | 11.2 s (~11.4 MB/s) | 5.69 s (~22.5 MB/s) |
+??? info "Details"
+    Speed on AD5M (Hynix HAG2e):
+
+    | Mode | Frequency / voltage | Read | Write |
+    |---|---|---|---|
+    | Stock | 25 MHz / 1.8 V | ~11.5 MB/s | ~10.6 MB/s |
+    | HS52 (default) | 50 MHz / 3.3 V | ~22.5 MB/s | — |
+    | DDR52 (`ddr.txt`) | 50 MHz / 1.8 V | ~43.9 MB/s | ~42.6 MB/s |
+
+    Higher is not possible: DDR52 is limited to 52 MHz by the standard, and HS400 requires an 8-bit bus, while AD5M has a 4-bit one.
 
     HS200 is not used: on some chips (for example, FORESEE PSE6A0SL) it does not work, and the kernel then drops straight to 25 MHz, skipping HS52. HS52 is supported by any eMMC.
 
-    The `sunxi.dtb` file is not modified: U-Boot passes its own working DTB to the kernel, so Z-Mod edits it with U-Boot commands via env, and only for one boot.
+    The `sunxi.dtb` file on disk is not modified: the DTB is edited in memory with U-Boot commands via env, and only for one boot. The editing method is chosen automatically by the printer memory size (128 or 256 MB), nothing needs to be configured.
 
-    Check the current mode (`clock`, `timing spec`: 1 = high-speed):
+    Check the current mode (`clock`, `timing spec`: 1 = HS52, 8 = DDR52, 9 = HS200 (stock)):
 
     ```
     cat /sys/kernel/debug/mmc0/ios
