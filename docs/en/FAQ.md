@@ -856,3 +856,54 @@ If you can't fix it, [you need to create a ticket](/Help/).
 
 [Native configs](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
 
+### eMMC speed-up on AD5M / AD5M Pro
+
+AD5M / AD5M Pro only, enabled by default. Not needed on AD5X, Creator 5 and Creator 5 Pro: their eMMC is already fast.
+
+By default the eMMC runs at 25 MHz, reading at about 11 MB/s. Z-Mod enables HS52 mode at 50 MHz: a standard eMMC mode (up to 52 MHz) that FlashForge did not enable. Reading becomes about 2 times faster, up to ~22 MB/s.
+
+How it works:
+
+1. After installation, Z-Mod prepares a test. The printer does not reboot by itself.
+2. On the next boot the eMMC runs at 50 MHz and Z-Mod tests it: writes and reads 128 MB and compares the checksum. At least 256 MB of free space in `/data` is required, otherwise the test is postponed.
+3. Test passed: from then on the eMMC always runs at 50 MHz. Test failed or the chip does not support the mode: it stays at 25 MHz, with no further attempts.
+
+Hang protection: 50 MHz is enabled only for the next single boot, and again after every successful boot. If the printer hangs while booting, turn it off and on: it will boot in stock mode. After 3 failed boots in a row the feature disables itself. If Z-Mod is removed, the printer returns to stock settings by itself after one boot.
+
+!!! warning "Risk"
+    On an unstable chip, data corruption is possible before the test finishes. The mode is within the standard, so the risk is low.
+
+- Disable: create the file `mod_data/emmc/disable.txt`. The next boot will be in stock mode. Delete the file to enable it again.
+- Repeat the test: delete all files from `mod_data/emmc/` and reboot the printer twice.
+- Log: `mod_data/log/emmc/emmc.log`
+
+??? info "Details"
+    Results on AD5M (Hynix HAG2e), reading 128 MB:
+
+    | | 25 MHz (stock) | 50 MHz HS52 |
+    |---|---|---|
+    | Time | 11.2 s (~11.4 MB/s) | 5.69 s (~22.5 MB/s) |
+
+    HS200 is not used: on some chips (for example, FORESEE PSE6A0SL) it does not work, and the kernel then drops straight to 25 MHz, skipping HS52. HS52 is supported by any eMMC.
+
+    The `sunxi.dtb` file is not modified: U-Boot passes its own working DTB to the kernel, so Z-Mod edits it with U-Boot commands via env, and only for one boot.
+
+    Check the current mode (`clock`, `timing spec`: 1 = high-speed):
+
+    ```
+    cat /sys/kernel/debug/mmc0/ios
+    ```
+
+    Chip model:
+
+    ```
+    cat /sys/class/mmc_host/mmc0/mmc0:*/name
+    cat /sys/class/mmc_host/mmc0/mmc0:*/manfid
+    ```
+
+    Manual rollback:
+
+    ```
+    fw_setenv bootcmd 'run setargs_mmc boot_dsp0 boot_uImage'
+    fw_setenv boot_zmod
+    ```

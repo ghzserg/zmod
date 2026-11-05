@@ -789,3 +789,55 @@ Chcete-li zjistit, o jakou chybu přesně jde:
 Pokud chybu nedokážete opravit, [vytvořte tiket](/cs/Help/).
 
 [Nativní konfigurace](https://github.com/ghzserg/zmod/tree/main/Native_firmware/config/)
+
+### Zrychlení eMMC na AD5M / AD5M Pro
+
+Pouze AD5M / AD5M Pro, ve výchozím stavu zapnuto. Na AD5X, Creator 5 a Creator 5 Pro není potřeba: tam je eMMC už rychlá.
+
+Ve výchozím stavu běží eMMC na 25 MHz, čtení kolem 11 MB/s. Z-Mod zapíná režim HS52 na 50 MHz: standardní režim eMMC (do 52 MHz), který FlashForge nezapnul. Čtení se zrychlí zhruba 2krát, až na ~22 MB/s.
+
+Jak to funguje:
+
+1. Po instalaci Z-Mod připraví test. Tiskárna se sama nerestartuje.
+2. Při dalším startu běží eMMC na 50 MHz a Z-Mod ji otestuje: zapíše a přečte 128 MB a porovná kontrolní součet. Je potřeba aspoň 256 MB volného místa v `/data`, jinak se test odloží.
+3. Test prošel: dál eMMC vždy běží na 50 MHz. Test neprošel nebo čip režim nepodporuje: zůstane 25 MHz, bez dalších pokusů.
+
+Ochrana proti zamrznutí: 50 MHz se zapíná jen pro jeden další start a znovu po každém úspěšném startu. Pokud tiskárna při startu zamrzne, vypněte ji a zapněte: nastartuje ve výchozím režimu. Po 3 neúspěšných startech za sebou se funkce sama vypne. Pokud Z-Mod odstraníte, tiskárna se po jednom startu sama vrátí k výchozímu nastavení.
+
+!!! warning "Riziko"
+    U nestabilního čipu může dojít k poškození dat ještě před dokončením testu. Režim je v mezích standardu, proto je riziko nízké.
+
+- Vypnout: vytvořte soubor `mod_data/emmc/disable.txt`. Další start proběhne ve výchozím režimu. Smažte soubor pro opětovné zapnutí.
+- Zopakovat test: smažte všechny soubory z `mod_data/emmc/` a dvakrát restartujte tiskárnu.
+- Log: `mod_data/log/emmc/emmc.log`
+
+??? info "Podrobnosti"
+    Výsledky na AD5M (Hynix HAG2e), čtení 128 MB:
+
+    | | 25 MHz (výchozí) | 50 MHz HS52 |
+    |---|---|---|
+    | Čas | 11,2 s (~11,4 MB/s) | 5,69 s (~22,5 MB/s) |
+
+    HS200 se nepoužívá: na některých čipech (například FORESEE PSE6A0SL) nefunguje a jádro pak rovnou spadne na 25 MHz a HS52 přeskočí. HS52 podporuje každá eMMC.
+
+    Soubor `sunxi.dtb` se nemění: U-Boot předává jádru svůj pracovní DTB, proto ho Z-Mod upravuje příkazy U-Bootu přes env, a jen pro jeden start.
+
+    Zkontrolovat aktuální režim (`clock`, `timing spec`: 1 = high-speed):
+
+    ```
+    cat /sys/kernel/debug/mmc0/ios
+    ```
+
+    Model čipu:
+
+    ```
+    cat /sys/class/mmc_host/mmc0/mmc0:*/name
+    cat /sys/class/mmc_host/mmc0/mmc0:*/manfid
+    ```
+
+    Ruční návrat:
+
+    ```
+    fw_setenv bootcmd 'run setargs_mmc boot_dsp0 boot_uImage'
+    fw_setenv boot_zmod
+    ```
