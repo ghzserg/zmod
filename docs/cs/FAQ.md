@@ -819,7 +819,7 @@ Ochrana proti zamrznutí: 50 MHz se zapíná jen pro jeden další start a znovu
     | Režim | Frekvence / napětí | Čtení | Zápis |
     |---|---|---|---|
     | Výchozí | 25 MHz / 1,8 V | ~11,5 MB/s | ~10,6 MB/s |
-    | HS52 (přednastaveno) | 50 MHz / 3,3 V | ~22,5 MB/s | — |
+    | HS52 (přednastaveno) | 50 MHz / 3,3 V | ~22,5 MB/s | ~21 MB/s |
     | DDR52 (`ddr.txt`) | 50 MHz / 1,8 V | ~43,9 MB/s | ~42,6 MB/s |
 
     Výš to nejde: DDR52 je podle standardu omezen na 52 MHz a HS400 vyžaduje 8bitovou sběrnici, AD5M má 4bitovou.

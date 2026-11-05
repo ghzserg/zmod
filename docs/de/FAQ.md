@@ -919,7 +919,7 @@ Schutz vor Hängern: 50 MHz wird nur für den nächsten einzelnen Start aktivier
     | Modus | Frequenz / Spannung | Lesen | Schreiben |
     |---|---|---|---|
     | Standard | 25 MHz / 1,8 V | ~11,5 MB/s | ~10,6 MB/s |
-    | HS52 (voreingestellt) | 50 MHz / 3,3 V | ~22,5 MB/s | — |
+    | HS52 (voreingestellt) | 50 MHz / 3,3 V | ~22,5 MB/s | ~21 MB/s |
     | DDR52 (`ddr.txt`) | 50 MHz / 1,8 V | ~43,9 MB/s | ~42,6 MB/s |
 
     Mehr geht nicht: DDR52 ist laut Standard auf 52 MHz begrenzt, und HS400 benötigt einen 8-Bit-Bus, der AD5M hat einen 4-Bit-Bus.
