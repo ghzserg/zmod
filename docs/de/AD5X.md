@@ -459,6 +459,35 @@ orca_lanes: False
 
 ---
 
+## AFC-Panel
+
+Die IFS-Slots (AD5X) und die Werkzeugköpfe (Creator 5 Pro) werden in Fluidd und Mainsail als Standard-AFC-Panel angezeigt. Funktioniert mit und ohne nativen Bildschirm.
+
+### Aktivieren
+
+`SAVE_ZMOD_DATA AFC=1`, danach Klipper neu starten. Deaktivieren: `SAVE_ZMOD_DATA AFC=0`.
+
+### Funktionen
+
+- Farbe, Typ und Vorhandensein des Filaments in jedem Slot.
+- Farbe und Typ ändern, Laden und Entladen direkt aus dem Panel.
+- Lane-Auswahlfenster vor dem Druck (Fluidd 1.37.3+): Zuordnung der Werkzeuge der Datei zu den Slots. Die Zuordnung bleibt zwischen Drucken erhalten und kann auch während des Drucks geändert werden.
+- Bei aktiviertem AFC wird das Farbauswahlfenster vor dem Druck nicht angezeigt und die automatische Farbzuordnung ist deaktiviert: es wird die AFC-Zuordnung verwendet. Wird eine Zuordnung explizit übergeben (T0=…), wird diese verwendet.
+- Die Schaltfläche für die Endlosspule meldet, dass der Ersatz nach Filamenttyp und -farbe gewählt wird.
+
+### Plugin zmod_afclite
+
+Das Plugin zmod_afclite wurde entfernt und durch die integrierte AFC-Unterstützung ersetzt. Beim Update:
+
+- war das Plugin aktiviert, wird es deaktiviert und AFC automatisch aktiviert;
+- das Plugin wird aus den Moonraker-Konfigurationen entfernt und sein Verzeichnis gelöscht.
+
+### Danksagung
+
+Danke an [DIEHARDave](https://github.com/DIEHARDave) für das Plugin [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite), das den Weg und die Lösung gezeigt hat.
+
+---
+
 ## 9. Korrektur der Arbeit mit Abfallbehälter und Filamentschneider AD5X
 
 [Alternative Anweisungen](/de/Setup/#achtung-ad5x)

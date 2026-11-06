@@ -452,6 +452,35 @@ orca_lanes: False
 
 ---
 
+## Panel AFC
+
+Sloty IFS (AD5X) a tiskové hlavy (Creator 5 Pro) se ve Fluidd a Mainsail zobrazují jako standardní panel AFC. Funguje s nativní obrazovkou i bez ní.
+
+### Zapnutí
+
+`SAVE_ZMOD_DATA AFC=1`, poté restartujte Klipper. Vypnutí: `SAVE_ZMOD_DATA AFC=0`.
+
+### Možnosti
+
+- Barva, typ a přítomnost filamentu v každém slotu.
+- Změna barvy a typu, zavádění a vysouvání přímo z panelu.
+- Okno výběru lane před tiskem (Fluidd 1.37.3+): přiřazení nástrojů souboru ke slotům. Mapa se uchovává mezi tisky a lze ji měnit i během tisku.
+- Při zapnutém AFC se okno výběru barvy před tiskem nezobrazuje a automatické přiřazení barev je vypnuto: používá se mapa AFC. Pokud je přiřazení předáno explicitně (T0=…), použije se to.
+- Tlačítko nekonečné cívky hlásí, že náhrada se vybírá podle typu a barvy filamentu.
+
+### Plugin zmod_afclite
+
+Plugin zmod_afclite byl odstraněn a nahrazen vestavěnou podporou AFC. Při aktualizaci:
+
+- pokud byl plugin zapnutý, vypne se a AFC se zapne automaticky;
+- plugin se odstraní z konfigurací Moonrakeru a jeho adresář se smaže.
+
+### Poděkování
+
+Děkujeme [DIEHARDave](https://github.com/DIEHARDave) za plugin [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite), který ukázal cestu a řešení.
+
+---
+
 ## 9. Oprava práce s odpadním košem a nožem na filament
 
 [Alternativní verze pokynů](/cs/Setup/#varování-ad5x)

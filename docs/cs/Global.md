@@ -825,6 +825,21 @@ Připojení ve sliceru:
 
 ---
 
+##### AFC
+
+Pouze AD5X / Creator 5 Pro
+
+Zobrazovat sloty IFS (AD5X) a tiskové hlavy (Creator 5 Pro) ve Fluidd a Mainsail jako standardní panel AFC. Funguje s nativní obrazovkou i bez ní. Podrobnosti: [AD5X](/cs/AD5X/#panel-afc), [Creator 5 Pro](/cs/C5PRO/#panel-afc).
+
+- 0 - Nepoužívat (výchozí)
+- 1 - Používat
+
+Změna se projeví po restartu Klipperu.
+
+Příklad: `SAVE_ZMOD_DATA AFC=1`
+
+---
+
 ##### KLIPPER_C5
 
 Pouze Creator 5 / Creator 5 Pro

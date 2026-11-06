@@ -292,6 +292,35 @@ orca_lanes: False
 
 ---
 
+## AFC panel
+
+The IFS slots (AD5X) and toolheads (Creator 5 Pro) are shown in Fluidd and Mainsail as a standard AFC panel. Works both with and without the native screen.
+
+### Enabling
+
+`SAVE_ZMOD_DATA AFC=1`, then restart Klipper. To disable: `SAVE_ZMOD_DATA AFC=0`.
+
+### Features
+
+- Color, type and filament presence in each slot.
+- Change color and type, load and unload right from the panel.
+- Lane selection window before printing (Fluidd 1.37.3+): maps the file tools to slots. The map is kept between prints and can be changed during a print as well.
+- With AFC enabled, the color selection window before printing is not shown and automatic color matching is disabled: the AFC map is used. If a mapping is passed explicitly (T0=…), it is used instead.
+- The infinite spool button reports that the replacement is picked by filament type and color.
+
+### zmod_afclite plugin
+
+The zmod_afclite plugin has been removed and replaced by built-in AFC support. On update:
+
+- if the plugin was enabled, it is disabled and AFC is enabled automatically;
+- the plugin is removed from the Moonraker configs and its directory is deleted.
+
+### Acknowledgements
+
+Thanks to [DIEHARDave](https://github.com/DIEHARDave) for the [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite) plugin, which showed the way and the solution.
+
+---
+
 ## Add your own filament types
 
 For these settings to work, you need to turn off the native printer screen using the `DISPLAY_OFF` macro.

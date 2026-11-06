@@ -993,6 +993,21 @@ Verbindung im Slicer:
 
 ---
 
+##### AFC
+
+Nur AD5X / Creator 5 Pro
+
+Die IFS-Slots (AD5X) und die Werkzeugköpfe (Creator 5 Pro) in Fluidd und Mainsail als Standard-AFC-Panel anzeigen. Funktioniert mit und ohne nativen Bildschirm. Details: [AD5X](/de/AD5X/#afc-panel), [Creator 5 Pro](/de/C5PRO/#afc-panel).
+
+- 0 - Nicht verwenden (Standard)
+- 1 - Verwenden
+
+Die Änderung wird nach einem Neustart von Klipper wirksam.
+
+Beispiel: `SAVE_ZMOD_DATA AFC=1`
+
+---
+
 ##### KLIPPER_C5
 
 Nur Creator 5 / Creator 5 Pro

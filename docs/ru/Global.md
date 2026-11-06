@@ -864,6 +864,21 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 ---
 
+##### AFC
+
+Только AD5X / Creator 5 Pro
+
+Показывать слоты IFS (AD5X) и головы (Creator 5 Pro) в Fluidd и Mainsail как стандартную панель AFC. Работает и с родным экраном, и без него. Подробнее: [AD5X](/ru/AD5X/#панель-afc), [Creator 5 Pro](/ru/C5PRO/#панель-afc).
+
+- 0 - Не использовать (по умолчанию)
+- 1 - Использовать
+
+Изменение применяется после перезапуска Klipper.
+
+Пример: `SAVE_ZMOD_DATA AFC=1`
+
+---
+
 ##### KLIPPER_C5
 
 Только Creator 5 / Creator 5 Pro
