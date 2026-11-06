@@ -11,7 +11,7 @@
     - [Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/Adventurer5MPro-3.1.3-2.2.3-20250107-Factory.tgz) для FF5M **Pro** 
     - [AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz](https://github.com/ghzserg/FF/releases/download/R/AD5X-1.1.7-1.1.0-3.0.6-20250912-Factory.tgz) для AD5X
     - [Creator5-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-1.9.9-1.3.0-20260907.tgz) для Creator 5
-    - [Creator5Pro-1.9.9-1.3.0-20260907.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-1.9.9-1.3.0-20260907.tgz) для Creator 5 Pro
+    - [Creator5Pro-2.0.0-1.3.1-20261014.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-2.0.0-1.3.1-20261014.tgz) для Creator 5 Pro
 
 >Важно: **Распаковывать файлы не нужно!**
 
