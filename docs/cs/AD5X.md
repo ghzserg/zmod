@@ -456,6 +456,8 @@ orca_lanes: False
 
 Sloty IFS (AD5X) a tiskové hlavy (Creator 5 Pro) se ve Fluidd a Mainsail zobrazují jako standardní panel AFC. Funguje s nativní obrazovkou i bez ní.
 
+<img width="875" height="327" alt="AFC" src="../../images/fd2e6473-9a05-4f93-b47b-211243470e4a.png" />
+
 ### Zapnutí
 
 `SAVE_ZMOD_DATA AFC=1`, poté restartujte Klipper. Vypnutí: `SAVE_ZMOD_DATA AFC=0`.
@@ -464,8 +466,10 @@ Sloty IFS (AD5X) a tiskové hlavy (Creator 5 Pro) se ve Fluidd a Mainsail zobraz
 
 - Barva, typ a přítomnost filamentu v každém slotu.
 - Změna barvy a typu, zavádění a vysouvání přímo z panelu.
-- Okno výběru lane před tiskem (Fluidd 1.37.3+): přiřazení nástrojů souboru ke slotům. Mapa se uchovává mezi tisky a lze ji měnit i během tisku.
-- Při zapnutém AFC se okno výběru barvy před tiskem nezobrazuje a automatické přiřazení barev je vypnuto: používá se mapa AFC. Pokud je přiřazení předáno explicitně (T0=…), použije se to.
+- Okno výběru lane před tiskem ve Fluidd (1.37.3+) a Mainsail: přiřazení nástrojů souboru ke slotům se předává spolu s příkazem k tisku, okno výběru barvy se potom nezobrazí. Mapa se uchovává mezi tisky a lze ji měnit i během tisku.
+- Okno AFC má přepínač „Bed mesh“. Mění globální nastavení okamžitě, ještě před stisknutím „Tisk“.
+- Tisk přes protokol FlashForge (OrcaSlicer, Flash Studio) používá přiřazení ze sliceru a startuje hned, s obvyklou přípravou (KAMP, kontrola MD5).
+- Tisk bez přiřazení (OrcaSlicer přes Moonraker, GuppyScreen, KlipperScreen, makra) zobrazí okno výběru barvy nebo provede automatické přiřazení, podle nastavení, stejně jako bez AFC.
 - Tlačítko nekonečné cívky hlásí, že náhrada se vybírá podle typu a barvy filamentu.
 
 ### Plugin zmod_afclite

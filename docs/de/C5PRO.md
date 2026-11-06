@@ -296,6 +296,8 @@ orca_lanes: False
 
 Die IFS-Slots (AD5X) und die Werkzeugköpfe (Creator 5 Pro) werden in Fluidd und Mainsail als Standard-AFC-Panel angezeigt. Funktioniert mit und ohne nativen Bildschirm.
 
+<img width="875" height="327" alt="AFC" src="../../images/fd2e6473-9a05-4f93-b47b-211243470e4a.png" />
+
 ### Aktivieren
 
 `SAVE_ZMOD_DATA AFC=1`, danach Klipper neu starten. Deaktivieren: `SAVE_ZMOD_DATA AFC=0`.
@@ -304,8 +306,10 @@ Die IFS-Slots (AD5X) und die Werkzeugköpfe (Creator 5 Pro) werden in Fluidd und
 
 - Farbe, Typ und Vorhandensein des Filaments in jedem Slot.
 - Farbe und Typ ändern, Laden und Entladen direkt aus dem Panel.
-- Lane-Auswahlfenster vor dem Druck (Fluidd 1.37.3+): Zuordnung der Werkzeuge der Datei zu den Slots. Die Zuordnung bleibt zwischen Drucken erhalten und kann auch während des Drucks geändert werden.
-- Bei aktiviertem AFC wird das Farbauswahlfenster vor dem Druck nicht angezeigt und die automatische Farbzuordnung ist deaktiviert: es wird die AFC-Zuordnung verwendet. Wird eine Zuordnung explizit übergeben (T0=…), wird diese verwendet.
+- Lane-Auswahlfenster vor dem Druck in Fluidd (1.37.3+) und Mainsail: die Zuordnung der Werkzeuge der Datei zu den Slots wird zusammen mit dem Druckbefehl übergeben, das Farbauswahlfenster erscheint danach nicht. Die Zuordnung bleibt zwischen Drucken erhalten und kann auch während des Drucks geändert werden.
+- Das AFC-Fenster hat die Schalter „Bed mesh“ und „Auto PA“ (nur Creator 5 Pro). Sie ändern die globalen Einstellungen sofort, noch vor dem Klick auf „Drucken“.
+- Drucken über das FlashForge-Protokoll (OrcaSlicer, Flash Studio) verwendet die Zuordnung aus dem Slicer und startet sofort, mit der üblichen Vorbereitung (KAMP, MD5-Prüfung).
+- Drucken ohne Zuordnung (OrcaSlicer über Moonraker, GuppyScreen, KlipperScreen, Makros) zeigt das Farbauswahlfenster oder führt die automatische Zuordnung aus, je nach Einstellungen, wie ohne AFC.
 - Die Schaltfläche für die Endlosspule meldet, dass der Ersatz nach Filamenttyp und -farbe gewählt wird.
 
 ### Plugin zmod_afclite

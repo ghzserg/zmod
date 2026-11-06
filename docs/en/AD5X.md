@@ -464,6 +464,8 @@ orca_lanes: False
 
 The IFS slots (AD5X) and toolheads (Creator 5 Pro) are shown in Fluidd and Mainsail as a standard AFC panel. Works both with and without the native screen.
 
+<img width="875" height="327" alt="AFC" src="../../images/fd2e6473-9a05-4f93-b47b-211243470e4a.png" />
+
 ### Enabling
 
 `SAVE_ZMOD_DATA AFC=1`, then restart Klipper. To disable: `SAVE_ZMOD_DATA AFC=0`.
@@ -472,8 +474,10 @@ The IFS slots (AD5X) and toolheads (Creator 5 Pro) are shown in Fluidd and Mains
 
 - Color, type and filament presence in each slot.
 - Change color and type, load and unload right from the panel.
-- Lane selection window before printing (Fluidd 1.37.3+): maps the file tools to slots. The map is kept between prints and can be changed during a print as well.
-- With AFC enabled, the color selection window before printing is not shown and automatic color matching is disabled: the AFC map is used. If a mapping is passed explicitly (T0=…), it is used instead.
+- Lane selection window before printing in Fluidd (1.37.3+) and Mainsail: the mapping of file tools to slots is sent together with the print command, and the color selection window does not appear after it. The map is kept between prints and can be changed during a print as well.
+- The AFC window has a "Bed mesh" toggle. It changes the global setting immediately, before you press "Print".
+- Printing via the FlashForge protocol (OrcaSlicer, Flash Studio) uses the mapping from the slicer and starts right away, with the usual preparation (KAMP, MD5 check).
+- Printing without a mapping (OrcaSlicer via Moonraker, GuppyScreen, KlipperScreen, macros) shows the color selection window or runs automatic matching, depending on the settings, just as without AFC.
 - The infinite spool button reports that the replacement is picked by filament type and color.
 
 ### zmod_afclite plugin
