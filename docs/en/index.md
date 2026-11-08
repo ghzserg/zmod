@@ -30,7 +30,7 @@ Here’s what you gain by installing Z-Mod:
 - **Fluidd / Mainsail**: Intuitive web interfaces showing live print stats, temperatures, fan speed control, axis movement, and full console access.
 - **Octo/Klipper-style file upload**: Seamless integration with Orca Slicer and other slicers for direct G-code file transfers.
 - **Access to the printer's web interface via the Internet** cloud service [zmod.link](https://zmod.link)
-- **Notification in Telegram and 100+ other services** [notify plugin](https://github.com/ghzserg/notify/)
+- **Notification in Telegram and 100+ other services** [notify plugin](https://github.com/ghzserg/notify/) or Telegram only with lower memory usage: [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md)
 
 #### 2. Advanced Calibration & Bed Leveling
 **Stock firmware**: Basic automatic bed leveling (ABL).

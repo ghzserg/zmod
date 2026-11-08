@@ -1,20 +1,40 @@
 <h1 align="center">Telegram-Bot</h1>
 
-| Funktion | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/de/Telegram/) |
-| :--- | :---: | :---: |
-| **Benötigt einen externen Server** | - | + |
-| **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + |
-| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme.md)) | + |
-| **Informationen zu Druckereignissen** (Start, Pause, Abbruch, Ende) | + | + |
-| **Filamentsensor-Informationen** | + | + |
-| **Druckfortschritt in Prozent** | + | + |
-| **Mehrere Drucker über einen Bot** | + | - |
-| **Benachrichtigung über andere Dienste** | + | - |
-| **Spoolman** | - | + |
+| Funktion | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Telegram Notify Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/de/Telegram/) |
+| :--- | :---: | :---: | :---: |
+| **Benötigt einen externen Server** | - | - | + |
+| **Fernsteuerung des Druckers** | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | - (kann über [zmod.link](https://zmod.link/link/) erfolgen) | + |
+| **Zeitraffer erstellen** | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme.md)) | - (möglich über [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme.md)) | + |
+| **Informationen zu Druckereignissen** (Start, Pause, Abbruch, Ende) | + | + | + |
+| **Filamentsensor-Informationen** | + | + | + |
+| **Druckfortschritt in Prozent** | + | + | + |
+| **Mehrere Drucker über einen Bot** | + | + | - |
+| **Benachrichtigung über andere Dienste** | + | - | - |
+| **Spoolman** | - | - | + |
+| **Zusätzlicher Moonraker-Speicher auf dem Drucker** | ~6 MB | ~0,5 MB | - |
 
 ---
 !!! info
-    Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md).
+    Wenn Sie nur Benachrichtigungen benötigen, verwenden Sie das [Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram und über 100 weitere Dienste) oder das [Telegram-Notify-Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (nur Telegram, weniger Speicher).
+
+## Telegram-Notify-Plugin
+
+Druckbenachrichtigungen in Telegram ohne die Apprise-Bibliothek: Moonraker sendet die Nachrichten selbst an die Telegram Bot API. Das spart etwa 5 MB Moonraker-Speicher im Vergleich zu notify, was auf Druckern mit 128 MB RAM spürbar ist. Andere Dienste als Telegram werden nicht unterstützt.
+
+Es kann für Telegram dasselbe wie notify: Start, Ende, Fehler, Abbruch, Pause und Fortsetzung des Drucks, Z-Mod-Meldungen (Filamentsensoren, Einschalten des Druckers), Fortschritt in Prozent, Kamerabild.
+
+**Aktivieren Sie notify und telegram_notify nicht gleichzeitig.**
+
+Einrichtung:
+
+1. [Registrieren Sie einen Bot](#registrieren-sie-den-bot) und erhalten Sie den `bot_token`.
+2. Schreiben Sie dem Bot eine beliebige Nachricht und ermitteln Sie die `chat_id`, zum Beispiel über [@userinfobot](https://t.me/userinfobot).
+3. Aktivieren Sie das Plugin: `ENABLE_PLUGIN name=telegram_notify`.
+4. Tragen Sie `bot_token` und `chat_id` in `mod_data/telegram_notify.conf` ein und starten Sie Moonraker neu.
+
+Weitere Details in der [Plugin-Beschreibung](https://github.com/mlengle/telegram_notify/blob/main/Readme.md).
+
+---
 
 ## Telegram-Bot
 
@@ -62,7 +82,7 @@ So registrieren Sie Ihren Bot:
 
 #### Telegram-Bot mit einem Befehl unter Debian installieren
 
-Wenn Sie nur Telegram-Benachrichtigungen benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md).
+Wenn Sie nur Benachrichtigungen benötigen, verwenden Sie das [Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram und über 100 weitere Dienste) oder das [Telegram-Notify-Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (nur Telegram, weniger Speicher).
 
 Installieren Sie den Telegram-Bot [mit einem Befehl](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) unter Debian:
 
@@ -91,7 +111,7 @@ Den **SSH-Schlüssel** müssen Sie selbst hinzufügen.
 
 #### Telegram-Bot Schritt für Schritt installieren
 
-Wenn Sie nur Benachrichtigungen in Telegram benötigen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/).
+Wenn Sie nur Benachrichtigungen benötigen, verwenden Sie das [Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram und über 100 weitere Dienste) oder das [Telegram-Notify-Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (nur Telegram, weniger Speicher).
 
 1. Kopieren Sie die [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) aus dem Verzeichnis `mod/telegram/` des Druckers.
 2. Installieren Sie Docker (Anleitung für Debian):
@@ -224,7 +244,7 @@ docker compose down && docker compose up -d
 
 #### Installation und Konfiguration für Armbian (von noyhay)
 
-Wenn Ihnen Telegram-Benachrichtigungen genügen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Wenn Sie nur Benachrichtigungen benötigen, verwenden Sie das [Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram und über 100 weitere Dienste) oder das [Telegram-Notify-Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (nur Telegram, weniger Speicher).
 
 Laden Sie ein Debian-Minimal/IOT-Image mit Armbian von [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -280,7 +300,7 @@ sudo reboot
 
 #### Telegram-Bot-Installation auf Kubernetes via Helm (von aldiserg)
 
-Wenn Ihnen Telegram-Benachrichtigungen genügen, dann [verwenden Sie das Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md)
+Wenn Sie nur Benachrichtigungen benötigen, verwenden Sie das [Notify-Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram und über 100 weitere Dienste) oder das [Telegram-Notify-Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (nur Telegram, weniger Speicher).
 
 Laden Sie Helm herunter und installieren Sie es auf Ihrem Computer: [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 

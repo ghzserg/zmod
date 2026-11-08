@@ -291,7 +291,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 
 ## Как обновлять сток?
 
-1. Отключите все активные плагины, кроме recommend, timelapse, notify (```DISABLE_PLUGIN name=имя_плагина```)
+1. Отключите все активные плагины, кроме recommend, timelapse, notify, telegram_notify (```DISABLE_PLUGIN name=имя_плагина```)
 2. Если у вас используется **Klipper 13**, то перед обновлением родной прошивки надо выполнить ```UPDATE_MCU```. Это позволит избежать ситуации, когда MCU и Klipper разных версий.
 3. Включите китайские облака, если хотите обновиться с родного экрана ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 

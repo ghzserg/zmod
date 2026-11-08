@@ -30,7 +30,7 @@ Zde je, co získáte instalací Z-Mod:
 - **Fluidd / Mainsail**: Intuitivní webová rozhraní zobrazující živé statistiky tisku, teploty, ovládání rychlosti ventilátoru, pohyb os a plný přístup ke konzoli.
 - **Odesílání souborů přes „Octo/Klipper“**: Bezproblémová integrace s Orca Slicer a dalšími slicery pro přímý přenos G-code souborů.
 - **Přístup k webovému rozhraní tiskárny přes internet** pomocí cloudové služby [zmod.link](https://zmod.link)
-- **Oznámení v Telegramu a více než 100 dalších službách** [plugin notify](https://github.com/ghzserg/notify/)
+- **Oznámení v Telegramu a více než 100 dalších službách** [plugin notify](https://github.com/ghzserg/notify/) nebo pouze Telegram s menší spotřebou paměti: [plugin Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme.md)
 
 #### 2. Pokročilá kalibrace a vyrovnávání podložky
 **Tovární firmware**: Základní automatické vyrovnávání podložky (ABL).

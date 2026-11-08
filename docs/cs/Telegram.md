@@ -1,20 +1,40 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Funkce | [Notify Plugin](https://github.com/ghzserg/notify/) | [Moonraker Telegram Bot](/cs/Telegram/) |
-| :--- | :---: | :---: |
-| **Vyžaduje externí server** | – | + |
-| **Vzdálené ovládání tiskárny** | – (možné přes [zmod.link](https://zmod.link/link/)) | + |
-| **Vytváření časosběrů** | – (možné přes [timelapse](https://github.com/ghzserg/timelapse/)) | + |
-| **Notifikace o událostech tisku** (start, pauza, zrušení, dokončení) | + | + |
-| **Notifikace senzoru filamentu** | + | + |
-| **Procentuální průběh tisku** | + | + |
-| **Více tiskáren přes jednoho bota** | + | – |
-| **Notifikace přes jiné služby** | + | – |
-| **Spoolman** | - | + |
+| Funkce | [Notify Plugin](https://github.com/ghzserg/notify/) | [Telegram Notify Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/cs/Telegram/) |
+| :--- | :---: | :---: | :---: |
+| **Vyžaduje externí server** | – | – | + |
+| **Vzdálené ovládání tiskárny** | – (možné přes [zmod.link](https://zmod.link/link/)) | – (možné přes [zmod.link](https://zmod.link/link/)) | + |
+| **Vytváření časosběrů** | – (možné přes [timelapse](https://github.com/ghzserg/timelapse/)) | – (možné přes [timelapse](https://github.com/ghzserg/timelapse/)) | + |
+| **Notifikace o událostech tisku** (start, pauza, zrušení, dokončení) | + | + | + |
+| **Notifikace senzoru filamentu** | + | + | + |
+| **Procentuální průběh tisku** | + | + | + |
+| **Více tiskáren přes jednoho bota** | + | + | – |
+| **Notifikace přes jiné služby** | + | – | – |
+| **Spoolman** | - | - | + |
+| **Další paměť Moonrakeru na tiskárně** | ~6 MB | ~0,5 MB | – |
 
 ---
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
+Pokud potřebujete pouze notifikace, použijte [Notify plugin](https://github.com/ghzserg/notify/) (Telegram a více než 100 dalších služeb) nebo [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (pouze Telegram, méně paměti).
+
+## Telegram Notify plugin
+
+Notifikace o tisku do Telegramu bez knihovny Apprise: Moonraker sám posílá zprávy do Telegram Bot API. Oproti notify to ušetří asi 5 MB paměti Moonrakeru, což je na tiskárnách se 128 MB RAM znát. Jiné služby než Telegram nejsou podporovány.
+
+Pro Telegram umí totéž co notify: start, dokončení, chyba, zrušení, pauza a pokračování tisku, zprávy Z-Mod (senzory filamentu, zapnutí tiskárny), průběh v procentech, snímek z kamery.
+
+**Nezapínejte notify a telegram_notify současně.**
+
+Nastavení:
+
+1. [Zaregistrujte bota](#registrace-bota) a získejte `bot_token`.
+2. Napište botovi libovolnou zprávu a zjistěte `chat_id`, například pomocí [@userinfobot](https://t.me/userinfobot).
+3. Zapněte plugin: `ENABLE_PLUGIN name=telegram_notify`.
+4. Zadejte `bot_token` a `chat_id` do `mod_data/telegram_notify.conf` a restartujte Moonraker.
+
+Podrobnosti v [popisu pluginu](https://github.com/mlengle/telegram_notify/blob/main/Readme.md).
+
+---
 
 ## Telegram Bot
 ### Popis
@@ -60,7 +80,7 @@ Jak zaregistrovat svého bota:
 ### Nasazení na server
 #### Instalace Telegram bota na Debian jedním příkazem
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
+Pokud potřebujete pouze notifikace, použijte [Notify plugin](https://github.com/ghzserg/notify/) (Telegram a více než 100 dalších služeb) nebo [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (pouze Telegram, méně paměti).
 
 Nainstalujte Telegram bota [jedním příkazem](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) na Debian:
 
@@ -88,7 +108,7 @@ Přidejte SSH klíče ručně.
 ---
 #### Instalace Telegram bota krok za krokem
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
+Pokud potřebujete pouze notifikace, použijte [Notify plugin](https://github.com/ghzserg/notify/) (Telegram a více než 100 dalších služeb) nebo [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (pouze Telegram, méně paměti).
 
 1. Zkopírujte [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) z adresáře `mod/telegram/` na tiskárně.
 2. Nainstalujte Docker (instrukce pro Debian):
@@ -210,7 +230,7 @@ Zadejte své časové pásmo. V ukázkovém souboru je ```TZ=Asia/Yekaterinburg`
 
 #### Instalace a nastavení pro Armbian (od noyhay)
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
+Pokud potřebujete pouze notifikace, použijte [Notify plugin](https://github.com/ghzserg/notify/) (Telegram a více než 100 dalších služeb) nebo [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (pouze Telegram, méně paměti).
 
 Stáhněte obraz Debian Minimal/IOT s Armbianem z webu [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -265,7 +285,7 @@ sudo reboot
 
 #### Instalace Telegram bota na Kubernetes přes Helm (od aldiserg)
 
-Pokud potřebujete pouze notifikace v Telegramu, [použijte Notify plugin](https://github.com/ghzserg/notify/)
+Pokud potřebujete pouze notifikace, použijte [Notify plugin](https://github.com/ghzserg/notify/) (Telegram a více než 100 dalších služeb) nebo [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (pouze Telegram, méně paměti).
 
 Stáhněte a nainstalujte Helm: [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 
