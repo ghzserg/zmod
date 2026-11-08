@@ -1,26 +1,46 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](/ru/Telegram/) |
-| :--- | :---: | :---: |
-| **Требует внешний сервер** | – | + |
-| **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link/link/)) | + |
-| **Создание таймлапса** | – (можно через [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | + |
-| **Информация о событиях печати** (старт, пауза, отмена, окончание) | + | + |
-| **Информация от датчика филамента** | + | + |
-| **Информация о прогрессе печати в процентах** | + | + |
-| **Работа с несколькими принтерами через одного бота** | + | – |
-| **Информирование через другие сервисы** | + | - |
-| **Spoolman** | - | + |
+| Функция / Возможность | [Плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) | [Плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) | [Moonraker Telegram Bot](/ru/Telegram/) |
+| :--- | :---: | :---: | :---: |
+| **Требует внешний сервер** | – | – | + |
+| **Удалённое управление принтером** | – (можно через [zmod.link](https://zmod.link/link/)) | – (можно через [zmod.link](https://zmod.link/link/)) | + |
+| **Создание таймлапса** | – (можно через [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | – (можно через [timelapse](https://github.com/ghzserg/timelapse/blob/main/Readme_ru.md)) | + |
+| **Информация о событиях печати** (старт, пауза, отмена, окончание) | + | + | + |
+| **Информация от датчика филамента** | + | + | + |
+| **Информация о прогрессе печати в процентах** | + | + | + |
+| **Работа с несколькими принтерами через одного бота** | + | + | – |
+| **Информирование через другие сервисы** | + | – | - |
+| **Spoolman** | - | - | + |
+| **Дополнительная память Moonraker на принтере** | ~6 МБ | ~0.5 МБ | – |
 
 ---
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
+
+## Плагин Telegram Notify
+
+Уведомления о печати в Telegram без библиотеки Apprise: Moonraker сам отправляет сообщения в Telegram Bot API. Это экономит около 5 МБ памяти Moonraker по сравнению с notify, что заметно на принтерах со 128 МБ RAM. Другие сервисы, кроме Telegram, не поддерживаются.
+
+Умеет то же, что notify для Telegram: старт, окончание, ошибка, отмена, пауза и продолжение печати, сообщения Z-Mod (датчики филамента, включение принтера), прогресс в процентах, снимок с камеры.
+
+**Не включайте notify и telegram_notify одновременно.**
+
+Настройка:
+
+1. [Зарегистрируйте бота](#регистрация-бота) и получите `bot_token`.
+2. Напишите боту любое сообщение и узнайте `chat_id`, например у [@userinfobot](https://t.me/userinfobot).
+3. Включите плагин: `ENABLE_PLUGIN name=telegram_notify`.
+4. Пропишите `bot_token` и `chat_id` в `mod_data/telegram_notify.conf` и перезапустите Moonraker.
+
+Подробнее — в [описании плагина](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md).
+
+---
 
 ## Telegram Bot
 
 ### Описание
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
 
 Суть:
 У нас очень медленное железо и очень мало памяти. Поэтому на железе запускать moonraker-telegram-bot нет смысла. 
@@ -67,7 +87,7 @@
 
 #### Установка Telegram-бота одной командой на Debian
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
 
 Установка Telegram-бота [одной командой](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) на Debian:
 
@@ -96,7 +116,7 @@ apt update && apt install wget -y
 
 #### Установка Telegram-бота по шагам
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
 
 Берете файл [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) из `mod/telegram/` с принтера.
 
@@ -216,7 +236,7 @@ sync_rate: 5
 
 #### Установка и настройка для armbian (от noyhay)
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
 
 Скачиваем Debian Minimal/IOT images with Armbian с сайта [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -269,7 +289,7 @@ cat >.ssh/authorized_keys
 
 #### Установка Telegram-бота через helm в kubernetes (от aldiserg)
 
-Если вам достаточно только уведомлений в Telegram, то [используйте плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+Если вам достаточно только уведомлений, то используйте [плагин Notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) (Telegram и ещё 100+ сервисов) или [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) (только Telegram, меньше памяти).
 
 Скачиваем helm и устанавливаем на компьютер [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 

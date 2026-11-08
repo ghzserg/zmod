@@ -268,7 +268,7 @@ To remove the mod completely: ```REMOVE_ZMOD FULL=1```
 
 ## Updating Stock Firmware
 
-1. Disable all active plugins except `recommend`, `timelapse`, and `notify`:
+1. Disable all active plugins except `recommend`, `timelapse`, `notify`, and `telegram_notify`:
    ```DISABLE_PLUGIN name=plugin_name```
 
 2. If you are using **Klipper 13**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.

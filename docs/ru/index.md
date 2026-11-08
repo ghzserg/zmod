@@ -32,7 +32,7 @@ Z-Mod — это модификация, которая не заменяет р
 - **Fluidd / Mainsail:** Удобные веб-интерфейсы со всей информацией о печати, температуре, управлением вентиляторами, перемещением осей и полной консолью команд.
 - **Отправка файлов через Octo/Klipper:** Интеграция с Orca Slicer и другими слайсерами для прямой отправки G-кода.
 - **Доступ к принтеру через интернет** — облачный сервис [zmod.link](https://zmod.link)
-- **Уведомления в Telegram и ещё 100+ сервисов** — [плагин notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md)
+- **Уведомления в Telegram и ещё 100+ сервисов** — [плагин notify](https://github.com/ghzserg/notify/blob/main/Readme_ru.md) или только Telegram с меньшим расходом памяти — [плагин Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md)
 
 #### 2. Продвинутые системы калибровки и выравнивания
 

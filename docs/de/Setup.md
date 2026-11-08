@@ -289,7 +289,7 @@ Deinstallation des Mods per USB-Stick:
 
 ## Wie aktualisiere ich die Standard-Firmware?
 
-1. Deaktivieren Sie alle aktiven Plugins außer `recommend`, `timelapse` und `notify`:
+1. Deaktivieren Sie alle aktiven Plugins außer `recommend`, `timelapse`, `notify` und `telegram_notify`:
 
 ```DISABLE_PLUGIN name=plugin_name```
 

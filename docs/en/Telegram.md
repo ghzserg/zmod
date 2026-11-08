@@ -1,20 +1,40 @@
 <h1 align="center">Telegram Bot</h1>
 
-| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/Telegram/) |
-| :--- | :---: | :---: |
-| **Requires external server** | – | + |
-| **Remote printer control** | – (possible via [zmod.link](https://zmod.link/link/)) | + |
-| **Timelapse creation** | – (possible via [timelapse](https://github.com/ghzserg/timelapse/)) | + |
-| **Print event notifications** (start, pause, cancel, finish) | + | + |
-| **Filament sensor notifications** | + | + |
-| **Print progress percentage** | + | + |
-| **Multiple printers via a single bot** | + | – |
-| **Notifications via other services** | + | – |
-| **Spoolman** | - | + |
+| Feature / Capability | [Notify Plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) | [Telegram Notify Plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) | [Moonraker Telegram Bot](/Telegram/) |
+| :--- | :---: | :---: | :---: |
+| **Requires external server** | – | – | + |
+| **Remote printer control** | – (possible via [zmod.link](https://zmod.link/link/)) | – (possible via [zmod.link](https://zmod.link/link/)) | + |
+| **Timelapse creation** | – (possible via [timelapse](https://github.com/ghzserg/timelapse/)) | – (possible via [timelapse](https://github.com/ghzserg/timelapse/)) | + |
+| **Print event notifications** (start, pause, cancel, finish) | + | + | + |
+| **Filament sensor notifications** | + | + | + |
+| **Print progress percentage** | + | + | + |
+| **Multiple printers via a single bot** | + | + | – |
+| **Notifications via other services** | + | – | – |
+| **Spoolman** | - | - | + |
+| **Additional Moonraker memory on the printer** | ~6 MB | ~0.5 MB | – |
 
 ---
 !!! info
-    If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md)
+    If you only need notifications, use the [Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram and 100+ other services) or the [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (Telegram only, uses less memory).
+
+## Telegram Notify Plugin
+
+Print notifications in Telegram without the Apprise library: Moonraker sends messages to the Telegram Bot API itself. This saves about 5 MB of Moonraker memory compared to notify, which is noticeable on printers with 128 MB of RAM. Services other than Telegram are not supported.
+
+It does the same as notify does for Telegram: print start, finish, error, cancel, pause and resume, Z-Mod messages (filament sensors, printer power-on), progress in percent, camera snapshot.
+
+**Do not enable notify and telegram_notify at the same time.**
+
+Setup:
+
+1. [Register a bot](#bot-registration) and get the `bot_token`.
+2. Send the bot any message and find out your `chat_id`, for example via [@userinfobot](https://t.me/userinfobot).
+3. Enable the plugin: `ENABLE_PLUGIN name=telegram_notify`.
+4. Set `bot_token` and `chat_id` in `mod_data/telegram_notify.conf` and restart Moonraker.
+
+More details in the [plugin description](https://github.com/mlengle/telegram_notify/blob/main/Readme.md).
+
+---
 
 ## Telegram Bot
 
@@ -60,7 +80,7 @@ How to register your bot:
 ### Server Deployment
 #### One-Command Telegram Bot Installation on Debian
 
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+If you only need notifications, use the [Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram and 100+ other services) or the [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (Telegram only, uses less memory).
 
 Install the Telegram bot with [one command](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/telegram.sh) on Debian:
 
@@ -88,7 +108,7 @@ Add SSH keys manually.
 ---
 #### Step-by-Step Telegram Bot Installation
 
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+If you only need notifications, use the [Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram and 100+ other services) or the [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (Telegram only, uses less memory).
 
 1. Copy [docker-compose.yml](https://github.com/ghzserg/z_ff5m/blob/1.7/telegram/docker-compose.yml) from the printer’s `mod/telegram/` directory.
 2. Install Docker (Debian instructions):
@@ -210,7 +230,7 @@ Specify your time zone. The example file specifies ```TZ=Asia/Yekaterinburg```
 
 #### Installation and Setup for Armbian (by noyhay)
 
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+If you only need notifications, use the [Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram and 100+ other services) or the [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (Telegram only, uses less memory).
 
 Download Debian Minimal/IOT images with Armbian from the website [https://www.armbian.com/download/](https://www.armbian.com/download/)
 
@@ -265,7 +285,7 @@ sudo reboot
 
 #### Telegram Bot Installation On Kubernetes Via Helm (by aldiserg)
 
-If you only need notifications in Telegram, then [use the Notify plugin](https://github.com/ghzserg/notify/)
+If you only need notifications, use the [Notify plugin](https://github.com/ghzserg/notify/blob/main/Readme.md) (Telegram and 100+ other services) or the [Telegram Notify plugin](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) (Telegram only, uses less memory).
 
 Download and install helm [https://helm.sh/docs/intro/install/](https://helm.sh/docs/intro/install/)
 

@@ -263,7 +263,7 @@ Pozor!
 
 ## Aktualizace nativního firmwaru
 
-1. Deaktivujte všechny aktivní pluginy kromě `recommend`, `timelapse` a `notify`:
+1. Deaktivujte všechny aktivní pluginy kromě `recommend`, `timelapse`, `notify` a `telegram_notify`:
    ```DISABLE_PLUGIN name=plugin_name```
 
 2. Pokud používáte **Klipper 13**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
