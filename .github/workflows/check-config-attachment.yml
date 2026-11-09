@@ -153,7 +153,7 @@ jobs:
             fi
 
           else
-            VERSION_FILE_5X="opt/config/mod/version_5x.txt"
+            VERSION_FILE_5X="usr/data/zmod/zmod/version_5x.txt"
             REMOTE_VERSION_URL_5X="https://raw.githubusercontent.com/ghzserg/z_ad5x/refs/heads/1.7/version_5x.txt"
             if [ -f "$EXTRACT_DIR/$VERSION_FILE_5X" ]; then
               echo "Found $VERSION_FILE_5X, checking version..."
