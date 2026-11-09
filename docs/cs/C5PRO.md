@@ -111,7 +111,20 @@ V menu tisku jsou dvě důležitá tlačítka:
 - Pokud je `Auto PA` vypnuté, použijí se hodnoty PA ze sliceru.
 
 !!! note
-    Automatická kalibrace probíhá v rozsahu 0.01–0.04 a pro viskózní plasty, jako je PETG, je nepoužitelná.
+    Ve výchozím stavu probíhá kalibrace od 0.010 do 0.040 s krokem 0.005, ve 3 průchodech. Pro viskózní plasty, jako je PETG, lze rozsah rozšířit v `mod_data/user.cfg`, například:
+
+    ```
+    [zmod_color]
+    pa_min: 0.010
+    pa_max: 0.080
+    pa_count: 3
+    ```
+
+    - `pa_min` — dolní mez, nejméně 0.01 (výchozí 0.010)
+    - `pa_max` — horní mez, od 0.02 do 0.100 a ne menší než `pa_min` (výchozí 0.040)
+    - `pa_count` — počet průchodů, od 1 do 10 (výchozí 3)
+
+    Krok je pevný: 0.005. Čím širší rozsah a více průchodů, tím déle kalibrace trvá.
 
 
 **Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](/cs/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`

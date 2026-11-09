@@ -110,7 +110,21 @@ There are two important buttons in the print menu:
 - The process takes several minutes, but significantly improves the quality of corners and thin elements.
 - If `Auto PA` is off, the PA values from the slicer will be used.
 
-Automatic calibration ranges from 0.01 to 0.04 and is useless for viscous plastics such as PETG
+!!! note
+    By default the calibration runs from 0.010 to 0.040 in 0.005 steps, in 3 passes. For viscous plastics such as PETG the range can be widened in `mod_data/user.cfg`, for example:
+
+    ```
+    [zmod_color]
+    pa_min: 0.010
+    pa_max: 0.080
+    pa_count: 3
+    ```
+
+    - `pa_min` — lower bound, at least 0.01 (default 0.010)
+    - `pa_max` — upper bound, from 0.02 to 0.100 and not less than `pa_min` (default 0.040)
+    - `pa_count` — number of passes, from 1 to 10 (default 3)
+
+    The step is fixed: 0.005. The wider the range and the more passes, the longer the calibration.
 
 
 **Purging all extruders without Auto PA.** By default only the first extruder is purged at print start. To purge all used extruders, enable the global parameter [PURGE_ALL_EXTRUDERS](/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`

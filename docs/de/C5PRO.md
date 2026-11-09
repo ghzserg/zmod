@@ -111,7 +111,20 @@ Im Druckmenü gibt es zwei wichtige Schaltflächen:
 - Wenn `Auto PA` ausgeschaltet ist, werden die PA-Werte aus dem Slicer verwendet.
 
 !!! note
-    Die automatische Kalibrierung reicht von 0.01 bis 0.04 und ist für zähflüssige Kunststoffe wie PETG nutzlos.
+    Standardmäßig läuft die Kalibrierung von 0.010 bis 0.040 in Schritten von 0.005, in 3 Durchgängen. Für zähflüssige Kunststoffe wie PETG kann der Bereich in `mod_data/user.cfg` erweitert werden, zum Beispiel:
+
+    ```
+    [zmod_color]
+    pa_min: 0.010
+    pa_max: 0.080
+    pa_count: 3
+    ```
+
+    - `pa_min` — untere Grenze, mindestens 0.01 (Standard 0.010)
+    - `pa_max` — obere Grenze, von 0.02 bis 0.100 und nicht kleiner als `pa_min` (Standard 0.040)
+    - `pa_count` — Anzahl der Durchgänge, von 1 bis 10 (Standard 3)
+
+    Die Schrittweite ist fest: 0.005. Je größer der Bereich und je mehr Durchgänge, desto länger dauert die Kalibrierung.
 
 
 **Alle Extruder ohne Auto PA spülen.** Standardmäßig wird beim Druckstart nur der erste Extruder gespült. Damit alle verwendeten Extruder gespült werden, aktivieren Sie den globalen Parameter [PURGE_ALL_EXTRUDERS](/de/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
