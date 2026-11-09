@@ -847,3 +847,18 @@ Ochrana proti zamrznutí: 50 MHz se zapíná jen pro jeden další start a znovu
     fw_setenv bootcmd 'run setargs_mmc boot_dsp0 boot_uImage'
     fw_setenv boot_zmod
     ```
+
+#### Paměť RAM navíc (extra_ram)
+
+Pouze AD5M / AD5M Pro (desky 128 i 256 MB), ve výchozím stavu zapnuto. Funguje ve stejném jednorázovém startu jako zrychlení eMMC.
+
+Vrací zhruba 7 MB operační paměti: na desce 128 MB `MemTotal` 110 404 → 117 636 KB. Během tisku bývá volných 20–30 MB, takže je to +24…35 %.
+
+Odkud paměť pochází: v `sunxi.dtb` je asi 8 MB rezervováno pro DSP (zvukový procesor, který tiskárna nepoužívá) a OP-TEE. Rezervace se zruší a zůstane jen 1 MB, kde běží samotné OP-TEE: přes něj Linux řídí jádra procesoru a restart.
+
+Ochrana: pokud tento 1 MB po startu není rezervován, okamžitě se obnoví výchozí start a tiskárna se restartuje. Po 3 startech za sebou bez extra_ram se funkce sama vypne.
+
+- Vypnout: vytvořte soubor `mod_data/emmc/disable_extra_ram.txt`.
+- Znovu zapnout: smažte `mod_data/emmc/disable_extra_ram.txt` a soubory `mod_data/emmc/xr_*.txt`.
+
+Metoda a výzkum: [mlengle](https://github.com/mlengle), projekt [ad5m-extra-ram](https://github.com/mlengle/ad5m-extra-ram).

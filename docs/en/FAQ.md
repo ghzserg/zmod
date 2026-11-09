@@ -913,3 +913,18 @@ Hang protection: 50 MHz is enabled only for the next single boot, and again afte
     fw_setenv bootcmd 'run setargs_mmc boot_dsp0 boot_uImage'
     fw_setenv boot_zmod
     ```
+
+#### Extra RAM (extra_ram)
+
+AD5M / AD5M Pro only (128 and 256 MB boards), enabled by default. Works in the same one-shot boot as the eMMC speed-up.
+
+Returns about 7 MB of RAM: on a 128 MB board `MemTotal` 110,404 → 117,636 KB. During a print there is usually 20–30 MB free, so this is +24…35 %.
+
+Where the memory comes from: `sunxi.dtb` reserves about 8 MB for the DSP (an audio processor the printer does not use) and OP-TEE. The reservation is removed, keeping only the 1 MB where OP-TEE itself runs: Linux uses it to control the CPU cores and reboot.
+
+Protection: if this 1 MB is not reserved after boot, the stock boot is restored immediately and the printer reboots. After 3 boots in a row without extra_ram the feature disables itself.
+
+- Disable: create the file `mod_data/emmc/disable_extra_ram.txt`.
+- Enable again: delete `mod_data/emmc/disable_extra_ram.txt` and the `mod_data/emmc/xr_*.txt` files.
+
+Method and research: [mlengle](https://github.com/mlengle), project [ad5m-extra-ram](https://github.com/mlengle/ad5m-extra-ram).

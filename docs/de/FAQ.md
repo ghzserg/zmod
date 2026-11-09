@@ -947,3 +947,18 @@ Schutz vor Hängern: 50 MHz wird nur für den nächsten einzelnen Start aktivier
     fw_setenv bootcmd 'run setargs_mmc boot_dsp0 boot_uImage'
     fw_setenv boot_zmod
     ```
+
+#### Zusätzlicher Arbeitsspeicher (extra_ram)
+
+Nur AD5M / AD5M Pro (Boards mit 128 und 256 MB), standardmäßig aktiviert. Funktioniert im selben einmaligen Start wie die eMMC-Beschleunigung.
+
+Gibt etwa 7 MB Arbeitsspeicher zurück: beim 128-MB-Board `MemTotal` 110 404 → 117 636 KB. Während des Drucks sind meist 20–30 MB frei, das sind also +24…35 %.
+
+Woher der Speicher kommt: in `sunxi.dtb` sind etwa 8 MB für den DSP (einen Audioprozessor, den der Drucker nicht nutzt) und OP-TEE reserviert. Die Reservierung wird aufgehoben, nur das 1 MB, in dem OP-TEE selbst läuft, bleibt: darüber steuert Linux die CPU-Kerne und den Neustart.
+
+Schutz: ist dieses 1 MB nach dem Start nicht reserviert, wird sofort der Standardstart wiederhergestellt und der Drucker neu gestartet. Nach 3 Starts in Folge ohne extra_ram deaktiviert sich die Funktion selbst.
+
+- Deaktivieren: die Datei `mod_data/emmc/disable_extra_ram.txt` anlegen.
+- Wieder aktivieren: `mod_data/emmc/disable_extra_ram.txt` und die Dateien `mod_data/emmc/xr_*.txt` löschen.
+
+Methode und Recherche: [mlengle](https://github.com/mlengle), Projekt [ad5m-extra-ram](https://github.com/mlengle/ad5m-extra-ram).
