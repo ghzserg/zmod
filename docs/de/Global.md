@@ -855,8 +855,6 @@ Beispiel: `SAVE_ZMOD_DATA LED=50`
 ---
 ##### WEB_SCREEN
 
-Nur Creator 5 / Creator 5 Pro
-
 Den Druckerbildschirm als virtuelle Kamera `screen` in Fluidd/Mainsail und [zmod.link](https://zmod.link) weiterleiten:
 
 - 0 - Nicht umleiten

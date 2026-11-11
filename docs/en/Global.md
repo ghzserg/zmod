@@ -700,8 +700,6 @@ Example: `SAVE_ZMOD_DATA LED=50`
 ---
 ##### WEB_SCREEN
 
-Only Creator 5 / Creator 5 Pro
-
 Redirect the printer screen as a virtual `screen` camera in Fluidd/Mainsail and [zmod.link](https://zmod.link)
 
 - 0 - Do not redirect

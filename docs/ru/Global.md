@@ -728,8 +728,6 @@ square_corner_velocity: 9
 
 ##### WEB_SCREEN
 
-Только Creator 5 / Creator 5 Pro
-
 Перенаправить экран принтера как виртуальную камеру `screen` во Fluidd/Mainsail и [zmod.link](https://zmod.link)
 
 - 0 - Не перенаправлять

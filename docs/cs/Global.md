@@ -701,8 +701,6 @@ Příklad: `SAVE_ZMOD_DATA LED=50`
 ---
 ##### WEB_SCREEN
 
-Pouze Creator 5 / Creator 5 Pro
-
 Přesměrovat obrazovku tiskárny jako virtuální kameru `screen` do Fluidd/Mainsail a [zmod.link](https://zmod.link)
 
 - 0 - Nepřesměrovávat
