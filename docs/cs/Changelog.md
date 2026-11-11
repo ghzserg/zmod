@@ -1,6 +1,7 @@
 # Changelog
 
 - [Historie verzí](#historie-verzí)
+      - [Verze 1.7.6](#verze-176)
       - [Verze 1.7.5](#verze-175)
       - [Verze 1.7.4](#verze-174)
       - [Verze 1.7.3](#verze-173)
@@ -50,6 +51,31 @@
 ---
 
 ## Historie verzí
+
+### Verze 1.7.6
+11.11.2026
+
+* AD5X / Creator 5 / Creator 5 Pro: nový globální parametr [ORCA_FF](/cs/Global/#orca_ff) — emulátor nativní obrazovky. Cívky pro barvy se vybírají přímo ve sliceru při odeslání k tisku, ne v nabídce Fluidd. Funguje i s Flash Studiem (typ hostitele `FlashForge`)
+* AD5X / Creator 5 Pro: [synchronizace filamentu s OrcaSlicerem](/cs/AD5X/#synchronizace-filamentu-s-orcaslicerem) — sloty se publikují do Moonrakeru (parametr `orca_lanes`), tlačítko „Synchronizovat filament“ přebírá barvy a typy filamentu
+* AD5X / Creator 5 Pro: [panel AFC](/cs/Global/#afc) je zabudován do Z-Mod: sloty, barva, typ a cívky Spoolman ve Fluidd a Mainsail, okno výběru lane před tiskem. Plugin zmod_afclite byl odstraněn, jeho nastavení, cívky a hmotnosti se převedou automaticky. Děkujeme @DIEHARDave za plugin zmod_afclite a opravy panelu
+* AD5M / AD5M Pro: [zrychlení eMMC](/cs/FAQ/#zrychlení-emmc-na-ad5m--ad5m-pro) — režim HS52 na 50 MHz, čtení zhruba 2krát rychlejší (~11 → ~22 MB/s). Volitelně DDR52 — až ~44 MB/s
+* AD5M / AD5M Pro: [+7 MB operační paměti](/cs/FAQ/#paměť-ram-navíc-extra_ram) (extra_ram). Metodu navrhl @mlengle
+* Creator 5 / Creator 5 Pro: nový globální parametr [KLIPPER_C5](/cs/Global/#klipper_c5) — shapery z Klipperu 13
+* C5Pro: rozsah a počet průchodů [Auto PA](/cs/C5PRO/#vytvoření-sítě-podložky-a-auto-pa) lze nastavit (`pa_min`, `pa_max`, `pa_count`)
+* Wi-Fi: hlídač spojení, opravena ztráta IPv4 po krátkém výpadku, na AD5M a AD5X vypnuto úsporné řízení napájení adaptéru. Autor @mlengle
+* Kamera: vlastní mjpg-streamer pro všechny tiskárny. Autor @mlengle
+* Přenos obrazovky tiskárny nyní funguje i na AD5M / AD5M Pro
+* Z-Mod: nabídka [PLUGINS](/cs/Global/#plugins) ve 12 jazycích
+* AD5M / AD5M Pro: plugin [telegram_notify](https://github.com/mlengle/telegram_notify) v katalogu pluginů. Autor @mlengle
+* HelixScreen: uživatelské soubory se zachovají při aktualizacích Moonrakeru. Autor Preston Brown
+* Z-Mod: KAMP — rychlost přejezdů v Line_Purge a Smart_Park lze nastavit (`variable_travel_speed`), ve výchozím stavu je poloviční
+* Z-Mod: limity rychlosti, zrychlení a SCV se ukládají na začátku START_PRINT a na konci se obnovují (dříve jen u Creator 5 Pro)
+* Z-Mod: [_USER_PREPARE_PRINT](/cs/Main/#_user_prepare_print) a `_PREPARE_PRINT` dostávají parametry volání
+* Z-Mod: v prostředí Z-Mod je dostupný příkaz `ping`
+* Z-Mod: 3MF — opraveno určení podložky pro AD5M, AD5X a Creator 5, u souborů jiných než 3MF se číslo podložky ignoruje
+* AD5X: podpora firmwaru 3.1.8
+* Odstraněno makro MF_GCODE
+* Opravy chyb
 
 ### Verze 1.7.5
 28.10.2026

@@ -1,6 +1,7 @@
 # Changelog
 
 - [Version History](#version-history)
+    - [Version 1.7.6](#version-176)
     - [Version 1.7.5](#version-175)
     - [Version 1.7.4](#version-174)
     - [Version 1.7.3](#version-173)
@@ -50,6 +51,31 @@
 ---
 
 ## Version History
+
+### Version 1.7.6
+11.11.2026
+
+* AD5X / Creator 5 / Creator 5 Pro: new global parameter [ORCA_FF](/Global/#orca_ff) — native screen emulator. Spools for colors are chosen right in the slicer when sending a print, not in the Fluidd menu. Also works with Flash Studio (host type `FlashForge`)
+* AD5X / Creator 5 Pro: [filament sync with OrcaSlicer](/AD5X/#filament-sync-with-orcaslicer) — slots are published to Moonraker (`orca_lanes` parameter), and the "Sync filament" button pulls filament colors and types
+* AD5X / Creator 5 Pro: the [AFC panel](/Global/#afc) is built into Z-Mod: slots, color, type and Spoolman spools in Fluidd and Mainsail, lane selection window before printing. The zmod_afclite plugin is removed, its settings, spools and weights are migrated automatically. Thanks to @DIEHARDave for the zmod_afclite plugin and panel fixes
+* AD5M / AD5M Pro: [eMMC speed-up](/FAQ/#emmc-speed-up-on-ad5m--ad5m-pro) — HS52 mode at 50 MHz, reading about 2 times faster (~11 → ~22 MB/s). Optional DDR52 — up to ~44 MB/s
+* AD5M / AD5M Pro: [+7 MB of RAM](/FAQ/#extra-ram-extra_ram) (extra_ram). Method suggested by @mlengle
+* Creator 5 / Creator 5 Pro: new global parameter [KLIPPER_C5](/Global/#klipper_c5) — shapers from Klipper 13
+* C5Pro: the range and number of passes of [Auto PA](/C5PRO/#bed-mesh-building-and-auto-pa) are configurable (`pa_min`, `pa_max`, `pa_count`)
+* Wi-Fi: connection watchdog, fixed loss of IPv4 after a short disconnect, adapter power saving turned off on AD5M and AD5X. By @mlengle
+* Camera: own mjpg-streamer for all printers. By @mlengle
+* Printer screen streaming now works on AD5M / AD5M Pro too
+* Z-Mod: the [PLUGINS](/Global/#plugins) menu in 12 languages
+* AD5M / AD5M Pro: the [telegram_notify](https://github.com/mlengle/telegram_notify) plugin in the plugin catalog. By @mlengle
+* HelixScreen: user files are kept across Moonraker updates. By Preston Brown
+* Z-Mod: KAMP — the travel speed in Line_Purge and Smart_Park is configurable (`variable_travel_speed`), halved by default
+* Z-Mod: speed, acceleration and SCV limits are saved at the start of START_PRINT and restored at the end (previously only on Creator 5 Pro)
+* Z-Mod: [_USER_PREPARE_PRINT](/Main/#_user_prepare_print) and `_PREPARE_PRINT` receive the call parameters
+* Z-Mod: the `ping` command is available in the Z-Mod environment
+* Z-Mod: 3MF — fixed plate detection for AD5M, AD5X and Creator 5, the plate number is ignored for non-3MF files
+* AD5X: support for firmware 3.1.8
+* Removed the MF_GCODE macro
+* Bug fixes
 
 ### Version 1.7.5
 28.10.2026

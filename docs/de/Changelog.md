@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#änderungsprotokolle-ausführlich)
+		- [Version 1.7.6](#version-176)
 		- [Version 1.7.5](#version-175)
 		- [Version 1.7.4](#version-174)
 		- [Version 1.7.3](#version-173)
@@ -50,6 +51,32 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.6"
+	### Version 1.7.6
+	11.11.2026
+
+	* AD5X / Creator 5 / Creator 5 Pro: neuer globaler Parameter [ORCA_FF](/de/Global/#orca_ff) – Emulator des nativen Bildschirms. Die Spulen für die Farben werden direkt im Slicer beim Senden zum Druck gewählt, nicht im Fluidd-Menü. Funktioniert auch mit Flash Studio (Host-Typ `FlashForge`)
+	* AD5X / Creator 5 Pro: [Filament-Synchronisierung mit OrcaSlicer](/de/AD5X/#filament-synchronisierung-mit-orcaslicer-ad5x) – die Slots werden in Moonraker veröffentlicht (Parameter `orca_lanes`), die Schaltfläche „Filament synchronisieren“ übernimmt Farben und Filamenttypen
+	* AD5X / Creator 5 Pro: das [AFC-Panel](/de/Global/#afc) ist in Z-Mod integriert: Slots, Farbe, Typ und Spoolman-Spulen in Fluidd und Mainsail, Lane-Auswahlfenster vor dem Druck. Das Plugin zmod_afclite wurde entfernt, seine Einstellungen, Spulen und Gewichte werden automatisch übernommen. Danke an @DIEHARDave für das Plugin zmod_afclite und die Panel-Korrekturen
+	* AD5M / AD5M Pro: [eMMC-Beschleunigung](/de/FAQ/#emmc-beschleunigung-beim-ad5m--ad5m-pro) – Modus HS52 mit 50 MHz, Lesen etwa 2-mal schneller (~11 → ~22 MB/s). Option DDR52 – bis ~44 MB/s
+	* AD5M / AD5M Pro: [+7 MB Arbeitsspeicher](/de/FAQ/#zusätzlicher-arbeitsspeicher-extra_ram) (extra_ram). Methode von @mlengle
+	* Creator 5 / Creator 5 Pro: neuer globaler Parameter [KLIPPER_C5](/de/Global/#klipper_c5) – Shaper aus Klipper 13
+	* C5Pro: Bereich und Anzahl der Durchgänge von [Auto PA](/de/C5PRO/#erstellung-des-bettnetzes-und-auto-pa) sind einstellbar (`pa_min`, `pa_max`, `pa_count`)
+	* WLAN: Verbindungswächter, behoben: Verlust von IPv4 nach kurzer Unterbrechung, beim AD5M und AD5X wurde der Energiesparmodus des Adapters abgeschaltet. Von @mlengle
+	* Kamera: eigener mjpg-streamer für alle Drucker. Von @mlengle
+	* Die Übertragung des Druckerbildschirms funktioniert jetzt auch beim AD5M / AD5M Pro
+	* Z-Mod: das Menü [PLUGINS](/de/Global/#plugins) in 12 Sprachen
+	* AD5M / AD5M Pro: das Plugin [telegram_notify](https://github.com/mlengle/telegram_notify) im Plugin-Katalog. Von @mlengle
+	* HelixScreen: Benutzerdateien bleiben bei Moonraker-Updates erhalten. Von Preston Brown
+	* Z-Mod: KAMP – die Verfahrgeschwindigkeit in Line_Purge und Smart_Park ist einstellbar (`variable_travel_speed`), standardmäßig halbiert
+	* Z-Mod: Grenzwerte für Geschwindigkeit, Beschleunigung und SCV werden zu Beginn von START_PRINT gespeichert und am Ende wiederhergestellt (früher nur beim Creator 5 Pro)
+	* Z-Mod: [_USER_PREPARE_PRINT](/de/Main/#_user_prepare_print) und `_PREPARE_PRINT` erhalten die Aufrufparameter
+	* Z-Mod: der Befehl `ping` ist in der Z-Mod-Umgebung verfügbar
+	* Z-Mod: 3MF – Erkennung der Druckplatte für AD5M, AD5X und Creator 5 korrigiert, bei Nicht-3MF-Dateien wird die Plattennummer ignoriert
+	* AD5X: Unterstützung für Firmware 3.1.8
+	* Makro MF_GCODE entfernt
+	* Fehlerbehebungen
 
 ??? note "Version 1.7.5"
 	### Version 1.7.5
