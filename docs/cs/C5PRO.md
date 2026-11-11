@@ -407,6 +407,8 @@ Nápis `_průhledná` se zobrazí na tlačítkách.
 
 ## Kalibrace extruderů
 
+> Funguje pouze **bez nativní obrazovky** (režim `display_off`).
+
 Díky kalibraci extruderů tiskárna zná přesnou vzájemnou polohu všech čtyř trysek. To je nezbytné pro kvalitní vícebarevný tisk.
 
 **Kdy je třeba kalibrovat:**
@@ -451,6 +453,8 @@ CALIBRATE_EXTRUDERS BED_TEMP=70 SEARCH=12
 ---
 
 ## Kalibrace VFA
+
+> Funguje pouze **bez nativní obrazovky** (režim `display_off`).
 
 Kalibrace VFA (Vertical Fine Artifacts) umožňuje omezit vertikální artefakty na povrchu tisku způsobené rezonancemi krokových motorů.
 

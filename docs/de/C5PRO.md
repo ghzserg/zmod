@@ -407,6 +407,8 @@ Die Beschriftung `_transparent` wird auf den Schaltflächen angezeigt.
 
 ## Extruderkalibrierung
 
+> Funktioniert nur **ohne nativen Bildschirm** (Modus `display_off`).
+
 Durch die Extruderkalibrierung kennt der Drucker die genaue Position der vier Düsen zueinander. Dies ist für hochwertigen Mehrfarbdruck erforderlich.
 
 **Wann kalibrieren:**
@@ -451,6 +453,8 @@ CALIBRATE_EXTRUDERS BED_TEMP=70 SEARCH=12
 ---
 
 ## VFA-Kalibrierung
+
+> Funktioniert nur **ohne nativen Bildschirm** (Modus `display_off`).
 
 Die VFA-Kalibrierung (Vertical Fine Artifacts) ermöglicht es, vertikale Artefakte auf der Druckoberfläche zu reduzieren, die durch Resonanzen der Schrittmotoren verursacht werden.
 

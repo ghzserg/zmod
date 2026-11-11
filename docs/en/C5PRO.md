@@ -408,6 +408,8 @@ The label `_transparent` will be displayed on the buttons.
 
 ## Extruder calibration
 
+> Works only **without the native screen** (`display_off` mode).
+
 Extruder calibration allows the printer to know the exact position of each of the four nozzles relative to each other. This is necessary for high-quality multi-color printing.
 
 **When to calibrate:**
@@ -452,6 +454,8 @@ CALIBRATE_EXTRUDERS BED_TEMP=70 SEARCH=12
 ---
 
 ## VFA calibration
+
+> Works only **without the native screen** (`display_off` mode).
 
 VFA (Vertical Fine Artifacts) calibration allows reducing vertical artifacts on the print surface caused by stepper motor resonances.
 
