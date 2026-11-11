@@ -622,3 +622,16 @@ release_gcode:
 press_gcode:
 release_gcode:
 ```
+
+---
+
+## Vypnutí okna výběru barvy při zasunutí filamentu
+
+Aby se okno výběru barvy a typu při zasunutí filamentu v režimu bez nativní obrazovky nezobrazovalo:
+
+Přidejte do `mod_data/user.cfg`:
+
+```
+[gcode_macro _SENSOR_INSERT_HANDLER]
+gcode:
+```

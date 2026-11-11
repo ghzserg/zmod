@@ -644,3 +644,16 @@ release_gcode:
 press_gcode:
 release_gcode:
 ```
+
+---
+
+## Отключение окна выбора цвета при вставке прутка
+
+Чтобы окно выбора цвета и типа не появлялось при вставке прутка в режиме без родного экрана:
+
+Пропишите в `mod_data/user.cfg`
+
+```
+[gcode_macro _SENSOR_INSERT_HANDLER]
+gcode:
+```

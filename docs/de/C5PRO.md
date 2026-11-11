@@ -622,3 +622,16 @@ release_gcode:
 press_gcode:
 release_gcode:
 ```
+
+---
+
+## Farbauswahlfenster beim Einlegen von Filament deaktivieren
+
+Damit das Fenster zur Auswahl von Farbe und Typ beim Einlegen von Filament im Modus ohne nativen Bildschirm nicht erscheint:
+
+Fügen Sie in `mod_data/user.cfg` hinzu:
+
+```
+[gcode_macro _SENSOR_INSERT_HANDLER]
+gcode:
+```

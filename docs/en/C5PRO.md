@@ -623,3 +623,16 @@ release_gcode:
 press_gcode:
 release_gcode:
 ```
+
+---
+
+## Disabling the color selection window when inserting filament
+
+To stop the color and type selection window from appearing when filament is inserted in screenless mode:
+
+Add to `mod_data/user.cfg`:
+
+```
+[gcode_macro _SENSOR_INSERT_HANDLER]
+gcode:
+```
