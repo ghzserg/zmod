@@ -175,6 +175,8 @@ Enabling Z-Mod on AD5X/Creator 5/Creator 5 Pro after updating the native firmwar
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
+If the update came through the native screen, then after it says the device needs to be rebooted, it is enough to run the [RESET_PASSWD](/System/#reset_passwd) macro: it activates the mod automatically.
+
 ### SET XY
 
 For those whose ~~mind~~ "home" position has shifted (parking at the poop chute). Extract the archive contents to the root of a FAT32 flash drive, turn off the printer, insert the flash drive and turn the printer on. The calibration will load. First, press Reset. Then, use the on-screen control buttons to adjust the correct head position. Press the Set button to lock this. Reboot the printer without the flash drive. Archive from official FlashForge support.

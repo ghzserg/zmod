@@ -181,6 +181,8 @@ Durch Aktivieren von Z-Mod auf dem AD5X/Creator 5/Creator 5 Pro nach einem Firmw
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
+Kam das Update über den nativen Bildschirm, genügt es, nachdem er meldet, dass das Gerät neu gestartet werden muss, das Makro [RESET_PASSWD](/de/System/#reset_passwd) auszuführen: Es aktiviert den Mod automatisch.
+
 ### SET XY
 
 Für alle, deren ~~Verstand~~ „Home“-Position verrutscht ist (Parkposition am Abfallschacht): Entpacken Sie den Archivinhalt in das Stammverzeichnis eines FAT32-USB-Sticks, schalten Sie den Drucker aus, stecken Sie den Stick ein und schalten Sie den Drucker ein. Die Kalibrierung wird geladen. Drücken Sie zuerst die Reset-Taste. Stellen Sie anschließend mithilfe der Bedienelemente auf dem Bildschirm die korrekte Druckkopfposition ein. Drücken Sie die Set-Taste, um die Position zu fixieren. Starten Sie den Drucker ohne den USB-Stick neu. Archiv vom offiziellen FlashForge-Support.

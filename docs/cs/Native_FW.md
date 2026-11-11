@@ -176,6 +176,8 @@ Po aktualizaci nativního firmwaru na AD5X/Creator 5/Creator 5 Pro lze mod znovu
 - [Creator 5](https://github.com/ghzserg/FF/releases/download/R/Creator5-log.tgz)
 - [Creator 5 Pro](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-log.tgz)
 
+Pokud aktualizace přišla přes nativní obrazovku, stačí po zprávě o nutnosti restartovat zařízení spustit makro [RESET_PASSWD](/cs/System/#reset_passwd): mod se aktivuje automaticky.
+
 ### SET XY
 
 Pro ty, kterým ~~ujela střecha~~ se posunula „domovská“ pozice (parkování u odpadního žlabu). Extrahujte obsah archivu do kořenového adresáře USB disku naformátovaného na FAT32, vypněte tiskárnu, vložte disk a tiskárnu zapněte. Načte se kalibrační obrazovka. Nejprve stiskněte Reset. Poté pomocí ovládacích tlačítek na obrazovce nastavte správnou pozici hlavy. Stisknutím tlačítka Set pozici uložíte. Restartujte tiskárnu bez USB disku. Archiv pochází z oficiální podpory FlashForge.

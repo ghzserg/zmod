@@ -286,7 +286,7 @@ If the native screen does not find updates:
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-But if you update from the native screen rather than from a USB drive, run the ```RESET_PASSWD``` macro before turning the printer off.
+If the update came through the native screen, then after it says the device needs to be rebooted, run the ```RESET_PASSWD``` macro: it activates the mod automatically.
 
 ---
 

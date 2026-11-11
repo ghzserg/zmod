@@ -202,6 +202,8 @@ Po spuštění makra:
 
 Obnoví heslo SSH uživatele `root` na `root`.
 
+Po aktualizaci přes nativní obrazovku, jakmile oznámí nutnost restartovat zařízení, stačí spustit toto makro: mod se aktivuje automaticky ([podrobnosti](/cs/Setup/#aktualizace-nativního-firmwaru)).
+
 ---
 ### CHECK_SYSTEM
 

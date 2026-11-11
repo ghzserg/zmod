@@ -176,6 +176,8 @@
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
+Если обновление пришло через родной экран, то после сообщения о необходимости перезагрузить устройство достаточно выполнить макрос [RESET_PASSWD](/ru/System/#reset_passwd): он активирует мод автоматически.
+
 ### Установка XY
 
 Для тех, у кого ~~поехала крыша~~ сместился "дом" (парковка к какашкоприемнику).

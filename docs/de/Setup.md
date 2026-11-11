@@ -310,7 +310,7 @@ Wenn der native Bildschirm das Update nicht findet:
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-Wenn Sie jedoch über den nativen Bildschirm und nicht per USB-Stick aktualisieren, führen Sie vor dem Ausschalten des Druckers das Makro ```RESET_PASSWD``` aus.
+Kam das Update über den nativen Bildschirm, führen Sie, nachdem er meldet, dass das Gerät neu gestartet werden muss, das Makro ```RESET_PASSWD``` aus: Es aktiviert den Mod automatisch.
 
 ---
 

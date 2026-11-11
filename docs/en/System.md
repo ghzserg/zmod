@@ -230,6 +230,8 @@ After running the macro:
 
 Reset the SSH `root` password to `root`.
 
+After an update through the native screen, once it says the device needs to be rebooted, it is enough to run this macro: the mod is activated automatically ([details](/Setup/#updating-stock-firmware)).
+
 ---
 ### CHECK_SYSTEM
 

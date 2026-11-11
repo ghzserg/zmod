@@ -273,6 +273,8 @@ Nach dem Ausführen des Makros:
 
 Setzt das SSH-Passwort des Benutzers `root` auf `root` zurück.
 
+Nach einem Update über den nativen Bildschirm genügt es, dieses Makro auszuführen, sobald er meldet, dass das Gerät neu gestartet werden muss: Der Mod wird automatisch aktiviert ([Details](/de/Setup/#wie-aktualisiere-ich-die-standard-firmware)).
+
 ---
 
 ### CHECK_SYSTEM

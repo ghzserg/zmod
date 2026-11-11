@@ -306,7 +306,7 @@ BTC `17wXTd9BqYp1K3zCLTxVyGLEXUDjf7XNLL`
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-Но если вы обновляете с родного экрана, а не с флешки, то до выключения принтера нужно вызвать макрос ```RESET_PASSWD```
+Если обновление пришло через родной экран, то после сообщения о необходимости перезагрузить устройство выполните макрос ```RESET_PASSWD```: он активирует мод автоматически.
 
 ---
 

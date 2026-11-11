@@ -281,7 +281,7 @@ Pokud nativní obrazovka aktualizace nenajde:
 - [Creator5-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5-enable-zmod.tgz)
 - [Creator5Pro-enable-zmod.tgz](https://github.com/ghzserg/FF/releases/download/R/Creator5Pro-enable-zmod.tgz)
 
-Pokud však aktualizujete z nativní obrazovky, a ne z USB disku, spusťte před vypnutím tiskárny makro ```RESET_PASSWD```.
+Pokud aktualizace přišla přes nativní obrazovku, spusťte po zprávě o nutnosti restartovat zařízení makro ```RESET_PASSWD```: mod se aktivuje automaticky.
 
 ---
 
