@@ -40,7 +40,7 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** ist eine weitere alternative Bildschirm-Implementierung.
 
-**[Rivet](https://github.com/lDOCI/rivet)** ist ein alternativer Bildschirm für den AD5M / AD5M Pro: etwa 10 MB RAM, Touch-Bedienung auf das resistive Panel des Druckers abgestimmt, Updates über Moonraker mit automatischer Rückkehr zur vorherigen Version, falls eine neue nicht startet. Installation: `PLUGINS` → rivet, danach `DISPLAY_OFF GUPPY=0 RIVET=1`.
+**[Rivet](https://github.com/lDOCI/rivet)** ist ein alternativer Bildschirm für den AD5M / AD5M Pro: etwa 10 MB RAM, Touch-Bedienung auf das resistive Panel des Druckers abgestimmt, Updates über Moonraker mit automatischer Rückkehr zur vorherigen Version, falls eine neue nicht startet. Installation: `PLUGINS` → rivet, danach `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1`.
 
 !!! warning "Warnung:"
 

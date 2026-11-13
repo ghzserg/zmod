@@ -39,7 +39,7 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** – další alternativní implementace obrazovky.
 
-**[Rivet](https://github.com/lDOCI/rivet)** – alternativní obrazovka vytvořená pro AD5M / AD5M Pro: asi 10 MB RAM, dotyk vyladěný pro odporový panel tiskárny, aktualizace přes Moonraker a automatický návrat k předchozí verzi, pokud se nová nespustí. Instalace: `PLUGINS` → rivet, poté `DISPLAY_OFF GUPPY=0 RIVET=1`.
+**[Rivet](https://github.com/lDOCI/rivet)** – alternativní obrazovka vytvořená pro AD5M / AD5M Pro: asi 10 MB RAM, dotyk vyladěný pro odporový panel tiskárny, aktualizace přes Moonraker a automatický návrat k předchozí verzi, pokud se nová nespustí. Instalace: `PLUGINS` → rivet, poté `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1`.
 
 **Varování:**
 

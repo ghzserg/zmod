@@ -39,7 +39,7 @@ Use the button with a parameter selector in the "Macros" list, or a console comm
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** (alternative screen implementation)
 
-**[Rivet](https://github.com/lDOCI/rivet)** (alternative screen made for the AD5M / AD5M Pro): about 10 MB of RAM, touch tuned for the printer's resistive panel, updates through Moonraker and rolls back to the previous version by itself if a new one does not start. Install: `PLUGINS` → rivet, then `DISPLAY_OFF GUPPY=0 RIVET=1`.
+**[Rivet](https://github.com/lDOCI/rivet)** (alternative screen made for the AD5M / AD5M Pro): about 10 MB of RAM, touch tuned for the printer's resistive panel, updates through Moonraker and rolls back to the previous version by itself if a new one does not start. Install: `PLUGINS` → rivet, then `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1`.
 
 **Warning:**
 
