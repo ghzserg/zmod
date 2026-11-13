@@ -25,6 +25,7 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 
 - `DISPLAY_OFF GUPPY=1 HELIX=0` — zapne GuppyScreen.
 - `DISPLAY_OFF GUPPY=0 HELIX=1` — zapne [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
+- `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1` — zapne [Rivet](https://github.com/lDOCI/rivet) + `PLUGINS` (pouze AD5M / AD5M Pro).
 
 **GuppyScreen** (alternativní implementace obrazovky):
 
@@ -37,6 +38,8 @@ Použijte tlačítko s výběrem parametru v seznamu „Makra“ nebo příkaz v
 - Založeno na [tomto forku](https://github.com/ghzserg/guppyscreen_ff5m), který vychází z [původního repozitáře](https://github.com/ballaswag/guppyscreen) a dalšího [forku](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** – další alternativní implementace obrazovky.
+
+**[Rivet](https://github.com/lDOCI/rivet)** – alternativní obrazovka vytvořená pro AD5M / AD5M Pro: asi 10 MB RAM, dotyk vyladěný pro odporový panel tiskárny, aktualizace přes Moonraker a automatický návrat k předchozí verzi, pokud se nová nespustí. Instalace: `PLUGINS` → rivet, poté `DISPLAY_OFF GUPPY=0 RIVET=1`.
 
 **Varování:**
 

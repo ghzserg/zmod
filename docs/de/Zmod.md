@@ -187,7 +187,7 @@ Firmware-Aktualisierung über das Netzwerk mithilfe eines USB-Sticks.
 
 ### STOP_ZMOD
 
-Entlädt Guppy, Helix, Moonraker und Fluidd/Mainsail aus dem Speicher. Der Telegram-Bot funktioniert dann ebenfalls nicht mehr.
+Entlädt Guppy, Helix, Rivet, Moonraker und Fluidd/Mainsail aus dem Speicher. Der Telegram-Bot funktioniert dann ebenfalls nicht mehr.
 
 Parameter:
 
@@ -200,13 +200,13 @@ Beispiel:
 STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Wenn diese Zeile im Startcode steht, wird GUPPY/HELIX nach dem Druckstart aus dem Speicher entladen.
+Wenn diese Zeile im Startcode steht, wird GUPPY/HELIX/RIVET nach dem Druckstart aus dem Speicher entladen.
 
 ---
 
 ### START_ZMOD
 
-Guppy, Helix, Moonraker und Fluidd/Mainsail nach STOP_ZMOD wieder einschalten.
+Guppy, Helix, Rivet, Moonraker und Fluidd/Mainsail nach STOP_ZMOD wieder einschalten.
 
 Parameter:
 
@@ -219,7 +219,7 @@ Beispiel:
 START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Wenn diese Zeile im End-G-Code steht, wird GUPPY/HELIX nach dem Ende des Drucks gestartet.
+Wenn diese Zeile im End-G-Code steht, wird GUPPY/HELIX/RIVET nach dem Ende des Drucks gestartet.
 
 ---
 

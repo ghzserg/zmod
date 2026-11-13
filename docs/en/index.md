@@ -75,6 +75,7 @@ Here’s what you gain by installing Z-Mod:
 - **Stock LCD Disable**: Frees up RAM (critical on AD5M with only 128 MB).
 - **GuppyScreen**: Enhanced replacement UI for the printer’s display.
 - **HelixScreen**: Enhanced replacement UI for the printer’s display.
+- **Rivet**: Lightweight replacement UI for the AD5M / AD5M Pro display.
 - **Log Viewing**: Full system logs for diagnostics.
 - **Firmware Retraction**: Adjust retraction parameters on-the-fly, no reslicing needed.
 - **Full ROOT Access**: Full system control always available.

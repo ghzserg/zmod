@@ -70,6 +70,7 @@ Our “fleet” includes **over 100 unique configurations**. Just by major categ
     - Stock screen
     - GuppyScreen
     - HelixScreen
+    - Rivet
     - Headless (no screen)
 
 - **Primary UIs**:

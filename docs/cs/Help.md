@@ -70,6 +70,7 @@ Naši „flotilu“ tvoří **přes 100 jedinečných konfigurací**. Jen podle 
     - Nativní obrazovka
     - GuppyScreen
     - HelixScreen
+    - Rivet
     - Bez obrazovky (headless)
 
 - **Primární uživatelská rozhraní**:
@@ -78,7 +79,7 @@ Naši „flotilu“ tvoří **přes 100 jedinečných konfigurací**. Jen podle 
 
 - **Metody zahájení tisku**:
 
-  Přes nativní obrazovku, GuppyScreen, HelixScreen, OrcaSlicer (protokol FF, protokol Klipper atd.)
+  Přes nativní obrazovku, GuppyScreen, HelixScreen, Rivet, OrcaSlicer (protokol FF, protokol Klipper atd.)
 
 - **Volitelné „doplňky“ (pluginy)**:
 

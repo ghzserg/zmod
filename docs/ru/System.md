@@ -25,6 +25,7 @@
 
 - `DISPLAY_OFF GUPPY=1 HELIX=0` - включит GuppyScreen.
 - `DISPLAY_OFF GUPPY=0 HELIX=1`  - включит [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
+- `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1` - включит [Rivet](https://github.com/lDOCI/rivet) + `PLUGINS` (только AD5M / AD5M Pro).
 После перезагрузки родной экран будет работать ещё 10 секунд, но он не влияет на z-offset т.к. печать идёт не через него.
 
 **GuppyScreen** - Рекомендуется использовать вместо родного экрана.
@@ -35,6 +36,8 @@
 - Поддерживает все функции родного экрана, кроме настройки WiFi.
 - Наполнен дополнительными функциями в виде списка всех макросов, включая ваши собственные
 - Собирается из [форка](https://github.com/ghzserg/guppyscreen_ff5m), который базируется на [оригинальном репозитории](https://github.com/ballaswag/guppyscreen) и другом [форке](https://github.com/consp/guppyscreen/tree/flashforge_ad5m).
+
+**[Rivet](https://github.com/lDOCI/rivet)** - альтернативный экран, сделанный для AD5M / AD5M Pro: около 10 Мб оперативной памяти, касания настроены под резистивную панель принтера, обновляется через Moonraker и сам откатывается на прежнюю версию, если новая не запустилась. Установка: `PLUGINS` → rivet, затем `DISPLAY_OFF GUPPY=0 RIVET=1`.
 
 
 **Не отключайте экран, если вы чётко не понимаете, как работает карта стола, z-offset и макросы START_PRINT и END_PRINT**

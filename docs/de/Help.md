@@ -67,6 +67,7 @@ Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlag
     - mit nativem Bildschirm
     - mit GuppyScreen
     - mit HelixScreen
+    - mit Rivet
     - kein Bildschirm
 
 - **Zwei Hauptsteuerungsschnittstellen**:
@@ -75,7 +76,7 @@ Unsere "Flotte" hat **über 100 verschiedene Konfigurationen**. Nur die Grundlag
 
 - **Unterschiedliche Möglichkeiten, Aufgaben zum Drucker zu senden**:
 
-  über den nativen Bildschirm, GuppyScreen, HelixScreen, OrcaSlicer (FF-Protokoll, Klipper-Protokoll, usw.)
+  über den nativen Bildschirm, GuppyScreen, HelixScreen, Rivet, OrcaSlicer (FF-Protokoll, Klipper-Protokoll, usw.)
 
 - **Zusätzliche "Optionen" (Plugins)**:
 

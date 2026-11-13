@@ -17,7 +17,7 @@
   - KlipperMod verwendet reinen Klipper mit einem Minimum an für FlashForge 5M (Pro) spezifischen Änderungen
   - Z-Mod verwendet den Standard-Klipper aus der nativen Firmware sowie Klipper 13.
   - KlipperMod verwendet KlipperScreen als Bildschirm für den Drucker.
-  - Z-Mod verwendet den nativen Bildschirm oder GuppyScreen/HelixScreen anstelle von KlipperScreen.
+  - Z-Mod verwendet den nativen Bildschirm oder GuppyScreen/HelixScreen/Rivet anstelle von KlipperScreen.
   - KlipperMod verwendet Moonraker-Timelapse.
   - Z-Mod verwendet moonraker-telegram-bot auf einem EXTERNEN Host mit Timelapse-Unterstützung oder das [TimeLapse-Plugin](https://github.com/ghzserg/timelapse/).
 
@@ -34,9 +34,9 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Z
 
 #### Was es in KlipperMod gibt, aber nicht in Z-Mod:
 
-- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - Bildschirm für den Drucker. In Z-Mod gibt es statt KlipperScreen den nativen Bildschirm oder GuppyScreen/HelixScreen
+- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - Bildschirm für den Drucker. In Z-Mod gibt es statt KlipperScreen den nativen Bildschirm oder GuppyScreen/HelixScreen/Rivet
 - [Moonraker-Timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - Z-Mod verwendet Telegram-Bot oder [TimeLapse-Plugin](https://github.com/ghzserg/timelapse/).
-- Netzwerkeinrichtung über iwd/wpa_supplicant (im Falle von GuppyScreen/HelixScreen) - in Z-Mod erfolgt die Netzwerkeinrichtung über den nativen Bildschirm; der Netzwerkstart ist auch im Modus ohne nativen Bildschirm möglich
+- Netzwerkeinrichtung über iwd/wpa_supplicant (im Falle von GuppyScreen/HelixScreen/Rivet) - in Z-Mod erfolgt die Netzwerkeinrichtung über den nativen Bildschirm; der Netzwerkstart ist auch im Modus ohne nativen Bildschirm möglich
 
 #### Was es in Z-Mod gibt, aber nicht in KlipperMod:
 
@@ -50,10 +50,10 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Z
 - Automatische Aktualisierung von `Fluidd`/`Mainsail`/`Moonraker` und Z-Mod über das Netzwerk
 - [Entware](/de/FAQ/#z-mod-enthält-entware---wie-benutzt-man-es)
 - Behebung des Fehlers [E0017](/de/Global/#fix_e0017)
-- Zusätzlich unterstützt: **GuppyScreen/HelixScreen: PID-Kalibrierung, Shaper-Steuerung, Firmware-Retraktion, Düsenreinigung, Wägezellen-Reset, Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
+- Zusätzlich unterstützt: **GuppyScreen/HelixScreen/Rivet: PID-Kalibrierung, Shaper-Steuerung, Firmware-Retraktion, Düsenreinigung, Wägezellen-Reset, Schraubenjustierung, ColdPull, verbesserte Bettnivellierung**
 - Korrigierte Steuerung der Treiberlüfter. Die Lüfter schalten sich automatisch ein, sobald die Motoren aktiv sind. Bei der Standard-Firmware nur während des Drucks.
 - Adaptive Bettnivellierung [KAMP](/de/Calibrations/#kamp)
-- PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [Bett](/de/Calibrations/#pid_tune_bed), auch über GuppyScreen/HelixScreen.
+- PID-Kalibrierung von [Extruder](/de/Calibrations/#pid_tune_extruder) und [Bett](/de/Calibrations/#pid_tune_bed), auch über GuppyScreen/HelixScreen/Rivet.
 - Implementierung von [COLDPULL/coldpull](/de/Filament/#coldpull) (Düsenreinigung) ohne Kraftaufwand. Umsetzung [dieses Algorithmus](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
@@ -64,7 +64,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Z
 - Telegram-Bot-Unterstützung
 - Unterstützung für Klipper 13
 - Alle Funktionen, die im Vergleich zu KlipperMod aufgeführt sind.
-- Die native Firmware sendet viele Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von Z-Mod mit GuppyScreen/HelixScreen vermieden werden.
+- Die native Firmware sendet viele Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von Z-Mod mit GuppyScreen/HelixScreen/Rivet vermieden werden.
 
 ---
 
@@ -130,7 +130,7 @@ Der Drucker kann in zwei Modi betrieben werden:
 - Mit nativem Bildschirm – fast die gesamte Logik wird vom nativen Bildschirm gesteuert, und vieles lässt sich nicht ändern.
 - Ohne nativen Bildschirm – alle Funktionen werden von Z-Mod gesteuert.
 Das bedeutet nicht, dass Sie den Bildschirm hardwaremäßig deaktivieren oder ihn durch einen anderen ersetzen müssen.
-Im Modus ohne nativen Bildschirm können Sie den alternativen Software-Bildschirm GuppyScreen/HelixScreen verwenden oder den Bildschirm ganz ausschalten, dann bleibt er dunkel.
+Im Modus ohne nativen Bildschirm können Sie den alternativen Software-Bildschirm GuppyScreen/HelixScreen/Rivet verwenden oder den Bildschirm ganz ausschalten, dann bleibt er dunkel.
 
 !!! warning "Warnung"
     Deaktivieren Sie den Bildschirm nur, wenn Sie Bettnivellierung, Z-Offset und die Makros START_PRINT/END_PRINT vollständig verstehen.
@@ -189,7 +189,7 @@ Ohne diese Zeilen weiß der Druckerbildschirm nicht, auf welche Temperatur die D
 
 Wenn Sie mit dem nativen Bildschirm arbeiten, brauchen Sie nichts zu ändern.
 
-Wenn Sie ohne nativen Bildschirm bzw. mit GuppyScreen/HelixScreen arbeiten (empfohlen auch bei Arbeit mit dem nativen Bildschirm), ersetzen Sie den gesamten Startcode:
+Wenn Sie ohne nativen Bildschirm bzw. mit GuppyScreen/HelixScreen/Rivet arbeiten (empfohlen auch bei Arbeit mit dem nativen Bildschirm), ersetzen Sie den gesamten Startcode:
 ```
 START_PRINT EXTRUDER_TEMP=[nozzle_temperature_initial_layer] BED_TEMP=[bed_temperature_initial_layer_single]
 {single_extruder_multi_material ? "; T0" : "T" + initial_extruder}
@@ -240,9 +240,9 @@ Der Z-Offset mit nativem Bildschirm und im Modus ohne nativen Bildschirm ist unt
 
 Verwenden Sie ```LOAD_ZOFFSET_NATIVE```, um den Z-Offset vom nativen Bildschirm in den Modus ohne nativen Bildschirm zu kopieren. _Für Creator 5 / Creator 5 Pro nicht erforderlich._
 
-Z-Offset-Anpassungen über Fluidd/Mainsail/GuppyScreen/HelixScreen sind **nur bis zum Neustart** wirksam. Ändern Sie ihn nicht, ohne zu verstehen, wohin sich die Düse bewegt.
+Z-Offset-Anpassungen über Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet sind **nur bis zum Neustart** wirksam. Ändern Sie ihn nicht, ohne zu verstehen, wohin sich die Düse bewegt.
 
-Jeder Aufruf von `SET_GCODE_OFFSET` (wird automatisch aufgerufen, wenn man den Z-Offset in Fluidd/Mainsail/GuppyScreen/HelixScreen ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. 
+Jeder Aufruf von `SET_GCODE_OFFSET` (wird automatisch aufgerufen, wenn man den Z-Offset in Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet ändert) speichert den aktuellen Z-Offset in den globalen Parametern des Mods. 
 Dieser gespeicherte Wert wird aber nur verwendet, wenn der globale Parameter [LOAD_ZOFFSET](/de/Global/#load_zoffset) gesetzt ist (standardmäßig deaktiviert; aktivieren mit `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), der native Bildschirm nicht verwendet wird und das Makro [START_PRINT](/de/Main/#start_print) verwendet wird.
 
 Sie können auch die Parameter [START_PRINT](/de/Main/#start_print) verwenden, um den Z-Offset zu setzen:

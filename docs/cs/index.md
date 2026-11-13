@@ -75,6 +75,7 @@ Zde je, co získáte instalací Z-Mod:
 - **Vypnutí nativní obrazovky**: Uvolňuje RAM (kritické na AD5M s pouze 128 MB).
 - **GuppyScreen**: Vylepšené náhradní UI pro displej tiskárny.
 - **HelixScreen**: Další náhradní UI pro displej tiskárny.
+- **Rivet**: Lehké náhradní UI pro displej AD5M / AD5M Pro.
 - **Prohlížení logů**: Plné systémové logy pro diagnostiku.
 - **Firmwarová retrakce**: Upravujte parametry retrakce za chodu, není třeba znovu slicovat.
 - **Plný ROOT přístup**: Vždy je k dispozici plná kontrola nad systémem.

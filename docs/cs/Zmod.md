@@ -167,7 +167,7 @@ Aktualizuje firmware přes síť pomocí USB disku.
 
 ### STOP_ZMOD
 
-Uvolní z paměti Guppy, Helix, Moonraker a Fluidd/Mainsail. Telegram bot také přestane fungovat.
+Uvolní z paměti Guppy, Helix, Rivet, Moonraker a Fluidd/Mainsail. Telegram bot také přestane fungovat.
 
 Parametry:
 
@@ -180,13 +180,13 @@ Příklad:
 STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Pokud je tento řádek přidán do startovacího kódu, bude GUPPY/HELIX po zahájení tisku uvolněn z paměti.
+Pokud je tento řádek přidán do startovacího kódu, bude GUPPY/HELIX/RIVET po zahájení tisku uvolněn z paměti.
 
 ---
 
 ### START_ZMOD
 
-Po STOP_ZMOD znovu spustí Guppy, Helix, Moonraker a Fluidd/Mainsail.
+Po STOP_ZMOD znovu spustí Guppy, Helix, Rivet, Moonraker a Fluidd/Mainsail.
 
 Parametry:
 
@@ -199,7 +199,7 @@ Příklad:
 START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Pokud je tento řádek přidán do koncového kódu, bude GUPPY/HELIX spuštěn po dokončení tisku.
+Pokud je tento řádek přidán do koncového kódu, bude GUPPY/HELIX/RIVET spuštěn po dokončení tisku.
 
 ---
 ### ZSSH_ON

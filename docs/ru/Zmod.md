@@ -178,7 +178,7 @@ CAMERA_ON VIDEO=video99
 
 ### STOP_ZMOD
 
-Выгрузить из памяти guppy, helix, moonraker и fluidd/Mainsail. Телеграм-бот тоже перестанет работать
+Выгрузить из памяти guppy, helix, rivet, moonraker и fluidd/Mainsail. Телеграм-бот тоже перестанет работать
 
 Параметры:
 
@@ -191,13 +191,13 @@ CAMERA_ON VIDEO=video99
 STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Если эту строку прописать в стартовый код, то после начала печати GUPPY/HELIX будет выгружен из памяти
+Если эту строку прописать в стартовый код, то после начала печати GUPPY/HELIX/RIVET будет выгружен из памяти
 
 ---
 
 ### START_ZMOD
 
-Включить обратно guppy, helix, moonraker и fluidd/Mainsail после STOP_ZMOD.
+Включить обратно guppy, helix, rivet, moonraker и fluidd/Mainsail после STOP_ZMOD.
 
 Параметры:
 
@@ -210,7 +210,7 @@ STOP_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 START_ZMOD SCREEN=1 MOONRAKER=0 HTTP=0
 ```
 
-Если эту строку прописать в конечный код, то после окончания печати GUPPY/HELIX будет запущен
+Если эту строку прописать в конечный код, то после окончания печати GUPPY/HELIX/RIVET будет запущен
 
 ---
 
