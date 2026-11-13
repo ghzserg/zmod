@@ -75,7 +75,7 @@ Rozdíly mezi KlipperMod a Z-Mod:
 - KlipperMod používá čistý Klipper s minimem změn specifických pro FlashForge 5M (Pro).
 - Z-Mod používá standardní Klipper z nativního firmwaru a také Klipper 13.
 - KlipperMod používá KlipperScreen jako obrazovku tiskárny.
-- Z-Mod používá nativní obrazovku nebo GuppyScreen/HelixScreen místo KlipperScreen.
+- Z-Mod používá nativní obrazovku nebo GuppyScreen/HelixScreen/Rivet místo KlipperScreen.
 - KlipperMod používá Moonraker-timelapse.
 - Z-Mod používá moonraker-telegram-bot na EXTERNÍM hostiteli s podporou časosběru nebo [plugin TimeLapse](https://github.com/ghzserg/timelapse/).
 
@@ -92,9 +92,9 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Z-Mod sice používá
 
 #### Co je v KlipperMod, ale ne v Z-Mod:
 
-*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - obrazovka pro tiskárnu. V Z-Mod se místo KlipperScreen používá nativní obrazovka nebo GuppyScreen/HelixScreen.
+*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - obrazovka pro tiskárnu. V Z-Mod se místo KlipperScreen používá nativní obrazovka nebo GuppyScreen/HelixScreen/Rivet.
 *   [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - Z-Mod používá Telegram bota a [plugin Timelapse](https://github.com/ghzserg/timelapse/).
-*   Konfigurace sítě přes iwd/wpa_supplicant (v případě GuppyScreen/HelixScreen) - v Z-Mod se konfigurace sítě provádí přes nativní obrazovku, spuštění sítě je možné i bez nativní obrazovky.
+*   Konfigurace sítě přes iwd/wpa_supplicant (v případě GuppyScreen/HelixScreen/Rivet) - v Z-Mod se konfigurace sítě provádí přes nativní obrazovku, spuštění sítě je možné i bez nativní obrazovky.
 
 #### Co je v Z-Mod, ale ne v KlipperMod:
 
@@ -108,10 +108,10 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Z-Mod sice používá
 *   Automatické aktualizace pro `Fluidd`/`Mainsail`/`Moonraker` a Z-Mod přes síť
 *   [Entware](/cs/FAQ/#entware-v-z-mod-jak-ho-používat)
 *   Oprava chyby [E0017](/cs/Global/#fix_e0017)
-*   Navíc GuppyScreen/HelixScreen podporuje: kalibraci PID, ovládání shaperů, firmwarovou retrakci, čištění trysky, reset tenzometrů, nastavení šroubů, ColdPull, vylepšené měření sítě podložky
+*   Navíc GuppyScreen/HelixScreen/Rivet podporuje: kalibraci PID, ovládání shaperů, firmwarovou retrakci, čištění trysky, reset tenzometrů, nastavení šroubů, ColdPull, vylepšené měření sítě podložky
 *   Opravené řízení ventilátorů chlazení driverů. Zapínají se automaticky, když jsou motory aktivní. V nativním firmwaru - pouze během tisku.
 *   Adaptivní síť podložky [KAMP](/cs/Calibrations/#kamp)
-*   Kalibrace PID pro [extruder](/cs/Calibrations/#pid_tune_extruder) a [podložku](/cs/Calibrations/#pid_tune_bed), včetně přes GuppyScreen/HelixScreen
+*   Kalibrace PID pro [extruder](/cs/Calibrations/#pid_tune_extruder) a [podložku](/cs/Calibrations/#pid_tune_bed), včetně přes GuppyScreen/HelixScreen/Rivet
 *   [COLDPULL](/cs/Filament/#coldpull) (čištění trysky) bez použití síly. Implementace [tohoto algoritmu](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 #### Co je v Z-Mod, ale ne v nativním firmwaru:
@@ -120,7 +120,7 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Z-Mod sice používá
 - Podpora Klipper 13
 - Podpora Telegram bota
 - Všechny funkce uvedené ve srovnání s KlipperMod
-- [Nativní firmware odesílá mnoho dat na čínské servery](https://github.com/FlashForge/Orca-Flashforge/issues/26), tomu se lze vyhnout použitím Z-Mod s GuppyScreen/HelixScreen
+- [Nativní firmware odesílá mnoho dat na čínské servery](https://github.com/FlashForge/Orca-Flashforge/issues/26), tomu se lze vyhnout použitím Z-Mod s GuppyScreen/HelixScreen/Rivet
 
 ---
 
@@ -205,9 +205,9 @@ Z-offset s nativní obrazovkou a v režimu bez nativní obrazovky není stejný:
 
 Pro zkopírování Z-offsetu z nativní obrazovky do režimu bez nativní obrazovky použijte `LOAD_ZOFFSET_NATIVE`. _Pro Creator 5 / Creator 5 Pro není potřeba._
 
-Úpravy Z-offsetu přes Fluidd/Mainsail/GuppyScreen/HelixScreen ovlivňují tisk pouze do restartu. Neměňte ho, pokud nerozumíte, kam se tryska pohybuje.
+Úpravy Z-offsetu přes Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet ovlivňují tisk pouze do restartu. Neměňte ho, pokud nerozumíte, kam se tryska pohybuje.
 
-Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluidd/Mainsail/GuppyScreen/HelixScreen) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](/cs/Global/#load_zoffset) (ve výchozím stavu vypnutý; zapnete ho pomocí `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](/cs/Main/#start_print).
+Každé volání `SET_GCODE_OFFSET` (automaticky spuštěné při úpravě Z-offsetu z Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet) uloží aktuální z-offset do globálních parametrů modu. Tato uložená hodnota se použije pouze pokud je povolen globální parametr [LOAD_ZOFFSET](/cs/Global/#load_zoffset) (ve výchozím stavu vypnutý; zapnete ho pomocí `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), není použita nativní obrazovka a je využito makro [START_PRINT](/cs/Main/#start_print).
 
 Z-offset lze také nastavit pomocí parametrů [START_PRINT](/cs/Main/#start_print):
 
@@ -306,7 +306,7 @@ Tiskárna může pracovat ve dvou režimech:
 - S nativní obrazovkou - v tomto případě je téměř veškerá logika ovládána nativní obrazovkou a mnoho funkcí nelze změnit.
 - Bez nativní obrazovky - v tomto případě jsou všechny funkce ovládány Z-Modem.
 To neznamená, že musíte obrazovku vypnout nebo ji nahradit jinou.
-V režimu bez nativní obrazovky můžete použít alternativní softwarovou obrazovku GuppyScreen/HelixScreen nebo obrazovku úplně vypnout – pak zůstane tmavá.
+V režimu bez nativní obrazovky můžete použít alternativní softwarovou obrazovku GuppyScreen/HelixScreen/Rivet nebo obrazovku úplně vypnout – pak zůstane tmavá.
 
 !!! warning
     Nevypínejte obrazovku, dokud plně nerozumíte síti podložky, Z-offsetu a makrům START_PRINT/END_PRINT.

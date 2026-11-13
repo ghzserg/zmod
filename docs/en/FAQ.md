@@ -74,7 +74,7 @@ The printer can operate in two modes:
 - With the native screen - in this case, almost all operating logic is controlled by the native screen, and many features cannot be changed.
 - Without the native screen - in this case, all features are controlled by Z-Mod.
 This doesn't mean you need to turn off the screen or replace it with a different one.
-In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen or turn off the screen completely, and it will go dark.
+In the mode without the native screen, you can use the alternative software screen GuppyScreen/HelixScreen/Rivet or turn off the screen completely, and it will go dark.
 
 !!! warning
     Do not disable the screen unless you fully understand bed leveling, z-offset, and START_PRINT/END_PRINT macros
@@ -97,7 +97,7 @@ Differences between KlipperMod and Z-Mod:
 - KlipperMod uses pure Klipper with minimal FlashForge 5M (Pro)-specific changes.
 - Z-Mod uses the standard Klipper from the native firmware, as well as Klipper 13.
 - KlipperMod uses KlipperScreen as a printer screen.
-- Z-Mod uses the native screen or GuppyScreen/HelixScreen instead of KlipperScreen.
+- Z-Mod uses the native screen or GuppyScreen/HelixScreen/Rivet instead of KlipperScreen.
 - KlipperMod uses Moonraker-timelapse.
 - Z-Mod uses moonraker-telegram-bot on an EXTERNAL host with timelapse support, or the [TimeLapse plugin](https://github.com/ghzserg/timelapse/)
 
@@ -114,9 +114,9 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 
 #### What's in KlipperMod but not in Z-Mod:
 
-*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In Z-Mod, native screen or GuppyScreen/HelixScreen is used instead of KlipperScreen
+*   [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - screen for the printer. In Z-Mod, native screen or GuppyScreen/HelixScreen/Rivet is used instead of KlipperScreen
 *   [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - Z-Mod uses Telegram bot and [plugin Timelapse](https://github.com/ghzserg/timelapse/)
-*   Network configuration via iwd/wpa_supplicant (in case of GuppyScreen/HelixScreen) - in Z-Mod network configuration is done through the native screen, network startup is possible even without the native screen
+*   Network configuration via iwd/wpa_supplicant (in case of GuppyScreen/HelixScreen/Rivet) - in Z-Mod network configuration is done through the native screen, network startup is possible even without the native screen
 
 #### What's in Z-Mod but not in KlipperMod:
 
@@ -130,10 +130,10 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 *   Automatic updates for `Fluidd`/`Mainsail`/`Moonraker` and Z-Mod over the network
 *   [Entware](/FAQ/#entware-in-z-mod-how-to-use-it)
 *   Fixed [E0017 error](/Global/#fix_e0017)
-*   Additionally, GuppyScreen/HelixScreen supports: PID calibration, damper control, firmware retraction, nozzle cleaning, load cell reset, screw adjustment, ColdPull, enhanced bed leveling
+*   Additionally, GuppyScreen/HelixScreen/Rivet supports: PID calibration, damper control, firmware retraction, nozzle cleaning, load cell reset, screw adjustment, ColdPull, enhanced bed leveling
 *   Fixed driver cooling fans operation. They automatically turn on when motors are running. On native firmware - only during printing.
 *   Adaptive bed leveling [KAMP](/Calibrations/#kamp)
-*   PID calibration for [extruder](/Calibrations/#pid_tune_extruder) and [bed](/Calibrations/#pid_tune_bed), including via GuppyScreen/HelixScreen
+*   PID calibration for [extruder](/Calibrations/#pid_tune_extruder) and [bed](/Calibrations/#pid_tune_bed), including via GuppyScreen/HelixScreen/Rivet
 *   Implemented [COLDPULL](/Filament/#coldpull) (nozzle cleaning) without force. Implementation of [this algorithm](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 #### What's in Z-Mod but not in native firmware:
@@ -142,7 +142,7 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 - Klipper 13 support
 - Telegram bot support
 - All features listed in the comparison with KlipperMod
-- [The native firmware sends a lot of data to Chinese servers](https://github.com/FlashForge/Orca-Flashforge/issues/26), this can be avoided by using Z-Mod with GuppyScreen/HelixScreen
+- [The native firmware sends a lot of data to Chinese servers](https://github.com/FlashForge/Orca-Flashforge/issues/26), this can be avoided by using Z-Mod with GuppyScreen/HelixScreen/Rivet
 
 ---
 
@@ -235,9 +235,9 @@ The Z-offset for native-screen mode and screenless mode is not the same: each li
 
 Use ```LOAD_ZOFFSET_NATIVE``` to copy the Z-offset from the native screen to screenless mode. _Not required for Creator 5 / Creator 5 Pro._
 
-Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen only apply until reboot. Changing it without understanding nozzle movement is not recommended.
+Z-offset adjustments via Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet only apply until reboot. Changing it without understanding nozzle movement is not recommended.
 
-Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluidd/Mainsail/GuppyScreen/HelixScreen) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
+Any `SET_GCODE_OFFSET` call (automatically triggered when adjusting Z-offset from Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet) saves the current z-offset to the mod's global parameters. This saved value is used only if the [LOAD_ZOFFSET](/Global/#load_zoffset) global parameter is enabled (disabled by default; enable with `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), native screen isn't used, and the [START_PRINT](/Main/#start_print) macro is utilized.
 
 Z-offset can also be set via [START_PRINT](/Main/#start_print) parameters:
 

@@ -22,6 +22,7 @@ External plugins not developed by the Z-Mod author.
 8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy for every printer: paste a model link in Discord, Telegram or Matrix and it slices, matches your Spoolman spools, asks before printing, watches the camera for spaghetti and roasts your model.
 9. ~~Zmod AFC Lite~~ - removed and replaced by built-in [AFC](/Global/#afc) support.
 10. [Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) - Telegram print notifications without the Apprise library: start, finish, error, pause, progress, camera snapshot and Z-Mod messages. Saves about 5 MB of Moonraker memory compared to notify. Do not enable together with notify.
+11. [Rivet](https://github.com/lDOCI/rivet) - an alternative screen for the AD5M / AD5M Pro
 
 To enable the repository of external plugins, run the command `PLUGINS`.
 

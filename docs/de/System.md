@@ -26,6 +26,7 @@ Verwenden Sie die Schaltfläche mit Parameterauswahl in der Liste „Makros“ o
 
 - `DISPLAY_OFF GUPPY=1 HELIX=0` — aktiviert GuppyScreen.
 - `DISPLAY_OFF GUPPY=0 HELIX=1` — aktiviert [HelixScreen](https://github.com/prestonbrown/helixscreen) + `PLUGINS`.
+- `DISPLAY_OFF GUPPY=0 HELIX=0 RIVET=1` — aktiviert [Rivet](https://github.com/lDOCI/rivet) + `PLUGINS` (nur AD5M / AD5M Pro).
 
 GuppyScreen ist eine alternative Bildschirm-Implementierung:
 
@@ -38,6 +39,8 @@ GuppyScreen ist eine alternative Bildschirm-Implementierung:
 - Basiert auf einem [Fork](https://github.com/ghzserg/guppyscreen_ff5m), der auf dem [Original-Repository](https://github.com/ballaswag/guppyscreen) und einem weiteren [Fork](https://github.com/consp/guppyscreen/tree/flashforge_ad5m) basiert.
 
 **[HelixScreen](https://github.com/prestonbrown/helixscreen)** ist eine weitere alternative Bildschirm-Implementierung.
+
+**[Rivet](https://github.com/lDOCI/rivet)** ist ein alternativer Bildschirm für den AD5M / AD5M Pro: etwa 10 MB RAM, Touch-Bedienung auf das resistive Panel des Druckers abgestimmt, Updates über Moonraker mit automatischer Rückkehr zur vorherigen Version, falls eine neue nicht startet. Installation: `PLUGINS` → rivet, danach `DISPLAY_OFF GUPPY=0 RIVET=1`.
 
 !!! warning "Warnung:"
 

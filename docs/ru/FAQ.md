@@ -16,7 +16,7 @@
 - KlipperMod использует чистый Klipper с минимумом специфичных для FlashForge 5M (Pro) изменений
 - Z-Mod использует стандартный Klipper из родной прошивки, а также Klipper 13
 - KlipperMod использует KlipperScreen как экран для принтера.
-- В Z-Mod вместо KlipperScreen родной экран или GuppyScreen/HelixScreen
+- В Z-Mod вместо KlipperScreen родной экран или GuppyScreen/HelixScreen/Rivet
 - KlipperMod использует Moonraker-timelapse
 - Z-Mod использует moonraker-telegram-bot на ВНЕШНЕМ хосте с поддержкой таймлапсов или [плагин TimeLapse](https://github.com/ghzserg/timelapse/)
 
@@ -33,9 +33,9 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 
 #### Что есть в KlipperMod и чего нет в Z-Mod:
 
-- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - экран для принтера. В Z-Mod вместо KlipperScreen родной экран или GuppyScreen/HelixScreen
+- [KlipperScreen](https://klipperscreen.readthedocs.io/en/latest/) - экран для принтера. В Z-Mod вместо KlipperScreen родной экран или GuppyScreen/HelixScreen/Rivet
 - [Moonraker-timelapse](https://github.com/mainsail-crew/moonraker-timelapse) - в Z-Mod используется Телеграм-бот или [плагин TimeLapse](https://github.com/ghzserg/timelapse/)
-- Настройка сети через iwd/wpa_supplicant (в случае с GuppyScreen/HelixScreen) - в Z-Mod настройка сети через родной экран, запуск сети возможен и в режиме без родного экрана
+- Настройка сети через iwd/wpa_supplicant (в случае с GuppyScreen/HelixScreen/Rivet) - в Z-Mod настройка сети через родной экран, запуск сети возможен и в режиме без родного экрана
 
 #### Что есть в Z-Mod и чего нет в KlipperMod:
 
@@ -49,10 +49,10 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 - Автоматическое обновление `Fluidd`/`Mainsail`/`Moonraker` и Z-Mod по сети
 - [Entware](/ru/FAQ/#в-z-mod-входит-entware---как-им-воспользоваться)
 - Исправлена ошибка [E0017](/ru/Global/#fix_e0017)
-- Дополнительно GuppyScreen/HelixScreen поддерживает: калибровка PID, управление заслонкой, откат из прошивки, очистка сопла, сброс тензодатчиков, регулировка винтов, ColdPull, доработана карта стола
+- Дополнительно GuppyScreen/HelixScreen/Rivet поддерживает: калибровка PID, управление заслонкой, откат из прошивки, очистка сопла, сброс тензодатчиков, регулировка винтов, ColdPull, доработана карта стола
 - Исправлена работа вентиляторов обдува драйверов. Они автоматически включаются при работе моторов. На родной прошивке - только при печати.
 - Адаптивное снятие карты стола [KAMP](/ru/Calibrations/#kamp)
-- Калибровка PID [экструдера](/ru/Calibrations/#pid_tune_extruder) и [стола](/ru/Calibrations/#pid_tune_bed) в том числе через GuppyScreen/HelixScreen.
+- Калибровка PID [экструдера](/ru/Calibrations/#pid_tune_extruder) и [стола](/ru/Calibrations/#pid_tune_bed) в том числе через GuppyScreen/HelixScreen/Rivet.
 - Реализован [COLDPULL/Колдпул](/ru/Filament/#coldpull) (очистка сопла) без насилия. Реализация [этого алгоритма](https://t.me/FF_5M_5M_Pro/2836/447172)
 
 ---
@@ -63,7 +63,7 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 - Поддержки Телеграм-бота
 - Поддержки Klipper 13
 - Всех функций, что перечислены в сравнении с KlipperMod
-- [Родная прошивка отправляет множество данных на китайские серверы](https://github.com/FlashForge/Orca-Flashforge/issues/26), этого можно избежать, если использовать Z-Mod с GuppyScreen/HelixScreen
+- [Родная прошивка отправляет множество данных на китайские серверы](https://github.com/FlashForge/Orca-Flashforge/issues/26), этого можно избежать, если использовать Z-Mod с GuppyScreen/HelixScreen/Rivet
 
 ---
 
@@ -130,7 +130,7 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 - Без родного экрана - в этом случае всеми возможностями управляет Z-Mod.
 
 Это не значит, что вам нужно аппаратно отключать экран или менять его на другой.
-В режиме без родного экрана вы можете использовать альтернативный программный экран GuppyScreen/HelixScreen или вообще отключить экран, и он потухнет.
+В режиме без родного экрана вы можете использовать альтернативный программный экран GuppyScreen/HelixScreen/Rivet или вообще отключить экран, и он потухнет.
 
 **Не отключайте экран, если вы чётко не понимаете, как работает карта стола, z-offset и макросы START_PRINT и END_PRINT**
 
@@ -245,9 +245,9 @@ Z-Offset при работе с родным экраном и при работ
 
 Используется z-offset, сохранённый на экране.
 
-Смещение Z из Fluidd/Mainsail/GuppyScreen/HelixScreen влияет **только до перезагрузки** и менять его без понимания, куда движется сопло, не стоит.
+Смещение Z из Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet влияет **только до перезагрузки** и менять его без понимания, куда движется сопло, не стоит.
 
-Любой вызов `SET_GCODE_OFFSET` (а он автоматически вызывается при изменении смещения Z из Fluidd/Mainsail/GuppyScreen/HelixScreen) сохраняет текущий z-offset в глобальные параметры мода. Но это сохраненное значение используется только в том случае, если указан глобальный параметр [LOAD_ZOFFSET](/ru/Global/#load_zoffset) (который по умолчанию отключен, для включения `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), не используется родной экран и используется макрос [START_PRINT](/ru/Main/#start_print).
+Любой вызов `SET_GCODE_OFFSET` (а он автоматически вызывается при изменении смещения Z из Fluidd/Mainsail/GuppyScreen/HelixScreen/Rivet) сохраняет текущий z-offset в глобальные параметры мода. Но это сохраненное значение используется только в том случае, если указан глобальный параметр [LOAD_ZOFFSET](/ru/Global/#load_zoffset) (который по умолчанию отключен, для включения `SAVE_ZMOD_DATA LOAD_ZOFFSET=1`), не используется родной экран и используется макрос [START_PRINT](/ru/Main/#start_print).
 
 Также для задания Z-offset можно использовать параметры [START_PRINT](/ru/Main/#start_print)
 

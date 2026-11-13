@@ -22,6 +22,7 @@
 8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy для любого принтера: вставьте ссылку на модель в Discord, Telegram или Matrix, и Print Handy нарежет её, подберёт катушки из Spoolman, спросит перед печатью, проследит по камере за «спагетти» и подшутит над вашей моделью.
 9. ~~Zmod AFC Lite~~ - удалён и заменён встроенной поддержкой [AFC](/ru/Global/#afc).
 10. [Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme_ru.md) - Уведомления о печати в Telegram без библиотеки Apprise: старт, окончание, ошибка, пауза, прогресс, снимок с камеры и сообщения Z-Mod. Экономит около 5 МБ памяти Moonraker по сравнению с notify. Не включайте вместе с notify.
+11. [Rivet](https://github.com/lDOCI/rivet/blob/main/README.ru.md) - альтернативный экран для AD5M / AD5M Pro
 
 Чтобы включить репозиторий внешних плагинов, выполните команду `PLUGINS`.
 

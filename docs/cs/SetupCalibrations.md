@@ -334,13 +334,13 @@ Nativní obrazovka je hlavní nástroj pro úpravu Z-offsetu. Automaticky jej sp
 
 **Jak to funguje:**
 
-1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen, je potřeba jednorázově aktivovat speciální nastavení [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/cs/Global/#load_zoffset):
+1.  Aby si tiskárna pamatovala Z-offset z webového rozhraní a GuppyScreen/HelixScreen/Rivet, je potřeba jednorázově aktivovat speciální nastavení [SAVE_ZMOD_DATA LOAD_ZOFFSET=1](/cs/Global/#load_zoffset):
     ```gcode
     SAVE_ZMOD_DATA LOAD_ZOFFSET=1
     ```
     *Tento příkaz říká systému: „Načítej Z-offset z uložených nastavení, neměň jej.“*
 
-2.  Po povolení této volby můžete Z-offset upravovat přímo během tisku ve Fluidd/Mainsail nebo v panelu úprav v GuppyScreen/HelixScreen.
+2.  Po povolení této volby můžete Z-offset upravovat přímo během tisku ve Fluidd/Mainsail nebo v panelu úprav v GuppyScreen/HelixScreen/Rivet.
 
     <img width="418" height="73" alt="image" src="../../images/96d644b3-9c52-44d1-9a7c-18ccbac61796.png" />
 

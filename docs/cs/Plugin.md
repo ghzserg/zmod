@@ -22,6 +22,7 @@ Externí pluginy, které nevyvíjí autor Z-Mod:
 8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy pro každou tiskárnu: vložte odkaz na model do Discordu, Telegramu nebo Matrixu a Print Handy ho naslicuje, přiřadí cívky ze Spoolmanu, před tiskem se zeptá, hlídá kameru kvůli špagetám a vtipkuje o vašem modelu.
 9. ~~Zmod AFC Lite~~ - odstraněn a nahrazen vestavěnou podporou [AFC](/cs/Global/#afc).
 10. [Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) - Oznámení o tisku do Telegramu bez knihovny Apprise: start, dokončení, chyba, pauza, průběh, snímek z kamery a zprávy Z-Mod. Oproti notify ušetří asi 5 MB paměti Moonrakeru. Nezapínejte současně s notify.
+11. [Rivet](https://github.com/lDOCI/rivet) – alternativní obrazovka pro AD5M / AD5M Pro
 
 Chcete-li povolit repozitář externích pluginů, spusťte příkaz `PLUGINS`.
 

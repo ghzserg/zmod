@@ -22,6 +22,7 @@ Externe Plugins, die nicht vom Autor von Z-Mod entwickelt wurden:
 8. [Print Handy](https://github.com/catduckgnaf/print-handy) - Bambu Handy für jeden Drucker: Modell-Link in Discord, Telegram oder Matrix einfügen, und Print Handy sliced, ordnet deine Spoolman-Spulen zu, fragt vor dem Druck nach, überwacht die Kamera auf Spaghetti und macht sich über dein Modell lustig.
 9. ~~Zmod AFC Lite~~ - entfernt und durch die integrierte [AFC](/de/Global/#afc)-Unterstützung ersetzt.
 10. [Telegram Notify](https://github.com/mlengle/telegram_notify/blob/main/Readme.md) - Druckbenachrichtigungen in Telegram ohne die Apprise-Bibliothek: Start, Ende, Fehler, Pause, Fortschritt, Kamerabild und Z-Mod-Meldungen. Spart etwa 5 MB Moonraker-Speicher im Vergleich zu notify. Nicht zusammen mit notify aktivieren.
+11. [Rivet](https://github.com/lDOCI/rivet) – ein alternativer Bildschirm für den AD5M / AD5M Pro
 
 Um das Repository für externe Plugins zu aktivieren, führen Sie den Befehl `PLUGINS` aus.
 

@@ -84,6 +84,7 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
     - **Deaktivieren des nativen Bildschirms:** Um RAM zu sparen (relevant für AD5M-Modelle mit 128 MB).
     - **GuppyScreen:** Eine alternative Oberfläche für den Druckerbildschirm mit erweiterten Funktionen.
     - **HelixScreen:** Eine weitere alternative Oberfläche für den Druckerbildschirm mit erweiterten Funktionen.
+    - **Rivet:** Eine leichte alternative Oberfläche für den Bildschirm des AD5M / AD5M Pro.
     - **Log Viewer:** Vollständige Informationen über alle Prozesse, um Probleme zu diagnostizieren.
     - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicen ist nicht erforderlich.
     - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker jederzeit.

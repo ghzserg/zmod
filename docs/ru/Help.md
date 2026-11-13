@@ -68,6 +68,7 @@ chroot /usr/data/.mod/.zmod/
     - с родным экраном
     - с GuppyScreen
     - с HelixScreen
+    - с Rivet
     - вообще без экрана
 
 - **2 основных веб-интерфейса**:
