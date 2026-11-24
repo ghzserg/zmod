@@ -71,3 +71,22 @@ All settings are in `mkdocs.yml`:
 | `mkdocs build` | Build static site |
 | `mkdocs gh-deploy` | Publish to GitHub Pages |
 | `mkdocs --help` | Command help |
+
+## PDF books
+
+The GitHub Pages workflow builds the HTML site once, then exports one PDF per enabled
+language to `site/pdf/Z-Mod-XX.pdf`. PDFs are published together with the site.
+Pull requests affecting the build can download the `zmod-pdf-books` workflow artifact;
+only the main branch is deployed.
+
+For a local build, install the WeasyPrint system dependencies (Pango, HarfBuzz and
+Noto fonts), then run from the `mkdocs/` directory:
+
+```bash
+pip install -r requirements.txt -r requirements-pdf.txt
+mkdocs build
+python build_pdf.py
+```
+
+The export follows the navigation order, removes duplicate navigation entries,
+and appends documentation pages not present in navigation. The source Markdown is unchanged.
