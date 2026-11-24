@@ -61,7 +61,7 @@
 * AD5M / AD5M Pro: Přidána podpora nativního firmwaru 5.2.0.
 * AD5M / AD5M Pro: Přidána alternativní obrazovka Rivet (`DISPLAY_OFF RIVET=1`). Děkujeme @lDOCI.
 * AD5X / C5PRO: Neznámý typ filamentu `?` se v AFC nahrazuje typem PLA.
-* AD5X / C5PRO: Přiřazení AFC se zachovává při chybě tisku a restartu Klipperu. Přidán parametr [`IDLE_MAP`](Global.md#idle_map) pro resetování přiřazení po dokončení nebo zrušení tisku (ve výchozím nastavení vypnutý).
+* AD5X / C5PRO: Přidán parametr resetování přiřazení AFC [`IDLE_MAP`](Global.md#idle_map).
 * Opraveno spouštění tisku 3MF: Moonraker před tiskem aktualizuje metadata bez blokování Klipperu.
 * Opakovaný příkaz `PAUSE` se neprovede, pokud je tiskárna již pozastavena.
 * Opraveny pohyby při pozastavení, výměně filamentu a čištění trysky.

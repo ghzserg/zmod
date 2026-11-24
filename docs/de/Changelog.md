@@ -62,7 +62,7 @@
 	* AD5M / AD5M Pro: Unterstützung für die native Firmware 5.2.0 hinzugefügt.
 	* AD5M / AD5M Pro: Alternativen Bildschirm Rivet hinzugefügt (`DISPLAY_OFF RIVET=1`). Danke an @lDOCI.
 	* AD5X / C5PRO: Unbekannter Filamenttyp `?` wird in AFC als PLA behandelt.
-	* AD5X / C5PRO: AFC-Zuordnungen bleiben bei Druckfehlern und einem Neustart von Klipper erhalten. Parameter [`IDLE_MAP`](Global.md#idle_map) zum Zurücksetzen nach Druckende oder Abbruch hinzugefügt (standardmäßig aus).
+	* AD5X / C5PRO: Parameter zum Zurücksetzen der AFC-Zuordnungen [`IDLE_MAP`](Global.md#idle_map) hinzugefügt.
 	* 3MF-Druckstart korrigiert: Moonraker aktualisiert die Metadaten vor dem Druck, ohne Klipper zu blockieren.
 	* Ein weiterer `PAUSE`-Befehl wird ignoriert, wenn der Drucker bereits pausiert.
 	* Bewegungen während Pause, Filamentwechsel und Düsenreinigung korrigiert.
