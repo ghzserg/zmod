@@ -1006,6 +1006,21 @@ Beispiel: `SAVE_ZMOD_DATA AFC=1`
 
 ---
 
+##### IDLE_MAP
+
+Nur AD5X / Creator 5 Pro. Das [AFC](#afc)-Panel muss aktiviert sein.
+
+Werkzeugzuordnungen (T0, T1 usw.) zu AFC-Slots nach Druckende oder Abbruch zurücksetzen.
+
+- 0 - Zuordnungen beibehalten (Standard)
+- 1 - Zuordnungen zurücksetzen (T0 → lane1, T1 → lane2 usw.)
+
+Bei Druckfehlern und einem Neustart von Klipper bleiben die Zuordnungen unabhängig von dieser Einstellung erhalten. Für die Änderung ist kein Neustart erforderlich.
+
+Beispiel: `SAVE_ZMOD_DATA IDLE_MAP=1`
+
+---
+
 ##### KLIPPER_C5
 
 Nur Creator 5 / Creator 5 Pro

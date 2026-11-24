@@ -837,6 +837,21 @@ Example: `SAVE_ZMOD_DATA AFC=1`
 
 ---
 
+##### IDLE_MAP
+
+AD5X / Creator 5 Pro only. Requires the [AFC](#afc) panel to be enabled.
+
+Reset tool (T0, T1, etc.) to AFC slot mappings after a print completes or is cancelled.
+
+- 0 - Keep mappings (default)
+- 1 - Reset mappings (T0 → lane1, T1 → lane2, etc.)
+
+Mappings are preserved on print errors and Klipper restarts regardless of this setting. No restart is required to change it.
+
+Example: `SAVE_ZMOD_DATA IDLE_MAP=1`
+
+---
+
 ##### KLIPPER_C5
 
 Creator 5 / Creator 5 Pro only
