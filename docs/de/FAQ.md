@@ -798,7 +798,7 @@ Dementsprechend muss Z-Mod den nativen Klipper laden.
 
 <img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
-Wenn das nicht der Fall ist und Klipper läuft, führen Sie ```UPDATE_MCU FORCE=14``` aus – dieser Befehl installiert die aktuelle MCU-Version.
+Wenn das nicht der Fall ist und Klipper läuft, führen Sie ```UPDATE_MCU FORCE=new``` aus – dieser Befehl installiert die aktuelle MCU-Version.
 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 

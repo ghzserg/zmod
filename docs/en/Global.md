@@ -623,7 +623,7 @@ This error may also occur:
 
   It is better to carry out all calibrations [according to this guide](/SetupCalibrations/#printer-calibration-for-beginners)
 
-- If you use Klipper 14 on AD5X. In this case you can return to the native Klipper by running `UPDATE_MCU FORCE=12`.
+- If you use Klipper 14 on AD5X. In this case you can return to the native Klipper by running `UPDATE_MCU FORCE=native`.
 - If fuzzy skin is used and the CPU cannot keep up with calculating the toolpath. Disable fuzzy skin or tune its parameters.
 
 The `Communication timeout during homing` error may occur due to high communication latency between the host and MCUs. Round-trip time should consistently stay below 10ms. Temporary latency spikes can cause homing failures.

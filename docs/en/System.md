@@ -207,13 +207,14 @@ Klipper 14 (disabled by default).
 
 FORCE parameter:
 
-- 11 - load Klipper 11 firmware - FF5M
-- 12 - load Klipper 12 firmware - AD5X
-- 14 - load Klipper 14 firmware
+- `native` — install the native MCU firmware (Klipper 11 for AD5M / AD5M Pro, Klipper 12 for AD5X)
+- `new` — install the MCU firmware for Klipper 14
+- `11` and `12` — previous names for the native firmware, retained for compatibility
+- `13` and `14` — previous names for the new firmware, retained for compatibility
 
-Without parameters, changes the firmware to the opposite version.
+Without `FORCE`, the macro switches to the other firmware version.
 
-Example: `UPDATE_MCU FORCE=14` forces the download of Klipper 14 firmware.
+Examples: `UPDATE_MCU FORCE=new` installs the Klipper 14 MCU firmware; `UPDATE_MCU FORCE=native` restores the native MCU firmware.
 
 If you don't understand how to [restore the native Klipper from a USB flash drive](/Native_FW/#fix_klipper), do not run this command.
 Before updating Klipper, review the [changes in new versions](https://www.klipper3d.org/Releases.html); the stock configuration files need no edits.

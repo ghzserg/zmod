@@ -179,13 +179,14 @@ Klipper 14 je ve výchozím nastavení vypnutý.
 
 Parametr FORCE:
 
-- 11 - nahraje firmware pro Klipper 11 - FF5M
-- 12 - nahraje firmware pro Klipper 12 - AD5X
-- 14 - nahraje firmware pro Klipper 14
+- `native` — nainstaluje nativní firmware MCU (Klipper 11 pro AD5M / AD5M Pro, Klipper 12 pro AD5X)
+- `new` — nainstaluje firmware MCU pro Klipper 14
+- `11` a `12` — původní označení nativního firmwaru, zachováno kvůli kompatibilitě
+- `13` a `14` — původní označení nového firmwaru, zachováno kvůli kompatibilitě
 
-Bez parametru přepne na druhou verzi firmwaru.
+Bez `FORCE` makro přepne na druhou verzi firmwaru.
 
-Příklad: `UPDATE_MCU FORCE=14` vynutí nahrání firmwaru pro Klipper 14.
+Příklady: `UPDATE_MCU FORCE=new` nainstaluje firmware MCU pro Klipper 14; `UPDATE_MCU FORCE=native` obnoví nativní firmware MCU.
 
 Pokud nerozumíte, jak [obnovit nativní Klipper z USB flash disku](/cs/Native_FW/#fix_klipper), nespouštějte tento příkaz.
 Před aktualizací Klipperu si přečtěte [změny v nových verzích](https://www.klipper3d.org/Releases.html); standardní konfigurační soubory není nutné upravovat.

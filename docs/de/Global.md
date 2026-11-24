@@ -738,7 +738,7 @@ Führen Sie das Makro `MEM` aus und prüfen Sie, ob Swap-Speicher vorhanden ist 
 
 Aktivieren Sie den Swap-Speicher, falls er deaktiviert ist: ```SAVE_ZMOD_DATA USE_SWAP=1```
 
-- Wenn Sie Klipper 14 auf dem AD5X verwenden. In diesem Fall können Sie mit `UPDATE_MCU FORCE=12` zum nativen Klipper zurückkehren.
+- Wenn Sie Klipper 14 auf dem AD5X verwenden. In diesem Fall können Sie mit `UPDATE_MCU FORCE=native` zum nativen Klipper zurückkehren.
 
 - Wenn Fuzzy Skin verwendet wird und die CPU mit der Berechnung der Bahn nicht nachkommt. Deaktivieren Sie Fuzzy Skin oder passen Sie seine Parameter an.
 
