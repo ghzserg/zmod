@@ -3,6 +3,7 @@
 ??? note "Änderungsprotokolle"
 
 	- [Versionsgeschichte](#änderungsprotokolle-ausführlich)
+		- [Version 1.7.7](#version-177)
 		- [Version 1.7.6](#version-176)
 		- [Version 1.7.5](#version-175)
 		- [Version 1.7.4](#version-174)
@@ -51,6 +52,87 @@
 		- [Version 0.0.9](#version-009)
 
 ## Änderungsprotokolle ausführlich
+
+??? note "Version 1.7.7"
+	### Version 1.7.7
+	24.11.2026
+	
+	#### Z-Mod
+	
+	* AD5M / AD5M Pro: Unterstützung für die native Firmware 5.2.0 hinzugefügt.
+	* AD5M / AD5M Pro: Alternativen Bildschirm Rivet hinzugefügt (`DISPLAY_OFF RIVET=1`). Danke an @lDOCI.
+	* AD5X / C5PRO: Unbekannter Filamenttyp `?` wird in AFC als PLA behandelt.
+	* 3MF-Druckstart korrigiert: Moonraker aktualisiert die Metadaten vor dem Druck, ohne Klipper zu blockieren.
+	* Ein weiterer `PAUSE`-Befehl wird ignoriert, wenn der Drucker bereits pausiert.
+	* Bewegungen während Pause, Filamentwechsel und Düsenreinigung korrigiert.
+	* Makro `_RESET_Z_OFFSET` zum Zurücksetzen des Z-Offsets hinzugefügt.
+	* Das Menü `PLUGINS` verhindert nun die Aktivierung inkompatibler Plugins.
+	* Zeitzoneneinstellung über `SET_TIMEZONE` im Hostsystem und in der Z-Mod-Umgebung korrigiert.
+	* Prüfung von SSH-Schlüsseln und deren Anzeige in `ZLINK` korrigiert.
+	* Verarbeitung von Input-Shaper-Kalibrierungsdateien korrigiert.
+	* AD5M / AD5X: `UPDATE_MCU` unterstützt `FORCE=native` und `FORCE=new`; die bisherigen numerischen Werte bleiben kompatibel.
+	* AD5X: Automatisches Laden von Filament wird während eines Drucks nicht mehr gestartet.
+	* C5PRO: Parameter `AUTOINSERT` zur Steuerung des automatischen Filamentladens hinzugefügt.
+	* C5PRO: Zurücksetzen des Z-Offsets für den eingesetzten Extruder korrigiert.
+	* C5PRO: Parameter `TEMP_WAIT` in `T_IN_ZCOLOR` hinzugefügt.
+	* C5PRO: Integritätsprüfungen der nativen Firmwaredateien 2.0.0 aktualisiert.
+	
+	#### Klipper
+	
+	* AD5M / AD5X / C5PRO: Zeitreserve für Homing und Probing von 100 auf 300 ms erhöht.
+	* AD5M / AD5X / C5PRO: Zeitplanung von LED-, Lüfter- und Ausgangsbefehlen nach Linux-Verzögerungen korrigiert.
+	* AD5M / AD5X / C5PRO: Bereinigung wartender Reactor-Aufgaben bei Fehlern korrigiert.
+	* AD5M / AD5X: Klipper 13 durch Klipper 14 ersetzt. Die Einstellung `klipper13` heißt jetzt `klippernew`; alte Einstellungen werden automatisch übernommen.
+	* AD5M / AD5X: MCU-Speicherkonfiguration des N32G455 (128 KB) korrigiert, damit die Firmware auf Flashforge-Platinen korrekt startet.
+	* AD5M / AD5X: Klipper kann beim Start von Klippy eine MCU automatisch wiederherstellen, die im Shutdown-Zustand verblieben ist.
+	* AD5M / AD5X: Puffer für die Bewegungsplanung von 1 auf 2 Sekunden und Startpuffer von 250 auf 500 ms erhöht.
+	* AD5M / AD5X: Doppelte Meldungen zu Geschwindigkeitsgrenzen aus dem Protokoll entfernt.
+	* AD5X: Auswahl der passenden `virtual_sdcard`-Version für Klipper 14 beim Start und bei Z-Mod-Updates korrigiert.
+	* AD5X: `virtual_sdcard` gibt während der G-Code-Verarbeitung ungefähr alle 50 ms die Steuerung an Reactor zurück.
+	* C5PRO: Neue Klipper-Shaper (`KLIPPER_C5`) sind standardmäßig aktiviert.
+	* C5PRO: Bereits aktivierte Endschalter werden freigegeben, wenn die Homing-Initialisierung fehlschlägt.
+	* C5PRO: Bei Verbindungsverlust zur MCU wird das Warten auf ACK mit einem Fehler abgebrochen, statt hängen zu bleiben.
+	* C5PRO: Verarbeitung der `REMOVE_PEEL`-Antwort korrigiert; die ursprüngliche Protokollausgabe bleibt erhalten.
+	* C5PRO: Fehler in G-Code-Makros zeigen jetzt Zeile und Ursache; Vorlagenfehler in `delayed_gcode` erscheinen in der Konsole.
+	* C5PRO: Rotation von `klippy.log` und Debug-Protokollierung nach MCU-Trennung korrigiert.
+	* C5PRO: Angezeigte Geschwindigkeit im Motion Report nach Bewegungsende korrigiert.
+	* C5PRO: Berechnung der `PID_CALIBRATE`-Koeffizienten korrigiert und Hysterese von 5 auf 2,5 °C reduziert. Gespeicherte PID-Werte bleiben unverändert.
+	
+	#### GuppyScreen
+	
+	* AD5M Pro / C5PRO: Steuerung der Luftzirkulation auf den Lüfterbildschirm verlegt; der aktive Modus wird hervorgehoben.
+	* Navigation neu gestaltet: permanente Leiste Home / Print / Tune / Settings links und jederzeit sichtbare Stop-Taste.
+	* Auf Home erscheinen Sensoren als Kacheln, Fine Tune und Bed Mesh sind hinzugekommen; im Leerlauf wird eine große Uhr angezeigt.
+	* Der Druckbildschirm bietet jetzt Files, größere Werte, einen Fortschrittsbalken mit ETA, Koordinaten und Uhrzeit.
+	* Bildschirme Fine Tune, Retract und Limits übersichtlicher gestaltet: Schrittauswahl, Zurücksetzen von Z-Offset und PA sowie Hervorhebung geänderter Werte.
+	* Extrude und PID zeigen Düsen und Sensoren in denselben Kacheln wie Home.
+	* Bei mehreren Extrudern verwenden Kachelstreifen und Temperaturdiagramm die Filamentfarben. Leere Extruder erscheinen im Diagramm grau; die Option ist standardmäßig aktiv.
+	* Objektausschluss-Karte vergrößert: quadratisches Druckbett, Zoom mit +/− und Verschieben mit einem Finger.
+	* Bestätigung beim Ausschließen von Objekten in Liste und Karte hinzugefügt; in den Einstellungen deaktivierbar.
+	* Gefährliche Aktionen während Druck oder Pause gesperrt; die Taste Fortsetzen ist vor wiederholtem Tippen geschützt.
+	* Löschen von G-Code-Dateien mit Bestätigung hinzugefügt, auch in Unterordnern.
+	* Schraubenjustierung vom PID-Bildschirm zum Bed-Mesh-Bildschirm verschoben; Düsen- und Betttemperatur werden dort eingestellt.
+	* Übersetzungen von Beschriftungen, Maßeinheiten und Sensornamen korrigiert.
+	* Fehler bei Vorschaubildern und Dateimetadaten sowie die Temperaturanzeige des aktiven Extruders auf AD5X korrigiert.
+	* Puffer, JSON-Verarbeitung und Freigabe von Bildschirmressourcen optimiert. Messung auf AD5M: RSS 12.504 → 6.220 KB (−50 % gegenüber Z-Mod 1.5.1).
+	* Automatische UI-Prüfungen und Vorher/Nachher-Screenshotvergleiche für C5 Pro, AD5X und AD5M hinzugefügt.
+	* C5PRO: Kachel „Entfernen“ zum Abnehmen des Extruders vom Schlitten hinzugefügt.
+	
+	#### Moonraker
+	
+	* Ermittlung der geschätzten Druckdauer aus G-Code korrigiert.
+	* Parameter `post_update_gcode` hinzugefügt, um nach dem Update einer Webkomponente ein Makro auszuführen. GuppyScreen startet nach dem Update automatisch neu.
+	
+	#### Orca FF
+	
+	* Für alle Drucker: Der Emulator des nativen Bildschirms `orca_ff` wurde von Python auf C umgeschrieben. Der RAM-Verbrauch sank von 17 auf 2 MB (−15 MB).
+	
+	#### OrcaSlicer
+	
+	* Upload von Dateien mit russischen und anderen nicht-ASCII-Zeichen im Dateinamen über die lokale Flashforge-API korrigiert [#17254](https://github.com/OrcaSlicer/OrcaSlicer/pull/17254).
+	* Schalter für die Durchflusskalibrierung vor dem Druck auf Creator 5 / 5 Pro hinzugefügt [#17237](https://github.com/OrcaSlicer/OrcaSlicer/pull/17237).
+	
+	**Besonderer Dank an @mlengle für die neue GuppyScreen-Oberfläche.**
 
 ??? note "Version 1.7.6"
 	### Version 1.7.6

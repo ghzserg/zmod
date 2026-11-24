@@ -695,7 +695,7 @@ V souladu s tím musí Z-Mod načíst nativní Klipper.
 
 <img width="422" height="570" alt="image" src="../../images/821eb1c7-8cba-4a22-951f-852b1cb6c8ef.png" />
 
-Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=14``` – tento příkaz nainstaluje aktuální verzi MCU.
+Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=new``` – tento příkaz nainstaluje aktuální verzi MCU.
 
 Pokud vše ostatní selže a **Klipper nefunguje**:
 

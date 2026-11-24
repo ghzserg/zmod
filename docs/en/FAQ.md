@@ -761,7 +761,7 @@ Accordingly, Z-Mod needs to load native Klipper.
 
 <img width="422" height="570" alt="image" src="../../images/821eb1c7-8cba-4a22-951f-852b1cb6c8ef.png" />
 
-If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=14``` - this command will install the latest MCU version.
+If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=new``` - this command will install the latest MCU version.
 
 If all else fails and **Klipper isn't working**:
 

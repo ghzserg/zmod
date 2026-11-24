@@ -250,13 +250,14 @@ Klipper 14 ist standardmäßig deaktiviert.
 
 Parameter FORCE:
 
-- 11 - Firmware für Klipper 11 laden - FF5M
-- 12 - Firmware für Klipper 12 laden - AD5X
-- 14 - Firmware für Klipper 14 laden
+- `native` — native MCU-Firmware installieren (Klipper 11 für AD5M / AD5M Pro, Klipper 12 für AD5X)
+- `new` — MCU-Firmware für Klipper 14 installieren
+- `11` und `12` — bisherige Bezeichnungen für die native Firmware; weiterhin kompatibel
+- `13` und `14` — bisherige Bezeichnungen für die neue Firmware; weiterhin kompatibel
 
-Ohne Parameter wird auf die jeweils andere Firmware gewechselt.
+Ohne `FORCE` wechselt das Makro auf die jeweils andere Firmware.
 
-Beispiel: `UPDATE_MCU FORCE=14` erzwingt das Laden der Firmware für Klipper 14
+Beispiele: `UPDATE_MCU FORCE=new` installiert die MCU-Firmware für Klipper 14; `UPDATE_MCU FORCE=native` stellt die native MCU-Firmware wieder her.
 
 Wenn Sie nicht wissen, wie Sie [den nativen Klipper per USB-Stick wiederherstellen](/de/Native_FW/#fix_klipper), führen Sie es nicht aus.
 Sehen Sie sich vor dem Klipper-Update die [Änderungen in den neuen Versionen](https://www.klipper3d.org/Releases.html) an; die Standardkonfigurationsdateien müssen nicht angepasst werden.
