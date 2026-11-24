@@ -624,7 +624,7 @@ Tato chyba se může také objevit:
 
   Je lepší provést všechny kalibrace [podle tohoto návodu](/cs/SetupCalibrations/#printer-calibration-for-beginners)
 
-- Pokud používáte Klipper 13 na AD5X. V tom případě se můžete vrátit k nativnímu Klipperu příkazem `UPDATE_MCU FORCE=12`.
+- Pokud používáte Klipper 14 na AD5X. V tom případě se můžete vrátit k nativnímu Klipperu příkazem `UPDATE_MCU FORCE=12`.
 - Pokud se používá fuzzy skin a procesor nestíhá počítat trasu. Vypněte fuzzy skin nebo upravte jeho parametry.
 
 Chyba `Communication timeout during homing` se může objevit kvůli vysoké latenci komunikace mezi hostitelem a MCU. Doba odezvy by měla trvale zůstat pod 10 ms. Dočasné špičky latence mohou způsobit selhání homingu.

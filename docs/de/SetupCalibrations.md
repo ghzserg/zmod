@@ -134,7 +134,7 @@ BED_LEVEL_SCREWS_TUNE EXTRUDER_TEMP=130 BED_TEMP=80
 
     <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
-    [Dieses Bild erscheint nur unter Klipper 13](/de/System/#update_mcu)
+    [Dieses Bild erscheint nur unter Klipper 14](/de/System/#update_mcu)
 
 - Nach dem ersten Durchgang wartet der Drucker, bis Sie die Einstellung vorgenommen haben. Wenn alle Schrauben eingestellt sind, **drücken Sie die Schaltfläche zum Wiederholen**, damit der Drucker das Ergebnis prüft. Wiederholen Sie den Vorgang, bis das Ergebnis perfekt ist.
 

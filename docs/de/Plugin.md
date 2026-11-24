@@ -110,7 +110,7 @@ Erstellen Sie einen symbolischen Link, um das Modul mit Klipper zu verbinden:
 exit
 # Native Klipper
 ln -s /opt/config/mod_data/plugins/klipper-led_effect/src/led_effect.py /usr/prog/klipper/klippy/extras/led_effect.py
-# Klipper 13
+# Klipper 14
 ln -s /opt/config/mod_data/plugins/klipper-led_effect/src/led_effect.py /usr/data/zmod/klipper/klippy/extras/led_effect.py
 ```
 

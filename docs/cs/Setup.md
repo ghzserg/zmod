@@ -244,7 +244,7 @@ Klikněte na `Zkontrolovat aktualizace`. Poté pluginy postupně obnovte a aktua
 
 Pozor!
 
-- Pokud používáte Klipper 13, spusťte ```UPDATE_MCU```. Tím zabráníte tomu, aby MCU a Klipper měly různé verze.
+- Pokud používáte Klipper 14, spusťte ```UPDATE_MCU```. Tím zabráníte tomu, aby MCU a Klipper měly různé verze.
 - Pokud máte zapnuté pluginy, nejprve je vypněte pomocí ```DISABLE_PLUGIN name=g28_tenz```.
 
 Úplné odstranění modu: ```REMOVE_ZMOD FULL=1```
@@ -266,7 +266,7 @@ Pozor!
 1. Deaktivujte všechny aktivní pluginy kromě `recommend`, `timelapse`, `notify` a `telegram_notify`:
    ```DISABLE_PLUGIN name=plugin_name```
 
-2. Pokud používáte **Klipper 13**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
+2. Pokud používáte **Klipper 14**, spusťte ```UPDATE_MCU``` *před* aktualizací nativního firmwaru. Tím předejdete problémům s nekompatibilitou verzí mezi MCU a Klipperem.
 3. Zapněte čínské cloudové služby (pokud chcete aktualizovat přes nativní obrazovku):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 

@@ -244,19 +244,19 @@ Das Ergebnis der Prüfung wird auf der Konsole ausgegeben.
 
 Aktualisiert die MCU im Drucker.
 
-Wechselt die MCU-Firmware von der nativen Klipper-Version (11 für FF5M/FF5MPRO, 12 für AD5X) auf Klipper 13 und zurück.
+Wechselt die MCU-Firmware von der nativen Klipper-Version (11 für FF5M/FF5MPRO, 12 für AD5X) auf Klipper 14 und zurück.
 
-Klipper 13 ist standardmäßig deaktiviert.
+Klipper 14 ist standardmäßig deaktiviert.
 
 Parameter FORCE:
 
 - 11 - Firmware für Klipper 11 laden - FF5M
 - 12 - Firmware für Klipper 12 laden - AD5X
-- 13 - Firmware für Klipper 13 laden
+- 14 - Firmware für Klipper 14 laden
 
 Ohne Parameter wird auf die jeweils andere Firmware gewechselt.
 
-Beispiel: `UPDATE_MCU FORCE=13` erzwingt das Laden der Firmware für Klipper 13
+Beispiel: `UPDATE_MCU FORCE=14` erzwingt das Laden der Firmware für Klipper 14
 
 Wenn Sie nicht wissen, wie Sie [den nativen Klipper per USB-Stick wiederherstellen](/de/Native_FW/#fix_klipper), führen Sie es nicht aus.
 Sehen Sie sich vor dem Klipper-Update die [Änderungen in den neuen Versionen](https://www.klipper3d.org/Releases.html) an; die Standardkonfigurationsdateien müssen nicht angepasst werden.

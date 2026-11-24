@@ -173,19 +173,19 @@ Zdrojové kódy: [https://github.com/ghzserg/zmod_preprocess](https://github.com
 
 Aktualizuje MCU tiskárny.
 
-Změní firmware MCU z nativní verze Klipperu (11 pro FF5M/FF5MPRO, 12 pro AD5X) na Klipper 13 a zpět.
+Změní firmware MCU z nativní verze Klipperu (11 pro FF5M/FF5MPRO, 12 pro AD5X) na Klipper 14 a zpět.
 
-Klipper 13 je ve výchozím nastavení vypnutý.
+Klipper 14 je ve výchozím nastavení vypnutý.
 
 Parametr FORCE:
 
 - 11 - nahraje firmware pro Klipper 11 - FF5M
 - 12 - nahraje firmware pro Klipper 12 - AD5X
-- 13 - nahraje firmware pro Klipper 13
+- 14 - nahraje firmware pro Klipper 14
 
 Bez parametru přepne na druhou verzi firmwaru.
 
-Příklad: `UPDATE_MCU FORCE=13` vynutí nahrání firmwaru pro Klipper 13.
+Příklad: `UPDATE_MCU FORCE=14` vynutí nahrání firmwaru pro Klipper 14.
 
 Pokud nerozumíte, jak [obnovit nativní Klipper z USB flash disku](/cs/Native_FW/#fix_klipper), nespouštějte tento příkaz.
 Před aktualizací Klipperu si přečtěte [změny v nových verzích](https://www.klipper3d.org/Releases.html); standardní konfigurační soubory není nutné upravovat.

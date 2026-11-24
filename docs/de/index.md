@@ -89,7 +89,7 @@ Das erhalten Sie, wenn Sie Z-Mod installieren:
     - **Firmware-Retraktion:** Retraktionsparameter können im laufenden Betrieb angepasst werden, ein erneutes Slicen ist nicht erforderlich.
     - **Voller ROOT-Zugriff:** Voller Zugriff auf den Drucker jederzeit.
 
-#### 7. Klipper 13
+#### 7. Klipper 14
 
 * **Native Firmware:** AD5M verwendet den veralteten Klipper 11, der viele Fehler aufweist (E0011, E0017, falscher Objektausschluss, falscher SCV, falsche Druckwiederherstellung usw.).
 * **Z-Mod:**

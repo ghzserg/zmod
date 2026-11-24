@@ -95,7 +95,7 @@ Read [features of screenless operation](#screenless-version-notes).
 Differences between KlipperMod and Z-Mod:
 
 - KlipperMod uses pure Klipper with minimal FlashForge 5M (Pro)-specific changes.
-- Z-Mod uses the standard Klipper from the native firmware, as well as Klipper 13.
+- Z-Mod uses the standard Klipper from the native firmware, as well as Klipper 14.
 - KlipperMod uses KlipperScreen as a printer screen.
 - Z-Mod uses the native screen or GuppyScreen/HelixScreen/Rivet instead of KlipperScreen.
 - KlipperMod uses Moonraker-timelapse.
@@ -139,7 +139,7 @@ Z-Mod is NOT based on KlipperMod and is NOT its evolution. However, Z-Mod uses s
 #### What's in Z-Mod but not in native firmware:
 
 - Moonraker/Fluidd/Mainsail support
-- Klipper 13 support
+- Klipper 14 support
 - Telegram bot support
 - All features listed in the comparison with KlipperMod
 - [The native firmware sends a lot of data to Chinese servers](https://github.com/FlashForge/Orca-Flashforge/issues/26), this can be avoided by using Z-Mod with GuppyScreen/HelixScreen/Rivet
@@ -743,9 +743,9 @@ You can view the MCU version in the System tab.
 
 <img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
-For example, you are running Klipper 13, but the MCU used is from Klipper 11 or 12.
+For example, you are running Klipper 14, but the MCU used is from Klipper 11 or 12.
 
-Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipper 13.
+Or vice versa. You're running native Klipper, but you've loaded an MCU for Klipper 14.
 
 If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```, then you've loaded an MCU for Klipper 12 (AD5X) or Klipper 11 (AD5M/AD5M Pro).
 
@@ -753,7 +753,7 @@ If your MCU version starts with ```?-20230317_182329-ubuntu20-virtual-machine```
 
 Accordingly, Z-Mod needs to load native Klipper.
 
-- Go to ```mod_data/variables.cfg``` and delete the line ```klipper13 = 1```.
+- Go to ```mod_data/variables.cfg``` and delete the line ```klippernew = 1```.
 - Save the file
 - Turn the printer off and on (do not reboot!)
 
@@ -761,7 +761,7 @@ Accordingly, Z-Mod needs to load native Klipper.
 
 <img width="422" height="570" alt="image" src="../../images/821eb1c7-8cba-4a22-951f-852b1cb6c8ef.png" />
 
-If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=13``` - this command will install the latest MCU version.
+If this isn't the case and Klipper is working, run ```UPDATE_MCU FORCE=14``` - this command will install the latest MCU version.
 
 If all else fails and **Klipper isn't working**:
 

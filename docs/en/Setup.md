@@ -249,7 +249,7 @@ Click `Check for updates`. Then restore and update all modules one by one. The p
 
 Attention!
 
-- If you are using Klipper 13, you must run ```UPDATE_MCU```. This will prevent the MCU and Klipper from being different versions.
+- If you are using Klipper 14, you must run ```UPDATE_MCU```. This will prevent the MCU and Klipper from being different versions.
 - If you have enabled plugins, you must first disable them using ```DISABLE_PLUGIN name=g28_tenz```
 
 To remove the mod completely: ```REMOVE_ZMOD FULL=1```
@@ -271,7 +271,7 @@ To remove the mod completely: ```REMOVE_ZMOD FULL=1```
 1. Disable all active plugins except `recommend`, `timelapse`, `notify`, and `telegram_notify`:
    ```DISABLE_PLUGIN name=plugin_name```
 
-2. If you are using **Klipper 13**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.
+2. If you are using **Klipper 14**, run ```UPDATE_MCU``` *before* updating the stock firmware. This prevents version mismatch issues between the MCU and Klipper.
 3. Enable Chinese cloud services (if you wish to update via the stock touchscreen):
    ```SAVE_ZMOD_DATA CHINA_CLOUD=1```
 

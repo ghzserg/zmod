@@ -127,7 +127,7 @@ Před kalibrací očistěte trysku, jinak budou měření nepřesná!
 
     <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
-    [Tento obrázek se zobrazuje pouze v Klipper 13](/cs/System/#update_mcu)
+    [Tento obrázek se zobrazuje pouze v Klipper 14](/cs/System/#update_mcu)
 
 -   Po prvním kole tiskárna počká, až šrouby upravíte. Jakmile jsou všechny nastavené, **stiskněte tlačítko pro opakování** a tiskárna zkontroluje výsledek. Opakujte, dokud nejsou hodnoty perfektní.
 

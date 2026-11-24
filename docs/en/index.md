@@ -80,7 +80,7 @@ Here’s what you gain by installing Z-Mod:
 - **Firmware Retraction**: Adjust retraction parameters on-the-fly, no reslicing needed.
 - **Full ROOT Access**: Full system control always available.
 
-#### 7. Klipper 13
+#### 7. Klipper 14
 **Stock firmware**: AD5M runs outdated Klipper v11, plagued by bugs (E0011, E0017, incorrect object exclusion, broken SCV, faulty resume, etc.).
 **Z-Mod**:
 

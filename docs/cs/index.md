@@ -80,7 +80,7 @@ Zde je, co získáte instalací Z-Mod:
 - **Firmwarová retrakce**: Upravujte parametry retrakce za chodu, není třeba znovu slicovat.
 - **Plný ROOT přístup**: Vždy je k dispozici plná kontrola nad systémem.
 
-#### 7. Klipper 13
+#### 7. Klipper 14
 **Tovární firmware**: AD5M běží na zastaralém Klipperu v11, který je plný chyb (E0011, E0017, nesprávné vyloučení objektů, porušené SCV, chybné obnovení atd.).
 **Z-Mod**:
 

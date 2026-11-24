@@ -14,7 +14,7 @@
    Разница между KlipperMod и Z-Mod:
 
 - KlipperMod использует чистый Klipper с минимумом специфичных для FlashForge 5M (Pro) изменений
-- Z-Mod использует стандартный Klipper из родной прошивки, а также Klipper 13
+- Z-Mod использует стандартный Klipper из родной прошивки, а также Klipper 14
 - KlipperMod использует KlipperScreen как экран для принтера.
 - В Z-Mod вместо KlipperScreen родной экран или GuppyScreen/HelixScreen/Rivet
 - KlipperMod использует Moonraker-timelapse
@@ -61,7 +61,7 @@ Z-Mod НЕ основан на KlipperMod, и НЕ является его ра�
 
 - Поддержки Moonraker/Fluidd/Mainsail
 - Поддержки Телеграм-бота
-- Поддержки Klipper 13
+- Поддержки Klipper 14
 - Всех функций, что перечислены в сравнении с KlipperMod
 - [Родная прошивка отправляет множество данных на китайские серверы](https://github.com/FlashForge/Orca-Flashforge/issues/26), этого можно избежать, если использовать Z-Mod с GuppyScreen/HelixScreen/Rivet
 
@@ -792,9 +792,9 @@ WeightValue - это значение на тензодатчиках в гра�
 
 <img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
-Например, у вас запущен Klipper 13, а используется MCU от 11 или 12 Klipper.
+Например, у вас запущен Klipper 14, а используется MCU от 11 или 12 Klipper.
 
-Или наоборот. Вы работаете с родным Klipper, а загрузили MCU для 13 Klipper.
+Или наоборот. Вы работаете с родным Klipper, а загрузили MCU для 14 Klipper.
 
 Если у вас версия MCU начинается с ```?-20230317_182329-ubuntu20-virtual-machine```, значит, загружен MCU для Klipper 12 (AD5X) или Klipper 11 (AD5M/AD5M Pro).
 
@@ -802,13 +802,13 @@ WeightValue - это значение на тензодатчиках в гра�
 
 Соответственно, нужно, чтобы Z-Mod загрузил родной Klipper.
 
-- Открываем ```mod_data/variables.cfg``` и удаляем строчку ```klipper13 = 1```.
+- Открываем ```mod_data/variables.cfg``` и удаляем строчку ```klippernew = 1```.
 - Сохраняем файл
 - Выключаем принтер и включаем его (не перезагружаем!)
 
 <img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
-Если это не так и Klipper работает, то делаем ```UPDATE_MCU FORCE=13``` - эта команда установит актуальную версию MCU
+Если это не так и Klipper работает, то делаем ```UPDATE_MCU FORCE=14``` - эта команда установит актуальную версию MCU
 
 Если ничего не помогает и **Klipper не работает**:
 

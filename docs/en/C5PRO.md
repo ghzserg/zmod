@@ -11,7 +11,7 @@
 - Klipper may crash. Solution: `Process Profile` -> `Other` -> `Output G-code` -> `Exclude models` — uncheck the checkbox.
 - Instead of the `CLOSE_DIALOGS` macro (slow closing), always use `FAST_CLOSE_DIALOGS` (fast closing).
 - The `NEW_SAVE_CONFIG` macro does not work.
-- No support for Klipper 13; contributions are welcome.
+- No support for Klipper 14; contributions are welcome.
 - On Creator 5 / Creator 5 Pro the Z-offset with the native screen and in screenless mode is the same — they are fully synchronized. If the native screen is disabled, you can change the Z-offset during printing via GuppyScreen, HelixScreen, Fluidd or Mainsail — it will be saved.
 
 ---
@@ -257,12 +257,12 @@ You can set the following values (in minutes):
 
 ---
 
-Shapers from Klipper 13 are enabled by the parameter:
+Shapers from Klipper 14 are enabled by the parameter:
 
 **KLIPPER_C5**:
 
 - `0` — do not use (default).
-- `1` — use shapers from Klipper 13.
+- `1` — use shapers from Klipper 14.
 
 ```
 SAVE_ZMOD_DATA KLIPPER_C5=1

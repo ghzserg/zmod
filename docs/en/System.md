@@ -201,19 +201,19 @@ The result of the check is printed to the console.
 
 Updates the printer's MCU.
 
-Changes the MCU firmware from the native Klipper version (11 for FF5M/FF5MPRO, 12 for AD5X) to Klipper 13 and back.
+Changes the MCU firmware from the native Klipper version (11 for FF5M/FF5MPRO, 12 for AD5X) to Klipper 14 and back.
 
-Klipper 13 (disabled by default).
+Klipper 14 (disabled by default).
 
 FORCE parameter:
 
 - 11 - load Klipper 11 firmware - FF5M
 - 12 - load Klipper 12 firmware - AD5X
-- 13 - load Klipper 13 firmware
+- 14 - load Klipper 14 firmware
 
 Without parameters, changes the firmware to the opposite version.
 
-Example: `UPDATE_MCU FORCE=13` forces the download of Klipper 13 firmware.
+Example: `UPDATE_MCU FORCE=14` forces the download of Klipper 14 firmware.
 
 If you don't understand how to [restore the native Klipper from a USB flash drive](/Native_FW/#fix_klipper), do not run this command.
 Before updating Klipper, review the [changes in new versions](https://www.klipper3d.org/Releases.html); the stock configuration files need no edits.

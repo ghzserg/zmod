@@ -15,7 +15,7 @@
    Der Unterschied zwischen KlipperMod und Z-Mod:
 
   - KlipperMod verwendet reinen Klipper mit einem Minimum an für FlashForge 5M (Pro) spezifischen Änderungen
-  - Z-Mod verwendet den Standard-Klipper aus der nativen Firmware sowie Klipper 13.
+  - Z-Mod verwendet den Standard-Klipper aus der nativen Firmware sowie Klipper 14.
   - KlipperMod verwendet KlipperScreen als Bildschirm für den Drucker.
   - Z-Mod verwendet den nativen Bildschirm oder GuppyScreen/HelixScreen/Rivet anstelle von KlipperScreen.
   - KlipperMod verwendet Moonraker-Timelapse.
@@ -62,7 +62,7 @@ Z-Mod basiert NICHT auf KlipperMod und ist auch keine Weiterentwicklung davon. Z
 
 - Moonraker/Fluidd/Mainsail-Unterstützung
 - Telegram-Bot-Unterstützung
-- Unterstützung für Klipper 13
+- Unterstützung für Klipper 14
 - Alle Funktionen, die im Vergleich zu KlipperMod aufgeführt sind.
 - Die native Firmware sendet viele Daten an [chinesische Server](https://github.com/FlashForge/Orca-Flashforge/issues/26), dies kann durch die Verwendung von Z-Mod mit GuppyScreen/HelixScreen/Rivet vermieden werden.
 
@@ -782,9 +782,9 @@ Sie können die MCU-Version auf der Registerkarte `System` einsehen.
 
 <img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
-Sie verwenden z. B. Klipper 13, aber die MCU-Firmware stammt von Klipper 11 oder 12.
+Sie verwenden z. B. Klipper 14, aber die MCU-Firmware stammt von Klipper 11 oder 12.
 
-Oder umgekehrt: Sie verwenden den nativen Klipper, haben aber die MCU-Firmware für Klipper 13 geladen.
+Oder umgekehrt: Sie verwenden den nativen Klipper, haben aber die MCU-Firmware für Klipper 14 geladen.
 
 Wenn Ihre MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` beginnt, bedeutet dies, dass Sie die MCU für Klipper 12 (AD5X) oder Klipper 11 (AD5M/AD5M Pro) geladen haben.
 
@@ -792,13 +792,13 @@ Wenn Ihre MCU-Version mit ```?-20230317_182329-ubuntu20-virtual-machine``` begin
 
 Dementsprechend muss Z-Mod den nativen Klipper laden.
 
-- Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klipper13 = 1```.
+- Gehen Sie zu ```mod_data/variables.cfg``` und löschen Sie die Zeile ```klippernew = 1```.
 - Speichern Sie die Datei
 - Schalten Sie den Drucker aus und schalten Sie ihn wieder ein (**nicht neu starten!**).
 
 <img width="422" height="570" alt="image" src="../../images/6a96aa9d-7d07-4bf7-8039-042d28f4a87f.png" />
 
-Wenn das nicht der Fall ist und Klipper läuft, führen Sie ```UPDATE_MCU FORCE=13``` aus – dieser Befehl installiert die aktuelle MCU-Version.
+Wenn das nicht der Fall ist und Klipper läuft, führen Sie ```UPDATE_MCU FORCE=14``` aus – dieser Befehl installiert die aktuelle MCU-Version.
 
 Wenn nichts hilft und **Klipper nicht funktioniert**:
 

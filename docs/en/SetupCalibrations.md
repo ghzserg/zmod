@@ -127,7 +127,7 @@ Before calibration, clean the nozzle, otherwise the measurements will be incorre
 
     <img width="621" height="394" alt="image" src="../../images/f930f4ac-e907-4c83-bc1d-3d5a4e06fe3b.png" />
 
-    [This picture appears only on Klipper 13](/System/#update_mcu)
+    [This picture appears only on Klipper 14](/System/#update_mcu)
 
 -   After the first pass, the printer will wait for you to perform the adjustments. When all screws are adjusted, **press the repeat button** for the printer to check the result. Repeat until the readings are perfect.
 

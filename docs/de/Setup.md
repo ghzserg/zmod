@@ -270,7 +270,7 @@ Es wird empfohlen, **den Mod über das Makro `REMOVE_ZMOD`** zu entfernen. Die E
 
 Achtung!
 
-- Wenn Sie Klipper 13 benutzen, führen Sie ```UPDATE_MCU``` aus. So vermeiden Sie, dass MCU und Klipper unterschiedliche Versionen haben.
+- Wenn Sie Klipper 14 benutzen, führen Sie ```UPDATE_MCU``` aus. So vermeiden Sie, dass MCU und Klipper unterschiedliche Versionen haben.
 - Wenn Sie Plugins aktiviert haben, deaktivieren Sie diese zuerst: ```DISABLE_PLUGIN name=g28_tenz```
 
 Mod vollständig entfernen: ```REMOVE_ZMOD FULL=1```
@@ -293,7 +293,7 @@ Deinstallation des Mods per USB-Stick:
 
 ```DISABLE_PLUGIN name=plugin_name```
 
-2. Wenn Sie **Klipper 13** verwenden, führen Sie ```UPDATE_MCU``` *vor* dem Aktualisieren der Original-Firmware aus. Dadurch werden Versionskonflikte zwischen dem Mikrocontroller und Klipper vermieden.
+2. Wenn Sie **Klipper 14** verwenden, führen Sie ```UPDATE_MCU``` *vor* dem Aktualisieren der Original-Firmware aus. Dadurch werden Versionskonflikte zwischen dem Mikrocontroller und Klipper vermieden.
 
 3. Aktivieren Sie die chinesischen Cloud-Dienste (falls Sie über den nativen Bildschirm aktualisieren möchten):
 

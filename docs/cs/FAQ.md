@@ -73,7 +73,7 @@ Jakoukoliv funkci lze přepsat v `mod_data/user.cfg` nebo `printer.cfg`.
 Rozdíly mezi KlipperMod a Z-Mod:
 
 - KlipperMod používá čistý Klipper s minimem změn specifických pro FlashForge 5M (Pro).
-- Z-Mod používá standardní Klipper z nativního firmwaru a také Klipper 13.
+- Z-Mod používá standardní Klipper z nativního firmwaru a také Klipper 14.
 - KlipperMod používá KlipperScreen jako obrazovku tiskárny.
 - Z-Mod používá nativní obrazovku nebo GuppyScreen/HelixScreen/Rivet místo KlipperScreen.
 - KlipperMod používá Moonraker-timelapse.
@@ -117,7 +117,7 @@ Z-Mod NENÍ založen na KlipperModu a NENÍ jeho evolucí. Z-Mod sice používá
 #### Co je v Z-Mod, ale ne v nativním firmwaru:
 
 - Podpora Moonraker/Fluidd/Mainsail
-- Podpora Klipper 13
+- Podpora Klipper 14
 - Podpora Telegram bota
 - Všechny funkce uvedené ve srovnání s KlipperMod
 - [Nativní firmware odesílá mnoho dat na čínské servery](https://github.com/FlashForge/Orca-Flashforge/issues/26), tomu se lze vyhnout použitím Z-Mod s GuppyScreen/HelixScreen/Rivet
@@ -679,15 +679,15 @@ Verzi MCU si můžete prohlédnout na kartě Systém.
 
 <img width="438" height="277" alt="{52EC8847-ACAB-461D-A9FA-633CDAF180CC}" src="../../images/9bba3ff2-9a0e-4aa6-8327-f93fd1b46c3a.png" />
 
-Například používáte Klipper 13, ale firmware MCU je z Klipperu 11 nebo 12.
+Například používáte Klipper 14, ale firmware MCU je z Klipperu 11 nebo 12.
 
-Nebo naopak. Používáte nativní Klipper, ale nahráli jste firmware MCU pro Klipper 13.
+Nebo naopak. Používáte nativní Klipper, ale nahráli jste firmware MCU pro Klipper 14.
 
 Pokud verze vašeho MCU začíná na ```?-20230317_182329-ubuntu20-virtual-machine```, pak jste nahráli MCU pro Klipper 12 (AD5X) nebo Klipper 11 (AD5M/AD5M Pro).
 
 V souladu s tím musí Z-Mod načíst nativní Klipper.
 
-- Přejděte do ```mod_data/variables.cfg``` a smažte řádek ```klipper13 = 1```.
+- Přejděte do ```mod_data/variables.cfg``` a smažte řádek ```klippernew = 1```.
 - Uložte soubor
 - Vypněte a zapněte tiskárnu (nerestartujte!)
 
@@ -695,7 +695,7 @@ V souladu s tím musí Z-Mod načíst nativní Klipper.
 
 <img width="422" height="570" alt="image" src="../../images/821eb1c7-8cba-4a22-951f-852b1cb6c8ef.png" />
 
-Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=13``` – tento příkaz nainstaluje aktuální verzi MCU.
+Pokud tomu tak není a Klipper funguje, spusťte ```UPDATE_MCU FORCE=14``` – tento příkaz nainstaluje aktuální verzi MCU.
 
 Pokud vše ostatní selže a **Klipper nefunguje**:
 
