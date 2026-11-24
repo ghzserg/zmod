@@ -1,7 +1,7 @@
 @page {
     size: A4;
     margin: 17mm 17mm 19mm;
-    @bottom-left { content: "Z-Mod"; color: #666; font-size: 9pt; }
+    @bottom-left { content: "Z-Mod · © ghzserg"; color: #666; font-size: 9pt; }
     @bottom-right { content: counter(page) " / " counter(pages); color: #666; font-size: 9pt; }
 }
 @page :first {
@@ -9,10 +9,20 @@
     @bottom-right { content: none; }
 }
 body { font-family: "Noto Sans", "DejaVu Sans", sans-serif; font-size: 10pt; line-height: 1.45; color: #202124; }
-.cover { text-align: center; padding-top: 50mm; break-after: page; }
-.cover img { max-width: 65mm; max-height: 65mm; }
-.cover h1 { font-size: 34pt; color: #176b44; border: 0; }
-.cover p { font-size: 14pt; }
+/* Print-friendly cover: one A4 page, with a restrained Z-Mod green accent. */
+.cover { position: relative; box-sizing: border-box; height: 253mm; break-after: page; border-top: 3mm solid #176b44; text-align: center; }
+.cover-top { display: flex; justify-content: space-between; padding: 5mm 1mm; color: #176b44; font-size: 10pt; font-weight: bold; letter-spacing: 2pt; border-bottom: 0.5pt solid #d0ddd5; }
+.cover-brand { margin-top: 23mm; }
+.cover-brand img { max-width: 63mm; max-height: 58mm; }
+.cover h1 { font-size: 48pt; line-height: 1.05; color: #176b44; border: 0; margin: 6mm 0 2mm; padding: 0; }
+.cover-title { font-size: 21pt; font-weight: bold; margin: 2mm 0 3mm; }
+.cover-edition { color: #52665a; font-size: 12pt; margin: 0; }
+.cover-models { margin: 15mm auto 0; padding: 5mm 3mm; max-width: 138mm; border-top: 0.6pt solid #b7cbbd; border-bottom: 0.6pt solid #b7cbbd; color: #304e3c; font-size: 12pt; font-weight: bold; line-height: 1.8; }
+.cover-models p { margin: 0 0 2mm; font-size: 9pt; font-weight: normal; text-transform: uppercase; letter-spacing: 1pt; }
+.cover-footer { position: absolute; bottom: 4mm; left: 0; right: 0; border-top: 0.5pt solid #d0ddd5; padding-top: 5mm; color: #52665a; font-size: 10pt; }
+.cover-footer p { margin: 1mm 0; }
+.cover-footer .cover-copyright { font-size: 12pt; font-weight: bold; color: #202124; }
+.cover-footer a { color: #176b44; text-decoration: none; }
 .contents { break-after: page; }
 .cover h1, .contents h1 { bookmark-level: none; }
 .contents li { margin: 2mm 0; }

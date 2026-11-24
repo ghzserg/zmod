@@ -4,6 +4,8 @@
 import argparse
 import html
 import posixpath
+import re
+from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
@@ -14,10 +16,10 @@ from weasyprint import HTML, CSS, default_url_fetcher
 
 HERE = Path(__file__).resolve().parent
 LABELS = {
-    "en": ("Documentation", "Contents"),
-    "ru": ("Документация", "Оглавление"),
-    "de": ("Dokumentation", "Inhaltsverzeichnis"),
-    "cs": ("Dokumentace", "Obsah"),
+    "en": ("User guide", "Contents", "Supported printers", "Edition"),
+    "ru": ("Руководство пользователя", "Оглавление", "Поддерживаемые принтеры", "Версия"),
+    "de": ("Benutzerhandbuch", "Inhaltsverzeichnis", "Unterstützte Drucker", "Version"),
+    "cs": ("Uživatelská příručka", "Obsah", "Podporované tiskárny", "Verze"),
 }
 
 
@@ -61,7 +63,7 @@ def local_asset(site, origin, url):
 def build_book(config, site, docs, lang, output):
     locale = lang["locale"]
     prefix = "" if lang.get("default") == "true" else locale
-    title, contents = LABELS.get(locale, ("Documentation", "Contents"))
+    title, contents, printers, edition = LABELS.get(locale, LABELS["en"])
     origin = urlsplit(config["site_url"])
     pages = dict(nav_pages(config["nav"], lang.get("nav_translations", {})))
     # Include documentation pages reachable by links but absent from navigation.
@@ -150,13 +152,30 @@ def build_book(config, site, docs, lang, output):
         )
 
     logo = (site / "images/logo.png").as_uri()
+    author = html.escape(config.get("site_author", "ghzserg"))
+    year = datetime.now(timezone.utc).year
+    changelog = (docs / "en" / "Changelog.md").read_text(encoding="utf-8")
+    latest = re.search(r"^### Version (\d+(?:\.\d+)+[-\w.]*)\s*$", changelog, re.MULTILINE)
+    version = latest.group(1) if latest else ""
+    edition_text = f"{edition} {version} · " if version else ""
+    copyright_text = f"© 2024–{year} {author}"
     document = (
         f'<!doctype html><html lang="{html.escape(locale)}"><head><meta charset="utf-8">'
+        f'<meta name="author" content="{author}">'
         f'<title>Z-Mod — {html.escape(title)}</title></head><body>'
-        f'<section class="cover"><img src="{logo}"><h1>Z-Mod</h1>'
-        f'<p>{html.escape(title)}</p><p>{html.escape(lang["name"])}</p>'
-        '<p>AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro</p>'
-        f'<p><a href="{html.escape(config["site_url"])}">{html.escape(config["site_url"])}</a></p></section>'
+        '<section class="cover">'
+        f'<div class="cover-top"><span>Z-MOD</span><span>{html.escape(locale.upper())}</span></div>'
+        f'<div class="cover-brand"><img src="{logo}" alt="Z-Mod"><h1>Z-Mod</h1>'
+        f'<p class="cover-title">{html.escape(title)}</p>'
+        f'<p class="cover-edition">{html.escape(edition_text + lang["name"])}</p></div>'
+        f'<div class="cover-models"><p>{html.escape(printers)}</p>'
+        '<div>AD5M &nbsp; / &nbsp; AD5M Pro &nbsp; / &nbsp; AD5X</div>'
+        '<div>Creator 5 &nbsp; / &nbsp; Creator 5 Pro</div></div>'
+        '<div class="cover-footer">'
+        f'<p class="cover-copyright">{copyright_text}</p>'
+        f'<p><a href="{html.escape(config["repo_url"])}">github.com/ghzserg/zmod</a>'
+        f' &nbsp; · &nbsp; <a href="{html.escape(config["site_url"])}">wiki.zmod.link</a></p>'
+        '</div></section>'
         f'<section class="contents"><h1>{html.escape(contents)}</h1><ol>'
         + "".join(toc) + "</ol></section>" + "".join(sections) + "</body></html>"
     )
