@@ -11,6 +11,11 @@
   <span id="download-icon-template" aria-hidden="true" style="display:none">
     {% include ".icons/material/download.svg" %}
   </span>
+  {% set pdf_locale = config.theme.language %}
+  {% if pdf_locale in ["en", "ru", "de", "cs"] %}
+    {% set pdf_labels = {"en": "Download documentation (PDF)", "ru": "Скачать документацию (PDF)", "de": "Dokumentation herunterladen (PDF)", "cs": "Stáhnout dokumentaci (PDF)"} %}
+    <p class="pdf-download"><a href="/pdf/Z-Mod-{{ pdf_locale | upper }}.pdf">{{ pdf_labels[pdf_locale] }}</a></p>
+  {% endif %}
   {% if page.edit_url %}
     <hr>
     <p class="edit-page-footer">
