@@ -55,11 +55,12 @@
 
 ??? note "Version 1.7.7"
 	### Version 1.7.7
-	24.11.2026
+	01.12.2026
 	
 	#### Z-Mod
 	
 	* AD5M / AD5M Pro: Unterstützung für die native Firmware 5.2.0 hinzugefügt.
+	* C5: Unterstützung für die native Firmware 2.0.1 hinzugefügt.
 	* AD5M / AD5M Pro: Alternativen Bildschirm Rivet hinzugefügt (`DISPLAY_OFF RIVET=1`). Danke an @lDOCI.
 	* AD5X / C5PRO: Unbekannter Filamenttyp `?` wird in AFC als PLA behandelt.
 	* AD5X / C5PRO: Parameter zum Zurücksetzen der AFC-Zuordnungen [`AFC_RESET`](Global.md#afc_reset) hinzugefügt.

@@ -54,11 +54,12 @@
 ## Historie verzí
 
 ### Verze 1.7.7
-24.11.2026
+01.12.2026
 
 #### Z-Mod
 
 * AD5M / AD5M Pro: Přidána podpora nativního firmwaru 5.2.0.
+* C5: Přidána podpora nativního firmwaru 2.0.1.
 * AD5M / AD5M Pro: Přidána alternativní obrazovka Rivet (`DISPLAY_OFF RIVET=1`). Děkujeme @lDOCI.
 * AD5X / C5PRO: Neznámý typ filamentu `?` se v AFC nahrazuje typem PLA.
 * AD5X / C5PRO: Přidán parametr resetování přiřazení AFC [`AFC_RESET`](Global.md#afc_reset).
