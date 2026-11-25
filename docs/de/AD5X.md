@@ -474,7 +474,7 @@ Die IFS-Slots (AD5X) und die Werkzeugköpfe (Creator 5 Pro) werden in Fluidd und
 - Farbe, Typ und Vorhandensein des Filaments in jedem Slot.
 - Farbe und Typ ändern, Laden und Entladen direkt aus dem Panel.
 - Lane-Auswahlfenster vor dem Druck in Fluidd (1.37.3+) und Mainsail: die Zuordnung der Werkzeuge der Datei zu den Slots wird zusammen mit dem Druckbefehl übergeben, das Farbauswahlfenster erscheint danach nicht. Die Zuordnung kann auch während des Drucks geändert werden.
-- Standardmäßig bleiben die Zuordnungen zwischen Drucken erhalten. Zum Zurücksetzen nach Druckende oder Abbruch `SAVE_ZMOD_DATA IDLE_MAP=1` setzen. Bei Druckfehlern und einem Neustart von Klipper bleiben die Zuordnungen immer erhalten. Siehe [IDLE_MAP](/de/Global/#idle_map).
+- Standardmäßig bleiben die Zuordnungen zwischen Drucken erhalten. Zum Zurücksetzen nach Druckende oder Abbruch `SAVE_ZMOD_DATA AFC_RESET=1` setzen. Bei Druckfehlern und einem Neustart von Klipper bleiben die Zuordnungen immer erhalten. Siehe [AFC_RESET](/de/Global/#afc_reset).
 - Das AFC-Fenster hat den Schalter „Bed mesh“. Er ändert die globale Einstellung sofort, noch vor dem Klick auf „Drucken“.
 - Drucken über das FlashForge-Protokoll (OrcaSlicer, Flash Studio) verwendet die Zuordnung aus dem Slicer und startet sofort, mit der üblichen Vorbereitung (KAMP, MD5-Prüfung).
 - Drucken ohne Zuordnung (OrcaSlicer über Moonraker, GuppyScreen, KlipperScreen, Makros) zeigt das Farbauswahlfenster oder führt die automatische Zuordnung aus, je nach Einstellungen, wie ohne AFC.

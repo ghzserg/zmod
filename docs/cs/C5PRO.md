@@ -320,7 +320,7 @@ Sloty IFS (AD5X) a tiskové hlavy (Creator 5 Pro) se ve Fluidd a Mainsail zobraz
 - Barva, typ a přítomnost filamentu v každém slotu.
 - Změna barvy a typu, zavádění a vysouvání přímo z panelu.
 - Okno výběru lane před tiskem ve Fluidd (1.37.3+) a Mainsail: přiřazení nástrojů souboru ke slotům se předává spolu s příkazem k tisku, okno výběru barvy se potom nezobrazí. Mapu lze měnit i během tisku.
-- Ve výchozím nastavení se přiřazení zachovává mezi tisky. Pro resetování po dokončení nebo zrušení tisku nastavte `SAVE_ZMOD_DATA IDLE_MAP=1`. Při chybě tisku a restartu Klipperu se přiřazení vždy zachová. Viz [IDLE_MAP](/cs/Global/#idle_map).
+- Ve výchozím nastavení se přiřazení zachovává mezi tisky. Pro resetování po dokončení nebo zrušení tisku nastavte `SAVE_ZMOD_DATA AFC_RESET=1`. Při chybě tisku a restartu Klipperu se přiřazení vždy zachová. Viz [AFC_RESET](/cs/Global/#afc_reset).
 - Okno AFC má přepínače „Bed mesh“ a „Auto PA“ (pouze Creator 5 Pro). Mění globální nastavení okamžitě, ještě před stisknutím „Tisk“.
 - Tisk přes protokol FlashForge (OrcaSlicer, Flash Studio) používá přiřazení ze sliceru a startuje hned, s obvyklou přípravou (KAMP, kontrola MD5).
 - Tisk bez přiřazení (OrcaSlicer přes Moonraker, GuppyScreen, KlipperScreen, makra) zobrazí okno výběru barvy nebo provede automatické přiřazení, podle nastavení, stejně jako bez AFC.

@@ -321,7 +321,7 @@ The IFS slots (AD5X) and toolheads (Creator 5 Pro) are shown in Fluidd and Mains
 - Color, type and filament presence in each slot.
 - Change color and type, load and unload right from the panel.
 - Lane selection window before printing in Fluidd (1.37.3+) and Mainsail: the mapping of file tools to slots is sent together with the print command, and the color selection window does not appear after it. The map can also be changed during a print.
-- Mappings are kept between prints by default. To reset them after print completion or cancellation, set `SAVE_ZMOD_DATA IDLE_MAP=1`. Mappings are always preserved on print errors and Klipper restarts. See [IDLE_MAP](/Global/#idle_map).
+- Mappings are kept between prints by default. To reset them after print completion or cancellation, set `SAVE_ZMOD_DATA AFC_RESET=1`. Mappings are always preserved on print errors and Klipper restarts. See [AFC_RESET](/Global/#afc_reset).
 - The AFC window has "Bed mesh" and "Auto PA" (Creator 5 Pro only) toggles. They change the global settings immediately, before you press "Print".
 - Printing via the FlashForge protocol (OrcaSlicer, Flash Studio) uses the mapping from the slicer and starts right away, with the usual preparation (KAMP, MD5 check).
 - Printing without a mapping (OrcaSlicer via Moonraker, GuppyScreen, KlipperScreen, macros) shows the color selection window or runs automatic matching, depending on the settings, just as without AFC.

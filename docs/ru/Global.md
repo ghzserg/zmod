@@ -877,7 +877,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 ---
 
-##### IDLE_MAP
+##### AFC_RESET
 
 Только AD5X / Creator 5 Pro. Работает при включённой панели [AFC](#afc).
 
@@ -888,7 +888,7 @@ renice $NICE $(ps |grep klippy.py| grep -v grep| awk '{print $1}')
 
 При ошибке печати и перезапуске Klipper сопоставления сохраняются независимо от настройки. Перезапуск для изменения параметра не нужен.
 
-Пример: `SAVE_ZMOD_DATA IDLE_MAP=1`
+Пример: `SAVE_ZMOD_DATA AFC_RESET=1`
 
 ---
 
