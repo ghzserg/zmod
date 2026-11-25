@@ -76,6 +76,8 @@
 * C5PRO: Opraveno vynulování Z-offsetu pro právě nasazený extruder.
 * C5PRO: Přidán parametr `TEMP_WAIT` do `T_IN_ZCOLOR`.
 * C5PRO: Aktualizována kontrola integrity souborů nativního firmwaru 2.0.0.
+* C5 / C5PRO: Opraveno řízení snímačů pohybu filamentu při proplachování, kalibraci PA, ručním nasazení extruderu a obnovení tisku. Děkujeme @DIEHARDave.
+* AD5X / C5PRO: Zapnuto `inotify` pro automatickou aktualizaci seznamu souborů a náhledu G-code.
 
 #### Klipper
 
@@ -122,6 +124,7 @@
 
 * Opraveno určování odhadované doby tisku z G-code.
 * Přidán parametr `post_update_gcode` pro spuštění makra po aktualizaci webové komponenty. GuppyScreen se po aktualizaci automaticky restartuje.
+* Odstraněno duplicitní sledování adresářů `.theme` a `.fluidd-theme`.
 
 #### Orca FF
 

@@ -77,6 +77,8 @@
 	* C5PRO: Zurücksetzen des Z-Offsets für den eingesetzten Extruder korrigiert.
 	* C5PRO: Parameter `TEMP_WAIT` in `T_IN_ZCOLOR` hinzugefügt.
 	* C5PRO: Integritätsprüfungen der nativen Firmwaredateien 2.0.0 aktualisiert.
+	* C5 / C5PRO: Steuerung der Filamentbewegungssensoren beim Spülen, bei der PA-Kalibrierung, der manuellen Werkzeugaufnahme und der Druckfortsetzung korrigiert. Danke an @DIEHARDave.
+	* AD5X / C5PRO: `inotify` für die automatische Aktualisierung der Dateiliste und G-Code-Vorschau aktiviert.
 	
 	#### Klipper
 	
@@ -123,6 +125,7 @@
 	
 	* Ermittlung der geschätzten Druckdauer aus G-Code korrigiert.
 	* Parameter `post_update_gcode` hinzugefügt, um nach dem Update einer Webkomponente ein Makro auszuführen. GuppyScreen startet nach dem Update automatisch neu.
+	* Doppelte Überwachung der Verzeichnisse `.theme` und `.fluidd-theme` beseitigt.
 	
 	#### Orca FF
 	
