@@ -838,7 +838,7 @@ Příklad: `SAVE_ZMOD_DATA AFC=1`
 
 ---
 
-##### IDLE_MAP
+##### AFC_RESET
 
 Pouze AD5X / Creator 5 Pro. Vyžaduje zapnutý panel [AFC](#afc).
 
@@ -849,7 +849,7 @@ Resetování přiřazení nástrojů (T0, T1 atd.) ke slotům AFC po dokončení
 
 Při chybě tisku a restartu Klipperu se přiřazení zachová bez ohledu na toto nastavení. Změna parametru nevyžaduje restart.
 
-Příklad: `SAVE_ZMOD_DATA IDLE_MAP=1`
+Příklad: `SAVE_ZMOD_DATA AFC_RESET=1`
 
 ---
 
