@@ -479,6 +479,42 @@ Kde `T=0` je číslo extruderu (0–3), který bude během kalibrace použit.
 
 > **Tip:** Kalibraci VFA doporučujeme provést, když se na povrchu tisku objeví viditelné vertikální pruhy.
 
+### Diagnostika VFA (`VFA_GRAPH`) { #vfa_graph }
+
+Příkaz `VFA_GRAPH` ověřuje účinnost kalibrace VFA měřením vibrací s kompenzací a bez ní. Nastavení kalibrace se nemění.
+
+Vyžaduje Klipper ze Z-Mod s podporou `VFA_GRAPH`. Před spuštěním uvolněte tiskovou podložku. Test nelze spustit během tisku ani při pozastavení.
+
+Ve Fluidd klikněte v sekci kalibrací na **VFA_GRAPH** nebo zadejte do konzole:
+
+```gcode
+VFA_GRAPH
+```
+
+Ve výchozím nastavení test používá nástroj T0, oba motory X a Y, oba směry a rychlosti od 20 do 320 mm/s v krocích po 10 mm/s.
+
+Volitelné parametry:
+
+- `T=0` — číslo nástroje (0–3).
+- `AXIS=XY` — oba motory; `X` nebo `Y` — jeden motor.
+- `MIN_SPEED=20`, `MAX_SPEED=320`, `STEP=10` — rozsah a krok rychlosti. Maximální povolená rychlost je 400 mm/s, nejvýše však aktuální limit tiskárny.
+- `REPEAT=1` — počet opakování (1–10). Pro spolehlivější porovnání použijte `REPEAT=3`.
+- `ADAPTIVE=1` — adaptivní délka pohybu; `ADAPTIVE=0` — celá úhlopříčka.
+
+Příklad rozšířeného testu:
+
+```gcode
+VFA_GRAPH MAX_SPEED=400
+```
+
+Výsledky najdete v **Konfigurace → mod_data/vfa/RRRRMMDD_HHMM**. Pro každý motor se ukládají grafy zrychlení a odhadované výchylky snímače, soubory CSV s měřením a společný souhrn `summary.json`.
+
+Červené křivky zobrazují vibrace bez kompenzace, zelené s kompenzací. Nižší amplitudy jsou lepší. Podélné vibrace probíhají ve směru pohybu tiskové hlavy, příčné kolmo k němu. Celkové vyhodnocení vychází z mediánu amplitud příčné výchylky do 400 Hz.
+
+Oranžová oblast označuje frekvence nad 400 Hz, při kterých může snímač amplitudy podhodnocovat. Limit měření je 720 Hz, nejvýše však 45 % skutečné vzorkovací frekvence. Konzole a grafy uvádějí rychlosti s výrazným nárůstem příčných vibrací (alespoň 20 % a 0,05 µm, do 400 Hz). V grafech výchylky jsou tyto body označeny křížky. Jde o prahové hodnoty pro výběr problémových bodů, nikoli přesnost snímače.
+
+[Podrobná dokumentace diagnostiky VFA](https://github.com/ghzserg/zmod_klipper_c5/blob/main/docs/VFA_GRAPH.md)
+
 ---
 
 ## Makro `T_INFO`

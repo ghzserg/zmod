@@ -479,6 +479,42 @@ Wobei `T=0` die Extrudernummer (0–3) ist, die während der Kalibrierung verwen
 
 > **Tipp:** Es wird empfohlen, die VFA-Kalibrierung durchzuführen, wenn sichtbare vertikale Streifen auf der Druckoberfläche auftreten.
 
+### VFA-Diagnose (`VFA_GRAPH`) { #vfa_graph }
+
+Der Befehl `VFA_GRAPH` prüft die Wirksamkeit der VFA-Kalibrierung, indem er Schwingungen mit und ohne Kompensation misst. Die Kalibrierungseinstellungen bleiben unverändert.
+
+Erfordert eine Z-Mod-Klipper-Version mit Unterstützung für `VFA_GRAPH`. Räumen Sie vor dem Start das Druckbett frei. Während des Drucks oder einer Pause ist der Test nicht verfügbar.
+
+Klicken Sie in Fluidd im Kalibrierungsbereich auf **VFA_GRAPH** oder geben Sie in der Konsole ein:
+
+```gcode
+VFA_GRAPH
+```
+
+Standardmäßig verwendet der Test Werkzeug T0, beide Motoren X und Y, beide Richtungen sowie Geschwindigkeiten von 20 bis 320 mm/s in Schritten von 10 mm/s.
+
+Optionale Parameter:
+
+- `T=0` — Werkzeugnummer (0–3).
+- `AXIS=XY` — beide Motoren; `X` oder `Y` — ein Motor.
+- `MIN_SPEED=20`, `MAX_SPEED=320`, `STEP=10` — Geschwindigkeitsbereich und Schrittweite. Maximal sind 400 mm/s zulässig, jedoch nicht mehr als das aktuelle Druckerlimit.
+- `REPEAT=1` — Anzahl der Wiederholungen (1–10). Für einen zuverlässigeren Vergleich verwenden Sie `REPEAT=3`.
+- `ADAPTIVE=1` — adaptive Weglänge; `ADAPTIVE=0` — vollständige Diagonale.
+
+Beispiel für einen erweiterten Test:
+
+```gcode
+VFA_GRAPH MAX_SPEED=400
+```
+
+Die Ergebnisse finden Sie unter **Konfiguration → mod_data/vfa/JJJJMMTT_HHMM**. Für jeden Motor werden Beschleunigungsdiagramme, Diagramme der geschätzten Sensorauslenkung und CSV-Messdateien gespeichert, zusammen mit der Übersicht `summary.json`.
+
+Rote Kurven zeigen Schwingungen ohne Kompensation, grüne mit Kompensation. Kleinere Amplituden sind besser. Längsschwingungen verlaufen entlang der Werkzeugkopfbewegung, Querschwingungen senkrecht dazu. Die Gesamtbewertung basiert auf dem Median der Querauslenkungsamplituden bis 400 Hz.
+
+Orange markiert Frequenzen über 400 Hz, bei denen der Sensor Amplituden unterschätzen kann. Die Messgrenze beträgt 720 Hz, jedoch höchstens 45 % der tatsächlichen Abtastrate. Konsole und Diagramme zeigen Geschwindigkeiten mit deutlicher Zunahme der Querschwingungen (mindestens 20 % und 0,05 µm, bis 400 Hz). Kreuze markieren diese Punkte in den Auslenkungsdiagrammen. Diese Schwellenwerte dienen zur Auswahl auffälliger Punkte und geben nicht die Sensorgenauigkeit an.
+
+[Ausführliche Dokumentation zur VFA-Diagnose](https://github.com/ghzserg/zmod_klipper_c5/blob/main/docs/VFA_GRAPH.md)
+
 ---
 
 ## Makro `T_INFO`

@@ -82,6 +82,7 @@
 
 #### Klipper
 
+* C5 / C5PRO: Přidána [diagnostika VFA](C5PRO.md#vfa_graph) s grafy vibrací a tlačítkem `VFA_GRAPH` ve Fluidd.
 * AD5M / AD5X / C5PRO: Časová rezerva pro homing a sondování zvýšena ze 100 na 300 ms.
 * AD5M / AD5X / C5PRO: Opraveno časování příkazů LED, ventilátorů a výstupních pinů po zpoždění Linuxu.
 * AD5M / AD5X / C5PRO: Opraveno čištění seznamu čekajících úloh Reactor při výjimce.
