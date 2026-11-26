@@ -479,6 +479,8 @@ Kde `T=0` je číslo extruderu (0–3), který bude během kalibrace použit.
 
 > **Tip:** Kalibraci VFA doporučujeme provést, když se na povrchu tisku objeví viditelné vertikální pruhy.
 
+[Výzkum VFA: srovnání standardního algoritmu a OpenCreator, výsledky a doporučení](vfa.md).
+
 ### Diagnostika VFA (`VFA_GRAPH`) { #vfa_graph }
 
 Příkaz `VFA_GRAPH` ověřuje účinnost kalibrace VFA měřením vibrací s kompenzací a bez ní. Nastavení kalibrace se nemění.

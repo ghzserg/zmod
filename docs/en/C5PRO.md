@@ -480,6 +480,8 @@ Where `T=0` is the extruder number (0–3) that will be used during calibration.
 
 > **Tip:** It is recommended to perform VFA calibration when visible vertical stripes appear on the print surface.
 
+[VFA study: stock algorithm versus OpenCreator, results and recommendations](vfa.md).
+
 ### VFA diagnostics (`VFA_GRAPH`) { #vfa_graph }
 
 The `VFA_GRAPH` command checks how effective VFA calibration is by measuring vibrations with and without compensation. It does not change calibration settings.
