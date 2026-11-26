@@ -480,6 +480,42 @@ Where `T=0` is the extruder number (0–3) that will be used during calibration.
 
 > **Tip:** It is recommended to perform VFA calibration when visible vertical stripes appear on the print surface.
 
+### VFA diagnostics (`VFA_GRAPH`) { #vfa_graph }
+
+The `VFA_GRAPH` command checks how effective VFA calibration is by measuring vibrations with and without compensation. It does not change calibration settings.
+
+Requires a Z-Mod Klipper version that supports `VFA_GRAPH`. Clear the build plate before starting. The test cannot run while printing or paused.
+
+In Fluidd, click **VFA_GRAPH** in the calibration section, or enter the following in the console:
+
+```gcode
+VFA_GRAPH
+```
+
+By default, the test uses tool T0, both X and Y motors, both directions, and speeds from 20 to 320 mm/s in 10 mm/s steps.
+
+Optional parameters:
+
+- `T=0` — tool number (0–3).
+- `AXIS=XY` — both motors; `X` or `Y` — one motor.
+- `MIN_SPEED=20`, `MAX_SPEED=320`, `STEP=10` — speed range and step. Maximum allowed speed is 400 mm/s, subject to the current printer limit.
+- `REPEAT=1` — number of repeats (1–10). Use `REPEAT=3` for a more reliable comparison.
+- `ADAPTIVE=1` — adaptive pass length; `ADAPTIVE=0` — full diagonal.
+
+Example of an extended test:
+
+```gcode
+VFA_GRAPH MAX_SPEED=400
+```
+
+Find the results under **Configuration → mod_data/vfa/YYYYMMDD_HHMM**. Acceleration graphs, estimated sensor displacement graphs and measurement CSV files are saved for each motor, along with the overall summary `summary.json`.
+
+Red curves show vibrations without compensation, green curves with compensation. Lower amplitudes are better. Longitudinal vibrations are parallel to the toolhead trajectory; transverse vibrations are perpendicular to it. The overall result is based on the median transverse displacement amplitudes up to 400 Hz.
+
+Orange shading marks frequencies above 400 Hz, where the sensor may underestimate amplitudes. Measurements are limited to 720 Hz and 45% of the actual sampling rate. The console and graphs list speeds with a notable increase in transverse vibration (at least 20% and 0.05 µm, up to 400 Hz). Crosses mark these points on the displacement graphs. These thresholds flag problematic points; they do not represent sensor accuracy.
+
+[Detailed VFA diagnostics documentation](https://github.com/ghzserg/zmod_klipper_c5/blob/main/docs/VFA_GRAPH.md)
+
 ---
 
 ## `T_INFO` macro
