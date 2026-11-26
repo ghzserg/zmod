@@ -479,6 +479,8 @@ Wobei `T=0` die Extrudernummer (0–3) ist, die während der Kalibrierung verwen
 
 > **Tipp:** Es wird empfohlen, die VFA-Kalibrierung durchzuführen, wenn sichtbare vertikale Streifen auf der Druckoberfläche auftreten.
 
+[VFA-Untersuchung: Standardalgorithmus im Vergleich zu OpenCreator, Ergebnisse und Empfehlungen](vfa.md).
+
 ### VFA-Diagnose (`VFA_GRAPH`) { #vfa_graph }
 
 Der Befehl `VFA_GRAPH` prüft die Wirksamkeit der VFA-Kalibrierung, indem er Schwingungen mit und ohne Kompensation misst. Die Kalibrierungseinstellungen bleiben unverändert.

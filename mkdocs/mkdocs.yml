@@ -100,6 +100,7 @@ plugins:
             Filament: Филамент
 
             Additional: Дополнительно
+            VFA study: Исследование VFA
             Native firmware: Родная прошивка
             Changelog: История изменений
             Support: Поддержка
@@ -140,6 +141,7 @@ plugins:
             Filament: Filament
 
             Additional: Zusätzlich
+            VFA study: VFA-Untersuchung
             Native firmware: Native Firmware
             Changelog: Änderungshistorie
             Support: Support
@@ -179,6 +181,7 @@ plugins:
             Filament: Filament
 
             Additional: Dodatečné
+            VFA study: Výzkum VFA
             Native firmware: Nativní firmware
             Changelog: Historie změn
             Support: Podpora
@@ -217,6 +220,7 @@ nav:
       - PRO: Pro.md
 
   - Additional:
+      - VFA study: vfa.md
       - Native firmware: Native_FW.md
       - Changelog: Changelog.md
       - Support: Sponsor.md
