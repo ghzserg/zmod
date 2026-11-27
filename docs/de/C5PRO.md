@@ -471,7 +471,7 @@ Wobei `T=0` die Extrudernummer (0–3) ist, die während der Kalibrierung verwen
 Mit einer aktuellen Z-Mod-Version, die die alternative Kalibrierung unterstützt, kann der Algorithmus ausdrücklich gewählt werden:
 
 - `CALIBRATE_VFA T=0 ALTERNATIVE=0` — Standardalgorithmus (empfohlen).
-- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — OpenCreator.
+- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — Algorithmus aus OpenCreator.
 
 Beide Varianten speichern die Ergebnisse nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch mit `SAVE_CONFIG`. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung der Konfiguration (standardmäßig der Standardalgorithmus).
 
@@ -486,7 +486,7 @@ Beide Varianten speichern die Ergebnisse nach erfolgreicher Kalibrierung und Dia
 
 > **Tipp:** Es wird empfohlen, die VFA-Kalibrierung durchzuführen, wenn sichtbare vertikale Streifen auf der Druckoberfläche auftreten.
 
-[VFA-Untersuchung: Standardalgorithmus im Vergleich zu OpenCreator, Ergebnisse und Empfehlungen](vfa.md).
+[VFA-Untersuchung: Standardalgorithmus im Vergleich zum Algorithmus aus OpenCreator, Ergebnisse und Empfehlungen](vfa.md).
 
 ### VFA-Diagnose (`VFA_GRAPH`) { #vfa_graph }
 

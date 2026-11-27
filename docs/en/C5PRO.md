@@ -472,7 +472,7 @@ Where `T=0` is the extruder number (0–3) that will be used during calibration.
 With an up-to-date Z-Mod version supporting alternative calibration, you can explicitly select the algorithm:
 
 - `CALIBRATE_VFA T=0 ALTERNATIVE=0` — stock (recommended).
-- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — OpenCreator.
+- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — algorithm from OpenCreator.
 
 Both variants automatically save the results with `SAVE_CONFIG` after successful calibration and graph generation. No manual save is needed. Without `ALTERNATIVE`, the configuration setting is used (stock by default).
 
@@ -487,7 +487,7 @@ Both variants automatically save the results with `SAVE_CONFIG` after successful
 
 > **Tip:** It is recommended to perform VFA calibration when visible vertical stripes appear on the print surface.
 
-[VFA study: stock algorithm versus OpenCreator, results and recommendations](vfa.md).
+[VFA study: stock algorithm versus the algorithm from OpenCreator, results and recommendations](vfa.md).
 
 ### VFA diagnostics (`VFA_GRAPH`) { #vfa_graph }
 
