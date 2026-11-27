@@ -88,7 +88,7 @@
 	#### Klipper
 	
 	* C5 / C5PRO: [VFA-Diagnose](C5PRO.md#vfa_graph) mit Schwingungsdiagrammen und der Schaltfläche `VFA_GRAPH` in Fluidd hinzugefügt.
-	* C5 / C5PRO: Originale VFA-Kalibrierung korrigiert und alternativen Algorithmus aus OpenCreator hinzugefügt. `CALIBRATE_VFA` speichert das Ergebnis automatisch; standardmäßig wird der Originalalgorithmus verwendet. [Vergleich der Algorithmen](vfa.md).
+	* C5 / C5PRO: Originale VFA-Kalibrierung korrigiert und alternativen Algorithmus aus OpenCreator hinzugefügt. Standardmäßig wird der Originalalgorithmus verwendet. [Vergleich der Algorithmen](vfa.md).
 	* AD5M / AD5X / C5PRO: Zeitreserve für Homing und Probing von 100 auf 300 ms erhöht.
 	* AD5M / AD5X / C5PRO: Zeitplanung von LED-, Lüfter- und Ausgangsbefehlen nach Linux-Verzögerungen korrigiert.
 	* AD5M / AD5X / C5PRO: Bereinigung wartender Reactor-Aufgaben bei Fehlern korrigiert.

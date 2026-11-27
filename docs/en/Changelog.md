@@ -87,7 +87,7 @@
 #### Klipper
 
 * C5 / C5PRO: Added [VFA diagnostics](C5PRO.md#vfa_graph) with vibration graphs and a `VFA_GRAPH` button in Fluidd.
-* C5 / C5PRO: Fixed the stock VFA calibration and added an alternative algorithm from OpenCreator. `CALIBRATE_VFA` saves results automatically; the stock algorithm is used by default. [Algorithm comparison](vfa.md).
+* C5 / C5PRO: Fixed the stock VFA calibration and added an alternative algorithm from OpenCreator. The stock algorithm is used by default. [Algorithm comparison](vfa.md).
 * AD5M / AD5X / C5PRO: Increased the homing and probing command timing margin from 100 to 300 ms.
 * AD5M / AD5X / C5PRO: Fixed LED, fan and output-pin commands being scheduled in the past after Linux delays.
 * AD5M / AD5X / C5PRO: Fixed Reactor wait-list cleanup when an error occurs.
