@@ -254,6 +254,8 @@ Sie können die folgenden Werte festlegen (in Minuten):
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
+Bei deaktiviertem Originalbildschirm legt [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) fest, ob nach einem Filamentwechsel Beschleunigung und SCV wiederhergestellt werden.
+
 ---
 
 Shaper aus Klipper 14 werden mit dem Parameter aktiviert:

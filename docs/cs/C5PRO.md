@@ -254,6 +254,8 @@ Můžete nastavit následující hodnoty (v minutách):
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
+Při vypnuté originální obrazovce určuje [`RESTORE_T_ACCEL`](Global.md#restore_t_accel), zda se po výměně filamentu obnoví zrychlení a SCV.
+
 ---
 
 Shapery z Klipperu 13 zapíná parametr:

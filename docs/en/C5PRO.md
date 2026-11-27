@@ -255,6 +255,8 @@ You can set the following values (in minutes):
 
 <img width="375" height="143" alt="{2CA02C09-7658-478E-A2A3-F7A9E9A077F2}" src="../../images/6340a479-62a8-4476-93f1-c4054a279618.png" />
 
+[`RESTORE_T_ACCEL`](Global.md#restore_t_accel) controls whether acceleration and SCV are restored after a filament change with the native screen disabled.
+
 ---
 
 Shapers from Klipper 14 are enabled by the parameter:

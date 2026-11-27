@@ -63,6 +63,7 @@
 * AD5M / AD5M Pro: Added the alternative Rivet screen (`DISPLAY_OFF RIVET=1`). Thanks to @lDOCI.
 * AD5X / C5PRO: AFC now treats unknown filament type `?` as PLA.
 * AD5X / C5PRO: Added AFC mapping reset option [`AFC_RESET`](Global.md#afc_reset).
+* C5 / C5 Pro: Added the [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) setting for restoring acceleration after a filament change.
 * Fixed 3MF printing: Moonraker refreshes metadata before starting a print without blocking Klipper.
 * An additional `PAUSE` is ignored if the printer is already paused.
 * Fixed movements during pauses, filament changes, and nozzle cleaning.

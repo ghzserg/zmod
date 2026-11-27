@@ -205,6 +205,17 @@ For correct operation, **Ooze prevention** must be enabled in the slicer (`Print
 
 Example: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
 
+##### RESTORE_T_ACCEL
+
+For C5 and C5 Pro with the native screen disabled.
+
+- `1` (default) — restores the `max_accel` and `scv` values used before the filament change.
+- `0` — keeps the `max_accel` and `scv` values in effect at the end of the change.
+
+The feed rate is restored in both modes. You can also toggle this setting in the `GLOBAL` menu.
+
+To disable restoration, run `SAVE_ZMOD_DATA RESTORE_T_ACCEL=0`.
+
 ### Print start/bed mapping parameters [START_PRINT]:
 
 ##### MIDI_START
