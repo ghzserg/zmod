@@ -60,17 +60,19 @@
 	#### Z-Mod
 	
 	* AD5M / AD5M Pro: Unterstützung für die native Firmware 5.2.0 hinzugefügt.
-	* C5: Unterstützung für die native Firmware 2.0.1 hinzugefügt.
+	* C5 / C5 Pro: Unterstützung für die native Firmware 2.0.1 hinzugefügt.
 	* AD5M / AD5M Pro: Alternativen Bildschirm Rivet hinzugefügt (`DISPLAY_OFF RIVET=1`). Danke an @lDOCI.
 	* AD5X / C5PRO: Unbekannter Filamenttyp `?` wird in AFC als PLA behandelt.
 	* AD5X / C5PRO: Parameter zum Zurücksetzen der AFC-Zuordnungen [`AFC_RESET`](Global.md#afc_reset) hinzugefügt.
 	* C5 / C5 Pro: Mit [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) lässt sich die Wiederherstellung der Beschleunigung nach einem Filamentwechsel einstellen.
-	* C5 / C5 Pro: [Geschwindigkeit und Beschleunigung beim Werkzeugwechsel](C5PRO.md#zmod_color) sind bei deaktiviertem Originalbildschirm einstellbar.
+	* C5 / C5 Pro: [Geschwindigkeit und Beschleunigung beim Werkzeugwechsel](C5PRO.md#zmod_color), einschließlich der XY-Rückkehrgeschwindigkeit, sind bei deaktiviertem Originalbildschirm einstellbar.
+	* C5 / C5 Pro: Automatische Wiederherstellung bei Fehlern beim Andocken des Extruders durch erneutes XY-Homing und Sensorprüfung vor dem Öffnen der Verriegelung.
+	* C5 / C5 Pro: Auto PA beschleunigt und Wiederherstellung der Einstellungen nach der Kalibrierung verbessert.
 	* 3MF-Druckstart korrigiert: Moonraker aktualisiert die Metadaten vor dem Druck, ohne Klipper zu blockieren.
 	* Ein weiterer `PAUSE`-Befehl wird ignoriert, wenn der Drucker bereits pausiert.
 	* Bewegungen während Pause, Filamentwechsel und Düsenreinigung korrigiert.
 	* Makro `_RESET_Z_OFFSET` zum Zurücksetzen des Z-Offsets hinzugefügt.
-	* Das Menü `PLUGINS` verhindert nun die Aktivierung inkompatibler Plugins.
+	* Das Menü `PLUGINS` verhindert nun die Aktivierung inkompatibler Plugins. QuickSwap und NoPoop können gemeinsam verwendet werden.
 	* Zeitzoneneinstellung über `SET_TIMEZONE` im Hostsystem und in der Z-Mod-Umgebung korrigiert.
 	* Prüfung von SSH-Schlüsseln und deren Anzeige in `ZLINK` korrigiert.
 	* Verarbeitung von Input-Shaper-Kalibrierungsdateien korrigiert.
@@ -86,6 +88,7 @@
 	#### Klipper
 	
 	* C5 / C5PRO: [VFA-Diagnose](C5PRO.md#vfa_graph) mit Schwingungsdiagrammen und der Schaltfläche `VFA_GRAPH` in Fluidd hinzugefügt.
+	* C5 / C5PRO: Originale VFA-Kalibrierung korrigiert und alternativen Algorithmus aus OpenCreator hinzugefügt. Standardmäßig wird der Originalalgorithmus verwendet. [Vergleich der Algorithmen](vfa.md).
 	* AD5M / AD5X / C5PRO: Zeitreserve für Homing und Probing von 100 auf 300 ms erhöht.
 	* AD5M / AD5X / C5PRO: Zeitplanung von LED-, Lüfter- und Ausgangsbefehlen nach Linux-Verzögerungen korrigiert.
 	* AD5M / AD5X / C5PRO: Bereinigung wartender Reactor-Aufgaben bei Fehlern korrigiert.
@@ -114,16 +117,21 @@
 	* Bildschirme Fine Tune, Retract und Limits übersichtlicher gestaltet: Schrittauswahl, Zurücksetzen von Z-Offset und PA sowie Hervorhebung geänderter Werte.
 	* Extrude und PID zeigen Düsen und Sensoren in denselben Kacheln wie Home.
 	* Bei mehreren Extrudern verwenden Kachelstreifen und Temperaturdiagramm die Filamentfarben. Leere Extruder erscheinen im Diagramm grau; die Option ist standardmäßig aktiv.
-	* Objektausschluss-Karte vergrößert: quadratisches Druckbett, Zoom mit +/− und Verschieben mit einem Finger.
+	* Objektausschluss-Karte vergrößert: automatische Skalierung, Zoom mit +/−, Verschieben mit einem Finger und Hervorhebung des aktuellen sowie ausgeschlossener Objekte.
 	* Bestätigung beim Ausschließen von Objekten in Liste und Karte hinzugefügt; in den Einstellungen deaktivierbar.
 	* Gefährliche Aktionen während Druck oder Pause gesperrt; die Taste Fortsetzen ist vor wiederholtem Tippen geschützt.
 	* Löschen von G-Code-Dateien mit Bestätigung hinzugefügt, auch in Unterordnern.
-	* Schraubenjustierung vom PID-Bildschirm zum Bed-Mesh-Bildschirm verschoben; Düsen- und Betttemperatur werden dort eingestellt.
+	* Schraubenjustierung zum Bed-Mesh-Bildschirm verschoben; neuer Dialog zeigt Drehrichtung und Drehwinkel für jede Schraube.
+	* Beibehaltung des absoluten bzw. relativen Koordinatenmodus bei manuellen Bewegungen korrigiert.
 	* Übersetzungen von Beschriftungen, Maßeinheiten und Sensornamen korrigiert.
 	* Fehler bei Vorschaubildern und Dateimetadaten sowie die Temperaturanzeige des aktiven Extruders auf AD5X korrigiert.
 	* Puffer, JSON-Verarbeitung und Freigabe von Bildschirmressourcen optimiert. Messung auf AD5M: RSS 12.504 → 6.220 KB (−50 % gegenüber Z-Mod 1.5.1).
 	* Automatische UI-Prüfungen und Vorher/Nachher-Screenshotvergleiche für C5 Pro, AD5X und AD5M hinzugefügt.
 	* C5PRO: Kachel „Entfernen“ zum Abnehmen des Extruders vom Schlitten hinzugefügt.
+	
+	#### Dokumentation
+	
+	* Das vollständige Z-Mod-Handbuch steht in vier Sprachen als PDF zum Download bereit.
 	
 	#### Moonraker
 	

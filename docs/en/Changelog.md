@@ -59,17 +59,19 @@
 #### Z-Mod
 
 * AD5M / AD5M Pro: Added support for native firmware 5.2.0.
-* C5: Added support for native firmware 2.0.1.
+* C5 / C5 Pro: Added support for native firmware 2.0.1.
 * AD5M / AD5M Pro: Added the alternative Rivet screen (`DISPLAY_OFF RIVET=1`). Thanks to @lDOCI.
 * AD5X / C5PRO: AFC now treats unknown filament type `?` as PLA.
 * AD5X / C5PRO: Added AFC mapping reset option [`AFC_RESET`](Global.md#afc_reset).
 * C5 / C5 Pro: Added the [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) setting for restoring acceleration after a filament change.
-* C5 / C5 Pro: Added [tool-change speed and acceleration settings](C5PRO.md#zmod_color) for use with the native screen disabled.
+* C5 / C5 Pro: Added [tool-change speed and acceleration settings](C5PRO.md#zmod_color), including XY return speed, for use with the native screen disabled.
+* C5 / C5 Pro: Automatic recovery from extruder docking failures by rehoming XY, with sensor checks before releasing the latch.
+* C5 / C5 Pro: Faster Auto PA and improved restoration of settings after calibration.
 * Fixed 3MF printing: Moonraker refreshes metadata before starting a print without blocking Klipper.
 * An additional `PAUSE` is ignored if the printer is already paused.
 * Fixed movements during pauses, filament changes, and nozzle cleaning.
 * Added the `_RESET_Z_OFFSET` macro to reset the Z offset.
-* The `PLUGINS` menu now prevents enabling incompatible plugins.
+* The `PLUGINS` menu now prevents enabling incompatible plugins. QuickSwap and NoPoop can be used together.
 * Fixed timezone changes via `SET_TIMEZONE` in both the host system and the Z-Mod environment.
 * Fixed SSH key validation and key display in `ZLINK`.
 * Fixed processing of Input Shaper calibration files.
@@ -85,6 +87,7 @@
 #### Klipper
 
 * C5 / C5PRO: Added [VFA diagnostics](C5PRO.md#vfa_graph) with vibration graphs and a `VFA_GRAPH` button in Fluidd.
+* C5 / C5PRO: Fixed the stock VFA calibration and added an alternative algorithm from OpenCreator. The stock algorithm is used by default. [Algorithm comparison](vfa.md).
 * AD5M / AD5X / C5PRO: Increased the homing and probing command timing margin from 100 to 300 ms.
 * AD5M / AD5X / C5PRO: Fixed LED, fan and output-pin commands being scheduled in the past after Linux delays.
 * AD5M / AD5X / C5PRO: Fixed Reactor wait-list cleanup when an error occurs.
@@ -113,16 +116,21 @@
 * Improved the Fine Tune, Retract and Limits layouts with step selection, Z-offset and PA reset, and highlighting of changed values.
 * Extrude and PID now show nozzles and sensors using the same tiles as Home.
 * On multi-extruder printers, tile stripes and the temperature chart use filament colors. Empty extruders show a grey graph line; the option is enabled by default.
-* Enlarged the object-exclusion map with a square bed, +/− zoom controls and one-finger panning.
+* Enlarged the object-exclusion map with automatic fitting, +/− zoom controls, one-finger panning and highlighting of current and excluded objects.
 * Added confirmation for excluding objects in both the list and map views; it can be disabled in settings.
 * Blocked unsafe operations while printing or paused; the Resume button is protected against repeated taps.
 * Added confirmed deletion of G-code files, including files in subfolders.
-* Moved screw adjustment from PID to the Bed Mesh screen, with nozzle and bed temperatures configured there.
+* Moved screw adjustment to the Bed Mesh screen and added a dialog showing the direction and amount of rotation for each screw.
+* Fixed preservation of absolute and relative coordinate modes during manual moves.
 * Fixed translations of labels, measurement units and sensor names.
 * Fixed thumbnail and file-metadata errors, and the active extruder temperature display on AD5X.
 * Optimized buffers, JSON handling and screen-resource cleanup. Measured on AD5M: RSS fell from 12,504 to 6,220 KB (−50% compared with Z-Mod 1.5.1).
 * Added automated UI checks and before/after screenshot comparisons for C5 Pro, AD5X and AD5M.
 * C5PRO: Added a Remove tile to detach the extruder from the carriage.
+
+#### Documentation
+
+* The complete Z-Mod manual is available for download as a PDF in four languages.
 
 #### Moonraker
 
