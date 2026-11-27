@@ -58,75 +58,56 @@
 
 #### Z-Mod
 
-* AD5M / AD5M Pro: Added support for native firmware 5.2.0.
-* C5 / C5 Pro: Added support for native firmware 2.0.1.
+* Support for stock firmware 5.2.0 (AD5M / AD5M Pro) and 2.0.1 (C5 / C5 Pro).
 * AD5M / AD5M Pro: Added the alternative Rivet screen (`DISPLAY_OFF RIVET=1`). Thanks to @lDOCI.
-* AD5X / C5PRO: AFC now treats unknown filament type `?` as PLA.
-* AD5X / C5PRO: Added AFC mapping reset option [`AFC_RESET`](Global.md#afc_reset).
+* AD5X / C5 Pro: AFC treats unknown filament type `?` as PLA. Use [`AFC_RESET`](Global.md#afc_reset) to configure when mappings reset.
 * C5 / C5 Pro: Added the [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) setting for restoring acceleration after a filament change.
-* C5 / C5 Pro: Added [tool-change speed and acceleration settings](C5PRO.md#zmod_color), including XY return speed, for use with the native screen disabled.
-* C5 / C5 Pro: Automatic recovery from extruder docking failures by rehoming XY, with sensor checks before releasing the latch.
+* C5 / C5 Pro: With the stock screen disabled, you can adjust [tool-change speed and acceleration](C5PRO.md#zmod_color), including XY return speed.
+* C5 / C5 Pro: Added automatic recovery from extruder docking errors.
 * C5 / C5 Pro: Faster Auto PA and improved restoration of settings after calibration.
-* Fixed 3MF printing: Moonraker refreshes metadata before starting a print without blocking Klipper.
-* An additional `PAUSE` is ignored if the printer is already paused.
-* Fixed movements during pauses, filament changes, and nozzle cleaning.
-* Added the `_RESET_Z_OFFSET` macro to reset the Z offset.
+* Fixed 3MF printing. Printing starts after the metadata has been refreshed.
+* Fixed moves during pauses, filament changes and nozzle cleaning. Repeated `PAUSE` commands are ignored.
 * The `PLUGINS` menu now prevents enabling incompatible plugins. QuickSwap and NoPoop can be used together.
 * Fixed timezone changes via `SET_TIMEZONE` in both the host system and the Z-Mod environment.
 * Fixed SSH key validation and key display in `ZLINK`.
 * Fixed processing of Input Shaper calibration files.
-* AD5M / AD5X: `UPDATE_MCU` now accepts `FORCE=native` and `FORCE=new`; the previous numeric options remain supported.
+* AD5M / AD5X: `UPDATE_MCU` accepts `FORCE=native`, `FORCE=new` and the existing numeric values.
 * AD5X: Automatic filament loading no longer starts during a print.
-* C5PRO: Added the `AUTOINSERT` option to control automatic filament loading.
-* C5PRO: Fixed Z-offset reset for the currently installed extruder.
-* C5PRO: Added the `TEMP_WAIT` parameter to `T_IN_ZCOLOR`.
-* C5PRO: Updated native firmware 2.0.0 file-integrity checks.
-* C5 / C5PRO: Fixed filament motion sensor handling during purging, PA calibration, manual tool pickup and print resumption. Thanks to @DIEHARDave.
-* AD5X / C5PRO: Enabled `inotify` for automatic file list and G-code preview updates.
+* C5 Pro: Added the `AUTOINSERT` option to control automatic filament loading.
+* C5 Pro: Fixed Z-offset reset for the currently installed extruder.
+* C5 Pro: Added the `TEMP_WAIT` parameter to `T_IN_ZCOLOR`.
+* C5 / C5 Pro: Fixed filament motion sensor handling during purging, PA calibration, manual tool pickup and print resumption. Thanks to @DIEHARDave.
+* AD5X / C5 Pro: The file list and G-code previews update automatically.
 
 #### Klipper
 
-* C5 / C5PRO: Added [VFA diagnostics](C5PRO.md#vfa_graph) with vibration graphs and a `VFA_GRAPH` button in Fluidd.
-* C5 / C5PRO: Fixed the stock VFA calibration and added an alternative algorithm from OpenCreator. The stock algorithm is used by default. [Algorithm comparison](vfa.md).
-* AD5M / AD5X / C5PRO: Increased the homing and probing command timing margin from 100 to 300 ms.
-* AD5M / AD5X / C5PRO: Fixed LED, fan and output-pin commands being scheduled in the past after Linux delays.
-* AD5M / AD5X / C5PRO: Fixed Reactor wait-list cleanup when an error occurs.
-* AD5M / AD5X: Replaced Klipper 13 with Klipper 14. The `klipper13` setting was renamed to `klippernew`, and old settings are migrated automatically.
-* AD5M / AD5X: Fixed N32G455 MCU memory configuration (128 KB) so Flashforge board firmware can start correctly.
-* AD5M / AD5X: Klipper can automatically recover an MCU left in shutdown state on Klippy startup.
-* AD5M / AD5X: Increased the motion planning buffer from 1 to 2 seconds and the startup buffer from 250 to 500 ms.
-* AD5M / AD5X: Removed duplicate velocity-limit messages from the log.
-* AD5X: Fixed selection of the correct `virtual_sdcard` version for Klipper 14 during startup and Z-Mod updates.
-* AD5X: `virtual_sdcard` yields to the Reactor approximately every 50 ms while processing G-code to avoid delaying other Klipper tasks.
-* C5PRO: New Klipper shapers (`KLIPPER_C5`) are enabled by default.
-* C5PRO: Previously armed endstops are released if homing initialization fails.
-* C5PRO: MCU ACK waits now abort with an error if communication is lost instead of hanging.
-* C5PRO: Fixed handling of the `REMOVE_PEEL` response while retaining the original log output.
-* C5PRO: G-code macro errors now show the source line and cause; `delayed_gcode` template errors appear in the console.
-* C5PRO: Fixed `klippy.log` rotation and debug logging after MCU disconnection.
-* C5PRO: Fixed displayed velocity in Motion Report after a move completes.
-* C5PRO: Fixed `PID_CALIBRATE` coefficient calculation and reduced hysteresis from 5 to 2.5 °C. Existing saved PID values are unchanged.
+* C5 / C5 Pro: Fixed the default VFA calibration and added [vibration graphs (`VFA_GRAPH`)](C5PRO.md#vfa_graph) in Fluidd. The [OpenCreator algorithm](vfa.md) is optional.
+* AD5M / AD5X / C5 Pro: Increased the timing margin for homing and probing. Fixed LED and fan control after system delays.
+* AD5M / AD5X: Upgraded from Klipper 13 to 14. The `klipper13` setting migrates to `klippernew` automatically.
+* AD5M / AD5X: Fixed startup on N32G455 boards. When starting, Klipper now automatically recovers an MCU left in shutdown.
+* AD5X: Improved G-code processing through `virtual_sdcard` and fixed version selection for Klipper 14.
+* C5 Pro: New Klipper shapers (`KLIPPER_C5`) are enabled by default.
+* C5 Pro: Previously armed endstops are released if homing initialization fails.
+* C5 Pro: Fixed a hang when communication with the MCU is lost.
+* C5 Pro: Macro errors now show the line and cause. Fixed logging after MCU disconnection.
+* C5 Pro: Fixed displayed velocity in Motion Report after a move completes.
+* C5 Pro: Fixed PID coefficient calculation during `PID_CALIBRATE`.
 
 #### GuppyScreen
 
-* AD5M Pro / C5PRO: Moved air circulation controls to the Fans screen and highlighted the active mode.
-* Redesigned navigation with a permanent left-hand Home / Print / Tune / Settings bar and an always-visible Stop button.
-* Home now shows sensors as tiles, adds Fine Tune and Bed Mesh, and displays a large clock while idle.
-* The Print screen now has a Files button, larger values, a full-width progress bar with ETA, coordinates and a clock.
-* Improved the Fine Tune, Retract and Limits layouts with step selection, Z-offset and PA reset, and highlighting of changed values.
-* Extrude and PID now show nozzles and sensors using the same tiles as Home.
-* On multi-extruder printers, tile stripes and the temperature chart use filament colors. Empty extruders show a grey graph line; the option is enabled by default.
-* Enlarged the object-exclusion map with automatic fitting, +/− zoom controls, one-finger panning and highlighting of current and excluded objects.
-* Added confirmation for excluding objects in both the list and map views; it can be disabled in settings.
+* AD5M Pro / C5 Pro: Moved air circulation controls to the Fans screen and highlighted the active mode.
+* Redesigned navigation and the main screens. Stop is always visible, Home shows a clock and sensor tiles, and Print has a file shortcut and an ETA.
+* Simplified Fine Tune, Retract and Limits. Added step selection and resets for Z-offset and PA.
+* On multi-extruder printers, tiles and the temperature chart use filament colors by default.
+* The object-exclusion map now fits automatically, supports zoom and one-finger panning, and highlights current and excluded objects. Exclusion confirmation is optional.
 * Blocked unsafe operations while printing or paused; the Resume button is protected against repeated taps.
 * Added confirmed deletion of G-code files, including files in subfolders.
-* Moved screw adjustment to the Bed Mesh screen and added a dialog showing the direction and amount of rotation for each screw.
+* Screw adjustment moved to Bed Mesh and shows how far to turn each screw and in which direction.
 * Fixed preservation of absolute and relative coordinate modes during manual moves.
 * Fixed translations of labels, measurement units and sensor names.
 * Fixed thumbnail and file-metadata errors, and the active extruder temperature display on AD5X.
-* Optimized buffers, JSON handling and screen-resource cleanup. Measured on AD5M: RSS fell from 12,504 to 6,220 KB (−50% compared with Z-Mod 1.5.1).
-* Added automated UI checks and before/after screenshot comparisons for C5 Pro, AD5X and AD5M.
-* C5PRO: Added a Remove tile to detach the extruder from the carriage.
+* On AD5M, GuppyScreen RSS dropped from 12,504 to 6,220 KB (−50% compared with Z-Mod 1.5.1).
+* C5 Pro: Added a Remove tile to detach the extruder from the carriage.
 
 #### Documentation
 
@@ -135,12 +116,11 @@
 #### Moonraker
 
 * Fixed estimated print-time parsing from G-code.
-* Added `post_update_gcode` to run a macro after a web component update. GuppyScreen restarts automatically after updating.
-* Eliminated duplicate watches for the `.theme` and `.fluidd-theme` directories.
+* GuppyScreen restarts automatically after an update. The new `post_update_gcode` option runs a macro after a web component update.
 
 #### Orca FF
 
-* On all printers, the native-screen emulator `orca_ff` was rewritten from Python in C. RAM usage dropped from 17 to 2 MB (−15 MB).
+* `orca_ff` memory usage dropped from 17 to 2 MB on all models.
 
 #### OrcaSlicer
 
