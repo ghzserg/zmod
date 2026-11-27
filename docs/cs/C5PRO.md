@@ -258,6 +258,8 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ## Nastavení `zmod_color` { #zmod_color }
 
+Tato nastavení platí pouze při vypnuté originální obrazovce (`DISPLAY_OFF`).
+
 Ve Fluidd otevřete `mod_data/user.cfg` a přidejte požadované volby do jedné sekce `[zmod_color]`. Restartujte Klipper. Soubor se při aktualizaci Z-Mod zachová.
 
 | Parametr | Výchozí hodnota | Účel |

@@ -258,6 +258,8 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ## `zmod_color`-Einstellungen { #zmod_color }
 
+Diese Einstellungen gelten nur bei deaktiviertem Originalbildschirm (`DISPLAY_OFF`).
+
 Öffnen Sie in Fluidd die Datei `mod_data/user.cfg` und tragen Sie die gewünschten Optionen in einen gemeinsamen Abschnitt `[zmod_color]` ein. Starten Sie Klipper neu. Die Datei bleibt bei Z-Mod-Updates erhalten.
 
 | Parameter | Standard | Funktion |

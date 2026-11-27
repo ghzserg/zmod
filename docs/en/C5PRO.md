@@ -259,6 +259,8 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ## `zmod_color` settings { #zmod_color }
 
+These settings are only for use with the native screen disabled (`DISPLAY_OFF`).
+
 In Fluidd, open `mod_data/user.cfg` and add the options you want under a single `[zmod_color]` section. Restart Klipper. Z-Mod updates preserve this file.
 
 | Option | Default | Purpose |
