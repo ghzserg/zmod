@@ -6,7 +6,7 @@
 
 **Eine VFA-Kalibrierung ist sinnvoll; den alternativen Algorithmus aus OpenCreator benötigen die meisten Anwender nicht.** VFA-Kompensation hilft, feine vertikale Streifen auf gedruckten Wänden zu reduzieren, die durch Motor- und mechanische Schwingungen entstehen. Auf glatten Oberflächen fallen sie besonders auf.
 
-- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen an der Riemenspannung oder Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
+- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0 ALTERNATIVE=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen an der Riemenspannung oder Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
 - In OrcaSlicer können die gewohnten Geschwindigkeiten und Beschleunigungen beibehalten werden. VFA erhöht die zulässigen Geschwindigkeiten nicht, verändert das Slicerprofil nicht und ersetzt Input Shaper nicht. Bleiben Streifen bei einer bestimmten Geschwindigkeit sichtbar, die Geschwindigkeit der Außenwand verändern und identische Testteile vergleichen. Die tatsächliche Geschwindigkeit in der OrcaSlicer-Vorschau prüfen; sie kann vom eingestellten Wert abweichen.
 - Den Algorithmus aus OpenCreator ausprobieren, wenn das Standardergebnis nicht zufriedenstellt und ein Vergleich möglich ist. Auf unserem Drucker war der Algorithmus aus OpenCreator im Mittel bei 60–220 mm/s besser, der Standardalgorithmus bei 20–50 mm/s. Angesichts der Streuung der Messungen ist der Unterschied nicht überzeugend genug; zudem dauerte die alternative Kalibrierung etwa 80 Minuten.
 
@@ -121,7 +121,7 @@ Bis 400 Hz sank der Gesamtmedian des Restwerts von 0,027725 auf 0,022088 µm (�
 
 ## 5. Vollständige alternative Kalibrierung
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` lief für beide Motoren von 20:53:51 bis 22:14:05. Die Zeit vor der Diagrammerstellung betrug 80 min 14 s, etwa das 3,8-Fache des Standarddurchlaufs (gemessen bis SAVE_CONFIG). Andere Drucker oder ein einzelner Kandidat können andere Zeiten ergeben.
+Die alternative Kalibrierung lief für beide Motoren von 20:53:51 bis 22:14:05. Die Zeit vor der Diagrammerstellung betrug 80 min 14 s, etwa das 3,8-Fache des Standarddurchlaufs (gemessen bis SAVE_CONFIG). Andere Drucker oder ein einzelner Kandidat können andere Zeiten ergeben.
 
 | Motor | Hohe Frequenz | Niedrige Frequenz | Bewertung hoch | Bewertung niedrig | Gewählt |
 |---|---:|---:|---:|---:|---:|
@@ -216,7 +216,7 @@ Für Experimente mit der Alternative:
 CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Beide Varianten des Makros `CALIBRATE_VFA` führen nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch `SAVE_CONFIG` aus. Anschließend startet Klipper neu. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung aus `[stepper_resonance_tester]` (Standard: `alternative: False`). Mit `ALTERNATIVE=0` wird der Standardalgorithmus ausdrücklich ausgewählt. Der Low-Level-Befehl `ZMOD_CALIBRATE_VFA` speichert die Konfiguration weiterhin nicht automatisch.
+Beide Varianten des Makros `CALIBRATE_VFA` führen nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch `SAVE_CONFIG` aus. Anschließend startet Klipper neu. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung aus `[stepper_resonance_tester]` (Standard: `alternative: False`). Mit `ALTERNATIVE=0` wird der Standardalgorithmus ausdrücklich ausgewählt.
 
 Unabhängige Prüfung nach dem Speichern:
 

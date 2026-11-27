@@ -6,7 +6,7 @@
 
 **VFA calibration is worth using, but most users do not need the alternative algorithm from OpenCreator.** VFA helps reduce fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.
 
-- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate if you change belt tension or the mechanics, or if stripes reappear.
+- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0 ALTERNATIVE=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate if you change belt tension or the mechanics, or if stripes reappear.
 - Keep your usual speeds and accelerations in OrcaSlicer. VFA does not increase permitted speeds, alter slicer profiles or replace Input Shaper. If stripes remain at a particular speed, try changing the outer-wall speed and compare identical test prints. Check the actual speed in the OrcaSlicer preview; it may differ from the configured value.
 - Try the algorithm from OpenCreator if the stock result is unsatisfactory and you can compare the results. On our printer it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.
 
@@ -121,7 +121,7 @@ Up to 400 Hz the overall residual median fell from 0.027725 to 0.022088 µm (−
 
 ## 5. Full alternative calibration
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` ran from 20:53:51 to 22:14:05 for both motors. Time before plotting was 80 min 14 s, roughly 3.8 times the stock run (measured up to SAVE_CONFIG). Other printers or a single candidate may take a different amount of time.
+The alternative calibration ran from 20:53:51 to 22:14:05 for both motors. Time before plotting was 80 min 14 s, roughly 3.8 times the stock run (measured up to SAVE_CONFIG). Other printers or a single candidate may take a different amount of time.
 
 | Motor | High frequency | Low frequency | High score | Low score | Selected |
 |---|---:|---:|---:|---:|---:|
@@ -216,7 +216,7 @@ To experiment with the alternative:
 CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Both variants of the `CALIBRATE_VFA` macro automatically execute `SAVE_CONFIG` after successful calibration and graph generation, then Klipper restarts. There is no need to save manually. Without `ALTERNATIVE`, the setting from `[stepper_resonance_tester]` is used (default: `alternative: False`). Specify `ALTERNATIVE=0` to explicitly select the stock algorithm. The low-level `ZMOD_CALIBRATE_VFA` command still does not save the configuration automatically.
+Both variants of the `CALIBRATE_VFA` macro automatically execute `SAVE_CONFIG` after successful calibration and graph generation, then Klipper restarts. There is no need to save manually. Without `ALTERNATIVE`, the setting from `[stepper_resonance_tester]` is used (default: `alternative: False`). Specify `ALTERNATIVE=0` to explicitly select the stock algorithm.
 
 Independent verification after saving:
 

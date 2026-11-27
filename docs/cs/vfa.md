@@ -6,7 +6,7 @@
 
 **Kalibraci VFA se vyplatí používat, alternativní algoritmus z OpenCreator však většina uživatelů nepotřebuje.** Kompenzace VFA pomáhá omezit jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.
 
-- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů či mechaniky nebo pokud se proužky znovu objeví.
+- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0 ALTERNATIVE=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů či mechaniky nebo pokud se proužky znovu objeví.
 - V OrcaSliceru používejte své obvyklé rychlosti a zrychlení. VFA nezvyšuje povolené rychlosti, nemění profil sliceru a nenahrazuje Input Shaper. Pokud proužky přetrvávají při určité rychlosti, zkuste změnit rychlost vnější stěny a porovnat stejné zkušební výtisky. V náhledu OrcaSliceru zkontrolujte skutečnou rychlost; může se lišit od hodnoty nastavené v profilu.
 - Algoritmus z OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem stroji byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.
 
@@ -121,7 +121,7 @@ Do 400 Hz klesl celkový medián zbytku z 0,027725 na 0,022088 µm (−20,3 %), 
 
 ## 5. Úplná alternativní kalibrace
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` probíhala pro oba motory od 20:53:51 do 22:14:05. Doba před vykreslením grafů činila 80 min 14 s, přibližně 3,8krát déle než standardní průběh (měřený do SAVE_CONFIG). Na jiných tiskárnách nebo při jednom kandidátovi se čas může lišit.
+Alternativní kalibrace probíhala pro oba motory od 20:53:51 do 22:14:05. Doba před vykreslením grafů činila 80 min 14 s, přibližně 3,8krát déle než standardní průběh (měřený do SAVE_CONFIG). Na jiných tiskárnách nebo při jednom kandidátovi se čas může lišit.
 
 | Motor | Vyšší frekvence | Nižší frekvence | Skóre vyšší | Skóre nižší | Vybrána |
 |---|---:|---:|---:|---:|---:|
@@ -216,7 +216,7 @@ Experiment s alternativou:
 CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Obě varianty makra `CALIBRATE_VFA` po úspěšné kalibraci a vytvoření grafů automaticky provedou `SAVE_CONFIG` a poté se Klipper restartuje. Ruční uložení není nutné. Bez parametru `ALTERNATIVE` se použije nastavení ze sekce `[stepper_resonance_tester]` (výchozí hodnota `alternative: False`). Parametrem `ALTERNATIVE=0` lze výslovně zvolit standardní algoritmus. Nízkoúrovňový příkaz `ZMOD_CALIBRATE_VFA` nadále neukládá konfiguraci automaticky.
+Obě varianty makra `CALIBRATE_VFA` po úspěšné kalibraci a vytvoření grafů automaticky provedou `SAVE_CONFIG` a poté se Klipper restartuje. Ruční uložení není nutné. Bez parametru `ALTERNATIVE` se použije nastavení ze sekce `[stepper_resonance_tester]` (výchozí hodnota `alternative: False`). Parametrem `ALTERNATIVE=0` lze výslovně zvolit standardní algoritmus.
 
 Nezávislé ověření po uložení:
 
