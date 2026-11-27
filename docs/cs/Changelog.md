@@ -58,75 +58,56 @@
 
 #### Z-Mod
 
-* AD5M / AD5M Pro: Přidána podpora nativního firmwaru 5.2.0.
-* C5 / C5 Pro: Přidána podpora nativního firmwaru 2.0.1.
+* Podpora původního firmwaru 5.2.0 (AD5M / AD5M Pro) a 2.0.1 (C5 / C5 Pro).
 * AD5M / AD5M Pro: Přidána alternativní obrazovka Rivet (`DISPLAY_OFF RIVET=1`). Děkujeme @lDOCI.
-* AD5X / C5PRO: Neznámý typ filamentu `?` se v AFC nahrazuje typem PLA.
-* AD5X / C5PRO: Přidán parametr resetování přiřazení AFC [`AFC_RESET`](Global.md#afc_reset).
+* AD5X / C5 Pro: AFC považuje neznámý typ filamentu `?` za PLA. Parametr [`AFC_RESET`](Global.md#afc_reset) určuje, kdy se přiřazení resetují.
 * C5 / C5 Pro: Přidáno nastavení [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) pro obnovení zrychlení po výměně filamentu.
-* C5 / C5 Pro: Při vypnuté originální obrazovce lze nastavit [rychlost a zrychlení při výměně nástroje](C5PRO.md#zmod_color), včetně rychlosti návratu v osách XY.
-* C5 / C5 Pro: Automatické zotavení při chybě parkování extruderu pomocí opakovaného homingu XY a kontroly snímačů před otevřením západky.
+* C5 / C5 Pro: Při vypnuté původní obrazovce lze nastavit [rychlost a zrychlení výměny nástroje](C5PRO.md#zmod_color) i rychlost návratu v osách XY.
+* C5 / C5 Pro: Přidáno automatické zotavení po chybě při parkování extruderu.
 * C5 / C5 Pro: Zrychlena kalibrace Auto PA a zlepšeno obnovení nastavení po kalibraci.
-* Opraveno spouštění tisku 3MF: Moonraker před tiskem aktualizuje metadata bez blokování Klipperu.
-* Opakovaný příkaz `PAUSE` se neprovede, pokud je tiskárna již pozastavena.
-* Opraveny pohyby při pozastavení, výměně filamentu a čištění trysky.
-* Přidáno makro `_RESET_Z_OFFSET` pro vynulování Z-offsetu.
+* Opraven start tisku 3MF. Tisk se spustí po aktualizaci metadat.
+* Opraveny pohyby při pauze, výměně filamentu a čištění trysky. Opakovaný příkaz `PAUSE` se ignoruje.
 * Nabídka `PLUGINS` nyní nedovolí aktivovat vzájemně nekompatibilní pluginy. QuickSwap a NoPoop lze používat společně.
 * Opraveno nastavení časového pásma pomocí `SET_TIMEZONE` v hostitelském systému i v prostředí Z-Mod.
 * Opravena kontrola klíčů SSH a jejich zobrazení v `ZLINK`.
 * Opraveno zpracování souborů kalibrace Input Shaper.
-* AD5M / AD5X: Makro `UPDATE_MCU` přijímá `FORCE=native` a `FORCE=new`; starší číselné hodnoty jsou nadále podporovány.
+* AD5M / AD5X: `UPDATE_MCU` přijímá `FORCE=native`, `FORCE=new` i dosavadní číselné hodnoty.
 * AD5X: Automatické zavádění filamentu se během tisku již nespouští.
-* C5PRO: Přidán parametr `AUTOINSERT` pro řízení automatického zavádění filamentu.
-* C5PRO: Opraveno vynulování Z-offsetu pro právě nasazený extruder.
-* C5PRO: Přidán parametr `TEMP_WAIT` do `T_IN_ZCOLOR`.
-* C5PRO: Aktualizována kontrola integrity souborů nativního firmwaru 2.0.0.
-* C5 / C5PRO: Opraveno řízení snímačů pohybu filamentu při proplachování, kalibraci PA, ručním nasazení extruderu a obnovení tisku. Děkujeme @DIEHARDave.
-* AD5X / C5PRO: Zapnuto `inotify` pro automatickou aktualizaci seznamu souborů a náhledu G-code.
+* C5 Pro: Přidán parametr `AUTOINSERT` pro řízení automatického zavádění filamentu.
+* C5 Pro: Opraveno vynulování Z-offsetu pro právě nasazený extruder.
+* C5 Pro: Přidán parametr `TEMP_WAIT` do `T_IN_ZCOLOR`.
+* C5 / C5 Pro: Opraveno řízení snímačů pohybu filamentu při proplachování, kalibraci PA, ručním nasazení extruderu a obnovení tisku. Děkujeme @DIEHARDave.
+* AD5X / C5 Pro: Seznam souborů a náhledy G-code se aktualizují automaticky.
 
 #### Klipper
 
-* C5 / C5PRO: Přidána [diagnostika VFA](C5PRO.md#vfa_graph) s grafy vibrací a tlačítkem `VFA_GRAPH` ve Fluidd.
-* C5 / C5PRO: Opravena původní kalibrace VFA a přidán alternativní algoritmus z OpenCreator. Výchozí je původní algoritmus. [Porovnání algoritmů](vfa.md).
-* AD5M / AD5X / C5PRO: Časová rezerva pro homing a sondování zvýšena ze 100 na 300 ms.
-* AD5M / AD5X / C5PRO: Opraveno časování příkazů LED, ventilátorů a výstupních pinů po zpoždění Linuxu.
-* AD5M / AD5X / C5PRO: Opraveno čištění seznamu čekajících úloh Reactor při výjimce.
-* AD5M / AD5X: Klipper 13 nahrazen Klipperem 14. Nastavení `klipper13` bylo přejmenováno na `klippernew`; stará nastavení se převedou automaticky.
-* AD5M / AD5X: Opravena konfigurace paměti MCU N32G455 (128 KB), aby firmware na deskách Flashforge správně startoval.
-* AD5M / AD5X: Klipper při spuštění Klippy dokáže automaticky obnovit MCU, která zůstala ve stavu shutdown.
-* AD5M / AD5X: Vyrovnávací paměť plánování pohybu zvýšena z 1 na 2 sekundy a počáteční rezerva z 250 na 500 ms.
-* AD5M / AD5X: Odstraněny duplicitní zprávy o omezení rychlosti z logu.
-* AD5X: Opraven výběr správné verze `virtual_sdcard` pro Klipper 14 při startu a aktualizaci Z-Mod.
-* AD5X: `virtual_sdcard` při zpracování G-code přibližně každých 50 ms předává řízení Reactoru, aby nezdržovala další úlohy Klipperu.
-* C5PRO: Nové shapery Klipperu (`KLIPPER_C5`) jsou ve výchozím nastavení zapnuté.
-* C5PRO: Při selhání inicializace homingu se uvolní již aktivované koncové spínače.
-* C5PRO: Při ztrátě spojení s MCU se čekání na ACK ukončí chybou místo zablokování.
-* C5PRO: Opraveno zpracování odpovědi `REMOVE_PEEL` při zachování původního zápisu do logu.
-* C5PRO: Chyby G-code maker nyní zobrazují řádek a příčinu; chyby šablon `delayed_gcode` se zobrazují v konzoli.
-* C5PRO: Opravena rotace `klippy.log` a ladicí výpis po odpojení MCU.
-* C5PRO: Opravena zobrazovaná rychlost v Motion Report po ukončení pohybu.
-* C5PRO: Opraven výpočet koeficientů `PID_CALIBRATE` a hystereze snížena z 5 na 2,5 °C. Uložené hodnoty PID se nemění.
+* C5 / C5 Pro: Opravena výchozí kalibrace VFA a do Fluidd přidány [grafy vibrací (`VFA_GRAPH`)](C5PRO.md#vfa_graph). Volitelně lze použít [algoritmus OpenCreator](vfa.md).
+* AD5M / AD5X / C5 Pro: Zvýšena časová rezerva při homingu a sondování. Opraveno ovládání LED a ventilátorů po prodlevách systému.
+* AD5M / AD5X: Přechod z Klipperu 13 na 14. Nastavení `klipper13` se automaticky převede na `klippernew`.
+* AD5M / AD5X: Opraven start desek s N32G455. Při spuštění Klipper automaticky obnoví MCU, pokud zůstala ve stavu shutdown.
+* AD5X: Zlepšeno zpracování G-code přes `virtual_sdcard` a opraven výběr verze pro Klipper 14.
+* C5 Pro: Nové shapery Klipperu (`KLIPPER_C5`) jsou ve výchozím nastavení zapnuté.
+* C5 Pro: Při selhání inicializace homingu se uvolní již aktivované koncové spínače.
+* C5 Pro: Opraveno zamrznutí při ztrátě spojení s MCU.
+* C5 Pro: Chyby maker zobrazují řádek a příčinu. Opraven zápis do logu po odpojení MCU.
+* C5 Pro: Opravena zobrazovaná rychlost v Motion Report po ukončení pohybu.
+* C5 Pro: Opraven výpočet koeficientů PID při `PID_CALIBRATE`.
 
 #### GuppyScreen
 
-* AD5M Pro / C5PRO: Ovládání cirkulace vzduchu přesunuto na obrazovku ventilátorů; aktivní režim je zvýrazněn.
-* Přepracována navigace: trvalý levý panel Home / Print / Tune / Settings a stále viditelné tlačítko Stop.
-* Na úvodní obrazovce se senzory zobrazují jako dlaždice, přibyly Fine Tune a Bed Mesh a při nečinnosti velké hodiny.
-* Na obrazovce tisku přibylo tlačítko Files, větší hodnoty, ukazatel průběhu s ETA, souřadnice a hodiny.
-* Upraveny obrazovky Fine Tune, Retract a Limits: volba kroku, reset Z-offsetu a PA a zvýraznění změněné hodnoty.
-* Extrude a PID zobrazují trysky a senzory stejnými dlaždicemi jako úvodní obrazovka.
-* U více extruderů mají pruhy dlaždic a teplotní graf barvy filamentu. Prázdný extruder má v grafu šedou čáru; volba je ve výchozím stavu zapnutá.
-* Zvětšena mapa vyloučení objektů: automatické měřítko, zoom tlačítky +/−, posun jedním prstem a zvýraznění aktuálního a vyloučených objektů.
-* Přidáno potvrzení vyloučení objektu v seznamu i na mapě; lze je vypnout v nastavení.
+* AD5M Pro / C5 Pro: Ovládání cirkulace vzduchu přesunuto na obrazovku ventilátorů; aktivní režim je zvýrazněn.
+* Přepracována navigace a hlavní obrazovky. Stop je stále vidět, Home zobrazuje hodiny a dlaždice senzorů a Print nabízí přístup k souborům a odhad zbývajícího času.
+* Zjednodušeny obrazovky Fine Tune, Retract a Limits. Přidána volba kroku a reset Z-offsetu a PA.
+* U tiskáren s více extrudery dlaždice i teplotní graf ve výchozím nastavení používají barvy filamentu.
+* Mapa vyloučení objektů se automaticky přizpůsobí, podporuje zoom a posun jedním prstem a zvýrazňuje aktuální i vyloučené objekty. Potvrzení lze vypnout.
 * Zakázány nebezpečné akce během tisku a pauzy; tlačítko Pokračovat je chráněno před opakovanými stisky.
 * Přidáno mazání souborů G-code s potvrzením, včetně podsložek.
-* Seřizování šroubů přesunuto na obrazovku Bed Mesh; nový dialog ukazuje směr a velikost otočení každého šroubu.
+* Seřízení šroubů je na obrazovce Bed Mesh. U každého šroubu je vidět směr a velikost otočení.
 * Opraveno zachování režimu absolutních a relativních souřadnic při ručním pohybu.
 * Opraveny překlady popisků, jednotek a názvů senzorů.
 * Opraveny chyby náhledů a metadat souborů i zobrazení teploty aktivního extruderu na AD5X.
-* Optimalizovány buffery, zpracování JSON a uvolňování prostředků obrazovek. Měření na AD5M: RSS 12 504 → 6 220 KB (−50 % oproti Z-Mod 1.5.1).
-* Přidány automatické kontroly rozhraní a porovnání snímků před/po pro C5 Pro, AD5X a AD5M.
-* C5PRO: Přidána dlaždice „Vyjmout“ pro sejmutí extruderu z vozíku.
+* Na AD5M klesla spotřeba paměti GuppyScreen z 12 504 na 6 220 KB RSS (−50 % oproti Z-Mod 1.5.1).
+* C5 Pro: Přidána dlaždice „Vyjmout“ pro sejmutí extruderu z vozíku.
 
 #### Dokumentace
 
@@ -135,12 +116,11 @@
 #### Moonraker
 
 * Opraveno určování odhadované doby tisku z G-code.
-* Přidán parametr `post_update_gcode` pro spuštění makra po aktualizaci webové komponenty. GuppyScreen se po aktualizaci automaticky restartuje.
-* Odstraněno duplicitní sledování adresářů `.theme` a `.fluidd-theme`.
+* GuppyScreen se po aktualizaci automaticky restartuje. Nový parametr `post_update_gcode` spustí makro po aktualizaci webové komponenty.
 
 #### Orca FF
 
-* Pro všechny tiskárny: Emulátor nativní obrazovky `orca_ff` byl přepsán z Pythonu do C. Spotřeba RAM klesla ze 17 na 2 MB (−15 MB).
+* Spotřeba paměti `orca_ff` klesla u všech modelů ze 17 na 2 MB.
 
 #### OrcaSlicer
 
