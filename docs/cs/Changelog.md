@@ -64,6 +64,7 @@
 * AD5X / C5PRO: Neznámý typ filamentu `?` se v AFC nahrazuje typem PLA.
 * AD5X / C5PRO: Přidán parametr resetování přiřazení AFC [`AFC_RESET`](Global.md#afc_reset).
 * C5 / C5 Pro: Přidáno nastavení [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) pro obnovení zrychlení po výměně filamentu.
+* C5 / C5 Pro: Při vypnuté originální obrazovce lze nastavit [rychlost a zrychlení při výměně nástroje](C5PRO.md#zmod_color).
 * Opraveno spouštění tisku 3MF: Moonraker před tiskem aktualizuje metadata bez blokování Klipperu.
 * Opakovaný příkaz `PAUSE` se neprovede, pokud je tiskárna již pozastavena.
 * Opraveny pohyby při pozastavení, výměně filamentu a čištění trysky.

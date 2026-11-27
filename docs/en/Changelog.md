@@ -64,6 +64,7 @@
 * AD5X / C5PRO: AFC now treats unknown filament type `?` as PLA.
 * AD5X / C5PRO: Added AFC mapping reset option [`AFC_RESET`](Global.md#afc_reset).
 * C5 / C5 Pro: Added the [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) setting for restoring acceleration after a filament change.
+* C5 / C5 Pro: Added [tool-change speed and acceleration settings](C5PRO.md#zmod_color) for use with the native screen disabled.
 * Fixed 3MF printing: Moonraker refreshes metadata before starting a print without blocking Klipper.
 * An additional `PAUSE` is ignored if the printer is already paused.
 * Fixed movements during pauses, filament changes, and nozzle cleaning.

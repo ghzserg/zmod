@@ -65,6 +65,7 @@
 	* AD5X / C5PRO: Unbekannter Filamenttyp `?` wird in AFC als PLA behandelt.
 	* AD5X / C5PRO: Parameter zum Zurücksetzen der AFC-Zuordnungen [`AFC_RESET`](Global.md#afc_reset) hinzugefügt.
 	* C5 / C5 Pro: Mit [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) lässt sich die Wiederherstellung der Beschleunigung nach einem Filamentwechsel einstellen.
+	* C5 / C5 Pro: [Geschwindigkeit und Beschleunigung beim Werkzeugwechsel](C5PRO.md#zmod_color) sind bei deaktiviertem Originalbildschirm einstellbar.
 	* 3MF-Druckstart korrigiert: Moonraker aktualisiert die Metadaten vor dem Druck, ohne Klipper zu blockieren.
 	* Ein weiterer `PAUSE`-Befehl wird ignoriert, wenn der Drucker bereits pausiert.
 	* Bewegungen während Pause, Filamentwechsel und Düsenreinigung korrigiert.
