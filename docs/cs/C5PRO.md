@@ -110,22 +110,7 @@ V menu tisku jsou dvě důležitá tlačítka:
 - Proces trvá několik minut, ale výrazně zlepšuje kvalitu rohů a tenkých prvků.
 - Pokud je `Auto PA` vypnuté, použijí se hodnoty PA ze sliceru.
 
-!!! note
-    Ve výchozím stavu probíhá kalibrace od 0.010 do 0.040 s krokem 0.005, ve 3 průchodech. Pro viskózní plasty, jako je PETG, lze rozsah rozšířit v `mod_data/user.cfg`, například:
-
-    ```
-    [zmod_color]
-    pa_min: 0.010
-    pa_max: 0.080
-    pa_count: 3
-    ```
-
-    - `pa_min` — dolní mez, nejméně 0.01 (výchozí 0.010)
-    - `pa_max` — horní mez, od 0.02 do 0.100 a ne menší než `pa_min` (výchozí 0.040)
-    - `pa_count` — počet průchodů, od 1 do 10 (výchozí 3)
-
-    Krok je pevný: 0.005. Čím širší rozsah a více průchodů, tím déle kalibrace trvá.
-
+Volby Auto PA najdete v [nastavení `zmod_color`](#zmod_color).
 
 **Profouknutí všech extruderů bez Auto PA.** Ve výchozím stavu se při startu tisku profoukne pouze první extruder. Aby se profoukly všechny použité extrudery, zapněte globální parametr [PURGE_ALL_EXTRUDERS](/cs/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
@@ -271,39 +256,39 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ---
 
-## Změna počtu pokusů o uchopení nebo odložení nástroje
+## Nastavení `zmod_color` { #zmod_color }
 
-Ve webovém rozhraní Fluidd otevřete v levém sloupci „Konfigurace“ soubor `mod_data/user.cfg` a přidejte:
+Tato nastavení platí pouze při vypnuté originální obrazovce (`DISPLAY_OFF`).
 
-```
+Ve Fluidd otevřete `mod_data/user.cfg` a přidejte požadované volby do jedné sekce `[zmod_color]`. Restartujte Klipper. Soubor se při aktualizaci Z-Mod zachová.
+
+| Parametr | Výchozí hodnota | Účel |
+| --- | --- | --- |
+| `pa_min` | `0.010` | Dolní mez Auto PA, nejméně 0.01. |
+| `pa_max` | `0.040` | Horní mez Auto PA, 0.02–0.100 a nejméně `pa_min`. |
+| `pa_count` | `3` | Počet průchodů Auto PA, od 1 do 10. |
+| `orca_lanes` | `True` | Zveřejnit barvu a typ filamentu v Moonrakeru pro OrcaSlicer. Vyžaduje vypnutou originální obrazovku. Pokud barvy spravuje HelixScreen, zveřejnění se přeskočí. |
+| `filament_TYPE` | podle typu | Teplota proplachu pro typ `TYPE` ve °C. Při zavádění je o 30 °C vyšší, v pohotovostním režimu o 100 °C nižší. |
+| `hide_filament_types` | prázdné | Čárkami oddělené typy filamentu skryté v nabídce výběru. |
+| `retry` | `5` | Počet pokusů o uchopení nebo zaparkování. |
+| `t_accel` | `8000` | Zrychlení při uchopení a parkování, mm/s². |
+| `t_end_accel` | `20000` | Zrychlení po uchopení nebo zaparkování, mm/s². |
+| `t_travel_speed` | `500` | Rychlý příjezd k parkovací pozici, mm/s. |
+| `t_dock_speed` | `90` | Zasunutí do parkovací pozice, mm/s. |
+| `t_undock_speed` | `80` | Výjezd z parkovací pozice, mm/s. |
+| `t_grab_exit_speed` | `25` | Pomalý výjezd po `MOTOR_GRAB2`, mm/s. |
+| `t_return_speed` | `500` | Návrat po XY po výměně nástroje s vypnutou originální obrazovkou, mm/s. |
+| `plate_z` | `0.061` | Korekce Z pro tloušťku desky, mm. |
+
+V OrcaSliceru je tlačítko „Synchronizovat filament“ dostupné při připojení přes [Octo/Klipper](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper) (Moonraker) nebo FlashForge.
+
+Krok Auto PA je 0.005. Pro přidání nebo skrytí typů filamentu vypněte originální obrazovku. Ukázka přidává typ `NEWTYPE`.
+
+```ini
 [zmod_color]
-retry: 3
+filament_NEWTYPE: 300
+hide_filament_types: PLA-CF,PETG-CF,SILK
 ```
-
-Výchozí je 5. `[Sekce]` a makra v tomto souboru se aktualizací firmwaru nemění.
-
----
-
-## Synchronizace filamentu s OrcaSlicerem
-
-Nefunguje s tovární obrazovkou, proto je nejprve třeba [vypnout nativní obrazovku tiskárny](/cs/System/#display_off) pomocí makra `DISPLAY_OFF`.
-
-Parametr `orca_lanes` publikuje sloty extruderů do databáze Moonrakeru. OrcaSlicer z ní bere barvu a typ filamentu pro tlačítko „Synchronizovat filament“, pokud je tiskárna přidána přes [Octo/Klipper](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper) (agent `Moonraker`) nebo přes typ `FlashForge`.
-
-- `True` - publikovat sloty (výchozí)
-- `False` - nepublikovat
-
-Pokud barvy spravuje HelixScreen (`helix = 1`), publikování se přeskočí bez ohledu na `orca_lanes`, aby se nepřepsala jeho data.
-
-Pro vypnutí přidejte do `mod_data/user.cfg`:
-
-```
-[zmod_color]
-orca_lanes: False
-```
-
-??? info "Podrobnosti"
-    Sloty se zapisují do namespace `lane_data` ve stejném formátu jako u AFC a Happy Hare: slot 1 → `lane0`, …, slot 4 → `lane3`, například `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. Při startu Klipperu se publikují všechny sloty, poté při každé změně barvy nebo typu jen změněný slot. Slot s typem `?` se odstraní, přítomnost filamentu podle senzorů se nebere v úvahu. Posílá se barva přizpůsobená paletě tiskárny.
 
 ---
 
@@ -338,30 +323,6 @@ Plugin zmod_afclite byl odstraněn a nahrazen vestavěnou podporou AFC. Při akt
 ### Poděkování
 
 Děkujeme [DIEHARDave](https://github.com/DIEHARDave) za plugin [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite), který ukázal cestu a řešení.
-
----
-
-## Přidání vlastních typů filamentu
-
-Aby tato nastavení fungovala, je třeba vypnout nativní obrazovku tiskárny pomocí makra `DISPLAY_OFF`.
-
-Pro přidání nového typu filamentu přidejte do `mod_data/user.cfg`:
-
-```
-[zmod_color]
-filament_NEWTYPE: 300
-```
-
-Kde `NEWTYPE` nahraďte požadovaným typem filamentu (například `HIPS`) a číslo je teplota extruderu pro zavedení, vysunutí a proplach tohoto filamentu. Na základě této hodnoty se automaticky vypočítají `temp_manual` (+30) a `temp_wait` (−100).
-
-Pro skrytí typu filamentu přidejte do `mod_data/user.cfg`:
-
-```
-[zmod_color]
-hide_filament_types: XXX,YYY,ZZZ
-```
-
-Kde `XXX`, `YYY`, `ZZZ` nahraďte požadovanými typy filamentu (například `PLA-CF,PETG-CF,SILK`). To lze použít pro skrytí výchozích typů nebo typů, které jste přidali ručně. Typ filamentu se přitom nevypne, pouze se skryje v menu výběru typu.
 
 ---
 

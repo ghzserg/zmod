@@ -110,22 +110,7 @@ There are two important buttons in the print menu:
 - The process takes several minutes, but significantly improves the quality of corners and thin elements.
 - If `Auto PA` is off, the PA values from the slicer will be used.
 
-!!! note
-    By default the calibration runs from 0.010 to 0.040 in 0.005 steps, in 3 passes. For viscous plastics such as PETG the range can be widened in `mod_data/user.cfg`, for example:
-
-    ```
-    [zmod_color]
-    pa_min: 0.010
-    pa_max: 0.080
-    pa_count: 3
-    ```
-
-    - `pa_min` — lower bound, at least 0.01 (default 0.010)
-    - `pa_max` — upper bound, from 0.02 to 0.100 and not less than `pa_min` (default 0.040)
-    - `pa_count` — number of passes, from 1 to 10 (default 3)
-
-    The step is fixed: 0.005. The wider the range and the more passes, the longer the calibration.
-
+See [`zmod_color` settings](#zmod_color) for the Auto PA options.
 
 **Purging all extruders without Auto PA.** By default only the first extruder is purged at print start. To purge all used extruders, enable the global parameter [PURGE_ALL_EXTRUDERS](/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
@@ -272,39 +257,39 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ---
 
-## Change the number of attempts to pick up or put back the tool
+## `zmod_color` settings { #zmod_color }
 
-In the Fluidd web interface, open `mod_data/user.cfg` via "Configuration" in the left column and add the lines:
+These settings are only for use with the native screen disabled (`DISPLAY_OFF`).
 
-```
+In Fluidd, open `mod_data/user.cfg` and add the options you want under a single `[zmod_color]` section. Restart Klipper. Z-Mod updates preserve this file.
+
+| Option | Default | Purpose |
+| --- | --- | --- |
+| `pa_min` | `0.010` | Lower Auto PA limit, at least 0.01. |
+| `pa_max` | `0.040` | Upper Auto PA limit, 0.02–0.100 and at least `pa_min`. |
+| `pa_count` | `3` | Number of Auto PA passes, from 1 to 10. |
+| `orca_lanes` | `True` | Publish filament color and type to Moonraker for OrcaSlicer. Requires the native screen to be disabled. Publishing is skipped when HelixScreen manages colors. |
+| `filament_TYPE` | depends on type | Purging temperature for type `TYPE`, in °C. Loading uses +30 °C and standby uses −100 °C relative to this value. |
+| `hide_filament_types` | empty | Comma-separated types to hide from the selection menu. |
+| `retry` | `5` | Number of pickup or docking attempts. |
+| `t_accel` | `8000` | Acceleration during pickup and docking, mm/s². |
+| `t_end_accel` | `20000` | Acceleration after pickup or docking, mm/s². |
+| `t_travel_speed` | `500` | Fast approach to the dock, mm/s. |
+| `t_dock_speed` | `90` | Entry into the dock, mm/s. |
+| `t_undock_speed` | `80` | Exit from the dock, mm/s. |
+| `t_grab_exit_speed` | `25` | Slow exit after `MOTOR_GRAB2`, mm/s. |
+| `t_return_speed` | `500` | XY return after a tool change with the native screen disabled, mm/s. |
+| `plate_z` | `0.061` | Z correction for plate thickness, mm. |
+
+In OrcaSlicer, “Sync filament” is available when connected via [Octo/Klipper](/Recommendations/#send-files-via-octoklipper-for-printing) (Moonraker) or FlashForge.
+
+Auto PA uses steps of 0.005. Disable the native screen to add or hide filament types. The example adds the `NEWTYPE` type.
+
+```ini
 [zmod_color]
-retry: 3
+filament_NEWTYPE: 300
+hide_filament_types: PLA-CF,PETG-CF,SILK
 ```
-
-Default is 5. `[Sections]` and macros in this file are not changed by firmware updates.
-
----
-
-## Filament sync with OrcaSlicer
-
-Does not work with the factory screen view, so you first need to [turn off the native printer screen](/System/#display_off) using the `DISPLAY_OFF` macro.
-
-The `orca_lanes` parameter publishes the extruder slots to the Moonraker database. OrcaSlicer reads filament color and type from there for the "Sync filament" button when the printer is added via [Octo/Klipper](/Recommendations/#send-files-via-octoklipper-for-printing) (agent `Moonraker`) or via the `FlashForge` type.
-
-- `True` - publish slots (default)
-- `False` - do not publish
-
-If colors are managed by HelixScreen (`helix = 1`), publishing is skipped regardless of `orca_lanes`, so its data is not overwritten.
-
-To disable, add to `mod_data/user.cfg`:
-
-```
-[zmod_color]
-orca_lanes: False
-```
-
-??? info "Details"
-    Slots are written to the `lane_data` namespace in the same format as AFC and Happy Hare: slot 1 → `lane0`, …, slot 4 → `lane3`, for example `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. All slots are published when Klipper starts, then only the changed slot on every color or type change. A slot with type `?` is removed, filament presence from sensors is not taken into account. The color matched to the printer palette is sent.
 
 ---
 
@@ -339,30 +324,6 @@ The zmod_afclite plugin has been removed and replaced by built-in AFC support. O
 ### Acknowledgements
 
 Thanks to [DIEHARDave](https://github.com/DIEHARDave) for the [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite) plugin, which showed the way and the solution.
-
----
-
-## Add your own filament types
-
-For these settings to work, you need to turn off the native printer screen using the `DISPLAY_OFF` macro.
-
-To add a new filament type, add to `mod_data/user.cfg`:
-
-```
-[zmod_color]
-filament_NEWTYPE: 300
-```
-
-Where `NEWTYPE` is replaced with the desired filament type (for example `HIPS`), and the number is the extruder temperature for loading, unloading and purging this filament. Based on this value, `temp_manual` (+30) and `temp_wait` (−100) will be automatically calculated.
-
-To hide a filament type, add to `mod_data/user.cfg`:
-
-```
-[zmod_color]
-hide_filament_types: XXX,YYY,ZZZ
-```
-
-Where `XXX`, `YYY`, `ZZZ` are replaced with the desired filament types (for example `PLA-CF,PETG-CF,SILK`). This can be used to hide default types or types you added manually. The filament type is not disabled, only hidden in the type selection menu.
 
 ---
 
