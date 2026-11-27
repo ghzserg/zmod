@@ -110,22 +110,7 @@ Im Druckmenü gibt es zwei wichtige Schaltflächen:
 - Der Prozess dauert einige Minuten, verbessert aber die Qualität von Ecken und dünnen Elementen deutlich.
 - Wenn `Auto PA` ausgeschaltet ist, werden die PA-Werte aus dem Slicer verwendet.
 
-!!! note
-    Standardmäßig läuft die Kalibrierung von 0.010 bis 0.040 in Schritten von 0.005, in 3 Durchgängen. Für zähflüssige Kunststoffe wie PETG kann der Bereich in `mod_data/user.cfg` erweitert werden, zum Beispiel:
-
-    ```
-    [zmod_color]
-    pa_min: 0.010
-    pa_max: 0.080
-    pa_count: 3
-    ```
-
-    - `pa_min` — untere Grenze, mindestens 0.01 (Standard 0.010)
-    - `pa_max` — obere Grenze, von 0.02 bis 0.100 und nicht kleiner als `pa_min` (Standard 0.040)
-    - `pa_count` — Anzahl der Durchgänge, von 1 bis 10 (Standard 3)
-
-    Die Schrittweite ist fest: 0.005. Je größer der Bereich und je mehr Durchgänge, desto länger dauert die Kalibrierung.
-
+Die Optionen für Auto PA stehen in den [`zmod_color`-Einstellungen](#zmod_color).
 
 **Alle Extruder ohne Auto PA spülen.** Standardmäßig wird beim Druckstart nur der erste Extruder gespült. Damit alle verwendeten Extruder gespült werden, aktivieren Sie den globalen Parameter [PURGE_ALL_EXTRUDERS](/de/Global/#purge_all_extruders): `SAVE_ZMOD_DATA PURGE_ALL_EXTRUDERS=1`
 
@@ -271,39 +256,38 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 ---
 
-## Anzahl der Versuche ändern, das Werkzeug aufzunehmen oder abzulegen
+## `zmod_color`-Einstellungen { #zmod_color }
 
-Öffnen Sie in der Fluidd-Weboberfläche über „Konfiguration“ in der linken Spalte die Datei `mod_data/user.cfg` und fügen Sie hinzu:
+Öffnen Sie in Fluidd die Datei `mod_data/user.cfg` und tragen Sie die gewünschten Optionen in einen gemeinsamen Abschnitt `[zmod_color]` ein. Starten Sie Klipper neu. Die Datei bleibt bei Z-Mod-Updates erhalten.
 
-```
+| Parameter | Standard | Funktion |
+| --- | --- | --- |
+| `t_accel` | `8000` | Beschleunigung beim Aufnehmen und Andocken, mm/s². |
+| `t_end_accel` | `20000` | Beschleunigung nach dem Aufnehmen oder Andocken, mm/s². |
+| `t_travel_speed` | `500` | Schnelle Anfahrt der Werkzeugaufnahme, mm/s. |
+| `t_dock_speed` | `90` | Einfahren in die Werkzeugaufnahme, mm/s. |
+| `t_undock_speed` | `80` | Ausfahren aus der Werkzeugaufnahme, mm/s. |
+| `t_grab_exit_speed` | `25` | Langsames Ausfahren nach `MOTOR_GRAB2`, mm/s. |
+| `t_return_speed` | `500` | XY-Rückfahrt nach dem Werkzeugwechsel, mm/s. Erfordert das Makro aus [Base #26](https://github.com/ghzserg/base/pull/26) und einen deaktivierten Originalbildschirm. |
+| `retry` | `5` | Anzahl der Versuche beim Aufnehmen oder Andocken. |
+| `pa_min` | `0.010` | Untere Grenze für Auto PA, mindestens 0.01. |
+| `pa_max` | `0.040` | Obere Grenze für Auto PA, 0.02–0.100 und mindestens `pa_min`. |
+| `pa_count` | `3` | Anzahl der Auto-PA-Durchgänge, 1 bis 10. |
+| `plate_z` | `0.061` | Z-Korrektur für die Plattenstärke, mm. |
+| `display` | `True` | Modus des Originalbildschirms. Mit `DISPLAY_OFF` setzt Z-Mod den Wert auf `False`. |
+| `orca_lanes` | `True` | Filamentfarbe und -typ für OrcaSlicer in Moonraker veröffentlichen. Erfordert einen deaktivierten Originalbildschirm. Verwaltet HelixScreen die Farben, entfällt die Veröffentlichung. |
+| `filament_TYPE` | je nach Typ | Spültemperatur für den Typ `TYPE` in °C. Beim Laden wird der Wert um 30 °C erhöht, im Standby um 100 °C gesenkt. |
+| `hide_filament_types` | leer | Durch Kommas getrennte Filamenttypen, die im Auswahlmenü ausgeblendet werden. |
+
+In OrcaSlicer ist „Filament synchronisieren“ bei einer Verbindung über [Octo/Klipper](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper) (Moonraker) oder FlashForge verfügbar.
+
+Die Schrittweite für Auto PA beträgt 0.005. Zum Hinzufügen oder Ausblenden von Filamenttypen muss der Originalbildschirm deaktiviert sein. Das Beispiel fügt den Typ `NEWTYPE` hinzu.
+
+```ini
 [zmod_color]
-retry: 3
+filament_NEWTYPE: 300
+hide_filament_types: PLA-CF,PETG-CF,SILK
 ```
-
-Standard ist 5. `[Abschnitte]` und Makros in dieser Datei werden bei Firmware-Updates nicht verändert.
-
----
-
-## Filament-Synchronisierung mit OrcaSlicer
-
-Funktioniert nicht mit dem Werksbildschirm, daher müssen Sie zuerst [den nativen Druckerbildschirm ausschalten](/de/System/#display_off) – mit dem Makro `DISPLAY_OFF`.
-
-Der Parameter `orca_lanes` veröffentlicht die Extruder-Slots in der Moonraker-Datenbank. OrcaSlicer liest von dort Farbe und Typ des Filaments für die Schaltfläche „Filament synchronisieren“, wenn der Drucker über [Octo/Klipper](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper) (Agent `Moonraker`) oder über den Typ `FlashForge` hinzugefügt wurde.
-
-- `True` - Slots veröffentlichen (Standard)
-- `False` - nicht veröffentlichen
-
-Wenn die Farben von HelixScreen verwaltet werden (`helix = 1`), wird die Veröffentlichung unabhängig von `orca_lanes` übersprungen, damit dessen Daten nicht überschrieben werden.
-
-Zum Deaktivieren in `mod_data/user.cfg` hinzufügen:
-
-```
-[zmod_color]
-orca_lanes: False
-```
-
-??? info "Details"
-    Die Slots werden im Namespace `lane_data` im selben Format wie bei AFC und Happy Hare geschrieben: Slot 1 → `lane0`, …, Slot 4 → `lane3`, z. B. `"lane0": {"lane": "0", "material": "PETG", "color": "#161616", "name": "PETG"}`. Beim Start von Klipper werden alle Slots veröffentlicht, danach bei jeder Farb- oder Typänderung nur der geänderte Slot. Ein Slot mit Typ `?` wird entfernt, das Vorhandensein von Filament laut Sensoren wird nicht berücksichtigt. Es wird die an die Druckerpalette angepasste Farbe übertragen.
 
 ---
 
@@ -338,30 +322,6 @@ Das Plugin zmod_afclite wurde entfernt und durch die integrierte AFC-Unterstütz
 ### Danksagung
 
 Danke an [DIEHARDave](https://github.com/DIEHARDave) für das Plugin [zmod_afclite](https://github.com/DIEHARDave/zmod_afclite), das den Weg und die Lösung gezeigt hat.
-
----
-
-## Eigene Filamenttypen hinzufügen
-
-Damit diese Einstellungen funktionieren, müssen Sie den nativen Druckerbildschirm mit dem Makro `DISPLAY_OFF` ausschalten.
-
-Um einen neuen Filamenttyp hinzuzufügen, fügen Sie in `mod_data/user.cfg` hinzu:
-
-```
-[zmod_color]
-filament_NEWTYPE: 300
-```
-
-Wobei `NEWTYPE` durch den gewünschten Filamenttyp ersetzt wird (zum Beispiel `HIPS`), und die Zahl ist die Extrudertemperatur zum Laden, Entladen und Spülen dieses Filaments. Auf Basis dieses Werts werden `temp_manual` (+30) und `temp_wait` (−100) automatisch berechnet.
-
-Um einen Filamenttyp auszublenden, fügen Sie in `mod_data/user.cfg` hinzu:
-
-```
-[zmod_color]
-hide_filament_types: XXX,YYY,ZZZ
-```
-
-Wobei `XXX`, `YYY`, `ZZZ` durch die gewünschten Filamenttypen ersetzt werden (zum Beispiel `PLA-CF,PETG-CF,SILK`). Dies kann verwendet werden, um Standardtypen oder manuell hinzugefügte Typen auszublenden. Der Filamenttyp wird dabei nicht deaktiviert, sondern nur im Menü zur Typauswahl ausgeblendet.
 
 ---
 
