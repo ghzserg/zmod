@@ -59,17 +59,19 @@
 #### Z-Mod
 
 * AD5M / AD5M Pro: Přidána podpora nativního firmwaru 5.2.0.
-* C5: Přidána podpora nativního firmwaru 2.0.1.
+* C5 / C5 Pro: Přidána podpora nativního firmwaru 2.0.1.
 * AD5M / AD5M Pro: Přidána alternativní obrazovka Rivet (`DISPLAY_OFF RIVET=1`). Děkujeme @lDOCI.
 * AD5X / C5PRO: Neznámý typ filamentu `?` se v AFC nahrazuje typem PLA.
 * AD5X / C5PRO: Přidán parametr resetování přiřazení AFC [`AFC_RESET`](Global.md#afc_reset).
 * C5 / C5 Pro: Přidáno nastavení [`RESTORE_T_ACCEL`](Global.md#restore_t_accel) pro obnovení zrychlení po výměně filamentu.
-* C5 / C5 Pro: Při vypnuté originální obrazovce lze nastavit [rychlost a zrychlení při výměně nástroje](C5PRO.md#zmod_color).
+* C5 / C5 Pro: Při vypnuté originální obrazovce lze nastavit [rychlost a zrychlení při výměně nástroje](C5PRO.md#zmod_color), včetně rychlosti návratu v osách XY.
+* C5 / C5 Pro: Automatické zotavení při chybě parkování extruderu pomocí opakovaného homingu XY a kontroly snímačů před otevřením západky.
+* C5 / C5 Pro: Zrychlena kalibrace Auto PA a zlepšeno obnovení nastavení po kalibraci.
 * Opraveno spouštění tisku 3MF: Moonraker před tiskem aktualizuje metadata bez blokování Klipperu.
 * Opakovaný příkaz `PAUSE` se neprovede, pokud je tiskárna již pozastavena.
 * Opraveny pohyby při pozastavení, výměně filamentu a čištění trysky.
 * Přidáno makro `_RESET_Z_OFFSET` pro vynulování Z-offsetu.
-* Nabídka `PLUGINS` nyní nedovolí aktivovat vzájemně nekompatibilní pluginy.
+* Nabídka `PLUGINS` nyní nedovolí aktivovat vzájemně nekompatibilní pluginy. QuickSwap a NoPoop lze používat společně.
 * Opraveno nastavení časového pásma pomocí `SET_TIMEZONE` v hostitelském systému i v prostředí Z-Mod.
 * Opravena kontrola klíčů SSH a jejich zobrazení v `ZLINK`.
 * Opraveno zpracování souborů kalibrace Input Shaper.
@@ -85,6 +87,7 @@
 #### Klipper
 
 * C5 / C5PRO: Přidána [diagnostika VFA](C5PRO.md#vfa_graph) s grafy vibrací a tlačítkem `VFA_GRAPH` ve Fluidd.
+* C5 / C5PRO: Opravena původní kalibrace VFA a přidán alternativní algoritmus z OpenCreator. `CALIBRATE_VFA` automaticky uloží výsledek; výchozí je původní algoritmus. [Porovnání algoritmů](vfa.md).
 * AD5M / AD5X / C5PRO: Časová rezerva pro homing a sondování zvýšena ze 100 na 300 ms.
 * AD5M / AD5X / C5PRO: Opraveno časování příkazů LED, ventilátorů a výstupních pinů po zpoždění Linuxu.
 * AD5M / AD5X / C5PRO: Opraveno čištění seznamu čekajících úloh Reactor při výjimce.
@@ -113,16 +116,21 @@
 * Upraveny obrazovky Fine Tune, Retract a Limits: volba kroku, reset Z-offsetu a PA a zvýraznění změněné hodnoty.
 * Extrude a PID zobrazují trysky a senzory stejnými dlaždicemi jako úvodní obrazovka.
 * U více extruderů mají pruhy dlaždic a teplotní graf barvy filamentu. Prázdný extruder má v grafu šedou čáru; volba je ve výchozím stavu zapnutá.
-* Zvětšena mapa vyloučení objektů: čtvercová podložka, zoom tlačítky +/− a posun jedním prstem.
+* Zvětšena mapa vyloučení objektů: automatické měřítko, zoom tlačítky +/−, posun jedním prstem a zvýraznění aktuálního a vyloučených objektů.
 * Přidáno potvrzení vyloučení objektu v seznamu i na mapě; lze je vypnout v nastavení.
 * Zakázány nebezpečné akce během tisku a pauzy; tlačítko Pokračovat je chráněno před opakovanými stisky.
 * Přidáno mazání souborů G-code s potvrzením, včetně podsložek.
-* Seřizování šroubů přesunuto z PID na obrazovku Bed Mesh; teploty trysky a podložky se nastavují tam.
+* Seřizování šroubů přesunuto na obrazovku Bed Mesh; nový dialog ukazuje směr a velikost otočení každého šroubu.
+* Opraveno zachování režimu absolutních a relativních souřadnic při ručním pohybu.
 * Opraveny překlady popisků, jednotek a názvů senzorů.
 * Opraveny chyby náhledů a metadat souborů i zobrazení teploty aktivního extruderu na AD5X.
 * Optimalizovány buffery, zpracování JSON a uvolňování prostředků obrazovek. Měření na AD5M: RSS 12 504 → 6 220 KB (−50 % oproti Z-Mod 1.5.1).
 * Přidány automatické kontroly rozhraní a porovnání snímků před/po pro C5 Pro, AD5X a AD5M.
 * C5PRO: Přidána dlaždice „Vyjmout“ pro sejmutí extruderu z vozíku.
+
+#### Dokumentace
+
+* Kompletní příručka Z-Mod je k dispozici ke stažení ve formátu PDF ve čtyřech jazycích.
 
 #### Moonraker
 
