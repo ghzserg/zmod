@@ -262,6 +262,13 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 
 | Parameter | Standard | Funktion |
 | --- | --- | --- |
+| `pa_min` | `0.010` | Untere Grenze für Auto PA, mindestens 0.01. |
+| `pa_max` | `0.040` | Obere Grenze für Auto PA, 0.02–0.100 und mindestens `pa_min`. |
+| `pa_count` | `3` | Anzahl der Auto-PA-Durchgänge, 1 bis 10. |
+| `orca_lanes` | `True` | Filamentfarbe und -typ für OrcaSlicer in Moonraker veröffentlichen. Erfordert einen deaktivierten Originalbildschirm. Verwaltet HelixScreen die Farben, entfällt die Veröffentlichung. |
+| `filament_TYPE` | je nach Typ | Spültemperatur für den Typ `TYPE` in °C. Beim Laden wird der Wert um 30 °C erhöht, im Standby um 100 °C gesenkt. |
+| `hide_filament_types` | leer | Durch Kommas getrennte Filamenttypen, die im Auswahlmenü ausgeblendet werden. |
+| `retry` | `5` | Anzahl der Versuche beim Aufnehmen oder Andocken. |
 | `t_accel` | `8000` | Beschleunigung beim Aufnehmen und Andocken, mm/s². |
 | `t_end_accel` | `20000` | Beschleunigung nach dem Aufnehmen oder Andocken, mm/s². |
 | `t_travel_speed` | `500` | Schnelle Anfahrt der Werkzeugaufnahme, mm/s. |
@@ -269,15 +276,7 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 | `t_undock_speed` | `80` | Ausfahren aus der Werkzeugaufnahme, mm/s. |
 | `t_grab_exit_speed` | `25` | Langsames Ausfahren nach `MOTOR_GRAB2`, mm/s. |
 | `t_return_speed` | `500` | XY-Rückfahrt nach dem Werkzeugwechsel bei deaktiviertem Originalbildschirm, mm/s. |
-| `retry` | `5` | Anzahl der Versuche beim Aufnehmen oder Andocken. |
-| `pa_min` | `0.010` | Untere Grenze für Auto PA, mindestens 0.01. |
-| `pa_max` | `0.040` | Obere Grenze für Auto PA, 0.02–0.100 und mindestens `pa_min`. |
-| `pa_count` | `3` | Anzahl der Auto-PA-Durchgänge, 1 bis 10. |
 | `plate_z` | `0.061` | Z-Korrektur für die Plattenstärke, mm. |
-| `display` | `True` | Modus des Originalbildschirms. Mit `DISPLAY_OFF` setzt Z-Mod den Wert auf `False`. |
-| `orca_lanes` | `True` | Filamentfarbe und -typ für OrcaSlicer in Moonraker veröffentlichen. Erfordert einen deaktivierten Originalbildschirm. Verwaltet HelixScreen die Farben, entfällt die Veröffentlichung. |
-| `filament_TYPE` | je nach Typ | Spültemperatur für den Typ `TYPE` in °C. Beim Laden wird der Wert um 30 °C erhöht, im Standby um 100 °C gesenkt. |
-| `hide_filament_types` | leer | Durch Kommas getrennte Filamenttypen, die im Auswahlmenü ausgeblendet werden. |
 
 In OrcaSlicer ist „Filament synchronisieren“ bei einer Verbindung über [Octo/Klipper](/de/Recommendations/#senden-sie-dateien-zum-drucken-über-octoklipper) (Moonraker) oder FlashForge verfügbar.
 

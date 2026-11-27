@@ -262,6 +262,13 @@ Ve Fluidd otevřete `mod_data/user.cfg` a přidejte požadované volby do jedné
 
 | Parametr | Výchozí hodnota | Účel |
 | --- | --- | --- |
+| `pa_min` | `0.010` | Dolní mez Auto PA, nejméně 0.01. |
+| `pa_max` | `0.040` | Horní mez Auto PA, 0.02–0.100 a nejméně `pa_min`. |
+| `pa_count` | `3` | Počet průchodů Auto PA, od 1 do 10. |
+| `orca_lanes` | `True` | Zveřejnit barvu a typ filamentu v Moonrakeru pro OrcaSlicer. Vyžaduje vypnutou originální obrazovku. Pokud barvy spravuje HelixScreen, zveřejnění se přeskočí. |
+| `filament_TYPE` | podle typu | Teplota proplachu pro typ `TYPE` ve °C. Při zavádění je o 30 °C vyšší, v pohotovostním režimu o 100 °C nižší. |
+| `hide_filament_types` | prázdné | Čárkami oddělené typy filamentu skryté v nabídce výběru. |
+| `retry` | `5` | Počet pokusů o uchopení nebo zaparkování. |
 | `t_accel` | `8000` | Zrychlení při uchopení a parkování, mm/s². |
 | `t_end_accel` | `20000` | Zrychlení po uchopení nebo zaparkování, mm/s². |
 | `t_travel_speed` | `500` | Rychlý příjezd k parkovací pozici, mm/s. |
@@ -269,15 +276,7 @@ Ve Fluidd otevřete `mod_data/user.cfg` a přidejte požadované volby do jedné
 | `t_undock_speed` | `80` | Výjezd z parkovací pozice, mm/s. |
 | `t_grab_exit_speed` | `25` | Pomalý výjezd po `MOTOR_GRAB2`, mm/s. |
 | `t_return_speed` | `500` | Návrat po XY po výměně nástroje s vypnutou originální obrazovkou, mm/s. |
-| `retry` | `5` | Počet pokusů o uchopení nebo zaparkování. |
-| `pa_min` | `0.010` | Dolní mez Auto PA, nejméně 0.01. |
-| `pa_max` | `0.040` | Horní mez Auto PA, 0.02–0.100 a nejméně `pa_min`. |
-| `pa_count` | `3` | Počet průchodů Auto PA, od 1 do 10. |
 | `plate_z` | `0.061` | Korekce Z pro tloušťku desky, mm. |
-| `display` | `True` | Režim originální obrazovky. Při `DISPLAY_OFF` Z-Mod nastaví `False`. |
-| `orca_lanes` | `True` | Zveřejnit barvu a typ filamentu v Moonrakeru pro OrcaSlicer. Vyžaduje vypnutou originální obrazovku. Pokud barvy spravuje HelixScreen, zveřejnění se přeskočí. |
-| `filament_TYPE` | podle typu | Teplota proplachu pro typ `TYPE` ve °C. Při zavádění je o 30 °C vyšší, v pohotovostním režimu o 100 °C nižší. |
-| `hide_filament_types` | prázdné | Čárkami oddělené typy filamentu skryté v nabídce výběru. |
 
 V OrcaSliceru je tlačítko „Synchronizovat filament“ dostupné při připojení přes [Octo/Klipper](/cs/Recommendations/#odeslání-souborů-k-tisku-prostřednictvím-octoklipper) (Moonraker) nebo FlashForge.
 

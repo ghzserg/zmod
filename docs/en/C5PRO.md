@@ -263,6 +263,13 @@ In Fluidd, open `mod_data/user.cfg` and add the options you want under a single 
 
 | Option | Default | Purpose |
 | --- | --- | --- |
+| `pa_min` | `0.010` | Lower Auto PA limit, at least 0.01. |
+| `pa_max` | `0.040` | Upper Auto PA limit, 0.02–0.100 and at least `pa_min`. |
+| `pa_count` | `3` | Number of Auto PA passes, from 1 to 10. |
+| `orca_lanes` | `True` | Publish filament color and type to Moonraker for OrcaSlicer. Requires the native screen to be disabled. Publishing is skipped when HelixScreen manages colors. |
+| `filament_TYPE` | depends on type | Purging temperature for type `TYPE`, in °C. Loading uses +30 °C and standby uses −100 °C relative to this value. |
+| `hide_filament_types` | empty | Comma-separated types to hide from the selection menu. |
+| `retry` | `5` | Number of pickup or docking attempts. |
 | `t_accel` | `8000` | Acceleration during pickup and docking, mm/s². |
 | `t_end_accel` | `20000` | Acceleration after pickup or docking, mm/s². |
 | `t_travel_speed` | `500` | Fast approach to the dock, mm/s. |
@@ -270,15 +277,7 @@ In Fluidd, open `mod_data/user.cfg` and add the options you want under a single 
 | `t_undock_speed` | `80` | Exit from the dock, mm/s. |
 | `t_grab_exit_speed` | `25` | Slow exit after `MOTOR_GRAB2`, mm/s. |
 | `t_return_speed` | `500` | XY return after a tool change with the native screen disabled, mm/s. |
-| `retry` | `5` | Number of pickup or docking attempts. |
-| `pa_min` | `0.010` | Lower Auto PA limit, at least 0.01. |
-| `pa_max` | `0.040` | Upper Auto PA limit, 0.02–0.100 and at least `pa_min`. |
-| `pa_count` | `3` | Number of Auto PA passes, from 1 to 10. |
 | `plate_z` | `0.061` | Z correction for plate thickness, mm. |
-| `display` | `True` | Native screen mode. Z-Mod sets this to `False` with `DISPLAY_OFF`. |
-| `orca_lanes` | `True` | Publish filament color and type to Moonraker for OrcaSlicer. Requires the native screen to be disabled. Publishing is skipped when HelixScreen manages colors. |
-| `filament_TYPE` | depends on type | Purging temperature for type `TYPE`, in °C. Loading uses +30 °C and standby uses −100 °C relative to this value. |
-| `hide_filament_types` | empty | Comma-separated types to hide from the selection menu. |
 
 In OrcaSlicer, “Sync filament” is available when connected via [Octo/Klipper](/Recommendations/#send-files-via-octoklipper-for-printing) (Moonraker) or FlashForge.
 
