@@ -2,21 +2,21 @@
 
 *Z-Mod study, 26 November 2026.*
 
-## What does this mean for everyday printing?
+## What does VFA calibration mean for everyday printing?
 
-**VFA calibration is worth using, but most users do not need the alternative algorithm from OpenCreator.** VFA helps reduce fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.
+**VFA calibration is worth using, but most users do not need the alternative algorithm from OpenCreator.** VFA (Vertical Fine Artifacts) are fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.
 
-- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0 ALTERNATIVE=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate if you change belt tension or the mechanics, or if stripes reappear.
-- Keep your usual speeds and accelerations in OrcaSlicer. VFA does not increase permitted speeds, alter slicer profiles or replace Input Shaper. If stripes remain at a particular speed, try changing the outer-wall speed and compare identical test prints. Check the actual speed in the OrcaSlicer preview; it may differ from the configured value.
-- Try the algorithm from OpenCreator if the stock result is unsatisfactory and you can compare the results. On our printer it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.
+- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0 ALTERNATIVE=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate after adjusting belt tension or servicing the mechanics, or if stripes reappear.
+- Keep your usual speeds and accelerations in OrcaSlicer. **VFA does not increase permitted speeds**, alter slicer profiles or **replace Input Shaper**. If stripes remain at a particular speed, try changing the outer-wall speed and compare identical test prints. Check the actual speed in the OrcaSlicer preview: cooling, overhang and curved perimeter slowdowns can reduce it below the configured value.
+- Try the algorithm from OpenCreator if the stock result is unsatisfactory and you can compare the results. On our C5 Pro it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.
 
-**Bottom line:** keep the stock algorithm unless you have a specific reason to experiment. With stock compensation, the overall median vibration amplitude fell by about 81% for motor X and 66% for Y. These are accelerometer measurements, not a promise of an equal percentage reduction in stripes on printed parts.
+**Bottom line:** keep the stock algorithm corrected in Z-Mod unless you have a specific reason to experiment. With stock compensation, the overall median vibration amplitude fell by about 81% for motor X and 66% for Y. These are accelerometer measurements, not a promise of an equal percentage reduction in stripes on printed parts.
 
 ## Study result
 
 We tested the corrected Flashforge stock VFA calibration and the adapted algorithm from OpenCreator on one Flashforge Creator 5 Pro. Both substantially reduced vibration. The algorithm from OpenCreator produced slightly better results at medium and high speeds, but did not establish an advantage beyond the observed variation of repeated measurements. At low speeds stock compensation gave a lower median residual displacement.
 
-Stock calibration took about 21 minutes; the alternative took about 80 minutes. **Z-Mod therefore retains stock as its default algorithm**, with the algorithm from OpenCreator available as an option.
+Stock calibration took about 21 minutes; the alternative took about 80 minutes. **Z-Mod therefore retains the corrected stock algorithm as its default**, with the algorithm from OpenCreator available as an option.
 
 ![Median displacement before and after compensation](../images/vfa/comparison-median.svg)
 

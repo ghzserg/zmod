@@ -2,21 +2,21 @@
 
 *Výzkum Z-Mod, 26. listopadu 2026.*
 
-## Co to znamená pro běžný tisk?
+## Co přináší kalibrace VFA v praxi?
 
-**Kalibraci VFA se vyplatí používat, alternativní algoritmus z OpenCreator však většina uživatelů nepotřebuje.** Kompenzace VFA pomáhá omezit jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.
+**Kalibraci VFA se vyplatí používat, alternativní algoritmus z OpenCreator však většina uživatelů nepotřebuje.** VFA (Vertical Fine Artifacts) jsou jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.
 
-- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0 ALTERNATIVE=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů či mechaniky nebo pokud se proužky znovu objeví.
-- V OrcaSliceru používejte své obvyklé rychlosti a zrychlení. VFA nezvyšuje povolené rychlosti, nemění profil sliceru a nenahrazuje Input Shaper. Pokud proužky přetrvávají při určité rychlosti, zkuste změnit rychlost vnější stěny a porovnat stejné zkušební výtisky. V náhledu OrcaSliceru zkontrolujte skutečnou rychlost; může se lišit od hodnoty nastavené v profilu.
-- Algoritmus z OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem stroji byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.
+- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0 ALTERNATIVE=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů nebo údržbě mechaniky či pokud se proužky znovu objeví.
+- V OrcaSliceru používejte své obvyklé rychlosti a zrychlení. **VFA nezvyšuje povolené rychlosti**, nemění profil sliceru a **nenahrazuje Input Shaper**. Pokud proužky přetrvávají při určité rychlosti, zkuste změnit rychlost vnější stěny a porovnat stejné zkušební výtisky. V náhledu OrcaSliceru zkontrolujte skutečnou rychlost: chlazení a zpomalování na převisech či zakřivených perimetrech ji mohou snížit oproti nastavené hodnotě.
+- Algoritmus z OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem C5 Pro byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.
 
-**Závěr:** pokud nemáte konkrétní důvod experimentovat, ponechte standardní algoritmus. Při standardní kompenzaci klesl celkový medián amplitudy vibrací asi o 81 % u motoru X a o 66 % u Y. Jde o měření akcelerometru, nikoli o příslib stejně velkého procentuálního úbytku proužků na výtisku.
+**Závěr:** pokud nemáte konkrétní důvod experimentovat, ponechte standardní algoritmus opravený v Z-Mod. Při standardní kompenzaci klesl celkový medián amplitudy vibrací asi o 81 % u motoru X a o 66 % u Y. Jde o měření akcelerometru, nikoli o příslib stejně velkého procentuálního úbytku proužků na výtisku.
 
 ## Výsledek výzkumu
 
 Na jedné tiskárně Flashforge Creator 5 Pro jsme otestovali opravenou standardní kalibraci Flashforge a adaptovaný algoritmus z OpenCreator. Oba výrazně snížily vibrace. Algoritmus z OpenCreator poskytl o něco lepší výsledky při středních a vyšších rychlostech, ale neprokázal výhodu přesahující pozorovaný rozptyl opakovaných měření. Při nízkých rychlostech měla standardní kompenzace menší medián zbytkového posunutí.
 
-Standardní kalibrace trvala přibližně 21 minut, alternativní asi 80 minut. **Z-Mod proto ponechává standardní algoritmus jako výchozí**, s algoritmem z OpenCreator jako volitelnou možností.
+Standardní kalibrace trvala přibližně 21 minut, alternativní asi 80 minut. **Z-Mod proto ponechává opravený standardní algoritmus jako výchozí**, s algoritmem z OpenCreator jako volitelnou možností.
 
 ![Medián posunutí před kompenzací a po ní](../images/vfa/comparison-median.svg)
 

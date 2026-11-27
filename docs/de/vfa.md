@@ -2,21 +2,21 @@
 
 *Untersuchung von Z-Mod, 26. November 2026.*
 
-## Was bedeutet das für den Druckalltag?
+## Was bringt die VFA-Kalibrierung im Druckalltag?
 
-**Eine VFA-Kalibrierung ist sinnvoll; den alternativen Algorithmus aus OpenCreator benötigen die meisten Anwender nicht.** VFA-Kompensation hilft, feine vertikale Streifen auf gedruckten Wänden zu reduzieren, die durch Motor- und mechanische Schwingungen entstehen. Auf glatten Oberflächen fallen sie besonders auf.
+**Eine VFA-Kalibrierung ist sinnvoll; den alternativen Algorithmus aus OpenCreator benötigen die meisten Anwender nicht.** VFA (Vertical Fine Artifacts) sind feine vertikale Streifen auf gedruckten Wänden, die durch Motor- und mechanische Schwingungen entstehen. Auf glatten Oberflächen fallen sie besonders auf.
 
-- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0 ALTERNATIVE=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen an der Riemenspannung oder Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
-- In OrcaSlicer können die gewohnten Geschwindigkeiten und Beschleunigungen beibehalten werden. VFA erhöht die zulässigen Geschwindigkeiten nicht, verändert das Slicerprofil nicht und ersetzt Input Shaper nicht. Bleiben Streifen bei einer bestimmten Geschwindigkeit sichtbar, die Geschwindigkeit der Außenwand verändern und identische Testteile vergleichen. Die tatsächliche Geschwindigkeit in der OrcaSlicer-Vorschau prüfen; sie kann vom eingestellten Wert abweichen.
-- Den Algorithmus aus OpenCreator ausprobieren, wenn das Standardergebnis nicht zufriedenstellt und ein Vergleich möglich ist. Auf unserem Drucker war der Algorithmus aus OpenCreator im Mittel bei 60–220 mm/s besser, der Standardalgorithmus bei 20–50 mm/s. Angesichts der Streuung der Messungen ist der Unterschied nicht überzeugend genug; zudem dauerte die alternative Kalibrierung etwa 80 Minuten.
+- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0 ALTERNATIVE=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen der Riemenspannung oder Wartungsarbeiten an der Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
+- In OrcaSlicer können die gewohnten Geschwindigkeiten und Beschleunigungen beibehalten werden. **VFA erhöht die zulässigen Geschwindigkeiten nicht**, verändert das Slicerprofil nicht und **ersetzt Input Shaper nicht**. Bleiben Streifen bei einer bestimmten Geschwindigkeit sichtbar, die Geschwindigkeit der Außenwand verändern und identische Testteile vergleichen. Die tatsächliche Geschwindigkeit in der OrcaSlicer-Vorschau prüfen: Kühlung sowie Verlangsamungen an Überhängen und gekrümmten Perimetern können sie gegenüber dem eingestellten Wert reduzieren.
+- Den Algorithmus aus OpenCreator ausprobieren, wenn das Standardergebnis nicht zufriedenstellt und ein Vergleich möglich ist. Auf unserem C5 Pro war der Algorithmus aus OpenCreator im Mittel bei 60–220 mm/s besser, der Standardalgorithmus bei 20–50 mm/s. Angesichts der Streuung der Messungen ist der Unterschied nicht überzeugend genug; zudem dauerte die alternative Kalibrierung etwa 80 Minuten.
 
-**Fazit:** Ohne konkreten Grund für Experimente beim Standardalgorithmus bleiben. Mit der Standardkompensation sank der Gesamtmedian der Schwingungsamplitude bei Motor X um etwa 81 % und bei Y um 66 %. Das sind Beschleunigungssensormessungen, kein Versprechen, dass die Streifen auf einem Druckteil im gleichen Verhältnis abnehmen.
+**Fazit:** Ohne konkreten Grund für Experimente beim in Z-Mod korrigierten Standardalgorithmus bleiben. Mit der Standardkompensation sank der Gesamtmedian der Schwingungsamplitude bei Motor X um etwa 81 % und bei Y um 66 %. Das sind Beschleunigungssensormessungen, kein Versprechen, dass die Streifen auf einem Druckteil im gleichen Verhältnis abnehmen.
 
 ## Ergebnis der Untersuchung
 
 Auf einem Flashforge Creator 5 Pro wurden die korrigierte Standardkalibrierung von Flashforge und der angepasste Algorithmus aus OpenCreator getestet. Beide reduzierten Schwingungen deutlich. Der Algorithmus aus OpenCreator lieferte bei mittleren und hohen Geschwindigkeiten etwas bessere Ergebnisse, jedoch keinen überzeugenden Vorteil über die beobachtete Streuung wiederholter Messungen hinaus. Bei niedrigen Geschwindigkeiten war der Median der Restbewegung mit der Standardkompensation kleiner.
 
-Die Standardkalibrierung dauerte etwa 21 Minuten, die alternative etwa 80 Minuten. **Z-Mod behält deshalb den Standardalgorithmus als Voreinstellung bei.** Der Algorithmus aus OpenCreator steht optional zur Verfügung.
+Die Standardkalibrierung dauerte etwa 21 Minuten, die alternative etwa 80 Minuten. **Z-Mod behält deshalb den korrigierten Standardalgorithmus als Voreinstellung bei.** Der Algorithmus aus OpenCreator steht optional zur Verfügung.
 
 ![Median der Auslenkung vor und nach der Kompensation](../images/vfa/comparison-median.svg)
 
