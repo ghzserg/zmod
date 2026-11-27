@@ -242,6 +242,17 @@ Damit die Funktion korrekt arbeitet, muss im Slicer **Ooze prevention** aktivier
 
 Beispiel: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
 
+##### RESTORE_T_ACCEL
+
+Für C5 und C5 Pro mit deaktiviertem Originalbildschirm.
+
+- `1` (Standard) — stellt die vor dem Filamentwechsel geltenden Werte für `max_accel` und `scv` wieder her.
+- `0` — behält die am Ende des Wechsels geltenden Werte für `max_accel` und `scv` bei.
+
+Die Vorschubgeschwindigkeit wird in beiden Modi wiederhergestellt. Die Einstellung lässt sich auch im Menü `GLOBAL` umschalten.
+
+Mit diesem Befehl lässt sich die Wiederherstellung deaktivieren `SAVE_ZMOD_DATA RESTORE_T_ACCEL=0`.
+
 ### Parameter für den Start des Druckvorgangs und die Erstellung einer Bettkarte [START_PRINT]:
 
 ##### MIDI_START

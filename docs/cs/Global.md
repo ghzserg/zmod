@@ -207,6 +207,17 @@ Pro správnou funkci musí být ve sliceru zapnuta funkce **Ooze prevention** (`
 
 Příklad: `SAVE_ZMOD_DATA UNUSED_EXTRUDERS_OFF_TIME=5`
 
+##### RESTORE_T_ACCEL
+
+Pro C5 a C5 Pro s vypnutou originální obrazovkou.
+
+- `1` (výchozí) — obnoví hodnoty `max_accel` a `scv` platné před výměnou filamentu.
+- `0` — ponechá hodnoty `max_accel` a `scv` platné na konci výměny.
+
+Rychlost posuvu se obnoví v obou režimech. Nastavení lze přepnout také v nabídce `GLOBAL`.
+
+Obnovení vypnete příkazem `SAVE_ZMOD_DATA RESTORE_T_ACCEL=0`.
+
 ### Parametry startu tisku a měření sítě podložky [START_PRINT]:
 
 ##### MIDI_START
