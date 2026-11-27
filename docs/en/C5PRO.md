@@ -469,14 +469,21 @@ CALIBRATE_VFA T=0
 
 Where `T=0` is the extruder number (0–3) that will be used during calibration.
 
+With an up-to-date Z-Mod version supporting alternative calibration, you can explicitly select the algorithm:
+
+- `CALIBRATE_VFA T=0 ALTERNATIVE=0` — stock (recommended).
+- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — OpenCreator.
+
+Both variants automatically save the results with `SAVE_CONFIG` after successful calibration and graph generation. No manual save is needed. Without `ALTERNATIVE`, the configuration setting is used (stock by default).
+
 **What will happen:**
 
 - The printer will take the specified extruder.
 - Reset all G-code offsets.
 - Move the head to the bed center (X130 Y130).
-- Run automatic resonance calibration (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
+- Run the selected VFA algorithm (on native Klipper without Z-Mod support, run the factory calibration).
 - Return the extruder to its place.
-- Save the configuration (`SAVE_CONFIG`).
+- Generate graphs when using Z-Mod Klipper, save the configuration (`SAVE_CONFIG`), and restart Klipper.
 
 > **Tip:** It is recommended to perform VFA calibration when visible vertical stripes appear on the print surface.
 

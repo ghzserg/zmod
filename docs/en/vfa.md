@@ -207,17 +207,16 @@ Both algorithms work. The corrected stock algorithm offers shorter calibration, 
 **We recommend stock calibration for most users.** Clear the build plate, check mechanics and belt tension, and do not calibrate during printing or pause. Use an up-to-date Z-Mod version supporting VFA. For stock calibration:
 
 ```gcode
-CALIBRATE_VFA T=0
+CALIBRATE_VFA T=0 ALTERNATIVE=0
 ```
 
 To experiment with the alternative:
 
 ```gcode
-ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1
-SAVE_CONFIG
+CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-The direct ZMOD_CALIBRATE_VFA command does not automatically execute SAVE_CONFIG; save only after successful completion. CALIBRATE_VFA is the Z-Mod macro with its standard saving procedure. To select the alternative permanently, set `alternative: True` in the existing `[stepper_resonance_tester]` section. Do not duplicate sections or options in included configuration files. The default is `alternative: False`.
+Both variants of the `CALIBRATE_VFA` macro automatically execute `SAVE_CONFIG` after successful calibration and graph generation, then Klipper restarts. There is no need to save manually. Without `ALTERNATIVE`, the setting from `[stepper_resonance_tester]` is used (default: `alternative: False`). Specify `ALTERNATIVE=0` to explicitly select the stock algorithm. The low-level `ZMOD_CALIBRATE_VFA` command still does not save the configuration automatically.
 
 Independent verification after saving:
 

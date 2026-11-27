@@ -207,17 +207,16 @@ Beide Algorithmen funktionieren. Der korrigierte Standardalgorithmus bietet eine
 **Für die meisten Anwender empfehlen wir die Standardkalibrierung.** Druckplatte freiräumen, Mechanik und Riemenspannung prüfen und nicht während eines Drucks oder einer Pause kalibrieren. Eine aktuelle Z-Mod-Version mit VFA-Unterstützung verwenden. Standardkalibrierung:
 
 ```gcode
-CALIBRATE_VFA T=0
+CALIBRATE_VFA T=0 ALTERNATIVE=0
 ```
 
 Für Experimente mit der Alternative:
 
 ```gcode
-ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1
-SAVE_CONFIG
+CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Der direkte Befehl ZMOD_CALIBRATE_VFA führt SAVE_CONFIG nicht automatisch aus; erst nach erfolgreichem Abschluss speichern. CALIBRATE_VFA ist das Z-Mod-Makro mit dem üblichen Speichervorgang. Zur dauerhaften Auswahl der Alternative `alternative: True` im vorhandenen Abschnitt `[stepper_resonance_tester]` einstellen. Abschnitte und Optionen in eingebundenen Konfigurationsdateien nicht doppelt anlegen. Standard ist `alternative: False`.
+Beide Varianten des Makros `CALIBRATE_VFA` führen nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch `SAVE_CONFIG` aus. Anschließend startet Klipper neu. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung aus `[stepper_resonance_tester]` (Standard: `alternative: False`). Mit `ALTERNATIVE=0` wird der Standardalgorithmus ausdrücklich ausgewählt. Der Low-Level-Befehl `ZMOD_CALIBRATE_VFA` speichert die Konfiguration weiterhin nicht automatisch.
 
 Unabhängige Prüfung nach dem Speichern:
 

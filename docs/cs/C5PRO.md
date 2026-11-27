@@ -468,14 +468,21 @@ CALIBRATE_VFA T=0
 
 Kde `T=0` je číslo extruderu (0–3), který bude během kalibrace použit.
 
+V aktuální verzi Z-Mod s podporou alternativní kalibrace lze algoritmus výslovně zvolit:
+
+- `CALIBRATE_VFA T=0 ALTERNATIVE=0` — standardní (doporučeno).
+- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — OpenCreator.
+
+Obě varianty po úspěšné kalibraci a vytvoření grafů automaticky uloží výsledky pomocí `SAVE_CONFIG`. Ruční uložení není nutné. Bez parametru `ALTERNATIVE` se použije nastavení konfigurace (ve výchozím stavu standardní algoritmus).
+
 **Co se stane:**
 
 - Tiskárna nasadí zadaný extruder.
 - Vynuluje všechny G-code posuny.
 - Přesune hlavu do středu podložky (X130 Y130).
-- Spustí automatickou kalibraci rezonancí (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
+- Spustí vybraný algoritmus VFA (v nativním Klipperu bez podpory Z-Mod tovární kalibraci).
 - Odloží extruder zpět.
-- Uloží konfiguraci (`SAVE_CONFIG`).
+- Při použití Klipperu ze Z-Mod vytvoří grafy, uloží konfiguraci (`SAVE_CONFIG`) a restartuje Klipper.
 
 > **Tip:** Kalibraci VFA doporučujeme provést, když se na povrchu tisku objeví viditelné vertikální pruhy.
 

@@ -468,14 +468,21 @@ CALIBRATE_VFA T=0
 
 Wobei `T=0` die Extrudernummer (0–3) ist, die während der Kalibrierung verwendet wird.
 
+Mit einer aktuellen Z-Mod-Version, die die alternative Kalibrierung unterstützt, kann der Algorithmus ausdrücklich gewählt werden:
+
+- `CALIBRATE_VFA T=0 ALTERNATIVE=0` — Standardalgorithmus (empfohlen).
+- `CALIBRATE_VFA T=0 ALTERNATIVE=1` — OpenCreator.
+
+Beide Varianten speichern die Ergebnisse nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch mit `SAVE_CONFIG`. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung der Konfiguration (standardmäßig der Standardalgorithmus).
+
 **Was passiert:**
 
 - Der Drucker nimmt den angegebenen Extruder auf.
 - Setzt alle G-Code-Offsets zurück.
 - Bewegt den Kopf in die Bettmitte (X130 Y130).
-- Startet die automatische Resonanzkalibrierung (`STEPPER_RESONANCE_FACTORY_CALIBRATE`).
+- Startet den ausgewählten VFA-Algorithmus (bei nativem Klipper ohne Z-Mod-Unterstützung die Werkskalibrierung).
 - Legt den Extruder wieder ab.
-- Speichert die Konfiguration (`SAVE_CONFIG`).
+- Erstellt bei Verwendung von Z-Mod Klipper die Diagramme, speichert die Konfiguration (`SAVE_CONFIG`) und startet Klipper neu.
 
 > **Tipp:** Es wird empfohlen, die VFA-Kalibrierung durchzuführen, wenn sichtbare vertikale Streifen auf der Druckoberfläche auftreten.
 
