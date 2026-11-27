@@ -1,22 +1,22 @@
-# VFA u Creator 5 Pro: srovnání standardního algoritmu a OpenCreator
+# VFA u Creator 5 Pro: srovnání standardního algoritmu a algoritmu z OpenCreator
 
 *Výzkum Z-Mod, 26. listopadu 2026.*
 
 ## Co to znamená pro běžný tisk?
 
-**Kalibraci VFA se vyplatí používat, alternativní algoritmus OpenCreator však většina uživatelů nepotřebuje.** Kompenzace VFA pomáhá omezit jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.
+**Kalibraci VFA se vyplatí používat, alternativní algoritmus z OpenCreator však většina uživatelů nepotřebuje.** Kompenzace VFA pomáhá omezit jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.
 
-- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů či mechaniky nebo pokud se proužky znovu objeví.
+- Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem `CALIBRATE_VFA T=0 ALTERNATIVE=0`. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů či mechaniky nebo pokud se proužky znovu objeví.
 - V OrcaSliceru používejte své obvyklé rychlosti a zrychlení. VFA nezvyšuje povolené rychlosti, nemění profil sliceru a nenahrazuje Input Shaper. Pokud proužky přetrvávají při určité rychlosti, zkuste změnit rychlost vnější stěny a porovnat stejné zkušební výtisky. V náhledu OrcaSliceru zkontrolujte skutečnou rychlost; může se lišit od hodnoty nastavené v profilu.
-- OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem stroji byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.
+- Algoritmus z OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem stroji byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.
 
 **Závěr:** pokud nemáte konkrétní důvod experimentovat, ponechte standardní algoritmus. Při standardní kompenzaci klesl celkový medián amplitudy vibrací asi o 81 % u motoru X a o 66 % u Y. Jde o měření akcelerometru, nikoli o příslib stejně velkého procentuálního úbytku proužků na výtisku.
 
 ## Výsledek výzkumu
 
-Na jedné tiskárně Flashforge Creator 5 Pro jsme otestovali opravenou standardní kalibraci Flashforge a adaptovaný algoritmus OpenCreator. Oba výrazně snížily vibrace. OpenCreator poskytl o něco lepší výsledky při středních a vyšších rychlostech, ale neprokázal výhodu přesahující pozorovaný rozptyl opakovaných měření. Při nízkých rychlostech měla standardní kompenzace menší medián zbytkového posunutí.
+Na jedné tiskárně Flashforge Creator 5 Pro jsme otestovali opravenou standardní kalibraci Flashforge a adaptovaný algoritmus z OpenCreator. Oba výrazně snížily vibrace. Algoritmus z OpenCreator poskytl o něco lepší výsledky při středních a vyšších rychlostech, ale neprokázal výhodu přesahující pozorovaný rozptyl opakovaných měření. Při nízkých rychlostech měla standardní kompenzace menší medián zbytkového posunutí.
 
-Standardní kalibrace trvala přibližně 21 minut, alternativní asi 80 minut. **Z-Mod proto ponechává standardní algoritmus jako výchozí**, s OpenCreator jako volitelnou možností.
+Standardní kalibrace trvala přibližně 21 minut, alternativní asi 80 minut. **Z-Mod proto ponechává standardní algoritmus jako výchozí**, s algoritmem z OpenCreator jako volitelnou možností.
 
 ![Medián posunutí před kompenzací a po ní](../images/vfa/comparison-median.svg)
 
@@ -67,7 +67,7 @@ Porovnáváme `before` (kompenzace vypnutá) a `after` (uložené koeficienty). 
 Používáme dvě různé metriky:
 
 - **Pokles celkového mediánu:** `1 − median(after)/median(before)` v rámci jednoho průběhu. Pro srovnání algoritmů používáme místo toho jejich dva mediány zbytkových hodnot.
-- **Medián párových poměrů:** `median(after_OpenCreator / after_stock)` pro shodné body. Poměr menší než jedna znamená zlepšení. Jde o hlavní metriku srovnání algoritmů doplněnou počtem lepších bodů a opakovatelností.
+- **Medián párových poměrů:** `median(after_alternative / after_stock)` pro shodné body. Poměr menší než jedna znamená zlepšení. Jde o hlavní metriku srovnání algoritmů doplněnou počtem lepších bodů a opakovatelností.
 
 Nižší celkový medián neznamená stejné zlepšení v každém bodě. Různá rozdělení amplitud mohou dát nižší medián, i když oba algoritmy vyhrávají v přibližně stejném počtu bodů.
 
@@ -99,7 +99,7 @@ Opravená standardní kalibrace probíhala od 12:46:17 do 13:07:38, tedy 21 min 
 
 Časný test ve 04:16 obsahoval pouze X a jinou metodu/rozsah; byl vyloučen z přímého srovnání. Původní CSV standardního vyhledávání nebyly k dispozici; výsledky hledání byly rekonstruovány z konzole s její přesností zaokrouhlení. Pro nezávislé srovnání byly použity původní CSV VFA_GRAPH.
 
-## 4. Co mění OpenCreator
+## 4. Co mění algoritmus z OpenCreator
 
 Adaptovaný algoritmus využívá myšlenky [OpenCreator / Kalico](https://github.com/FlashForge-C5-Modding-Group/kalico/blob/7da732e09d4e213b7766482b6cfdf7e75ee9e191/klippy/extras/stepper_resonance_tester.py), ale zachovává měřicí část a omezení Z-Mod. Nejde o přenos celého firmwaru Kalico.
 
@@ -111,7 +111,7 @@ Společná amplituda minimalizuje součet dvou parabol zbytkového zrychlení m�
 
 První experiment nalezl 270,1 a 82,8 Hz. Plně naladěné koeficienty X prvního kandidáta (270,1 Hz) jsme nezávisle ověřili pomocí VFA_GRAPH ve 14:20. Šlo o test jednoho kandidáta na jednom motoru, nikoli celého alternativního algoritmu.
 
-| Rozsah frekvencí | Bodů | OpenCreator lepší | Standard lepší | Medián poměru zbytků OpenCreator / standard |
+| Rozsah frekvencí | Bodů | Algoritmus z OpenCreator lepší | Standard lepší | Medián poměru zbytků: algoritmus z OpenCreator / standard |
 |---|---:|---:|---:|---:|
 | Do 400 Hz | 70 | 34 | 36 | 1,012 |
 | Nad 400 Hz | 64 | 46 | 18 | 0,792 |
@@ -121,7 +121,7 @@ Do 400 Hz klesl celkový medián zbytku z 0,027725 na 0,022088 µm (−20,3 %), 
 
 ## 5. Úplná alternativní kalibrace
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` probíhala pro oba motory od 20:53:51 do 22:14:05. Doba před vykreslením grafů činila 80 min 14 s, přibližně 3,8krát déle než standardní průběh (měřený do SAVE_CONFIG). Na jiných tiskárnách nebo při jednom kandidátovi se čas může lišit.
+Alternativní kalibrace probíhala pro oba motory od 20:53:51 do 22:14:05. Doba před vykreslením grafů činila 80 min 14 s, přibližně 3,8krát déle než standardní průběh (měřený do SAVE_CONFIG). Na jiných tiskárnách nebo při jednom kandidátovi se čas může lišit.
 
 | Motor | Vyšší frekvence | Nižší frekvence | Skóre vyšší | Skóre nižší | Vybrána |
 |---|---:|---:|---:|---:|---:|
@@ -144,7 +144,7 @@ Common označuje změřeného kandidáta společné amplitudy, ne nutně uložen
 
 ### Výsledné koeficienty
 
-| Motor / harmonická | Standard AMP | Standard PHASE1 / PHASE2, rad | OpenCreator AMP | OpenCreator PHASE1 / PHASE2, rad |
+| Motor / harmonická | Standard AMP | Standard PHASE1 / PHASE2, rad | AMP (algoritmus z OpenCreator) | PHASE1 / PHASE2 (algoritmus z OpenCreator), rad |
 |---|---:|---:|---:|---:|
 | X / TD1 | 0,010 | 3,730 / 3,517 | 0,010 | 3,762 / 3,539 |
 | X / TD2 | 0,036 | 6,119 / 0,172 | 0,038 | 6,211 / 0,086 |
@@ -155,17 +155,17 @@ Common označuje změřeného kandidáta společné amplitudy, ne nutně uložen
 
 Koeficienty jsou blízké, ale amplitudy a fáze nejsou totožné. Calibration.json je ukládá v celočíselných jednotkách MCU s měřítkem 1000. Nekopírujte tabulku do jiné tiskárny; vztahuje se pouze ke zkoušenému stroji a jeho mechanickému stavu.
 
-## 6. Nezávislé srovnání standardu a OpenCreator
+## 6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator
 
-Porovnáváme VFA_GRAPH v 13:10 (standard) a 22:21 (OpenCreator). Po uložení konfigurace obsahují metadata z 22:21 přesně koeficienty z calibration.json úspěšné alternativní kalibrace. Podmínky měření včetně drah se shodují. Srovnávají se pouze platné shodné body.
+Porovnáváme VFA_GRAPH v 13:10 (standard) a 22:21 (algoritmus z OpenCreator). Po uložení konfigurace obsahují metadata z 22:21 přesně koeficienty z calibration.json úspěšné alternativní kalibrace. Podmínky měření včetně drah se shodují. Srovnávají se pouze platné shodné body.
 
-![OpenCreator, nezávislý test X](../images/vfa/alternative-2221-x.svg)
+![Algoritmus z OpenCreator, nezávislý test X](../images/vfa/alternative-2221-x.svg)
 
-![OpenCreator, nezávislý test Y](../images/vfa/alternative-2221-y.svg)
+![Algoritmus z OpenCreator, nezávislý test Y](../images/vfa/alternative-2221-y.svg)
 
 ### Do 400 Hz
 
-| Metrika | X standard | X OpenCreator | Y standard | Y OpenCreator |
+| Metrika | X standard | X, algoritmus z OpenCreator | Y standard | Y, algoritmus z OpenCreator |
 |---|---:|---:|---:|---:|
 | Medián OFF, µm | 0,146346 | 0,147090 | 0,123195 | 0,111504 |
 | Medián ON, µm | 0,027725 | 0,021465 | 0,042425 | 0,027663 |
@@ -174,13 +174,13 @@ Porovnáváme VFA_GRAPH v 13:10 (standard) a 22:21 (OpenCreator). Po uložení k
 
 | Přímé srovnání zbytků | X | Y |
 |---|---:|---:|
-| OpenCreator lepší | 41/70 | 46/70 |
+| Algoritmus z OpenCreator lepší | 41/70 | 46/70 |
 | Standard lepší | 29/70 | 24/70 |
-| Pokles celkového mediánu s OpenCreator | 22,6 % | 34,8 % |
-| Medián poměru zbytků OpenCreator / standard | 0,852 | 0,874 |
+| Pokles celkového mediánu s algoritmem z OpenCreator | 22,6 % | 34,8 % |
+| Medián poměru zbytků: algoritmus z OpenCreator / standard | 0,852 | 0,874 |
 | Medián párového poklesu | **14,8 %** | **12,6 %** |
 
-OpenCreator vyhrává ve více bodech, ale párový efekt je menší než pozorovaný rozptyl opakovaných měření (asi 26 %). Liší se i výchozí měření OFF, zejména u Y. Samotný pokles celkového mediánu Y o 34,8 % proto neprokazuje takové zlepšení v každém bodě ani na hotovém výtisku.
+Algoritmus z OpenCreator vyhrává ve více bodech, ale párový efekt je menší než pozorovaný rozptyl opakovaných měření (asi 26 %). Liší se i výchozí měření OFF, zejména u Y. Samotný pokles celkového mediánu Y o 34,8 % proto neprokazuje takové zlepšení v každém bodě ani na hotovém výtisku.
 
 ![Srovnání zbytků podle harmonické na shodných bodech do 400 Hz](../images/vfa/comparison-curves.svg)
 
@@ -194,30 +194,29 @@ Graf zobrazuje medián obou směrů na každé rychlosti a harmonické. Logaritm
 | 60–110 | 24 | −30,8 % | −7,0 % |
 | 120–220 | 22 | −28,9 % | −43,4 % |
 
-Kladná hodnota znamená větší zbytek s OpenCreator, záporná menší. Všechny skupiny zahrnují jen frekvence do 400 Hz. S rostoucí rychlostí se počet harmonických zmenšuje: v poslední skupině zůstává pouze TD1. Jde o souhrnná srovnání, nikoli o výhru při každé rychlosti. Nad 220 mm/s v tomto rychlostním rastru nezůstávají platné body do 400 Hz.
+Kladná hodnota znamená větší zbytek s algoritmem z OpenCreator, záporná menší. Všechny skupiny zahrnují jen frekvence do 400 Hz. S rostoucí rychlostí se počet harmonických zmenšuje: v poslední skupině zůstává pouze TD1. Jde o souhrnná srovnání, nikoli o výhru při každé rychlosti. Nad 220 mm/s v tomto rychlostním rastru nezůstávají platné body do 400 Hz.
 
 ![Změna mediánu zbytku podle rozsahu rychlosti](../images/vfa/speed-bands.svg)
 
-Pro úplnost: nad 400 Hz vyhrává OpenCreator u X v 52/64 bodech a u Y v 35/64. V celém dostupném rozsahu by to bylo 93/134 a 81/134, ale smíchala by se měření s rozdílnou citlivostí snímače. Proto tento rozsah nepoužíváme k výběru výchozího algoritmu.
+Pro úplnost: nad 400 Hz vyhrává algoritmus z OpenCreator u X v 52/64 bodech a u Y v 35/64. V celém dostupném rozsahu by to bylo 93/134 a 81/134, ale smíchala by se měření s rozdílnou citlivostí snímače. Proto tento rozsah nepoužíváme k výběru výchozího algoritmu.
 
 ## 7. Praktický závěr a použití Z-Mod
 
-Oba algoritmy fungují. Opravený standardní algoritmus nabízí kratší kalibraci, dobré potlačení vibrací při nízkých rychlostech a podobné výsledné koeficienty. OpenCreator přidává adaptivní hledání frekvence a určitou výhodu při středních a vyšších rychlostech. U tohoto stroje není výhoda dostatečně přesvědčivá pro změnu výchozího algoritmu.
+Oba algoritmy fungují. Opravený standardní algoritmus nabízí kratší kalibraci, dobré potlačení vibrací při nízkých rychlostech a podobné výsledné koeficienty. Algoritmus z OpenCreator přidává adaptivní hledání frekvence a určitou výhodu při středních a vyšších rychlostech. U tohoto stroje není výhoda dostatečně přesvědčivá pro změnu výchozího algoritmu.
 
 **Většině uživatelů doporučujeme standardní kalibraci.** Uvolněte tiskovou podložku, zkontrolujte mechaniku a napnutí řemenů. Nekalibrujte během tisku ani při pozastavení. Použijte aktuální verzi Z-Mod s podporou VFA. Standardní kalibrace:
 
 ```gcode
-CALIBRATE_VFA T=0
+CALIBRATE_VFA T=0 ALTERNATIVE=0
 ```
 
 Experiment s alternativou:
 
 ```gcode
-ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1
-SAVE_CONFIG
+CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Přímý příkaz ZMOD_CALIBRATE_VFA automaticky neprovádí SAVE_CONFIG; ukládejte až po úspěšném dokončení. CALIBRATE_VFA je makro Z-Mod s běžným postupem uložení. Pro trvalý výběr alternativy lze nastavit `alternative: True` v existující sekci `[stepper_resonance_tester]`. Nevytvářejte duplicitní sekce nebo parametry v připojovaných konfiguračních souborech. Výchozí hodnota je `alternative: False`.
+Obě varianty makra `CALIBRATE_VFA` po úspěšné kalibraci a vytvoření grafů automaticky provedou `SAVE_CONFIG` a poté se Klipper restartuje. Ruční uložení není nutné. Bez parametru `ALTERNATIVE` se použije nastavení ze sekce `[stepper_resonance_tester]` (výchozí hodnota `alternative: False`). Parametrem `ALTERNATIVE=0` lze výslovně zvolit standardní algoritmus.
 
 Nezávislé ověření po uložení:
 
@@ -234,7 +233,7 @@ Další výzkum může opakovat nezávislá měření v náhodném pořadí s RE
 Tabulky posunutí do 400 Hz pro každý směr a režim, včetně příčného, podélného a celkového posunutí:
 
 - Standard v 13:10: [X CSV](../assets/vfa/stock-1310-x.csv), [Y CSV](../assets/vfa/stock-1310-y.csv).
-- OpenCreator v 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
+- Algoritmus z OpenCreator v 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
 
 Jde o odvozené tabulky posunutí v µm, zaokrouhlené při přípravě webových grafů, nikoli o původní CSV amplitud akcelerometru. Čísla v článku byla vypočtena z původních měření, poslední číslice se tedy mohou lišit. Grafy na webu byly ze zachovaných měření překresleny do SVG. Úplné časové řady akcelerometru nejsou k dispozici. Pro zopakování hlavního srovnání spojte řádky podle rychlosti, směru a harmonické a pro srovnání algoritmů použijte pouze `mode=after`.
 

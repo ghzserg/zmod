@@ -1,22 +1,22 @@
-# VFA on Creator 5 Pro: stock algorithm versus OpenCreator
+# VFA on Creator 5 Pro: stock algorithm versus the algorithm from OpenCreator
 
 *Z-Mod study, 26 November 2026.*
 
 ## What does this mean for everyday printing?
 
-**VFA calibration is worth using, but most users do not need the alternative OpenCreator algorithm.** VFA helps reduce fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.
+**VFA calibration is worth using, but most users do not need the alternative algorithm from OpenCreator.** VFA helps reduce fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.
 
-- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate if you change belt tension or the mechanics, or if stripes reappear.
+- If you see regular fine stripes, run the stock calibration with `CALIBRATE_VFA T=0 ALTERNATIVE=0`. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate if you change belt tension or the mechanics, or if stripes reappear.
 - Keep your usual speeds and accelerations in OrcaSlicer. VFA does not increase permitted speeds, alter slicer profiles or replace Input Shaper. If stripes remain at a particular speed, try changing the outer-wall speed and compare identical test prints. Check the actual speed in the OrcaSlicer preview; it may differ from the configured value.
-- Try OpenCreator if the stock result is unsatisfactory and you can compare the results. On our printer it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.
+- Try the algorithm from OpenCreator if the stock result is unsatisfactory and you can compare the results. On our printer it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.
 
 **Bottom line:** keep the stock algorithm unless you have a specific reason to experiment. With stock compensation, the overall median vibration amplitude fell by about 81% for motor X and 66% for Y. These are accelerometer measurements, not a promise of an equal percentage reduction in stripes on printed parts.
 
 ## Study result
 
-We tested the corrected Flashforge stock VFA calibration and the adapted OpenCreator algorithm on one Flashforge Creator 5 Pro. Both substantially reduced vibration. OpenCreator produced slightly better results at medium and high speeds, but did not establish an advantage beyond the observed variation of repeated measurements. At low speeds stock compensation gave a lower median residual displacement.
+We tested the corrected Flashforge stock VFA calibration and the adapted algorithm from OpenCreator on one Flashforge Creator 5 Pro. Both substantially reduced vibration. The algorithm from OpenCreator produced slightly better results at medium and high speeds, but did not establish an advantage beyond the observed variation of repeated measurements. At low speeds stock compensation gave a lower median residual displacement.
 
-Stock calibration took about 21 minutes; the alternative took about 80 minutes. **Z-Mod therefore retains stock as its default algorithm**, with OpenCreator available as an option.
+Stock calibration took about 21 minutes; the alternative took about 80 minutes. **Z-Mod therefore retains stock as its default algorithm**, with the algorithm from OpenCreator available as an option.
 
 ![Median displacement before and after compensation](../images/vfa/comparison-median.svg)
 
@@ -67,7 +67,7 @@ We compare `before` (compensation off) and `after` (saved coefficients). Each po
 Two different metrics are used:
 
 - **Reduction in overall median:** `1 − median(after)/median(before)` within a run; for the algorithm comparison, the two residual medians are used instead.
-- **Median paired ratio:** `median(after_OpenCreator / after_stock)` for matching points. A ratio below one means improvement. This is the main between-algorithm metric, supplemented by the number of winning points and repeatability.
+- **Median paired ratio:** `median(after_alternative / after_stock)` for matching points. A ratio below one means improvement. This is the main between-algorithm metric, supplemented by the number of winning points and repeatability.
 
 A lower overall median does not imply the same improvement at every point. Different amplitude distributions can produce a lower median even with roughly equal numbers of winning points.
 
@@ -99,7 +99,7 @@ Corrected stock calibration ran from 12:46:17 to 13:07:38, 21 min 21 s up to SAV
 
 The early 04:16 test covered only X and used a different method/range; it was excluded from direct comparison. Original stock tuning CSVs were unavailable; tuning results were reconstructed from console values at their printed precision. Original VFA_GRAPH CSVs were used for the independent comparison.
 
-## 4. What OpenCreator changes
+## 4. What the algorithm from OpenCreator changes
 
 The adapted algorithm uses ideas from [OpenCreator / Kalico](https://github.com/FlashForge-C5-Modding-Group/kalico/blob/7da732e09d4e213b7766482b6cfdf7e75ee9e191/klippy/extras/stepper_resonance_tester.py) while retaining Z-Mod's measurement code and limits. It is not a port of the entire Kalico firmware.
 
@@ -111,7 +111,7 @@ The common amplitude minimises the sum of the two residual-acceleration parabola
 
 The first experiment found 270.1 and 82.8 Hz. The fully tuned X coefficients for the first candidate (270.1 Hz) were evaluated with an independent VFA_GRAPH at 14:20. This tests one candidate on one motor, not the full alternative algorithm.
 
-| Frequency range | Points | OpenCreator better | Stock better | Median residual ratio OpenCreator / stock |
+| Frequency range | Points | Algorithm from OpenCreator better | Stock better | Median residual ratio: algorithm from OpenCreator / stock |
 |---|---:|---:|---:|---:|
 | Up to 400 Hz | 70 | 34 | 36 | 1.012 |
 | Above 400 Hz | 64 | 46 | 18 | 0.792 |
@@ -121,7 +121,7 @@ Up to 400 Hz the overall residual median fell from 0.027725 to 0.022088 µm (−
 
 ## 5. Full alternative calibration
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` ran from 20:53:51 to 22:14:05 for both motors. Time before plotting was 80 min 14 s, roughly 3.8 times the stock run (measured up to SAVE_CONFIG). Other printers or a single candidate may take a different amount of time.
+The alternative calibration ran from 20:53:51 to 22:14:05 for both motors. Time before plotting was 80 min 14 s, roughly 3.8 times the stock run (measured up to SAVE_CONFIG). Other printers or a single candidate may take a different amount of time.
 
 | Motor | High frequency | Low frequency | High score | Low score | Selected |
 |---|---:|---:|---:|---:|---:|
@@ -144,7 +144,7 @@ Common is the measured common-amplitude candidate, not necessarily the saved val
 
 ### Final coefficients
 
-| Motor / harmonic | Stock AMP | Stock PHASE1 / PHASE2, rad | OpenCreator AMP | OpenCreator PHASE1 / PHASE2, rad |
+| Motor / harmonic | Stock AMP | Stock PHASE1 / PHASE2, rad | AMP (algorithm from OpenCreator) | PHASE1 / PHASE2 (algorithm from OpenCreator), rad |
 |---|---:|---:|---:|---:|
 | X / TD1 | 0.010 | 3.730 / 3.517 | 0.010 | 3.762 / 3.539 |
 | X / TD2 | 0.036 | 6.119 / 0.172 | 0.038 | 6.211 / 0.086 |
@@ -155,17 +155,17 @@ Common is the measured common-amplitude candidate, not necessarily the saved val
 
 The coefficients are close, but amplitudes and phases are not identical. Calibration.json stores integer MCU units with a factor of 1000. Do not copy the table to another printer: it applies only to the tested unit and its mechanical condition.
 
-## 6. Independent comparison of stock and OpenCreator
+## 6. Independent comparison of the stock algorithm and the algorithm from OpenCreator
 
-We compare VFA_GRAPH 13:10 (stock) with 22:21 (OpenCreator). After saving configuration, the 22:21 metadata contains exactly the coefficients from the successful alternative calibration.json. Measurement conditions including paths match. Only valid matching points are compared.
+We compare VFA_GRAPH 13:10 (stock) with 22:21 (algorithm from OpenCreator). After saving configuration, the 22:21 metadata contains exactly the coefficients from the successful alternative calibration.json. Measurement conditions including paths match. Only valid matching points are compared.
 
-![OpenCreator independent X test](../images/vfa/alternative-2221-x.svg)
+![Algorithm from OpenCreator, independent X test](../images/vfa/alternative-2221-x.svg)
 
-![OpenCreator independent Y test](../images/vfa/alternative-2221-y.svg)
+![Algorithm from OpenCreator, independent Y test](../images/vfa/alternative-2221-y.svg)
 
 ### Up to 400 Hz
 
-| Metric | X stock | X OpenCreator | Y stock | Y OpenCreator |
+| Metric | X stock | X, algorithm from OpenCreator | Y stock | Y, algorithm from OpenCreator |
 |---|---:|---:|---:|---:|
 | OFF median, µm | 0.146346 | 0.147090 | 0.123195 | 0.111504 |
 | ON median, µm | 0.027725 | 0.021465 | 0.042425 | 0.027663 |
@@ -174,13 +174,13 @@ We compare VFA_GRAPH 13:10 (stock) with 22:21 (OpenCreator). After saving config
 
 | Direct residual comparison | X | Y |
 |---|---:|---:|
-| OpenCreator better | 41/70 | 46/70 |
+| Algorithm from OpenCreator better | 41/70 | 46/70 |
 | Stock better | 29/70 | 24/70 |
-| Reduction in overall median with OpenCreator | 22.6% | 34.8% |
-| Median residual ratio OpenCreator / stock | 0.852 | 0.874 |
+| Reduction in overall median with the algorithm from OpenCreator | 22.6% | 34.8% |
+| Median residual ratio: algorithm from OpenCreator / stock | 0.852 | 0.874 |
 | Median paired reduction | **14.8%** | **12.6%** |
 
-OpenCreator wins more points, but the paired effect is smaller than observed repeated-measurement variability (about 26%). The OFF measurements also differ, especially on Y. A 34.8% reduction in the overall Y median alone is therefore not evidence of such a gain at each point or on a finished print.
+The algorithm from OpenCreator wins more points, but the paired effect is smaller than observed repeated-measurement variability (about 26%). The OFF measurements also differ, especially on Y. A 34.8% reduction in the overall Y median alone is therefore not evidence of such a gain at each point or on a finished print.
 
 ![Residual comparison by harmonic at matching points up to 400 Hz](../images/vfa/comparison-curves.svg)
 
@@ -194,30 +194,29 @@ The graph shows the median of both directions at each speed and harmonic. A loga
 | 60–110 | 24 | −30.8% | −7.0% |
 | 120–220 | 22 | −28.9% | −43.4% |
 
-Positive means a larger residual with OpenCreator; negative means smaller. All groups only include frequencies up to 400 Hz. The harmonic set shrinks with speed: only TD1 remains in the last group. These are aggregate comparisons, not a win at every speed. No valid points up to 400 Hz remain above 220 mm/s on this speed grid.
+Positive means a larger residual with the algorithm from OpenCreator; negative means smaller. All groups only include frequencies up to 400 Hz. The harmonic set shrinks with speed: only TD1 remains in the last group. These are aggregate comparisons, not a win at every speed. No valid points up to 400 Hz remain above 220 mm/s on this speed grid.
 
 ![Median residual change by speed band](../images/vfa/speed-bands.svg)
 
-For completeness, above 400 Hz OpenCreator wins 52/64 points on X and 35/64 on Y. Across the full available range this would be 93/134 and 81/134, but it mixes measurements of different sensor sensitivity. We do not use it to select the default algorithm.
+For completeness, above 400 Hz the algorithm from The algorithm from OpenCreator wins 52/64 points on X and 35/64 on Y. Across the full available range this would be 93/134 and 81/134, but it mixes measurements of different sensor sensitivity. We do not use it to select the default algorithm.
 
 ## 7. Practical conclusion and using Z-Mod
 
-Both algorithms work. The corrected stock algorithm offers shorter calibration, good low-speed suppression and similar final coefficients. OpenCreator adds adaptive frequency search and some gains at medium/high speeds. On this unit the advantage is not convincing enough to change the default.
+Both algorithms work. The corrected stock algorithm offers shorter calibration, good low-speed suppression and similar final coefficients. The algorithm from OpenCreator adds adaptive frequency search and some gains at medium/high speeds. On this unit the advantage is not convincing enough to change the default.
 
 **We recommend stock calibration for most users.** Clear the build plate, check mechanics and belt tension, and do not calibrate during printing or pause. Use an up-to-date Z-Mod version supporting VFA. For stock calibration:
 
 ```gcode
-CALIBRATE_VFA T=0
+CALIBRATE_VFA T=0 ALTERNATIVE=0
 ```
 
 To experiment with the alternative:
 
 ```gcode
-ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1
-SAVE_CONFIG
+CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-The direct ZMOD_CALIBRATE_VFA command does not automatically execute SAVE_CONFIG; save only after successful completion. CALIBRATE_VFA is the Z-Mod macro with its standard saving procedure. To select the alternative permanently, set `alternative: True` in the existing `[stepper_resonance_tester]` section. Do not duplicate sections or options in included configuration files. The default is `alternative: False`.
+Both variants of the `CALIBRATE_VFA` macro automatically execute `SAVE_CONFIG` after successful calibration and graph generation, then Klipper restarts. There is no need to save manually. Without `ALTERNATIVE`, the setting from `[stepper_resonance_tester]` is used (default: `alternative: False`). Specify `ALTERNATIVE=0` to explicitly select the stock algorithm.
 
 Independent verification after saving:
 
@@ -234,7 +233,7 @@ Further study could repeat independent runs in random order with REPEAT=3, test 
 Displacement tables up to 400 Hz for each direction and mode, including transverse, longitudinal and total displacement:
 
 - Stock at 13:10: [X CSV](../assets/vfa/stock-1310-x.csv), [Y CSV](../assets/vfa/stock-1310-y.csv).
-- OpenCreator at 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
+- Algorithm from OpenCreator at 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
 
 These are derived displacement tables in µm, rounded for website plotting, not original accelerometer-amplitude CSVs. Article numbers were calculated from the original measurements, so the last digits may differ. Website graphs were replotted from saved measurements as SVGs. Full accelerometer time series are not available. To reproduce the main comparison, match rows by speed, direction and harmonic and use only `mode=after` for comparison between algorithms.
 

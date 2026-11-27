@@ -1,22 +1,22 @@
-# VFA beim Creator 5 Pro: Standardalgorithmus im Vergleich zu OpenCreator
+# VFA beim Creator 5 Pro: Standardalgorithmus im Vergleich zum Algorithmus aus OpenCreator
 
 *Untersuchung von Z-Mod, 26. November 2026.*
 
 ## Was bedeutet das für den Druckalltag?
 
-**Eine VFA-Kalibrierung ist sinnvoll; den alternativen OpenCreator-Algorithmus benötigen die meisten Anwender nicht.** VFA-Kompensation hilft, feine vertikale Streifen auf gedruckten Wänden zu reduzieren, die durch Motor- und mechanische Schwingungen entstehen. Auf glatten Oberflächen fallen sie besonders auf.
+**Eine VFA-Kalibrierung ist sinnvoll; den alternativen Algorithmus aus OpenCreator benötigen die meisten Anwender nicht.** VFA-Kompensation hilft, feine vertikale Streifen auf gedruckten Wänden zu reduzieren, die durch Motor- und mechanische Schwingungen entstehen. Auf glatten Oberflächen fallen sie besonders auf.
 
-- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen an der Riemenspannung oder Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
+- Bei regelmäßigen feinen Streifen die Standardkalibrierung mit `CALIBRATE_VFA T=0 ALTERNATIVE=0` ausführen. Auf unserem C5 Pro dauerte sie etwa 21 Minuten. Sie muss nicht vor jedem Druck wiederholt werden: Die gespeicherte Kompensation wird automatisch angewendet. Nach Änderungen an der Riemenspannung oder Mechanik sowie bei erneut auftretenden Streifen erneut kalibrieren.
 - In OrcaSlicer können die gewohnten Geschwindigkeiten und Beschleunigungen beibehalten werden. VFA erhöht die zulässigen Geschwindigkeiten nicht, verändert das Slicerprofil nicht und ersetzt Input Shaper nicht. Bleiben Streifen bei einer bestimmten Geschwindigkeit sichtbar, die Geschwindigkeit der Außenwand verändern und identische Testteile vergleichen. Die tatsächliche Geschwindigkeit in der OrcaSlicer-Vorschau prüfen; sie kann vom eingestellten Wert abweichen.
-- OpenCreator ausprobieren, wenn das Standardergebnis nicht zufriedenstellt und ein Vergleich möglich ist. Auf unserem Drucker war OpenCreator im Mittel bei 60–220 mm/s besser, der Standardalgorithmus bei 20–50 mm/s. Angesichts der Streuung der Messungen ist der Unterschied nicht überzeugend genug; zudem dauerte die alternative Kalibrierung etwa 80 Minuten.
+- Den Algorithmus aus OpenCreator ausprobieren, wenn das Standardergebnis nicht zufriedenstellt und ein Vergleich möglich ist. Auf unserem Drucker war der Algorithmus aus OpenCreator im Mittel bei 60–220 mm/s besser, der Standardalgorithmus bei 20–50 mm/s. Angesichts der Streuung der Messungen ist der Unterschied nicht überzeugend genug; zudem dauerte die alternative Kalibrierung etwa 80 Minuten.
 
 **Fazit:** Ohne konkreten Grund für Experimente beim Standardalgorithmus bleiben. Mit der Standardkompensation sank der Gesamtmedian der Schwingungsamplitude bei Motor X um etwa 81 % und bei Y um 66 %. Das sind Beschleunigungssensormessungen, kein Versprechen, dass die Streifen auf einem Druckteil im gleichen Verhältnis abnehmen.
 
 ## Ergebnis der Untersuchung
 
-Auf einem Flashforge Creator 5 Pro wurden die korrigierte Standardkalibrierung von Flashforge und der angepasste OpenCreator-Algorithmus getestet. Beide reduzierten Schwingungen deutlich. OpenCreator lieferte bei mittleren und hohen Geschwindigkeiten etwas bessere Ergebnisse, jedoch keinen überzeugenden Vorteil über die beobachtete Streuung wiederholter Messungen hinaus. Bei niedrigen Geschwindigkeiten war der Median der Restbewegung mit der Standardkompensation kleiner.
+Auf einem Flashforge Creator 5 Pro wurden die korrigierte Standardkalibrierung von Flashforge und der angepasste Algorithmus aus OpenCreator getestet. Beide reduzierten Schwingungen deutlich. Der Algorithmus aus OpenCreator lieferte bei mittleren und hohen Geschwindigkeiten etwas bessere Ergebnisse, jedoch keinen überzeugenden Vorteil über die beobachtete Streuung wiederholter Messungen hinaus. Bei niedrigen Geschwindigkeiten war der Median der Restbewegung mit der Standardkompensation kleiner.
 
-Die Standardkalibrierung dauerte etwa 21 Minuten, die alternative etwa 80 Minuten. **Z-Mod behält deshalb den Standardalgorithmus als Voreinstellung bei.** OpenCreator steht optional zur Verfügung.
+Die Standardkalibrierung dauerte etwa 21 Minuten, die alternative etwa 80 Minuten. **Z-Mod behält deshalb den Standardalgorithmus als Voreinstellung bei.** Der Algorithmus aus OpenCreator steht optional zur Verfügung.
 
 ![Median der Auslenkung vor und nach der Kompensation](../images/vfa/comparison-median.svg)
 
@@ -67,7 +67,7 @@ Verglichen werden `before` (Kompensation aus) und `after` (gespeicherte Koeffizi
 Zwei unterschiedliche Kennzahlen werden verwendet:
 
 - **Abnahme des Gesamtmedians:** `1 − median(after)/median(before)` innerhalb eines Durchlaufs. Für den Algorithmenvergleich werden stattdessen die beiden Mediane der Restwerte verwendet.
-- **Median der paarweisen Verhältnisse:** `median(after_OpenCreator / after_stock)` für übereinstimmende Messpunkte. Ein Verhältnis unter eins bedeutet eine Verbesserung. Das ist die wichtigste Kennzahl zwischen den Algorithmen, ergänzt durch die Zahl besserer Messpunkte und die Wiederholbarkeit.
+- **Median der paarweisen Verhältnisse:** `median(after_alternative / after_stock)` für übereinstimmende Messpunkte. Ein Verhältnis unter eins bedeutet eine Verbesserung. Das ist die wichtigste Kennzahl zwischen den Algorithmen, ergänzt durch die Zahl besserer Messpunkte und die Wiederholbarkeit.
 
 Ein niedrigerer Gesamtmedian bedeutet nicht dieselbe Verbesserung an jedem Messpunkt. Unterschiedliche Amplitudenverteilungen können einen niedrigeren Median ergeben, obwohl beide Algorithmen ähnlich viele Punkte gewinnen.
 
@@ -99,7 +99,7 @@ Die korrigierte Standardkalibrierung lief von 12:46:17 bis 13:07:38, also 21 min
 
 Der frühe Test um 04:16 betraf nur X und verwendete eine andere Methode bzw. einen anderen Bereich; er wurde vom direkten Vergleich ausgeschlossen. Die ursprünglichen CSV-Dateien der Standardsuche lagen nicht vor; die Suchergebnisse wurden aus den Konsolenwerten mit deren ausgegebener Genauigkeit rekonstruiert. Für den unabhängigen Vergleich wurden die ursprünglichen VFA_GRAPH-CSV-Dateien verwendet.
 
-## 4. Was ändert OpenCreator?
+## 4. Was ändert der Algorithmus aus OpenCreator?
 
 Der angepasste Algorithmus nutzt Ideen aus [OpenCreator / Kalico](https://github.com/FlashForge-C5-Modding-Group/kalico/blob/7da732e09d4e213b7766482b6cfdf7e75ee9e191/klippy/extras/stepper_resonance_tester.py), behält jedoch Messcode und Grenzen von Z-Mod bei. Es handelt sich nicht um eine Portierung der gesamten Kalico-Firmware.
 
@@ -111,7 +111,7 @@ Die gemeinsame Amplitude minimiert die Summe der beiden Parabeln der Restbeschle
 
 Der erste Versuch fand 270,1 und 82,8 Hz. Die vollständig bestimmten X-Koeffizienten des ersten Kandidaten (270,1 Hz) wurden um 14:20 mit VFA_GRAPH unabhängig bewertet. Dies prüft einen Kandidaten an einem Motor, nicht den vollständigen alternativen Algorithmus.
 
-| Frequenzbereich | Punkte | OpenCreator besser | Standard besser | Median Restwertverhältnis OpenCreator / Standard |
+| Frequenzbereich | Punkte | Algorithmus aus OpenCreator besser | Standard besser | Median Restwertverhältnis: Algorithmus aus OpenCreator / Standard |
 |---|---:|---:|---:|---:|
 | Bis 400 Hz | 70 | 34 | 36 | 1,012 |
 | Über 400 Hz | 64 | 46 | 18 | 0,792 |
@@ -121,7 +121,7 @@ Bis 400 Hz sank der Gesamtmedian des Restwerts von 0,027725 auf 0,022088 µm (�
 
 ## 5. Vollständige alternative Kalibrierung
 
-`ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1` lief für beide Motoren von 20:53:51 bis 22:14:05. Die Zeit vor der Diagrammerstellung betrug 80 min 14 s, etwa das 3,8-Fache des Standarddurchlaufs (gemessen bis SAVE_CONFIG). Andere Drucker oder ein einzelner Kandidat können andere Zeiten ergeben.
+Die alternative Kalibrierung lief für beide Motoren von 20:53:51 bis 22:14:05. Die Zeit vor der Diagrammerstellung betrug 80 min 14 s, etwa das 3,8-Fache des Standarddurchlaufs (gemessen bis SAVE_CONFIG). Andere Drucker oder ein einzelner Kandidat können andere Zeiten ergeben.
 
 | Motor | Hohe Frequenz | Niedrige Frequenz | Bewertung hoch | Bewertung niedrig | Gewählt |
 |---|---:|---:|---:|---:|---:|
@@ -144,7 +144,7 @@ Common bezeichnet den gemessenen Kandidaten der gemeinsamen Amplitude, nicht zwi
 
 ### Endgültige Koeffizienten
 
-| Motor / Harmonische | Standard AMP | Standard PHASE1 / PHASE2, rad | OpenCreator AMP | OpenCreator PHASE1 / PHASE2, rad |
+| Motor / Harmonische | Standard AMP | Standard PHASE1 / PHASE2, rad | AMP (Algorithmus aus OpenCreator) | PHASE1 / PHASE2 (Algorithmus aus OpenCreator), rad |
 |---|---:|---:|---:|---:|
 | X / TD1 | 0,010 | 3,730 / 3,517 | 0,010 | 3,762 / 3,539 |
 | X / TD2 | 0,036 | 6,119 / 0,172 | 0,038 | 6,211 / 0,086 |
@@ -155,17 +155,17 @@ Common bezeichnet den gemessenen Kandidaten der gemeinsamen Amplitude, nicht zwi
 
 Die Koeffizienten liegen nahe beieinander, Amplituden und Phasen sind jedoch nicht identisch. Calibration.json speichert ganzzahlige MCU-Einheiten mit Faktor 1000. Die Tabelle nicht auf andere Drucker übertragen: Sie gilt nur für das getestete Gerät und dessen mechanischen Zustand.
 
-## 6. Unabhängiger Vergleich von Standard und OpenCreator
+## 6. Unabhängiger Vergleich des Standardalgorithmus und des Algorithmus aus OpenCreator
 
-Verglichen werden VFA_GRAPH um 13:10 (Standard) und um 22:21 (OpenCreator). Nach dem Speichern der Konfiguration enthalten die Metadaten von 22:21 exakt die Koeffizienten aus calibration.json der erfolgreichen alternativen Kalibrierung. Die Messbedingungen einschließlich der Bewegungsbahnen stimmen überein. Nur gültige übereinstimmende Punkte werden verglichen.
+Verglichen werden VFA_GRAPH um 13:10 (Standard) und um 22:21 (Algorithmus aus OpenCreator). Nach dem Speichern der Konfiguration enthalten die Metadaten von 22:21 exakt die Koeffizienten aus calibration.json der erfolgreichen alternativen Kalibrierung. Die Messbedingungen einschließlich der Bewegungsbahnen stimmen überein. Nur gültige übereinstimmende Punkte werden verglichen.
 
-![OpenCreator, unabhängiger X-Test](../images/vfa/alternative-2221-x.svg)
+![Algorithmus aus OpenCreator, unabhängiger X-Test](../images/vfa/alternative-2221-x.svg)
 
-![OpenCreator, unabhängiger Y-Test](../images/vfa/alternative-2221-y.svg)
+![Algorithmus aus OpenCreator, unabhängiger Y-Test](../images/vfa/alternative-2221-y.svg)
 
 ### Bis 400 Hz
 
-| Kennzahl | X Standard | X OpenCreator | Y Standard | Y OpenCreator |
+| Kennzahl | X Standard | X, Algorithmus aus OpenCreator | Y Standard | Y, Algorithmus aus OpenCreator |
 |---|---:|---:|---:|---:|
 | OFF-Median, µm | 0,146346 | 0,147090 | 0,123195 | 0,111504 |
 | ON-Median, µm | 0,027725 | 0,021465 | 0,042425 | 0,027663 |
@@ -174,13 +174,13 @@ Verglichen werden VFA_GRAPH um 13:10 (Standard) und um 22:21 (OpenCreator). Nach
 
 | Direkter Restwertvergleich | X | Y |
 |---|---:|---:|
-| OpenCreator besser | 41/70 | 46/70 |
+| Algorithmus aus OpenCreator besser | 41/70 | 46/70 |
 | Standard besser | 29/70 | 24/70 |
-| Abnahme des Gesamtmedians mit OpenCreator | 22,6 % | 34,8 % |
-| Median Restwertverhältnis OpenCreator / Standard | 0,852 | 0,874 |
+| Abnahme des Gesamtmedians mit dem Algorithmus aus OpenCreator | 22,6 % | 34,8 % |
+| Median Restwertverhältnis: Algorithmus aus OpenCreator / Standard | 0,852 | 0,874 |
 | Median der paarweisen Abnahme | **14,8 %** | **12,6 %** |
 
-OpenCreator gewinnt mehr Punkte, aber die paarweise Verbesserung ist kleiner als die beobachtete Wiederholstreuung (etwa 26 %). Auch die OFF-Messungen unterscheiden sich, besonders bei Y. Eine Abnahme des Y-Gesamtmedians um 34,8 % ist daher für sich genommen kein Nachweis eines solchen Gewinns an jedem Punkt oder am fertigen Druckteil.
+Der Algorithmus aus OpenCreator gewinnt mehr Punkte, aber die paarweise Verbesserung ist kleiner als die beobachtete Wiederholstreuung (etwa 26 %). Auch die OFF-Messungen unterscheiden sich, besonders bei Y. Eine Abnahme des Y-Gesamtmedians um 34,8 % ist daher für sich genommen kein Nachweis eines solchen Gewinns an jedem Punkt oder am fertigen Druckteil.
 
 ![Restwertvergleich je Harmonische an übereinstimmenden Punkten bis 400 Hz](../images/vfa/comparison-curves.svg)
 
@@ -194,30 +194,29 @@ Das Diagramm zeigt den Median beider Richtungen bei jeder Geschwindigkeit und Ha
 | 60–110 | 24 | −30,8 % | −7,0 % |
 | 120–220 | 22 | −28,9 % | −43,4 % |
 
-Positiv bedeutet einen größeren Restwert mit OpenCreator, negativ einen kleineren. Alle Gruppen enthalten nur Frequenzen bis 400 Hz. Mit zunehmender Geschwindigkeit verringert sich die Zahl der Harmonischen: In der letzten Gruppe bleibt nur TD1. Das sind aggregierte Vergleiche, kein Gewinn bei jeder Geschwindigkeit. In diesem Geschwindigkeitsraster bleiben oberhalb von 220 mm/s keine gültigen Punkte bis 400 Hz.
+Positiv bedeutet einen größeren Restwert mit dem Algorithmus aus OpenCreator, negativ einen kleineren. Alle Gruppen enthalten nur Frequenzen bis 400 Hz. Mit zunehmender Geschwindigkeit verringert sich die Zahl der Harmonischen: In der letzten Gruppe bleibt nur TD1. Das sind aggregierte Vergleiche, kein Gewinn bei jeder Geschwindigkeit. In diesem Geschwindigkeitsraster bleiben oberhalb von 220 mm/s keine gültigen Punkte bis 400 Hz.
 
 ![Änderung des Restwertmedians nach Geschwindigkeitsbereich](../images/vfa/speed-bands.svg)
 
-Der Vollständigkeit halber: Oberhalb von 400 Hz gewinnt OpenCreator bei X 52/64 Punkte und bei Y 35/64. Über den gesamten verfügbaren Bereich wären es 93/134 und 81/134. Dabei würden jedoch Messungen mit unterschiedlicher Sensorempfindlichkeit vermischt. Dieser Bereich wird nicht zur Wahl der Voreinstellung herangezogen.
+Der Vollständigkeit halber: Oberhalb von 400 Hz gewinnt der Algorithmus aus OpenCreator bei X 52/64 Punkte und bei Y 35/64. Über den gesamten verfügbaren Bereich wären es 93/134 und 81/134. Dabei würden jedoch Messungen mit unterschiedlicher Sensorempfindlichkeit vermischt. Dieser Bereich wird nicht zur Wahl der Voreinstellung herangezogen.
 
 ## 7. Praktisches Fazit und Nutzung von Z-Mod
 
-Beide Algorithmen funktionieren. Der korrigierte Standardalgorithmus bietet eine kürzere Kalibrierung, gute Unterdrückung bei niedrigen Geschwindigkeiten und ähnliche endgültige Koeffizienten. OpenCreator ergänzt eine adaptive Frequenzsuche und einige Vorteile bei mittleren und hohen Geschwindigkeiten. Bei diesem Gerät ist der Vorteil nicht überzeugend genug, um die Voreinstellung zu ändern.
+Beide Algorithmen funktionieren. Der korrigierte Standardalgorithmus bietet eine kürzere Kalibrierung, gute Unterdrückung bei niedrigen Geschwindigkeiten und ähnliche endgültige Koeffizienten. Der Algorithmus aus OpenCreator ergänzt eine adaptive Frequenzsuche und einige Vorteile bei mittleren und hohen Geschwindigkeiten. Bei diesem Gerät ist der Vorteil nicht überzeugend genug, um die Voreinstellung zu ändern.
 
 **Für die meisten Anwender empfehlen wir die Standardkalibrierung.** Druckplatte freiräumen, Mechanik und Riemenspannung prüfen und nicht während eines Drucks oder einer Pause kalibrieren. Eine aktuelle Z-Mod-Version mit VFA-Unterstützung verwenden. Standardkalibrierung:
 
 ```gcode
-CALIBRATE_VFA T=0
+CALIBRATE_VFA T=0 ALTERNATIVE=0
 ```
 
 Für Experimente mit der Alternative:
 
 ```gcode
-ZMOD_CALIBRATE_VFA T=0 ALTERNATIVE=1
-SAVE_CONFIG
+CALIBRATE_VFA T=0 ALTERNATIVE=1
 ```
 
-Der direkte Befehl ZMOD_CALIBRATE_VFA führt SAVE_CONFIG nicht automatisch aus; erst nach erfolgreichem Abschluss speichern. CALIBRATE_VFA ist das Z-Mod-Makro mit dem üblichen Speichervorgang. Zur dauerhaften Auswahl der Alternative `alternative: True` im vorhandenen Abschnitt `[stepper_resonance_tester]` einstellen. Abschnitte und Optionen in eingebundenen Konfigurationsdateien nicht doppelt anlegen. Standard ist `alternative: False`.
+Beide Varianten des Makros `CALIBRATE_VFA` führen nach erfolgreicher Kalibrierung und Diagrammerstellung automatisch `SAVE_CONFIG` aus. Anschließend startet Klipper neu. Manuelles Speichern ist nicht erforderlich. Ohne `ALTERNATIVE` gilt die Einstellung aus `[stepper_resonance_tester]` (Standard: `alternative: False`). Mit `ALTERNATIVE=0` wird der Standardalgorithmus ausdrücklich ausgewählt.
 
 Unabhängige Prüfung nach dem Speichern:
 
@@ -234,7 +233,7 @@ Weitere Untersuchungen könnten unabhängige Durchläufe in zufälliger Reihenfo
 Auslenkungstabellen bis 400 Hz je Richtung und Modus, einschließlich Quer-, Längs- und Gesamtauslenkung:
 
 - Standard um 13:10: [X CSV](../assets/vfa/stock-1310-x.csv), [Y CSV](../assets/vfa/stock-1310-y.csv).
-- OpenCreator um 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
+- Algorithmus aus OpenCreator um 22:21: [X CSV](../assets/vfa/alternative-2221-x.csv), [Y CSV](../assets/vfa/alternative-2221-y.csv).
 
 Dies sind abgeleitete Auslenkungstabellen in µm, für die Website-Diagramme gerundet, keine ursprünglichen Beschleunigungssensor-Amplituden-CSV. Die Zahlen im Artikel wurden aus den Originalmessungen berechnet, daher können sich letzte Stellen unterscheiden. Die Diagramme der Website wurden aus gespeicherten Messungen als SVG neu erstellt. Vollständige Zeitreihen des Beschleunigungssensors liegen nicht vor. Für den Hauptvergleich Zeilen nach Geschwindigkeit, Richtung und Harmonischer zuordnen und nur `mode=after` zum Algorithmenvergleich verwenden.
 
