@@ -269,7 +269,7 @@ In Fluidd, open `mod_data/user.cfg` and add the options you want under a single 
 | `t_dock_speed` | `90` | Entry into the dock, mm/s. |
 | `t_undock_speed` | `80` | Exit from the dock, mm/s. |
 | `t_grab_exit_speed` | `25` | Slow exit after `MOTOR_GRAB2`, mm/s. |
-| `t_return_speed` | `500` | XY return after a tool change, mm/s. Requires the macro from [Base #26](https://github.com/ghzserg/base/pull/26) and a disabled native screen. |
+| `t_return_speed` | `500` | XY return after a tool change with the native screen disabled, mm/s. |
 | `retry` | `5` | Number of pickup or docking attempts. |
 | `pa_min` | `0.010` | Lower Auto PA limit, at least 0.01. |
 | `pa_max` | `0.040` | Upper Auto PA limit, 0.02–0.100 and at least `pa_min`. |

@@ -268,7 +268,7 @@ SAVE_ZMOD_DATA KLIPPER_C5=1
 | `t_dock_speed` | `90` | Einfahren in die Werkzeugaufnahme, mm/s. |
 | `t_undock_speed` | `80` | Ausfahren aus der Werkzeugaufnahme, mm/s. |
 | `t_grab_exit_speed` | `25` | Langsames Ausfahren nach `MOTOR_GRAB2`, mm/s. |
-| `t_return_speed` | `500` | XY-Rückfahrt nach dem Werkzeugwechsel, mm/s. Erfordert das Makro aus [Base #26](https://github.com/ghzserg/base/pull/26) und einen deaktivierten Originalbildschirm. |
+| `t_return_speed` | `500` | XY-Rückfahrt nach dem Werkzeugwechsel bei deaktiviertem Originalbildschirm, mm/s. |
 | `retry` | `5` | Anzahl der Versuche beim Aufnehmen oder Andocken. |
 | `pa_min` | `0.010` | Untere Grenze für Auto PA, mindestens 0.01. |
 | `pa_max` | `0.040` | Obere Grenze für Auto PA, 0.02–0.100 und mindestens `pa_min`. |

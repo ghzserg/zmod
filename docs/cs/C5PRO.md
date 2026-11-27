@@ -268,7 +268,7 @@ Ve Fluidd otevřete `mod_data/user.cfg` a přidejte požadované volby do jedné
 | `t_dock_speed` | `90` | Zasunutí do parkovací pozice, mm/s. |
 | `t_undock_speed` | `80` | Výjezd z parkovací pozice, mm/s. |
 | `t_grab_exit_speed` | `25` | Pomalý výjezd po `MOTOR_GRAB2`, mm/s. |
-| `t_return_speed` | `500` | Návrat po XY po výměně nástroje, mm/s. Vyžaduje makro z [Base #26](https://github.com/ghzserg/base/pull/26) a vypnutou originální obrazovku. |
+| `t_return_speed` | `500` | Návrat po XY po výměně nástroje s vypnutou originální obrazovkou, mm/s. |
 | `retry` | `5` | Počet pokusů o uchopení nebo zaparkování. |
 | `pa_min` | `0.010` | Dolní mez Auto PA, nejméně 0.01. |
 | `pa_max` | `0.040` | Horní mez Auto PA, 0.02–0.100 a nejméně `pa_min`. |
