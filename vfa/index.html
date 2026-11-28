@@ -1,0 +1,2724 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for Z-Mod - FF5M / FF5M Pro / AD5X / Creator 5 / Creator 5 Pro firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+        <link rel="canonical" href="https://wiki.zmod.link/vfa/">
+      
+      
+        <link rel="prev" href="../Pro/">
+      
+      
+        <link rel="next" href="../Native_FW/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../ru/vfa/" hreflang="ru">
+        
+          <link rel="alternate" href="../de/vfa/" hreflang="de">
+        
+          <link rel="alternate" href="../cs/vfa/" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>VFA study - Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../css/fonts.css">
+  <link rel="stylesheet" href="../css/extra.css">
+
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vfa-on-creator-5-pro-stock-algorithm-versus-the-algorithm-from-opencreator" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" class="md-header__button md-logo" aria-label="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VFA study
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../ru/vfa/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../de/vfa/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../cs/vfa/" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Begin
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Configuration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Macros
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Additional
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Download
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Z-Mod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" class="md-nav__button md-logo" aria-label="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Index
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Begin
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Begin
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recommendations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Configuration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C5PRO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C5Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macros
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Macros
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Main
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Global
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Additional
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Additional
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VFA study
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VFA study
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-vfa-calibration-mean-for-everyday-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What does VFA calibration mean for everyday printing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-vfa-is-and-what-z-mod-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What VFA is and what Z-Mod measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-independent-vfa_graph-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The independent VFA_GRAPH test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-correcting-stock-calibration-and-repeatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Correcting stock calibration and repeatability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-the-algorithm-from-opencreator-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. What the algorithm from OpenCreator changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. What the algorithm from OpenCreator changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-x-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First X experiment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-full-alternative-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Full alternative calibration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Full alternative calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final coefficients
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-independent-comparison-of-the-stock-algorithm-and-the-algorithm-from-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Independent comparison of the stock algorithm and the algorithm from OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Independent comparison of the stock algorithm and the algorithm from OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#up-to-400-hz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Up to 400 Hz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-speeds-favour-each-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which speeds favour each algorithm?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-practical-conclusion-and-using-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Practical conclusion and using Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-for-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data for verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data for verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z-mod-changes-and-code-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Mod changes and code sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Native firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Support
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Z-Mod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-does-vfa-calibration-mean-for-everyday-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What does VFA calibration mean for everyday printing?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study result
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-vfa-is-and-what-z-mod-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What VFA is and what Z-Mod measures
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-independent-vfa_graph-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The independent VFA_GRAPH test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-correcting-stock-calibration-and-repeatability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Correcting stock calibration and repeatability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-the-algorithm-from-opencreator-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. What the algorithm from OpenCreator changes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. What the algorithm from OpenCreator changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#first-x-experiment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First X experiment
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-full-alternative-calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Full alternative calibration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Full alternative calibration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-coefficients" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final coefficients
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-independent-comparison-of-the-stock-algorithm-and-the-algorithm-from-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Independent comparison of the stock algorithm and the algorithm from OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Independent comparison of the stock algorithm and the algorithm from OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#up-to-400-hz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Up to 400 Hz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-speeds-favour-each-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which speeds favour each algorithm?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-practical-conclusion-and-using-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Practical conclusion and using Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-for-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data for verification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data for verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#z-mod-changes-and-code-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Z-Mod changes and code sources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/vfa.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="vfa-on-creator-5-pro-stock-algorithm-versus-the-algorithm-from-opencreator">VFA on Creator 5 Pro: stock algorithm versus the algorithm from OpenCreator<a class="headerlink" href="#vfa-on-creator-5-pro-stock-algorithm-versus-the-algorithm-from-opencreator" title="Permanent link">&para;</a></h1>
+<p><em>Z-Mod study, 26 November 2026.</em></p>
+<h2 id="what-does-vfa-calibration-mean-for-everyday-printing">What does VFA calibration mean for everyday printing?<a class="headerlink" href="#what-does-vfa-calibration-mean-for-everyday-printing" title="Permanent link">&para;</a></h2>
+<p><strong>VFA calibration is worth using, but most users do not need the alternative algorithm from OpenCreator.</strong> VFA (Vertical Fine Artifacts) are fine vertical stripes on printed walls caused by motor and mechanical vibrations. They are especially noticeable on smooth surfaces.</p>
+<ul>
+<li>If you see regular fine stripes, run the stock calibration with <code>CALIBRATE_VFA T=0 ALTERNATIVE=0</code>. On our C5 Pro it took about 21 minutes. There is no need to repeat it before every print: saved compensation is applied automatically. Recalibrate after adjusting belt tension or servicing the mechanics, or if stripes reappear.</li>
+<li>Keep your usual speeds and accelerations in OrcaSlicer. <strong>VFA does not increase permitted speeds</strong>, alter slicer profiles or <strong>replace Input Shaper</strong>. If stripes remain at a particular speed, try changing the outer-wall speed and compare identical test prints. Check the actual speed in the OrcaSlicer preview: cooling, overhang and curved perimeter slowdowns can reduce it below the configured value.</li>
+<li>Try the algorithm from OpenCreator if the stock result is unsatisfactory and you can compare the results. On our C5 Pro it performed better on average at 60–220 mm/s, while stock performed better at 20–50 mm/s. Given measurement variability, the difference is not convincing enough, and alternative calibration took about 80 minutes.</li>
+</ul>
+<p><strong>Bottom line:</strong> keep the stock algorithm corrected in Z-Mod unless you have a specific reason to experiment. With stock compensation, the overall median vibration amplitude fell by about 81% for motor X and 66% for Y. These are accelerometer measurements, not a promise of an equal percentage reduction in stripes on printed parts.</p>
+<h2 id="study-result">Study result<a class="headerlink" href="#study-result" title="Permanent link">&para;</a></h2>
+<p>We tested the corrected Flashforge stock VFA calibration and the adapted algorithm from OpenCreator on one Flashforge Creator 5 Pro. Both substantially reduced vibration. The algorithm from OpenCreator produced slightly better results at medium and high speeds, but did not establish an advantage beyond the observed variation of repeated measurements. At low speeds stock compensation gave a lower median residual displacement.</p>
+<p>Stock calibration took about 21 minutes; the alternative took about 80 minutes. <strong>Z-Mod therefore retains the corrected stock algorithm as its default</strong>, with the algorithm from OpenCreator available as an option.</p>
+<p><img alt="Median displacement before and after compensation" src="../images/vfa/comparison-median.svg" /></p>
+<p>This is a study of one printer, not a statistical survey of the Creator 5 series. It measures accelerometer motion, not the surface roughness of a printed part.</p>
+<h2 id="1-what-vfa-is-and-what-z-mod-measures">1. What VFA is and what Z-Mod measures<a class="headerlink" href="#1-what-vfa-is-and-what-z-mod-measures" title="Permanent link">&para;</a></h2>
+<p>VFA (Vertical Fine Artifacts) are fine repeating vertical stripes on printed walls. Their causes include periodic disturbances from motors, belts and printer mechanics. Creator 5 provides motor compensation via <code>mclib</code>: one amplitude and two phases, one for each rotation direction, for each of the TD1, TD2 and TD4 harmonics. This setting is separate from Input Shaper.</p>
+<p>The test printer uses CoreXY, <code>rotation_distance=40.4</code> mm and motion along a 45° diagonal. One motor rotates while the other is ideally stationary. The frequency conversion used in Klipper is:</p>
+<p><code>f(TD) = 50 × sqrt(2) × v × TD / 40.4 ≈ 1.750264 × v × TD</code>,</p>
+<p>where v is toolhead speed in mm/s and f is harmonic frequency in Hz. The factor depends on kinematics and motor parameters; it is not universal.</p>
+<p>For example, the stock frequency of 200 Hz corresponds to three different speeds:</p>
+<table>
+<thead>
+<tr>
+<th>Harmonic</th>
+<th style="text-align: right;">Toolhead speed, mm/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD1</td>
+<td style="text-align: right;">114.27</td>
+</tr>
+<tr>
+<td>TD2</td>
+<td style="text-align: right;">57.13</td>
+</tr>
+<tr>
+<td>TD4</td>
+<td style="text-align: right;">28.57</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Frequency in Hz and speed in mm/s are different quantities.</strong> The LIS2DW has a nominal sample rate of 1600 Hz. Its filter may attenuate measured amplitudes at higher frequencies, so our primary analysis is limited to 400 Hz. The independent test retains valid CSV data up to 720 Hz (no more than 45% of the actual sample rate), while graphs stop at 400 Hz. This is a conservative comparison limit, not a claim that the sensor stops measuring at 401 Hz.</p>
+<p>On this printer the 400 Hz limit corresponds to about 228.5 mm/s for TD1, 114.3 for TD2 and 57.1 for TD4. Thus <code>MAX_SPEED=400</code> does not mean all three harmonics are reliably measured at 400 mm/s.</p>
+<p>We convert acceleration to estimated sensor displacement. For harmonic frequency f and acceleration amplitude A:</p>
+<p><code>d [µm] = 1000 × A [mm/s²] / (2πf)²</code>.</p>
+<p>This compares residual vibration in displacement units rather than mixing accelerations at different frequencies. The primary metric is the component transverse to toolhead motion; longitudinal and total XY components are also plotted.</p>
+<h2 id="2-the-independent-vfa_graph-test">2. The independent VFA_GRAPH test<a class="headerlink" href="#2-the-independent-vfa_graph-test" title="Permanent link">&para;</a></h2>
+<p>Before comparing calibration algorithms, we implemented a separate measurement tool. Calibration searches for coefficients on factory trajectories; <code>VFA_GRAPH</code> evaluates the resulting compensation independently in the centre of the working area.</p>
+<div class="highlight"><pre><span></span><code>VFA_GRAPH T=0 MAX_SPEED=400 SHAPER=0
+</code></pre></div>
+<p>The study used T0, both motors and directions, 20–400 mm/s in 10 mm/s steps, 5000 mm/s² acceleration, adaptive measurement path length, and one repeat per combination. Input Shaper was disabled. Metadata for the 13:10 and 22:21 tests match except for the compensation coefficients. Motion stops fully between passes and the OFF/ON order alternates to reduce order effects.</p>
+<p>Adaptive length targets 0.6 seconds of usable measurement and at least 20 TD1 cycles where the path permits. Only constant-speed motion is analysed, excluding transitions. Joint sinusoidal fitting at known harmonic frequencies separates them from the constant component and linear trend. Incomplete, corrupt or too-short measurements are discarded. Acceleration limits and shaper state are restored afterwards. The test does not run SAVE_CONFIG.</p>
+<p>We compare <code>before</code> (compensation off) and <code>after</code> (saved coefficients). Each point is identified by speed, direction, harmonic, frequency and repeat. With one repeat, there are 70 valid pairs per motor up to 400 Hz: TD1 — 42, TD2 — 20, TD4 — 8. Higher-frequency points are retained for reference but excluded from the main conclusion.</p>
+<p>Two different metrics are used:</p>
+<ul>
+<li><strong>Reduction in overall median:</strong> <code>1 − median(after)/median(before)</code> within a run; for the algorithm comparison, the two residual medians are used instead.</li>
+<li><strong>Median paired ratio:</strong> <code>median(after_alternative / after_stock)</code> for matching points. A ratio below one means improvement. This is the main between-algorithm metric, supplemented by the number of winning points and repeatability.</li>
+</ul>
+<p>A lower overall median does not imply the same improvement at every point. Different amplitude distributions can produce a lower median even with roughly equal numbers of winning points.</p>
+<p>For a more robust comparison use <code>REPEAT=3</code>; the graphs show medians of valid pairs. The study itself used <code>REPEAT=1</code> for each run, with repeatability evaluated in separate measurements.</p>
+<h2 id="3-correcting-stock-calibration-and-repeatability">3. Correcting stock calibration and repeatability<a class="headerlink" href="#3-correcting-stock-calibration-and-repeatability" title="Permanent link">&para;</a></h2>
+<p>Before changing the search algorithm, we corrected the measurement part of Flashforge calibration: use of the whole constant-speed interval rather than a short window, checks for duration and sample integrity, machine coordinates, restoration of limits and shapers, and treatment of results in both directions. The stock amplitude and phase search was retained.</p>
+<p>The search runs at a configured frequency (usually 200 Hz): initial uncompensated amplitude, four-point phase probe, phase refinement, amplitude search and final validation. The common amplitude is the maximum of the two individual amplitudes and is validated by an additional pass if necessary. The result is rejected if one direction worsens by more than 20% relative to OFF or neither direction improves.</p>
+<p>Independent measurements up to 400 Hz:</p>
+<table>
+<thead>
+<tr>
+<th>Test time</th>
+<th>Shapers</th>
+<th style="text-align: right;">X, OFF → ON, µm</th>
+<th style="text-align: right;">Y, OFF → ON, µm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09:41</td>
+<td>Original state</td>
+<td style="text-align: right;">0.13719 → 0.02563</td>
+<td style="text-align: right;">0.12050 → 0.03408</td>
+</tr>
+<tr>
+<td>11:07</td>
+<td>Disabled</td>
+<td style="text-align: right;">0.14597 → 0.02851</td>
+<td style="text-align: right;">0.12091 → 0.03757</td>
+</tr>
+<tr>
+<td>11:31</td>
+<td>Disabled</td>
+<td style="text-align: right;">0.14468 → 0.02602</td>
+<td style="text-align: right;">0.11562 → 0.04397</td>
+</tr>
+<tr>
+<td>11:48</td>
+<td>Original state</td>
+<td style="text-align: right;">0.12842 → 0.02848</td>
+<td style="text-align: right;">0.11090 → 0.04176</td>
+</tr>
+<tr>
+<td>13:10</td>
+<td>Disabled; new stock calibration</td>
+<td style="text-align: right;">0.14635 → 0.02773</td>
+<td style="text-align: right;">0.12319 → 0.04242</td>
+</tr>
+</tbody>
+</table>
+<p>Coefficients stayed the same through 11:48. The 11:07 and 11:31 runs used identical compensation with shapers disabled. The median symmetric relative difference in residual amplitudes, <code>|a−b| / ((a+b)/2)</code>, was <strong>25.8% for X and 26.4% for Y</strong>. This is observed repeatability, not specified sensor accuracy, a confidence interval or a formal significance test. Relative differences naturally grow for very small residuals.</p>
+<p>Corrected stock calibration ran from 12:46:17 to 13:07:38, 21 min 21 s up to SAVE_CONFIG. The log contains 115 X and 130 Y tuning measurements. After saving, the independent 13:10 test showed an overall median reduction of 81.1% on X and 65.6% on Y, with improvement in 64 and 63 of 70 points respectively. It did not demonstrate a radical improvement over the earlier stock compensation, but measurement and saving became controlled.</p>
+<p><img alt="Stock compensation X, independent test" src="../images/vfa/stock-1310-x.svg" /></p>
+<p><img alt="Stock compensation Y, independent test" src="../images/vfa/stock-1310-y.svg" /></p>
+<p>The early 04:16 test covered only X and used a different method/range; it was excluded from direct comparison. Original stock tuning CSVs were unavailable; tuning results were reconstructed from console values at their printed precision. Original VFA_GRAPH CSVs were used for the independent comparison.</p>
+<h2 id="4-what-the-algorithm-from-opencreator-changes">4. What the algorithm from OpenCreator changes<a class="headerlink" href="#4-what-the-algorithm-from-opencreator-changes" title="Permanent link">&para;</a></h2>
+<p>The adapted algorithm uses ideas from <a href="https://github.com/FlashForge-C5-Modding-Group/kalico/blob/7da732e09d4e213b7766482b6cfdf7e75ee9e191/klippy/extras/stepper_resonance_tester.py">OpenCreator / Kalico</a> while retaining Z-Mod's measurement code and limits. It is not a port of the entire Kalico firmware.</p>
+<p>Instead of tuning at a fixed 200 Hz, it searches resonances from 20 to 300 mm/s (within the velocity limit), with a geometric step up to 8% and refinement of up to three TD2 peaks. Up to two strong reachable frequencies are selected; if none qualifies, the configured frequency is used. TD1/TD2/TD4 are tuned in both directions for each candidate.</p>
+<p>The common amplitude minimises the sum of the two residual-acceleration parabolas rather than using the maximum individual amplitude. A combined RMS amplitude reduction of at least 5% is required. If two candidates are present, each is checked at the same speeds and harmonics. The lower sum of squared residuals on matching valid points wins. This internal score is not the independent VFA_GRAPH score: its metric, paths and frequency range differ.</p>
+<h3 id="first-x-experiment">First X experiment<a class="headerlink" href="#first-x-experiment" title="Permanent link">&para;</a></h3>
+<p>The first experiment found 270.1 and 82.8 Hz. The fully tuned X coefficients for the first candidate (270.1 Hz) were evaluated with an independent VFA_GRAPH at 14:20. This tests one candidate on one motor, not the full alternative algorithm.</p>
+<table>
+<thead>
+<tr>
+<th>Frequency range</th>
+<th style="text-align: right;">Points</th>
+<th style="text-align: right;">Algorithm from OpenCreator better</th>
+<th style="text-align: right;">Stock better</th>
+<th style="text-align: right;">Median residual ratio: algorithm from OpenCreator / stock</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Up to 400 Hz</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">1.012</td>
+</tr>
+<tr>
+<td>Above 400 Hz</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0.792</td>
+</tr>
+<tr>
+<td>All valid up to 720 Hz</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">0.820</td>
+</tr>
+</tbody>
+</table>
+<p>Up to 400 Hz the overall residual median fell from 0.027725 to 0.022088 µm (−20.3%), but the median paired ratio was close to one. Most of the advantage in winning points came from the region of reduced sensor sensitivity. At this stage the algorithms were considered comparable.</p>
+<h2 id="5-full-alternative-calibration">5. Full alternative calibration<a class="headerlink" href="#5-full-alternative-calibration" title="Permanent link">&para;</a></h2>
+<p>The alternative calibration ran from 20:53:51 to 22:14:05 for both motors. Time before plotting was 80 min 14 s, roughly 3.8 times the stock run (measured up to SAVE_CONFIG). Other printers or a single candidate may take a different amount of time.</p>
+<table>
+<thead>
+<tr>
+<th>Motor</th>
+<th style="text-align: right;">High frequency</th>
+<th style="text-align: right;">Low frequency</th>
+<th style="text-align: right;">High score</th>
+<th style="text-align: right;">Low score</th>
+<th style="text-align: right;">Selected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td style="text-align: right;">269.812 Hz</td>
+<td style="text-align: right;">86.237 Hz</td>
+<td style="text-align: right;">3 315 023</td>
+<td style="text-align: right;">5 921 932</td>
+<td style="text-align: right;">269.812 Hz</td>
+</tr>
+<tr>
+<td>Y</td>
+<td style="text-align: right;">243.352 Hz</td>
+<td style="text-align: right;">80.899 Hz</td>
+<td style="text-align: right;">2 301 420</td>
+<td style="text-align: right;">10 878 684</td>
+<td style="text-align: right;">243.352 Hz</td>
+</tr>
+</tbody>
+</table>
+<p>Scores are sums of squared residual amplitudes under the algorithm's internal criterion, rounded to integers. They are neither micrometres nor percentages of print-quality improvement.</p>
+<p><img alt="X candidate check sweeps" src="../images/vfa/stepper_x_sweep.svg" /></p>
+<p><img alt="Y candidate check sweeps" src="../images/vfa/stepper_y_sweep.svg" /></p>
+<p>We also checked the selection using matching check-CSV points up to 400 Hz, converting speed and harmonic to frequency. Out of 142 points, the high candidate wins 83 versus 59 on X and 92 versus 50 on Y. The median high/low residual ratios were 0.915 (−8.5%) and 0.764 (−23.6%). This supports the selection of the higher frequency, not superiority to stock.</p>
+<p><img alt="X tuning at 269.812 Hz" src="../images/vfa/stepper_x_alternative-269.812Hz.svg" /></p>
+<p><img alt="Y tuning at 243.352 Hz" src="../images/vfa/stepper_y_alternative-243.352Hz.svg" /></p>
+<p>Common is the measured common-amplitude candidate, not necessarily the saved value; actual applied values are in calibration.json. Amplitude and two phases are saved to configuration, while selected frequencies are diagnostic only. The configured stock frequency remains 200 Hz.</p>
+<h3 id="final-coefficients">Final coefficients<a class="headerlink" href="#final-coefficients" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Motor / harmonic</th>
+<th style="text-align: right;">Stock AMP</th>
+<th style="text-align: right;">Stock PHASE1 / PHASE2, rad</th>
+<th style="text-align: right;">AMP (algorithm from OpenCreator)</th>
+<th style="text-align: right;">PHASE1 / PHASE2 (algorithm from OpenCreator), rad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / TD1</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">3.730 / 3.517</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">3.762 / 3.539</td>
+</tr>
+<tr>
+<td>X / TD2</td>
+<td style="text-align: right;">0.036</td>
+<td style="text-align: right;">6.119 / 0.172</td>
+<td style="text-align: right;">0.038</td>
+<td style="text-align: right;">6.211 / 0.086</td>
+</tr>
+<tr>
+<td>X / TD4</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">2.102 / 4.219</td>
+<td style="text-align: right;">0.017</td>
+<td style="text-align: right;">2.077 / 4.254</td>
+</tr>
+<tr>
+<td>Y / TD1</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">2.721 / 2.191</td>
+<td style="text-align: right;">0.005</td>
+<td style="text-align: right;">2.854 / 2.389</td>
+</tr>
+<tr>
+<td>Y / TD2</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">3.662 / 3.579</td>
+<td style="text-align: right;">0.032</td>
+<td style="text-align: right;">3.705 / 3.508</td>
+</tr>
+<tr>
+<td>Y / TD4</td>
+<td style="text-align: right;">0.013</td>
+<td style="text-align: right;">1.112 / 5.372</td>
+<td style="text-align: right;">0.012</td>
+<td style="text-align: right;">1.199 / 5.233</td>
+</tr>
+</tbody>
+</table>
+<p>The coefficients are close, but amplitudes and phases are not identical. Calibration.json stores integer MCU units with a factor of 1000. Do not copy the table to another printer: it applies only to the tested unit and its mechanical condition.</p>
+<h2 id="6-independent-comparison-of-the-stock-algorithm-and-the-algorithm-from-opencreator">6. Independent comparison of the stock algorithm and the algorithm from OpenCreator<a class="headerlink" href="#6-independent-comparison-of-the-stock-algorithm-and-the-algorithm-from-opencreator" title="Permanent link">&para;</a></h2>
+<p>We compare VFA_GRAPH 13:10 (stock) with 22:21 (algorithm from OpenCreator). After saving configuration, the 22:21 metadata contains exactly the coefficients from the successful alternative calibration.json. Measurement conditions including paths match. Only valid matching points are compared.</p>
+<p><img alt="Algorithm from OpenCreator, independent X test" src="../images/vfa/alternative-2221-x.svg" /></p>
+<p><img alt="Algorithm from OpenCreator, independent Y test" src="../images/vfa/alternative-2221-y.svg" /></p>
+<h3 id="up-to-400-hz">Up to 400 Hz<a class="headerlink" href="#up-to-400-hz" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th style="text-align: right;">X stock</th>
+<th style="text-align: right;">X, algorithm from OpenCreator</th>
+<th style="text-align: right;">Y stock</th>
+<th style="text-align: right;">Y, algorithm from OpenCreator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OFF median, µm</td>
+<td style="text-align: right;">0.146346</td>
+<td style="text-align: right;">0.147090</td>
+<td style="text-align: right;">0.123195</td>
+<td style="text-align: right;">0.111504</td>
+</tr>
+<tr>
+<td>ON median, µm</td>
+<td style="text-align: right;">0.027725</td>
+<td style="text-align: right;">0.021465</td>
+<td style="text-align: right;">0.042425</td>
+<td style="text-align: right;">0.027663</td>
+</tr>
+<tr>
+<td>Within-run reduction</td>
+<td style="text-align: right;">81.1%</td>
+<td style="text-align: right;">85.4%</td>
+<td style="text-align: right;">65.6%</td>
+<td style="text-align: right;">75.2%</td>
+</tr>
+<tr>
+<td>Points improved versus OFF (of 70)</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">62</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Direct residual comparison</th>
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algorithm from OpenCreator better</td>
+<td style="text-align: right;">41/70</td>
+<td style="text-align: right;">46/70</td>
+</tr>
+<tr>
+<td>Stock better</td>
+<td style="text-align: right;">29/70</td>
+<td style="text-align: right;">24/70</td>
+</tr>
+<tr>
+<td>Reduction in overall median with the algorithm from OpenCreator</td>
+<td style="text-align: right;">22.6%</td>
+<td style="text-align: right;">34.8%</td>
+</tr>
+<tr>
+<td>Median residual ratio: algorithm from OpenCreator / stock</td>
+<td style="text-align: right;">0.852</td>
+<td style="text-align: right;">0.874</td>
+</tr>
+<tr>
+<td>Median paired reduction</td>
+<td style="text-align: right;"><strong>14.8%</strong></td>
+<td style="text-align: right;"><strong>12.6%</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The algorithm from OpenCreator wins more points, but the paired effect is smaller than observed repeated-measurement variability (about 26%). The OFF measurements also differ, especially on Y. A 34.8% reduction in the overall Y median alone is therefore not evidence of such a gain at each point or on a finished print.</p>
+<p><img alt="Residual comparison by harmonic at matching points up to 400 Hz" src="../images/vfa/comparison-curves.svg" /></p>
+<p>The graph shows the median of both directions at each speed and harmonic. A logarithmic scale makes small residuals visible without changing the values. The displacement tables in section 8 can be used to examine each direction.</p>
+<h3 id="which-speeds-favour-each-algorithm">Which speeds favour each algorithm?<a class="headerlink" href="#which-speeds-favour-each-algorithm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Speed, mm/s</th>
+<th style="text-align: right;">Points per motor</th>
+<th style="text-align: right;">Change in X median</th>
+<th style="text-align: right;">Change in Y median</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20–50</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">+41.6%</td>
+<td style="text-align: right;">+17.9%</td>
+</tr>
+<tr>
+<td>60–110</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">−30.8%</td>
+<td style="text-align: right;">−7.0%</td>
+</tr>
+<tr>
+<td>120–220</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">−28.9%</td>
+<td style="text-align: right;">−43.4%</td>
+</tr>
+</tbody>
+</table>
+<p>Positive means a larger residual with the algorithm from OpenCreator; negative means smaller. All groups only include frequencies up to 400 Hz. The harmonic set shrinks with speed: only TD1 remains in the last group. These are aggregate comparisons, not a win at every speed. No valid points up to 400 Hz remain above 220 mm/s on this speed grid.</p>
+<p><img alt="Median residual change by speed band" src="../images/vfa/speed-bands.svg" /></p>
+<p>For completeness, above 400 Hz the algorithm from The algorithm from OpenCreator wins 52/64 points on X and 35/64 on Y. Across the full available range this would be 93/134 and 81/134, but it mixes measurements of different sensor sensitivity. We do not use it to select the default algorithm.</p>
+<h2 id="7-practical-conclusion-and-using-z-mod">7. Practical conclusion and using Z-Mod<a class="headerlink" href="#7-practical-conclusion-and-using-z-mod" title="Permanent link">&para;</a></h2>
+<p>Both algorithms work. The corrected stock algorithm offers shorter calibration, good low-speed suppression and similar final coefficients. The algorithm from OpenCreator adds adaptive frequency search and some gains at medium/high speeds. On this unit the advantage is not convincing enough to change the default.</p>
+<p><strong>We recommend stock calibration for most users.</strong> Clear the build plate, check mechanics and belt tension, and do not calibrate during printing or pause. Use an up-to-date Z-Mod version supporting VFA. For stock calibration:</p>
+<div class="highlight"><pre><span></span><code>CALIBRATE_VFA T=0 ALTERNATIVE=0
+</code></pre></div>
+<p>To experiment with the alternative:</p>
+<div class="highlight"><pre><span></span><code>CALIBRATE_VFA T=0 ALTERNATIVE=1
+</code></pre></div>
+<p>Both variants of the <code>CALIBRATE_VFA</code> macro automatically execute <code>SAVE_CONFIG</code> after successful calibration and graph generation, then Klipper restarts. There is no need to save manually. Without <code>ALTERNATIVE</code>, the setting from <code>[stepper_resonance_tester]</code> is used (default: <code>alternative: False</code>). Specify <code>ALTERNATIVE=0</code> to explicitly select the stock algorithm.</p>
+<p>Independent verification after saving:</p>
+<div class="highlight"><pre><span></span><code>VFA_GRAPH T=0 MAX_SPEED=400 SHAPER=0 REPEAT=3
+</code></pre></div>
+<p>Graphs and CSVs are in <code>mod_data/vfa/</code>. Diagnostics use a minute-resolution directory; calibration uses a second-resolution directory with the <code>_setvfa</code> suffix. Calibration CSVs, calibration.json, tuning graphs and alternative check sweeps are separate from independent VFA_GRAPH plots. PNG rendering runs in the chroot after tool return without additional motion.</p>
+<p>Further study could repeat independent runs in random order with REPEAT=3, test several C5/C5 Pro printers and compare real printed samples with identical material and settings. There is little value in optimising coefficients for small relative changes that do not exceed test reproducibility.</p>
+<h2 id="8-data-for-verification">8. Data for verification<a class="headerlink" href="#8-data-for-verification" title="Permanent link">&para;</a></h2>
+<p>Displacement tables up to 400 Hz for each direction and mode, including transverse, longitudinal and total displacement:</p>
+<ul>
+<li>Stock at 13:10: <a href="../assets/vfa/stock-1310-x.csv">X CSV</a>, <a href="../assets/vfa/stock-1310-y.csv">Y CSV</a>.</li>
+<li>Algorithm from OpenCreator at 22:21: <a href="../assets/vfa/alternative-2221-x.csv">X CSV</a>, <a href="../assets/vfa/alternative-2221-y.csv">Y CSV</a>.</li>
+</ul>
+<p>These are derived displacement tables in µm, rounded for website plotting, not original accelerometer-amplitude CSVs. Article numbers were calculated from the original measurements, so the last digits may differ. Website graphs were replotted from saved measurements as SVGs. Full accelerometer time series are not available. To reproduce the main comparison, match rows by speed, direction and harmonic and use only <code>mode=after</code> for comparison between algorithms.</p>
+<h3 id="z-mod-changes-and-code-sources">Z-Mod changes and code sources<a class="headerlink" href="#z-mod-changes-and-code-sources" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>PR</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/14">#14</a></td>
+<td>Independent VFA_GRAPH</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/16">#16</a></td>
+<td>Input Shaper control during measurements</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/17">#17</a>, <a href="https://github.com/ghzserg/zmod_klipper_c5/pull/18">#18</a></td>
+<td>Corrected stock measurement and saving</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/19">#19</a></td>
+<td>Alternative calibration</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/20">#20</a></td>
+<td>Calibration plots</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/22">#22</a></td>
+<td>Stock restored as default</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+  
+    
+    <p class="pdf-download"><a href="/pdf/Z-Mod-EN.pdf">Download documentation (PDF)</a></p>
+  
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/en/vfa.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a> <br>
+      ⭐<a href="https://wiki.zmod.link/Sponsor/" target="_blank" rel="noopener">
+          Like Z-Mod or zmod.link? Support its development or pay for hosting.</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 Z-Mod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k" target="_blank" rel="noopener" title="Official MAX Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/zmodgroup" target="_blank" rel="noopener" title="Official Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://vk.com/zmod_official" target="_blank" rel="noopener" title="Official VK Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M31.5 63.5C0 95 0 145.7 0 247v18c0 101.3 0 152 31.5 183.5S113.7 480 215 480h17.9c101.4 0 152.1 0 183.5-31.5S448 366.3 448 265v-17.9c0-101.4 0-152.1-31.5-183.5S334.3 32 233 32h-18C113.7 32 63 32 31.5 63.5m44.1 104.8h51.1c1.7 85.5 39.4 121.7 69.3 129.2V168.3h48.2V242c29.5-3.2 60.5-36.8 70.9-73.7h48.2c-3.9 19.2-11.8 37.3-23.1 53.3s-25.7 29.5-42.5 39.6c18.7 9.3 35.2 22.4 48.4 38.5s22.9 34.9 28.3 55h-53c-4.9-17.5-14.8-33.1-28.6-45s-30.7-19.4-48.7-21.6v66.6h-5.8c-102.1 0-160.3-70-162.8-186.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>

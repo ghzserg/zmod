@@ -1,0 +1,2724 @@
+
+<!doctype html>
+<html lang="cs" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete documentation for Z-Mod - FF5M / FF5M Pro / AD5X / Creator 5 / Creator 5 Pro firmware modifications">
+      
+      
+        <meta name="author" content="ghzserg">
+      
+      
+        <link rel="canonical" href="https://wiki.zmod.link/cs/vfa/">
+      
+      
+        <link rel="prev" href="../Pro/">
+      
+      
+        <link rel="next" href="../Native_FW/">
+      
+      
+        
+          <link rel="alternate" href="../../vfa/" hreflang="en">
+        
+          <link rel="alternate" href="../../ru/vfa/" hreflang="ru">
+        
+          <link rel="alternate" href="../../de/vfa/" hreflang="de">
+        
+          <link rel="alternate" href="./" hreflang="cs">
+        
+      
+      
+      <link rel="icon" href="../../images/fav.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
+    
+    
+      
+        <title>Výzkum VFA - Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro</title>
+      
+    
+    
+  
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+  <link rel="stylesheet" href="../../css/fonts.css">
+  <link rel="stylesheet" href="../../css/extra.css">
+
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vfa-u-creator-5-pro-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator" class="md-skip">
+          Přeskočit obsah
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Záhlaví">
+    <a href="../" title="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" class="md-header__button md-logo" aria-label="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Výzkum VFA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark theme"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark theme" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="light-green"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Zvolte jazyk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../vfa/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/vfa/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../de/vfa/" hreflang="de" class="md-select__link">
+              Deutsch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="cs" class="md-select__link">
+              Čeština
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Hledat" placeholder="Hledat" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Vyhledávání">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Vyčistit" aria-label="Vyčistit" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializace vyhledávání
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Karty" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Domovská stránka
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Setup/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Začátek
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../SetupCalibrations/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Konfigurace
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../FAQ/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Nápověda
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Macros/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Makra
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dodatečné
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Social/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Social
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Stáhnout
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Video/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Video
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://t.me/zmod_help_bot" class="md-tabs__link">
+        
+  
+  
+    
+  
+  zmod_help_bot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://zmod.link/link/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Z-Mod LINK
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigace" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" class="md-nav__button md-logo" aria-label="Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Z-Mod - Firmware for AD5M / AD5M Pro / AD5X / Creator 5 / Creator 5 Pro
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ghzserg/zmod" title="Přejít do repozitáře" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ghzserg/zmod
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domovská stránka
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Začátek
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Začátek
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nastavení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recommendations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Doporučení
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Konfigurace
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Konfigurace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SetupCalibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup Calibrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AD5X/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AD5X
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C5PRO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C5Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Plugin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pluginy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Telegram/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Telegram
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Nápověda
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nápověda
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Makra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Makra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macros/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Seznam
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Main/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hlavní funkce
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Calibrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalibrace
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Global/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Start/Stop/Globální
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../System/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Systém
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Zmod/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zmod
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Filament/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filament
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Pro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PRO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dodatečné
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dodatečné
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Výzkum VFA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Výzkum VFA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#co-přináší-kalibrace-vfa-v-praxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Co přináší kalibrace VFA v praxi?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#výsledek-výzkumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Výsledek výzkumu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-co-je-vfa-a-co-měří-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Co je VFA a co měří Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-nezávislý-test-vfa_graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nezávislý test VFA_GRAPH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oprava-standardní-kalibrace-a-opakovatelnost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Oprava standardní kalibrace a opakovatelnost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-co-mění-algoritmus-z-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Co mění algoritmus z OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Co mění algoritmus z OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#první-experiment-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        První experiment X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-úplná-alternativní-kalibrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Úplná alternativní kalibrace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Úplná alternativní kalibrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#výsledné-koeficienty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Výsledné koeficienty
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nezávislé-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-400-hz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do 400 Hz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#při-kterých-rychlostech-je-který-algoritmus-lepší" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Při kterých rychlostech je který algoritmus lepší?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-praktický-závěr-a-použití-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Praktický závěr a použití Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-k-ověření" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data k ověření
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data k ověření">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#změny-z-mod-a-zdroje-kódu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Změny Z-Mod a zdroje kódu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Native_FW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nativní firmware
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Historie změn
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sponsor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Podpora
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Social/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Social
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/ghzserg/zmod/releases/latest" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stáhnout
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://t.me/zmod_help_bot" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    zmod_help_bot
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://zmod.link/link/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Z-Mod LINK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Obsah">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Obsah
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#co-přináší-kalibrace-vfa-v-praxi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Co přináší kalibrace VFA v praxi?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#výsledek-výzkumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Výsledek výzkumu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-co-je-vfa-a-co-měří-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Co je VFA a co měří Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-nezávislý-test-vfa_graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Nezávislý test VFA_GRAPH
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-oprava-standardní-kalibrace-a-opakovatelnost" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Oprava standardní kalibrace a opakovatelnost
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-co-mění-algoritmus-z-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Co mění algoritmus z OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Co mění algoritmus z OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#první-experiment-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        První experiment X
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-úplná-alternativní-kalibrace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Úplná alternativní kalibrace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Úplná alternativní kalibrace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#výsledné-koeficienty" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Výsledné koeficienty
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nezávislé-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#do-400-hz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Do 400 Hz
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#při-kterých-rychlostech-je-který-algoritmus-lepší" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Při kterých rychlostech je který algoritmus lepší?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-praktický-závěr-a-použití-z-mod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Praktický závěr a použití Z-Mod
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-data-k-ověření" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Data k ověření
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Data k ověření">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#změny-z-mod-a-zdroje-kódu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Změny Z-Mod a zdroje kódu
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+    <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/vfa.md" title="Upravit tuto stránku" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="vfa-u-creator-5-pro-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator">VFA u Creator 5 Pro: srovnání standardního algoritmu a algoritmu z OpenCreator<a class="headerlink" href="#vfa-u-creator-5-pro-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator" title="Permanent link">&para;</a></h1>
+<p><em>Výzkum Z-Mod, 26. listopadu 2026.</em></p>
+<h2 id="co-přináší-kalibrace-vfa-v-praxi">Co přináší kalibrace VFA v praxi?<a class="headerlink" href="#co-přináší-kalibrace-vfa-v-praxi" title="Permanent link">&para;</a></h2>
+<p><strong>Kalibraci VFA se vyplatí používat, alternativní algoritmus z OpenCreator však většina uživatelů nepotřebuje.</strong> VFA (Vertical Fine Artifacts) jsou jemné svislé proužky na stěnách výtisku způsobené vibracemi motorů a mechaniky. Zvláště dobře jsou vidět na hladkých površích.</p>
+<ul>
+<li>Pokud na stěnách vidíte pravidelné jemné proužky, spusťte standardní kalibraci příkazem <code>CALIBRATE_VFA T=0 ALTERNATIVE=0</code>. Na našem C5 Pro trvala přibližně 21 minut. Před každým tiskem ji není třeba opakovat: uložená kompenzace se používá automaticky. Kalibraci zopakujte po změně napnutí řemenů nebo údržbě mechaniky či pokud se proužky znovu objeví.</li>
+<li>V OrcaSliceru používejte své obvyklé rychlosti a zrychlení. <strong>VFA nezvyšuje povolené rychlosti</strong>, nemění profil sliceru a <strong>nenahrazuje Input Shaper</strong>. Pokud proužky přetrvávají při určité rychlosti, zkuste změnit rychlost vnější stěny a porovnat stejné zkušební výtisky. V náhledu OrcaSliceru zkontrolujte skutečnou rychlost: chlazení a zpomalování na převisech či zakřivených perimetrech ji mohou snížit oproti nastavené hodnotě.</li>
+<li>Algoritmus z OpenCreator má smysl vyzkoušet, pokud nejste spokojeni se standardním výsledkem a můžete výsledky porovnat. Na našem C5 Pro byl v průměru lepší při rychlostech 60–220 mm/s, standardní algoritmus při 20–50 mm/s. Vzhledem k rozptylu měření není rozdíl dostatečně přesvědčivý a alternativní kalibrace trvala asi 80 minut.</li>
+</ul>
+<p><strong>Závěr:</strong> pokud nemáte konkrétní důvod experimentovat, ponechte standardní algoritmus opravený v Z-Mod. Při standardní kompenzaci klesl celkový medián amplitudy vibrací asi o 81 % u motoru X a o 66 % u Y. Jde o měření akcelerometru, nikoli o příslib stejně velkého procentuálního úbytku proužků na výtisku.</p>
+<h2 id="výsledek-výzkumu">Výsledek výzkumu<a class="headerlink" href="#výsledek-výzkumu" title="Permanent link">&para;</a></h2>
+<p>Na jedné tiskárně Flashforge Creator 5 Pro jsme otestovali opravenou standardní kalibraci Flashforge a adaptovaný algoritmus z OpenCreator. Oba výrazně snížily vibrace. Algoritmus z OpenCreator poskytl o něco lepší výsledky při středních a vyšších rychlostech, ale neprokázal výhodu přesahující pozorovaný rozptyl opakovaných měření. Při nízkých rychlostech měla standardní kompenzace menší medián zbytkového posunutí.</p>
+<p>Standardní kalibrace trvala přibližně 21 minut, alternativní asi 80 minut. <strong>Z-Mod proto ponechává opravený standardní algoritmus jako výchozí</strong>, s algoritmem z OpenCreator jako volitelnou možností.</p>
+<p><img alt="Medián posunutí před kompenzací a po ní" src="../../images/vfa/comparison-median.svg" /></p>
+<p>Jde o výzkum jedné tiskárny, nikoli o statistiku celé řady Creator 5. Měří se pohyb akcelerometru, ne drsnost povrchu vytištěného dílu.</p>
+<h2 id="1-co-je-vfa-a-co-měří-z-mod">1. Co je VFA a co měří Z-Mod<a class="headerlink" href="#1-co-je-vfa-a-co-měří-z-mod" title="Permanent link">&para;</a></h2>
+<p>VFA (Vertical Fine Artifacts) jsou jemné opakující se svislé proužky na stěnách výtisku. Mezi jejich příčiny patří periodické poruchy způsobené motory, řemeny a mechanikou tiskárny. Creator 5 používá kompenzaci motorů přes <code>mclib</code>: pro každou harmonickou TD1, TD2 a TD4 se nastavuje jedna amplituda a dvě fáze, jedna pro každý směr otáčení. Jde o samostatné nastavení, nikoli náhradu Input Shaperu.</p>
+<p>Testovaná tiskárna má kinematiku CoreXY, <code>rotation_distance=40.4</code> mm a pohyb po úhlopříčce 45°. Jeden motor se otáčí, druhý je v ideální kinematice nehybný. Přepočet frekvence používaný v Klipperu:</p>
+<p><code>f(TD) = 50 × sqrt(2) × v × TD / 40.4 ≈ 1.750264 × v × TD</code>,</p>
+<p>kde v je rychlost tiskové hlavy v mm/s a f frekvence harmonické v Hz. Koeficient závisí na kinematice a parametrech motoru; není univerzální.</p>
+<p>Například standardní frekvence 200 Hz odpovídá třem různým rychlostem:</p>
+<table>
+<thead>
+<tr>
+<th>Harmonická</th>
+<th style="text-align: right;">Rychlost tiskové hlavy, mm/s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TD1</td>
+<td style="text-align: right;">114,27</td>
+</tr>
+<tr>
+<td>TD2</td>
+<td style="text-align: right;">57,13</td>
+</tr>
+<tr>
+<td>TD4</td>
+<td style="text-align: right;">28,57</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Frekvence v Hz a rychlost v mm/s jsou různé veličiny.</strong> LIS2DW má nominální vzorkovací frekvenci 1600 Hz. Jeho filtr může při vyšších frekvencích tlumit měřené amplitudy, proto hlavní analýzu omezujeme na 400 Hz. Nezávislý test uchovává platná data CSV do 720 Hz (nejvýše 45 % skutečné vzorkovací frekvence); grafy končí na 400 Hz. Je to konzervativní hranice srovnání, nikoli tvrzení, že při 401 Hz snímač přestává měřit.</p>
+<p>Na této tiskárně odpovídá 400 Hz přibližně rychlosti 228,5 mm/s u TD1, 114,3 u TD2 a 57,1 u TD4. <code>MAX_SPEED=400</code> tedy neznamená, že jsou při 400 mm/s spolehlivě změřeny všechny tři harmonické.</p>
+<p>Zrychlení převádíme na odhad amplitudy posunutí snímače. Pro harmonickou s frekvencí f a amplitudou zrychlení A platí:</p>
+<p><code>d [µm] = 1000 × A [mm/s²] / (2πf)²</code>.</p>
+<p>Tak lze srovnávat zbytkové vibrace v jednotkách posunutí místo směšování zrychlení na různých frekvencích. Hlavní metrikou je složka příčná ke směru pohybu hlavy; grafy obsahují také podélnou a celkovou složku XY.</p>
+<h2 id="2-nezávislý-test-vfa_graph">2. Nezávislý test VFA_GRAPH<a class="headerlink" href="#2-nezávislý-test-vfa_graph" title="Permanent link">&para;</a></h2>
+<p>Před srovnáním kalibračních algoritmů jsme vytvořili samostatný měřicí nástroj. Kalibrace hledá koeficienty na továrních drahách; <code>VFA_GRAPH</code> nezávisle hodnotí výslednou kompenzaci uprostřed pracovního prostoru.</p>
+<div class="highlight"><pre><span></span><code>VFA_GRAPH T=0 MAX_SPEED=400 SHAPER=0
+</code></pre></div>
+<p>Ve výzkumu jsme použili T0, oba motory a směry, rozsah 20–400 mm/s s krokem 10 mm/s, zrychlení 5000 mm/s², adaptivní délku měřicí dráhy a jedno opakování každé kombinace. Input Shaper byl vypnutý. Metadata testů v 13:10 a 22:21 se shodují kromě koeficientů kompenzace. Mezi průjezdy se pohyb zcela zastaví; pořadí OFF/ON se střídá, aby se omezil vliv pořadí měření.</p>
+<p>Adaptivní délka je volena tak, aby poskytla 0,6 sekundy použitelného měření a nejméně 20 period TD1, pokud to dráha dovolí. Analyzuje se pouze úsek s konstantní rychlostí bez přechodových dějů. Společná sinusová aproximace na známých frekvencích harmonických je odděluje od konstantní složky a lineárního trendu. Neúplná, poškozená nebo příliš krátká měření se vyřazují. Limity zrychlení a stav shaperů se po testu obnoví. Test neprovádí SAVE_CONFIG.</p>
+<p>Porovnáváme <code>before</code> (kompenzace vypnutá) a <code>after</code> (uložené koeficienty). Bod je určen rychlostí, směrem, harmonickou, frekvencí a číslem opakování. Při jednom opakování máme do 400 Hz 70 platných dvojic na motor: TD1 — 42, TD2 — 20, TD4 — 8. Vyšší frekvence zůstávají k dispozici, ale nejsou součástí hlavního závěru.</p>
+<p>Používáme dvě různé metriky:</p>
+<ul>
+<li><strong>Pokles celkového mediánu:</strong> <code>1 − median(after)/median(before)</code> v rámci jednoho průběhu. Pro srovnání algoritmů používáme místo toho jejich dva mediány zbytkových hodnot.</li>
+<li><strong>Medián párových poměrů:</strong> <code>median(after_alternative / after_stock)</code> pro shodné body. Poměr menší než jedna znamená zlepšení. Jde o hlavní metriku srovnání algoritmů doplněnou počtem lepších bodů a opakovatelností.</li>
+</ul>
+<p>Nižší celkový medián neznamená stejné zlepšení v každém bodě. Různá rozdělení amplitud mohou dát nižší medián, i když oba algoritmy vyhrávají v přibližně stejném počtu bodů.</p>
+<p>Pro spolehlivější srovnání použijte <code>REPEAT=3</code>; grafy ukazují mediány platných dvojic. Samotný výzkum používal <code>REPEAT=1</code> na každý průběh, opakovatelnost byla hodnocena oddělenými měřeními.</p>
+<h2 id="3-oprava-standardní-kalibrace-a-opakovatelnost">3. Oprava standardní kalibrace a opakovatelnost<a class="headerlink" href="#3-oprava-standardní-kalibrace-a-opakovatelnost" title="Permanent link">&para;</a></h2>
+<p>Před změnou vyhledávacího algoritmu jsme opravili měřicí část kalibrace Flashforge: využití celého úseku konstantní rychlosti místo krátkého okna, kontrolu délky měření a integrity vzorků, strojní souřadnice, obnovu limitů a shaperů a zpracování výsledků v obou směrech. Standardní vyhledávání amplitudy a fáze zůstalo zachováno.</p>
+<p>Vyhledávání pracuje na nastavené frekvenci (obvykle 200 Hz): výchozí amplituda bez kompenzace, čtyřbodová sonda fáze, zpřesnění fáze, výběr amplitudy a závěrečné ověření. Společná amplituda je maximum obou individuálních amplitud a v případě potřeby je ověřena dalším průjezdem. Výsledek se zamítne, pokud se jeden směr proti OFF zhorší o více než 20 % nebo pokud se nezlepší ani jeden směr.</p>
+<p>Nezávislá měření do 400 Hz:</p>
+<table>
+<thead>
+<tr>
+<th>Čas testu</th>
+<th>Shapery</th>
+<th style="text-align: right;">X, OFF → ON, µm</th>
+<th style="text-align: right;">Y, OFF → ON, µm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>09:41</td>
+<td>Původní stav</td>
+<td style="text-align: right;">0,13719 → 0,02563</td>
+<td style="text-align: right;">0,12050 → 0,03408</td>
+</tr>
+<tr>
+<td>11:07</td>
+<td>Vypnuté</td>
+<td style="text-align: right;">0,14597 → 0,02851</td>
+<td style="text-align: right;">0,12091 → 0,03757</td>
+</tr>
+<tr>
+<td>11:31</td>
+<td>Vypnuté</td>
+<td style="text-align: right;">0,14468 → 0,02602</td>
+<td style="text-align: right;">0,11562 → 0,04397</td>
+</tr>
+<tr>
+<td>11:48</td>
+<td>Původní stav</td>
+<td style="text-align: right;">0,12842 → 0,02848</td>
+<td style="text-align: right;">0,11090 → 0,04176</td>
+</tr>
+<tr>
+<td>13:10</td>
+<td>Vypnuté; nová standardní kalibrace</td>
+<td style="text-align: right;">0,14635 → 0,02773</td>
+<td style="text-align: right;">0,12319 → 0,04242</td>
+</tr>
+</tbody>
+</table>
+<p>Koeficienty zůstaly do 11:48 stejné. Průběhy v 11:07 a 11:31 používaly stejnou kompenzaci s vypnutými shapery. Medián symetrické relativní odchylky zbytkových amplitud <code>|a−b| / ((a+b)/2)</code> činil <strong>25,8 % pro X a 26,4 % pro Y</strong>. Jde o pozorovaný rozptyl opakování, nikoli o deklarovanou přesnost snímače, interval spolehlivosti nebo formální test statistické významnosti. U velmi malých zbytkových hodnot relativní odchylky přirozeně rostou.</p>
+<p>Opravená standardní kalibrace probíhala od 12:46:17 do 13:07:38, tedy 21 min 21 s do SAVE_CONFIG. Protokol obsahuje 115 měření při kalibraci X a 130 Y. Po uložení ukázal nezávislý test v 13:10 pokles celkového mediánu o 81,1 % u X a 65,6 % u Y, se zlepšením v 64 a 63 ze 70 bodů. Oproti dřívější standardní kompenzaci nebylo prokázáno zásadní zlepšení, měření a ukládání se však staly kontrolovatelnými.</p>
+<p><img alt="Standardní kompenzace X, nezávislý test" src="../../images/vfa/stock-1310-x.svg" /></p>
+<p><img alt="Standardní kompenzace Y, nezávislý test" src="../../images/vfa/stock-1310-y.svg" /></p>
+<p>Časný test ve 04:16 obsahoval pouze X a jinou metodu/rozsah; byl vyloučen z přímého srovnání. Původní CSV standardního vyhledávání nebyly k dispozici; výsledky hledání byly rekonstruovány z konzole s její přesností zaokrouhlení. Pro nezávislé srovnání byly použity původní CSV VFA_GRAPH.</p>
+<h2 id="4-co-mění-algoritmus-z-opencreator">4. Co mění algoritmus z OpenCreator<a class="headerlink" href="#4-co-mění-algoritmus-z-opencreator" title="Permanent link">&para;</a></h2>
+<p>Adaptovaný algoritmus využívá myšlenky <a href="https://github.com/FlashForge-C5-Modding-Group/kalico/blob/7da732e09d4e213b7766482b6cfdf7e75ee9e191/klippy/extras/stepper_resonance_tester.py">OpenCreator / Kalico</a>, ale zachovává měřicí část a omezení Z-Mod. Nejde o přenos celého firmwaru Kalico.</p>
+<p>Místo kalibrace při pevných 200 Hz hledá rezonance v rozsahu 20–300 mm/s (v rámci rychlostního limitu), s geometrickým krokem do 8 % a zpřesněním až tří vrcholů TD2. Vyberou se až dvě výrazné dosažitelné frekvence; pokud žádná nevyhoví, použije se nastavená frekvence. Pro každého kandidáta se ladí TD1/TD2/TD4 v obou směrech.</p>
+<p>Společná amplituda minimalizuje součet dvou parabol zbytkového zrychlení místo maxima individuálních amplitud. Vyžaduje se pokles společné RMS amplitudy alespoň o 5 %. Jsou-li dva kandidáti, každý se ověří při stejných rychlostech a harmonických. Vyhrává nižší součet čtverců zbytkových hodnot ve shodných platných bodech. Toto interní hodnocení není nezávislým hodnocením VFA_GRAPH: liší se metrika, dráhy i rozsah frekvencí.</p>
+<h3 id="první-experiment-x">První experiment X<a class="headerlink" href="#první-experiment-x" title="Permanent link">&para;</a></h3>
+<p>První experiment nalezl 270,1 a 82,8 Hz. Plně naladěné koeficienty X prvního kandidáta (270,1 Hz) jsme nezávisle ověřili pomocí VFA_GRAPH ve 14:20. Šlo o test jednoho kandidáta na jednom motoru, nikoli celého alternativního algoritmu.</p>
+<table>
+<thead>
+<tr>
+<th>Rozsah frekvencí</th>
+<th style="text-align: right;">Bodů</th>
+<th style="text-align: right;">Algoritmus z OpenCreator lepší</th>
+<th style="text-align: right;">Standard lepší</th>
+<th style="text-align: right;">Medián poměru zbytků: algoritmus z OpenCreator / standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Do 400 Hz</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">1,012</td>
+</tr>
+<tr>
+<td>Nad 400 Hz</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0,792</td>
+</tr>
+<tr>
+<td>Všechny platné do 720 Hz</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">0,820</td>
+</tr>
+</tbody>
+</table>
+<p>Do 400 Hz klesl celkový medián zbytku z 0,027725 na 0,022088 µm (−20,3 %), ale medián párových poměrů byl blízko jedné. Většina výhody v počtu lepších bodů pocházela z oblasti snížené citlivosti snímače. V této fázi byly algoritmy považovány za srovnatelné.</p>
+<h2 id="5-úplná-alternativní-kalibrace">5. Úplná alternativní kalibrace<a class="headerlink" href="#5-úplná-alternativní-kalibrace" title="Permanent link">&para;</a></h2>
+<p>Alternativní kalibrace probíhala pro oba motory od 20:53:51 do 22:14:05. Doba před vykreslením grafů činila 80 min 14 s, přibližně 3,8krát déle než standardní průběh (měřený do SAVE_CONFIG). Na jiných tiskárnách nebo při jednom kandidátovi se čas může lišit.</p>
+<table>
+<thead>
+<tr>
+<th>Motor</th>
+<th style="text-align: right;">Vyšší frekvence</th>
+<th style="text-align: right;">Nižší frekvence</th>
+<th style="text-align: right;">Skóre vyšší</th>
+<th style="text-align: right;">Skóre nižší</th>
+<th style="text-align: right;">Vybrána</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td style="text-align: right;">269,812 Hz</td>
+<td style="text-align: right;">86,237 Hz</td>
+<td style="text-align: right;">3 315 023</td>
+<td style="text-align: right;">5 921 932</td>
+<td style="text-align: right;">269,812 Hz</td>
+</tr>
+<tr>
+<td>Y</td>
+<td style="text-align: right;">243,352 Hz</td>
+<td style="text-align: right;">80,899 Hz</td>
+<td style="text-align: right;">2 301 420</td>
+<td style="text-align: right;">10 878 684</td>
+<td style="text-align: right;">243,352 Hz</td>
+</tr>
+</tbody>
+</table>
+<p>Skóre jsou součty čtverců zbytkových amplitud podle interního kritéria algoritmu, zaokrouhlené na celá čísla. Nejde o mikrometry ani procenta zlepšení kvality tisku.</p>
+<p><img alt="Kontrolní průjezdy kandidátů X" src="../../images/vfa/stepper_x_sweep.svg" /></p>
+<p><img alt="Kontrolní průjezdy kandidátů Y" src="../../images/vfa/stepper_y_sweep.svg" /></p>
+<p>Výběr jsme také ověřili na shodných bodech kontrolních CSV do 400 Hz přepočtem rychlosti a harmonické na frekvenci. Ze 142 bodů vyhrála vyšší frekvence u X v 83 proti 59, u Y v 92 proti 50. Mediány poměrů zbytkových hodnot vyšší/nižší činily 0,915 (−8,5 %) a 0,764 (−23,6 %). To podporuje výběr vyšší frekvence, nikoli nadřazenost standardnímu algoritmu.</p>
+<p><img alt="Kalibrace X při 269,812 Hz" src="../../images/vfa/stepper_x_alternative-269.812Hz.svg" /></p>
+<p><img alt="Kalibrace Y při 243,352 Hz" src="../../images/vfa/stepper_y_alternative-243.352Hz.svg" /></p>
+<p>Common označuje změřeného kandidáta společné amplitudy, ne nutně uloženou hodnotu; skutečně použité hodnoty jsou v calibration.json. Do konfigurace se ukládá amplituda a dvě fáze, vybrané frekvence zůstávají diagnostické. Nastavená standardní frekvence zůstává 200 Hz.</p>
+<h3 id="výsledné-koeficienty">Výsledné koeficienty<a class="headerlink" href="#výsledné-koeficienty" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Motor / harmonická</th>
+<th style="text-align: right;">Standard AMP</th>
+<th style="text-align: right;">Standard PHASE1 / PHASE2, rad</th>
+<th style="text-align: right;">AMP (algoritmus z OpenCreator)</th>
+<th style="text-align: right;">PHASE1 / PHASE2 (algoritmus z OpenCreator), rad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X / TD1</td>
+<td style="text-align: right;">0,010</td>
+<td style="text-align: right;">3,730 / 3,517</td>
+<td style="text-align: right;">0,010</td>
+<td style="text-align: right;">3,762 / 3,539</td>
+</tr>
+<tr>
+<td>X / TD2</td>
+<td style="text-align: right;">0,036</td>
+<td style="text-align: right;">6,119 / 0,172</td>
+<td style="text-align: right;">0,038</td>
+<td style="text-align: right;">6,211 / 0,086</td>
+</tr>
+<tr>
+<td>X / TD4</td>
+<td style="text-align: right;">0,016</td>
+<td style="text-align: right;">2,102 / 4,219</td>
+<td style="text-align: right;">0,017</td>
+<td style="text-align: right;">2,077 / 4,254</td>
+</tr>
+<tr>
+<td>Y / TD1</td>
+<td style="text-align: right;">0,005</td>
+<td style="text-align: right;">2,721 / 2,191</td>
+<td style="text-align: right;">0,005</td>
+<td style="text-align: right;">2,854 / 2,389</td>
+</tr>
+<tr>
+<td>Y / TD2</td>
+<td style="text-align: right;">0,032</td>
+<td style="text-align: right;">3,662 / 3,579</td>
+<td style="text-align: right;">0,032</td>
+<td style="text-align: right;">3,705 / 3,508</td>
+</tr>
+<tr>
+<td>Y / TD4</td>
+<td style="text-align: right;">0,013</td>
+<td style="text-align: right;">1,112 / 5,372</td>
+<td style="text-align: right;">0,012</td>
+<td style="text-align: right;">1,199 / 5,233</td>
+</tr>
+</tbody>
+</table>
+<p>Koeficienty jsou blízké, ale amplitudy a fáze nejsou totožné. Calibration.json je ukládá v celočíselných jednotkách MCU s měřítkem 1000. Nekopírujte tabulku do jiné tiskárny; vztahuje se pouze ke zkoušenému stroji a jeho mechanickému stavu.</p>
+<h2 id="6-nezávislé-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator">6. Nezávislé srovnání standardního algoritmu a algoritmu z OpenCreator<a class="headerlink" href="#6-nezávislé-srovnání-standardního-algoritmu-a-algoritmu-z-opencreator" title="Permanent link">&para;</a></h2>
+<p>Porovnáváme VFA_GRAPH v 13:10 (standard) a 22:21 (algoritmus z OpenCreator). Po uložení konfigurace obsahují metadata z 22:21 přesně koeficienty z calibration.json úspěšné alternativní kalibrace. Podmínky měření včetně drah se shodují. Srovnávají se pouze platné shodné body.</p>
+<p><img alt="Algoritmus z OpenCreator, nezávislý test X" src="../../images/vfa/alternative-2221-x.svg" /></p>
+<p><img alt="Algoritmus z OpenCreator, nezávislý test Y" src="../../images/vfa/alternative-2221-y.svg" /></p>
+<h3 id="do-400-hz">Do 400 Hz<a class="headerlink" href="#do-400-hz" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Metrika</th>
+<th style="text-align: right;">X standard</th>
+<th style="text-align: right;">X, algoritmus z OpenCreator</th>
+<th style="text-align: right;">Y standard</th>
+<th style="text-align: right;">Y, algoritmus z OpenCreator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medián OFF, µm</td>
+<td style="text-align: right;">0,146346</td>
+<td style="text-align: right;">0,147090</td>
+<td style="text-align: right;">0,123195</td>
+<td style="text-align: right;">0,111504</td>
+</tr>
+<tr>
+<td>Medián ON, µm</td>
+<td style="text-align: right;">0,027725</td>
+<td style="text-align: right;">0,021465</td>
+<td style="text-align: right;">0,042425</td>
+<td style="text-align: right;">0,027663</td>
+</tr>
+<tr>
+<td>Pokles v rámci průběhu</td>
+<td style="text-align: right;">81,1 %</td>
+<td style="text-align: right;">85,4 %</td>
+<td style="text-align: right;">65,6 %</td>
+<td style="text-align: right;">75,2 %</td>
+</tr>
+<tr>
+<td>Lepší body proti OFF (ze 70)</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">63</td>
+<td style="text-align: right;">62</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Přímé srovnání zbytků</th>
+<th style="text-align: right;">X</th>
+<th style="text-align: right;">Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algoritmus z OpenCreator lepší</td>
+<td style="text-align: right;">41/70</td>
+<td style="text-align: right;">46/70</td>
+</tr>
+<tr>
+<td>Standard lepší</td>
+<td style="text-align: right;">29/70</td>
+<td style="text-align: right;">24/70</td>
+</tr>
+<tr>
+<td>Pokles celkového mediánu s algoritmem z OpenCreator</td>
+<td style="text-align: right;">22,6 %</td>
+<td style="text-align: right;">34,8 %</td>
+</tr>
+<tr>
+<td>Medián poměru zbytků: algoritmus z OpenCreator / standard</td>
+<td style="text-align: right;">0,852</td>
+<td style="text-align: right;">0,874</td>
+</tr>
+<tr>
+<td>Medián párového poklesu</td>
+<td style="text-align: right;"><strong>14,8 %</strong></td>
+<td style="text-align: right;"><strong>12,6 %</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Algoritmus z OpenCreator vyhrává ve více bodech, ale párový efekt je menší než pozorovaný rozptyl opakovaných měření (asi 26 %). Liší se i výchozí měření OFF, zejména u Y. Samotný pokles celkového mediánu Y o 34,8 % proto neprokazuje takové zlepšení v každém bodě ani na hotovém výtisku.</p>
+<p><img alt="Srovnání zbytků podle harmonické na shodných bodech do 400 Hz" src="../../images/vfa/comparison-curves.svg" /></p>
+<p>Graf zobrazuje medián obou směrů na každé rychlosti a harmonické. Logaritmická stupnice zpřístupňuje malé zbytkové hodnoty bez změny veličin. Jednotlivé směry lze zkontrolovat v tabulkách posunutí v oddílu 8.</p>
+<h3 id="při-kterých-rychlostech-je-který-algoritmus-lepší">Při kterých rychlostech je který algoritmus lepší?<a class="headerlink" href="#při-kterých-rychlostech-je-který-algoritmus-lepší" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Rychlost, mm/s</th>
+<th style="text-align: right;">Bodů na motor</th>
+<th style="text-align: right;">Změna mediánu X</th>
+<th style="text-align: right;">Změna mediánu Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20–50</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">+41,6 %</td>
+<td style="text-align: right;">+17,9 %</td>
+</tr>
+<tr>
+<td>60–110</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">−30,8 %</td>
+<td style="text-align: right;">−7,0 %</td>
+</tr>
+<tr>
+<td>120–220</td>
+<td style="text-align: right;">22</td>
+<td style="text-align: right;">−28,9 %</td>
+<td style="text-align: right;">−43,4 %</td>
+</tr>
+</tbody>
+</table>
+<p>Kladná hodnota znamená větší zbytek s algoritmem z OpenCreator, záporná menší. Všechny skupiny zahrnují jen frekvence do 400 Hz. S rostoucí rychlostí se počet harmonických zmenšuje: v poslední skupině zůstává pouze TD1. Jde o souhrnná srovnání, nikoli o výhru při každé rychlosti. Nad 220 mm/s v tomto rychlostním rastru nezůstávají platné body do 400 Hz.</p>
+<p><img alt="Změna mediánu zbytku podle rozsahu rychlosti" src="../../images/vfa/speed-bands.svg" /></p>
+<p>Pro úplnost: nad 400 Hz vyhrává algoritmus z OpenCreator u X v 52/64 bodech a u Y v 35/64. V celém dostupném rozsahu by to bylo 93/134 a 81/134, ale smíchala by se měření s rozdílnou citlivostí snímače. Proto tento rozsah nepoužíváme k výběru výchozího algoritmu.</p>
+<h2 id="7-praktický-závěr-a-použití-z-mod">7. Praktický závěr a použití Z-Mod<a class="headerlink" href="#7-praktický-závěr-a-použití-z-mod" title="Permanent link">&para;</a></h2>
+<p>Oba algoritmy fungují. Opravený standardní algoritmus nabízí kratší kalibraci, dobré potlačení vibrací při nízkých rychlostech a podobné výsledné koeficienty. Algoritmus z OpenCreator přidává adaptivní hledání frekvence a určitou výhodu při středních a vyšších rychlostech. U tohoto stroje není výhoda dostatečně přesvědčivá pro změnu výchozího algoritmu.</p>
+<p><strong>Většině uživatelů doporučujeme standardní kalibraci.</strong> Uvolněte tiskovou podložku, zkontrolujte mechaniku a napnutí řemenů. Nekalibrujte během tisku ani při pozastavení. Použijte aktuální verzi Z-Mod s podporou VFA. Standardní kalibrace:</p>
+<div class="highlight"><pre><span></span><code>CALIBRATE_VFA T=0 ALTERNATIVE=0
+</code></pre></div>
+<p>Experiment s alternativou:</p>
+<div class="highlight"><pre><span></span><code>CALIBRATE_VFA T=0 ALTERNATIVE=1
+</code></pre></div>
+<p>Obě varianty makra <code>CALIBRATE_VFA</code> po úspěšné kalibraci a vytvoření grafů automaticky provedou <code>SAVE_CONFIG</code> a poté se Klipper restartuje. Ruční uložení není nutné. Bez parametru <code>ALTERNATIVE</code> se použije nastavení ze sekce <code>[stepper_resonance_tester]</code> (výchozí hodnota <code>alternative: False</code>). Parametrem <code>ALTERNATIVE=0</code> lze výslovně zvolit standardní algoritmus.</p>
+<p>Nezávislé ověření po uložení:</p>
+<div class="highlight"><pre><span></span><code>VFA_GRAPH T=0 MAX_SPEED=400 SHAPER=0 REPEAT=3
+</code></pre></div>
+<p>Grafy a CSV jsou v <code>mod_data/vfa/</code>. Diagnostika používá adresář s přesností na minuty, kalibrace s přesností na sekundy a příponou <code>_setvfa</code>. Kalibrační CSV, calibration.json, grafy hledání a alternativní kontrolní průjezdy jsou odděleny od nezávislých grafů VFA_GRAPH. PNG se vytvářejí v chroot po vrácení nástroje, bez dalšího pohybu.</p>
+<p>Další výzkum může opakovat nezávislá měření v náhodném pořadí s REPEAT=3, otestovat několik C5/C5 Pro a srovnat skutečné výtisky se stejným materiálem a nastavením. Nemá velký smysl optimalizovat koeficienty kvůli malým relativním změnám, které nepřevyšují opakovatelnost testu.</p>
+<h2 id="8-data-k-ověření">8. Data k ověření<a class="headerlink" href="#8-data-k-ověření" title="Permanent link">&para;</a></h2>
+<p>Tabulky posunutí do 400 Hz pro každý směr a režim, včetně příčného, podélného a celkového posunutí:</p>
+<ul>
+<li>Standard v 13:10: <a href="../../assets/vfa/stock-1310-x.csv">X CSV</a>, <a href="../../assets/vfa/stock-1310-y.csv">Y CSV</a>.</li>
+<li>Algoritmus z OpenCreator v 22:21: <a href="../../assets/vfa/alternative-2221-x.csv">X CSV</a>, <a href="../../assets/vfa/alternative-2221-y.csv">Y CSV</a>.</li>
+</ul>
+<p>Jde o odvozené tabulky posunutí v µm, zaokrouhlené při přípravě webových grafů, nikoli o původní CSV amplitud akcelerometru. Čísla v článku byla vypočtena z původních měření, poslední číslice se tedy mohou lišit. Grafy na webu byly ze zachovaných měření překresleny do SVG. Úplné časové řady akcelerometru nejsou k dispozici. Pro zopakování hlavního srovnání spojte řádky podle rychlosti, směru a harmonické a pro srovnání algoritmů použijte pouze <code>mode=after</code>.</p>
+<h3 id="změny-z-mod-a-zdroje-kódu">Změny Z-Mod a zdroje kódu<a class="headerlink" href="#změny-z-mod-a-zdroje-kódu" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>PR</th>
+<th>Změna</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/14">#14</a></td>
+<td>Nezávislý VFA_GRAPH</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/16">#16</a></td>
+<td>Řízení Input Shaperu při měření</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/17">#17</a>, <a href="https://github.com/ghzserg/zmod_klipper_c5/pull/18">#18</a></td>
+<td>Oprava měření a ukládání standardní kalibrace</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/19">#19</a></td>
+<td>Alternativní kalibrace</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/20">#20</a></td>
+<td>Kalibrační grafy</td>
+</tr>
+<tr>
+<td><a href="https://github.com/ghzserg/zmod_klipper_c5/pull/22">#22</a></td>
+<td>Standard opět jako výchozí algoritmus</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  <span id="download-icon-template" aria-hidden="true" style="display:none">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg>
+  </span>
+  
+  
+    
+    <p class="pdf-download"><a href="/pdf/Z-Mod-CS.pdf">Stáhnout dokumentaci (PDF)</a></p>
+  
+  
+    <hr>
+    <p class="edit-page-footer">
+      📝 <a href="https://github.com/ghzserg/zmod/edit/main/docs/cs/vfa.md" target="_blank" rel="noopener">Found a mistake or want to contribute? Edit this page on GitHub</a> <br>
+      ⭐<a href="https://wiki.zmod.link/Sponsor/" target="_blank" rel="noopener">
+          Like Z-Mod or zmod.link? Support its development or pay for hosting.</a>
+    </p>
+  
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zpět na začátek
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024-2026 Z-Mod development by <a href="https://github.com/ghzserg" target="_blank" rel="noopener">@ghzserg</a> 🚀<br>Web page created with ❤️ by <a href="https://github.com/xyzroe" target="_blank" rel="noopener">@xyzroe</a>
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_help_bot" target="_blank" rel="noopener" title="Help Bot" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/zmod_info" target="_blank" rel="noopener" title="Official Telegram Info Channel" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://max.ru/join/g-kAuR4MRepgzqHohksuX34UCw0jqFMTuGf9IcHP_0k" target="_blank" rel="noopener" title="Official MAX Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/FF_5M_5M_Pro/408369" target="_blank" rel="noopener" title="Official Telegram Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.facebook.com/groups/zmodgroup" target="_blank" rel="noopener" title="Official Facebook Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256c0 120 82.7 220.8 194.2 248.5V334.2h-52.8V256h52.8v-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287v175.9C413.8 494.8 512 386.9 512 256"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://vk.com/zmod_official" target="_blank" rel="noopener" title="Official VK Group" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M31.5 63.5C0 95 0 145.7 0 247v18c0 101.3 0 152 31.5 183.5S113.7 480 215 480h17.9c101.4 0 152.1 0 183.5-31.5S448 366.3 448 265v-17.9c0-101.4 0-152.1-31.5-183.5S334.3 32 233 32h-18C113.7 32 63 32 31.5 63.5m44.1 104.8h51.1c1.7 85.5 39.4 121.7 69.3 129.2V168.3h48.2V242c29.5-3.2 60.5-36.8 70.9-73.7h48.2c-3.9 19.2-11.8 37.3-23.1 53.3s-25.7 29.5-42.5 39.6c18.7 9.3 35.2 22.4 48.4 38.5s22.9 34.9 28.3 55h-53c-4.9-17.5-14.8-33.1-28.6-45s-30.7-19.4-48.7-21.6v66.6h-5.8c-102.1 0-160.3-70-162.8-186.5z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/Cw4cT5C24q" target="_blank" rel="noopener" title="Unofficial Discord Server" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ghzserg/zmod" target="_blank" rel="noopener" title="GitHub Repository" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.follow", "search.suggest", "search.highlight", "content.action.edit"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Zkop\u00edrov\u00e1no do schr\u00e1nky", "clipboard.copy": "Kop\u00edrovat do schr\u00e1nky", "search.result.more.one": "1 dal\u0161\u00ed na t\u00e9to str\u00e1nce", "search.result.more.other": "# v\u00edce na t\u00e9to str\u00e1nce", "search.result.none": "Nenalezeny \u017e\u00e1dn\u00e9 dokumenty", "search.result.one": "Nalezen\u00fd dokument: 1", "search.result.other": "Nalezen\u00e9 dokumenty: #", "search.result.placeholder": "Pi\u0161te co se m\u00e1 vyhledat", "search.result.term.missing": "Chyb\u011bj\u00edc\u00ed", "select.version": "Vyberte verzi"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="/assets/js/external-links.js"></script>
+      
+        <script src="/assets/js/search-language-filter.js"></script>
+      
+    
+  </body>
+</html>
