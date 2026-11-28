@@ -693,6 +693,8 @@ Dies reduziert die Geschwindigkeit in den Ecken und verbessert generell die Druc
 
 ##### WIFI
 
+Dieser Parameter ist nur auf AD5M, AD5M Pro und AD5X verfügbar. Auf Creator 5 und Creator 5 Pro ist die WLAN-Verwaltung über Z-Mod deaktiviert.
+
 Bei einigen Firmware-Versionen kann es gelegentlich vorkommen, dass WLAN nicht startet.
 
 Um dies zu beheben, verbinden Sie sich zunächst über den nativen Bildschirm mit einem WLAN-Netzwerk und dann:

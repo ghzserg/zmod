@@ -583,6 +583,8 @@ This reduces cornering speeds and generally improves print quality with a slight
 
 ##### WIFI
 
+This parameter is available only on AD5M, AD5M Pro and AD5X. Wi-Fi management through Z-Mod is disabled on Creator 5 and Creator 5 Pro.
+
 On some firmware versions, Wi-Fi occasionally fails to start.
 
 To fix this, connect to a Wi-Fi network via the native screen.

@@ -584,6 +584,8 @@ Sníží se rychlost v rozích a celkově se zlepší kvalita tisku za cenu mír
 
 ##### WIFI
 
+Tento parametr je dostupný pouze na AD5M, AD5M Pro a AD5X. Na Creator 5 a Creator 5 Pro je správa Wi-Fi přes Z-Mod vypnutá.
+
 Na některých verzích firmwaru se Wi-Fi občas nespustí.
 
 Pro opravu se nejprve připojte k Wi-Fi síti přes nativní obrazovku a poté:
